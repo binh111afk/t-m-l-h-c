@@ -32,6 +32,24 @@
         .btn:hover { background: #218838; }
         .btn-restart { background: #007bff; margin-top: 10px; }
         .score-board { text-align: center; font-size: 24px; font-weight: bold; margin: 20px 0; color: #dc3545; }
+
+    .snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999; /* Đảm bảo tuyết rơi trên cùng */
+    color: #00b4d8;   /* Màu trắng */
+    font-size: 1em;
+    pointer-events: none; /* Quan trọng: để tuyết không chặn click chuột vào đáp án */
+    user-select: none;
+    animation: fall linear forwards;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
     </style>
 </head>
 <body>
@@ -4246,6 +4264,37 @@ function submitQuiz() {
 
 // Khởi chạy
 renderQuiz();
+
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    
+    // Ký tự bông tuyết (bạn có thể thay bằng '❄', '❅', '❆' hoặc dấu chấm '.')
+    snowflake.innerHTML = '❄'; 
+    
+    // Vị trí ngang ngẫu nhiên
+    snowflake.style.left = Math.random() * 100 + 'vw';
+    
+    // Kích thước ngẫu nhiên (từ 10px đến 20px)
+    snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+    
+    // Độ mờ ngẫu nhiên (tạo chiều sâu)
+    snowflake.style.opacity = Math.random();
+    
+    // Thời gian rơi ngẫu nhiên (từ 3s đến 8s)
+    const duration = Math.random() * 5 + 3; 
+    snowflake.style.animationDuration = duration + 's';
+    
+    document.body.appendChild(snowflake);
+    
+    // Xóa bông tuyết sau khi rơi xong để tránh nặng máy
+    setTimeout(() => {
+        snowflake.remove();
+    }, duration * 1000);
+}
+
+// Tạo bông tuyết mới mỗi 300ms (số càng nhỏ tuyết càng dày)
+setInterval(createSnowflake, 300);
 
 </script>
 
