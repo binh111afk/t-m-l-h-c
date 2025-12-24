@@ -64,1247 +64,1838 @@
 // --- NGÂN HÀNG CÂU HỎI TỔNG HỢP ---
 // Bao gồm cả định dạng cũ (chapter, question) và định dạng mới (c, q)
 const questionBank = [
-    // [Dữ liệu cũ từ mã nguồn của bạn]
-    { chapter: 1, level: "TH", question: "Tâm lý người có nguồn gốc từ đâu?", options: ["Não người", "Thế giới khách quan", "Hoạt động của cá nhân", "Siêu nhiên"], answer: 1, explanation: "Theo quan điểm duy vật biện chứng, tâm lý người có nguồn gốc từ thế giới khách quan tác động vào não bộ." },
-    { chapter: 1, level: "TH", question: "Chủ thể là người đầu tiên trải nghiệm những hiện tượng tâm lý...", options: ["Tính xã hội - lịch sử", "Chức năng của não", "Tính chủ thể", "Tính trung thực"], answer: 2, explanation: "Cùng một hiện thực khách quan tác động nhưng hình ảnh tâm lý mang màu sắc chủ quan..." },
-    { chapter: 1, level: "TH", question: "Phản ánh tâm lý là:", options: ["Sự phản ánh có tính chất chủ quan...", "Phản ánh như gương soi", "Sự chuyển hóa trực tiếp", "Do thượng đế"], answer: 0, explanation: "Tâm lý người là hình ảnh chủ quan về thế giới khách quan." },
-    { chapter: 1, level: "VD", question: "Trong dạy học, giáo viên cần tôn trọng ý kiến riêng...", options: ["Tính lịch sử", "Tính chủ thể", "Tính tích cực", "Tính sáng tạo"], answer: 1, explanation: "Phản ánh tâm lý mang tính chủ thể nên giáo dục cần tôn trọng cái riêng." },
-    { chapter: 2, level: "NB", question: "Dưới góc nhìn Tâm lý học hoạt động, hoạt động là:", options: ["Sự tiêu hao năng lượng", "Mối quan hệ tác động qua lại...", "Sự phản ánh thụ động", "Bản năng"], answer: 1, explanation: "Định nghĩa hoạt động: mối quan hệ tác động qua lại giữa con người và thế giới..." },
-    
-    // [Dữ liệu mới bổ sung từ file của bạn - Sử dụng key c, q, a]
-    { c: 1, l: "NB", q: "Theo quan điểm duy vật biện chứng, tâm lý người là:", a: ["Sự phản ánh thế giới khách quan vào não người", "Do thượng đế sinh ra", "Gan tiết mật", "Nguyên vẹn thế giới"], correct: 0, explain: "Tâm lý người là sự phản ánh thế giới khách quan vào não." },
-    { c: 2, l: "VD", q: "Phản tư nghề nghiệp thuộc về quá trình nào?", a: ["Chủ thể hóa (nhập tâm)", "Khách thể hóa", "Xuất tâm", "Xã hội hóa"], correct: 0, explain: "Chuyển tri thức từ ngoài vào bản thân là nhập tâm." },
-    { c: 2, l: "VD", q: "Bức tranh 'Tiếng Thét' của Edvard Munch là quá trình:", a: ["Chủ thể hóa", "Khách thể hóa (Xuất tâm)", "Trừu tượng hóa", "Xã hội hóa"], correct: 1, explain: "Chuyển tâm trạng vào tác phẩm là xuất tâm." },
-    { c: 3, l: "VD", q: "Áp lực đồng trang lứa do thiếu hụt năng lực nào?", a: ["Kỹ năng", "Thấu hiểu", "Tự ý thức", "Tự đánh giá"], correct: 2, explain: "Tự ý thức là nhận thức và thái độ với bản thân." },
-    { c: 4, l: "VD", q: "Sinh viên nhận ra vật thể lạ khi gọi tên và xếp loại nó. Đây là:", a: ["Tính ổn định", "Tính ảo ảnh", "Tính có ý nghĩa", "Tính đối tượng"], correct: 2, explain: "Gắn đối tượng với tên gọi là tính có ý nghĩa." },
-    { c: 4, l: "VD", q: "Kỹ sư quan sát ong xây tổ để thiết kế kho. Đây là:", a: ["Nhấn mạnh", "Liên hợp", "Điển hình hóa", "Loại suy"], correct: 3, explain: "Mô phỏng cơ chế vật có thực là Loại suy." },
-    { c: 5, l: "VD", q: "Cộng đồng mạng cùng đổi avatar cầu nguyện. Đây là quy luật:", a: ["Lây lan", "Di chuyển", "Pha trộn", "Tương phản"], correct: 0, explain: "Lan truyền cảm xúc tạo hiệu ứng đám đông là Lây lan." },
-    { c: 6, l: "VD", q: "Cầu thủ dẫn bóng không cần nhìn chân. Đây là:", a: ["Kiên trì", "Kỹ xảo", "Thiên tài", "Ý thức"], correct: 1, explain: "Hành động tự động hóa do luyện tập là Kỹ xảo." },
-    { c: 7, l: "VD", q: "Câu 'Gần bùn mà chẳng hôi tanh mùi bùn' nhấn mạnh:", a: ["Môi trường", "Giáo dục", "Tính tích cực hoạt động", "Di truyền"], correct: 2, explain: "Vai trò quyết định của tính tích cực cá nhân." },
-    
-    {
-        chapter: 1, level: "TH",
-        question: "Tâm lý người có nguồn gốc từ đâu?",
-        options: ["Não người", "Thế giới khách quan", "Hoạt động của cá nhân", "Siêu nhiên"],
-        answer: 1,
-        explanation: "Theo quan điểm duy vật biện chứng, tâm lý người có nguồn gốc từ thế giới khách quan tác động vào não bộ [2, 3]."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Chủ thể là người đầu tiên trải nghiệm những hiện tượng tâm lý từ đó có thái độ, hành động tương ứng khác nhau đối với hiện thực. Nội dung này thể hiện đặc điểm nào?",
-        options: ["Tính xã hội - lịch sử", "Chức năng của não", "Tính chủ thể", "Tính trung thực"],
-        answer: 2,
-        explanation: "Cùng một hiện thực khách quan tác động nhưng hình ảnh tâm lý mang màu sắc chủ quan của mỗi người, thể hiện tính chủ thể [4, 5]."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Phản ánh tâm lý là:",
-        options: ["Sự phản ánh có tính chất chủ quan của con người về hiện thực khách quan", "Phản ánh như gương soi", "Sự chuyển hóa trực tiếp vật chất vào đầu óc", "Do thượng đế sinh ra"],
-        answer: 0,
-        explanation: "Tâm lý người là hình ảnh chủ quan về thế giới khách quan [3, 4]."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Đối tượng nghiên cứu của Tâm lý học là:",
-        options: ["Các hiện tượng tâm lý, sự hình thành và vận hành của chúng", "Cấu tạo não bộ", "Thế giới tâm linh", "Các quan hệ xã hội thuần túy"],
-        answer: 0,
-        explanation: "Đối tượng nghiên cứu của TLH là các hiện tượng tâm lý, sự hình thành và vận hành của các hiện tượng tâm lý [6, 7]."
-    },
-    // Vận dụng (VD)
-    {
-        chapter: 1, level: "VD",
-        question: "Trong dạy học, giáo viên cần tôn trọng ý kiến riêng và sự khác biệt của học sinh. Đây là ứng dụng của đặc điểm nào?",
-        options: ["Tính lịch sử - xã hội", "Tính chủ thể", "Tính tích cực", "Tính sáng tạo"],
-        answer: 1,
-        explanation: "Vì phản ánh tâm lý mang tính chủ thể (mỗi người có hình ảnh tâm lý riêng) nên giáo dục cần tôn trọng cái riêng đó [7]."
-    },
-    {
-        chapter: 1, level: "VD",
-        question: "Hiện tượng một CEO chỉ trích ca sĩ, có người ủng hộ, có người phản đối. Điều này lý giải bằng đặc điểm nào?",
-        options: ["Tính chủ thể", "Tính độc đáo", "Tính độc lập", "Tính trung thực"],
-        answer: 0,
-        explanation: "Cùng một sự kiện (CEO chỉ trích) nhưng mỗi người phản ánh khác nhau (ủng hộ/phản đối) do tính chủ thể chi phối [8]."
-    },
+  // --- CHƯƠNG 1: NHẬP MÔN TÂM LÝ HỌC ---
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Tâm lý người có nguồn gốc từ đâu?",
+    options: ["Não người", "Thế giới khách quan", "Hoạt động của cá nhân", "Siêu nhiên"],
+    answer: 1,
+    explanation: "Theo quan điểm duy vật biện chứng, tâm lý người có nguồn gốc từ thế giới khách quan tác động vào não bộ[cite: 1, 28, 33]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Chủ thể là người đầu tiên trải nghiệm những hiện tượng tâm lý từ đó có thái độ, hành động tương ứng khác nhau. Điều này thể hiện:",
+    options: ["Tính xã hội - lịch sử", "Chức năng của não", "Tính chủ thể", "Tính trung thực"],
+    answer: 2,
+    explanation: "Cùng một hiện thực khách quan tác động nhưng hình ảnh tâm lý mang màu sắc chủ quan của mỗi người[cite: 3, 37, 40]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Phản ánh tâm lý là:",
+    options: ["Sự phản ánh có tính chất chủ quan của con người về hiện thực khách quan", "Phản ánh như gương soi", "Sự chuyển hóa trực tiếp vật chất vào đầu óc", "Do thượng đế sinh ra"],
+    answer: 0,
+    explanation: "Tâm lý người là hình ảnh chủ quan về thế giới khách quan[cite: 4, 44, 47]."
+  },
+  {
+    chapter: 1,
+    level: "NB",
+    question: "Theo quan điểm duy vật biện chứng, tâm lý người là:",
+    options: ["Sự phản ánh thế giới khách quan vào não người", "Do thượng đế sinh ra", "Gan tiết mật", "Nguyên vẹn thế giới"],
+    answer: 0,
+    explanation: "Tâm lý người là sự phản ánh thế giới khách quan vào não[cite: 10, 401]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Đối tượng nghiên cứu của Tâm lý học là:",
+    options: ["Các hiện tượng tâm lý, sự hình thành và vận hành của chúng", "Cấu tạo não bộ", "Thế giới tâm linh", "Các quan hệ xã hội thuần túy"],
+    answer: 0,
+    explanation: "Đối tượng nghiên cứu của TLH là các hiện tượng tâm lý, sự hình thành và vận hành của các hiện tượng tâm lý[cite: 51, 54]."
+  },
+  {
+    chapter: 1,
+    level: "VD",
+    question: "Trong dạy học, giáo viên cần tôn trọng ý kiến riêng và sự khác biệt của học sinh. Đây là ứng dụng của đặc điểm nào?",
+    options: ["Tính lịch sử - xã hội", "Tính chủ thể", "Tính tích cực", "Tính sáng tạo"],
+    answer: 1,
+    explanation: "Phản ánh tâm lý mang tính chủ thể nên giáo dục cần tôn trọng cái riêng[cite: 6, 59, 62]."
+  },
+  {
+    chapter: 1,
+    level: "VD",
+    question: "Hiện tượng một CEO chỉ trích ca sĩ, dư luận chia phe ủng hộ/phản đối. Điều này thể hiện:",
+    options: ["Tính khách quan", "Tính chủ thể", "Tính phổ biến", "Tính thụ động"],
+    answer: 1,
+    explanation: "Cùng một sự kiện nhưng mỗi người phản ánh khác nhau do tính chủ thể chi phối[cite: 66, 69, 594, 795]."
+  },
+  {
+    chapter: 1,
+    level: "VD",
+    question: "Thanh niên thế hệ 8X thường coi trọng công việc ổn định, trong khi Gen Z lại đề cao trải nghiệm. Sự khác biệt này phản ánh:",
+    options: ["Tính tích cực", "Tính sáng tạo", "Tính lịch sử - xã hội", "Tính chủ thể"],
+    answer: 2,
+    explanation: "Tâm lý mang dấu ấn của thời đại và điều kiện xã hội lịch sử mà cá nhân sinh sống[cite: 610]."
+  },
+  {
+    chapter: 1,
+    level: "NB",
+    question: "Hiện tượng nào sau đây KHÔNG được xem là hiện tượng tâm lý?",
+    options: ["Hồi hộp khi chờ kết quả thi", "Buồn bã khi bị điểm kém", "Toát mồ hôi nhiều sau khi chạy bộ", "Cảm thấy tự tin khi trả lời đúng"],
+    answer: 2,
+    explanation: "Toát mồ hôi là phản ứng sinh lý thuần túy của cơ thể, không phải hiện tượng tâm lý[cite: 612]."
+  },
+  {
+    chapter: 1,
+    level: "VD",
+    question: "Trong giao tiếp ứng xử, giáo viên cần tìm hiểu hoàn cảnh gia đình và văn hóa vùng miền của học sinh. Đây là vận dụng nguyên tắc:",
+    options: ["Tính chủ thể", "Bản chất xã hội - lịch sử của tâm lý", "Tính hoạt động", "Tính hệ thống"],
+    answer: 1,
+    explanation: "Tâm lý có nguồn gốc xã hội, nên cần tìm hiểu môi trường xã hội/văn hóa để hiểu tâm lý học sinh[cite: 614]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Luận điểm 'Tâm lý người là sự phản ánh hiện thực khách quan' khẳng định điều gì?",
+    options: ["Tâm lý có trước vật chất", "Tâm lý là do thượng đế sinh ra", "Tâm lý người có nguồn gốc từ thế giới khách quan", "Tâm lý không phụ thuộc vào não bộ"],
+    answer: 2,
+    explanation: "Tâm lý là hình ảnh chủ quan của thế giới khách quan[cite: 616]."
+  },
+  {
+    chapter: 1,
+    level: "VD",
+    question: "Một nhà quản lý giỏi luôn biết cách động viên nhân viên bằng cả vật chất và tinh thần tùy theo tính cách từng người. Ông ta đã vận dụng nguyên tắc nào?",
+    options: ["Tính khách quan", "Tính phổ biến", "Tính chủ thể", "Tính gián tiếp"],
+    answer: 2,
+    explanation: "Mỗi người có đặc điểm tâm lý riêng (tính chủ thể) nên cần có phương pháp tác động riêng biệt phù hợp[cite: 802, 1067]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Phương pháp nghiên cứu nào cho phép chủ động tạo ra các hiện tượng tâm lý cần nghiên cứu trong điều kiện khống chế?",
+    options: ["Quan sát", "Thực nghiệm", "Đàm thoại", "Điều tra"],
+    answer: 1,
+    explanation: "Thực nghiệm là phương pháp chủ động tác động vào đối tượng trong điều kiện khống chế[cite: 810, 1074]."
+  },
+  {
+    chapter: 1,
+    level: "NB",
+    question: "Hiện tượng tâm lý nào sau đây thuộc về 'Quá trình tâm lý' (có mở đầu, diễn biến, kết thúc rõ ràng)?",
+    options: ["Cảm giác", "Tính cách", "Năng lực", "Khí chất"],
+    answer: 0,
+    explanation: "Cảm giác là một quá trình tâm lý diễn ra trong thời gian ngắn. Các phương án còn lại là thuộc tính tâm lý[cite: 817, 1081]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Tâm lý học hiện đại nghiên cứu tâm lý con người dựa trên cơ sở triết học nào?",
+    options: ["Duy tâm", "Duy vật biện chứng và duy vật lịch sử", "Nhị nguyên luận", "Siêu hình"],
+    answer: 1,
+    explanation: "Tâm lý học khoa học dựa trên nền tảng triết học Mác-Lênin[cite: 1051, 1088]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Chức năng điều chỉnh của tâm lý thể hiện ở chỗ:",
+    options: ["Giúp con người sửa đổi hành vi cho phù hợp với mục tiêu", "Giúp con người nhận biết thế giới", "Giúp con người rung động", "Giúp con người giao tiếp"],
+    answer: 0,
+    explanation: "Tâm lý giúp điều chỉnh hoạt động cho phù hợp với mục tiêu và hoàn cảnh[cite: 586, 755]."
+  },
+  {
+    chapter: 1,
+    level: "NB",
+    question: "Tâm lý là chức năng của:",
+    options: ["Trái tim", "Bộ não", "Giác quan", "Thần kinh ngoại biên"],
+    answer: 1,
+    explanation: "Tâm lý là chức năng của não bộ hoạt động bình thường[cite: 771]."
+  },
+  {
+    chapter: 1,
+    level: "TH",
+    question: "Nguyên tắc 'Tâm lý, ý thức không tách rời khỏi hoạt động' yêu cầu nhà nghiên cứu phải làm gì?",
+    options: ["Nghiên cứu tâm lý thông qua sản phẩm hoạt động", "Chỉ nghiên cứu não bộ", "Chỉ dùng trắc nghiệm", "Nghiên cứu qua giấc mơ"],
+    answer: 0,
+    explanation: "Vì tâm lý bộc lộ qua hoạt động, nên phải nghiên cứu nó thông qua quá trình và sản phẩm hoạt động[cite: 1329]."
+  },
+   { 
+    chapter: 1, 
+    level: "TH", 
+    question: "Cùng một hiện thực khách quan tác động nhưng hình ảnh tâm lý ở mỗi người lại khác nhau. Điều này thể hiện đặc điểm nào?", 
+    options: ["Tính xã hội", "Tính chủ thể", "Tính khách quan", "Tính lịch sử"], 
+    answer: 1, 
+    explanation: "Cùng một hiện thực khách quan tác động vào nhiều chủ thể khác nhau sẽ cho ra những hình ảnh tâm lý khác nhau[cite: 403]."
+  },
+  { 
+    chapter: 1, 
+    level: "TH", 
+    question: "Tâm lý người mang bản chất xã hội - lịch sử vì:", 
+    options: ["Tâm lý người có nguồn gốc từ thế giới tự nhiên", "Tâm lý người là sản phẩm của hoạt động và giao tiếp trong các mối quan hệ xã hội", "Tâm lý người do gen di truyền quyết định", "Tâm lý người không thay đổi theo thời gian"], 
+    answer: 1, 
+    explanation: "Tâm lý người có nguồn gốc từ thế giới khách quan, nhưng chính nguồn gốc xã hội (các mối quan hệ, nền văn hóa) là cái quyết định nên tâm lý người[cite: 405]." 
+  },
+  { 
+    chapter: 1, 
+    level: "VD", 
+    question: "Trong dạy học, giáo viên không nên áp đặt suy nghĩ của mình lên học sinh mà cần tôn trọng ý kiến riêng của các em. Đây là vận dụng của:", 
+    options: ["Tính khách quan", "Tính phổ biến", "Tính chủ thể", "Tính hệ thống"], 
+    answer: 2, 
+    explanation: "Phản ánh tâm lý có tính chủ thể nên cần tôn trọng cái riêng, tránh sự áp đặt[cite: 407]."
+  },
+  { 
+    chapter: 1, 
+    level: "VD", 
+    question: "Trong giai đoạn mang thai, người mẹ chủ động trò chuyện cùng bào thai. Việc làm này liên quan nhiều nhất đến bản chất nào của tâm lý?", 
+    options: ["Tính lịch sử cộng đồng", "Tính lịch sử cá nhân", "Bản chất xã hội", "Tính phản xạ"], 
+    answer: 2, 
+    explanation: "Ngay từ đầu, con người đã cần sự tương tác xã hội (giao tiếp) để hình thành tâm lý[cite: 409]."
+  },
+  { 
+    chapter: 1, 
+    level: "VD", 
+    question: "Khi nghiên cứu tâm lý học sinh, cần xem xét bối cảnh gia đình và biến cố quá khứ. Đây là vận dụng:", 
+    options: ["Tính chủ thể", "Tính lịch sử - xã hội", "Chức năng não", "Phản xạ"], 
+    answer: 1, 
+    explanation: "Tâm lý mang dấu ấn của lịch sử cá nhân và điều kiện xã hội[cite: 739]."
+  },
 
-    // --- CHƯƠNG 2: HOẠT ĐỘNG & GIAO TIẾP (Matrix: 2 NB, 2 TH, 0 VD) ---
-    // Nhận biết (NB)
-    {
-        chapter: 2, level: "NB",
-        question: "Dưới góc nhìn Tâm lý học hoạt động, hoạt động là:",
-        options: ["Sự tiêu hao năng lượng", "Mối quan hệ tác động qua lại giữa con người và thế giới (khách thể) để tạo ra sản phẩm", "Sự phản ánh thụ động", "Bản năng sinh tồn"],
-        answer: 1,
-        explanation: "Định nghĩa hoạt động: là mối quan hệ tác động qua lại giữa con người và thế giới để tạo ra sản phẩm cả về phía thế giới và con người [9, 10]."
-    },
-    {
-        chapter: 2, level: "NB",
-        question: "Định nghĩa nào đúng nhất về Giao tiếp?",
-        options: ["Sự tiếp xúc tâm lý giữa người với người trao đổi thông tin, cảm xúc, ảnh hưởng lẫn nhau", "Sự trao đổi thông tin đơn thuần", "Hoạt động ngôn ngữ", "Tiếp xúc giữa người và vật"],
-        answer: 0,
-        explanation: "Giao tiếp là sự tiếp xúc tâm lý giữa người với người... xác lập và vận hành các mối quan hệ [11, 12]."
-    },
-    // Thông hiểu (TH)
-    {
-        chapter: 2, level: "TH",
-        question: "Khi thực hiện thuyết trình, sinh viên nghiên cứu tài liệu và tạo ra bài slide. Đây là quá trình nào?",
-        options: ["Quá trình chủ thể hóa", "Quá trình khách thể hóa (xuất tâm)", "Quá trình phản ánh", "Quá trình nhập tâm"],
-        answer: 1,
-        explanation: "Quá trình tạo ra sản phẩm (bài slide) từ năng lực của mình là quá trình khách thể hóa (xuất tâm) [13, 14]."
-    },
-    {
-        chapter: 2, level: "TH",
-        question: "Tác giả A đọc tiểu thuyết và rút ra bài học cho mối tình của mình. Đây là quá trình nào?",
-        options: ["Quá trình xuất tâm", "Quá trình chủ thể hóa (nhập tâm)", "Quá trình khách thể hóa", "Quá trình xã hội hóa"],
-        answer: 1,
-        explanation: "Chuyển nội dung từ khách thể (tiểu thuyết) vào bản thân (bài học kinh nghiệm) là quá trình chủ thể hóa (nhập tâm) [13, 15]."
-    },
+  // --- CHƯƠNG 2: HOẠT ĐỘNG & GIAO TIẾP ---
+  {
+    chapter: 2,
+    level: "NB",
+    question: "Dưới góc nhìn Tâm lý học hoạt động, hoạt động là:",
+    options: ["Sự tiêu hao năng lượng", "Mối quan hệ tác động qua lại giữa con người và thế giới (khách thể) để tạo ra sản phẩm", "Sự phản ánh thụ động", "Bản năng"],
+    answer: 1,
+    explanation: "Định nghĩa hoạt động: mối quan hệ tác động qua lại giữa con người và thế giới để tạo ra sản phẩm[cite: 8, 75, 78]."
+  },
+  {
+    chapter: 2,
+    level: "VD",
+    question: "Phản tư nghề nghiệp (tự suy ngẫm về kinh nghiệm) thuộc về quá trình nào?",
+    options: ["Chủ thể hóa (nhập tâm)", "Khách thể hóa", "Xuất tâm", "Xã hội hóa"],
+    answer: 0,
+    explanation: "Chuyển tri thức từ ngoài vào bản thân là nhập tâm[cite: 12, 416, 619]."
+  },
+  {
+    chapter: 2,
+    level: "VD",
+    question: "Bức tranh 'Tiếng Thét' của Edvard Munch là quá trình:",
+    options: ["Chủ thể hóa", "Khách thể hóa (Xuất tâm)", "Trừu tượng hóa", "Xã hội hóa"],
+    answer: 1,
+    explanation: "Chuyển tâm trạng vào tác phẩm là xuất tâm[cite: 14, 621]."
+  },
+  {
+    chapter: 2,
+    level: "NB",
+    question: "Định nghĩa nào đúng nhất về Giao tiếp?",
+    options: ["Sự tiếp xúc tâm lý giữa người với người trao đổi thông tin, cảm xúc", "Sự trao đổi thông tin đơn thuần", "Hoạt động ngôn ngữ", "Tiếp xúc giữa người và vật"],
+    answer: 0,
+    explanation: "Giao tiếp là sự tiếp xúc tâm lý giữa người với người xác lập và vận hành các mối quan hệ[cite: 82, 85]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Khi thực hiện thuyết trình, sinh viên nghiên cứu tài liệu và tạo ra bài slide. Đây là quá trình nào?",
+    options: ["Quá trình chủ thể hóa", "Quá trình khách thể hóa (xuất tâm)", "Quá trình phản ánh", "Quá trình nhập tâm"],
+    answer: 1,
+    explanation: "Quá trình tạo ra sản phẩm (bài slide) từ năng lực của mình là quá trình khách thể hóa[cite: 90, 93]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Tác giả A đọc tiểu thuyết và rút ra bài học cho mối tình của mình. Đây là quá trình nào?",
+    options: ["Quá trình xuất tâm", "Quá trình chủ thể hóa (nhập tâm)", "Quá trình khách thể hóa", "Quá trình xã hội hóa"],
+    answer: 1,
+    explanation: "Chuyển nội dung từ khách thể (tiểu thuyết) vào bản thân là quá trình chủ thể hóa[cite: 97, 100]."
+  },
+  {
+    chapter: 2,
+    level: "NB",
+    question: "Đơn vị cấu thành nhỏ nhất, mang tính kỹ thuật của hoạt động là:",
+    options: ["Hành động", "Hoạt động", "Thao tác", "Cử động"],
+    answer: 2,
+    explanation: "Thao tác là đơn vị nhỏ nhất của hành động, tương ứng với phương tiện và điều kiện[cite: 414]."
+  },
+  {
+    chapter: 2,
+    level: "NB",
+    question: "Khi nhu cầu gặp gỡ đối tượng có khả năng thỏa mãn nó, nhu cầu sẽ trở thành:",
+    options: ["Mục đích", "Động cơ", "Hành động", "Phương tiện"],
+    answer: 1,
+    explanation: "Động cơ là nhu cầu đã gặp đối tượng, thúc đẩy con người hoạt động[cite: 625]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Hoạt động và Giao tiếp có vai trò gì đối với tâm lý?",
+    options: ["Là sản phẩm phụ", "Là động lực và là nơi nảy sinh tâm lý", "Không liên quan", "Chỉ là phương tiện giải trí"],
+    answer: 1,
+    explanation: "Hoạt động và giao tiếp vừa là động lực hình thành, vừa là nơi tâm lý được bộc lộ[cite: 627]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Quá trình 'Xuất tâm' (Khách thể hóa) có ý nghĩa gì?",
+    options: ["Làm nghèo vốn tâm lý cá nhân", "Bộc lộ năng lực con người và tạo ra sản phẩm cho xã hội", "Chỉ là sự tiêu hao năng lượng", "Không có ý nghĩa gì"],
+    answer: 1,
+    explanation: "Qua quá trình xuất tâm, con người object hóa năng lực của mình vào sản phẩm[cite: 832, 1103]."
+  },
+  {
+    chapter: 2,
+    level: "NB",
+    question: "Hai quá trình cơ bản thống nhất trong cấu trúc của hoạt động là:",
+    options: ["Chủ thể hóa và Khách thể hóa", "Nhận thức và Tình cảm", "Lý thuyết và Thực hành", "Vật chất và Ý thức"],
+    answer: 0,
+    explanation: "Hoạt động bao gồm hai quá trình diễn ra đồng thời: Chủ thể hóa (nhập tâm) và Khách thể hóa (xuất tâm)[cite: 839, 1110]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Giao tiếp phi ngôn ngữ bao gồm:",
+    options: ["Lời nói, chữ viết", "Cử chỉ, ánh mắt, điệu bộ, trang phục", "Email, tin nhắn", "Sách báo"],
+    answer: 1,
+    explanation: "Giao tiếp phi ngôn ngữ dùng các tín hiệu cơ thể và hình ảnh thay vì lời nói[cite: 1037, 1117]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Mối quan hệ giữa nhận thức cảm tính và lý tính?",
+    options: ["Tách biệt nhau", "Cảm tính là nền tảng, lý tính khái quát hóa kết quả cảm tính", "Lý tính có trước", "Cảm tính thay thế được lý tính"],
+    answer: 1,
+    explanation: "Nhận thức cảm tính cung cấp dữ liệu cho lý tính; lý tính chi phối lại cảm tính[cite: 566]."
+  },
+  {
+    chapter: 2,
+    level: "TH",
+    question: "Đặc điểm nào phân biệt hoạt động của người với con vật?",
+    options: ["Tính đối tượng", "Tính mục đích và tính gián tiếp", "Tính bản năng", "Tính thích nghi"],
+    answer: 1,
+    explanation: "Con người hoạt động có mục đích tự giác và dùng công cụ (gián tiếp)[cite: 763]."
+  },
+  { 
+    chapter: 2, 
+    level: "NB", 
+    question: "Quá trình con người chuyển hóa năng lượng, tâm lý của mình thành sản phẩm hoạt động gọi là:", 
+    options: ["Quá trình chủ thể hóa", "Quá trình khách thể hóa (xuất tâm)", "Quá trình nhập tâm", "Quá trình phản ánh"], 
+    answer: 1, 
+    explanation: "Quá trình khách thể hóa (xuất tâm) là quá trình con người chuyển hóa những năng lượng của mình thành sản phẩm của hoạt động[cite: 412]."
+  },
+  { 
+    chapter: 2, 
+    level: "TH", 
+    question: "Chức năng nào của giao tiếp thể hiện qua câu: 'Trông mặt mà bắt hình dong'?", 
+    options: ["Chức năng thông tin", "Chức năng nhận thức và đánh giá lẫn nhau", "Chức năng phối hợp", "Chức năng giáo dục"], 
+    answer: 1, 
+    explanation: "Giao tiếp giúp nhận thức người khác, tìm hiểu và đánh giá đối tượng[cite: 418]."
+  },
+  { 
+    chapter: 2, 
+    level: "TH", 
+    question: "Câu danh ngôn 'Có thể thấy được tính cách của một người qua cách anh ta nói chuyện' (Menander) thể hiện chức năng nào?", 
+    options: ["Chức năng thông tin", "Chức năng điều khiển", "Chức năng nhận thức và đánh giá lẫn nhau", "Chức năng cảm xúc"], 
+    answer: 2, 
+    explanation: "Qua giao tiếp, con người bộc lộ đặc điểm tâm lý, giúp người khác nhận thức và đánh giá được họ[cite: 420]."
+  },
+  { 
+    chapter: 2, 
+    level: "TH", 
+    question: "Câu danh ngôn 'Việc không biết rõ – đừng nói. Chuyện chưa xảy ra – đừng nói bừa' thể hiện chức năng nào của giao tiếp?", 
+    options: ["Chức năng thông tin", "Chức năng cảm xúc", "Chức năng tổ chức phối hợp", "Chức năng điều khiển"], 
+    answer: 0, 
+    explanation: "Liên quan đến việc trao đổi và xử lý thông tin chính xác trong giao tiếp[cite: 623]."
+  },
+  { 
+    chapter: 2, 
+    level: "VD", 
+    question: "Sinh viên sư phạm đi thực tập giảng dạy để rèn luyện kỹ năng. Hoạt động này gọi là gì?", 
+    options: ["Hoạt động vui chơi", "Hoạt động lao động", "Hoạt động học tập - nghề nghiệp", "Hoạt động xã hội"], 
+    answer: 2, 
+    explanation: "Đây là hoạt động hướng tới việc tiếp thu tri thức và kỹ năng nghề nghiệp[cite: 825, 1096]."
+  },
+  { 
+    chapter: 2, 
+    level: "NB", 
+    question: "Giao tiếp xác lập và vận hành mối quan hệ nào?", 
+    options: ["Người - Tự nhiên", "Người - Người", "Người - Đồ vật", "Người - Máy móc"], 
+    answer: 1, 
+    explanation: "Giao tiếp là sự tiếp xúc tâm lý giữa người với người[cite: 743]."
+  },
+  { 
+    chapter: 2, 
+    level: "NB", 
+    question: "Hoạt động là mối quan hệ tác động qua lại giữa:", 
+    options: ["Con người và thế giới (khách thể)", "Con người và môi trường", "Thần kinh và cơ bắp", "Chủ thể và chủ thể"], 
+    answer: 0, 
+    explanation: "Hoạt động là quan hệ giữa con người (chủ thể) và thế giới (khách thể)[cite: 596]."
+  },
+  { 
+    chapter: 2, 
+    level: "VD", 
+    question: "Sinh viên đọc giáo trình để có kiến thức đi thi. Đây là quá trình:", 
+    options: ["Xuất tâm", "Nhập tâm (Chủ thể hóa)", "Khách thể hóa", "Sáng tạo"], 
+    answer: 1, 
+    explanation: "Chuyển tri thức từ sách (khách thể) vào đầu (chủ thể)[cite: 777]."
+  },
+  { 
+    chapter: 2, 
+    level: "NB", 
+    question: "Giao tiếp là điều kiện để:", 
+    options: ["Tâm lý, nhân cách phát triển bình thường", "Con người sống sót về mặt sinh học", "Thỏa mãn nhu cầu ăn uống", "Cơ thể lớn lên"], 
+    answer: 0, 
+    explanation: "Giao tiếp là điều kiện để tâm lý, nhân cách hình thành và phát triển[cite: 584]."
+  },
 
-    // --- CHƯƠNG 3: TÂM LÝ, Ý THỨC (Matrix: 1 NB, 4 TH, 1 VD) ---
-    // Nhận biết (NB)
-    {
-        chapter: 3, level: "NB",
-        question: "Cấu trúc của ý thức bao gồm những mặt nào?",
-        options: ["Mặt nhận thức, mặt thái độ, mặt năng động", "Ý thức, tiền ý thức, vô thức", "Cái tôi, cái nó, cái siêu tôi", "Cảm giác, tri giác, tư duy"],
-        answer: 0,
-        explanation: "Cấu trúc ý thức gồm 3 mặt: Nhận thức, Thái độ, Năng động (hành động) [16, 17]."
-    },
-    // Thông hiểu (TH)
-    {
-        chapter: 3, level: "TH",
-        question: "Đặc điểm thể hiện sự khác biệt căn bản của tri giác so với cảm giác là:",
-        options: ["Phản ánh thuộc tính bên ngoài", "Phản ánh sự vật, hiện tượng một cách trọn vẹn", "Là quá trình tâm lý", "Chỉ xuất hiện khi có kích thích trực tiếp"],
-        answer: 1,
-        explanation: "Cảm giác phản ánh riêng lẻ, Tri giác phản ánh trọn vẹn [18, 19]."
-    },
-    {
-        chapter: 3, level: "TH",
-        question: "Tự ý thức được hiểu là:",
-        options: ["Tự giáo dục", "So sánh bản thân với người khác", "Năng lực nhận thức, tỏ thái độ và điều chỉnh bản thân", "Tất cả đều đúng"],
-        answer: 2,
-        explanation: "Tự ý thức là mức độ cao, hướng vào nhận thức, đánh giá và điều khiển chính bản thân mình [17, 20]."
-    },
-    {
-        chapter: 3, level: "TH",
-        question: "Trong các trường hợp sau, trường hợp nào là hành vi vô thức?",
-        options: ["Minh biết rõ mình đang làm gì", "Do say rượu, Minh nói ra những điều mơ hồ trong lòng", "Minh phân tích cẩn thận trước khi làm", "Minh học tập vì danh dự gia đình"],
-        answer: 1,
-        explanation: "Hành vi trong trạng thái say rượu, không kiểm soát được là biểu hiện của vô thức [21, 22]."
-    },
-    {
-        chapter: 3, level: "TH",
-        question: "Ý thức là gì theo tâm lý học?",
-        options: ["Hình thức phản ánh tâm lý cao nhất chỉ có ở người", "Phản ánh bằng ngôn ngữ", "Khả năng hiểu được những gì đã tiếp thu", "Tất cả đều đúng"],
-        answer: 3,
-        explanation: "Ý thức là hình thức phản ánh cao nhất, gắn với ngôn ngữ và nhận thức lại tri thức [16, 19]."
-    },
-    // Vận dụng (VD)
-    {
-        chapter: 3, level: "VD",
-        question: "Để giáo dục học sinh chưa ngoan, biện pháp nào tác động vào mặt nhận thức của ý thức?",
-        options: ["Chỉ phạt hành vi", "Giảng giải để HS hiểu hậu quả hành vi, từ đó đổi thái độ và hành vi", "Bắt chước", "Khen thưởng"],
-        answer: 1,
-        explanation: "Tác động vào mặt nhận thức (hiểu sai/đúng) là cơ sở để hình thành thái độ và điều chỉnh hành vi (mặt năng động) [16, 23]."
-    },
+  // --- CHƯƠNG 3: TÂM LÝ, Ý THỨC ---
+  {
+    chapter: 3,
+    level: "NB",
+    question: "Cấu trúc của ý thức bao gồm những mặt nào?",
+    options: ["Mặt nhận thức, mặt thái độ, mặt năng động", "Ý thức, tiền ý thức, vô thức", "Cái tôi, cái nó, cái siêu tôi", "Cảm giác, tri giác, tư duy"],
+    answer: 0,
+    explanation: "Cấu trúc ý thức gồm 3 mặt: Nhận thức, Thái độ, Năng động (hành động)[cite: 106, 109]."
+  },
+  {
+    chapter: 3,
+    level: "TH",
+    question: "Tự ý thức được hiểu là:",
+    options: ["Tự giáo dục", "So sánh bản thân với người khác", "Năng lực nhận thức, tỏ thái độ và điều chỉnh bản thân", "Tất cả đều đúng"],
+    answer: 2,
+    explanation: "Tự ý thức là mức độ cao, hướng vào nhận thức, đánh giá và điều khiển chính bản thân mình[cite: 121, 124]."
+  },
+  {
+    chapter: 3,
+    level: "TH",
+    question: "Trong các trường hợp sau, trường hợp nào là hành vi vô thức?",
+    options: ["Minh biết rõ mình đang làm gì", "Do say rượu, Minh nói ra những điều mơ hồ trong lòng", "Minh phân tích cẩn thận trước khi làm", "Minh học tập vì danh dự gia đình"],
+    answer: 1,
+    explanation: "Hành vi trong trạng thái say rượu, không kiểm soát được là biểu hiện của vô thức[cite: 128, 131]."
+  },
+  {
+    chapter: 3,
+    level: "TH",
+    question: "Ý thức là gì theo tâm lý học?",
+    options: ["Hình thức phản ánh tâm lý cao nhất chỉ có ở người", "Phản ánh bằng ngôn ngữ", "Khả năng hiểu được những gì đã tiếp thu", "Tất cả đều đúng"],
+    answer: 3,
+    explanation: "Ý thức là hình thức phản ánh cao nhất, gắn với ngôn ngữ và nhận thức lại tri thức[cite: 135, 138]."
+  },
+  {
+    chapter: 3,
+    level: "VD",
+    question: "Để giáo dục học sinh chưa ngoan, biện pháp nào tác động vào mặt nhận thức của ý thức?",
+    options: ["Chỉ phạt hành vi", "Giảng giải để HS hiểu hậu quả hành vi, từ đó đổi thái độ và hành vi", "Bắt chước", "Khen thưởng"],
+    answer: 1,
+    explanation: "Tác động vào mặt nhận thức (hiểu sai/đúng) là cơ sở để hình thành thái độ và điều chỉnh hành vi[cite: 143, 146]."
+  },
+  {
+    chapter: 3,
+    level: "VD",
+    question: "Áp lực đồng trang lứa do thiếu hụt năng lực nào?",
+    options: ["Kỹ năng", "Thấu hiểu", "Tự ý thức", "Tự đánh giá"],
+    answer: 2,
+    explanation: "Tự ý thức là nhận thức và thái độ với bản thân. Thiếu nó dễ bị tác động bởi người khác[cite: 16, 431]."
+  },
+  {
+    chapter: 3,
+    level: "TH",
+    question: "Hiện tượng 'Tâm thế' (sẵn sàng chờ đón) nằm ở vùng nào của đời sống tâm lý?",
+    options: ["Ý thức", "Vô thức", "Giáp ranh giữa vô thức và ý thức", "Tiềm thức"],
+    answer: 2,
+    explanation: "Tâm thế là nơi giáp ranh giữa vô thức và ý thức, là sự chuẩn bị tâm lý đón nhận kích thích[cite: 429, 638]."
+  },
+  {
+    chapter: 3,
+    level: "VD",
+    question: "Một học sinh vi phạm nội quy, giáo viên nhắc nhở cả lớp để dùng ảnh hưởng tập thể tác động. Đây là vận dụng cấp độ nào?",
+    options: ["Ý thức", "Tự ý thức", "Ý thức nhóm/tập thể", "Tất cả các cấp độ"],
+    answer: 2,
+    explanation: "Sử dụng sức mạnh của ý thức nhóm/tập thể để giáo dục cá nhân[cite: 433]."
+  },
+  {
+    chapter: 3,
+    level: "VD",
+    question: "Một người lỡ lời nói ra điều bí mật mà mình định giấu kín (lapsus). Đây là biểu hiện của:",
+    options: ["Ý thức", "Vô thức", "Tự ý thức", "Tiềm thức"],
+    answer: 1,
+    explanation: "Những hành vi lỡ lời, quên tên... thường là biểu hiện của vô thức (những dồn nén bị ức chế)[cite: 847, 1125]."
+  },
+  {
+    chapter: 3,
+    level: "NB",
+    question: "Giấc mơ là biểu hiện của hiện tượng tâm lý nào?",
+    options: ["Ý thức", "Vô thức", "Tư duy", "Tưởng tượng có chủ định"],
+    answer: 1,
+    explanation: "Giấc mơ là hiện tượng tâm lý diễn ra khi vỏ não bị ức chế (ngủ), thuộc về vô thức[cite: 861, 1139]."
+  },
+  {
+    chapter: 3,
+    level: "NB",
+    question: "Yếu tố giữ vai trò chủ đạo trong sự hình thành ý thức trên phương diện loài:",
+    options: ["Lao động và Ngôn ngữ", "Bộ não phát triển", "Đôi bàn tay", "Dáng đứng thẳng"],
+    answer: 0,
+    explanation: "Lao động và ngôn ngữ là hai yếu tố quyết định sự nảy sinh ý thức[cite: 65, 757]."
+  },
+  { 
+    chapter: 3, 
+    level: "NB", 
+    question: "Thời kỳ cảm giác xuất hiện đầu tiên ở loài động vật nào?", 
+    options: ["Động vật nguyên sinh", "Động vật không xương sống", "Động vật có xương sống", "Loài người"], 
+    answer: 1, 
+    explanation: "Thời kỳ cảm giác xuất hiện ở động vật không xương sống (giun, ốc, sên...)[cite: 423]."
+  },
+  { 
+    chapter: 3, 
+    level: "NB", 
+    question: "Hoạt động chủ đạo của tuổi mẫu giáo là gì?", 
+    options: ["Giao tiếp cảm xúc", "Vui chơi", "Học tập", "Lao động"], 
+    answer: 1, 
+    explanation: "Ở tuổi mẫu giáo, vui chơi là hoạt động chủ đạo (trung tâm là trò chơi sắm vai)[cite: 425]."
+  },
+  { 
+    chapter: 3, 
+    level: "TH", 
+    question: "Con người có khả năng tự nhận thức, tự đánh giá và điều khiển hành vi của chính mình. Đây là cấp độ nào của ý thức?", 
+    options: ["Ý thức", "Tự ý thức", "Ý thức nhóm", "Vô thức"], 
+    answer: 1, 
+    explanation: "Tự ý thức là mức độ phát triển cao, con người tách mình ra làm đối tượng để đánh giá và điều khiển[cite: 427, 854, 1132]."
+  },
+  { 
+    chapter: 3, 
+    level: "VD", 
+    question: "Khánh Kiệt từ một người bừa bộn, khi ở KTX đã phải thay đổi để gọn gàng hơn vì sợ ảnh hưởng thi đua của phòng. Sự thay đổi này biểu hiện của:", 
+    options: ["Tự ý thức", "Ý thức cá nhân", "Ý thức nhóm/tập thể", "Vô thức"], 
+    answer: 2, 
+    explanation: "Hành động vì lợi ích và danh dự chung của nhóm/tập thể là biểu hiện của ý thức nhóm[cite: 630]."
+  },
+  { 
+    chapter: 3, 
+    level: "VD", 
+    question: "U23 Việt Nam quyết tâm thi đấu vì màu cờ sắc áo tại Thường Châu. Đây là biểu hiện của:", 
+    options: ["Tự ý thức", "Ý thức nhóm/tập thể", "Vô thức", "Tiềm thức"], 
+    answer: 1, 
+    explanation: "Hành động đại diện cho danh dự của cộng đồng/quốc gia là ý thức tập thể[cite: 632]."
+  },
+  { 
+    chapter: 3, 
+    level: "NB", 
+    question: "Nam biết quay bài là sai nhưng vẫn làm. Xét cấu trúc ý thức, Nam thiếu mặt nào?", 
+    options: ["Mặt nhận thức", "Mặt thái độ", "Mặt năng động (hành động)", "Mặt tình cảm"], 
+    answer: 2, 
+    explanation: "Biết (nhận thức) nhưng không làm đúng (hành động/năng động) tức là thiếu mặt năng động của ý thức[cite: 634]."
+  },
+  { 
+    chapter: 3, 
+    level: "NB", 
+    question: "Ý thức được mình là sinh viên sư phạm, Thành luôn ăn mặc lịch sự và cư xử mô phạm. Điều này thể hiện mặt nào của ý thức?", 
+    options: ["Mặt nhận thức", "Mặt thái độ", "Mặt năng động (hành động)", "Mặt vô thức"], 
+    answer: 2, 
+    explanation: "Thể hiện ra bên ngoài bằng hành vi, cử chỉ phù hợp với nhận thức là mặt năng động[cite: 636]."
+  },
+  { 
+    chapter: 3, 
+    level: "TH", 
+    question: "Tại sao nói ý thức là 'phản ánh của phản ánh'?", 
+    options: ["Vì nó phản ánh thế giới khách quan", "Vì nó là nhận thức lại những gì đã được cảm giác/tri giác phản ánh (hình ảnh tâm lý)", "Vì nó giống chiếc gương", "Vì nó phản ánh cái cũ"], 
+    answer: 1, 
+    explanation: "Ý thức lấy hình ảnh tâm lý (đã phản ánh lần 1) làm đối tượng để phản ánh tiếp (lần 2)[cite: 558]."
+  },
+  { 
+    chapter: 3, 
+    level: "TH", 
+    question: "Ý thức là gì?", 
+    options: ["Phản ánh tâm lý cao nhất chỉ có ở người", "Phản ánh bản năng", "Phản ánh của động vật bậc cao", "Sự bắt chước"], 
+    answer: 0, 
+    explanation: "Ý thức là hình thức phản ánh cao nhất, gắn với ngôn ngữ và chỉ có ở người[cite: 572]."
+  },
+  { 
+    chapter: 3, 
+    level: "VD", 
+    question: "Để giáo dục học sinh xã rác, giáo viên cần tác động vào:", 
+    options: ["Chỉ nhận thức", "Chỉ hành vi", "Đồng bộ Nhận thức - Thái độ - Hành vi", "Chỉ tình cảm"], 
+    answer: 2, 
+    explanation: "Cấu trúc ý thức gồm 3 mặt thống nhất, cần tác động cả 3 để hiệu quả bền vững[cite: 747]."
+  },
+  { 
+    chapter: 3, 
+    level: "NB", 
+    question: "Cấp độ ý thức hướng vào nhận thức và điều chỉnh chính mình là:", 
+    options: ["Ý thức", "Tự ý thức", "Ý thức nhóm", "Vô thức"], 
+    answer: 1, 
+    explanation: "Tự ý thức là ý thức về bản thân[cite: 769]."
+  },
+  { 
+    chapter: 3, 
+    level: "VD", 
+    question: "Giáo viên khen ngợi học sinh trước lớp để em đó tự hào và phấn đấu hơn. Đây là tác động vào:", 
+    options: ["Vô thức", "Tự ý thức", "Tiềm thức", "Bản năng"], 
+    answer: 1, 
+    explanation: "Kích thích lòng tự trọng, tự đánh giá của cá nhân (Tự ý thức)[cite: 789]."
+  },
+  { 
+    chapter: 3, 
+    level: "TH", 
+    question: "Mặt năng động của ý thức thể hiện ở:", 
+    options: ["Hành vi, cử chỉ thực tiễn", "Sự hiểu biết", "Rung cảm yêu ghét", "Tiềm thức"], 
+    answer: 0, 
+    explanation: "Mặt năng động chính là quá trình vận dụng hiểu biết để tác động vào thực tiễn[cite: 602]."
+  },
+  { 
+    chapter: 3, 
+    level: "VD", 
+    question: "Khi đi thi, vì quá lo lắng nên Minh quên hết bài, ra khỏi phòng thi mới nhớ lại. Đây là hiện tượng:", 
+    options: ["Quên vĩnh viễn", "Quên tạm thời (ức chế vượt hạn)", "Trí nhớ kém", "Không tập trung"], 
+    answer: 1, 
+    explanation: "Sự ức chế tạm thời của vỏ não do cường độ kích thích (lo lắng) quá mạnh[cite: 1336]."
+  },
 
-    // --- CHƯƠNG 4: NHẬN THỨC (Matrix: 3 NB, 8 TH, 10 VD) - Phần nặng nhất ---
-    // Nhận biết (NB)
-    {
-        chapter: 4, level: "NB",
-        question: "Hình thức nhận thức cảm tính cao nhất, tích cực, chủ động là:",
-        options: ["Cảm giác", "Quan sát", "Tư duy", "Tưởng tượng"],
-        answer: 1,
-        explanation: "Quan sát là hình thức tri giác cao nhất, có chủ định [24, 25]."
-    },
-    {
-        chapter: 4, level: "NB",
-        question: "Quy luật nào KHÔNG phải của tri giác?",
-        options: ["Tính đối tượng", "Tính lựa chọn", "Ngưỡng sai biệt", "Tính ổn định"],
-        answer: 2,
-        explanation: "Ngưỡng sai biệt là quy luật của Cảm giác, không phải Tri giác [26]."
-    },
-    {
-        chapter: 4, level: "NB",
-        question: "Tư duy là quá trình nhận thức phản ánh:",
-        options: ["Thuộc tính bên ngoài", "Thuộc tính bản chất, mối liên hệ có tính quy luật", "Kinh nghiệm đã qua", "Hình ảnh chưa từng có"],
-        answer: 1,
-        explanation: "Tư duy phản ánh cái bản chất, quy luật, cái chưa biết [26, 27]."
-    },
-    // Thông hiểu (TH)
-    {
-        chapter: 4, level: "TH",
-        question: "Thuật ngữ 'bề ngoài' trong nhận thức cảm tính được hiểu là:",
-        options: ["Vẻ đẹp bên ngoài", "Thuộc tính bên ngoài trực tiếp tác động vào giác quan", "Không quan trọng", "Giả tạo"],
-        answer: 1,
-        explanation: "Nhận thức cảm tính phản ánh thuộc tính bên ngoài, trực quan khi sự vật tác động trực tiếp [18, 28]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Chú ý không chủ định phụ thuộc chủ yếu vào:",
-        options: ["Mục đích hoạt động", "Nỗ lực ý chí", "Đặc điểm vật kích thích (mới lạ, cường độ...)", "Kế hoạch định trước"],
-        answer: 2,
-        explanation: "Chú ý không chủ định do đặc điểm vật kích thích (mới lạ, hấp dẫn, mạnh) gây ra [29, 30]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Sự khác biệt cơ bản giữa Tư duy và Tưởng tượng là:",
-        options: ["Tư duy có tính vấn đề, tưởng tượng thì không", "Tư duy giải quyết vấn đề chặt chẽ logic, tưởng tượng giải quyết khi thiếu thông tin (bất định)", "Tư duy không cần ngôn ngữ", "Tưởng tượng phản ánh trực tiếp"],
-        answer: 1,
-        explanation: "Tư duy giải quyết vấn đề rõ ràng dữ kiện; Tưởng tượng nảy sinh khi hoàn cảnh có tính bất định lớn [31, 32]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Điểm giống nhau giữa Cảm giác và Tri giác?",
-        options: ["Đều phản ánh trọn vẹn", "Đều là nhận thức lý tính", "Đều phản ánh trực tiếp thuộc tính bên ngoài", "Đều không cần kích thích"],
-        answer: 2,
-        explanation: "Cả hai đều thuộc nhận thức cảm tính, phản ánh trực tiếp thuộc tính bề ngoài [26]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Ghi nhớ máy móc thường dùng khi:",
-        options: ["Tài liệu rời rạc, không có nội dung khái quát", "Cần hiểu sâu sắc", "Tài liệu có tính logic cao", "Khi cần sáng tạo"],
-        answer: 0,
-        explanation: "Ghi nhớ máy móc dựa trên sự lặp lại, dùng cho tài liệu rời rạc hoặc không cần hiểu nghĩa [33, 34]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Quên tạm thời là hiện tượng:",
-        options: ["Mất hoàn toàn trí nhớ", "Không nhớ lại được lúc cần thiết nhưng sau đó lại nhớ ra", "Quên vĩnh viễn", "Bệnh lý"],
-        answer: 1,
-        explanation: "Quên tạm thời là không tái hiện được ngay lúc đó (ví dụ lúc thi) nhưng sau đó lại nhớ [35, 36]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Luận điểm nào SAI về mối quan hệ giữa nhận thức cảm tính và lý tính?",
-        options: ["Tách rời nhau hoàn toàn", "Cảm tính cung cấp dữ liệu cho lý tính", "Lý tính chi phối độ nhạy cảm của cảm tính", "Thống nhất với nhau"],
-        answer: 0,
-        explanation: "Nhận thức cảm tính và lý tính có mối quan hệ mật thiết, bổ sung cho nhau, không tách rời [31, 37]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Đặc điểm nào là của Tưởng tượng?",
-        options: ["Phản ánh cái đã có", "Xây dựng hình ảnh mới từ biểu tượng đã có", "Phản ánh bản chất logic", "Không cần ngôn ngữ"],
-        answer: 1,
-        explanation: "Tưởng tượng xây dựng hình ảnh mới trên cơ sở biểu tượng đã có [27, 38]."
-    },
-    // Vận dụng (VD)
-    {
-        chapter: 4, level: "VD",
-        question: "Giáo viên nói to, rõ ràng là vận dụng quy luật nào của cảm giác?",
-        options: ["Thích ứng", "Ngưỡng cảm giác", "Tương phản", "Tác động qua lại"],
-        answer: 1,
-        explanation: "Nói to để đạt tới ngưỡng nghe (ngưỡng tuyệt đối dưới) của học sinh [26, 39]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Dùng phấn màu đóng khung ý chính trên bảng là vận dụng quy luật nào của tri giác?",
-        options: ["Tính ổn định", "Tính lựa chọn", "Tính ảo ảnh", "Tính đối tượng"],
-        answer: 1,
-        explanation: "Tách đối tượng (ý chính) ra khỏi bối cảnh (bảng) nhờ tính lựa chọn [26, 40]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Khi ăn ớt cay, uống sữa lạnh thấy đỡ cay. Đây là quy luật nào?",
-        options: ["Tương phản", "Thích ứng", "Tác động qua lại giữa các cảm giác cùng loại", "Ngưỡng cảm giác"],
-        answer: 2,
-        explanation: "Tác động của kích thích này (sữa/lạnh) làm giảm độ nhạy cảm hoặc thay đổi cảm giác kia (cay) [26, 41]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Phòng hòa nhạc tắt đèn để nghe rõ hơn là vận dụng quy luật nào?",
-        options: ["Tác động qua lại giữa các cảm giác khác loại", "Thích ứng", "Tương phản", "Tổng giác"],
-        answer: 0,
-        explanation: "Ức chế thị giác (tắt đèn) để tăng độ nhạy cảm thính giác (nghe rõ) [26, 42]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Học sinh rút ra kết luận 'Mọi kim loại đều dẫn điện' từ các thí nghiệm. Đây là thao tác tư duy nào?",
-        options: ["Phân tích", "Cụ thể hóa", "Khái quát hóa", "Trừu tượng hóa"],
-        answer: 2,
-        explanation: "Tìm ra thuộc tính chung (dẫn điện) cho một nhóm đối tượng (kim loại) là Khái quát hóa [27, 43]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Nhân vật Chí Phèo là sản phẩm của cách sáng tạo nào trong tưởng tượng?",
-        options: ["Chắp ghép", "Liên hợp", "Điển hình hóa", "Thay đổi kích thước"],
-        answer: 2,
-        explanation: "Xây dựng nhân vật đại diện cho một tầng lớp (lưu manh hóa) là Điển hình hóa [31, 44]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Hình ảnh Rồng (đầu sư tử, mình rắn, vảy cá...) được tạo ra bằng cách nào?",
-        options: ["Chắp ghép", "Nhấn mạnh", "Loại suy", "Điển hình hóa"],
-        answer: 0,
-        explanation: "Ghép các bộ phận của nhiều con vật lại với nhau là Chắp ghép [31]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Sinh viên ban đầu cố gắng tập trung nghe giảng, sau đó thấy hay quá nên nghe say sưa quên giờ về. Đây là chú ý gì?",
-        options: ["Không chủ định", "Có chủ định", "Sau chủ định", "Phân tán"],
-        answer: 2,
-        explanation: "Ban đầu nỗ lực (có chủ định), sau đó bị cuốn hút không cần nỗ lực nữa là Chú ý sau chủ định [29, 45]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Lời khuyên 'Da ngăm không nên mặc áo trắng tinh' vận dụng quy luật nào?",
-        options: ["Tính lựa chọn", "Tính ảo ảnh", "Tương phản", "Tổng giác"],
-        answer: 2,
-        explanation: "Màu trắng (sáng) làm màu da ngăm (tối) càng tối hơn do quy luật tương phản (tác động qua lại cùng loại) [46]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Chế tạo kẹp 'tai giả' đeo khẩu trang cho đỡ đau tai từ hình ảnh cái lược. Đây là cách sáng tạo nào?",
-        options: ["Loại suy (mô phỏng)", "Nhấn mạnh", "Liên hợp", "Điển hình hóa"],
-        answer: 0,
-        explanation: "Dựa trên vật có thực để tạo ra vật mới có chức năng tương tự là Loại suy [31, 47]."
-    },
+  // --- CHƯƠNG 4: NHẬN THỨC (CẢM GIÁC, TRI GIÁC, TƯ DUY, TƯỞNG TƯỢNG...) ---
+  {
+    chapter: 4,
+    level: "NB",
+    question: "Hình thức nhận thức cảm tính cao nhất, tích cực, chủ động là:",
+    options: ["Cảm giác", "Quan sát", "Tư duy", "Tưởng tượng"],
+    answer: 1,
+    explanation: "Quan sát là hình thức tri giác cao nhất, có chủ định[cite: 151, 155]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Đặc điểm thể hiện sự khác biệt căn bản của tri giác so với cảm giác là:",
+    options: ["Phản ánh thuộc tính bên ngoài", "Phản ánh sự vật, hiện tượng một cách trọn vẹn", "Là quá trình tâm lý", "Chỉ xuất hiện khi có kích thích trực tiếp"],
+    answer: 1,
+    explanation: "Cảm giác phản ánh riêng lẻ, Tri giác phản ánh trọn vẹn[cite: 114, 117]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Chú ý không chủ định phụ thuộc chủ yếu vào:",
+    options: ["Mục đích hoạt động", "Nỗ lực ý chí", "Đặc điểm vật kích thích (mới lạ, cường độ...)", "Kế hoạch định trước"],
+    answer: 2,
+    explanation: "Chú ý không chủ định do đặc điểm vật kích thích (mới lạ, hấp dẫn, mạnh) gây ra[cite: 181, 184]."
+  },
+  {
+    chapter: 4,
+    level: "NB",
+    question: "Tư duy là quá trình nhận thức phản ánh:",
+    options: ["Thuộc tính bên ngoài", "Thuộc tính bản chất, mối liên hệ có tính quy luật", "Kinh nghiệm đã qua", "Hình ảnh chưa từng có"],
+    answer: 1,
+    explanation: "Tư duy phản ánh cái bản chất, quy luật, cái chưa biết[cite: 166, 169]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Sự khác biệt cơ bản giữa Tư duy và Tưởng tượng là:",
+    options: ["Tư duy có tính vấn đề, tưởng tượng thì không", "Tư duy giải quyết vấn đề chặt chẽ logic, tưởng tượng giải quyết khi thiếu thông tin", "Tư duy không cần ngôn ngữ", "Tưởng tượng phản ánh trực tiếp"],
+    answer: 1,
+    explanation: "Tư duy giải quyết vấn đề rõ ràng dữ kiện; Tưởng tượng nảy sinh khi hoàn cảnh có tính bất định lớn[cite: 188, 191, 570, 679]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Quên tạm thời là hiện tượng:",
+    options: ["Mất hoàn toàn trí nhớ", "Không nhớ lại được lúc cần thiết nhưng sau đó lại nhớ ra", "Quên vĩnh viễn", "Bệnh lý"],
+    answer: 1,
+    explanation: "Quên tạm thời là không tái hiện được ngay lúc đó (ví dụ lúc thi) nhưng sau đó lại nhớ[cite: 209, 212, 467]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Đặc điểm nào là của Tưởng tượng?",
+    options: ["Phản ánh cái đã có", "Xây dựng hình ảnh mới từ biểu tượng đã có", "Phản ánh bản chất logic", "Không cần ngôn ngữ"],
+    answer: 1,
+    explanation: "Tưởng tượng xây dựng hình ảnh mới trên cơ sở biểu tượng đã có[cite: 223, 226, 485]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Giáo viên nói to, rõ ràng là vận dụng quy luật nào của cảm giác?",
+    options: ["Thích ứng", "Ngưỡng cảm giác", "Tương phản", "Tác động qua lại"],
+    answer: 1,
+    explanation: "Nói to để đạt tới ngưỡng nghe (ngưỡng tuyệt đối dưới) của học sinh[cite: 231, 234]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Dùng phấn màu đóng khung ý chính trên bảng là vận dụng quy luật nào của tri giác?",
+    options: ["Tính ổn định", "Tính lựa chọn", "Tính ảo ảnh", "Tính đối tượng"],
+    answer: 1,
+    explanation: "Tách đối tượng (ý chính) ra khỏi bối cảnh (bảng) nhờ tính lựa chọn[cite: 238, 241, 452, 741]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Khi ăn ớt cay, uống sữa lạnh thấy đỡ cay. Đây là quy luật nào?",
+    options: ["Tương phản", "Thích ứng", "Tác động qua lại giữa các cảm giác cùng loại", "Ngưỡng cảm giác"],
+    answer: 2,
+    explanation: "Tác động của kích thích này (sữa/lạnh) làm giảm độ nhạy cảm hoặc thay đổi cảm giác kia (cay)[cite: 245, 248, 441]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Học sinh rút ra kết luận 'Mọi kim loại đều dẫn điện' từ các thí nghiệm. Đây là thao tác tư duy nào?",
+    options: ["Phân tích", "Cụ thể hóa", "Khái quát hóa", "Trừu tượng hóa"],
+    answer: 2,
+    explanation: "Tìm ra thuộc tính chung (dẫn điện) cho một nhóm đối tượng (kim loại) là Khái quát hóa[cite: 259, 262, 476, 673]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Nhân vật Chí Phèo là sản phẩm của cách sáng tạo nào trong tưởng tượng?",
+    options: ["Chắp ghép", "Liên hợp", "Điển hình hóa", "Thay đổi kích thước"],
+    answer: 2,
+    explanation: "Xây dựng nhân vật đại diện cho một tầng lớp (lưu manh hóa) là Điển hình hóa[cite: 266, 269, 487]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Hình ảnh Rồng (đầu sư tử, mình rắn, vảy cá...) được tạo ra bằng cách nào?",
+    options: ["Chắp ghép", "Nhấn mạnh", "Loại suy", "Điển hình hóa"],
+    answer: 0,
+    explanation: "Ghép các bộ phận của nhiều con vật lại với nhau là Chắp ghép[cite: 273, 276, 493]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Sinh viên ban đầu cố gắng tập trung nghe giảng, sau đó thấy hay quá nên nghe say sưa quên giờ về. Đây là chú ý gì?",
+    options: ["Không chủ định", "Có chủ định", "Sau chủ định", "Phân tán"],
+    answer: 2,
+    explanation: "Ban đầu nỗ lực (có chủ định), sau đó bị cuốn hút không cần nỗ lực nữa là Chú ý sau chủ định[cite: 280, 283, 498, 695]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Lời khuyên 'Da ngăm không nên mặc áo trắng tinh' vận dụng quy luật nào?",
+    options: ["Tính lựa chọn", "Tính ảo ảnh", "Tương phản", "Tổng giác"],
+    answer: 2,
+    explanation: "Màu trắng (sáng) làm màu da ngăm (tối) càng tối hơn do quy luật tương phản[cite: 287, 290, 454]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Chế tạo kẹp 'tai giả' đeo khẩu trang cho đỡ đau tai từ hình ảnh cái lược. Đây là cách sáng tạo nào?",
+    options: ["Loại suy (mô phỏng)", "Nhấn mạnh", "Liên hợp", "Điển hình hóa"],
+    answer: 0,
+    explanation: "Dựa trên vật có thực để tạo ra vật mới có chức năng tương tự là Loại suy[cite: 294, 297, 489]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Sinh viên nhận ra vật thể lạ khi gọi tên và xếp loại nó. Đây là:",
+    options: ["Tính ổn định", "Tính ảo ảnh", "Tính có ý nghĩa", "Tính đối tượng"],
+    answer: 2,
+    explanation: "Gắn đối tượng với tên gọi là tính có ý nghĩa[cite: 18, 450, 651]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Đoạn thẳng A và B bằng nhau nhưng mũi tên hướng ra/vào khác nhau khiến A trông dài hơn B. Đây là:",
+    options: ["Tính ổn định", "Tính lựa chọn", "Ảo ảnh (Müller-Lyer)", "Tính tổng giác"],
+    answer: 2,
+    explanation: "Sự sai lệch trong tri giác độ dài do các chi tiết phụ trợ[cite: 658]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Học từ vựng bằng cách tạo ra câu chuyện hài hước, sinh động là phương pháp:",
+    options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Ghi nhớ không chủ định", "Quên"],
+    answer: 1,
+    explanation: "Tạo mối liên hệ ý nghĩa, logic để ghi nhớ tốt hơn[cite: 662]."
+  },
+  {
+    chapter: 4,
+    level: "NB",
+    question: "Chu trình cốt lõi của trí nhớ gồm:",
+    options: ["Cảm giác - Tri giác - Tư duy", "Ghi nhớ - Giữ gìn - Tái hiện", "Học - Luyện - Thi", "Mã hóa - Củng cố - Phản xạ"],
+    answer: 1,
+    explanation: "Ba quá trình cơ bản: Ghi nhớ (nạp), Giữ gìn (lưu), Tái hiện (xuất)[cite: 464, 664]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Thao tác tư duy 'gạt bỏ những thuộc tính không cần thiết để giữ lại cái bản chất' là:",
+    options: ["Phân tích", "Tổng hợp", "Trừu tượng hóa", "Cụ thể hóa"],
+    answer: 2,
+    explanation: "Trừu tượng hóa là gạt bỏ cái không cần thiết, chỉ giữ lại yếu tố cần thiết[cite: 472]."
+  },
+  {
+    chapter: 4,
+    level: "NB",
+    question: "Chú ý là gì?",
+    options: ["Một quá trình tâm lý", "Một thuộc tính tâm lý", "Sự tập trung của ý thức vào đối tượng", "Khả năng ghi nhớ"],
+    answer: 2,
+    explanation: "Chú ý là sự tập trung của ý thức vào một hay một nhóm sự vật, hiện tượng[cite: 496, 562]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Cố vấn học tập vừa trả lời email, vừa kiểm tra lịch hẹn. Đây là:",
+    options: ["Bền vững", "Phân phối chú ý", "Di chuyển", "Tập trung"],
+    answer: 1,
+    explanation: "Thực hiện cùng lúc nhiều hoạt động là Phân phối chú ý[cite: 560, 693, 1227]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Nhìn thấy me chua thì tiết nước bọt dù chưa ăn. Đây là loại trí nhớ nào?",
+    options: ["Trí nhớ vận động", "Trí nhớ hình ảnh", "Trí nhớ cảm xúc", "Trí nhớ từ ngữ"],
+    answer: 1,
+    explanation: "Tái hiện lại hình ảnh và cảm giác nếm chua trong quá khứ[cite: 1044, 1241]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Khi thiết kế slide Powerpoint, không nên dùng chữ màu vàng trên nền trắng. Điều này tuân thủ quy luật:",
+    options: ["Tương phản (để dễ đọc)", "Thích ứng", "Ảo ảnh", "Di chuyển"],
+    answer: 0,
+    explanation: "Cần sự tương phản tốt (màu tối trên nền sáng hoặc ngược lại) để tri giác rõ ràng[cite: 1058, 1169]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Các nhà thiết kế nội thất thường dùng gương lớn để tạo cảm giác phòng rộng hơn. Đây là ứng dụng của:",
+    options: ["Ảo ảnh tri giác", "Tính ổn định", "Tính lựa chọn", "Ngưỡng cảm giác"],
+    answer: 0,
+    explanation: "Sử dụng ảo ảnh thị giác để đánh lừa cảm nhận về không gian[cite: 870, 1148]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Quy luật 'Tổng giác' khẳng định điều gì?",
+    options: ["Tri giác phụ thuộc vào vật kích thích", "Tri giác phụ thuộc vào chủ thể (kinh nghiệm, thái độ, hứng thú)", "Tri giác là tổng cộng các cảm giác", "Tri giác luôn đúng"],
+    answer: 1,
+    explanation: "Hình ảnh tri giác không chỉ phụ thuộc vật kích thích mà còn phụ thuộc vào đặc điểm tâm lý của chủ thể[cite: 884, 1162]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Ngôn ngữ (Tiếng nói/Chữ viết) có vai trò gì đối với Tư duy?",
+    options: ["Là phương tiện, là cái vỏ vật chất của tư duy", "Không liên quan", "Cản trở tư duy", "Là kết quả duy nhất"],
+    answer: 0,
+    explanation: "Tư duy và ngôn ngữ thống nhất chặt chẽ; ngôn ngữ là phương tiện để tư duy biểu đạt và hình thành[cite: 913, 1198]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Sinh viên dùng bút dạ quang tô đậm các ý chính trong giáo trình. Hành động này tác động vào quy luật nào?",
+    options: ["Tính lựa chọn của Tri giác", "Ghi nhớ máy móc", "Quên", "Ảo ảnh"],
+    answer: 0,
+    explanation: "Làm nổi bật đối tượng để tri giác và ghi nhớ tốt hơn nhờ tính lựa chọn[cite: 921, 1213]."
+  },
+  {
+    chapter: 4,
+    level: "TH",
+    question: "Trí nhớ ngắn hạn (làm việc) thường duy trì thông tin trong bao lâu?",
+    options: ["Dưới 1 giây", "Khoảng 15-30 giây (nếu không nhắc lại)", "Vĩnh viễn", "Hàng giờ"],
+    answer: 1,
+    explanation: "Trí nhớ ngắn hạn lưu giữ thông tin trong thời gian ngắn để xử lý tức thời[cite: 928, 1220]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Trong đám đông ồn ào, bạn vẫn nghe được tiếng ai đó gọi tên mình (Hiệu ứng tiệc cocktail). Đây là đặc điểm của:",
+    options: ["Tính lựa chọn của chú ý", "Sự phân tán chú ý", "Ảo giác thính giác", "Ngưỡng sai biệt"],
+    answer: 0,
+    explanation: "Khả năng lọc nhiễu và tập trung vào kích thích có ý nghĩa với bản thân (tên mình)[cite: 935, 1227]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Bác sĩ chẩn đoán bệnh dựa trên các triệu chứng lâm sàng và kết quả xét nghiệm. Đây là quá trình:",
+    options: ["Cảm giác", "Trí nhớ", "Tư duy", "Tưởng tượng"],
+    answer: 2,
+    explanation: "Bác sĩ phải phân tích, tổng hợp dữ liệu để tìm ra bản chất (bệnh lý) - đây là Tư duy[cite: 892, 1177]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Học sinh giải toán bằng cách áp dụng công thức đã học vào bài tập cụ thể. Đây là thao tác:",
+    options: ["Trừu tượng hóa", "Khái quát hóa", "Cụ thể hóa", "Phân tích"],
+    answer: 2,
+    explanation: "Vận dụng cái chung (công thức) vào cái riêng (bài tập) là thao tác Cụ thể hóa[cite: 906, 1191]."
+  },
+  {
+    chapter: 4,
+    level: "NB",
+    question: "Ba khâu cơ bản của quá trình Tư duy là:",
+    options: ["Nhận thức - Thái độ - Hành vi", "Xuất tâm - Nhập tâm - Quan sát", "Nhận thức vấn đề - Giải quyết vấn đề - Kiểm tra kết quả", "Cảm giác - Tri giác - Trí nhớ"],
+    answer: 2,
+    explanation: "Tư duy bắt đầu từ tình huống có vấn đề, tiến hành các thao tác giải quyết và kết thúc bằng việc kiểm tra[cite: 1030, 1205]."
+  },
+  {
+    chapter: 4,
+    level: "VD",
+    question: "Khi đi xe đạp, ban đầu ta phải tập trung giữ thăng bằng (có ý thức), sau này đi quen không cần để ý nữa (kỹ xảo). Quá trình chuyển đổi này giúp:",
+    options: ["Giảm mệt mỏi cho vỏ não", "Tăng sự căng thẳng", "Mất trí nhớ", "Giảm hiệu quả"],
+    answer: 0,
+    explanation: "Kỹ xảo giúp giải phóng ý thức khỏi các thao tác cơ bản, tiết kiệm năng lượng thần kinh[cite: 1016, 1234]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Quy luật nào KHÔNG phải của tri giác?", 
+    options: ["Tính đối tượng", "Tính lựa chọn", "Ngưỡng sai biệt", "Tính ổn định"], 
+    answer: 2, 
+    explanation: "Ngưỡng sai biệt là quy luật của Cảm giác, không phải Tri giác[cite: 159]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Thuật ngữ 'bề ngoài' trong nhận thức cảm tính được hiểu là:", 
+    options: ["Vẻ đẹp bên ngoài", "Thuộc tính bên ngoài trực tiếp tác động vào giác quan", "Không quan trọng", "Giả tạo"], 
+    answer: 1, 
+    explanation: "Nhận thức cảm tính phản ánh thuộc tính bên ngoài, trực quan khi sự vật tác động trực tiếp[cite: 174]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Điểm giống nhau giữa Cảm giác và Tri giác?", 
+    options: ["Đều phản ánh trọn vẹn", "Đều là nhận thức lý tính", "Đều phản ánh trực tiếp thuộc tính bên ngoài", "Đều không cần kích thích"], 
+    answer: 2, 
+    explanation: "Cả hai đều thuộc nhận thức cảm tính, phản ánh trực tiếp thuộc tính bề ngoài[cite: 195]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Ghi nhớ máy móc thường dùng khi:", 
+    options: ["Tài liệu rời rạc, không có nội dung khái quát", "Cần hiểu sâu sắc", "Tài liệu có tính logic cao", "Khi cần sáng tạo"], 
+    answer: 0, 
+    explanation: "Ghi nhớ máy móc dựa trên sự lặp lại, dùng cho tài liệu rời rạc hoặc không cần hiểu nghĩa[cite: 202]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Luận điểm nào SAI về mối quan hệ giữa nhận thức cảm tính và lý tính?", 
+    options: ["Tách rời nhau hoàn toàn", "Cảm tính cung cấp dữ liệu cho lý tính", "Lý tính chi phối độ nhạy cảm của cảm tính", "Thống nhất với nhau"], 
+    answer: 0, 
+    explanation: "Nhận thức cảm tính và lý tính có mối quan hệ mật thiết, bổ sung cho nhau, không tách rời[cite: 216]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Phòng hòa nhạc tắt đèn để nghe rõ hơn là vận dụng quy luật nào?", 
+    options: ["Tác động qua lại giữa các cảm giác khác loại", "Thích ứng", "Tương phản", "Tổng giác"], 
+    answer: 0, 
+    explanation: "Ức chế thị giác (tắt đèn) để tăng độ nhạy cảm thính giác (nghe rõ)[cite: 252]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Kỹ sư quan sát ong xây tổ để thiết kế kho. Đây là:", 
+    options: ["Nhấn mạnh", "Liên hợp", "Điển hình hóa", "Loại suy"], 
+    answer: 3, 
+    explanation: "Mô phỏng cơ chế vật có thực là Loại suy[cite: 20, 682]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Cảm giác phản ánh đặc điểm nào của sự vật?", 
+    options: ["Thuộc tính bản chất", "Thuộc tính riêng lẻ, bề ngoài", "Mối liên hệ quy luật", "Trọn vẹn sự vật"], 
+    answer: 1, 
+    explanation: "Cảm giác phản ánh một cách riêng lẻ từng thuộc tính bề ngoài của sự vật hiện tượng[cite: 437]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Quy luật thích ứng của cảm giác là gì?", 
+    options: ["Cảm giác không thay đổi", "Độ nhạy cảm thay đổi phù hợp với cường độ kích thích", "Tác động qua lại giữa các giác quan", "Cảm giác mất đi hoàn toàn"], 
+    answer: 1, 
+    explanation: "Thích ứng là khả năng thay đổi độ nhạy cảm cho phù hợp với sự thay đổi của cường độ kích thích[cite: 439]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Lan ăn ớt cay, uống sữa lạnh thấy đỡ cay. Đây là quy luật nào?", 
+    options: ["Thích ứng", "Tác động qua lại (tương phản)", "Ngưỡng cảm giác", "Tổng giác"], 
+    answer: 1, 
+    explanation: "Sự tác động của vị giác/xúc giác khác (lạnh/ngọt) làm giảm cảm giác cay (Tương phản/Tác động qua lại)[cite: 441]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Người mù thường có thính giác và xúc giác nhạy bén hơn người thường. Đây là quy luật:", 
+    options: ["Thích ứng", "Bù trừ (Tác động qua lại khác loại)", "Ngưỡng cảm giác", "Tương phản"], 
+    answer: 1, 
+    explanation: "Sự kích thích yếu/mất ở cơ quan này làm tăng độ nhạy cảm của cơ quan khác[cite: 443]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Tri giác khác cảm giác ở điểm cơ bản nào?", 
+    options: ["Phản ánh riêng lẻ", "Phản ánh trọn vẹn sự vật", "Không cần kích thích trực tiếp", "Là nhận thức lý tính"], 
+    answer: 1, 
+    explanation: "Tri giác phản ánh sự vật hiện tượng một cách trọn vẹn[cite: 446]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Khi nhìn chiếc bàn từ các góc độ khác nhau (trên xuống, chếch), ta vẫn nhận ra đó là chiếc bàn hình chữ nhật. Đây là tính gì?", 
+    options: ["Tính lựa chọn", "Tính ổn định", "Tính ảo ảnh", "Tính tổng giác"], 
+    answer: 1, 
+    explanation: "Tính ổn định giúp phản ánh sự vật không đổi khi điều kiện tri giác thay đổi[cite: 448]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Một sinh viên chỉ 'nhận ra' vật thể lạ khi gọi được tên và xếp nó vào nhóm đã biết. Đây là quy luật:", 
+    options: ["Tính đối tượng", "Tính có ý nghĩa", "Tính lựa chọn", "Tính ổn định"], 
+    answer: 1, 
+    explanation: "Tính có ý nghĩa: tri giác gắn với tư duy, gọi tên và xếp loại được sự vật[cite: 450]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Bộ đội ngụy trang bằng lá cây để hòa lẫn vào môi trường. Đây là ứng dụng quy luật:", 
+    options: ["Tính đối tượng", "Tính lựa chọn", "Tính ý nghĩa", "Tính tổng giác"], 
+    answer: 1, 
+    explanation: "Làm mất sự khác biệt giữa đối tượng và bối cảnh để gây khó khăn cho tính lựa chọn của đối phương[cite: 456]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Sản phẩm của trí nhớ là gì?", 
+    options: ["Khái niệm", "Biểu tượng", "Phán đoán", "Hình ảnh cảm giác"], 
+    answer: 1, 
+    explanation: "Sản phẩm của trí nhớ là biểu tượng (hình ảnh được lưu giữ và tái hiện)[cite: 459, 797]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Ghi nhớ dựa trên sự thông hiểu nội dung và mối liên hệ logic gọi là:", 
+    options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Ghi nhớ không chủ định", "Hồi tưởng"], 
+    answer: 1, 
+    explanation: "Ghi nhớ ý nghĩa dựa trên sự thông hiểu nội dung tài liệu[cite: 461]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Bạn thiết kế hoạt động: HS dùng sơ đồ khái niệm nối sự kiện-nguyên nhân-hệ quả. Hoạt động này kích hoạt:", 
+    options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Nhận lại", "Học vẹt"], 
+    answer: 1, 
+    explanation: "Sơ đồ khái niệm giúp thiết lập mối liên hệ logic, thuộc ghi nhớ ý nghĩa[cite: 463]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Khi xem lại ảnh kỷ yếu, tôi mới dần nhận ra người bạn cũ. Quá trình này là:", 
+    options: ["Nhớ lại", "Nhận lại", "Gìn giữ", "Quên"], 
+    answer: 1, 
+    explanation: "Nhận lại là nhận ra đối tượng khi tri giác lại nó (xem ảnh)[cite: 465]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Trong phòng thi quên công thức, ra khỏi phòng lại nhớ. Đây là:", 
+    options: ["Quên hoàn toàn", "Quên cục bộ", "Quên tạm thời", "Ghi nhớ kém"], 
+    answer: 2, 
+    explanation: "Quên tạm thời là không nhớ lại được ngay lúc cần nhưng sau đó lại nhớ[cite: 467]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Tư duy phản ánh cái gì?", 
+    options: ["Thuộc tính bề ngoài", "Cái đã qua", "Bản chất, mối liên hệ có tính quy luật", "Hình ảnh trực quan"], 
+    answer: 2, 
+    explanation: "Tư duy phản ánh những thuộc tính bản chất, mối liên hệ có tính quy luật[cite: 470, 781]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Muốn nảy sinh tư duy, hoàn cảnh phải như thế nào?", 
+    options: ["Hoàn toàn mới lạ", "Hoàn toàn quen thuộc", "Là tình huống có vấn đề", "Không có mâu thuẫn"], 
+    answer: 2, 
+    explanation: "Tư duy chỉ nảy sinh trong tình huống có vấn đề (chứa đựng mâu thuẫn nhận thức)[cite: 474]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Sử dụng tính chất vật lý của thủy ngân (giãn nở nhiệt) để làm nhiệt kế. Đây là thao tác:", 
+    options: ["Trừu tượng hóa", "Tổng hợp", "Cụ thể hóa", "Phân tích"], 
+    answer: 2, 
+    explanation: "Vận dụng tri thức chung (tính chất vật lý) vào trường hợp riêng (làm nhiệt kế) là Cụ thể hóa[cite: 478, 675]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Phân tích nhân vật cô Hiền thành các khía cạnh: ăn, ở, mặc, ứng xử... là thao tác:", 
+    options: ["Phân tích", "Tổng hợp", "So sánh", "Trừu tượng hóa"], 
+    answer: 0, 
+    explanation: "Tách toàn thể thành các bộ phận để xem xét là Phân tích[cite: 480, 671]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Tưởng tượng tạo ra cái gì?", 
+    options: ["Khái niệm mới", "Phán đoán mới", "Hình ảnh mới chưa có trong kinh nghiệm", "Cảm xúc mới"], 
+    answer: 2, 
+    explanation: "Tưởng tượng xây dựng những hình ảnh mới trên cơ sở biểu tượng đã có[cite: 483]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Vẽ tranh biếm họa quan lại 'đầu to, bụng bự' là cách sáng tạo nào?", 
+    options: ["Thay đổi kích thước/Nhấn mạnh", "Chắp ghép", "Liên hợp", "Loại suy"], 
+    answer: 0, 
+    explanation: "Tô đậm, phóng đại các đặc điểm là Nhấn mạnh[cite: 491]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Các áp phích quảng cáo dùng màu nổi, cỡ chữ to để thu hút người nhìn. Đây là khai thác thuộc tính nào?", 
+    options: ["Sức tập trung của chú ý", "Phân phối chú ý", "Di chuyển chú ý", "Sự dao động"], 
+    answer: 0, 
+    explanation: "Tạo sự tập trung vào một phạm vi hẹp (áp phích) nhờ cường độ kích thích[cite: 502]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Người nếm rượu vang (Sommelier) sau 3 năm luyện tập có thể phân biệt hàng nghìn vị rượu. Đây là vận dụng quy luật:", 
+    options: ["Thích ứng", "Ngưỡng cảm giác (làm giảm ngưỡng sai biệt)", "Tác động qua lại", "Cảm ứng"], 
+    answer: 1, 
+    explanation: "Rèn luyện để hạ thấp ngưỡng sai biệt, làm tăng độ nhạy cảm của cảm giác[cite: 642]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Câu 'Điếc không sợ súng' phản ánh đặc điểm nào bị thiếu hụt?", 
+    options: ["Tính nhận thức của tình cảm/cảm giác", "Tính xã hội", "Tính ổn định", "Tính đối cực"], 
+    answer: 0, 
+    explanation: "Không nhận thức được nguy hiểm (do không nghe thấy/không biết) nên không nảy sinh cảm xúc sợ hãi[cite: 644]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Chè khi lạnh ăn có vẻ ngọt hơn lúc nóng. Đây là quy luật:", 
+    options: ["Ngưỡng cảm giác", "Tác động qua lại giữa các cảm giác (Tương phản)", "Thích ứng", "Tổng giác"], 
+    answer: 1, 
+    explanation: "Nhiệt độ (xúc giác) ảnh hưởng đến vị giác (ngọt). Đây là tác động qua lại/tương phản[cite: 646]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Ánh sáng con người nhìn thấy dao động từ 380nm đến 780nm. Đây là:", 
+    options: ["Ngưỡng sai biệt", "Vùng cảm giác (giới hạn bởi 2 ngưỡng tuyệt đối)", "Sự thích ứng", "Ảo ảnh"], 
+    answer: 1, 
+    explanation: "Đây là giới hạn giữa ngưỡng tuyệt đối dưới và trên mà mắt người cảm nhận được[cite: 648]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Cựu chiến binh Mỹ ám ảnh về 'tảng đá biết đi, bụi cây biết nói' (ngụy trang). Đây là quy luật:", 
+    options: ["Tính đối tượng", "Tính có ý nghĩa", "Tính lựa chọn", "Tính tổng giác"], 
+    answer: 2, 
+    explanation: "Ngụy trang làm mất sự khác biệt giữa đối tượng và bối cảnh, đánh lừa tính lựa chọn của tri giác[cite: 653]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Nhìn bóng cây in trên tường tưởng là người lạ. Đây là:", 
+    options: ["Tính đối tượng", "Ảo ảnh tri giác", "Tính lựa chọn", "Tính tổng giác"], 
+    answer: 1, 
+    explanation: "Phản ánh sai lệch sự vật hiện tượng một cách khách quan (nhìn gà hóa cuốc)[cite: 655]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Cảnh hoàng hôn nhìn không còn đẹp như hồi mới yêu do 'vết đau tình'. Quy luật nào chi phối?", 
+    options: ["Tính ổn định", "Tính đối tượng", "Tổng giác", "Tính ý nghĩa"], 
+    answer: 2, 
+    explanation: "Tri giác bị chi phối bởi tâm trạng, kinh nghiệm chủ quan của chủ thể (Tổng giác)[cite: 659]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Dấu hiệu bản chất phân biệt ghi nhớ có chủ định và không chủ định:", 
+    options: ["Cường độ kích thích", "Có mục đích đặt trước và nỗ lực ý chí", "Độ dài tài liệu", "Sự hấp dẫn"], 
+    answer: 1, 
+    explanation: "Ghi nhớ có chủ định đòi hỏi mục đích xác định từ trước và sự nỗ lực[cite: 666]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Sinh viên rời thư viện vẫn kể lại được nội dung vừa đọc dù không mở sách. Quá trình này là:", 
+    options: ["Nhận lại", "Nhớ lại", "Ghi nhớ", "Quên"], 
+    answer: 1, 
+    explanation: "Tái hiện hình ảnh khi sự vật không còn trực tiếp tác động là Nhớ lại[cite: 668]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "So sánh Cách mạng T8 và Cách mạng T10 Nga để tìm điểm chung/riêng. Đây là thao tác:", 
+    options: ["Phân tích", "Tổng hợp", "So sánh", "Khái quát hóa"], 
+    answer: 2, 
+    explanation: "Đối chiếu các sự vật để tìm ra sự giống và khác nhau[cite: 677]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Quan sát ong xây tổ lục giác để thiết kế kho chứa hàng tiết kiệm diện tích. Đây là cách sáng tạo:", 
+    options: ["Nhấn mạnh", "Liên hợp", "Điển hình hóa", "Loại suy (mô phỏng)"], 
+    answer: 3, 
+    explanation: "Mô phỏng lại cơ chế/hình dáng của sự vật có thực (tổ ong) để tạo vật mới (kho) là Loại suy[cite: 682]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Họa sĩ vẽ mũ quan lại cực to che lấp mặt để ám chỉ sự phô trương quyền lực. Đây là:", 
+    options: ["Liên hợp", "Nhấn mạnh", "Loại suy", "Điển hình hóa"], 
+    answer: 1, 
+    explanation: "Tô đậm, phóng đại một đặc điểm (cái mũ) để làm nổi bật ý tưởng là Nhấn mạnh[cite: 684]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Vẽ đường cong hình chữ S để mô tả vẻ đẹp người phụ nữ/đất nước. Đây là:", 
+    options: ["Thay đổi kích thước", "Nhấn mạnh", "Điển hình hóa", "Sơ đồ hóa (Biểu tượng hóa)"], 
+    answer: 3, 
+    explanation: "Dùng hình ảnh mang tính biểu tượng/sơ đồ để đại diện[cite: 686]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Hình ảnh Tiên nữ có chân rắn (Nuwa) hoặc Nhân sư. Đây là cách sáng tạo:", 
+    options: ["Chắp ghép", "Liên hợp", "Điển hình hóa", "Loại suy"], 
+    answer: 0, 
+    explanation: "Ghép các bộ phận của nhiều sinh vật lại với nhau[cite: 688, 900, 1184]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "'Sức tập trung chú ý' được hiểu là:", 
+    options: ["Duy trì chú ý rất lâu", "Dồn năng lượng tâm lý vào phạm vi hẹp, đúng trọng tâm", "Chia đều chú ý", "Chuyển hướng nhanh"], 
+    answer: 1, 
+    explanation: "Tập trung là khả năng dồn năng lượng vào một phạm vi hẹp để phản ánh tốt nhất[cite: 691]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Lúc đầu nghe giảng phải cố gắng (chú ý có chủ định), sau đó bị cuốn hút quên cả giờ về. Đây là:", 
+    options: ["Chú ý không chủ định", "Chú ý sau chủ định", "Phân tán", "Dao động"], 
+    answer: 1, 
+    explanation: "Loại chú ý vốn có mục đích nhưng không còn đòi hỏi nỗ lực ý chí do sự hấp dẫn của đối tượng[cite: 695]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Giáo viên dùng phấn màu đóng khung ý chính. Đây là vận dụng quy luật:", 
+    options: ["Tính đối tượng", "Tính lựa chọn", "Tính ổn định", "Tổng giác"], 
+    answer: 1, 
+    explanation: "Làm nổi bật đối tượng khỏi bối cảnh để thu hút tri giác[cite: 741]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Loại trí nhớ giữ vai trò chính trong lĩnh hội tri thức ở người:", 
+    options: ["Trí nhớ vận động", "Trí nhớ hình ảnh", "Trí nhớ từ ngữ - logic", "Trí nhớ xúc cảm"], 
+    answer: 2, 
+    explanation: "Trí nhớ từ ngữ - logic đặc trưng cho người, gắn với tư duy trừu tượng[cite: 598, 749]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Nhìn đám mây thấy hình con rồng. Đây là hiện tượng:", 
+    options: ["Tổng giác", "Ảo ảnh", "Tính ổn định", "Tính đối tượng"], 
+    answer: 0, 
+    explanation: "Tri giác bị chi phối bởi trí tưởng tượng và kinh nghiệm của chủ thể (Tổng giác)[cite: 588, 759]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Ghi nhớ không chủ định phụ thuộc chủ yếu vào:", 
+    options: ["Mục đích", "Nỗ lực ý chí", "Đặc điểm vật kích thích (mới lạ, hấp dẫn) và hứng thú", "Kế hoạch"], 
+    answer: 2, 
+    explanation: "Ghi nhớ tự nhiên do sự tác động mạnh/hấp dẫn của đối tượng[cite: 767]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Tài xế vừa lái xe, vừa quan sát, vừa nghe nhạc. Đây là:", 
+    options: ["Phân phối chú ý", "Di chuyển chú ý", "Sức tập trung", "Bền vững"], 
+    answer: 0, 
+    explanation: "Khả năng cùng lúc chú ý đến nhiều đối tượng/hoạt động[cite: 500, 773]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Hình thức tri giác cao nhất của con người là:", 
+    options: ["Sờ mó", "Nghe", "Quan sát", "Ngửi"], 
+    answer: 2, 
+    explanation: "Quan sát là tri giác có chủ đích, có kế hoạch, tích cực nhất[cite: 785]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Học sinh dùng sơ đồ tư duy để hệ thống hóa kiến thức. Đây là cách ghi nhớ:", 
+    options: ["Máy móc", "Ý nghĩa", "Không chủ định", "Hình ảnh"], 
+    answer: 1, 
+    explanation: "Dựa trên sự thông hiểu mối liên hệ logic giữa các phần tri thức[cite: 791]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Khi bị sốt cao, uống nước đường vẫn thấy đắng miệng. Đây là hiện tượng:", 
+    options: ["Loạn cảm giác / Chuyển cảm giác", "Thích ứng", "Tương phản", "Ảo ảnh"], 
+    answer: 0, 
+    explanation: "Rối loạn chức năng phân tích dẫn đến sai lệch về vị giác (loạn cảm giác/nghịch lý)[cite: 877, 1155]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Học sinh tiểu học thường dùng ngón tay để đếm khi làm toán. Đây là loại tư duy nào?", 
+    options: ["Tư duy trực quan hành động", "Tư duy trực quan hình ảnh", "Tư duy trừu tượng", "Tư duy ngôn ngữ"], 
+    answer: 0, 
+    explanation: "Tư duy dựa trên việc thao tác trực tiếp với vật thể (ngón tay)[cite: 1342]."
+  },
+  { 
+    chapter: 4, 
+    level: "NB", 
+    question: "Loại chú ý nào xuất hiện sau chú ý có chủ định và không đòi hỏi sự căng thẳng ý chí?", 
+    options: ["Chú ý không chủ định", "Chú ý sau chủ định", "Phân phối chú ý", "Di chuyển chú ý"], 
+    answer: 1, 
+    explanation: "Chú ý sau chủ định là trạng thái bị cuốn hút vào công việc, không cần nỗ lực nữa[cite: 1350]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "'Nhìn gà hóa cuốc' là hiện tượng gì?", 
+    options: ["Ảo ảnh tri giác", "Tổng giác", "Tính lựa chọn", "Tính ổn định"], 
+    answer: 0, 
+    explanation: "Phản ánh sai lệch đối tượng (ảo ảnh) do điều kiện tri giác không tốt[cite: 574]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Học sinh tóm tắt bài bằng cách gạch chân từ khóa đỏ. Đây là quy luật:", 
+    options: ["Tính lựa chọn", "Tính đối tượng", "Tính ổn định", "Tính tổng giác"], 
+    answer: 0, 
+    explanation: "Tách đối tượng ra khỏi bối cảnh nhờ màu sắc nổi bật[cite: 578]."
+  },
+  { 
+    chapter: 4, 
+    level: "TH", 
+    question: "Đâu là mệnh đề đúng phân biệt cảm giác và tri giác?", 
+    options: ["Cảm giác phản ánh riêng lẻ, tri giác phản ánh trọn vẹn", "Cảm giác phản ánh bên trong, tri giác phản ánh bên ngoài", "Cảm giác là lý tính, tri giác là cảm tính", "Cảm giác gián tiếp, tri giác trực tiếp"], 
+    answer: 0, 
+    explanation: "Cảm giác phản ánh thuộc tính riêng lẻ; Tri giác phản ánh trọn vẹn sự vật[cite: 582]."
+  },
+  { 
+    chapter: 4, 
+    level: "VD", 
+    question: "Sinh viên ban đầu cố gắng nghe giảng, sau đó say sưa quên giờ về. Đây là:", 
+    options: ["Chú ý sau chủ định", "Chú ý có chủ định", "Chú ý không chủ định", "Phân tán"], 
+    answer: 0, 
+    explanation: "Ban đầu nỗ lực, sau đó bị cuốn hút không cần nỗ lực nữa là Chú ý sau chủ định[cite: 606]."
+  },
 
-    // --- CHƯƠNG 5: TÌNH CẢM (Matrix: 0 NB, 3 TH, 3 VD) ---
-    // Thông hiểu (TH)
-    {
-        chapter: 5, level: "TH",
-        question: "Tình cảm khác Xúc cảm ở điểm nào?",
-        options: ["Có tính nhất thời", "Có tính ổn định, bền vững", "Xuất hiện trước", "Chỉ có ở động vật"],
-        answer: 1,
-        explanation: "Tình cảm là thuộc tính tâm lý ổn định, bền vững; Xúc cảm là quá trình, nhất thời [48, 49]."
-    },
-    {
-        chapter: 5, level: "TH",
-        question: "Quy luật 'Gần thường xa thương' là biểu hiện của:",
-        options: ["Quy luật lây lan", "Quy luật thích ứng", "Quy luật di chuyển", "Quy luật pha trộn"],
-        answer: 1,
-        explanation: "Gần thường (lặp lại nhiều gây chai sạn) là thích ứng. Xa thương (đổi mới) là làm mới tình cảm [50, 51]."
-    },
-    {
-        chapter: 5, level: "TH",
-        question: "Quy luật di chuyển tình cảm là gì?",
-        options: ["Vui lây buồn lây", "Giận cá chém thớt", "Yêu nhau yêu cả đường đi", "Cả B và C"],
-        answer: 3,
-        explanation: "Chuyển xúc cảm từ đối tượng này sang đối tượng khác có liên quan (Giận cá chém thớt) [50, 52]."
-    },
-    // Vận dụng (VD)
-    {
-        chapter: 5, level: "VD",
-        question: "Hiện tượng 'Một con ngựa đau cả tàu bỏ cỏ' thể hiện quy luật nào?",
-        options: ["Thích ứng", "Lây lan", "Tương phản", "Di chuyển"],
-        answer: 1,
-        explanation: "Sự đồng cảm, cộng hưởng cảm xúc là Quy luật lây lan [46, 53]."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Để xây dựng tinh thần đoàn kết trong lớp, giáo viên tổ chức hoạt động tập thể. Đây là vận dụng quy luật nào?",
-        options: ["Lây lan", "Thích ứng", "Pha trộn", "Tương phản"],
-        answer: 0,
-        explanation: "Tạo bầu không khí tâm lý chung lây lan sang các thành viên [53, 54]."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Càng yêu nhân vật chính thiện lương, càng ghét nhân vật phản diện độc ác. Đây là quy luật nào?",
-        options: ["Cảm ứng (Tương phản)", "Lây lan", "Di chuyển", "Thích ứng"],
-        answer: 0,
-        explanation: "Cảm xúc này làm tăng cường độ cảm xúc kia (đối cực) là Tương phản/Cảm ứng [53, 55]."
-    },
+  // --- CHƯƠNG 5: TÌNH CẢM ---
+  {
+    chapter: 5,
+    level: "TH",
+    question: "Tình cảm khác Xúc cảm ở điểm nào?",
+    options: ["Có tính nhất thời", "Có tính ổn định, bền vững", "Xuất hiện trước", "Chỉ có ở động vật"],
+    answer: 1,
+    explanation: "Tình cảm là thuộc tính tâm lý ổn định, bền vững; Xúc cảm là quá trình, nhất thời[cite: 303, 507, 708]."
+  },
+  {
+    chapter: 5,
+    level: "TH",
+    question: "Quy luật 'Gần thường xa thương' là biểu hiện của:",
+    options: ["Quy luật lây lan", "Quy luật thích ứng", "Quy luật di chuyển", "Quy luật pha trộn"],
+    answer: 1,
+    explanation: "Gần thường (lặp lại nhiều gây chai sạn) là thích ứng. Xa thương (đổi mới) là làm mới tình cảm[cite: 310, 509]."
+  },
+  {
+    chapter: 5,
+    level: "TH",
+    question: "Quy luật di chuyển tình cảm là gì?",
+    options: ["Vui lây buồn lây", "Giận cá chém thớt", "Yêu nhau yêu cả đường đi", "Cả B và C"],
+    answer: 3,
+    explanation: "Chuyển xúc cảm từ đối tượng này sang đối tượng khác có liên quan[cite: 317]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Hiện tượng 'Một con ngựa đau cả tàu bỏ cỏ' thể hiện quy luật nào?",
+    options: ["Thích ứng", "Lây lan", "Tương phản", "Di chuyển"],
+    answer: 1,
+    explanation: "Sự đồng cảm, cộng hưởng cảm xúc là Quy luật lây lan[cite: 325, 511]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Càng yêu nhân vật chính thiện lương, càng ghét nhân vật phản diện độc ác. Đây là quy luật nào?",
+    options: ["Cảm ứng (Tương phản)", "Lây lan", "Di chuyển", "Thích ứng"],
+    answer: 0,
+    explanation: "Cảm xúc này làm tăng cường độ cảm xúc kia (đối cực) là Tương phản/Cảm ứng[cite: 339, 513, 698]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Cộng đồng mạng cùng đổi avatar cầu nguyện. Đây là quy luật:",
+    options: ["Lây lan", "Di chuyển", "Pha trộn", "Tương phản"],
+    answer: 0,
+    explanation: "Lan truyền cảm xúc tạo hiệu ứng đám đông là Lây lan[cite: 22, 700]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Mẹ mắng con vì quá yêu và lo lắng cho con. Đây là quy luật:",
+    options: ["Pha trộn", "Di chuyển", "Thích ứng", "Cảm ứng"],
+    answer: 0,
+    explanation: "Hai tình cảm đối cực (yêu - giận) cùng tồn tại và hòa quyện vào nhau là Pha trộn[cite: 517, 761]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Hiện tượng 'Yêu nên tốt, ghét nên xấu' là biểu hiện của quy luật nào?",
+    options: ["Lây lan", "Di chuyển", "Tương phản", "Thích ứng"],
+    answer: 1,
+    explanation: "Tình cảm chi phối cái nhìn chủ quan, chuyển cảm xúc từ người sang việc/vật liên quan (Di chuyển)[cite: 943, 1249]."
+  },
+  {
+    chapter: 5,
+    level: "TH",
+    question: "Mức độ cao nhất của đời sống tình cảm là gì?",
+    options: ["Xúc cảm", "Tâm trạng", "Thái độ", "Đam mê (Say mê)"],
+    answer: 3,
+    explanation: "Say mê là tình cảm mạnh, sâu sắc, bền vững và chi phối mọi hoạt động của con người[cite: 950, 1256]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Khi xem phim bi kịch, khán giả khóc nức nở. Sau đó họ cảm thấy nhẹ nhõm hơn (Catharsis). Đây là chức năng gì của tình cảm?",
+    options: ["Chức năng điều chỉnh", "Chức năng nhận thức", "Chức năng thư giãn/giải tỏa", "Chức năng xã hội"],
+    answer: 2,
+    explanation: "Bộc lộ cảm xúc giúp giải tỏa căng thẳng tâm lý[cite: 957, 1263]."
+  },
+  {
+    chapter: 5,
+    level: "TH",
+    question: "Tình cảm trí tuệ thể hiện ở:",
+    options: ["Sự tò mò, ham hiểu biết", "Lòng yêu nước", "Yêu cái đẹp", "Trách nhiệm công việc"],
+    answer: 0,
+    explanation: "Tình cảm trí tuệ nảy sinh trong hoạt động nhận thức (tò mò, ham hiểu biết)[cite: 600, 745]."
+  },
+  {
+    chapter: 5,
+    level: "VD",
+    question: "Câu ca dao 'Yêu nhau củ ấu cũng tròn / Ghét nhau bồ hòn cũng méo' phản ánh quy luật nào?",
+    options: ["Lây lan", "Di chuyển", "Tương phản", "Thích ứng"],
+    answer: 1,
+    explanation: "Tình cảm chi phối nhận thức, chuyển cảm xúc từ người sang vật (củ ấu, bồ hòn) - Di chuyển[cite: 1357]."
+  },
+  { 
+    chapter: 5, 
+    level: "NB", 
+    question: "Xúc cảm thường có đặc điểm gì?", 
+    options: ["Ổn định, bền vững", "Nhất thời, đa dạng, gắn với tình huống", "Chỉ có ở người", "Là thuộc tính tâm lý"], 
+    answer: 1, 
+    explanation: "Xúc cảm là những rung động nhất thời, phụ thuộc vào tình huống cụ thể[cite: 505]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Để xây dựng tinh thần đoàn kết trong lớp, giáo viên tổ chức hoạt động tập thể. Đây là vận dụng quy luật nào?", 
+    options: ["Lây lan", "Thích ứng", "Pha trộn", "Tương phản"], 
+    answer: 0, 
+    explanation: "Tạo bầu không khí tâm lý chung lây lan sang các thành viên[cite: 332]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "'Giận cá chém thớt' là biểu hiện của quy luật:", 
+    options: ["Di chuyển", "Lây lan", "Thích ứng", "Pha trộn"], 
+    answer: 0, 
+    explanation: "Chuyển xúc cảm từ đối tượng này sang đối tượng khác là Di chuyển[cite: 515]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Để giáo dục lòng nhân ái, nhà trường tổ chức đi thăm trại trẻ mồ côi (trải nghiệm thực tế). Đây là vận dụng:", 
+    options: ["Quy luật hình thành tình cảm", "Quy luật thích ứng", "Quy luật di chuyển", "Quy luật tương phản"], 
+    answer: 0, 
+    explanation: "Tình cảm được hình thành từ những xúc cảm đồng loại (tổng hợp hóa, động hình hóa)[cite: 519]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Bạn Minh Hiếu cõng bạn Tất Minh đi học suốt 8 năm. Tình bạn này thể hiện quy luật:", 
+    options: ["Pha trộn", "Di chuyển", "Tương phản", "Hình thành tình cảm"], 
+    answer: 3, 
+    explanation: "Tình cảm (tình bạn) được hình thành từ quá trình tích lũy các xúc cảm và hành động cụ thể lâu dài[cite: 702]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Câu 'Năng mưa thì giếng năng đầy / Anh năng đi lại mẹ thầy năng thương' nói về quy luật:", 
+    options: ["Thích ứng", "Di chuyển", "Lây lan", "Hình thành tình cảm"], 
+    answer: 3, 
+    explanation: "Tình cảm được hình thành qua quá trình tổng hợp hóa, động hình hóa các xúc cảm thường xuyên (năng đi lại)[cite: 704]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Trong 'Vợ chồng A Phủ', Mị ở lâu trong cái khổ nên quen khổ, lùi lũi như con rùa. Đây là quy luật:", 
+    options: ["Lây lan", "Thích ứng", "Di chuyển", "Pha trộn"], 
+    answer: 1, 
+    explanation: "Cảm xúc lặp lại nhiều lần gây chai sạn, thích nghi (quen khổ)[cite: 706]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Khi MC công bố giải thưởng, ca sĩ khóc nức nở không kìm chế được. Đây là:", 
+    options: ["Cảm xúc", "Tâm trạng", "Xúc động", "Tình cảm"], 
+    answer: 2, 
+    explanation: "Xúc động là trạng thái cảm xúc mạnh, diễn ra ngắn, thường không làm chủ được bản thân[cite: 710]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Nam mới đậu đại học thì rất vui, sau đó cảm xúc dịu lại. Đây là:", 
+    options: ["Thích ứng", "Tương phản", "Lây lan", "Di chuyển"], 
+    answer: 0, 
+    explanation: "Cảm xúc lặp lại hoặc kéo dài sẽ bị suy yếu (chai sạn) do quy luật thích ứng[cite: 564]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Đang vui mà nghe tin buồn thì nỗi buồn giảm đi. Đây là quy luật:", 
+    options: ["Cảm ứng (Tương phản)", "Pha trộn", "Di chuyển", "Thích ứng"], 
+    answer: 0, 
+    explanation: "Xúc cảm này làm suy yếu/tăng cường xúc cảm kia xảy ra đồng thời/nối tiếp (Cảm ứng)[cite: 576]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Đang vui vì được điểm cao, nghe tin bạn bị bệnh thấy bớt vui. Đây là quy luật:", 
+    options: ["Cảm ứng (Tương phản)", "Lây lan", "Di chuyển", "Thích ứng"], 
+    answer: 0, 
+    explanation: "Cảm xúc này làm suy yếu cảm xúc kia xảy ra đồng thời[cite: 779]."
+  },
+  { 
+    chapter: 5, 
+    level: "TH", 
+    question: "Tình cảm được hình thành từ đâu?", 
+    options: ["Từ những xúc cảm đồng loại (Tổng hợp hóa, động hình hóa)", "Từ suy nghĩ", "Từ bẩm sinh", "Từ ý chí"], 
+    answer: 0, 
+    explanation: "Quy luật hình thành tình cảm: Xúc cảm là cơ sở của tình cảm[cite: 793]."
+  },
+  { 
+    chapter: 5, 
+    level: "VD", 
+    question: "Vui sướng tột độ (Lên đỉnh vinh quang) hoặc Đau khổ tột cùng thường làm con người thay đổi nhịp tim, hô hấp. Đây là biểu hiện của:", 
+    options: ["Xúc động (Affect)", "Tâm trạng", "Màu sắc cảm xúc", "Nhận thức"], 
+    answer: 0, 
+    explanation: "Xúc động là trạng thái cảm xúc mạnh, gây biến đổi rõ rệt về cơ thể (sinh lý)[cite: 1023, 1270]."
+  },
 
-    // --- CHƯƠNG 6: Ý CHÍ (Matrix: 1 NB, 0 TH, 0 VD) ---
-    // Nhận biết (NB)
-    {
-        chapter: 6, level: "NB",
-        question: "Ý chí là mặt ... của ý thức?",
-        options: ["Nhận thức", "Năng động", "Thái độ", "Tình cảm"],
-        answer: 1,
-        explanation: "Ý chí là mặt năng động của ý thức, biểu hiện ở năng lực thực hiện hành động có mục đích [56, 57]."
-    },
+  // --- CHƯƠNG 6: Ý CHÍ ---
+  {
+    chapter: 6,
+    level: "NB",
+    question: "Ý chí là mặt ... của ý thức?",
+    options: ["Nhận thức", "Năng động", "Thái độ", "Tình cảm"],
+    answer: 1,
+    explanation: "Ý chí là mặt năng động của ý thức, biểu hiện ở năng lực thực hiện hành động có mục đích[cite: 348, 522]."
+  },
+  {
+    chapter: 6,
+    level: "VD",
+    question: "Cầu thủ dẫn bóng không cần nhìn chân. Đây là:",
+    options: ["Kiên trì", "Kỹ xảo", "Thiên tài", "Ý thức"],
+    answer: 1,
+    explanation: "Hành động tự động hóa do luyện tập là Kỹ xảo[cite: 24, 713]."
+  },
+  {
+    chapter: 6,
+    level: "TH",
+    question: "Phẩm chất ý chí nào giúp con người đưa ra quyết định kịp thời, dứt khoát?",
+    options: ["Tính độc lập", "Tính quyết đoán", "Tính kiên trì", "Tính tự chủ"],
+    answer: 1,
+    explanation: "Tính quyết đoán là khả năng đưa ra quyết định kịp thời, dứt khoát không dao động[cite: 524]."
+  },
+  {
+    chapter: 6,
+    level: "VD",
+    question: "Anh nông dân trong truyện 'Đẽo cày giữa đường' thiếu phẩm chất ý chí nào?",
+    options: ["Tính quyết đoán", "Tính tự chủ", "Tính độc lập", "Tính mục đích"],
+    answer: 2,
+    explanation: "Anh ta bị chi phối bởi ý kiến người khác, thiếu niềm tin vào bản thân[cite: 528, 721]."
+  },
+  {
+    chapter: 6,
+    level: "NB",
+    question: "Thói quen khác kỹ xảo ở điểm nào?",
+    options: ["Mang tính nhu cầu, nếp sống", "Mang tính kỹ thuật", "Ít bền vững", "Không cần tập luyện"],
+    answer: 0,
+    explanation: "Thói quen mang tính chất nhu cầu, nếp sống; Kỹ xảo mang tính kỹ thuật[cite: 532, 715]."
+  },
+  {
+    chapter: 6,
+    level: "VD",
+    question: "Nguyên tắc 'Văn ôn võ luyện' vận dụng quy luật nào của kỹ xảo?",
+    options: ["Đỉnh phương pháp", "Tiến bộ không đều", "Dập tắt kỹ xảo", "Di chuyển kỹ xảo"],
+    answer: 2,
+    explanation: "Nếu không ôn luyện thường xuyên, kỹ xảo sẽ bị suy yếu và mất đi[cite: 534]."
+  },
+  {
+    chapter: 6,
+    level: "NB",
+    question: "Giai đoạn đầu tiên của một hành động ý chí là gì?",
+    options: ["Thực hiện hành động", "Chuẩn bị (Xác định mục đích, đấu tranh động cơ, quyết định)", "Đánh giá kết quả", "Nỗ lực ý chí"],
+    answer: 1,
+    explanation: "Hành động ý chí bắt đầu bằng giai đoạn chuẩn bị[cite: 965, 1278]."
+  },
+  {
+    chapter: 6,
+    level: "TH",
+    question: "Sự khác biệt giữa 'Đấu tranh động cơ' trong hành động ý chí và sự do dự thiếu ý chí là:",
+    options: ["Đấu tranh động cơ dẫn đến quyết định sáng suốt; do dự dẫn đến bế tắc", "Không có sự khác biệt", "Do dự là tốt", "Đấu tranh động cơ là xấu"],
+    answer: 0,
+    explanation: "Đấu tranh động cơ là quá trình cân nhắc cần thiết; còn do dự thiếu quyết đoán là sự dao động không cần thiết[cite: 979, 1292]."
+  },
+  { 
+    chapter: 6, 
+    level: "TH", 
+    question: "Người có khả năng làm chủ bản thân, kìm nén cảm xúc tiêu cực là người có:", 
+    options: ["Tính tự chủ", "Tính độc lập", "Tính quyết đoán", "Tính mục đích"], 
+    answer: 0, 
+    explanation: "Tính tự chủ là khả năng làm chủ bản thân, kiểm soát hành vi và cảm xúc[cite: 526]."
+  },
+  { 
+    chapter: 6, 
+    level: "VD", 
+    question: "Muốn quản lý cảm xúc, đặc biệt là sự tức giận, cần rèn luyện phẩm chất nào?", 
+    options: ["Tính tự chủ", "Tính quyết đoán", "Tính kiên trì", "Tính mục đích"], 
+    answer: 0, 
+    explanation: "Tính tự chủ giúp kiểm soát xung động và cảm xúc[cite: 530, 719]."
+  },
+  { 
+    chapter: 6, 
+    level: "VD", 
+    question: "Để giáo dục hiệu quả, cần thường xuyên thay đổi phương pháp dạy học. Biện pháp này dựa trên quy luật nào của kỹ xảo?", 
+    options: ["Tiến bộ không đều", "Đỉnh của phương pháp luyện tập", "Tác động qua lại", "Dập tắt"], 
+    answer: 1, 
+    explanation: "Mỗi phương pháp có giới hạn (đỉnh), muốn tiến bộ hơn phải thay đổi phương pháp[cite: 717]."
+  },
+  { 
+    chapter: 6, 
+    level: "TH", 
+    question: "Quyết định hành động diễn ra ở giai đoạn nào của hành động ý chí?", 
+    options: ["Giai đoạn chuẩn bị", "Giai đoạn thực hiện", "Giai đoạn đánh giá", "Sau khi kết thúc"], 
+    answer: 0, 
+    explanation: "Quyết định là khâu cuối cùng của giai đoạn chuẩn bị[cite: 590, 751]."
+  },
+  { 
+    chapter: 6, 
+    level: "NB", 
+    question: "Đơn vị cấu thành của hành động ý chí là:", 
+    options: ["Thao tác", "Hành động", "Hoạt động", "Cử động"], 
+    answer: 1, 
+    explanation: "Hành động ý chí thực chất là một hành động có ý thức hướng đến mục đích[cite: 783]."
+  },
+  { 
+    chapter: 6, 
+    level: "VD", 
+    question: "Người có tính 'Quyết đoán' là người như thế nào?", 
+    options: ["Luôn nghe theo người khác", "Ra quyết định kịp thời, dứt khoát và chịu trách nhiệm", "Bảo thủ, không thay đổi ý kiến", "Hay do dự"], 
+    answer: 1, 
+    explanation: "Tính quyết đoán thể hiện ở khả năng ra quyết định đúng lúc và kiên định[cite: 972, 1285]."
+  },
+  { 
+    chapter: 6, 
+    level: "TH", 
+    question: "Phẩm chất ý chí nào đối lập với sự 'bướng bỉnh'?", 
+    options: ["Tính độc lập", "Tính mục đích", "Tính kiên trì", "Tính tự chủ"], 
+    answer: 0, 
+    explanation: "Tính độc lập là giữ vững quan điểm có căn cứ, còn bướng bỉnh là giữ quan điểm sai lầm mù quáng[cite: 1364]."
+  },
 
-    // --- CHƯƠNG 7: NHÂN CÁCH (Matrix: 1 NB, 3 TH, 2 VD) ---
-    // Nhận biết (NB)
-    {
-        chapter: 7, level: "NB",
-        question: "Nhân cách là gì?",
-        options: ["Tổ hợp các đặc điểm tâm lý quy định bản sắc và giá trị xã hội của con người", "Vẻ bề ngoài", "Bản năng sinh học", "Tính khí bẩm sinh"],
-        answer: 0,
-        explanation: "Nhân cách là tổ hợp thuộc tính tâm lý thể hiện bản sắc và giá trị xã hội [58, 59]."
-    },
-    // Thông hiểu (TH)
-    {
-        chapter: 7, level: "TH",
-        question: "Yếu tố nào giữ vai trò chủ đạo trong sự hình thành nhân cách?",
-        options: ["Di truyền", "Môi trường", "Giáo dục", "Hoạt động cá nhân"],
-        answer: 2,
-        explanation: "Giáo dục giữ vai trò chủ đạo, định hướng sự phát triển nhân cách [60, 61]."
-    },
-    {
-        chapter: 7, level: "TH",
-        question: "Yếu tố nào giữ vai trò quyết định trực tiếp sự hình thành nhân cách?",
-        options: ["Hoạt động và giao tiếp", "Giáo dục", "Bẩm sinh di truyền", "Môi trường xã hội"],
-        answer: 0,
-        explanation: "Thông qua hoạt động và giao tiếp, nhân cách được hình thành và bộc lộ trực tiếp [60, 62]."
-    },
-    {
-        chapter: 7, level: "TH",
-        question: "Khí chất là thuộc tính tâm lý gắn liền với:",
-        options: ["Kiểu hoạt động thần kinh", "Đạo đức", "Năng lực", "Thế giới quan"],
-        answer: 0,
-        explanation: "Cơ sở sinh lý của khí chất là các kiểu hoạt động thần kinh cấp cao [63, 64]."
-    },
-    // Vận dụng (VD)
-    {
-        chapter: 7, level: "VD",
-        question: "Câu 'Gần mực thì đen, gần đèn thì sáng' nói về vai trò của yếu tố nào?",
-        options: ["Di truyền", "Môi trường", "Giáo dục", "Hoạt động"],
-        answer: 1,
-        explanation: "Nhấn mạnh ảnh hưởng của môi trường sống, hoàn cảnh xung quanh [60]."
-    },
-    {
-        chapter: 7, level: "VD",
-        question: "Để hiểu rõ nhân cách một người, cách tốt nhất là:",
-        options: ["Quan sát ngoại hình", "Thông qua hoạt động và giao tiếp của họ", "Xem tướng số", "Hỏi ý kiến người khác"],
-        answer: 1,
-        explanation: "Nhân cách bộc lộ rõ nhất qua sản phẩm của hoạt động và cách giao tiếp [65, 66]."
-    },
-    // --- BỔ SUNG NGÂN HÀNG CÂU HỎI (100 CÂU) ---
-
-// --- CHƯƠNG 1: NHẬP MÔN (Tự nhiên, Xã hội, Lịch sử của Tâm lý) ---
-    { chapter: 1, level: "NB", question: "Theo quan điểm duy vật biện chứng, tâm lý người là:", options: ["Sự phản ánh thế giới khách quan vào não người", "Do thượng đế sinh ra", "Sự tiết ra của não như gan tiết mật", "Sự phản ánh nguyên vẹn thế giới khách quan"], answer: 0, explanation: "Tâm lý người được hiểu là sự phản ánh thế giới khách quan vào não, sự phản ánh này mang tính chủ thể [1]." },
-    { chapter: 1, level: "TH", question: "Cùng một hiện thực khách quan tác động nhưng hình ảnh tâm lý ở mỗi người lại khác nhau. Điều này thể hiện đặc điểm nào?", options: ["Tính xã hội", "Tính chủ thể", "Tính khách quan", "Tính lịch sử"], answer: 1, explanation: "Cùng một hiện thực khách quan tác động vào nhiều chủ thể khác nhau sẽ cho ra những hình ảnh tâm lý khác nhau [2, 3]." },
-    { chapter: 1, level: "TH", question: "Tâm lý người mang bản chất xã hội - lịch sử vì:", options: ["Tâm lý người có nguồn gốc từ thế giới tự nhiên", "Tâm lý người là sản phẩm của hoạt động và giao tiếp trong các mối quan hệ xã hội", "Tâm lý người do gen di truyền quyết định", "Tâm lý người không thay đổi theo thời gian"], answer: 1, explanation: "Tâm lý người có nguồn gốc từ thế giới khách quan, nhưng chính nguồn gốc xã hội (các mối quan hệ, nền văn hóa) là cái quyết định nên tâm lý người [4, 5]." },
-    { chapter: 1, level: "VD", question: "Trong dạy học, giáo viên không nên áp đặt suy nghĩ của mình lên học sinh mà cần tôn trọng ý kiến riêng của các em. Đây là vận dụng của:", options: ["Tính khách quan", "Tính phổ biến", "Tính chủ thể", "Tính hệ thống"], answer: 2, explanation: "Phản ánh tâm lý có tính chủ thể nên cần tôn trọng cái riêng, tránh sự áp đặt [4, 6]." },
-    { chapter: 1, level: "VD", question: "Trong giai đoạn mang thai, người mẹ chủ động trò chuyện cùng bào thai. Việc làm này liên quan nhiều nhất đến bản chất nào của tâm lý?", options: ["Tính lịch sử cộng đồng", "Tính lịch sử cá nhân", "Bản chất xã hội", "Tính phản xạ"], answer: 2, explanation: "Ngay từ đầu, con người đã cần sự tương tác xã hội (giao tiếp) để hình thành tâm lý [7]." },
-
-// --- CHƯƠNG 2: HOẠT ĐỘNG VÀ GIAO TIẾP ---
-    { chapter: 2, level: "NB", question: "Quá trình con người chuyển hóa năng lượng, tâm lý của mình thành sản phẩm hoạt động gọi là:", options: ["Quá trình chủ thể hóa", "Quá trình khách thể hóa (xuất tâm)", "Quá trình nhập tâm", "Quá trình phản ánh"], answer: 1, explanation: "Quá trình khách thể hóa (xuất tâm) là quá trình con người chuyển hóa những năng lượng của mình thành sản phẩm của hoạt động [8, 9]." },
-    { chapter: 2, level: "NB", question: "Đơn vị cấu thành nhỏ nhất, mang tính kỹ thuật của hoạt động là:", options: ["Hành động", "Hoạt động", "Thao tác", "Cử động"], answer: 2, explanation: "Thao tác là đơn vị nhỏ nhất của hành động, tương ứng với phương tiện và điều kiện [10]." },
-    { chapter: 2, level: "TH", question: "Phản tư nghề nghiệp (tự suy ngẫm về kinh nghiệm để phát triển chuyên môn) thuộc về quá trình nào?", options: ["Quá trình chủ thể hóa (nhập tâm)", "Quá trình khách thể hóa (xuất tâm)", "Quá trình xã hội hóa", "Quá trình giao tiếp"], answer: 0, explanation: "Đây là quá trình chuyển nội dung khách quan vào bản thân (kinh nghiệm, kiến thức) để phát triển tâm lý cá nhân [11, 12]." },
-    { chapter: 2, level: "TH", question: "Chức năng nào của giao tiếp thể hiện qua câu: 'Trông mặt mà bắt hình dong'?", options: ["Chức năng thông tin", "Chức năng nhận thức và đánh giá lẫn nhau", "Chức năng phối hợp", "Chức năng giáo dục"], answer: 1, explanation: "Giao tiếp giúp nhận thức người khác, tìm hiểu và đánh giá đối tượng [13, 14]." },
-    { chapter: 2, level: "TH", question: "Câu danh ngôn 'Có thể thấy được tính cách của một người qua cách anh ta nói chuyện' (Menander) thể hiện chức năng nào?", options: ["Chức năng thông tin", "Chức năng điều khiển", "Chức năng nhận thức và đánh giá lẫn nhau", "Chức năng cảm xúc"], answer: 2, explanation: "Qua giao tiếp, con người bộc lộ đặc điểm tâm lý, giúp người khác nhận thức và đánh giá được họ [15]." },
-
-// --- CHƯƠNG 3: SỰ HÌNH THÀNH VÀ PHÁT TRIỂN TÂM LÝ, Ý THỨC ---
-    { chapter: 3, level: "NB", question: "Thời kỳ cảm giác xuất hiện đầu tiên ở loài động vật nào?", options: ["Động vật nguyên sinh", "Động vật không xương sống", "Động vật có xương sống", "Loài người"], answer: 1, explanation: "Thời kỳ cảm giác xuất hiện ở động vật không xương sống (giun, ốc, sên...) [16]." },
-    { chapter: 3, level: "NB", question: "Hoạt động chủ đạo của tuổi mẫu giáo là gì?", options: ["Giao tiếp cảm xúc", "Vui chơi", "Học tập", "Lao động"], answer: 1, explanation: "Ở tuổi mẫu giáo, vui chơi là hoạt động chủ đạo (trung tâm là trò chơi sắm vai) [17]." },
-    { chapter: 3, level: "TH", question: "Con người có khả năng tự nhận thức, tự đánh giá và điều khiển hành vi của chính mình. Đây là cấp độ nào của ý thức?", options: ["Ý thức", "Tự ý thức", "Ý thức nhóm", "Vô thức"], answer: 1, explanation: "Tự ý thức là mức độ phát triển cao, con người tách mình ra làm đối tượng để đánh giá và điều khiển [18, 19]." },
-    { chapter: 3, level: "TH", question: "Hiện tượng 'Tâm thế' (sẵn sàng chờ đón) nằm ở vùng nào của đời sống tâm lý?", options: ["Ý thức", "Vô thức", "Giáp ranh giữa vô thức và ý thức", "Tiềm thức"], answer: 2, explanation: "Tâm thế là nơi giáp ranh giữa vô thức và ý thức, là sự chuẩn bị tâm lý đón nhận kích thích [20, 21]." },
-    { chapter: 3, level: "VD", question: "Nhiều bạn trẻ bị áp lực đồng trang lứa (peer pressure) do chưa xác định rõ giá trị bản thân. Điều này cho thấy sự hạn chế ở cấp độ nào?", options: ["Ý thức xã hội", "Tự ý thức", "Vô thức", "Ý thức nhóm"], answer: 1, explanation: "Sự thiếu hụt năng lực nhận thức và xác định thái độ đối với bản thân (tự ý thức) dẫn đến áp lực [22, 23]." },
-    { chapter: 3, level: "VD", question: "Một học sinh vi phạm nội quy, giáo viên nhắc nhở cả lớp để dùng ảnh hưởng tập thể tác động. Đây là vận dụng cấp độ nào?", options: ["Ý thức", "Tự ý thức", "Ý thức nhóm/tập thể", "Tất cả các cấp độ"], answer: 2, explanation: "Sử dụng sức mạnh của ý thức nhóm/tập thể để giáo dục cá nhân [24, 25]." },
-
-// --- CHƯƠNG 4: NHẬN THỨC (CẢM GIÁC, TRI GIÁC, TRÍ NHỚ, TƯ DUY, TƯỞNG TƯỢNG, CHÚ Ý) ---
-
-    // CẢM GIÁC (Sensation)
-    { chapter: 4, level: "NB", question: "Cảm giác phản ánh đặc điểm nào của sự vật?", options: ["Thuộc tính bản chất", "Thuộc tính riêng lẻ, bề ngoài", "Mối liên hệ quy luật", "Trọn vẹn sự vật"], answer: 1, explanation: "Cảm giác phản ánh một cách riêng lẻ từng thuộc tính bề ngoài của sự vật hiện tượng [26, 27]." },
-    { chapter: 4, level: "TH", question: "Quy luật thích ứng của cảm giác là gì?", options: ["Cảm giác không thay đổi", "Độ nhạy cảm thay đổi phù hợp với cường độ kích thích", "Tác động qua lại giữa các giác quan", "Cảm giác mất đi hoàn toàn"], answer: 1, explanation: "Thích ứng là khả năng thay đổi độ nhạy cảm cho phù hợp với sự thay đổi của cường độ kích thích [28, 29]." },
-    { chapter: 4, level: "VD", question: "Lan ăn ớt cay, uống sữa lạnh thấy đỡ cay. Đây là quy luật nào?", options: ["Thích ứng", "Tác động qua lại (tương phản)", "Ngưỡng cảm giác", "Tổng giác"], answer: 1, explanation: "Sự tác động của vị giác/xúc giác khác (lạnh/ngọt) làm giảm cảm giác cay (Tương phản/Tác động qua lại) [30, 31]." },
-    { chapter: 4, level: "VD", question: "Người mù thường có thính giác và xúc giác nhạy bén hơn người thường. Đây là quy luật:", options: ["Thích ứng", "Bù trừ (Tác động qua lại khác loại)", "Ngưỡng cảm giác", "Tương phản"], answer: 1, explanation: "Sự kích thích yếu/mất ở cơ quan này làm tăng độ nhạy cảm của cơ quan khác [32, 33]." },
-
-    // TRI GIÁC (Perception)
-    { chapter: 4, level: "NB", question: "Tri giác khác cảm giác ở điểm cơ bản nào?", options: ["Phản ánh riêng lẻ", "Phản ánh trọn vẹn sự vật", "Không cần kích thích trực tiếp", "Là nhận thức lý tính"], answer: 1, explanation: "Tri giác phản ánh sự vật hiện tượng một cách trọn vẹn [34, 35]." },
-    { chapter: 4, level: "TH", question: "Khi nhìn chiếc bàn từ các góc độ khác nhau (trên xuống, chếch), ta vẫn nhận ra đó là chiếc bàn hình chữ nhật. Đây là tính gì?", options: ["Tính lựa chọn", "Tính ổn định", "Tính ảo ảnh", "Tính tổng giác"], answer: 1, explanation: "Tính ổn định giúp phản ánh sự vật không đổi khi điều kiện tri giác thay đổi [36, 37]." },
-    { chapter: 4, level: "TH", question: "Một sinh viên chỉ 'nhận ra' vật thể lạ khi gọi được tên và xếp nó vào nhóm đã biết. Đây là quy luật:", options: ["Tính đối tượng", "Tính có ý nghĩa", "Tính lựa chọn", "Tính ổn định"], answer: 1, explanation: "Tính có ý nghĩa: tri giác gắn với tư duy, gọi tên và xếp loại được sự vật [11, 38]." },
-    { chapter: 4, level: "VD", question: "Giáo viên dùng phấn màu đóng khung ý chính trên bảng. Đây là vận dụng quy luật:", options: ["Tính ổn định", "Tính lựa chọn", "Tính ảo ảnh", "Tính tổng giác"], answer: 1, explanation: "Tách đối tượng (ý chính) ra khỏi bối cảnh (bảng) nhờ tính lựa chọn [39, 40]." },
-    { chapter: 4, level: "VD", question: "Lời khuyên 'Da ngăm không nên mặc áo trắng tinh' vận dụng quy luật nào?", options: ["Tính lựa chọn", "Tính ảo ảnh (Tương phản)", "Tính tổng giác", "Tính đối tượng"], answer: 1, explanation: "Màu trắng tương phản làm da ngăm trông càng tối hơn (Quy luật ảo ảnh/tương phản) [37, 41]." },
-    { chapter: 4, level: "VD", question: "Bộ đội ngụy trang bằng lá cây để hòa lẫn vào môi trường. Đây là ứng dụng quy luật:", options: ["Tính đối tượng", "Tính lựa chọn", "Tính ý nghĩa", "Tính tổng giác"], answer: 1, explanation: "Làm mất sự khác biệt giữa đối tượng và bối cảnh để gây khó khăn cho tính lựa chọn của đối phương [42]." },
-
-    // TRÍ NHỚ (Memory)
-    { chapter: 4, level: "NB", question: "Sản phẩm của trí nhớ là gì?", options: ["Khái niệm", "Biểu tượng", "Phán đoán", "Hình ảnh cảm giác"], answer: 1, explanation: "Sản phẩm của trí nhớ là biểu tượng (hình ảnh được lưu giữ và tái hiện) [43, 44]." },
-    { chapter: 4, level: "TH", question: "Ghi nhớ dựa trên sự thông hiểu nội dung và mối liên hệ logic gọi là:", options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Ghi nhớ không chủ định", "Hồi tưởng"], answer: 1, explanation: "Ghi nhớ ý nghĩa dựa trên sự thông hiểu nội dung tài liệu [43, 45]." },
-    { chapter: 4, level: "VD", question: "Bạn thiết kế hoạt động: HS dùng sơ đồ khái niệm nối sự kiện-nguyên nhân-hệ quả. Hoạt động này kích hoạt:", options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Nhận lại", "Học vẹt"], answer: 1, explanation: "Sơ đồ khái niệm giúp thiết lập mối liên hệ logic, thuộc ghi nhớ ý nghĩa [45, 46]." },
-    { chapter: 4, level: "VD", question: "Khi xem lại ảnh kỷ yếu, tôi mới dần nhận ra người bạn cũ. Quá trình này là:", options: ["Nhớ lại", "Nhận lại", "Gìn giữ", "Quên"], answer: 1, explanation: "Nhận lại là nhận ra đối tượng khi tri giác lại nó (xem ảnh) [47, 48]." },
-    { chapter: 4, level: "VD", question: "Trong phòng thi quên công thức, ra khỏi phòng lại nhớ. Đây là:", options: ["Quên hoàn toàn", "Quên cục bộ", "Quên tạm thời", "Ghi nhớ kém"], answer: 2, explanation: "Quên tạm thời là không nhớ lại được ngay lúc cần nhưng sau đó lại nhớ [49, 50]." },
-
-    // TƯ DUY (Thinking)
-    { chapter: 4, level: "NB", question: "Tư duy phản ánh cái gì?", options: ["Thuộc tính bề ngoài", "Cái đã qua", "Bản chất, mối liên hệ có tính quy luật", "Hình ảnh trực quan"], answer: 2, explanation: "Tư duy phản ánh những thuộc tính bản chất, mối liên hệ có tính quy luật [51]." },
-    { chapter: 4, level: "TH", question: "Thao tác tư duy 'gạt bỏ những thuộc tính không cần thiết để giữ lại cái bản chất' là:", options: ["Phân tích", "Tổng hợp", "Trừu tượng hóa", "Cụ thể hóa"], answer: 2, explanation: "Trừu tượng hóa là gạt bỏ cái không cần thiết, chỉ giữ lại yếu tố cần thiết [52]." },
-    { chapter: 4, level: "TH", question: "Muốn nảy sinh tư duy, hoàn cảnh phải như thế nào?", options: ["Hoàn toàn mới lạ", "Hoàn toàn quen thuộc", "Là tình huống có vấn đề", "Không có mâu thuẫn"], answer: 2, explanation: "Tư duy chỉ nảy sinh trong tình huống có vấn đề (chứa đựng mâu thuẫn nhận thức) [53]." },
-    { chapter: 4, level: "VD", question: "Học sinh quan sát các hình chữ nhật khác nhau rồi rút ra kết luận chung: 'Mọi hình chữ nhật đều có 4 góc vuông'. Đây là thao tác:", options: ["Phân tích", "Cụ thể hóa", "Khái quát hóa", "So sánh"], answer: 2, explanation: "Tìm ra thuộc tính chung cho một nhóm đối tượng là Khái quát hóa [36, 52]." },
-    { chapter: 4, level: "VD", question: "Sử dụng tính chất vật lý của thủy ngân (giãn nở nhiệt) để làm nhiệt kế. Đây là thao tác:", options: ["Trừu tượng hóa", "Tổng hợp", "Cụ thể hóa", "Phân tích"], answer: 2, explanation: "Vận dụng tri thức chung (tính chất vật lý) vào trường hợp riêng (làm nhiệt kế) là Cụ thể hóa [54]." },
-    { chapter: 4, level: "VD", question: "Phân tích nhân vật cô Hiền thành các khía cạnh: ăn, ở, mặc, ứng xử... là thao tác:", options: ["Phân tích", "Tổng hợp", "So sánh", "Trừu tượng hóa"], answer: 0, explanation: "Tách toàn thể thành các bộ phận để xem xét là Phân tích [55]." },
-
-    // TƯỞNG TƯỢNG (Imagination)
-    { chapter: 4, level: "NB", question: "Tưởng tượng tạo ra cái gì?", options: ["Khái niệm mới", "Phán đoán mới", "Hình ảnh mới chưa có trong kinh nghiệm", "Cảm xúc mới"], answer: 2, explanation: "Tưởng tượng xây dựng những hình ảnh mới trên cơ sở biểu tượng đã có [56]." },
-    { chapter: 4, level: "TH", question: "Đặc điểm nào là của Tưởng tượng?", options: ["Phản ánh cái đã có", "Xây dựng hình ảnh mới từ biểu tượng đã có", "Phản ánh bản chất logic", "Không cần ngôn ngữ"], answer: 1, explanation: "Tưởng tượng xây dựng hình ảnh mới trên cơ sở biểu tượng đã có [56, 57]." },
-    { chapter: 4, level: "VD", question: "Nhân vật Chí Phèo, Chị Dậu là sản phẩm của cách sáng tạo nào?", options: ["Chắp ghép", "Liên hợp", "Điển hình hóa", "Loại suy"], answer: 2, explanation: "Xây dựng nhân vật đại diện cho một tầng lớp xã hội là Điển hình hóa [58, 59]." },
-    { chapter: 4, level: "VD", question: "Chế tạo kẹp 'tai giả' đeo khẩu trang từ hình ảnh cái lược là cách sáng tạo nào?", options: ["Loại suy (mô phỏng)", "Nhấn mạnh", "Liên hợp", "Chắp ghép"], answer: 0, explanation: "Dựa trên vật có thực để tạo ra vật mới có chức năng tương tự là Loại suy [60, 61]." },
-    { chapter: 4, level: "VD", question: "Vẽ tranh biếm họa quan lại 'đầu to, bụng bự' là cách sáng tạo nào?", options: ["Thay đổi kích thước/Nhấn mạnh", "Chắp ghép", "Liên hợp", "Loại suy"], answer: 0, explanation: "Tô đậm, phóng đại các đặc điểm là Nhấn mạnh [62, 63]." },
-    { chapter: 4, level: "VD", question: "Hình ảnh con Rồng (đầu sư tử, mình rắn, vảy cá...) là sản phẩm của:", options: ["Chắp ghép (kết dính)", "Liên hợp", "Điển hình hóa", "Nhấn mạnh"], answer: 0, explanation: "Ghép các bộ phận của nhiều con vật lại với nhau là Chắp ghép [64]." },
-
-    // CHÚ Ý (Attention)
-    { chapter: 4, level: "NB", question: "Chú ý là gì?", options: ["Một quá trình tâm lý", "Một thuộc tính tâm lý", "Sự tập trung của ý thức vào đối tượng", "Khả năng ghi nhớ"], answer: 2, explanation: "Chú ý là sự tập trung của ý thức vào một hay một nhóm sự vật, hiện tượng [65, 66]." },
-    { chapter: 4, level: "TH", question: "Loại chú ý nào không cần nỗ lực ý chí nhưng vẫn tập trung cao độ do đối tượng hấp dẫn?", options: ["Chú ý không chủ định", "Chú ý có chủ định", "Chú ý sau chủ định", "Phân tán"], answer: 2, explanation: "Chú ý sau chủ định là chú ý có chủ định nhưng không đòi hỏi căng thẳng ý chí do bị cuốn hút [67, 68]." },
-    { chapter: 4, level: "VD", question: "Tài xế vừa lái xe, vừa quan sát đường, vừa nghe nhạc. Đây là thuộc tính nào?", options: ["Sức tập trung", "Phân phối chú ý", "Di chuyển chú ý", "Bền vững"], answer: 1, explanation: "Cùng lúc chú ý đến nhiều đối tượng/hoạt động là Phân phối chú ý [69, 70]." },
-    { chapter: 4, level: "VD", question: "Các áp phích quảng cáo dùng màu nổi, cỡ chữ to để thu hút người nhìn. Đây là khai thác thuộc tính nào?", options: ["Sức tập trung của chú ý", "Phân phối chú ý", "Di chuyển chú ý", "Sự dao động"], answer: 0, explanation: "Tạo sự tập trung vào một phạm vi hẹp (áp phích) nhờ cường độ kích thích [71]." },
-
-// --- CHƯƠNG 5: ĐỜI SỐNG TÌNH CẢM ---
-    { chapter: 5, level: "NB", question: "Xúc cảm thường có đặc điểm gì?", options: ["Ổn định, bền vững", "Nhất thời, đa dạng, gắn với tình huống", "Chỉ có ở người", "Là thuộc tính tâm lý"], answer: 1, explanation: "Xúc cảm là những rung động nhất thời, phụ thuộc vào tình huống cụ thể [72, 73]." },
-    { chapter: 5, level: "TH", question: "Tình cảm khác xúc cảm ở điểm nào?", options: ["Có trước", "Nhất thời", "Ổn định, là thuộc tính, thực hiện chức năng xã hội", "Có ở động vật"], answer: 2, explanation: "Tình cảm là thuộc tính ổn định, bền vững, thực hiện chức năng xã hội [72, 74]." },
-    { chapter: 5, level: "TH", question: "Quy luật 'Gần thường xa thương' là biểu hiện của:", options: ["Quy luật lây lan", "Quy luật thích ứng", "Quy luật di chuyển", "Quy luật pha trộn"], answer: 1, explanation: "Gần thường (lặp lại nhiều gây chai sạn) là thích ứng. Xa thương (đổi mới) là làm mới tình cảm [75, 76]." },
-    { chapter: 5, level: "VD", question: "Hiện tượng 'Một con ngựa đau cả tàu bỏ cỏ' thể hiện quy luật nào?", options: ["Thích ứng", "Lây lan", "Tương phản", "Di chuyển"], answer: 1, explanation: "Sự lan truyền cảm xúc từ người này sang người khác là Lây lan [77, 78]." },
-    { chapter: 5, level: "VD", question: "Càng yêu nhân vật chính thiện lương, càng ghét nhân vật phản diện độc ác. Đây là quy luật:", options: ["Cảm ứng (Tương phản)", "Lây lan", "Di chuyển", "Thích ứng"], answer: 0, explanation: "Cảm xúc này làm tăng cường độ cảm xúc kia (đối cực) là Tương phản/Cảm ứng [78, 79]." },
-    { chapter: 5, level: "VD", question: "'Giận cá chém thớt' là biểu hiện của quy luật:", options: ["Di chuyển", "Lây lan", "Thích ứng", "Pha trộn"], answer: 0, explanation: "Chuyển xúc cảm từ đối tượng này sang đối tượng khác là Di chuyển [80]." },
-    { chapter: 5, level: "VD", question: "Mẹ mắng con vì quá yêu và lo lắng cho con. Đây là quy luật:", options: ["Pha trộn", "Di chuyển", "Thích ứng", "Cảm ứng"], answer: 0, explanation: "Hai tình cảm đối cực (yêu - giận) cùng tồn tại và hòa quyện vào nhau là Pha trộn [81]." },
-    { chapter: 5, level: "VD", question: "Để giáo dục lòng nhân ái, nhà trường tổ chức đi thăm trại trẻ mồ côi (trải nghiệm thực tế). Đây là vận dụng:", options: ["Quy luật hình thành tình cảm", "Quy luật thích ứng", "Quy luật di chuyển", "Quy luật tương phản"], answer: 0, explanation: "Tình cảm được hình thành từ những xúc cảm đồng loại (tổng hợp hóa, động hình hóa) [82]." },
-
-// --- CHƯƠNG 6: Ý CHÍ ---
-    { chapter: 6, level: "NB", question: "Ý chí là mặt ... của ý thức?", options: ["Nhận thức", "Năng động", "Thái độ", "Tình cảm"], answer: 1, explanation: "Ý chí là mặt năng động của ý thức, biểu hiện ở năng lực thực hiện hành động [83, 84]." },
-    { chapter: 6, level: "TH", question: "Phẩm chất ý chí nào giúp con người đưa ra quyết định kịp thời, dứt khoát?", options: ["Tính độc lập", "Tính quyết đoán", "Tính kiên trì", "Tính tự chủ"], answer: 1, explanation: "Tính quyết đoán là khả năng đưa ra quyết định kịp thời, dứt khoát không dao động [85, 86]." },
-    { chapter: 6, level: "TH", question: "Người có khả năng làm chủ bản thân, kìm nén cảm xúc tiêu cực là người có:", options: ["Tính tự chủ", "Tính độc lập", "Tính quyết đoán", "Tính mục đích"], answer: 0, explanation: "Tính tự chủ là khả năng làm chủ bản thân, kiểm soát hành vi và cảm xúc [87, 88]." },
-    { chapter: 6, level: "VD", question: "Anh nông dân trong truyện 'Đẽo cày giữa đường' thiếu phẩm chất ý chí nào?", options: ["Tính quyết đoán", "Tính tự chủ", "Tính độc lập", "Tính mục đích"], answer: 2, explanation: "Anh ta bị chi phối bởi ý kiến người khác, thiếu niềm tin vào bản thân (Thiếu tính độc lập) [89, 90]." },
-    { chapter: 6, level: "VD", question: "Muốn quản lý cảm xúc, đặc biệt là sự tức giận, cần rèn luyện phẩm chất nào?", options: ["Tính tự chủ", "Tính quyết đoán", "Tính kiên trì", "Tính mục đích"], answer: 0, explanation: "Tính tự chủ giúp kiểm soát xung động và cảm xúc [84, 91]." },
-    { chapter: 6, level: "NB", question: "Thói quen khác kỹ xảo ở điểm nào?", options: ["Mang tính nhu cầu, nếp sống", "Mang tính kỹ thuật", "Ít bền vững", "Không cần tập luyện"], answer: 0, explanation: "Thói quen mang tính chất nhu cầu, nếp sống; Kỹ xảo mang tính kỹ thuật [92]." },
-    { chapter: 6, level: "VD", question: "Nguyên tắc 'Văn ôn võ luyện' vận dụng quy luật nào của kỹ xảo?", options: ["Đỉnh phương pháp", "Tiến bộ không đều", "Dập tắt kỹ xảo", "Di chuyển kỹ xảo"], answer: 2, explanation: "Nếu không ôn luyện thường xuyên, kỹ xảo sẽ bị suy yếu và mất đi (Dập tắt) [84, 93]." },
-
-// --- CHƯƠNG 7: NHÂN CÁCH ---
-    { chapter: 7, level: "NB", question: "Nhân cách là gì?", options: ["Tổ hợp thuộc tính tâm lý ổn định, biểu hiện bản sắc và giá trị xã hội", "Bề ngoài của con người", "Bản năng sinh học", "Khí chất bẩm sinh"], answer: 0, explanation: "Nhân cách là tổ hợp những đặc điểm, thuộc tính tâm lý cá nhân thể hiện bản sắc và giá trị xã hội [94]." },
-    { chapter: 7, level: "TH", question: "Yếu tố giữ vai trò chủ đạo trong hình thành nhân cách là:", options: ["Di truyền", "Môi trường", "Giáo dục", "Hoạt động"], answer: 2, explanation: "Giáo dục giữ vai trò chủ đạo, định hướng sự phát triển [95, 96]." },
-    { chapter: 7, level: "TH", question: "Yếu tố quyết định trực tiếp sự hình thành nhân cách là:", options: ["Giáo dục", "Hoạt động và Giao tiếp", "Bẩm sinh", "Môi trường"], answer: 1, explanation: "Thông qua hoạt động và giao tiếp, nhân cách trực tiếp được hình thành [97]." },
-    { chapter: 7, level: "TH", question: "Khí chất (Tính khí) có cơ sở sinh lý là:", options: ["Kiểu hoạt động thần kinh", "Hình dáng cơ thể", "Nhóm máu", "Gen di truyền"], answer: 0, explanation: "Cơ sở sinh lý của khí chất là các kiểu hoạt động thần kinh cấp cao [98]." },
-    { chapter: 7, level: "VD", question: "Câu 'Gần bùn mà chẳng hôi tanh mùi bùn' nhấn mạnh vai trò của yếu tố nào?", options: ["Môi trường", "Giáo dục", "Tính tích cực hoạt động của cá nhân", "Di truyền"], answer: 2, explanation: "Dù môi trường xấu (bùn) nhưng cá nhân tích cực (sen) vẫn giữ phẩm chất tốt [96, 99]." },
-    { chapter: 7, level: "VD", question: "Khổng Minh (Gia Cát Lượng) nhanh trí, hoạt bát, dễ thích nghi. Ông thuộc khí chất:", options: ["Nóng nảy", "Bình thản", "Linh hoạt", "Ưu tư"], answer: 2, explanation: "Linh hoạt: vui vẻ, thích ứng nhanh, trí tuệ mềm dẻo, nắm thế chủ động [100, 101]." },
-    { chapter: 7, level: "VD", question: "Câu 'Cha nào con nấy' thường đề cập đến ảnh hưởng của yếu tố nào?", options: ["Giáo dục", "Di truyền (Yếu tố sinh học)", "Hoạt động", "Giao tiếp"], answer: 1, explanation: "Di truyền tạo tiền đề (như kiểu thần kinh, ngoại hình) [61]." },
-    { chapter: 7, level: "VD", question: "Việc luyện tập phương pháp dạy học để trở thành giáo viên giỏi là phát triển mặt nào của nhân cách?", options: ["Xu hướng", "Tính cách", "Năng lực", "Khí chất"], answer: 2, explanation: "Năng lực là tổ hợp thuộc tính đáp ứng yêu cầu hoạt động (dạy học) đạt kết quả cao [102]." },
-    { chapter: 7, level: "VD", question: "Tham vọng trở thành tỷ phú bất chấp thủ đoạn của B thể hiện mặt nào của nhân cách?", options: ["Lý tưởng (Xu hướng)", "Năng lực", "Khí chất", "Tính cách"], answer: 0, explanation: "Đây là một dạng lý tưởng/xu hướng (nhưng lệch lạc về giá trị) [103, 104]." },
-    { chapter: 7, level: "TH", question: "Đặc điểm nào cho phép dự đoán hành vi của một người trong tình huống cụ thể?", options: ["Tính ổn định", "Tính thống nhất", "Tính tích cực", "Tính giao lưu"], answer: 0, explanation: "Tính ổn định của nhân cách giúp ta dự đoán được hành vi trước các tình huống [105, 106]." },
-
-// --- BỔ SUNG THÊM CÁC CÂU KHÁC TỪ 14 ĐỀ (Đảm bảo phủ kín các dạng) ---
-    { chapter: 3, level: "TH", question: "Tại sao nói ý thức là 'phản ánh của phản ánh'?", options: ["Vì nó phản ánh thế giới khách quan", "Vì nó là nhận thức lại những gì đã được cảm giác/tri giác phản ánh (hình ảnh tâm lý)", "Vì nó giống chiếc gương", "Vì nó phản ánh cái cũ"], answer: 1, explanation: "Ý thức lấy hình ảnh tâm lý (đã phản ánh lần 1) làm đối tượng để phản ánh tiếp (lần 2) [107]." },
-    { chapter: 4, level: "VD", question: "Cố vấn học tập vừa trả lời email, vừa kiểm tra lịch hẹn. Đây là:", options: ["Phân phối chú ý", "Di chuyển chú ý", "Sức tập trung", "Bền vững"], answer: 0, explanation: "Làm nhiều việc cùng lúc là phân phối chú ý [108]." },
-    { chapter: 4, level: "TH", question: "Định nghĩa chú ý chuẩn xác nhất?", options: ["Trạng thái hưng phấn", "Sự định hướng và tập trung của ý thức vào đối tượng", "Khả năng ghi nhớ", "Thói quen nhìn chăm chú"], answer: 1, explanation: "Chú ý là sự tập trung của ý thức vào một hay một nhóm sự vật [109]." },
-    { chapter: 5, level: "VD", question: "Nam mới đậu đại học thì rất vui, sau đó cảm xúc dịu lại. Đây là:", options: ["Thích ứng", "Tương phản", "Lây lan", "Di chuyển"], answer: 0, explanation: "Cảm xúc lặp lại hoặc kéo dài sẽ bị suy yếu (chai sạn) do quy luật thích ứng [110]." },
-    { chapter: 2, level: "TH", question: "Mối quan hệ giữa nhận thức cảm tính và lý tính?", options: ["Tách biệt nhau", "Cảm tính là nền tảng, lý tính khái quát hóa kết quả cảm tính", "Lý tính có trước", "Cảm tính thay thế được lý tính"], answer: 1, explanation: "Nhận thức cảm tính cung cấp dữ liệu cho lý tính; lý tính chi phối lại cảm tính [111, 112]." },
-    { chapter: 2, level: "VD", question: "Để giảm học vẹt, cho HS dùng sơ đồ khái niệm. Hoạt động này kích hoạt:", options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Nhận lại", "Học lại"], answer: 1, explanation: "Sơ đồ khái niệm giúp hiểu bản chất và mối liên hệ, đó là ghi nhớ ý nghĩa [46]." },
-    { chapter: 4, level: "TH", question: "Sự khác biệt chủ yếu giữa tư duy và tưởng tượng?", options: ["Tư duy giải quyết vấn đề chặt chẽ logic, tưởng tượng giải quyết khi thiếu thông tin (bất định)", "Tư duy không có tính vấn đề", "Tưởng tượng không cần ngôn ngữ", "Tưởng tượng phản ánh trực tiếp"], answer: 0, explanation: "Tư duy giải quyết vấn đề rõ ràng dữ kiện; Tưởng tượng nảy sinh khi hoàn cảnh có tính bất định lớn [113, 114]." },
-    { chapter: 3, level: "TH", question: "Ý thức là gì?", options: ["Phản ánh tâm lý cao nhất chỉ có ở người", "Phản ánh bản năng", "Phản ánh của động vật bậc cao", "Sự bắt chước"], answer: 0, explanation: "Ý thức là hình thức phản ánh cao nhất, gắn với ngôn ngữ và chỉ có ở người [115]." },
-    { chapter: 4, level: "VD", question: "'Nhìn gà hóa cuốc' là hiện tượng gì?", options: ["Ảo ảnh tri giác", "Tổng giác", "Tính lựa chọn", "Tính ổn định"], answer: 0, explanation: "Phản ánh sai lệch đối tượng (ảo ảnh) do điều kiện tri giác không tốt [116]." },
-    { chapter: 5, level: "VD", question: "Đang vui mà nghe tin buồn thì nỗi buồn giảm đi. Đây là quy luật:", options: ["Cảm ứng (Tương phản)", "Pha trộn", "Di chuyển", "Thích ứng"], answer: 0, explanation: "Xúc cảm này làm suy yếu/tăng cường xúc cảm kia xảy ra đồng thời/nối tiếp (Cảm ứng) [117]." },
-    { chapter: 4, level: "VD", question: "Học sinh tóm tắt bài bằng cách gạch chân từ khóa đỏ. Đây là quy luật:", options: ["Tính lựa chọn", "Tính đối tượng", "Tính ổn định", "Tính tổng giác"], answer: 0, explanation: "Tách đối tượng ra khỏi bối cảnh nhờ màu sắc nổi bật [118]." },
-    { chapter: 7, level: "TH", question: "Đặc điểm nào của nhân cách thể hiện qua việc 'Không ai giống ai'?", options: ["Tính độc đáo", "Tính ổn định", "Tính thống nhất", "Tính giao lưu"], answer: 0, explanation: "Tính độc đáo: nhân cách là cái riêng, cái đơn nhất không lặp lại [119]." },
-    { chapter: 4, level: "TH", question: "Đâu là mệnh đề đúng phân biệt cảm giác và tri giác?", options: ["Cảm giác phản ánh riêng lẻ, tri giác phản ánh trọn vẹn", "Cảm giác phản ánh bên trong, tri giác phản ánh bên ngoài", "Cảm giác là lý tính, tri giác là cảm tính", "Cảm giác gián tiếp, tri giác trực tiếp"], answer: 0, explanation: "Cảm giác phản ánh thuộc tính riêng lẻ; Tri giác phản ánh trọn vẹn sự vật [120]." },
-    { chapter: 2, level: "TH", question: "Giao tiếp là điều kiện để:", options: ["Tâm lý, nhân cách phát triển bình thường", "Con người sống sót về mặt sinh học", "Thỏa mãn nhu cầu ăn uống", "Cơ thể lớn lên"], answer: 0, explanation: "Giao tiếp là điều kiện để tâm lý, nhân cách hình thành và phát triển [14]." },
-    { chapter: 1, level: "TH", question: "Chức năng điều chỉnh của tâm lý thể hiện ở chỗ:", options: ["Giúp con người sửa đổi hành vi cho phù hợp với mục tiêu", "Giúp con người nhận biết thế giới", "Giúp con người rung động", "Giúp con người giao tiếp"], answer: 0, explanation: "Tâm lý giúp điều chỉnh hoạt động cho phù hợp với mục tiêu và hoàn cảnh [121]." },
-    { chapter: 4, level: "VD", question: "Nhìn đám mây thấy hình con rồng. Đây là quy luật:", options: ["Tổng giác", "Tính đối tượng", "Tính lựa chọn", "Tính ổn định"], answer: 0, explanation: "Tri giác phụ thuộc vào kinh nghiệm và trí tưởng tượng của chủ thể (Tổng giác) [122]." },
-    { chapter: 6, level: "TH", question: "Quyết định hành động diễn ra ở giai đoạn nào của hành động ý chí?", options: ["Giai đoạn chuẩn bị", "Giai đoạn thực hiện", "Giai đoạn đánh giá", "Sau khi hành động"], answer: 0, explanation: "Quyết định hành động là bước cuối cùng của giai đoạn chuẩn bị [123]." },
-    { chapter: 7, level: "TH", question: "Xu hướng của nhân cách bao gồm:", options: ["Nhu cầu, hứng thú, lý tưởng, thế giới quan, niềm tin", "Tri thức, kỹ năng, kỹ xảo", "Cảm xúc, tình cảm", "Khí chất, tính cách"], answer: 0, explanation: "Xu hướng là hệ thống thúc đẩy, gồm nhu cầu, hứng thú, lý tưởng... [124]." },
-    { chapter: 1, level: "VD", question: "Hiện tượng CEO chỉ trích ca sĩ, mỗi người phản ứng khác nhau thể hiện:", options: ["Tính chủ thể", "Tính khách quan", "Tính xã hội", "Tính lịch sử"], answer: 0, explanation: "Cùng một sự kiện nhưng mỗi người phản ánh khác nhau do chủ thể khác nhau [125]." },
-    { chapter: 2, level: "NB", question: "Hoạt động là mối quan hệ tác động qua lại giữa:", options: ["Con người và thế giới (khách thể)", "Con người và môi trường", "Thần kinh và cơ bắp", "Chủ thể và chủ thể"], answer: 0, explanation: "Hoạt động là quan hệ giữa con người (chủ thể) và thế giới (khách thể) [126]." },
-    { chapter: 4, level: "NB", question: "Loại trí nhớ nào giữ vai trò chính trong lĩnh hội tri thức?", options: ["Trí nhớ từ ngữ - logic", "Trí nhớ hình ảnh", "Trí nhớ vận động", "Trí nhớ xúc cảm"], answer: 0, explanation: "Trí nhớ từ ngữ - logic đặc trưng cho người, giữ vai trò chính trong lĩnh hội tri thức [127]." },
-    { chapter: 5, level: "TH", question: "Tình cảm trí tuệ thể hiện ở:", options: ["Sự tò mò, ham hiểu biết", "Lòng yêu nước", "Yêu cái đẹp", "Trách nhiệm công việc"], answer: 0, explanation: "Tình cảm trí tuệ nảy sinh trong hoạt động nhận thức (tò mò, ham hiểu biết) [128]." },
-    { chapter: 3, level: "TH", question: "Mặt năng động của ý thức thể hiện ở:", options: ["Hành vi, cử chỉ thực tiễn", "Sự hiểu biết", "Rung cảm yêu ghét", "Tiềm thức"], answer: 0, explanation: "Mặt năng động chính là quá trình vận dụng hiểu biết để tác động vào thực tiễn [129]." },
-    { chapter: 7, level: "TH", question: "Tính cách là sự kết hợp giữa:", options: ["Thái độ và Hành vi", "Đức và Tài", "Nóng nảy và Ưu tư", "Di truyền và Môi trường"], answer: 0, explanation: "Cấu trúc tính cách gồm hệ thống thái độ và hệ thống hành vi [130, 131]." },
-    { chapter: 4, level: "VD", question: "Sinh viên ban đầu cố gắng nghe giảng, sau đó say sưa quên giờ về. Đây là:", options: ["Chú ý sau chủ định", "Chú ý có chủ định", "Chú ý không chủ định", "Phân tán"], answer: 0, explanation: "Ban đầu nỗ lực, sau đó bị cuốn hút không cần nỗ lực nữa là Chú ý sau chủ định [68]." },
-    // --- BỔ SUNG NGÂN HÀNG CÂU HỎI (PHẦN 2 - 100 CÂU MỚI) ---
-
-// --- CHƯƠNG 1: NHẬP MÔN TÂM LÝ HỌC ---
-    { chapter: 1, level: "VD", question: "Thanh niên thế hệ 8X thường coi trọng công việc ổn định, trong khi Gen Z lại đề cao trải nghiệm và khởi nghiệp. Sự khác biệt này phản ánh đặc điểm nào?", options: ["Tính tích cực", "Tính sáng tạo", "Tính lịch sử - xã hội", "Tính chủ thể"], answer: 2, explanation: "Tâm lý mang dấu ấn của thời đại và điều kiện xã hội lịch sử mà cá nhân sinh sống [1, 2]." },
-    { chapter: 1, level: "NB", question: "Hiện tượng nào sau đây KHÔNG được xem là hiện tượng tâm lý?", options: ["Hồi hộp khi chờ kết quả thi", "Buồn bã khi bị điểm kém", "Toát mồ hôi nhiều sau khi chạy bộ", "Cảm thấy tự tin khi trả lời đúng"], answer: 2, explanation: "Toát mồ hôi là phản ứng sinh lý thuần túy của cơ thể, không phải hiện tượng tâm lý [3]." },
-    { chapter: 1, level: "VD", question: "Trong giao tiếp ứng xử, giáo viên cần tìm hiểu hoàn cảnh gia đình và văn hóa vùng miền của học sinh. Đây là vận dụng nguyên tắc:", options: ["Tính chủ thể", "Bản chất xã hội - lịch sử của tâm lý", "Tính hoạt động", "Tính hệ thống"], answer: 1, explanation: "Tâm lý có nguồn gốc xã hội, nên cần tìm hiểu môi trường xã hội/văn hóa để hiểu tâm lý học sinh [4]." },
-    { chapter: 1, level: "TH", question: "Luận điểm 'Tâm lý người là sự phản ánh hiện thực khách quan' khẳng định điều gì?", options: ["Tâm lý có trước vật chất", "Tâm lý là do thượng đế sinh ra", "Tâm lý người có nguồn gốc từ thế giới khách quan", "Tâm lý không phụ thuộc vào não bộ"], answer: 2, explanation: "Tâm lý là hình ảnh chủ quan của thế giới khách quan [5]." },
-
-// --- CHƯƠNG 2: HOẠT ĐỘNG VÀ GIAO TIẾP ---
-    { chapter: 2, level: "VD", question: "Phản tư nghề nghiệp (tự suy ngẫm về kinh nghiệm, kiến thức để phát triển chuyên môn) thuộc về quá trình nào trong hoạt động?", options: ["Quá trình chủ thể hóa (nhập tâm)", "Quá trình khách thể hóa", "Quá trình xuất tâm", "Quá trình xã hội hóa"], answer: 0, explanation: "Chuyển tri thức/kinh nghiệm từ bên ngoài vào bản thân để phát triển tâm lý là quá trình chủ thể hóa (nhập tâm) [6]." },
-    { chapter: 2, level: "VD", question: "Bức tranh 'Tiếng Thét' của Edvard Munch thể hiện nỗi sợ hãi và cô đơn tột cùng của con người trước thời đại. Đây là quá trình:", options: ["Chủ thể hóa", "Khách thể hóa (Xuất tâm)", "Trừu tượng hóa", "Xã hội hóa"], answer: 1, explanation: "Họa sĩ chuyển tâm trạng/tư tưởng của mình vào tác phẩm (sản phẩm hoạt động) là quá trình khách thể hóa [7, 8]." },
-    { chapter: 2, level: "TH", question: "Câu danh ngôn 'Việc không biết rõ – đừng nói. Chuyện chưa xảy ra – đừng nói bừa' thể hiện chức năng nào của giao tiếp?", options: ["Chức năng thông tin", "Chức năng cảm xúc", "Chức năng tổ chức phối hợp", "Chức năng điều khiển"], answer: 0, explanation: "Liên quan đến việc trao đổi và xử lý thông tin chính xác trong giao tiếp [9]." },
-    { chapter: 2, level: "NB", question: "Khi nhu cầu gặp gỡ đối tượng có khả năng thỏa mãn nó, nhu cầu sẽ trở thành:", options: ["Mục đích", "Động cơ", "Hành động", "Phương tiện"], answer: 1, explanation: "Động cơ là nhu cầu đã gặp đối tượng, thúc đẩy con người hoạt động [10]." },
-    { chapter: 2, level: "TH", question: "Hoạt động và Giao tiếp có vai trò gì đối với tâm lý?", options: ["Là sản phẩm phụ", "Là động lực và là nơi nảy sinh tâm lý", "Không liên quan", "Chỉ là phương tiện giải trí"], answer: 1, explanation: "Hoạt động và giao tiếp vừa là động lực hình thành, vừa là nơi tâm lý được bộc lộ (sản phẩm) [11]." },
-
-// --- CHƯƠNG 3: TÂM LÝ, Ý THỨC ---
-    { chapter: 3, level: "VD", question: "Khánh Kiệt từ một người bừa bộn, khi ở KTX đã phải thay đổi để gọn gàng hơn vì sợ ảnh hưởng thi đua của phòng. Sự thay đổi này biểu hiện của:", options: ["Tự ý thức", "Ý thức cá nhân", "Ý thức nhóm/tập thể", "Vô thức"], answer: 2, explanation: "Hành động vì lợi ích và danh dự chung của nhóm/tập thể là biểu hiện của ý thức nhóm [12, 13]." },
-    { chapter: 3, level: "VD", question: "U23 Việt Nam quyết tâm thi đấu vì màu cờ sắc áo tại Thường Châu. Đây là biểu hiện của:", options: ["Tự ý thức", "Ý thức nhóm/tập thể", "Vô thức", "Tiềm thức"], answer: 1, explanation: "Hành động đại diện cho danh dự của cộng đồng/quốc gia là ý thức tập thể [13]." },
-    { chapter: 3, level: "NB", question: "Nam biết quay bài là sai nhưng vẫn làm. Xét cấu trúc ý thức, Nam thiếu mặt nào?", options: ["Mặt nhận thức", "Mặt thái độ", "Mặt năng động (hành động)", "Mặt tình cảm"], answer: 2, explanation: "Biết (nhận thức) nhưng không làm đúng (hành động/năng động) tức là thiếu mặt năng động của ý thức [14, 15]." },
-    { chapter: 3, level: "NB", question: "Ý thức được mình là sinh viên sư phạm, Thành luôn ăn mặc lịch sự và cư xử mô phạm. Điều này thể hiện mặt nào của ý thức?", options: ["Mặt nhận thức", "Mặt thái độ", "Mặt năng động (hành động)", "Mặt vô thức"], answer: 2, explanation: "Thể hiện ra bên ngoài bằng hành vi, cử chỉ phù hợp với nhận thức là mặt năng động [15]." },
-    { chapter: 3, level: "TH", question: "Mặc dù còn 1 tháng nữa mới Tết nhưng sinh viên đã uể oải, tâm trí để ở quê nhà. Đây là biểu hiện của:", options: ["Tính trì hoãn", "Hiện tượng tâm thế (vô thức/tiền thức)", "Tự ý thức", "Nhu cầu"], answer: 1, explanation: "Tâm thế là sự chuẩn bị tâm lý, khuynh hướng sẵn sàng đón nhận cái gì đó (Tết), nằm ở ranh giới vô thức/ý thức [16]." },
-
-// --- CHƯƠNG 4: NHẬN THỨC (CẢM GIÁC, TRI GIÁC, TRÍ NHỚ, TƯ DUY, TƯỞNG TƯỢNG, CHÚ Ý) ---
-
-    // CẢM GIÁC
-    { chapter: 4, level: "VD", question: "Người nếm rượu vang (Sommelier) sau 3 năm luyện tập có thể phân biệt hàng nghìn vị rượu. Đây là vận dụng quy luật:", options: ["Thích ứng", "Ngưỡng cảm giác (làm giảm ngưỡng sai biệt)", "Tác động qua lại", "Cảm ứng"], answer: 1, explanation: "Rèn luyện để hạ thấp ngưỡng sai biệt, làm tăng độ nhạy cảm của cảm giác [17, 18]." },
-    { chapter: 4, level: "VD", question: "Câu 'Điếc không sợ súng' phản ánh đặc điểm nào bị thiếu hụt?", options: ["Tính nhận thức của tình cảm/cảm giác", "Tính xã hội", "Tính ổn định", "Tính đối cực"], answer: 0, explanation: "Không nhận thức được nguy hiểm (do không nghe thấy/không biết) nên không nảy sinh cảm xúc sợ hãi [19]." },
-    { chapter: 4, level: "VD", question: "Chè khi lạnh ăn có vẻ ngọt hơn lúc nóng. Đây là quy luật:", options: ["Ngưỡng cảm giác", "Tác động qua lại giữa các cảm giác (Tương phản)", "Thích ứng", "Tổng giác"], answer: 1, explanation: "Nhiệt độ (xúc giác) ảnh hưởng đến vị giác (ngọt). Đây là tác động qua lại/tương phản [20, 21]." },
-    { chapter: 4, level: "NB", question: "Ánh sáng con người nhìn thấy dao động từ 380nm đến 780nm. Đây là:", options: ["Ngưỡng sai biệt", "Vùng cảm giác (giới hạn bởi 2 ngưỡng tuyệt đối)", "Sự thích ứng", "Ảo ảnh"], answer: 1, explanation: "Đây là giới hạn giữa ngưỡng tuyệt đối dưới và trên mà mắt người cảm nhận được [22]." },
-
-    // TRI GIÁC
-    { chapter: 4, level: "VD", question: "Sinh viên chỉ nhận ra vật thể lạ khi gọi tên và xếp nó vào nhóm 'địa y'. Đây là quy luật:", options: ["Tính ổn định", "Tính ảo ảnh", "Tính có ý nghĩa", "Tính đối tượng"], answer: 2, explanation: "Gắn đối tượng với tên gọi và xếp loại nó vào một nhóm sự vật là tính có ý nghĩa [23, 24]." },
-    { chapter: 4, level: "VD", question: "Cựu chiến binh Mỹ ám ảnh về 'tảng đá biết đi, bụi cây biết nói' (ngụy trang). Đây là quy luật:", options: ["Tính đối tượng", "Tính có ý nghĩa", "Tính lựa chọn", "Tính tổng giác"], answer: 2, explanation: "Ngụy trang làm mất sự khác biệt giữa đối tượng và bối cảnh, đánh lừa tính lựa chọn của tri giác [25, 26]." },
-    { chapter: 4, level: "VD", question: "Nhìn bóng cây in trên tường tưởng là người lạ. Đây là:", options: ["Tính đối tượng", "Ảo ảnh tri giác", "Tính lựa chọn", "Tính tổng giác"], answer: 1, explanation: "Phản ánh sai lệch sự vật hiện tượng một cách khách quan (nhìn gà hóa cuốc) [27]." },
-    { chapter: 4, level: "VD", question: "Đoạn thẳng A và B bằng nhau nhưng mũi tên hướng ra/vào khác nhau khiến A trông dài hơn B. Đây là:", options: ["Tính ổn định", "Tính lựa chọn", "Ảo ảnh (Müller-Lyer)", "Tính tổng giác"], answer: 2, explanation: "Sự sai lệch trong tri giác độ dài do các chi tiết phụ trợ [26]." },
-    { chapter: 4, level: "VD", question: "Cảnh hoàng hôn nhìn không còn đẹp như hồi mới yêu do 'vết đau tình'. Quy luật nào chi phối?", options: ["Tính ổn định", "Tính đối tượng", "Tổng giác", "Tính ý nghĩa"], answer: 2, explanation: "Tri giác bị chi phối bởi tâm trạng, kinh nghiệm chủ quan của chủ thể (Tổng giác) [28]." },
-
-    // TRÍ NHỚ
-    { chapter: 4, level: "VD", question: "Học từ vựng bằng cách tạo ra câu chuyện hài hước, sinh động là phương pháp:", options: ["Ghi nhớ máy móc", "Ghi nhớ ý nghĩa", "Ghi nhớ không chủ định", "Quên"], answer: 1, explanation: "Tạo mối liên hệ ý nghĩa, logic để ghi nhớ tốt hơn [29]." },
-    { chapter: 4, level: "NB", question: "Chu trình cốt lõi của trí nhớ gồm:", options: ["Cảm giác - Tri giác - Tư duy", "Ghi nhớ - Giữ gìn - Tái hiện", "Học - Luyện - Thi", "Mã hóa - Củng cố - Phản xạ"], answer: 1, explanation: "Ba quá trình cơ bản: Ghi nhớ (nạp), Giữ gìn (lưu), Tái hiện (xuất) [30, 31]." },
-    { chapter: 4, level: "NB", question: "Dấu hiệu bản chất phân biệt ghi nhớ có chủ định và không chủ định:", options: ["Cường độ kích thích", "Có mục đích đặt trước và nỗ lực ý chí", "Độ dài tài liệu", "Sự hấp dẫn"], answer: 1, explanation: "Ghi nhớ có chủ định đòi hỏi mục đích xác định từ trước và sự nỗ lực [14, 32]." },
-    { chapter: 4, level: "VD", question: "Sinh viên rời thư viện vẫn kể lại được nội dung vừa đọc dù không mở sách. Quá trình này là:", options: ["Nhận lại", "Nhớ lại", "Ghi nhớ", "Quên"], answer: 1, explanation: "Tái hiện hình ảnh khi sự vật không còn trực tiếp tác động là Nhớ lại [33]." },
-
-    // TƯ DUY
-    { chapter: 4, level: "VD", question: "Phân tích nhân vật cô Hiền (tách ra các khía cạnh ăn, ở, mặc...) là kết quả của thao tác:", options: ["Phân tích", "Tổng hợp", "So sánh", "Trừu tượng hóa"], answer: 0, explanation: "Tách cái toàn thể thành các bộ phận/thuộc tính để xem xét là Phân tích [34]." },
-    { chapter: 4, level: "VD", question: "Từ quan sát các hình chữ nhật khác nhau, HS rút ra kết luận 'Mọi HCN đều có 4 góc vuông'. Đây là:", options: ["Cụ thể hóa", "Trừu tượng hóa", "Khái quát hóa", "Phân tích"], answer: 2, explanation: "Tìm ra thuộc tính chung cho một nhóm đối tượng là Khái quát hóa [35]." },
-    { chapter: 4, level: "VD", question: "Dùng tính chất vật lý của thủy ngân (giãn nở) để chế tạo nhiệt kế. Đây là:", options: ["Phân tích", "Tổng hợp", "Cụ thể hóa", "Trừu tượng hóa"], answer: 2, explanation: "Vận dụng tri thức chung (nguyên lý) vào trường hợp riêng (làm nhiệt kế) là Cụ thể hóa [36]." },
-    { chapter: 4, level: "VD", question: "So sánh Cách mạng T8 và Cách mạng T10 Nga để tìm điểm chung/riêng. Đây là thao tác:", options: ["Phân tích", "Tổng hợp", "So sánh", "Khái quát hóa"], answer: 2, explanation: "Đối chiếu các sự vật để tìm ra sự giống và khác nhau [37]." },
-    { chapter: 4, level: "TH", question: "Tư duy khác tưởng tượng chủ yếu ở chỗ nào?", options: ["Tính bất định của hoàn cảnh và sự chặt chẽ trong giải quyết vấn đề", "Liên quan nhận thức cảm tính", "Tạo ra cái mới", "Có tính khái quát"], answer: 0, explanation: "Tư duy giải quyết vấn đề với dữ kiện rõ ràng (ít bất định), logic chặt chẽ; Tưởng tượng giải quyết khi thông tin thiếu (bất định cao) [38]." },
-
-    // TƯỞNG TƯỢNG
-    { chapter: 4, level: "VD", question: "Quan sát ong xây tổ lục giác để thiết kế kho chứa hàng tiết kiệm diện tích. Đây là cách sáng tạo:", options: ["Nhấn mạnh", "Liên hợp", "Điển hình hóa", "Loại suy (mô phỏng)"], answer: 3, explanation: "Mô phỏng lại cơ chế/hình dáng của sự vật có thực (tổ ong) để tạo vật mới (kho) là Loại suy [35, 39]." },
-    { chapter: 4, level: "VD", question: "Họa sĩ vẽ mũ quan lại cực to che lấp mặt để ám chỉ sự phô trương quyền lực. Đây là:", options: ["Liên hợp", "Nhấn mạnh", "Loại suy", "Điển hình hóa"], answer: 1, explanation: "Tô đậm, phóng đại một đặc điểm (cái mũ) để làm nổi bật ý tưởng là Nhấn mạnh [40, 41]." },
-    { chapter: 4, level: "VD", question: "Vẽ đường cong hình chữ S để mô tả vẻ đẹp người phụ nữ/đất nước. Đây là:", options: ["Thay đổi kích thước", "Nhấn mạnh", "Điển hình hóa", "Sơ đồ hóa (Biểu tượng hóa)"], answer: 3, explanation: "Dùng hình ảnh mang tính biểu tượng/sơ đồ để đại diện [24]." },
-    { chapter: 4, level: "VD", question: "Hình ảnh Tiên nữ có chân rắn (Nuwa) hoặc Nhân sư. Đây là cách sáng tạo:", options: ["Chắp ghép", "Liên hợp", "Điển hình hóa", "Loại suy"], answer: 0, explanation: "Ghép các bộ phận của nhiều sinh vật lại với nhau [42]." },
-
-    // CHÚ Ý
-    { chapter: 4, level: "TH", question: "'Sức tập trung chú ý' được hiểu là:", options: ["Duy trì chú ý rất lâu", "Dồn năng lượng tâm lý vào phạm vi hẹp, đúng trọng tâm", "Chia đều chú ý", "Chuyển hướng nhanh"], answer: 1, explanation: "Tập trung là khả năng dồn năng lượng vào một phạm vi hẹp để phản ánh tốt nhất [43]." },
-    { chapter: 4, level: "VD", question: "Cố vấn học tập vừa trả lời email, vừa kiểm tra lịch hẹn. Đây là:", options: ["Bền vững", "Phân phối chú ý", "Di chuyển", "Tập trung"], answer: 1, explanation: "Thực hiện cùng lúc nhiều hoạt động là Phân phối chú ý [44, 45]." },
-    { chapter: 4, level: "VD", question: "Lúc đầu nghe giảng phải cố gắng (chú ý có chủ định), sau đó bị cuốn hút quên cả giờ về. Đây là:", options: ["Chú ý không chủ định", "Chú ý sau chủ định", "Phân tán", "Dao động"], answer: 1, explanation: "Loại chú ý vốn có mục đích nhưng không còn đòi hỏi nỗ lực ý chí do sự hấp dẫn của đối tượng [46]." },
-
-// --- CHƯƠNG 5: TÌNH CẢM ---
-    { chapter: 5, level: "VD", question: "Càng yêu mến Bạch Tuyết, càng căm ghét mụ phù thủy. Đây là quy luật:", options: ["Cảm ứng (Tương phản)", "Pha trộn", "Hình thành tình cảm", "Thích ứng"], answer: 0, explanation: "Cảm xúc này (yêu) làm tăng cường độ cảm xúc đối lập (ghét) [47]." },
-    { chapter: 5, level: "VD", question: "Để tưởng niệm nạn nhân Covid-19, cộng đồng mạng cùng nhau đổi avatar và cầu nguyện. Đây là quy luật:", options: ["Lây lan", "Di chuyển", "Pha trộn", "Tương phản"], answer: 0, explanation: "Sự lan truyền cảm xúc trong cộng đồng tạo thành bầu không khí tâm lý chung [48]." },
-    { chapter: 5, level: "VD", question: "Bạn Minh Hiếu cõng bạn Tất Minh đi học suốt 8 năm. Tình bạn này thể hiện quy luật:", options: ["Pha trộn", "Di chuyển", "Tương phản", "Hình thành tình cảm"], answer: 3, explanation: "Tình cảm (tình bạn) được hình thành từ quá trình tích lũy các xúc cảm và hành động cụ thể lâu dài [49]." },
-    { chapter: 5, level: "VD", question: "Câu 'Năng mưa thì giếng năng đầy / Anh năng đi lại mẹ thầy năng thương' nói về quy luật:", options: ["Thích ứng", "Di chuyển", "Lây lan", "Hình thành tình cảm"], answer: 3, explanation: "Tình cảm được hình thành qua quá trình tổng hợp hóa, động hình hóa các xúc cảm thường xuyên (năng đi lại) [50]." },
-    { chapter: 5, level: "VD", question: "Trong 'Vợ chồng A Phủ', Mị ở lâu trong cái khổ nên quen khổ, lùi lũi như con rùa. Đây là quy luật:", options: ["Lây lan", "Thích ứng", "Di chuyển", "Pha trộn"], answer: 1, explanation: "Cảm xúc lặp lại nhiều lần gây chai sạn, thích nghi (quen khổ) [48]." },
-    { chapter: 5, level: "NB", question: "Tình cảm khác xúc cảm ở chỗ:", options: ["Tình cảm có trước", "Tình cảm có tính ổn định, là thuộc tính", "Tình cảm có ở động vật", "Tình cảm là quá trình"], answer: 1, explanation: "Tình cảm là thuộc tính tâm lý ổn định, bền vững; Xúc cảm là quá trình nhất thời [19]." },
-    { chapter: 5, level: "VD", question: "Khi MC công bố giải thưởng, ca sĩ khóc nức nở không kìm chế được. Đây là:", options: ["Cảm xúc", "Tâm trạng", "Xúc động", "Tình cảm"], answer: 2, explanation: "Xúc động là trạng thái cảm xúc mạnh, diễn ra ngắn, thường không làm chủ được bản thân [51]." },
-
-// --- CHƯƠNG 6: Ý CHÍ ---
-    { chapter: 6, level: "VD", question: "Cầu thủ bóng đá dẫn bóng thuần thục không cần nhìn chân. Đây là:", options: ["Tính kiên trì", "Hành động tự động hóa (Kỹ xảo)", "Thiên tài", "Ý thức"], answer: 1, explanation: "Hành động được luyện tập đến mức không cần sự kiểm soát trực tiếp của ý thức là Kỹ xảo [52]." },
-    { chapter: 6, level: "NB", question: "Thói quen khác kỹ xảo ở điểm nào?", options: ["Mang tính kỹ thuật", "Được đánh giá về mặt đạo đức/nhu cầu", "Ít bền vững", "Cần luyện tập có hệ thống"], answer: 1, explanation: "Thói quen mang tính nhu cầu, nếp sống và được đánh giá về mặt đạo đức; Kỹ xảo mang tính kỹ thuật [53]." },
-    { chapter: 6, level: "VD", question: "Để giáo dục hiệu quả, cần thường xuyên thay đổi phương pháp dạy học. Biện pháp này dựa trên quy luật nào của kỹ xảo?", options: ["Tiến bộ không đều", "Đỉnh của phương pháp luyện tập", "Tác động qua lại", "Dập tắt"], answer: 1, explanation: "Mỗi phương pháp có giới hạn (đỉnh), muốn tiến bộ hơn phải thay đổi phương pháp [54]." },
-    { chapter: 6, level: "VD", question: "Muốn quản lý cảm xúc tức giận, cần rèn luyện phẩm chất ý chí nào?", options: ["Tính tự chủ", "Tính quyết đoán", "Tính độc lập", "Tính kiên trì"], answer: 0, explanation: "Tính tự chủ là khả năng làm chủ bản thân, kìm nén cảm xúc tiêu cực [55]." },
-    { chapter: 6, level: "VD", question: "Trong truyện ngụ ngôn 'Đẽo cày giữa đường', anh nông dân thất bại vì thiếu phẩm chất nào?", options: ["Quyết đoán", "Tự chủ", "Độc lập", "Mục đích"], answer: 2, explanation: "Bị người khác chi phối, không giữ vững quan điểm riêng là thiếu tính độc lập [56]." },
-
-// --- CHƯƠNG 7: NHÂN CÁCH ---
-    { chapter: 7, level: "VD", question: "Câu 'Gần bùn mà chẳng hôi tanh mùi bùn' nhấn mạnh vai trò của yếu tố nào?", options: ["Môi trường", "Giáo dục", "Tính tích cực hoạt động của cá nhân", "Di truyền"], answer: 2, explanation: "Dù môi trường xấu (bùn) nhưng cá nhân tích cực (sen) vẫn giữ phẩm chất tốt. Nhấn mạnh vai trò quyết định của tính tích cực cá nhân [57]." },
-    { chapter: 7, level: "VD", question: "Tham vọng trở thành tỷ phú bất chấp thủ đoạn của B là biểu hiện lệch lạc của mặt nào?", options: ["Khí chất", "Năng lực", "Xu hướng (Lý tưởng)", "Tính cách"], answer: 2, explanation: "Lý tưởng/Xu hướng định hướng mục tiêu cuộc đời. Mục tiêu sai lệch là lệch lạc về xu hướng [58]." },
-    { chapter: 7, level: "TH", question: "Một giáo viên được nhận xét là 'chu đáo, kiên trì, dễ cảm thông'. Đây là đặc điểm của:", options: ["Khí chất", "Năng lực", "Tính cách", "Xu hướng"], answer: 2, explanation: "Tính cách là hệ thống thái độ và hành vi ổn định (chu đáo, kiên trì...) [59, 60]." },
-    { chapter: 7, level: "VD", question: "Sinh viên sư phạm rèn luyện phương pháp dạy học là phát triển mặt nào trong nhân cách?", options: ["Tính cách", "Xu hướng", "Năng lực", "Khí chất"], answer: 2, explanation: "Phương pháp dạy học thuộc về Năng lực sư phạm (Năng lực nghề nghiệp) [57]." },
-    { chapter: 7, level: "NB", question: "Theo quan niệm truyền thống, cấu trúc nhân cách gồm:", options: ["Đức và Tài", "Id và Ego", "Hướng nội và Hướng ngoại", "Nhận thức và Tình cảm"], answer: 0, explanation: "Người Việt Nam thường nhìn nhận nhân cách qua hai mặt thống nhất: Đức (Phẩm chất) và Tài (Năng lực) [61]." },
-    { chapter: 7, level: "TH", question: "Đặc điểm nào cho phép dự đoán hành vi của một người trong tình huống cụ thể?", options: ["Tính ổn định", "Tính thống nhất", "Tính tích cực", "Tính giao lưu"], answer: 0, explanation: "Nhờ tính ổn định của nhân cách mà ta có thể dự đoán cách ứng xử của một người [62]." },
-    { chapter: 7, level: "VD", question: "Khổng Minh (Gia Cát Lượng) thích ứng nhanh, trí tuệ mềm dẻo. Ông thuộc khí chất:", options: ["Linh hoạt", "Bình thản", "Ưu tư", "Nóng nảy"], answer: 0, explanation: "Đặc điểm nhanh nhẹn, linh hoạt, chủ động là khí chất Linh hoạt [63]." },
-
-// --- CÁC CÂU HỎI TỔNG HỢP KHÁC ---
-    { chapter: 1, level: "VD", question: "Khi nghiên cứu tâm lý học sinh, cần xem xét bối cảnh gia đình và biến cố quá khứ. Đây là vận dụng:", options: ["Tính chủ thể", "Tính lịch sử - xã hội", "Chức năng não", "Phản xạ"], answer: 1, explanation: "Tâm lý mang dấu ấn của lịch sử cá nhân và điều kiện xã hội [64]." },
-    { chapter: 4, level: "VD", question: "Giáo viên dùng phấn màu đóng khung ý chính. Đây là vận dụng quy luật:", options: ["Tính đối tượng", "Tính lựa chọn", "Tính ổn định", "Tổng giác"], answer: 1, explanation: "Làm nổi bật đối tượng khỏi bối cảnh để thu hút tri giác [65]." },
-    { chapter: 2, level: "NB", question: "Giao tiếp xác lập và vận hành mối quan hệ nào?", options: ["Người - Tự nhiên", "Người - Người", "Người - Đồ vật", "Người - Máy móc"], answer: 1, explanation: "Giao tiếp là sự tiếp xúc tâm lý giữa người với người [66]." },
-    { chapter: 5, level: "TH", question: "Tình cảm trí tuệ biểu hiện ở:", options: ["Lòng yêu nước", "Sự tò mò, ham hiểu biết", "Tình yêu đôi lứa", "Yêu lao động"], answer: 1, explanation: "Tình cảm trí tuệ liên quan đến nhu cầu nhận thức, chân lý [67]." },
-    { chapter: 3, level: "VD", question: "Để giáo dục học sinh xã rác, giáo viên cần tác động vào:", options: ["Chỉ nhận thức", "Chỉ hành vi", "Đồng bộ Nhận thức - Thái độ - Hành vi", "Chỉ tình cảm"], answer: 2, explanation: "Cấu trúc ý thức gồm 3 mặt thống nhất, cần tác động cả 3 để hiệu quả bền vững [68, 69]." },
-    { chapter: 4, level: "NB", question: "Loại trí nhớ giữ vai trò chính trong lĩnh hội tri thức ở người:", options: ["Trí nhớ vận động", "Trí nhớ hình ảnh", "Trí nhớ từ ngữ - logic", "Trí nhớ xúc cảm"], answer: 2, explanation: "Trí nhớ từ ngữ - logic đặc trưng cho người, gắn với tư duy trừu tượng [70]." },
-    { chapter: 6, level: "TH", question: "Quyết định hành động diễn ra ở giai đoạn nào của hành động ý chí?", options: ["Chuẩn bị", "Thực hiện", "Đánh giá", "Sau khi kết thúc"], answer: 0, explanation: "Quyết định là khâu cuối cùng của giai đoạn chuẩn bị [71]." },
-    { chapter: 7, level: "TH", question: "Câu 'Sống mỗi người một nết' nói về đặc điểm nào của tính cách?", options: ["Tính ổn định", "Tính độc đáo", "Tính toàn vẹn", "Tính xã hội"], answer: 1, explanation: "Tính độc đáo thể hiện nét riêng biệt không ai giống ai [72]." },
-    { chapter: 1, level: "TH", question: "Chức năng điều chỉnh của tâm lý giúp con người:", options: ["Phản ánh thế giới", "Thích nghi thụ động", "Sửa đổi hành vi cho phù hợp mục tiêu", "Giao tiếp tốt hơn"], answer: 2, explanation: "Tâm lý giúp điều chỉnh hành động để đạt mục đích đề ra [73]." },
-    { chapter: 3, level: "NB", question: "Yếu tố giữ vai trò chủ đạo trong sự hình thành ý thức trên phương diện loài:", options: ["Lao động và Ngôn ngữ", "Bộ não phát triển", "Đôi bàn tay", "Dáng đứng thẳng"], answer: 0, explanation: "Lao động và ngôn ngữ là hai yếu tố quyết định sự nảy sinh ý thức [74]." },
-    { chapter: 4, level: "VD", question: "Nhìn đám mây thấy hình con rồng. Đây là hiện tượng:", options: ["Tổng giác", "Ảo ảnh", "Tính ổn định", "Tính đối tượng"], answer: 0, explanation: "Tri giác bị chi phối bởi trí tưởng tượng và kinh nghiệm của chủ thể (Tổng giác) [75]." },
-    { chapter: 5, level: "VD", question: "Mẹ mắng con vì quá lo lắng. Đây là quy luật:", options: ["Pha trộn", "Di chuyển", "Tương phản", "Thích ứng"], answer: 0, explanation: "Sự kết hợp giữa tình thương và nỗi lo âu tạo nên sự tức giận (pha trộn) [76]." },
-    { chapter: 2, level: "TH", question: "Đặc điểm nào phân biệt hoạt động của người với con vật?", options: ["Tính đối tượng", "Tính mục đích và tính gián tiếp", "Tính bản năng", "Tính thích nghi"], answer: 1, explanation: "Con người hoạt động có mục đích tự giác và dùng công cụ (gián tiếp) [77]." },
-    { chapter: 7, level: "NB", question: "Xu hướng của nhân cách bao gồm:", options: ["Nhu cầu, hứng thú, lý tưởng, thế giới quan, niềm tin", "Tri thức, kỹ năng", "Tính cách, khí chất", "Cảm xúc, tình cảm"], answer: 0, explanation: "Xu hướng là hệ thống thúc đẩy, gồm các thành phần trên [78]." },
-    { chapter: 4, level: "TH", question: "Ghi nhớ không chủ định phụ thuộc chủ yếu vào:", options: ["Mục đích", "Nỗ lực ý chí", "Đặc điểm vật kích thích (mới lạ, hấp dẫn) và hứng thú", "Kế hoạch"], answer: 2, explanation: "Ghi nhớ tự nhiên do sự tác động mạnh/hấp dẫn của đối tượng [79]." },
-    { chapter: 3, level: "NB", question: "Cấp độ ý thức hướng vào nhận thức và điều chỉnh chính mình là:", options: ["Ý thức", "Tự ý thức", "Ý thức nhóm", "Vô thức"], answer: 1, explanation: "Tự ý thức là ý thức về bản thân [80]." },
-    { chapter: 1, level: "NB", question: "Tâm lý là chức năng của:", options: ["Trái tim", "Bộ não", "Giác quan", "Thần kinh ngoại biên"], answer: 1, explanation: "Tâm lý là chức năng của não bộ hoạt động bình thường [81]." },
-    { chapter: 4, level: "VD", question: "Tài xế vừa lái xe, vừa quan sát, vừa nghe nhạc. Đây là:", options: ["Phân phối chú ý", "Di chuyển chú ý", "Sức tập trung", "Bền vững"], answer: 0, explanation: "Khả năng cùng lúc chú ý đến nhiều đối tượng/hoạt động [82]." },
-    { chapter: 7, level: "VD", question: "Người nóng nảy, thẳng thắn, nhiệt tình nhưng dễ cáu gắt thuộc khí chất:", options: ["Nóng nảy", "Linh hoạt", "Bình thản", "Ưu tư"], answer: 0, explanation: "Đặc điểm của khí chất nóng nảy (Mạnh, không cân bằng) [83]." },
-    { chapter: 2, level: "VD", question: "Sinh viên đọc giáo trình để có kiến thức đi thi. Đây là quá trình:", options: ["Xuất tâm", "Nhập tâm (Chủ thể hóa)", "Khách thể hóa", "Sáng tạo"], answer: 1, explanation: "Chuyển tri thức từ sách (khách thể) vào đầu (chủ thể) [84]." },
-    { chapter: 5, level: "VD", question: "Đang vui vì được điểm cao, nghe tin bạn bị bệnh thấy bớt vui. Đây là quy luật:", options: ["Cảm ứng (Tương phản)", "Lây lan", "Di chuyển", "Thích ứng"], answer: 0, explanation: "Cảm xúc này làm suy yếu cảm xúc kia xảy ra đồng thời [85]." },
-    { chapter: 4, level: "TH", question: "Tư duy phản ánh cái gì?", options: ["Thuộc tính bề ngoài", "Cái đã qua", "Bản chất, mối liên hệ có tính quy luật", "Hình ảnh trực quan"], answer: 2, explanation: "Tư duy phản ánh cái bản chất, quy luật, cái chưa biết [86]." },
-    { chapter: 6, level: "NB", question: "Đơn vị cấu thành của hành động ý chí là:", options: ["Thao tác", "Hành động", "Hoạt động", "Cử động"], answer: 1, explanation: "Hành động ý chí thực chất là một hành động có ý thức hướng đến mục đích [87]." },
-    { chapter: 4, level: "NB", question: "Hình thức tri giác cao nhất của con người là:", options: ["Sờ mó", "Nghe", "Quan sát", "Ngửi"], answer: 2, explanation: "Quan sát là tri giác có chủ đích, có kế hoạch, tích cực nhất [88]." },
-    { chapter: 7, level: "TH", question: "Yếu tố giữ vai trò quyết định trực tiếp sự hình thành nhân cách là:", options: ["Di truyền", "Môi trường", "Giáo dục", "Hoạt động và Giao tiếp"], answer: 3, explanation: "Thông qua hoạt động và giao tiếp, nhân cách trực tiếp được hình thành [89]." },
-    { chapter: 3, level: "VD", question: "Giáo viên khen ngợi học sinh trước lớp để em đó tự hào và phấn đấu hơn. Đây là tác động vào:", options: ["Vô thức", "Tự ý thức", "Tiềm thức", "Bản năng"], answer: 1, explanation: "Kích thích lòng tự trọng, tự đánh giá của cá nhân (Tự ý thức) [90]." },
-    { chapter: 4, level: "VD", question: "Học sinh dùng sơ đồ tư duy để hệ thống hóa kiến thức. Đây là cách ghi nhớ:", options: ["Máy móc", "Ý nghĩa", "Không chủ định", "Hình ảnh"], answer: 1, explanation: "Dựa trên sự thông hiểu mối liên hệ logic giữa các phần tri thức [91]." },
-    { chapter: 5, level: "TH", question: "Tình cảm được hình thành từ đâu?", options: ["Từ những xúc cảm đồng loại (Tổng hợp hóa, động hình hóa)", "Từ suy nghĩ", "Từ bẩm sinh", "Từ ý chí"], answer: 0, explanation: "Quy luật hình thành tình cảm: Xúc cảm là cơ sở của tình cảm [92]." },
-    { chapter: 1, level: "VD", question: "Hiện tượng CEO chỉ trích ca sĩ, dư luận chia phe ủng hộ/phản đối. Điều này thể hiện:", options: ["Tính khách quan", "Tính chủ thể", "Tính phổ biến", "Tính thụ động"], answer: 1, explanation: "Cùng một sự kiện nhưng mỗi người có thái độ/đánh giá khác nhau [93]." },
-    { chapter: 4, level: "NB", question: "Sản phẩm của trí nhớ là:", options: ["Khái niệm", "Biểu tượng", "Phán đoán", "Cảm giác"], answer: 1, explanation: "Trí nhớ lưu giữ và tái hiện lại hình ảnh sự vật (Biểu tượng) [94]." },
-
-    // --- BỔ SUNG 100 CÂU HỎI MỚI (PHẦN 3) ---
-
-    // --- CHƯƠNG 1: NHẬP MÔN (Bổ sung Vận dụng & Thông hiểu) ---
-    {
-        chapter: 1, level: "VD",
-        question: "Một nhà quản lý giỏi luôn biết cách động viên nhân viên bằng cả vật chất và tinh thần tùy theo tính cách từng người. Ông ta đã vận dụng nguyên tắc nào?",
-        options: ["Tính khách quan", "Tính phổ biến", "Tính chủ thể", "Tính gián tiếp"],
-        answer: 2,
-        explanation: "Mỗi người có đặc điểm tâm lý riêng (tính chủ thể) nên cần có phương pháp tác động riêng biệt phù hợp [1, 2]."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Phương pháp nghiên cứu nào cho phép chủ động tạo ra các hiện tượng tâm lý cần nghiên cứu?",
-        options: ["Quan sát", "Thực nghiệm", "Đàm thoại", "Điều tra"],
-        answer: 1,
-        explanation: "Thực nghiệm là phương pháp chủ động tác động vào đối tượng trong điều kiện khống chế để gây ra hiện tượng tâm lý cần nghiên cứu."
-    },
-    {
-        chapter: 1, level: "NB",
-        question: "Hiện tượng tâm lý nào sau đây thuộc về 'Quá trình tâm lý' (có mở đầu, diễn biến, kết thúc)?",
-        options: ["Cảm giác", "Tính cách", "Năng lực", "Khí chất"],
-        answer: 0,
-        explanation: "Cảm giác là một quá trình tâm lý diễn ra trong thời gian ngắn. Các phương án còn lại là thuộc tính tâm lý."
-    },
-
-    // --- CHƯƠNG 2: HOẠT ĐỘNG & GIAO TIẾP ---
-    {
-        chapter: 2, level: "VD",
-        question: "Sinh viên sư phạm đi thực tập giảng dạy để rèn luyện kỹ năng. Hoạt động này gọi là gì?",
-        options: ["Hoạt động vui chơi", "Hoạt động lao động", "Hoạt động học tập - nghề nghiệp", "Hoạt động xã hội"],
-        answer: 2,
-        explanation: "Đây là hoạt động hướng tới việc tiếp thu tri thức và kỹ năng nghề nghiệp."
-    },
-    {
-        chapter: 2, level: "TH",
-        question: "Quá trình 'Xuất tâm' (Khách thể hóa) có ý nghĩa gì?",
-        options: ["Làm nghèo vốn tâm lý cá nhân", "Bộc lộ năng lực con người và tạo ra sản phẩm cho xã hội", "Chỉ là sự tiêu hao năng lượng", "Không có ý nghĩa gì"],
-        answer: 1,
-        explanation: "Qua quá trình xuất tâm, con người object hóa năng lực của mình vào sản phẩm, làm cho tâm lý được bộc lộ và lưu giữ [3, 4]."
-    },
-    {
-        chapter: 2, level: "NB",
-        question: "Hai quá trình cơ bản thống nhất trong cấu trúc của hoạt động là:",
-        options: ["Chủ thể hóa và Khách thể hóa", "Nhận thức và Tình cảm", "Lý thuyết và Thực hành", "Vật chất và Ý thức"],
-        answer: 0,
-        explanation: "Hoạt động bao gồm hai quá trình diễn ra đồng thời: Chủ thể hóa (nhập tâm) và Khách thể hóa (xuất tâm)."
-    },
-
-    // --- CHƯƠNG 3: Ý THỨC & VÔ THỨC ---
-    {
-        chapter: 3, level: "VD",
-        question: "Một người lỡ lời nói ra điều bí mật mà mình định giấu kín (lapsus). Theo Phân tâm học, đây là biểu hiện của:",
-        options: ["Ý thức", "Vô thức", "Tự ý thức", "Tiềm thức"],
-        answer: 1,
-        explanation: "Những hành vi lỡ lời, quên tên... thường là biểu hiện của vô thức (những dồn nén bị ức chế) [5]."
-    },
-    {
-        chapter: 3, level: "TH",
-        question: "Cấp độ nào của ý thức giúp con người phân biệt được 'cái tôi' và 'cái không tôi'?",
-        options: ["Ý thức", "Tự ý thức", "Vô thức", "Tiềm thức"],
-        answer: 1,
-        explanation: "Tự ý thức là khả năng tách mình ra khỏi thế giới xung quanh để nhận biết về chính bản thân mình [6, 7]."
-    },
-    {
-        chapter: 3, level: "NB",
-        question: "Giấc mơ là biểu hiện của hiện tượng tâm lý nào?",
-        options: ["Ý thức", "Vô thức", "Tư duy", "Tưởng tượng có chủ định"],
-        answer: 1,
-        explanation: "Giấc mơ là hiện tượng tâm lý diễn ra khi vỏ não bị ức chế (ngủ), thuộc về vô thức."
-    },
-
-    // --- CHƯƠNG 4: NHẬN THỨC (Trọng tâm) ---
-    // *Cảm giác & Tri giác*
-    {
-        chapter: 4, level: "VD",
-        question: "Các nhà thiết kế nội thất thường dùng gương lớn để tạo cảm giác phòng rộng hơn. Đây là ứng dụng của:",
-        options: ["Ảo ảnh tri giác", "Tính ổn định", "Tính lựa chọn", "Ngưỡng cảm giác"],
-        answer: 0,
-        explanation: "Sử dụng ảo ảnh thị giác để đánh lừa cảm nhận về không gian [8]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Khi bị sốt cao, uống nước đường vẫn thấy đắng miệng. Đây là hiện tượng:",
-        options: ["Loạn cảm giác / Chuyển cảm giác", "Thích ứng", "Tương phản", "Ảo ảnh"],
-        answer: 0,
-        explanation: "Rối loạn chức năng phân tích dẫn đến sai lệch về vị giác (loạn cảm giác)."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Quy luật 'Tổng giác' khẳng định điều gì?",
-        options: ["Tri giác phụ thuộc vào vật kích thích", "Tri giác phụ thuộc vào chủ thể (kinh nghiệm, thái độ, hứng thú)", "Tri giác là tổng cộng các cảm giác", "Tri giác luôn đúng"],
-        answer: 1,
-        explanation: "Hình ảnh tri giác không chỉ phụ thuộc vật kích thích mà còn phụ thuộc vào đặc điểm tâm lý của chủ thể (Tổng giác) [9]."
-    },
-
-    // *Tư duy & Tưởng tượng*
-    {
-        chapter: 4, level: "VD",
-        question: "Bác sĩ chẩn đoán bệnh dựa trên các triệu chứng lâm sàng và kết quả xét nghiệm. Đây là quá trình:",
-        options: ["Cảm giác", "Trí nhớ", "Tư duy", "Tưởng tượng"],
-        answer: 2,
-        explanation: "Bác sĩ phải phân tích, tổng hợp dữ liệu để tìm ra bản chất (bệnh lý) - đây là Tư duy."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Hình ảnh 'Nhân sư' (đầu người, mình sư tử) là sản phẩm của cách sáng tạo nào?",
-        options: ["Liên hợp", "Chắp ghép", "Nhấn mạnh", "Loại suy"],
-        answer: 1,
-        explanation: "Ghép các bộ phận của các sự vật khác nhau (không thay đổi kích thước/tính chất) là Chắp ghép [10]."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Học sinh giải toán bằng cách áp dụng công thức đã học vào bài tập cụ thể. Đây là thao tác:",
-        options: ["Trừu tượng hóa", "Khái quát hóa", "Cụ thể hóa", "Phân tích"],
-        answer: 2,
-        explanation: "Vận dụng cái chung (công thức) vào cái riêng (bài tập) là Cụ thể hóa."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Ngôn ngữ (Tiếng nói/Chữ viết) có vai trò gì đối với Tư duy?",
-        options: ["Là phương tiện, là cái vỏ vật chất của tư duy", "Không liên quan", "Cản trở tư duy", "Là kết quả duy nhất"],
-        answer: 0,
-        explanation: "Tư duy và ngôn ngữ thống nhất chặt chẽ; ngôn ngữ là phương tiện để tư duy biểu đạt và hình thành."
-    },
-
-    // *Trí nhớ & Chú ý*
-    {
-        chapter: 4, level: "VD",
-        question: "Sinh viên dùng bút dạ quang tô đậm các ý chính trong giáo trình. Hành động này tác động vào quy luật nào của Trí nhớ/Tri giác?",
-        options: ["Tính lựa chọn của Tri giác", "Ghi nhớ máy móc", "Quên", "Ảo ảnh"],
-        answer: 0,
-        explanation: "Làm nổi bật đối tượng để tri giác và ghi nhớ tốt hơn [11]."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Trí nhớ ngắn hạn (làm việc) thường duy trì thông tin trong bao lâu?",
-        options: ["Dưới 1 giây", "Khoảng 15-30 giây (nếu không nhắc lại)", "Vĩnh viễn", "Hàng giờ"],
-        answer: 1,
-        explanation: "Trí nhớ ngắn hạn lưu giữ thông tin trong thời gian ngắn để xử lý tức thời."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Trong đám đông ồn ào, bạn vẫn nghe được tiếng ai đó gọi tên mình. Đây là đặc điểm của:",
-        options: ["Tính lựa chọn của chú ý", "Sự phân tán chú ý", "Ảo giác thính giác", "Ngưỡng sai biệt"],
-        answer: 0,
-        explanation: "Khả năng lọc nhiễu và tập trung vào kích thích có ý nghĩa với bản thân (tên mình)."
-    },
-
-    // --- CHƯƠNG 5: TÌNH CẢM ---
-    {
-        chapter: 5, level: "VD",
-        question: "Hiện tượng 'Yêu nên tốt, ghét nên xấu' là biểu hiện của quy luật nào?",
-        options: ["Lây lan", "Di chuyển", "Tương phản", "Thích ứng"],
-        answer: 1,
-        explanation: "Tình cảm chi phối cái nhìn chủ quan, chuyển cảm xúc từ người sang việc/vật liên quan (Di chuyển) [12]."
-    },
-    {
-        chapter: 5, level: "TH",
-        question: "Mức độ cao nhất của đời sống tình cảm là gì?",
-        options: ["Xúc cảm", "Tâm trạng", "Thái độ", "Đam mê (Say mê)"],
-        answer: 3,
-        explanation: "Say mê là tình cảm mạnh, sâu sắc, bền vững và chi phối mọi hoạt động của con người."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Khi xem phim bi kịch, khán giả khóc nức nở. Sau đó họ cảm thấy nhẹ nhõm hơn (Catharsis). Đây là chức năng gì của tình cảm?",
-        options: ["Chức năng điều chỉnh", "Chức năng nhận thức", "Chức năng thư giãn/giải tỏa", "Chức năng xã hội"],
-        answer: 2,
-        explanation: "Bộc lộ cảm xúc giúp giải tỏa căng thẳng tâm lý."
-    },
-
-    // --- CHƯƠNG 6: Ý CHÍ ---
-    {
-        chapter: 6, level: "NB",
-        question: "Giai đoạn đầu tiên của một hành động ý chí là gì?",
-        options: ["Thực hiện hành động", "Chuẩn bị (Xác định mục đích, đấu tranh động cơ, quyết định)", "Đánh giá kết quả", "Nỗ lực ý chí"],
-        answer: 1,
-        explanation: "Hành động ý chí bắt đầu bằng giai đoạn chuẩn bị (nhận thức mục đích, đấu tranh động cơ...) [13]."
-    },
-    {
-        chapter: 6, level: "VD",
-        question: "Người có tính 'Quyết đoán' là người như thế nào?",
-        options: ["Luôn nghe theo người khác", "Ra quyết định kịp thời, dứt khoát và chịu trách nhiệm", "Bảo thủ, không thay đổi ý kiến", "Hay do dự"],
-        answer: 1,
-        explanation: "Tính quyết đoán thể hiện ở khả năng ra quyết định đúng lúc và kiên định [14]."
-    },
-    {
-        chapter: 6, level: "TH",
-        question: "Sự khác biệt giữa 'Đấu tranh động cơ' trong hành động ý chí và sự do dự thiếu ý chí là:",
-        options: ["Đấu tranh động cơ dẫn đến quyết định sáng suốt; do dự dẫn đến bế tắc", "Không có sự khác biệt", "Do dự là tốt", "Đấu tranh động cơ là xấu"],
-        answer: 0,
-        explanation: "Đấu tranh động cơ là quá trình cân nhắc cần thiết; còn do dự thiếu quyết đoán là sự dao động không cần thiết."
-    },
-
-    // --- CHƯƠNG 7: NHÂN CÁCH ---
-    {
-        chapter: 7, level: "VD",
-        question: "Nhạc sĩ Beethoven dù bị điếc vẫn sáng tác những bản giao hưởng bất hủ. Ông là ví dụ điển hình cho:",
-        options: ["Tài năng", "Thiên tài", "Khí chất ưu tư", "Tính cách nóng nảy"],
-        answer: 1,
-        explanation: "Thiên tài là mức độ năng lực xuất chúng, tạo ra sản phẩm độc đáo có ý nghĩa lịch sử lớn lao."
-    },
-    {
-        chapter: 7, level: "TH",
-        question: "Mối quan hệ giữa 'Tài' (Năng lực) và 'Đức' (Phẩm chất) trong nhân cách là:",
-        options: ["Tài quan trọng hơn", "Đức quan trọng hơn", "Đức là gốc, Tài là phương tiện, thống nhất biện chứng", "Tách rời nhau"],
-        answer: 2,
-        explanation: "Trong cấu trúc nhân cách, Đức và Tài thống nhất, trong đó Đức (phẩm chất) thường được coi là cái gốc [15]."
-    },
-    {
-        chapter: 7, level: "VD",
-        question: "Một người phản ứng chậm chạp, ít nói, kiên trì, chịu đựng tốt. Người này thuộc khí chất:",
-        options: ["Nóng nảy (Choleric)", "Linh hoạt (Sanguine)", "Bình thản (Phlegmatic)", "Ưu tư (Melancholic)"],
-        answer: 2,
-        explanation: "Khí chất Bình thản đặc trưng bởi sự cân bằng, hưng phấn và ức chế đều mạnh nhưng ức chế trội hơn, phản ứng chậm nhưng chắc chắn."
-    },
-    {
-        chapter: 7, level: "NB",
-        question: "Hệ thống thái độ của con người đối với hiện thực và biểu hiện qua hành vi tương ứng gọi là:",
-        options: ["Khí chất", "Tính cách", "Năng lực", "Tình cảm"],
-        answer: 1,
-        explanation: "Định nghĩa Tính cách: hệ thống thái độ và hành vi ổn định [16]."
-    },
-
-    // --- CÁC CÂU HỎI TỔNG HỢP / ĐA DẠNG HÓA ---
-    {
-        chapter: 4, level: "VD",
-        question: "Khi đi xe đạp, ban đầu ta phải tập trung giữ thăng bằng (có ý thức), sau này đi quen không cần để ý nữa (kỹ xảo). Quá trình chuyển đổi này giúp:",
-        options: ["Giảm mệt mỏi cho vỏ não", "Tăng sự căng thẳng", "Mất trí nhớ", "Giảm hiệu quả"],
-        answer: 0,
-        explanation: "Kỹ xảo giúp giải phóng ý thức khỏi các thao tác cơ bản, tiết kiệm năng lượng thần kinh [17]."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Vui sướng tột độ (Lên đỉnh vinh quang) hoặc Đau khổ tột cùng thường làm con người thay đổi nhịp tim, hô hấp. Đây là biểu hiện của:",
-        options: ["Xúc động (Affect)", "Tâm trạng", "Màu sắc cảm xúc", "Nhận thức"],
-        answer: 0,
-        explanation: "Xúc động là trạng thái cảm xúc mạnh, gây biến đổi rõ rệt về cơ thể (sinh lý)."
-    },
-    {
-        chapter: 4, level: "NB",
-        question: "Ba khâu cơ bản của Tư duy là:",
-        options: ["Nhận thức - Thái độ - Hành vi", "Xuất tâm - Nhập tâm - Quan sát", "Nhận thức vấn đề - Giải quyết vấn đề - Kiểm tra kết quả", "Cảm giác - Tri giác - Trí nhớ"],
-        answer: 2,
-        explanation: "Tư duy bắt đầu từ tình huống có vấn đề, tiến hành các thao tác giải quyết và kết thúc bằng việc kiểm tra."
-    },
-    {
-        chapter: 2, level: "TH",
-        question: "Giao tiếp phi ngôn ngữ bao gồm:",
-        options: ["Lời nói, chữ viết", "Cử chỉ, ánh mắt, điệu bộ, trang phục", "Email, tin nhắn", "Sách báo"],
-        answer: 1,
-        explanation: "Giao tiếp phi ngôn ngữ dùng các tín hiệu cơ thể và hình ảnh thay vì lời nói."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Nhìn thấy me chua thì tiết nước bọt dù chưa ăn. Đây là loại trí nhớ nào?",
-        options: ["Trí nhớ vận động", "Trí nhớ hình ảnh", "Trí nhớ cảm xúc", "Trí nhớ từ ngữ"],
-        answer: 1,
-        explanation: "Tái hiện lại hình ảnh và cảm giác nếm chua trong quá khứ."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Tâm lý học hiện đại nghiên cứu tâm lý con người dựa trên cơ sở:",
-        options: ["Duy tâm", "Duy vật biện chứng và duy vật lịch sử", "Nhị nguyên luận", "Siêu hình"],
-        answer: 1,
-        explanation: "Tâm lý học khoa học dựa trên nền tảng triết học Mác-Lênin."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Khi thiết kế slide Powerpoint, không nên dùng chữ màu vàng trên nền trắng. Điều này tuân thủ quy luật:",
-        options: ["Tương phản (để dễ đọc)", "Thích ứng", "Ảo ảnh", "Di chuyển"],
-        answer: 0,
-        explanation: "Cần sự tương phản tốt (màu tối trên nền sáng hoặc ngược lại) để tri giác rõ ràng [18]."
-    },
-
-    // --- BỔ SUNG 100 CÂU HỎI MỚI (PHẦN 3) ---
-
-    // --- CHƯƠNG 1: NHẬP MÔN (Bổ sung Vận dụng & Thông hiểu) ---
-    {
-        chapter: 1, level: "VD",
-        question: "Một nhà quản lý giỏi luôn biết cách động viên nhân viên bằng cả vật chất và tinh thần tùy theo tính cách từng người. Ông ta đã vận dụng nguyên tắc nào?",
-        options: ["Tính khách quan", "Tính phổ biến", "Tính chủ thể", "Tính gián tiếp"],
-        answer: 2,
-        explanation: "Mỗi người có đặc điểm tâm lý riêng (tính chủ thể) nên cần có phương pháp tác động riêng biệt phù hợp."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Phương pháp nghiên cứu nào cho phép chủ động tạo ra các hiện tượng tâm lý cần nghiên cứu trong điều kiện khống chế?",
-        options: ["Quan sát", "Thực nghiệm", "Đàm thoại", "Điều tra"],
-        answer: 1,
-        explanation: "Thực nghiệm là phương pháp chủ động tác động vào đối tượng trong điều kiện khống chế để gây ra hiện tượng tâm lý cần nghiên cứu."
-    },
-    {
-        chapter: 1, level: "NB",
-        question: "Hiện tượng tâm lý nào sau đây thuộc về 'Quá trình tâm lý' (có mở đầu, diễn biến, kết thúc rõ ràng)?",
-        options: ["Cảm giác", "Tính cách", "Năng lực", "Khí chất"],
-        answer: 0,
-        explanation: "Cảm giác là một quá trình tâm lý diễn ra trong thời gian ngắn. Các phương án còn lại là thuộc tính tâm lý ổn định."
-    },
-    {
-        chapter: 1, level: "TH",
-        question: "Tâm lý học hiện đại nghiên cứu tâm lý con người dựa trên cơ sở triết học nào?",
-        options: ["Duy tâm", "Duy vật biện chứng và duy vật lịch sử", "Nhị nguyên luận", "Siêu hình"],
-        answer: 1,
-        explanation: "Tâm lý học khoa học dựa trên nền tảng triết học Mác-Lênin (Duy vật biện chứng và Duy vật lịch sử)."
-    },
-
-    // --- CHƯƠNG 2: HOẠT ĐỘNG & GIAO TIẾP ---
-    {
-        chapter: 2, level: "VD",
-        question: "Sinh viên sư phạm đi thực tập giảng dạy để rèn luyện kỹ năng. Hoạt động này gọi là gì?",
-        options: ["Hoạt động vui chơi", "Hoạt động lao động", "Hoạt động học tập - nghề nghiệp", "Hoạt động xã hội"],
-        answer: 2,
-        explanation: "Đây là hoạt động hướng tới việc tiếp thu tri thức và kỹ năng nghề nghiệp."
-    },
-    {
-        chapter: 2, level: "TH",
-        question: "Quá trình 'Xuất tâm' (Khách thể hóa) có ý nghĩa gì đối với tâm lý cá nhân?",
-        options: ["Làm nghèo vốn tâm lý cá nhân", "Bộc lộ năng lực con người và tạo ra sản phẩm cho xã hội", "Chỉ là sự tiêu hao năng lượng", "Không có ý nghĩa gì"],
-        answer: 1,
-        explanation: "Qua quá trình xuất tâm, con người object hóa năng lực của mình vào sản phẩm, làm cho tâm lý được bộc lộ và lưu giữ."
-    },
-    {
-        chapter: 2, level: "NB",
-        question: "Hai quá trình cơ bản thống nhất trong cấu trúc của hoạt động là:",
-        options: ["Chủ thể hóa và Khách thể hóa", "Nhận thức và Tình cảm", "Lý thuyết và Thực hành", "Vật chất và Ý thức"],
-        answer: 0,
-        explanation: "Hoạt động bao gồm hai quá trình diễn ra đồng thời: Chủ thể hóa (nhập tâm) và Khách thể hóa (xuất tâm)."
-    },
-     {
-        chapter: 2, level: "TH",
-        question: "Giao tiếp phi ngôn ngữ bao gồm những yếu tố nào?",
-        options: ["Lời nói, chữ viết", "Cử chỉ, ánh mắt, điệu bộ, trang phục", "Email, tin nhắn", "Sách báo"],
-        answer: 1,
-        explanation: "Giao tiếp phi ngôn ngữ dùng các tín hiệu cơ thể và hình ảnh thay vì lời nói."
-    },
-
-    // --- CHƯƠNG 3: Ý THỨC & VÔ THỨC ---
-    {
-        chapter: 3, level: "VD",
-        question: "Một người lỡ lời nói ra điều bí mật mà mình định giấu kín (lapsus). Theo Phân tâm học, đây là biểu hiện của:",
-        options: ["Ý thức", "Vô thức", "Tự ý thức", "Tiềm thức"],
-        answer: 1,
-        explanation: "Những hành vi lỡ lời, quên tên... thường là biểu hiện của vô thức (những dồn nén bị ức chế bộc lộ ra)."
-    },
-    {
-        chapter: 3, level: "TH",
-        question: "Cấp độ nào của ý thức giúp con người phân biệt được 'cái tôi' và 'cái không tôi'?",
-        options: ["Ý thức", "Tự ý thức", "Vô thức", "Tiềm thức"],
-        answer: 1,
-        explanation: "Tự ý thức là khả năng tách mình ra khỏi thế giới xung quanh để nhận biết, đánh giá về chính bản thân mình."
-    },
-    {
-        chapter: 3, level: "NB",
-        question: "Giấc mơ khi ngủ là biểu hiện của hiện tượng tâm lý nào?",
-        options: ["Ý thức", "Vô thức", "Tư duy", "Tưởng tượng có chủ định"],
-        answer: 1,
-        explanation: "Giấc mơ là hiện tượng tâm lý diễn ra khi vỏ não bị ức chế (ngủ), thuộc về vô thức."
-    },
-
-    // --- CHƯƠNG 4: NHẬN THỨC (Trọng tâm) ---
-    // *Cảm giác & Tri giác*
-    {
-        chapter: 4, level: "VD",
-        question: "Các nhà thiết kế nội thất thường dùng gương lớn để tạo cảm giác phòng rộng hơn. Đây là ứng dụng của:",
-        options: ["Ảo ảnh tri giác", "Tính ổn định", "Tính lựa chọn", "Ngưỡng cảm giác"],
-        answer: 0,
-        explanation: "Sử dụng ảo ảnh thị giác (không gian) để đánh lừa cảm nhận, tạo hiệu ứng rộng rãi."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Khi bị sốt cao, uống nước đường vẫn thấy đắng miệng. Đây là hiện tượng:",
-        options: ["Loạn cảm giác / Chuyển cảm giác", "Thích ứng", "Tương phản", "Ảo ảnh"],
-        answer: 0,
-        explanation: "Rối loạn chức năng phân tích dẫn đến sai lệch về vị giác (loạn cảm giác/nghịch lý)."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Quy luật 'Tổng giác' khẳng định điều gì về tri giác?",
-        options: ["Tri giác phụ thuộc vào vật kích thích", "Tri giác phụ thuộc vào chủ thể (kinh nghiệm, thái độ, hứng thú)", "Tri giác là tổng cộng các cảm giác", "Tri giác luôn đúng"],
-        answer: 1,
-        explanation: "Hình ảnh tri giác không chỉ phụ thuộc vật kích thích mà còn phụ thuộc vào đặc điểm tâm lý của chủ thể (Tổng giác)."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Khi thiết kế slide Powerpoint, không nên dùng chữ màu vàng trên nền trắng. Điều này tuân thủ quy luật:",
-        options: ["Tương phản (để dễ đọc)", "Thích ứng", "Ảo ảnh", "Di chuyển"],
-        answer: 0,
-        explanation: "Cần sự tương phản tốt (màu tối trên nền sáng hoặc ngược lại) để tri giác rõ ràng."
-    },
-
-    // *Tư duy & Tưởng tượng*
-    {
-        chapter: 4, level: "VD",
-        question: "Bác sĩ chẩn đoán bệnh dựa trên các triệu chứng lâm sàng và kết quả xét nghiệm. Đây là quá trình:",
-        options: ["Cảm giác", "Trí nhớ", "Tư duy", "Tưởng tượng"],
-        answer: 2,
-        explanation: "Bác sĩ phải phân tích, tổng hợp dữ liệu để tìm ra bản chất (bệnh lý) - đây là Tư duy."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Hình ảnh 'Nhân sư' (đầu người, mình sư tử) là sản phẩm của cách sáng tạo nào?",
-        options: ["Liên hợp", "Chắp ghép", "Nhấn mạnh", "Loại suy"],
-        answer: 1,
-        explanation: "Ghép các bộ phận của các sự vật khác nhau (không thay đổi kích thước/tính chất) là Chắp ghép (Kết dính)."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Học sinh giải toán bằng cách áp dụng công thức đã học vào bài tập cụ thể. Đây là thao tác:",
-        options: ["Trừu tượng hóa", "Khái quát hóa", "Cụ thể hóa", "Phân tích"],
-        answer: 2,
-        explanation: "Vận dụng cái chung (công thức) vào cái riêng (bài tập) là thao tác Cụ thể hóa."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Ngôn ngữ (Tiếng nói/Chữ viết) có vai trò gì đối với Tư duy?",
-        options: ["Là phương tiện, là cái vỏ vật chất của tư duy", "Không liên quan", "Cản trở tư duy", "Là kết quả duy nhất"],
-        answer: 0,
-        explanation: "Tư duy và ngôn ngữ thống nhất chặt chẽ; ngôn ngữ là phương tiện để tư duy biểu đạt và hình thành."
-    },
-    {
-        chapter: 4, level: "NB",
-        question: "Ba khâu cơ bản của quá trình Tư duy là:",
-        options: ["Nhận thức - Thái độ - Hành vi", "Xuất tâm - Nhập tâm - Quan sát", "Nhận thức vấn đề - Giải quyết vấn đề - Kiểm tra kết quả", "Cảm giác - Tri giác - Trí nhớ"],
-        answer: 2,
-        explanation: "Tư duy bắt đầu từ tình huống có vấn đề, tiến hành các thao tác giải quyết và kết thúc bằng việc kiểm tra."
-    },
-
-    // *Trí nhớ & Chú ý*
-    {
-        chapter: 4, level: "VD",
-        question: "Sinh viên dùng bút dạ quang tô đậm các ý chính trong giáo trình. Hành động này tác động vào quy luật nào?",
-        options: ["Tính lựa chọn của Tri giác/Chú ý", "Ghi nhớ máy móc", "Quên", "Ảo ảnh"],
-        answer: 0,
-        explanation: "Làm nổi bật đối tượng (tô đậm) để tri giác và ghi nhớ tốt hơn nhờ tính lựa chọn."
-    },
-    {
-        chapter: 4, level: "TH",
-        question: "Trí nhớ ngắn hạn (working memory) thường duy trì thông tin trong bao lâu nếu không nhắc lại?",
-        options: ["Dưới 1 giây", "Khoảng 15-30 giây", "Vĩnh viễn", "Hàng giờ"],
-        answer: 1,
-        explanation: "Trí nhớ ngắn hạn lưu giữ thông tin trong thời gian ngắn (vài chục giây) để xử lý tức thời."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Trong đám đông ồn ào, bạn vẫn nghe được tiếng ai đó gọi tên mình. Đây là đặc điểm của:",
-        options: ["Tính lựa chọn của chú ý", "Sự phân tán chú ý", "Ảo giác thính giác", "Ngưỡng sai biệt"],
-        answer: 0,
-        explanation: "Khả năng lọc nhiễu và tập trung vào kích thích có ý nghĩa với bản thân (tên mình) - Hiệu ứng tiệc cocktail."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Khi đi xe đạp, ban đầu ta phải tập trung giữ thăng bằng (có ý thức), sau này đi quen không cần để ý nữa (kỹ xảo). Quá trình chuyển đổi này giúp:",
-        options: ["Giảm mệt mỏi cho vỏ não", "Tăng sự căng thẳng", "Mất trí nhớ", "Giảm hiệu quả"],
-        answer: 0,
-        explanation: "Kỹ xảo giúp giải phóng ý thức khỏi các thao tác cơ bản, tiết kiệm năng lượng thần kinh."
-    },
-     {
-        chapter: 4, level: "VD",
-        question: "Nhìn thấy quả me chua thì tiết nước bọt dù chưa ăn. Đây là loại trí nhớ nào?",
-        options: ["Trí nhớ vận động", "Trí nhớ hình ảnh", "Trí nhớ cảm xúc", "Trí nhớ từ ngữ"],
-        answer: 1,
-        explanation: "Tái hiện lại hình ảnh và cảm giác nếm chua trong quá khứ (Trí nhớ hình ảnh/Trực quan)."
-    },
-
-    // --- CHƯƠNG 5: TÌNH CẢM ---
-    {
-        chapter: 5, level: "VD",
-        question: "Hiện tượng 'Yêu nên tốt, ghét nên xấu' là biểu hiện của quy luật nào?",
-        options: ["Lây lan", "Di chuyển", "Tương phản", "Thích ứng"],
-        answer: 1,
-        explanation: "Tình cảm chi phối cái nhìn chủ quan, chuyển cảm xúc từ người sang việc/vật liên quan (Di chuyển)."
-    },
-    {
-        chapter: 5, level: "TH",
-        question: "Mức độ cao nhất của đời sống tình cảm là gì?",
-        options: ["Xúc cảm", "Tâm trạng", "Thái độ", "Đam mê (Say mê)"],
-        answer: 3,
-        explanation: "Say mê là tình cảm mạnh, sâu sắc, bền vững và chi phối mọi hoạt động của con người."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Khi xem phim bi kịch, khán giả khóc nức nở. Sau đó họ cảm thấy nhẹ nhõm hơn (Catharsis). Đây là chức năng gì của tình cảm?",
-        options: ["Chức năng điều chỉnh", "Chức năng nhận thức", "Chức năng thư giãn/giải tỏa", "Chức năng xã hội"],
-        answer: 2,
-        explanation: "Bộc lộ cảm xúc giúp giải tỏa căng thẳng tâm lý (chức năng thư giãn)."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Vui sướng tột độ (Lên đỉnh vinh quang) hoặc Đau khổ tột cùng thường làm con người thay đổi nhịp tim, hô hấp. Đây là biểu hiện của:",
-        options: ["Xúc động (Affect)", "Tâm trạng", "Màu sắc cảm xúc", "Nhận thức"],
-        answer: 0,
-        explanation: "Xúc động là trạng thái cảm xúc mạnh, gây biến đổi rõ rệt về cơ thể (sinh lý)."
-    },
-
-    // --- CHƯƠNG 6: Ý CHÍ ---
-    {
-        chapter: 6, level: "NB",
-        question: "Giai đoạn đầu tiên của một hành động ý chí là gì?",
-        options: ["Thực hiện hành động", "Chuẩn bị (Xác định mục đích, đấu tranh động cơ, quyết định)", "Đánh giá kết quả", "Nỗ lực ý chí"],
-        answer: 1,
-        explanation: "Hành động ý chí bắt đầu bằng giai đoạn chuẩn bị (nhận thức mục đích, đấu tranh động cơ, ra quyết định)."
-    },
-    {
-        chapter: 6, level: "VD",
-        question: "Người có tính 'Quyết đoán' là người như thế nào?",
-        options: ["Luôn nghe theo người khác", "Ra quyết định kịp thời, dứt khoát và chịu trách nhiệm", "Bảo thủ, không thay đổi ý kiến", "Hay do dự"],
-        answer: 1,
-        explanation: "Tính quyết đoán thể hiện ở khả năng ra quyết định đúng lúc và kiên định."
-    },
-    {
-        chapter: 6, level: "TH",
-        question: "Sự khác biệt giữa 'Đấu tranh động cơ' trong hành động ý chí và sự do dự thiếu ý chí là:",
-        options: ["Đấu tranh động cơ dẫn đến quyết định sáng suốt; do dự dẫn đến bế tắc", "Không có sự khác biệt", "Do dự là tốt", "Đấu tranh động cơ là xấu"],
-        answer: 0,
-        explanation: "Đấu tranh động cơ là quá trình cân nhắc cần thiết; còn do dự thiếu quyết đoán là sự dao động không cần thiết."
-    },
-
-    // --- CHƯƠNG 7: NHÂN CÁCH ---
-    {
-        chapter: 7, level: "VD",
-        question: "Nhạc sĩ Beethoven dù bị điếc vẫn sáng tác những bản giao hưởng bất hủ. Ông là ví dụ điển hình cho:",
-        options: ["Tài năng", "Thiên tài", "Khí chất ưu tư", "Tính cách nóng nảy"],
-        answer: 1,
-        explanation: "Thiên tài là mức độ năng lực xuất chúng, tạo ra sản phẩm độc đáo có ý nghĩa lịch sử lớn lao."
-    },
-    {
-        chapter: 7, level: "TH",
-        question: "Mối quan hệ giữa 'Tài' (Năng lực) và 'Đức' (Phẩm chất) trong nhân cách là:",
-        options: ["Tài quan trọng hơn", "Đức quan trọng hơn", "Đức là gốc, Tài là phương tiện, thống nhất biện chứng", "Tách rời nhau"],
-        answer: 2,
-        explanation: "Trong cấu trúc nhân cách, Đức và Tài thống nhất, trong đó Đức (phẩm chất) thường được coi là cái gốc."
-    },
-    {
-        chapter: 7, level: "VD",
-        question: "Một người phản ứng chậm chạp, ít nói, kiên trì, chịu đựng tốt. Người này thuộc khí chất:",
-        options: ["Nóng nảy (Choleric)", "Linh hoạt (Sanguine)", "Bình thản (Phlegmatic)", "Ưu tư (Melancholic)"],
-        answer: 2,
-        explanation: "Khí chất Bình thản đặc trưng bởi sự cân bằng, hưng phấn và ức chế đều mạnh nhưng ức chế trội hơn, phản ứng chậm nhưng chắc chắn."
-    },
-    {
-        chapter: 7, level: "NB",
-        question: "Hệ thống thái độ của con người đối với hiện thực và biểu hiện qua hành vi tương ứng gọi là:",
-        options: ["Khí chất", "Tính cách", "Năng lực", "Tình cảm"],
-        answer: 1,
-        explanation: "Định nghĩa Tính cách: hệ thống thái độ và hành vi ổn định của con người."
-    },
-    
-    // --- CÁC CÂU HỎI BỔ SUNG KHÁC ĐỂ PHỦ KÍN MA TRẬN ---
-    {
-        chapter: 1, level: "TH",
-        question: "Nguyên tắc 'Tâm lý, ý thức không tách rời khỏi hoạt động' yêu cầu nhà nghiên cứu phải làm gì?",
-        options: ["Nghiên cứu tâm lý thông qua sản phẩm hoạt động", "Chỉ nghiên cứu não bộ", "Chỉ dùng trắc nghiệm", "Nghiên cứu qua giấc mơ"],
-        answer: 0,
-        explanation: "Vì tâm lý bộc lộ qua hoạt động, nên phải nghiên cứu nó thông qua quá trình và sản phẩm hoạt động."
-    },
-    {
-        chapter: 3, level: "VD",
-        question: "Khi đi thi, vì quá lo lắng nên Minh quên hết bài, ra khỏi phòng thi mới nhớ lại. Đây là hiện tượng:",
-        options: ["Quên vĩnh viễn", "Quên tạm thời (ức chế vượt hạn)", "Trí nhớ kém", "Không tập trung"],
-        answer: 1,
-        explanation: "Sự ức chế tạm thời của vỏ não do cường độ kích thích (lo lắng) quá mạnh."
-    },
-    {
-        chapter: 4, level: "VD",
-        question: "Học sinh tiểu học thường dùng ngón tay để đếm khi làm toán. Đây là loại tư duy nào?",
-        options: ["Tư duy trực quan hành động", "Tư duy trực quan hình ảnh", "Tư duy trừu tượng", "Tư duy ngôn ngữ"],
-        answer: 0,
-        explanation: "Tư duy dựa trên việc thao tác trực tiếp với vật thể (ngón tay)."
-    },
-    {
-        chapter: 4, level: "NB",
-        question: "Loại chú ý nào xuất hiện sau chú ý có chủ định và không đòi hỏi sự căng thẳng ý chí?",
-        options: ["Chú ý không chủ định", "Chú ý sau chủ định", "Phân phối chú ý", "Di chuyển chú ý"],
-        answer: 1,
-        explanation: "Chú ý sau chủ định là trạng thái bị cuốn hút vào công việc, không cần nỗ lực nữa."
-    },
-    {
-        chapter: 5, level: "VD",
-        question: "Câu ca dao 'Yêu nhau củ ấu cũng tròn / Ghét nhau bồ hòn cũng méo' phản ánh quy luật nào?",
-        options: ["Lây lan", "Di chuyển", "Tương phản", "Thích ứng"],
-        answer: 1,
-        explanation: "Tình cảm chi phối nhận thức, chuyển cảm xúc từ người sang vật (củ ấu, bồ hòn) - Di chuyển."
-    },
-    {
-        chapter: 6, level: "TH",
-        question: "Phẩm chất ý chí nào đối lập với sự 'bướng bỉnh'?",
-        options: ["Tính độc lập", "Tính mục đích", "Tính kiên trì", "Tính tự chủ"],
-        answer: 0,
-        explanation: "Tính độc lập là giữ vững quan điểm có căn cứ, còn bướng bỉnh là giữ quan điểm sai lầm mù quáng."
-    },
-    {
-        chapter: 7, level: "TH",
-        question: "Để hình thành nhân cách cho học sinh, con đường quan trọng nhất là:",
-        options: ["Tổ chức các hoạt động và giao tiếp phong phú", "Giảng giải đạo đức", "Khen thưởng", "Kỷ luật"],
-        answer: 0,
-        explanation: "Nhân cách hình thành và phát triển thông qua hoạt động và giao tiếp."
-    }
-
-    // (Bạn có thể dán tiếp toàn bộ 300 câu hỏi vào đây, hệ thống sẽ tự nhận diện cả 2 định dạng cũ và mới)
+  // --- CHƯƠNG 7: NHÂN CÁCH ---
+  {
+    chapter: 7,
+    level: "NB",
+    question: "Nhân cách là gì?",
+    options: ["Tổ hợp các đặc điểm tâm lý quy định bản sắc và giá trị xã hội của con người", "Vẻ bề ngoài", "Bản năng sinh học", "Tính khí bẩm sinh"],
+    answer: 0,
+    explanation: "Nhân cách là tổ hợp thuộc tính tâm lý thể hiện bản sắc và giá trị xã hội[cite: 357, 537]."
+  },
+  {
+    chapter: 7,
+    level: "TH",
+    question: "Yếu tố nào giữ vai trò chủ đạo trong sự hình thành nhân cách?",
+    options: ["Di truyền", "Môi trường", "Giáo dục", "Hoạt động cá nhân"],
+    answer: 2,
+    explanation: "Giáo dục giữ vai trò chủ đạo, định hướng sự phát triển nhân cách[cite: 365, 539]."
+  },
+  {
+    chapter: 7,
+    level: "TH",
+    question: "Yếu tố nào giữ vai trò quyết định trực tiếp sự hình thành nhân cách?",
+    options: ["Hoạt động và giao tiếp", "Giáo dục", "Bẩm sinh di truyền", "Môi trường xã hội"],
+    answer: 0,
+    explanation: "Thông qua hoạt động và giao tiếp, nhân cách được hình thành và bộc lộ trực tiếp[cite: 372, 541, 787]."
+  },
+  {
+    chapter: 7,
+    level: "TH",
+    question: "Khí chất là thuộc tính tâm lý gắn liền với:",
+    options: ["Kiểu hoạt động thần kinh", "Đạo đức", "Năng lực", "Thế giới quan"],
+    answer: 0,
+    explanation: "Cơ sở sinh lý của khí chất là các kiểu hoạt động thần kinh cấp cao[cite: 379, 543]."
+  },
+  {
+    chapter: 7,
+    level: "VD",
+    question: "Câu 'Gần bùn mà chẳng hôi tanh mùi bùn' nhấn mạnh vai trò của yếu tố nào?",
+    options: ["Môi trường", "Giáo dục", "Tính tích cực hoạt động của cá nhân", "Di truyền"],
+    answer: 2,
+    explanation: "Vai trò quyết định của tính tích cực cá nhân dù trong môi trường xấu[cite: 26, 545, 724]."
+  },
+  {
+    chapter: 7,
+    level: "VD",
+    question: "Để hiểu rõ nhân cách một người, cách tốt nhất là:",
+    options: ["Quan sát ngoại hình", "Thông qua hoạt động và giao tiếp của họ", "Xem tướng số", "Hỏi ý kiến người khác"],
+    answer: 1,
+    explanation: "Nhân cách bộc lộ rõ nhất qua sản phẩm của hoạt động và cách giao tiếp[cite: 394]."
+  },
+  {
+    chapter: 7,
+    level: "VD",
+    question: "Câu 'Cha nào con nấy' thường đề cập đến ảnh hưởng của yếu tố nào?",
+    options: ["Giáo dục", "Di truyền (Yếu tố sinh học)", "Hoạt động", "Giao tiếp"],
+    answer: 1,
+    explanation: "Di truyền tạo tiền đề (như kiểu thần kinh, ngoại hình)[cite: 549]."
+  },
+  {
+    chapter: 7,
+    level: "VD",
+    question: "Việc luyện tập phương pháp dạy học để trở thành giáo viên giỏi là phát triển mặt nào của nhân cách?",
+    options: ["Xu hướng", "Tính cách", "Năng lực", "Khí chất"],
+    answer: 2,
+    explanation: "Năng lực là tổ hợp thuộc tính đáp ứng yêu cầu hoạt động đạt kết quả cao[cite: 551, 730]."
+  },
+  {
+    chapter: 7,
+    level: "TH",
+    question: "Đặc điểm nào cho phép dự đoán hành vi của một người trong tình huống cụ thể?",
+    options: ["Tính ổn định", "Tính thống nhất", "Tính tích cực", "Tính giao lưu"],
+    answer: 0,
+    explanation: "Tính ổn định của nhân cách giúp ta dự đoán được hành vi trước các tình huống[cite: 555, 734]."
+  },
+  {
+    chapter: 7,
+    level: "VD",
+    question: "Nhạc sĩ Beethoven dù bị điếc vẫn sáng tác những bản giao hưởng bất hủ. Ông là ví dụ điển hình cho:",
+    options: ["Tài năng", "Thiên tài", "Khí chất ưu tư", "Tính cách nóng nảy"],
+    answer: 1,
+    explanation: "Thiên tài là mức độ năng lực xuất chúng, tạo ra sản phẩm độc đáo có ý nghĩa lịch sử lớn lao[cite: 987, 1300]."
+  },
+  {
+    chapter: 7,
+    level: "TH",
+    question: "Mối quan hệ giữa 'Tài' (Năng lực) và 'Đức' (Phẩm chất) trong nhân cách là:",
+    options: ["Tài quan trọng hơn", "Đức quan trọng hơn", "Đức là gốc, Tài là phương tiện, thống nhất biện chứng", "Tách rời nhau"],
+    answer: 2,
+    explanation: "Trong cấu trúc nhân cách, Đức và Tài thống nhất, trong đó Đức (phẩm chất) thường được coi là cái gốc[cite: 994, 1307]."
+  },
+  {
+    chapter: 7,
+    level: "VD",
+    question: "Khổng Minh (Gia Cát Lượng) thích ứng nhanh, trí tuệ mềm dẻo. Ông thuộc khí chất:",
+    options: ["Linh hoạt", "Bình thản", "Ưu tư", "Nóng nảy"],
+    answer: 0,
+    explanation: "Đặc điểm nhanh nhẹn, linh hoạt, chủ động là khí chất Linh hoạt[cite: 547, 736]."
+  },
+  {
+    chapter: 7,
+    level: "NB",
+    question: "Hệ thống thái độ của con người đối với hiện thực và biểu hiện qua hành vi tương ứng gọi là:",
+    options: ["Khí chất", "Tính cách", "Năng lực", "Tình cảm"],
+    answer: 1,
+    explanation: "Định nghĩa Tính cách: hệ thống thái độ và hành vi ổn định của con người[cite: 1008, 1321]."
+  },
+  {
+    chapter: 7,
+    level: "NB",
+    question: "Xu hướng của nhân cách bao gồm:",
+    options: ["Nhu cầu, hứng thú, lý tưởng, thế giới quan, niềm tin", "Tri thức, kỹ năng", "Tính cách, khí chất", "Cảm xúc, tình cảm"],
+    answer: 0,
+    explanation: "Xu hướng là hệ thống thúc đẩy, gồm nhu cầu, hứng thú, lý tưởng, thế giới quan[cite: 592, 765]."
+  },
+  { 
+    chapter: 7, 
+    level: "VD", 
+    question: "Câu 'Gần mực thì đen, gần đèn thì sáng' nói về vai trò của yếu tố nào?", 
+    options: ["Di truyền", "Môi trường", "Giáo dục", "Hoạt động"], 
+    answer: 1, 
+    explanation: "Nhấn mạnh ảnh hưởng của môi trường sống, hoàn cảnh xung quanh[cite: 387]."
+  },
+  { 
+    chapter: 7, 
+    level: "VD", 
+    question: "Tham vọng trở thành tỷ phú bất chấp thủ đoạn của B thể hiện mặt nào của nhân cách?", 
+    options: ["Lý tưởng (Xu hướng)", "Năng lực", "Khí chất", "Tính cách"], 
+    answer: 0, 
+    explanation: "Đây là một dạng lý tưởng/xu hướng (nhưng lệch lạc về giá trị)[cite: 553, 726]."
+  },
+  { 
+    chapter: 7, 
+    level: "TH", 
+    question: "Đặc điểm nào của nhân cách thể hiện qua việc 'Không ai giống ai'?", 
+    options: ["Tính độc đáo", "Tính ổn định", "Tính thống nhất", "Tính giao lưu"], 
+    answer: 0, 
+    explanation: "Tính độc đáo: nhân cách là cái riêng, cái đơn nhất không lặp lại[cite: 580]."
+  },
+  { 
+    chapter: 7, 
+    level: "TH", 
+    question: "Tính cách là sự kết hợp giữa:", 
+    options: ["Thái độ và Hành vi", "Đức và Tài", "Nóng nảy và Ưu tư", "Di truyền và Môi trường"], 
+    answer: 0, 
+    explanation: "Cấu trúc tính cách gồm hệ thống thái độ và hệ thống hành vi[cite: 604]."
+  },
+  { 
+    chapter: 7, 
+    level: "TH", 
+    question: "Một giáo viên được nhận xét là 'chu đáo, kiên trì, dễ cảm thông'. Đây là đặc điểm của:", 
+    options: ["Khí chất", "Năng lực", "Tính cách", "Xu hướng"], 
+    answer: 2, 
+    explanation: "Tính cách là hệ thống thái độ và hành vi ổn định (chu đáo, kiên trì...)[cite: 728]."
+  },
+  { 
+    chapter: 7, 
+    level: "NB", 
+    question: "Theo quan niệm truyền thống, cấu trúc nhân cách gồm:", 
+    options: ["Đức và Tài", "Id và Ego", "Hướng nội và Hướng ngoại", "Nhận thức và Tình cảm"], 
+    answer: 0, 
+    explanation: "Người Việt Nam thường nhìn nhận nhân cách qua hai mặt thống nhất: Đức (Phẩm chất) và Tài (Năng lực)[cite: 732]."
+  },
+  { 
+    chapter: 7, 
+    level: "TH", 
+    question: "Câu 'Sống mỗi người một nết' nói về đặc điểm nào của tính cách?", 
+    options: ["Tính ổn định", "Tính độc đáo", "Tính toàn vẹn", "Tính xã hội"], 
+    answer: 1, 
+    explanation: "Tính độc đáo thể hiện nét riêng biệt không ai giống ai[cite: 753]."
+  },
+  { 
+    chapter: 7, 
+    level: "VD", 
+    question: "Người nóng nảy, thẳng thắn, nhiệt tình nhưng dễ cáu gắt thuộc khí chất:", 
+    options: ["Nóng nảy", "Linh hoạt", "Bình thản", "Ưu tư"], 
+    answer: 0, 
+    explanation: "Đặc điểm của khí chất nóng nảy (Mạnh, không cân bằng)[cite: 775]."
+  },
+  { 
+    chapter: 7, 
+    level: "VD", 
+    question: "Một người phản ứng chậm chạp, ít nói, kiên trì, chịu đựng tốt. Người này thuộc khí chất:", 
+    options: ["Nóng nảy (Choleric)", "Linh hoạt (Sanguine)", "Bình thản (Phlegmatic)", "Ưu tư (Melancholic)"], 
+    answer: 2, 
+    explanation: "Khí chất Bình thản đặc trưng bởi sự cân bằng, hưng phấn và ức chế đều mạnh nhưng ức chế trội hơn, phản ứng chậm nhưng chắc chắn[cite: 1001, 1314]."
+  },
+  { 
+    chapter: 7, 
+    level: "TH", 
+    question: "Để hình thành nhân cách cho học sinh, con đường quan trọng nhất là:", 
+    options: ["Tổ chức các hoạt động và giao tiếp phong phú", "Giảng giải đạo đức", "Khen thưởng", "Kỷ luật"], 
+    answer: 0, 
+    explanation: "Nhân cách hình thành và phát triển thông qua hoạt động và giao tiếp[cite: 1371]."
+  }
 ];
 
+        
 // Cấu trúc Matrix đề thi
 const matrix = {
     1: { NB: 0, TH: 4, VD: 2 },
