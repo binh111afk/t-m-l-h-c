@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thi Thử Tâm Lý Học Đại Cương</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #fff5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 0 15px rgba(255, 0, 0, 0.2); border: 2px solid #ffd700; }
+        h1 { text-align: center; color: #d32f2f; text-shadow: 1px 1px 0px #ffd700; font-family: 'Dancing Script', cursive; font-size: 3em; }
+        .matrix-info { background: #fffde7; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 0.9em; border-left: 5px solid #FFD41D; color: #3e2723; }
+        
+        .question-card { background: #fff; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px; transition: 0.3s; }
+        .question-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .question-title { font-weight: bold; color: #333; margin-bottom: 15px; font-size: 1.1em; }
+        
+        /* Badge hiển thị chương/mức độ */
+        .meta-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; color: #fff; background-color: #6c757d; margin-right: 8px; margin-bottom: 5px; }
+        .badge-c { background-color: #17a2b8; }
+        .badge-l { background-color: #6610f2; }
+
+        .options label { display: block; padding: 10px; border: 1px solid #eee; margin-bottom: 5px; border-radius: 5px; cursor: pointer; transition: 0.2s; }
+        .options label:hover { background-color: #f9f9f9; }
+        .options input { margin-right: 10px; }
+
+        /* Kết quả đúng sai */
+        .correct-answer { background-color: #d4edda !important; border-color: #c3e6cb !important; color: #155724; }
+        .wrong-answer { background-color: #f8d7da !important; border-color: #f5c6cb !important; color: #721c24; }
+        .explanation { margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; border-radius: 5px; display: none; font-size: 0.95em; }
+
+        .btn { display: block; width: 100%; padding: 15px; background: #28a745; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; margin-top: 20px; }
+        .btn:hover { background: #218838; }
+        .btn-restart { background: #007bff; margin-top: 10px; }
+        .score-board { text-align: center; font-size: 24px; font-weight: bold; margin: 20px 0; color: #dc3545; }
+
+        
+        body {
+        overflow-x: hidden; 
+        position: relative;
+    }
+
+    .falling-flower {
+        position: fixed;
+        top: -10%;
+        z-index: 999;
+        user-select: none;
+        pointer-events: none;
+        animation-name: fall-wind; /* Tên animation mới */
+        animation-timing-function: linear; /* Rơi đều */
+        animation-iteration-count: infinite;
+    }
+
+    /* Hiệu ứng Gió Thổi: Bay từ trên xuống và lệch sang Phải */
+    @keyframes fall-wind {
+        0% {
+            /* Bắt đầu: Ở vị trí gốc */
+            transform: translate(0, 0) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            /* Kết thúc: Rơi xuống đáy (100vh) VÀ bay sang phải (200px) */
+            transform: translate(200px, 100vh) rotate(360deg); 
+            opacity: 0;
+        }
+    }
+    .lantern-container {
+        position: fixed;
+        top: 0;
+        z-index: 999; 
+        pointer-events: none;
+    }
+
+    .lantern-container.left {
+        left: 20px; 
+    }
+
+    .lantern-container.right {
+        right: 20px; 
+    }
+
+    .lantern {
+        width: 180px; 
+        height: auto;
+        transform-origin: 50% 0%; 
+        animation: swing 3s infinite ease-in-out;
+    }
+    .lantern-container.right .lantern {
+        animation-delay: 1s; 
+    }
+
+    @keyframes swing {
+        0% { transform: rotate(-10deg); }  
+        50% { transform: rotate(10deg); }  
+        100% { transform: rotate(-10deg); } 
+    }
+    
+    @media (max-width: 768px) {
+        .lantern { width: 80px; } 
+    }
+
+    .cau-doi-khung {
+        position: fixed;
+        top: 180px;      /* Cách đỉnh 80px */
+        width: 700px;   /* Chiều rộng khung */
+        height: 550px;  /* Chiều cao khung */
+        
+        /* Đây là ảnh cái khung trống tôi đã tách từ mẫu của bạn */
+        background-image: url('./img/khung.png');
+        background-size: 100% 100%; /* Kéo dãn ảnh vừa khít khung */
+        background-repeat: no-repeat;
+        
+        z-index: -2;
+        pointer-events: none; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;    
+        padding-top: 50px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    /* Vị trí */
+    .trai { left: -16%; }
+    .phai { right: -14%; }
+
+    /* CSS cho phần chữ viết bên trong */
+    .noi-dung-chu {
+        font-family: 'Dancing Script', cursive;
+        color: #ffd700;
+        font-size: 28px; 
+        line-height: 1.7; 
+        text-align: center;
+        padding-left: 23px;
+    }
+
+    /* Ẩn trên điện thoại */
+    @media (max-width: 768px) {
+        .cau-doi-khung { display: none; }
+    }
+
+    /* Ẩn nút radio mặc định xấu xí */
+input[type="radio"] {
+    display: none;
+}
+
+/* Định dạng thẻ Label bao quanh đáp án */
+.options label {
+    display: flex; /* Để căn hàng ngang */
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Bo góc mềm mại */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+/* Hiệu ứng khi di chuột vào */
+.options label:hover {
+    background-color: #fff5f5; /* Nền hồng nhẹ */
+    border-color: #d32f2f; /* Viền đỏ */
+}
+
+/* Tạo nút tròn chứa chữ A, B, C, D */
+.btn-letter {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #d32f2f; /* Viền đỏ */
+    color: #d32f2f; /* Chữ đỏ */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px; /* Cách phần nội dung text ra */
+    flex-shrink: 0; /* Không bị méo khi text quá dài */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ cứng cáp cho dễ đọc */
+    transition: all 0.2s;
+}
+
+/* --- TRẠNG THÁI KHI ĐƯỢC CHỌN (CHECKED) --- */
+/* Khi input được check, thì cái .btn-letter ngay sau nó sẽ đổi màu */
+input[type="radio"]:checked + .btn-letter {
+    background-color: #d32f2f; /* Nền đỏ */
+    color: #ffd700; /* Chữ vàng */
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.4);
+}
+
+/* Đổi màu viền của cả dòng khi được chọn */
+input[type="radio"]:checked ~ .answer-text {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+/* --- TRẠNG THÁI ĐÚNG / SAI (Khi hiện kết quả) --- */
+/* Đúng: Màu xanh */
+.correct-answer .btn-letter {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: white !important;
+}
+
+/* Sai: Màu đỏ nhạt hơn hoặc giữ nguyên đỏ */
+.wrong-answer .btn-letter {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.explanation {
+    /* ... giữ nguyên code cũ ... */
+    margin-top: 15px; /* Cách xa các đáp án ra một chút cho thoáng */
+}
+
+/* Thanh tiến độ dính trên cùng */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    z-index: 1000; /* Nằm trên tất cả */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #dc3545; /* Màu xanh lá */
+    width: 0%; /* Khởi đầu là 0% */
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+}
+
+.timer-badge-one {
+    position: fixed;
+    bottom: 10px;
+    right: 50px; /* Góc phải màn hình */
+    background-color: #fff;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Khi còn dưới 5 phút thì đổi màu đỏ nhấp nháy */
+.time-warning {
+    background-color: #d32f2f;
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .timer-badge-one {
+        top: auto;
+        bottom: 20px; /* Trên điện thoại thì đưa xuống dưới để đỡ che đề */
+        right: 20px;
+        font-size: 1em;
+    }
+}
+
+.timer-badge-two {
+    position: fixed;
+    bottom: 10px;
+    left: 50px; /* Góc phải màn hình */
+    background-color: #fff;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Khi còn dưới 5 phút thì đổi màu đỏ nhấp nháy */
+.time-warning {
+    background-color: #d32f2f;
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .timer-badge-one {
+        top: auto;
+        bottom: 20px; /* Trên điện thoại thì đưa xuống dưới để đỡ che đề */
+        right: 20px;
+        font-size: 1em;
+    }
+}
+
+
+/* 1. Bảng dẫn đường nằm ngang ở trên đầu */
+.question-map {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* --- THAY ĐỔI QUAN TRỌNG Ở ĐÂY --- */
+    width: 92%; /* Chiếm 92% màn hình */
+    max-width: 850px; /* Giới hạn tối đa 850px thôi, để chừa chỗ 2 bên cho đèn lồng */
+    /* -------------------------------- */
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border: 2px solid #d32f2f;
+    border-radius: 10px;
+    padding: 8px 12px; /* Padding gọn lại chút */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 990;
+    overflow: hidden;
+}
+
+/* 2. Lưới hiển thị: 20 ô một hàng */
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    gap: 2px; /* Vì bảng hẹp lại nên khoảng cách giữa các ô cũng phải nhỏ lại */
+}
+
+/* Style cho ô số (Giữ nguyên hoặc chỉnh nhỏ lại nếu cần) */
+.map-item {
+    width: 100%;
+    height: 26px; /* Chiều cao gọn lại */
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 10px; /* Cỡ chữ nhỏ lại 1 xíu để vừa ô */
+    font-weight: bold;
+    color: #333;
+    transition: 0.2s;
+}
+
+.map-item:hover { background-color: #d32f2f; color: white; }
+.map-item.done { background-color: #d32f2f; color: white; border-color: #b71c1c; }
+.map-item.wrong { background-color: #dc3545 !important; color: white; }
+.map-item.correct { background-color: #28a745 !important; color: white; }
+
+/* 3. XỬ LÝ QUAN TRỌNG: Đẩy nội dung bài thi xuống để không bị bảng che */
+/* Bạn thêm class này vào thẻ body hoặc .container nhé */
+body {
+    padding-top: 140px; /* Đẩy nội dung xuống 140px (áng chừng chiều cao bảng) */
+}
+
+/* Màn hình Laptop nhỏ (dưới 1300px) -> Chia về 20 cột (2.5 dòng) */
+@media (max-width: 1300px) {
+    .map-grid {
+        grid-template-columns: repeat(20, 1fr); 
+    }
+}
+
+/* Màn hình Tablet (dưới 900px) -> Chia 10 cột */
+@media (max-width: 900px) {
+    .map-grid {
+        grid-template-columns: repeat(10, 1fr); 
+    }
+    .question-map {
+        width: 95%;
+    }
+}
+
+/* Điện thoại -> Giữ nguyên logic cũ của bạn (Ẩn đi) */
+@media (max-width: 768px) {
+    .question-map {
+        display: none;
+        /* ... giữ nguyên các thuộc tính mobile cũ ... */
+    }
+}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="lantern-container left">
+    <img src="./img/lantern.png" class="lantern">
+</div>
+
+<div class="lantern-container right">
+    <img src="./img/lantern.png" class="lantern">
+</div>
+
+<div class="cau-doi-khung trai">
+    <div class="noi-dung-chu">
+        TUI <br> CHỈ <br> XEM <br> ÔNG <br> LÀ <br> BẠN
+    </div>
+</div>
+
+<div class="cau-doi-khung phai">
+    <div class="noi-dung-chu">
+        ÔNG <br> MƠ <br> CHI <br> LẮM <br> CHUYỆN <br> TÌNH <br> YÊU
+    </div>
+</div>
+
+<div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<div id="timer-badge-one" class="timer-badge-one">
+    ⏳ <span class="time-text">369:00</span>
+</div>
+
+<div id="timer-badge-two" class="timer-badge-two">
+    ⏳ <span class="time-text">369:00</span>
+</div>
+<div class="question-map" id="question-map">
+    <h3 style="text-align: center; color: #d32f2f; margin: 0 0 10px 0; font-family: 'Dancing Script', cursive;">Danh sách câu</h3>
+    <div class="map-grid" id="map-grid">
+        </div>
+</div>
+
+<div class="container">
+    <h1>Đề Thi Pháp Luật Đại Cương</h1>
+    <div class="matrix-info">
+        <strong>Cấu trúc đề thi (50 câu ngẫu nhiên theo ma trận):</strong><br>
+        - Chương 1: 6 câu (4 Thông hiểu, 2 Vận dụng)<br>
+        - Chương 2: 4 câu (2 Nhận biết, 2 Thông hiểu)<br>
+        - Chương 3: 6 câu (1 Nhận biết, 4 Thông hiểu, 1 Vận dụng)<br>
+        - Chương 4: 21 câu (3 Nhận biết, 8 Thông hiểu, 10 Vận dụng)<br>
+        - Chương 5: 6 câu (3 Thông hiểu, 3 Vận dụng)<br>
+        - Chương 6: 1 câu (1 Nhận biết)<br>
+        - Chương 7: 6 câu (1 Nhận biết, 3 Thông hiểu, 2 Vận dụng)<br>
+        <em>Lưu ý câu hỏi trong đây phục vụ cho mục đích ôn tập và tham khảo. Kí tên : Quang Bình</em>
+    </div>
+
+    <div id="quiz-area"></div>
+    
+    <button class="btn" id="submit-btn" onclick="submitQuiz()">Nộp Bài</button>
+    
+    <div id="result-area" style="display:none;">
+        <div class="score-board" id="score"></div>
+        <button class="btn btn-restart" onclick="location.reload()">Làm đề mới (Đảo câu hỏi)</button>
+    </div>
+</div>
+
+<script>
+// --- NGÂN HÀNG CÂU HỎI TỔNG HỢP ---
+// Bao gồm cả định dạng cũ (chapter, question) và định dạng mới (c, q)
+const questionBank = [
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Kiến trúc sư nhìn vào bản vẽ mặt bằng 2D và hình dung ra không gian 3D của ngôi nhà sẽ xây. Đây là loại tư duy:",
+    "options": ["Tư duy trực quan hành động", "Tư duy trực quan hình ảnh", "Tư duy trừu tượng", "Tư duy thuật giải"],
+    "answer": 1,
+    "explanation": "Tư duy trực quan hình ảnh: Thao tác dựa trên các biểu tượng hình ảnh trong đầu."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Hình tượng \"Rồng\" trong văn hóa Á Đông được tạo ra bằng phương pháp sáng tạo nào của tưởng tượng?",
+    "options": ["Chắp ghép", "Nhấn mạnh", "Điển hình hóa", "Sơ đồ hóa"],
+    "answer": 0,
+    "explanation": "Chắp ghép: Ghép các bộ phận của nhiều con vật khác nhau (sừng hươu, thân rắn, vảy cá...) để tạo ra hình tượng mới."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Trong tranh biếm họa, họa sĩ thường vẽ nhân vật với cái mũi cực dài hoặc cái đầu cực to để gây cười. Đây là phương pháp:",
+    "options": ["Liên hợp", "Nhấn mạnh (Cường điệu hóa)", "Loại suy", "Điển hình hóa"],
+    "answer": 1,
+    "explanation": "Nhấn mạnh: Thay đổi kích thước hoặc đặc điểm của một bộ phận để làm nổi bật tính cách hoặc gây ấn tượng."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Nhà văn Nam Cao xây dựng nhân vật Chí Phèo đại diện cho người nông dân bị tha hóa trong xã hội thực dân phong kiến. Ông đã sử dụng phương pháp:",
+    "options": ["Chắp ghép", "Điển hình hóa", "Loại suy", "Sơ đồ hóa"],
+    "answer": 1,
+    "explanation": "Điển hình hóa: Tổng hợp những đặc điểm chung, tiêu biểu của một nhóm người/giai cấp vào một hình tượng nhân vật cụ thể."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Khi chế tạo máy bay, con người đã mô phỏng hình dáng và nguyên lý bay của loài chim. Đây là cách sáng tạo:",
+    "options": ["Loại suy", "Chắp ghép", "Nhấn mạnh", "Sơ đồ hóa"],
+    "answer": 0,
+    "explanation": "Loại suy: Tạo ra cái mới dựa trên sự tương tự, mô phỏng chức năng hoặc cấu tạo của sự vật khác."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Học sinh đọc đoạn văn mô tả phong cảnh Đà Lạt và hình dung ra khung cảnh đó trong đầu dù chưa từng đến đó. Đây là:",
+    "options": ["Tưởng tượng sáng tạo", "Tưởng tượng tái tạo", "Ảo giác", "Tư duy hình tượng"],
+    "answer": 1,
+    "explanation": "Tưởng tượng tái tạo: Xây dựng hình ảnh dựa trên sự mô tả (lời nói, văn bản) hoặc sơ đồ có sẵn."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Trong giờ học, giáo viên sử dụng sơ đồ tư duy để tóm tắt bài học giúp học sinh dễ nhớ. Giáo viên đang vận dụng phương pháp tưởng tượng nào?",
+    "options": ["Sơ đồ hóa", "Điển hình hóa", "Chắp ghép", "Liên hợp"],
+    "answer": 0,
+    "explanation": "Sơ đồ hóa: Lược bỏ các chi tiết cụ thể, dùng mã hiệu, biểu đồ để biểu đạt những mối quan hệ chủ yếu."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Khi gặp một bài toán khó, học sinh loay hoay mãi không giải được, bỗng nhiên reo lên \"A, ra rồi!\". Thời điểm \"A, ra rồi!\" thể hiện giai đoạn nào của tư duy?",
+    "options": ["Nhận thức vấn đề", "Sàng lọc liên tưởng", "Xuất hiện giả thuyết", "Kiểm tra giả thuyết"],
+    "answer": 2,
+    "explanation": "Đây là thời điểm bừng sáng (insight), khi giải pháp hoặc giả thuyết cho vấn đề đột ngột xuất hiện."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Người mù thường có thính giác và xúc giác nhạy bén hơn người bình thường. Đây là ví dụ của quy luật:",
+    "options": ["Quy luật thích ứng", "Quy luật tác động qua lại", "Quy luật tương phản", "Quy luật ảo giác"],
+    "answer": 1,
+    "explanation": "Quy luật tác động qua lại (bù trừ): Khi một giác quan bị tổn thương, độ nhạy cảm của các giác quan khác tăng lên để bù đắp."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Khi nghe một bản nhạc buồn, ta nhìn khung cảnh xung quanh cũng thấy ảm đạm. Hiện tượng này minh họa cho:",
+    "options": ["Tổng giác", "Ảo giác", "Tính ổn định", "Tính lựa chọn"],
+    "answer": 0,
+    "explanation": "Tổng giác: Tâm trạng và cảm xúc của chủ thể chi phối cách tri giác thế giới bên ngoài."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Giáo viên yêu cầu học sinh: \"Em hãy so sánh sự giống và khác nhau giữa Tế bào động vật và Tế bào thực vật\". Thao tác tư duy chủ yếu học sinh cần dùng là:",
+    "options": ["Phân tích và Tổng hợp", "So sánh", "Trừu tượng hóa", "Cụ thể hóa"],
+    "answer": 1,
+    "explanation": "So sánh: Thao tác trí tuệ dùng để xác định sự giống nhau và khác nhau giữa các đối tượng."
+  },
+  {
+    "chapter": 4,
+    "level": "VD",
+    "question": "Câu nói \"Nói có sách, mách có chứng\" đòi hỏi tư duy phải có phẩm chất nào?",
+    "options": ["Tính linh hoạt", "Tính phê phán", "Tính có căn cứ", "Tính độc lập"],
+    "answer": 2,
+    "explanation": "Tính có căn cứ: Tư duy phải dựa trên những bằng chứng xác thực, lập luận logic, không suy đoán cảm tính."
+  }
+
+];
+
+questionBank.forEach((q, index) => {
+    q.id = index;
+});
+        
+// Cấu trúc Matrix đề thi
+const matrix = {
+    1: { NB: 0, TH: 4, VD: 2 },
+    2: { NB: 2, TH: 2, VD: 0 },
+    3: { NB: 1, TH: 4, VD: 1 },
+    4: { NB: 3, TH: 8, VD: 10 },
+    5: { NB: 0, TH: 3, VD: 3 },
+    6: { NB: 1, TH: 0, VD: 0 },
+    7: { NB: 1, TH: 3, VD: 2 }
+};
+
+// Hàm xáo trộn mảng (Shuffle)
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Hàm lấy câu hỏi theo Matrix (ĐÃ SỬA LỖI LẶP & THỨ TỰ)
+// Hàm lấy câu hỏi theo Matrix (Phiên bản chống trùng lặp)
+function getExamQuestions() {
+    let examQuestions = [];
+    
+    // 1. Lấy danh sách ID các câu hỏi đã thi lần trước từ LocalStorage
+    const lastExamIds = JSON.parse(localStorage.getItem('lastExamIds')) || [];
+    let currentExamIds = [];
+
+    // 2. Duyệt qua từng chương và mức độ
+    for (let chap = 1; chap <= 7; chap++) {
+        ['NB', 'TH', 'VD'].forEach(level => {
+            const countNeeded = matrix[chap][level];
+
+            if (countNeeded > 0) {
+                // Lọc tất cả câu hỏi thuộc chương và mức độ này
+                const pool = questionBank.filter(q => 
+                    (q.chapter == chap || q.c == chap) && 
+                    (q.level == level || q.l == level)
+                );
+
+                if (pool.length > 0) {
+                    // Tách thành 2 nhóm: 
+                    // Nhóm A: Chưa thi lần trước (Ưu tiên)
+                    // Nhóm B: Đã thi lần trước (Dự phòng)
+                    const freshQuestions = pool.filter(q => !lastExamIds.includes(q.id));
+                    const usedQuestions = pool.filter(q => lastExamIds.includes(q.id));
+
+                    // Trộn ngẫu nhiên cả 2 nhóm
+                    shuffle(freshQuestions);
+                    shuffle(usedQuestions);
+
+                    // Logic lấy câu hỏi: Lấy hết nhóm A, nếu thiếu thì lấy thêm từ nhóm B
+                    let selectedForSlot = [];
+                    
+                    if (freshQuestions.length >= countNeeded) {
+                        // Nếu đủ câu mới thì lấy toàn bộ từ câu mới
+                        selectedForSlot = freshQuestions.slice(0, countNeeded);
+                    } else {
+                        // Nếu thiếu, lấy hết câu mới + bù thêm câu cũ
+                        selectedForSlot = freshQuestions.concat(usedQuestions.slice(0, countNeeded - freshQuestions.length));
+                    }
+                    
+                    examQuestions = examQuestions.concat(selectedForSlot);
+                }
+            }
+        });
+    }
+
+    // 3. Lưu danh sách ID của đề thi hiện tại vào LocalStorage để dùng cho lần sau
+    currentExamIds = examQuestions.map(q => q.id);
+    localStorage.setItem('lastExamIds', JSON.stringify(currentExamIds));
+
+    // 4. Trộn lại toàn bộ đề thi
+    return shuffle(examQuestions);
+}
+// Render câu hỏi ra màn hình
+let currentExam = [];
+
+function renderQuiz() {
+    const quizArea = document.getElementById('quiz-area');
+    quizArea.innerHTML = '';
+    
+    // Lấy đề thi đã trộn
+    currentExam = getExamQuestions();
+    
+    if (currentExam.length === 0) {
+        quizArea.innerHTML = '<p style="text-align:center;">Chưa có dữ liệu câu hỏi. Vui lòng kiểm tra biến questionBank.</p>';
+        return;
+    }
+
+    currentExam.forEach((q, index) => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        
+        // Chuẩn hóa dữ liệu từ 2 định dạng cũ/mới
+        const chapVal = q.chapter || q.c;
+        const levelVal = q.level || q.l;
+        const questionText = q.question || q.q;
+        const answers = q.options || q.a; // options (cũ) hoặc a (mới)
+        const explainText = q.explanation || q.explain;
+        const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
+
+        // Tạo HTML cho các đáp án
+        let optionsHtml = '';
+            answers.forEach((opt, optIndex) => {
+            const letter = String.fromCharCode(65 + optIndex);
+
+            optionsHtml += `
+                <label id="label-${index}-${optIndex}">
+                <input type="radio" name="q${index}" value="${optIndex}" onchange="checkAnswer(${index}, ${optIndex}, ${correctVal})">
+            
+                <span class="btn-letter">${letter}</span>
+            
+                <span class="answer-text">${opt}</span>
+                </label>
+            `;
+        });
+
+        card.innerHTML = `
+            <div>
+                <span class="meta-badge badge-c">Chương ${chapVal}</span>
+                <span class="meta-badge badge-l">${levelVal}</span>
+            </div>
+            <div class="question-title">Câu ${index + 1}: ${questionText}</div>
+            <div class="options">${optionsHtml}</div>
+            <div class="explanation" id="explain-${index}">
+                <strong>Giải thích:</strong> ${explainText}
+            </div>
+        `;
+        quizArea.appendChild(card);
+    });
+}
+
+// Kiểm tra đáp án ngay lập tức (Tô màu)
+function checkAnswer(qIndex, selected, correct) {
+    console.log(`Người dùng chọn câu ${qIndex} đáp án ${selected}`);
+
+    const mapItem = document.getElementById(`map-item-${qIndex}`);
+    if (mapItem) {
+        mapItem.classList.add('done');
+    }
+
+    const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
+    const totalQuestions = currentExam.length;
+    const percent = (answeredCount / totalQuestions) * 100;
+    
+    document.getElementById('progress-bar').style.width = percent + '%';
+}
+// Nộp bài (Tính điểm tổng)
+function submitQuiz() {
+    clearInterval(timerInterval);
+    let score = 0;
+    const total = currentExam.length;
+    let unAnswered = 0;
+
+    // Lặp qua từng câu hỏi
+    currentExam.forEach((q, index) => {
+        const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
+        const selectedInput = document.querySelector(`input[name="q${index}"]:checked`);
+        const explainBox = document.getElementById(`explain-${index}`);
+        
+        // Chuyển đổi số (0, 1, 2, 3) thành chữ cái (A, B, C, D)
+        const correctLetter = String.fromCharCode(65 + correctVal); 
+        let userLetter = '';
+        let resultText = ''; // Đây là biến chứa dòng chữ bạn muốn hiện
+
+        // 1. Khóa tất cả các nút lại
+        const allInputs = document.querySelectorAll(`input[name="q${index}"]`);
+        allInputs.forEach(input => input.disabled = true);
+
+        // 2. Xử lý logic Đúng/Sai và tạo nội dung thông báo
+        if (selectedInput) {
+            const selectedVal = parseInt(selectedInput.value);
+            userLetter = String.fromCharCode(65 + selectedVal); // Lấy chữ cái người dùng chọn
+            
+            const selectedLabel = document.getElementById(`label-${index}-${selectedVal}`);
+            const correctLabel = document.getElementById(`label-${index}-${correctVal}`);
+
+            if (selectedVal === correctVal) {
+                // --- TRƯỜNG HỢP ĐÚNG ---
+                score++;
+                if (selectedLabel) selectedLabel.classList.add('correct-answer');
+                
+                // Nội dung hiển thị: Màu xanh lá
+                resultText = `<div style="color: #155724; margin-bottom: 8px; font-weight: bold; border-bottom: 1px dashed #c3e6cb; padding-bottom: 5px;">
+                                ✅ Bạn chọn: ${userLetter} (Chính xác)
+                              </div>`;
+            } else {
+                // --- TRƯỜNG HỢP SAI ---
+                if (selectedLabel) selectedLabel.classList.add('wrong-answer');
+                if (correctLabel) correctLabel.classList.add('correct-answer');
+                
+                // Nội dung hiển thị: Bạn chọn (Đỏ) - Đáp án đúng (Xanh)
+                resultText = `<div style="margin-bottom: 8px; border-bottom: 1px dashed #f5c6cb; padding-bottom: 5px;">
+                                <span style="color: #721c24; font-weight: bold;">❌ Bạn chọn: ${userLetter}</span> 
+                                <span style="margin: 0 10px;">✅</span> 
+                                <span style="color: #155724; font-weight: bold;">Đáp án đúng: ${correctLetter}</span>
+                              </div>`;
+            }
+        } else {
+            // --- TRƯỜNG HỢP BỎ TRỐNG ---
+            unAnswered++;
+            const correctLabel = document.getElementById(`label-${index}-${correctVal}`);
+            if (correctLabel) correctLabel.classList.add('correct-answer');
+
+            resultText = `<div style="margin-bottom: 8px; border-bottom: 1px dashed #ffeeba; padding-bottom: 5px;">
+                            <span style="color: #856404; font-weight: bold;">⚠️ Bạn chưa chọn</span> 
+                            <span style="margin: 0 10px;">✅</span> 
+                            <span style="color: #155724; font-weight: bold;">Đáp án đúng: ${correctLetter}</span>
+                          </div>`;
+        }
+
+        // 3. Hiện hộp giải thích và chèn nội dung vào
+        if (explainBox) {
+            if (!explainBox.innerHTML.includes('Bạn chọn:')) {
+                explainBox.innerHTML = resultText + explainBox.innerHTML;
+            }
+            
+            explainBox.style.display = 'block';
+            explainBox.style.animation = 'fadeIn 0.5s';
+        }
+    });
+
+    const resultArea = document.getElementById('result-area');
+    const scoreBoard = document.getElementById('score');
+    
+    resultArea.style.display = 'block';
+    
+    let msg = `Kết quả: <span style="color: #d32f2f; font-size: 1.2em;">${score}</span> / ${total} câu đúng.`;
+    if (unAnswered > 0) msg += `<br><span style="font-size: 0.9em; color: #555;">(Bạn chưa làm ${unAnswered} câu)</span>`;
+    
+    scoreBoard.innerHTML = msg;
+    document.getElementById('submit-btn').style.display = 'none';
+    resultArea.scrollIntoView({ behavior: 'smooth' });
+}
+renderQuiz();
+
+document.addEventListener('DOMContentLoaded', function() {
+        const flowerImages = [
+            './img/hoadao.png', 
+            './img/luckymoney.png'
+        ];
+        
+        const spawnRate = 300; // Tốc độ tạo hoa (càng nhỏ hoa càng dày)
+
+        function createFlower() {
+            const flower = document.createElement('img');
+            flower.src = flowerImages[Math.floor(Math.random() * flowerImages.length)];
+            flower.classList.add('falling-flower');
+            flower.style.left = (Math.random() * 110 - 10) + 'vw'; 
+            const width = Math.random() * 30 + 20; 
+            flower.style.width = width + 'px';
+            flower.style.height = 'auto'; 
+            const duration = Math.random() * 5 + 4;
+            flower.style.animationDuration = duration + 's';
+            document.body.appendChild(flower);
+            setTimeout(() => {
+                flower.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createFlower, spawnRate);
+    });
+
+    // Cấu hình thời gian làm bài (phút)
+const examMinutes = 369; 
+let timeRemaining = examMinutes * 60; // Đổi ra giây
+let timerInterval;
+
+function startTimer() {
+    // Lấy tất cả các vị trí hiển thị thời gian (class time-text)
+    const timeDisplays = document.querySelectorAll('.time-text');
+    
+    // Lấy 2 cái khung đồng hồ để đổi màu khi sắp hết giờ
+    const badge1 = document.getElementById('timer-badge-one');
+    const badge2 = document.getElementById('timer-badge-two');
+
+    timerInterval = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+
+        // Định dạng chuỗi thời gian 09:05
+        const timeString = `${minutes < 10 ? '0'+minutes : minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
+
+        // Cập nhật chữ cho TẤT CẢ các đồng hồ
+        timeDisplays.forEach(display => {
+            display.innerText = timeString;
+        });
+
+        // Cảnh báo khi còn dưới 5 phút (300 giây)
+        if (timeRemaining < 300) { 
+            if(badge1) badge1.classList.add('time-warning');
+            if(badge2) badge2.classList.add('time-warning');
+        }
+
+        // Hết giờ
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            alert("⏰ Đã hết giờ làm bài! Hệ thống sẽ tự động nộp bài.");
+            submitQuiz(); // Tự động nộp
+        }
+
+        timeRemaining--;
+    }, 1000);
+}
+
+// Gọi hàm chạy
+startTimer();
+
+function renderQuestionMap() {
+    const mapGrid = document.getElementById('map-grid');
+    mapGrid.innerHTML = ''; // Reset
+
+    currentExam.forEach((q, index) => {
+        // Tạo ô số
+        const item = document.createElement('a');
+        item.className = 'map-item';
+        item.id = `map-item-${index}`;
+        item.innerText = index + 1;
+        
+        // Bấm vào thì cuộn đến câu đó
+        item.onclick = function() {
+            // Tìm thẻ câu hỏi tương ứng để cuộn tới
+            // Lưu ý: Bạn cần thêm id="question-card-${index}" vào thẻ div .question-card trong hàm renderQuiz nhé!
+            const card = document.querySelectorAll('.question-card')[index]; 
+            if(card) {
+                card.scrollIntoView({behavior: "smooth", block: "center"});
+            }
+        };
+        
+        mapGrid.appendChild(item);
+    });
+}
+
+// Gọi hàm này ngay sau khi renderQuiz()
+renderQuestionMap();
+</script>
+
+</body>
+</html>

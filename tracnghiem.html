@@ -4241,7 +4241,6 @@ function submitQuiz() {
     const total = currentExam.length;
     
     currentExam.forEach((q, index) => {
-        // Chuẩn hóa đáp án đúng
         const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
         
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
