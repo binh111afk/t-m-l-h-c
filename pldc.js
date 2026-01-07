@@ -6,18 +6,18 @@ let questionBank = [];
 async function loadQuestions() {
     try {
         // Đảm bảo đường dẫn file json đúng
-        const response = await fetch('./question.json'); 
+        const response = await fetch('./question.json');
         questionBank = await response.json();
-        
+
         // Gán ID để quản lý
         questionBank.forEach((q, index) => { q.id = index; });
 
         console.log("Đã tải xong database: " + questionBank.length + " câu.");
-        
+
         // Bắt đầu vẽ giao diện
         renderQuiz();
         renderQuestionMap();
-        
+
     } catch (error) {
         console.error("Lỗi:", error);
         alert("Lỗi tải dữ liệu! Hãy kiểm tra file question.json và chạy Live Server.");
@@ -48,7 +48,7 @@ function shuffle(array) {
 // --- 2. LOGIC LẤY CÂU HỎI THÔNG MINH (ĐA NĂNG) ---
 function getExamQuestions() {
     let examQuestions = [];
-    
+
     // KIỂM TRA: File HTML hiện tại có yêu cầu chương cụ thể không?
     // (JS sẽ đọc thuộc tính data-chapter trong thẻ <body>)
     const specificChapter = document.body.getAttribute('data-chapter');
@@ -60,37 +60,37 @@ function getExamQuestions() {
 
         // Lọc tất cả câu hỏi của chương đó
         let pool = questionBank.filter(q => (q.chapter == chapNum || q.c == chapNum));
-        
+
         // Trộn và lấy 25 câu
         shuffle(pool);
         examQuestions = pool.slice(0, 25);
-        
+
         // Sửa lại tiêu đề web cho phù hợp
         updateUIForChapterMode(chapNum, examQuestions.length);
 
     } else {
         // === TRƯỜNG HỢP 2: THI THỬ TỔNG HỢP (Mặc định) ===
         console.log(">>> Chế độ: Thi thử tổng hợp (Full Matrix)");
-        
+
         // Logic lấy theo ma trận (như cũ)
         const lastExamIds = JSON.parse(localStorage.getItem('lastExamIds')) || [];
-        
+
         for (let chap = 1; chap <= 8; chap++) {
-            if (!matrix[chap]) continue; 
+            if (!matrix[chap]) continue;
             ['NB', 'TH', 'VD'].forEach(level => {
                 const countNeeded = matrix[chap][level];
                 if (countNeeded > 0) {
-                    const pool = questionBank.filter(q => 
-                        (q.chapter == chap || q.c == chap) && 
+                    const pool = questionBank.filter(q =>
+                        (q.chapter == chap || q.c == chap) &&
                         (q.level == level || q.l == level)
                     );
                     if (pool.length > 0) {
                         const fresh = pool.filter(q => !lastExamIds.includes(q.id));
                         const used = pool.filter(q => lastExamIds.includes(q.id));
                         shuffle(fresh); shuffle(used);
-                        
-                        let slot = (fresh.length >= countNeeded) 
-                            ? fresh.slice(0, countNeeded) 
+
+                        let slot = (fresh.length >= countNeeded)
+                            ? fresh.slice(0, countNeeded)
                             : fresh.concat(used.slice(0, countNeeded - fresh.length));
                         examQuestions = examQuestions.concat(slot);
                     }
@@ -109,16 +109,16 @@ function getExamQuestions() {
 function updateUIForChapterMode(chapNum, count) {
     // Đổi tiêu đề H1
     const h1 = document.querySelector('h1');
-    if(h1) h1.innerHTML = `Luyện Tập Chương ${chapNum}`;
+    if (h1) h1.innerHTML = `Luyện Tập Chương ${chapNum}`;
 
     // Đổi khung thông tin
     const infoBox = document.querySelector('.matrix-info');
-    if(infoBox) {
+    if (infoBox) {
         infoBox.innerHTML = `
             <div style="text-align: center;
     color: #d32f2f;
     text-shadow: 1px 1px 0px #ffd700;
-    font-family: 'Dancing Script', cursive; font-size: 2em;">
+    font-family: 'Dancing Script', cursive; font-size: 2em; color: black;">
                 <h3>LUYỆN TẬP THEO CHƯƠNG: CHƯƠNG ${chapNum}</h3>
                 <p>Số lượng: <b>${count} câu</b></p>
             </div>
@@ -132,9 +132,9 @@ let currentExam = [];
 function renderQuiz() {
     const quizArea = document.getElementById('quiz-area');
     quizArea.innerHTML = '';
-    
+
     currentExam = getExamQuestions(); // Gọi hàm thông minh ở trên
-    
+
     if (currentExam.length === 0) {
         quizArea.innerHTML = '<p style="text-align:center;">Không tìm thấy câu hỏi phù hợp!</p>';
         return;
@@ -203,22 +203,22 @@ function checkAnswer(idx, userPick, correctPick) {
     if (userPick === correctPick) {
         // ĐÚNG
         userLbl.classList.add('correct-answer');
-        if(mapItem) mapItem.classList.add('correct');
+        if (mapItem) mapItem.classList.add('correct');
         msg = `<div style="color:#155724; font-weight:bold; margin-bottom:5px;">✅ Bạn chọn: ${userChar} (Chính xác)</div>`;
     } else {
         // SAI
         userLbl.classList.add('wrong-answer');
         correctLbl.classList.add('correct-answer');
-        if(mapItem) mapItem.classList.add('wrong');
+        if (mapItem) mapItem.classList.add('wrong');
         msg = `<div style="color:#721c24; font-weight:bold; margin-bottom:5px;">❌ Bạn chọn: ${userChar} | 👉 Đáp án: ${correctChar}</div>`;
     }
 
     // Hiện giải thích
-    if(explainDiv) {
+    if (explainDiv) {
         explainDiv.innerHTML = msg + explainDiv.innerHTML;
         explainDiv.style.display = 'block';
     }
-    
+
     // Update tiến độ
     updateProgress();
 }
@@ -227,37 +227,37 @@ function updateProgress() {
     const done = document.querySelectorAll('input[type="radio"]:checked').length;
     const total = currentExam.length;
     const bar = document.getElementById('progress-bar');
-    if(bar) bar.style.width = (done/total*100) + "%";
+    if (bar) bar.style.width = (done / total * 100) + "%";
 }
 
 // Nộp bài
 function submitQuiz() {
     let score = 0;
     let unAnswered = 0;
-    
+
     currentExam.forEach((q, idx) => {
         const picked = document.querySelector(`input[name="q-${idx}"]:checked`);
         const correct = (q.answer !== undefined) ? q.answer : q.correct;
-        
+
         // Nếu chưa làm thì hiện đáp án
         if (!picked) {
             unAnswered++;
             const correctLbl = document.getElementById(`lbl-${idx}-${correct}`);
-            if(correctLbl) correctLbl.classList.add('correct-answer');
-            
+            if (correctLbl) correctLbl.classList.add('correct-answer');
+
             const explainDiv = document.getElementById(`explain-${idx}`);
-            if(explainDiv) {
+            if (explainDiv) {
                 explainDiv.style.display = 'block';
                 // Hiện text báo chưa làm
-                if(!explainDiv.innerHTML.includes("Bạn chưa chọn")) {
-                     const correctChar = String.fromCharCode(65 + correct);
-                     explainDiv.innerHTML = `<div style="color:#856404; font-weight:bold;">⚠️ Bạn chưa chọn | 👉 Đáp án: ${correctChar}</div>` + explainDiv.innerHTML;
+                if (!explainDiv.innerHTML.includes("Bạn chưa chọn")) {
+                    const correctChar = String.fromCharCode(65 + correct);
+                    explainDiv.innerHTML = `<div style="color:#856404; font-weight:bold;">⚠️ Bạn chưa chọn | 👉 Đáp án: ${correctChar}</div>` + explainDiv.innerHTML;
                 }
             }
         } else {
-            if(parseInt(picked.value) === correct) score++;
+            if (parseInt(picked.value) === correct) score++;
         }
-        
+
         // Khóa tất cả input (phòng trường hợp sót)
         document.getElementsByName(`q-${idx}`).forEach(i => i.disabled = true);
     });
@@ -267,15 +267,15 @@ function submitQuiz() {
     const scoreDiv = document.getElementById('score');
     resArea.style.display = 'block';
     scoreDiv.innerHTML = `Kết quả: <span style="color:red">${score}</span> / ${currentExam.length} câu đúng.`;
-    
+
     document.getElementById('submit-btn').style.display = 'none';
-    resArea.scrollIntoView({behavior: "smooth"});
+    resArea.scrollIntoView({ behavior: "smooth" });
 }
 
 // Vẽ Map câu hỏi
 function renderQuestionMap() {
     const map = document.getElementById('map-grid');
-    if(!map) return;
+    if (!map) return;
     map.innerHTML = '';
     currentExam.forEach((_, i) => {
         const a = document.createElement('a');
@@ -283,7 +283,7 @@ function renderQuestionMap() {
         a.id = `map-${i}`;
         a.innerText = i + 1;
         a.onclick = () => {
-            document.getElementById(`q-card-${i}`).scrollIntoView({behavior:"smooth", block:"center"});
+            document.getElementById(`q-card-${i}`).scrollIntoView({ behavior: "smooth", block: "center" });
         };
         map.appendChild(a);
     });
@@ -295,7 +295,7 @@ function confirmSubmit() {
     const done = document.querySelectorAll('input[type="radio"]:checked').length;
     const total = currentExam.length;
     const left = total - done;
-    let msg = left > 0 ? `⚠️ Còn <b>${left}</b> câu chưa làm!` : "Sẵn sàng nộp bài chưa?";
+    let msg = left > 0 ? `⚠️ Bạn còn <b>${left}</b> câu chưa làm! <br> 😏 Không biết thì chọn đại đi fen 😏` : "Có chắc muốn nộp bài không fen?";
     showTetModal(msg, submitQuiz);
 }
 
@@ -307,11 +307,11 @@ function showTetModal(msg, callback) {
     const m = document.getElementById('tet-modal');
     document.getElementById('modal-message').innerHTML = msg;
     m.style.display = 'flex';
-    
+
     const btn = document.getElementById('btn-confirm-action');
     const newBtn = btn.cloneNode(true); // Xóa event cũ
     btn.parentNode.replaceChild(newBtn, btn);
-    
+
     newBtn.onclick = () => { callback(); closeModal(); };
 }
 
@@ -320,25 +320,25 @@ function closeModal() {
 }
 
 const backToTopBtn = document.getElementById("btn-back-to-top");
-window.onscroll = function() {
-    if(backToTopBtn) backToTopBtn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+window.onscroll = function () {
+    if (backToTopBtn) backToTopBtn.style.display = (window.scrollY > 300) ? 'block' : 'none';
 };
-function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
 // Chặn chuột phải, F12
 document.addEventListener('contextmenu', e => e.preventDefault());
-document.onkeydown = e => { if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false; };
+document.onkeydown = e => { if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false; };
 
 // Hoa rơi
 document.addEventListener('DOMContentLoaded', () => {
     const imgs = ['./img/hoadao.png', './img/luckymoney.png'];
     setInterval(() => {
         const img = document.createElement('img');
-        img.src = imgs[Math.floor(Math.random()*imgs.length)];
+        img.src = imgs[Math.floor(Math.random() * imgs.length)];
         img.className = 'falling-flower';
-        img.style.left = Math.random()*100 + 'vw';
-        img.style.width = (Math.random()*20 + 20) + 'px';
-        img.style.animationDuration = (Math.random()*3 + 3) + 's';
+        img.style.left = Math.random() * 100 + 'vw';
+        img.style.width = (Math.random() * 20 + 20) + 'px';
+        img.style.animationDuration = (Math.random() * 3 + 3) + 's';
         document.body.appendChild(img);
         setTimeout(() => img.remove(), 6000);
     }, 500);
