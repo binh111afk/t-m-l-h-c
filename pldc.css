@@ -1,0 +1,840 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    border: 2px solid #ffd700;
+}
+
+h1 {
+    text-align: center;
+    color: #d32f2f;
+    text-shadow: 1px 1px 0px #ffd700;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+}
+
+.matrix-info {
+    background: #fffde7;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    border-left: 5px solid #FFD41D;
+    color: #3e2723;
+}
+
+.question-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.question-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.question-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Badge hiển thị chương/mức độ */
+.meta-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    /* Bo góc nhẹ vừa phải, không quá tròn */
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -1px;
+}
+
+.badge-c {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ffcdd2;
+}
+
+.badge-l {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.meta-badge:hover {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.options label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+.options label:hover {
+    background-color: #fff0f0;
+    border-color: #d32f2f;
+    transform: translateX(10px);
+    box-shadow: -5px 5px 10px rgba(211, 47, 47, 0.1);
+}
+
+.options input {
+    color: #d32f2f;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(211, 47, 47, 0.3);
+}
+
+/* Kết quả đúng sai */
+.correct-answer {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724;
+}
+
+.wrong-answer {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24;
+}
+
+.explanation {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.95em;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    /* Bo tròn hình viên thuốc cho mềm mại */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    /* Chữ in hoa cho mạnh mẽ */
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+    /* Để làm hiệu ứng ánh sáng quét qua */
+    transition: all 0.4s ease;
+    /* Chuyển động mượt mà */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#submit-btn {
+    /* Gradient đỏ sang cam đậm */
+    background: linear-gradient(45deg, #b71c1c, #d32f2f, #f44336);
+    background-size: 200% auto;
+    /* Để làm hiệu ứng chuyển màu */
+    color: #ffd700;
+    /* Chữ màu Vàng kim loại */
+    border: 2px solid #ffd700;
+    /* Viền vàng */
+}
+
+#submit-btn:hover {
+    background-position: right center;
+    /* Chạy dải màu */
+    transform: translateY(-3px) scale(1.02);
+    /* Nổi lên và phình to nhẹ */
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.6);
+    /* Đổ bóng đỏ rực rỡ */
+    color: #fff;
+    /* Chữ chuyển sang trắng cho nổi */
+    border-color: #fff;
+}
+
+.btn-restart {
+    /* Gradient Vàng sang Cam */
+    background: linear-gradient(45deg, #ff6f00, #ff8f00, #ffca28);
+    background-size: 200% auto;
+    color: #fff;
+    border: 2px solid #fff;
+    margin-top: 15px;
+}
+
+.btn-restart:hover {
+    background-position: right center;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(255, 143, 0, 0.6);
+    /* Đổ bóng vàng cam */
+    color: #b71c1c;
+    /* Chữ chuyển sang đỏ */
+    border-color: #b71c1c;
+}
+
+
+
+.score-board {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #dc3545;
+}
+
+
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.falling-flower {
+    position: fixed;
+    top: -10%;
+    z-index: 999;
+    user-select: none;
+    pointer-events: none;
+    animation-name: fall-wind;
+    /* Tên animation mới */
+    animation-timing-function: linear;
+    /* Rơi đều */
+    animation-iteration-count: infinite;
+}
+
+/* Hiệu ứng Gió Thổi: Bay từ trên xuống và lệch sang Phải */
+@keyframes fall-wind {
+    0% {
+        /* Bắt đầu: Ở vị trí gốc */
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        /* Kết thúc: Rơi xuống đáy (100vh) VÀ bay sang phải (200px) */
+        transform: translate(200px, 100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.lantern-container {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.lantern-container.left {
+    left: 20px;
+}
+
+.lantern-container.right {
+    right: 20px;
+}
+
+.lantern {
+    width: 180px;
+    height: auto;
+    transform-origin: 50% 0%;
+    animation: swing 3s infinite ease-in-out;
+}
+
+.lantern-container.right .lantern {
+    animation-delay: 1s;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .lantern {
+        width: 80px;
+    }
+}
+
+.cau-doi-khung {
+    position: fixed;
+    top: 180px;
+    /* Cách đỉnh 80px */
+    width: 700px;
+    /* Chiều rộng khung */
+    height: 550px;
+    /* Chiều cao khung */
+
+    /* Đây là ảnh cái khung trống tôi đã tách từ mẫu của bạn */
+    background-image: url('./img/khung.png');
+    background-size: 100% 100%;
+    /* Kéo dãn ảnh vừa khít khung */
+    background-repeat: no-repeat;
+
+    z-index: -2;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+/* Vị trí */
+.trai {
+    left: -16%;
+}
+
+.phai {
+    right: -14%;
+}
+
+/* CSS cho phần chữ viết bên trong */
+.noi-dung-chu {
+    font-family: 'Dancing Script', cursive;
+    color: #ffd700;
+    font-size: 28px;
+    line-height: 1.7;
+    text-align: center;
+    padding-left: 23px;
+}
+
+/* Ẩn trên điện thoại */
+@media (max-width: 768px) {
+    .cau-doi-khung {
+        display: none;
+    }
+}
+
+/* Ẩn nút radio mặc định xấu xí */
+input[type="radio"] {
+    display: none;
+}
+
+/* Định dạng thẻ Label bao quanh đáp án */
+.options label {
+    display: flex;
+    /* Để căn hàng ngang */
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    /* Bo góc mềm mại */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+/* Hiệu ứng khi di chuột vào */
+.options label:hover {
+    background-color: #fff5f5;
+    /* Nền hồng nhẹ */
+    border-color: #d32f2f;
+    /* Viền đỏ */
+}
+
+/* Tạo nút tròn chứa chữ A, B, C, D */
+.btn-letter {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #d32f2f;
+    /* Viền đỏ */
+    color: #d32f2f;
+    /* Chữ đỏ */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    /* Cách phần nội dung text ra */
+    flex-shrink: 0;
+    /* Không bị méo khi text quá dài */
+    font-family: 'Segoe UI', sans-serif;
+    /* Font chữ cứng cáp cho dễ đọc */
+    transition: all 0.2s;
+}
+
+/* --- TRẠNG THÁI KHI ĐƯỢC CHỌN (CHECKED) --- */
+/* Khi input được check, thì cái .btn-letter ngay sau nó sẽ đổi màu */
+input[type="radio"]:checked+.btn-letter {
+    background-color: #d32f2f;
+    /* Nền đỏ */
+    color: #ffd700;
+    /* Chữ vàng */
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.4);
+}
+
+/* Đổi màu viền của cả dòng khi được chọn */
+input[type="radio"]:checked~.answer-text {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+/* --- TRẠNG THÁI ĐÚNG / SAI (Khi hiện kết quả) --- */
+/* Đúng: Màu xanh */
+.correct-answer .btn-letter {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: white !important;
+}
+
+/* Sai: Màu đỏ nhạt hơn hoặc giữ nguyên đỏ */
+.wrong-answer .btn-letter {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.explanation {
+    /* ... giữ nguyên code cũ ... */
+    margin-top: 15px;
+    /* Cách xa các đáp án ra một chút cho thoáng */
+}
+
+/* Thanh tiến độ dính trên cùng */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    z-index: 1000;
+    /* Nằm trên tất cả */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #dc3545;
+    /* Màu xanh lá */
+    width: 0%;
+    /* Khởi đầu là 0% */
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+}
+
+.timer-badge-one {
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    /* Góc phải màn hình */
+    background-color: #fff;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Khi còn dưới 5 phút thì đổi màu đỏ nhấp nháy */
+.time-warning {
+    background-color: #d32f2f;
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .timer-badge-one {
+        top: auto;
+        bottom: 20px;
+        /* Trên điện thoại thì đưa xuống dưới để đỡ che đề */
+        right: 20px;
+        font-size: 1em;
+    }
+}
+
+.timer-badge-two {
+    position: fixed;
+    bottom: 10px;
+    left: 50px;
+    /* Góc phải màn hình */
+    background-color: #fff;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Khi còn dưới 5 phút thì đổi màu đỏ nhấp nháy */
+.time-warning {
+    background-color: #d32f2f;
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .timer-badge-one {
+        top: auto;
+        bottom: 20px;
+        /* Trên điện thoại thì đưa xuống dưới để đỡ che đề */
+        right: 20px;
+        font-size: 1em;
+    }
+}
+
+
+/* 1. Bảng dẫn đường nằm ngang ở trên đầu */
+.question-map {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* --- THAY ĐỔI QUAN TRỌNG Ở ĐÂY --- */
+    width: 92%;
+    /* Chiếm 92% màn hình */
+    max-width: 850px;
+    /* Giới hạn tối đa 850px thôi, để chừa chỗ 2 bên cho đèn lồng */
+    /* -------------------------------- */
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border: 2px solid #d32f2f;
+    border-radius: 10px;
+    padding: 8px 12px;
+    /* Padding gọn lại chút */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 990;
+    overflow: hidden;
+}
+
+/* 2. Lưới hiển thị: 20 ô một hàng */
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    gap: 2px;
+    /* Vì bảng hẹp lại nên khoảng cách giữa các ô cũng phải nhỏ lại */
+}
+
+/* Style cho ô số (Giữ nguyên hoặc chỉnh nhỏ lại nếu cần) */
+.map-item {
+    width: 100%;
+    height: 26px;
+    /* Chiều cao gọn lại */
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 10px;
+    /* Cỡ chữ nhỏ lại 1 xíu để vừa ô */
+    font-weight: bold;
+    color: #333;
+    transition: 0.2s;
+}
+
+.map-item:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.map-item.done {
+    background-color: #d32f2f;
+    color: white;
+    border-color: #b71c1c;
+}
+
+.map-item.wrong {
+    background-color: #dc3545 !important;
+    color: white;
+}
+
+.map-item.correct {
+    background-color: #28a745 !important;
+    color: white;
+}
+
+/* 3. XỬ LÝ QUAN TRỌNG: Đẩy nội dung bài thi xuống để không bị bảng che */
+/* Bạn thêm class này vào thẻ body hoặc .container nhé */
+body {
+    padding-top: 140px;
+    /* Đẩy nội dung xuống 140px (áng chừng chiều cao bảng) */
+}
+
+/* Màn hình Laptop nhỏ (dưới 1300px) -> Chia về 20 cột (2.5 dòng) */
+@media (max-width: 1300px) {
+    .map-grid {
+        grid-template-columns: repeat(20, 1fr);
+    }
+}
+
+/* Màn hình Tablet (dưới 900px) -> Chia 10 cột */
+@media (max-width: 900px) {
+    .map-grid {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .question-map {
+        width: 95%;
+    }
+}
+
+/* Điện thoại -> Giữ nguyên logic cũ của bạn (Ẩn đi) */
+@media (max-width: 768px) {
+    .question-map {
+        display: none;
+        /* ... giữ nguyên các thuộc tính mobile cũ ... */
+    }
+}
+
+#btn-back-to-top {
+    display: none;
+    /* Mặc định ẩn */
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    z-index: 9999;
+    /* Luôn nằm trên cùng */
+
+    width: 50px;
+    /* Kích thước nút */
+    height: 50px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    /* Bo tròn */
+    background-color: transparent;
+    /* Nền trong suốt để hiện hình ảnh png đẹp hơn */
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Nếu bạn không dùng ảnh mà dùng chữ thì dòng này sẽ style cho chữ */
+    background-color: #ffd700;
+    color: #d32f2f;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #d32f2f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style cho hình ảnh bên trong nút */
+#btn-back-to-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Căn chỉnh ảnh vừa khít */
+    border-radius: 50%;
+}
+
+/* Hiệu ứng khi di chuột vào */
+#btn-back-to-top:hover {
+    transform: translateY(-5px);
+    /* Bay lên một chút */
+    box-shadow: 0 6px 15px rgba(211, 47, 47, 0.5);
+    /* Đổ bóng */
+}
+
+/* --- CSS POPUP TẾT --- */
+.modal-overlay {
+    display: none;
+    /* Mặc định ẩn */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Nền đen mờ */
+    z-index: 10000;
+    /* Nằm trên tất cả */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    /* Làm mờ hậu cảnh */
+}
+
+.modal-box {
+    background-color: #fffde7;
+    /* Vàng kem */
+    width: 90%;
+    max-width: 450px;
+    border: 3px solid #d32f2f;
+    /* Viền đỏ đậm */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: zoomIn 0.3s ease;
+    /* Hiệu ứng phóng to */
+}
+
+/* Hiệu ứng phóng to khi hiện */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background: linear-gradient(to right, #d32f2f, #b71c1c);
+    color: #ffd700;
+    /* Chữ vàng */
+    padding: 15px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #ffd700;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+
+.modal-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #fff5f5;
+}
+
+/* Nút trong popup */
+.btn-modal {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-close {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-close:hover {
+    background-color: #ddd;
+}
+
+.btn-agree {
+    background: linear-gradient(45deg, #d32f2f, #f44336);
+    color: white;
+    border: 1px solid #b71c1c;
+    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+}
+
+.btn-agree:hover {
+    transform: scale(1.05);
+}
+
+/* Hoa trang trí góc */
+.corner-decoration {
+    position: absolute;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.top-left {
+    top: 5px;
+    left: 5px;
+    opacity: 0.3;
+}
+
+.top-right {
+    top: 5px;
+    right: 5px;
+    opacity: 0.3;
+}
