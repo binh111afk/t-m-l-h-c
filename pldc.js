@@ -1,27 +1,30 @@
+/* --- FILE: pldc.js (Dùng chung cho tất cả) --- */
+
 let questionBank = [];
 
+// 1. TẢI CÂU HỎI
 async function loadQuestions() {
     try {
-        // Gọi file json
-        const response = await fetch('./question.json');
+        // Đảm bảo đường dẫn file json đúng
+        const response = await fetch('./question.json'); 
         questionBank = await response.json();
-        questionBank.forEach((q, index) => {
-            q.id = index;
-        });
-        console.log("Đã tải xong " + questionBank.length + " câu hỏi.");
+        
+        // Gán ID để quản lý
+        questionBank.forEach((q, index) => { q.id = index; });
+
+        console.log("Đã tải xong database: " + questionBank.length + " câu.");
+        
+        // Bắt đầu vẽ giao diện
         renderQuiz();
         renderQuestionMap();
+        
     } catch (error) {
-        console.error("Lỗi không tải được câu hỏi:", error);
-        alert("Lỗi: Không thể tải file questions.json. Hãy chắc chắn bạn đang chạy trên Live Server!");
+        console.error("Lỗi:", error);
+        alert("Lỗi tải dữ liệu! Hãy kiểm tra file question.json và chạy Live Server.");
     }
 }
 
-questionBank.forEach((q, index) => {
-    q.id = index;
-});
-
-// Cấu trúc Matrix đề thi
+// Ma trận đề thi tổng hợp (50 câu)
 const matrix = {
     1: { NB: 1, TH: 3, VD: 0 },
     2: { NB: 1, TH: 3, VD: 1 },
@@ -33,7 +36,7 @@ const matrix = {
     8: { NB: 2, TH: 1, VD: 0 }
 };
 
-// Hàm xáo trộn mảng (Shuffle)
+// Hàm trộn mảng
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -42,401 +45,304 @@ function shuffle(array) {
     return array;
 }
 
-// Hàm lấy câu hỏi theo Matrix (ĐÃ SỬA LỖI LẶP & THỨ TỰ)
-// Hàm lấy câu hỏi theo Matrix (Phiên bản chống trùng lặp)
+// --- 2. LOGIC LẤY CÂU HỎI THÔNG MINH (ĐA NĂNG) ---
 function getExamQuestions() {
     let examQuestions = [];
+    
+    // KIỂM TRA: File HTML hiện tại có yêu cầu chương cụ thể không?
+    // (JS sẽ đọc thuộc tính data-chapter trong thẻ <body>)
+    const specificChapter = document.body.getAttribute('data-chapter');
 
-    // 1. Lấy danh sách ID các câu hỏi đã thi lần trước từ LocalStorage
-    const lastExamIds = JSON.parse(localStorage.getItem('lastExamIds')) || [];
-    let currentExamIds = [];
+    if (specificChapter) {
+        // === TRƯỜNG HỢP 1: LUYỆN TẬP RIÊNG CHƯƠNG ===
+        const chapNum = parseInt(specificChapter);
+        console.log(`>>> Chế độ: Luyện tập riêng Chương ${chapNum}`);
 
-    // 2. Duyệt qua từng chương và mức độ
-    for (let chap = 1; chap <= 8; chap++) {
-        ['NB', 'TH', 'VD'].forEach(level => {
-            const countNeeded = matrix[chap][level];
+        // Lọc tất cả câu hỏi của chương đó
+        let pool = questionBank.filter(q => (q.chapter == chapNum || q.c == chapNum));
+        
+        // Trộn và lấy 25 câu
+        shuffle(pool);
+        examQuestions = pool.slice(0, 25);
+        
+        // Sửa lại tiêu đề web cho phù hợp
+        updateUIForChapterMode(chapNum, examQuestions.length);
 
-            if (countNeeded > 0) {
-                // Lọc tất cả câu hỏi thuộc chương và mức độ này
-                const pool = questionBank.filter(q =>
-                    (q.chapter == chap || q.c == chap) &&
-                    (q.level == level || q.l == level)
-                );
-
-                if (pool.length > 0) {
-                    // Tách thành 2 nhóm: 
-                    // Nhóm A: Chưa thi lần trước (Ưu tiên)
-                    // Nhóm B: Đã thi lần trước (Dự phòng)
-                    const freshQuestions = pool.filter(q => !lastExamIds.includes(q.id));
-                    const usedQuestions = pool.filter(q => lastExamIds.includes(q.id));
-
-                    // Trộn ngẫu nhiên cả 2 nhóm
-                    shuffle(freshQuestions);
-                    shuffle(usedQuestions);
-
-                    // Logic lấy câu hỏi: Lấy hết nhóm A, nếu thiếu thì lấy thêm từ nhóm B
-                    let selectedForSlot = [];
-
-                    if (freshQuestions.length >= countNeeded) {
-                        // Nếu đủ câu mới thì lấy toàn bộ từ câu mới
-                        selectedForSlot = freshQuestions.slice(0, countNeeded);
-                    } else {
-                        // Nếu thiếu, lấy hết câu mới + bù thêm câu cũ
-                        selectedForSlot = freshQuestions.concat(usedQuestions.slice(0, countNeeded - freshQuestions.length));
+    } else {
+        // === TRƯỜNG HỢP 2: THI THỬ TỔNG HỢP (Mặc định) ===
+        console.log(">>> Chế độ: Thi thử tổng hợp (Full Matrix)");
+        
+        // Logic lấy theo ma trận (như cũ)
+        const lastExamIds = JSON.parse(localStorage.getItem('lastExamIds')) || [];
+        
+        for (let chap = 1; chap <= 8; chap++) {
+            if (!matrix[chap]) continue; 
+            ['NB', 'TH', 'VD'].forEach(level => {
+                const countNeeded = matrix[chap][level];
+                if (countNeeded > 0) {
+                    const pool = questionBank.filter(q => 
+                        (q.chapter == chap || q.c == chap) && 
+                        (q.level == level || q.l == level)
+                    );
+                    if (pool.length > 0) {
+                        const fresh = pool.filter(q => !lastExamIds.includes(q.id));
+                        const used = pool.filter(q => lastExamIds.includes(q.id));
+                        shuffle(fresh); shuffle(used);
+                        
+                        let slot = (fresh.length >= countNeeded) 
+                            ? fresh.slice(0, countNeeded) 
+                            : fresh.concat(used.slice(0, countNeeded - fresh.length));
+                        examQuestions = examQuestions.concat(slot);
                     }
-
-                    examQuestions = examQuestions.concat(selectedForSlot);
                 }
-            }
-        });
+            });
+        }
+        // Lưu lịch sử để lần sau đỡ trùng
+        localStorage.setItem('lastExamIds', JSON.stringify(examQuestions.map(q => q.id)));
+        shuffle(examQuestions);
     }
 
-    // 3. Lưu danh sách ID của đề thi hiện tại vào LocalStorage để dùng cho lần sau
-    currentExamIds = examQuestions.map(q => q.id);
-    localStorage.setItem('lastExamIds', JSON.stringify(currentExamIds));
-
-    // 4. Trộn lại toàn bộ đề thi
-    return shuffle(examQuestions);
+    return examQuestions;
 }
-// Render câu hỏi ra màn hình
+
+// Hàm cập nhật giao diện khi ở chế độ luyện chương
+function updateUIForChapterMode(chapNum, count) {
+    // Đổi tiêu đề H1
+    const h1 = document.querySelector('h1');
+    if(h1) h1.innerHTML = `Luyện Tập Chương ${chapNum}`;
+
+    // Đổi khung thông tin
+    const infoBox = document.querySelector('.matrix-info');
+    if(infoBox) {
+        infoBox.innerHTML = `
+            <div style="text-align: center;
+    color: #d32f2f;
+    text-shadow: 1px 1px 0px #ffd700;
+    font-family: 'Dancing Script', cursive; font-size: 2em;">
+                <h3>LUYỆN TẬP THEO CHƯƠNG: CHƯƠNG ${chapNum}</h3>
+                <p>Số lượng: <b>${count} câu</b></p>
+            </div>
+        `;
+    }
+}
+
+
 let currentExam = [];
 
 function renderQuiz() {
     const quizArea = document.getElementById('quiz-area');
     quizArea.innerHTML = '';
-
-    // Lấy đề thi đã trộn
-    currentExam = getExamQuestions();
-
+    
+    currentExam = getExamQuestions(); // Gọi hàm thông minh ở trên
+    
     if (currentExam.length === 0) {
-        quizArea.innerHTML = '<p style="text-align:center;">Chưa có dữ liệu câu hỏi. Vui lòng kiểm tra biến questionBank.</p>';
+        quizArea.innerHTML = '<p style="text-align:center;">Không tìm thấy câu hỏi phù hợp!</p>';
         return;
     }
 
     currentExam.forEach((q, index) => {
+        // Tạo thẻ câu hỏi
         const card = document.createElement('div');
         card.className = 'question-card';
+        card.id = `q-card-${index}`;
 
-        // Chuẩn hóa dữ liệu từ 2 định dạng cũ/mới
-        const chapVal = q.chapter || q.c;
-        const levelVal = q.level || q.l;
-        const questionText = q.question || q.q;
-        const answers = q.options || q.a; // options (cũ) hoặc a (mới)
-        const explainText = q.explanation || q.explain;
-        const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
+        // Chuẩn hóa dữ liệu
+        const chap = q.chapter || q.c;
+        const lv = q.level || q.l;
+        const content = q.question || q.q;
+        const opts = q.options || q.a;
+        const explain = q.explanation || q.explain;
+        const correct = (q.answer !== undefined) ? q.answer : q.correct;
 
-        // Tạo HTML cho các đáp án
-        let optionsHtml = '';
-        answers.forEach((opt, optIndex) => {
-            const letter = String.fromCharCode(65 + optIndex);
-
-            optionsHtml += `
-                <label id="label-${index}-${optIndex}">
-                <input type="radio" name="q${index}" value="${optIndex}" onchange="checkAnswer(${index}, ${optIndex}, ${correctVal})">
-            
-                <span class="btn-letter">${letter}</span>
-            
-                <span class="answer-text">${opt}</span>
+        // Tạo các option
+        let htmlOpts = '';
+        opts.forEach((o, i) => {
+            const letter = String.fromCharCode(65 + i);
+            htmlOpts += `
+                <label id="lbl-${index}-${i}">
+                    <input type="radio" name="q-${index}" value="${i}" 
+                           onchange="checkAnswer(${index}, ${i}, ${correct})">
+                    <span class="btn-letter">${letter}</span>
+                    <span class="answer-text">${o}</span>
                 </label>
             `;
         });
 
         card.innerHTML = `
             <div>
-                <span class="meta-badge badge-c">Chương ${chapVal}</span>
-                <span class="meta-badge badge-l">${levelVal}</span>
+                <span class="meta-badge badge-c">Chương ${chap}</span>
+                <span class="meta-badge badge-l">${lv}</span>
             </div>
-            <div class="question-title">Câu ${index + 1}: ${questionText}</div>
-            <div class="options">${optionsHtml}</div>
+            <div class="question-title">Câu ${index + 1}: ${content}</div>
+            <div class="options">${htmlOpts}</div>
             <div class="explanation" id="explain-${index}">
-                <strong>Giải thích:</strong> ${explainText}
+                <strong>Giải thích:</strong> ${explain}
             </div>
         `;
         quizArea.appendChild(card);
     });
 }
 
-// Hàm kiểm tra đáp án NGAY LẬP TỨC (Chế độ luyện tập)
-function checkAnswer(qIndex, selected, correct) {
-    // 1. Khóa tất cả các lựa chọn của câu này lại (Không cho chọn lại)
-    const allInputs = document.querySelectorAll(`input[name="q${qIndex}"]`);
-    allInputs.forEach(input => input.disabled = true);
+// Hàm chấm điểm ngay lập tức (Instant Check)
+function checkAnswer(idx, userPick, correctPick) {
+    // Khóa câu hỏi
+    const inputs = document.getElementsByName(`q-${idx}`);
+    inputs.forEach(i => i.disabled = true);
 
-    // 2. Lấy các phần tử giao diện cần xử lý
-    const selectedLabel = document.getElementById(`label-${qIndex}-${selected}`);
-    const correctLabel = document.getElementById(`label-${qIndex}-${correct}`);
-    const mapItem = document.getElementById(`map-item-${qIndex}`);
-    const explainBox = document.getElementById(`explain-${qIndex}`);
+    // Lấy label
+    const userLbl = document.getElementById(`lbl-${idx}-${userPick}`);
+    const correctLbl = document.getElementById(`lbl-${idx}-${correctPick}`);
+    const explainDiv = document.getElementById(`explain-${idx}`);
+    const mapItem = document.getElementById(`map-${idx}`);
 
-    // 3. Chuẩn bị nội dung hiển thị
-    const correctLetter = String.fromCharCode(65 + correct);
-    const userLetter = String.fromCharCode(65 + selected);
-    let resultText = '';
+    const userChar = String.fromCharCode(65 + userPick);
+    const correctChar = String.fromCharCode(65 + correctPick);
 
-    // 4. Kiểm tra Đúng / Sai
-    if (selected === correct) {
-        // --- TRƯỜNG HỢP ĐÚNG ---
-        // Tô xanh ô đáp án chọn
-        selectedLabel.classList.add('correct-answer');
+    let msg = "";
 
-        // Cập nhật bảng câu hỏi trên đầu: Màu Xanh Lá
-        if (mapItem) {
-            mapItem.classList.remove('done'); // Xóa màu xanh dương cũ (nếu có)
-            mapItem.classList.add('correct');
-        }
-
-        // Tạo thông báo
-        resultText = `<div style="color: #155724; margin-bottom: 8px; font-weight: bold; border-bottom: 1px dashed #c3e6cb; padding-bottom: 5px;">
-                        ✅ Bạn chọn: ${userLetter} (Chính xác)
-                      </div>`;
+    if (userPick === correctPick) {
+        // ĐÚNG
+        userLbl.classList.add('correct-answer');
+        if(mapItem) mapItem.classList.add('correct');
+        msg = `<div style="color:#155724; font-weight:bold; margin-bottom:5px;">✅ Bạn chọn: ${userChar} (Chính xác)</div>`;
     } else {
-        // --- TRƯỜNG HỢP SAI ---
-        // Tô đỏ ô chọn sai, tô xanh ô đúng
-        selectedLabel.classList.add('wrong-answer');
-        correctLabel.classList.add('correct-answer');
-
-        // Cập nhật bảng câu hỏi trên đầu: Màu Đỏ
-        if (mapItem) {
-            mapItem.classList.remove('done');
-            mapItem.classList.add('wrong');
-        }
-
-        // Tạo thông báo
-        resultText = `<div style="margin-bottom: 8px; border-bottom: 1px dashed #f5c6cb; padding-bottom: 5px;">
-                        <span style="color: #721c24; font-weight: bold;">❌ Bạn chọn: ${userLetter}</span> 
-                        <span style="margin: 0 10px;">👉</span> 
-                        <span style="color: #155724; font-weight: bold;">Đáp án đúng: ${correctLetter}</span>
-                      </div>`;
+        // SAI
+        userLbl.classList.add('wrong-answer');
+        correctLbl.classList.add('correct-answer');
+        if(mapItem) mapItem.classList.add('wrong');
+        msg = `<div style="color:#721c24; font-weight:bold; margin-bottom:5px;">❌ Bạn chọn: ${userChar} | 👉 Đáp án: ${correctChar}</div>`;
     }
 
-    // 5. Hiện khung giải thích ngay lập tức
-    if (explainBox) {
-        // Chèn kết quả vào đầu khung giải thích để người dùng thấy ngay
-        explainBox.innerHTML = resultText + explainBox.innerHTML;
-        explainBox.style.display = 'block';
-        explainBox.style.animation = 'fadeIn 0.5s';
+    // Hiện giải thích
+    if(explainDiv) {
+        explainDiv.innerHTML = msg + explainDiv.innerHTML;
+        explainDiv.style.display = 'block';
     }
-
-    // 6. Cập nhật thanh tiến độ (Progress Bar)
-    const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
-    const totalQuestions = currentExam.length;
-    const percent = (answeredCount / totalQuestions) * 100;
-    document.getElementById('progress-bar').style.width = percent + '%';
+    
+    // Update tiến độ
+    updateProgress();
 }
-// Nộp bài (Tính điểm tổng)
-// Hàm Nộp bài (Đã xóa dòng chặn đồng hồ)
+
+function updateProgress() {
+    const done = document.querySelectorAll('input[type="radio"]:checked').length;
+    const total = currentExam.length;
+    const bar = document.getElementById('progress-bar');
+    if(bar) bar.style.width = (done/total*100) + "%";
+}
+
+// Nộp bài
 function submitQuiz() {
     let score = 0;
-    const total = currentExam.length;
     let unAnswered = 0;
-
-    // Lặp qua từng câu hỏi
-    currentExam.forEach((q, index) => {
-        const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
-        const selectedInput = document.querySelector(`input[name="q${index}"]:checked`);
-        const explainBox = document.getElementById(`explain-${index}`);
-
-        const correctLetter = String.fromCharCode(65 + correctVal);
-        let userLetter = '';
-        let resultText = '';
-
-        // 1. Khóa tất cả các nút lại
-        const allInputs = document.querySelectorAll(`input[name="q${index}"]`);
-        allInputs.forEach(input => input.disabled = true);
-
-        // 2. Xử lý logic Đúng/Sai
-        if (selectedInput) {
-            const selectedVal = parseInt(selectedInput.value);
-            userLetter = String.fromCharCode(65 + selectedVal);
-
-            const selectedLabel = document.getElementById(`label-${index}-${selectedVal}`);
-            const correctLabel = document.getElementById(`label-${index}-${correctVal}`);
-
-            if (selectedVal === correctVal) {
-                score++;
-                if (selectedLabel) selectedLabel.classList.add('correct-answer');
-                resultText = `<div style="color: #155724; margin-bottom: 8px; font-weight: bold; border-bottom: 1px dashed #c3e6cb; padding-bottom: 5px;">
-                                ✅ Bạn chọn: ${userLetter} (Chính xác)
-                              </div>`;
-            } else {
-                if (selectedLabel) selectedLabel.classList.add('wrong-answer');
-                if (correctLabel) correctLabel.classList.add('correct-answer');
-                resultText = `<div style="margin-bottom: 8px; border-bottom: 1px dashed #f5c6cb; padding-bottom: 5px;">
-                                <span style="color: #721c24; font-weight: bold;">❌ Bạn chọn: ${userLetter}</span> 
-                                <span style="margin: 0 10px;">✅</span> 
-                                <span style="color: #155724; font-weight: bold;">Đáp án đúng: ${correctLetter}</span>
-                              </div>`;
+    
+    currentExam.forEach((q, idx) => {
+        const picked = document.querySelector(`input[name="q-${idx}"]:checked`);
+        const correct = (q.answer !== undefined) ? q.answer : q.correct;
+        
+        // Nếu chưa làm thì hiện đáp án
+        if (!picked) {
+            unAnswered++;
+            const correctLbl = document.getElementById(`lbl-${idx}-${correct}`);
+            if(correctLbl) correctLbl.classList.add('correct-answer');
+            
+            const explainDiv = document.getElementById(`explain-${idx}`);
+            if(explainDiv) {
+                explainDiv.style.display = 'block';
+                // Hiện text báo chưa làm
+                if(!explainDiv.innerHTML.includes("Bạn chưa chọn")) {
+                     const correctChar = String.fromCharCode(65 + correct);
+                     explainDiv.innerHTML = `<div style="color:#856404; font-weight:bold;">⚠️ Bạn chưa chọn | 👉 Đáp án: ${correctChar}</div>` + explainDiv.innerHTML;
+                }
             }
         } else {
-            unAnswered++;
-            const correctLabel = document.getElementById(`label-${index}-${correctVal}`);
-            if (correctLabel) correctLabel.classList.add('correct-answer');
-            resultText = `<div style="margin-bottom: 8px; border-bottom: 1px dashed #ffeeba; padding-bottom: 5px;">
-                            <span style="color: #856404; font-weight: bold;">⚠️ Bạn chưa chọn</span> 
-                            <span style="margin: 0 10px;">✅</span> 
-                            <span style="color: #155724; font-weight: bold;">Đáp án đúng: ${correctLetter}</span>
-                          </div>`;
+            if(parseInt(picked.value) === correct) score++;
         }
-
-        // 3. Hiện giải thích
-        if (explainBox) {
-            if (!explainBox.innerHTML.includes('Bạn chọn:')) {
-                explainBox.innerHTML = resultText + explainBox.innerHTML;
-            }
-            explainBox.style.display = 'block';
-            explainBox.style.animation = 'fadeIn 0.5s';
-        }
+        
+        // Khóa tất cả input (phòng trường hợp sót)
+        document.getElementsByName(`q-${idx}`).forEach(i => i.disabled = true);
     });
 
-    // 4. Hiện bảng điểm
-    const resultArea = document.getElementById('result-area');
-    const scoreBoard = document.getElementById('score');
-
-    resultArea.style.display = 'block';
-    let msg = `Kết quả: <span style="color: #d32f2f; font-size: 1.2em;">${score}</span> / ${total} câu đúng.`;
-    if (unAnswered > 0) msg += `<br><span style="font-size: 0.9em; color: #555;">(Bạn chưa làm ${unAnswered} câu)</span>`;
-
-    scoreBoard.innerHTML = msg;
+    // Hiện bảng điểm
+    const resArea = document.getElementById('result-area');
+    const scoreDiv = document.getElementById('score');
+    resArea.style.display = 'block';
+    scoreDiv.innerHTML = `Kết quả: <span style="color:red">${score}</span> / ${currentExam.length} câu đúng.`;
+    
     document.getElementById('submit-btn').style.display = 'none';
-    resultArea.scrollIntoView({ behavior: 'smooth' });
+    resArea.scrollIntoView({behavior: "smooth"});
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const flowerImages = [
-        './img/hoadao.png',
-        './img/luckymoney.png'
-    ];
-
-    const spawnRate = 300; // Tốc độ tạo hoa (càng nhỏ hoa càng dày)
-
-    function createFlower() {
-        const flower = document.createElement('img');
-        flower.src = flowerImages[Math.floor(Math.random() * flowerImages.length)];
-        flower.classList.add('falling-flower');
-        flower.style.left = (Math.random() * 110 - 10) + 'vw';
-        const width = Math.random() * 30 + 20;
-        flower.style.width = width + 'px';
-        flower.style.height = 'auto';
-        const duration = Math.random() * 5 + 4;
-        flower.style.animationDuration = duration + 's';
-        document.body.appendChild(flower);
-        setTimeout(() => {
-            flower.remove();
-        }, duration * 1000);
-    }
-
-    setInterval(createFlower, spawnRate);
-});
-
+// Vẽ Map câu hỏi
 function renderQuestionMap() {
-    const mapGrid = document.getElementById('map-grid');
-    mapGrid.innerHTML = ''; // Reset
-
-    currentExam.forEach((q, index) => {
-        // Tạo ô số
-        const item = document.createElement('a');
-        item.className = 'map-item';
-        item.id = `map-item-${index}`;
-        item.innerText = index + 1;
-
-        // Bấm vào thì cuộn đến câu đó
-        item.onclick = function () {
-            // Tìm thẻ câu hỏi tương ứng để cuộn tới
-            // Lưu ý: Bạn cần thêm id="question-card-${index}" vào thẻ div .question-card trong hàm renderQuiz nhé!
-            const card = document.querySelectorAll('.question-card')[index];
-            if (card) {
-                card.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
+    const map = document.getElementById('map-grid');
+    if(!map) return;
+    map.innerHTML = '';
+    currentExam.forEach((_, i) => {
+        const a = document.createElement('a');
+        a.className = 'map-item';
+        a.id = `map-${i}`;
+        a.innerText = i + 1;
+        a.onclick = () => {
+            document.getElementById(`q-card-${i}`).scrollIntoView({behavior:"smooth", block:"center"});
         };
-
-        mapGrid.appendChild(item);
+        map.appendChild(a);
     });
 }
 
-// Gọi hàm này ngay sau khi renderQuiz()
-loadQuestions();
+// --- 4. POPUP & UTILS ---
 
-const backToTopBtn = document.getElementById("btn-back-to-top");
-
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    // Khi cuộn xuống 300px thì hiện nút
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
+function confirmSubmit() {
+    const done = document.querySelectorAll('input[type="radio"]:checked').length;
+    const total = currentExam.length;
+    const left = total - done;
+    let msg = left > 0 ? `⚠️ Còn <b>${left}</b> câu chưa làm!` : "Sẵn sàng nộp bài chưa?";
+    showTetModal(msg, submitQuiz);
 }
 
-// Hàm cuộn lên đầu trang mượt mà
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+function confirmRestart() {
+    showTetModal("Làm đề mới sẽ xóa kết quả hiện tại!", () => location.reload());
 }
 
-function showTetModal(message, actionCallback) {
-    const modal = document.getElementById('tet-modal');
-    const msgBox = document.getElementById('modal-message');
-    const confirmBtn = document.getElementById('btn-confirm-action');
-
-    // Gán nội dung
-    msgBox.innerHTML = message;
-    modal.style.display = 'flex'; // Hiện popup
-
-    // Gán hành động cho nút "Chốt đơn"
-    confirmBtn.onclick = function () {
-        actionCallback(); // Chạy hàm được truyền vào
-        closeModal();     // Đóng popup
-    };
+function showTetModal(msg, callback) {
+    const m = document.getElementById('tet-modal');
+    document.getElementById('modal-message').innerHTML = msg;
+    m.style.display = 'flex';
+    
+    const btn = document.getElementById('btn-confirm-action');
+    const newBtn = btn.cloneNode(true); // Xóa event cũ
+    btn.parentNode.replaceChild(newBtn, btn);
+    
+    newBtn.onclick = () => { callback(); closeModal(); };
 }
 
-// Hàm đóng Popup
 function closeModal() {
     document.getElementById('tet-modal').style.display = 'none';
 }
 
-// --- SỬA LẠI CÁCH GỌI NÚT NỘP BÀI VÀ LÀM LẠI ---
+const backToTopBtn = document.getElementById("btn-back-to-top");
+window.onscroll = function() {
+    if(backToTopBtn) backToTopBtn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+};
+function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
 
-// 1. Hàm xác nhận nộp bài (Gắn vào nút Nộp bài)
-function confirmSubmit() {
-    // Đếm số câu chưa làm để dọa nhẹ
-    const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
-    const total = currentExam.length;
-    const unAnswered = total - answeredCount;
+// Chặn chuột phải, F12
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = e => { if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false; };
 
-    let msg = "Bạn có chắc chắn muốn nộp bài không?";
-    if (unAnswered > 0) {
-        msg = `⚠️ Bạn còn <b>${unAnswered}</b> câu chưa làm!<br>Nhanh cái tay lên!`;
-    } else {
-        msg = "Bạn đã làm hết các câu hỏi.<br>Bạn có muốn xem điểm không?";
-    }
+// Hoa rơi
+document.addEventListener('DOMContentLoaded', () => {
+    const imgs = ['./img/hoadao.png', './img/luckymoney.png'];
+    setInterval(() => {
+        const img = document.createElement('img');
+        img.src = imgs[Math.floor(Math.random()*imgs.length)];
+        img.className = 'falling-flower';
+        img.style.left = Math.random()*100 + 'vw';
+        img.style.width = (Math.random()*20 + 20) + 'px';
+        img.style.animationDuration = (Math.random()*3 + 3) + 's';
+        document.body.appendChild(img);
+        setTimeout(() => img.remove(), 6000);
+    }, 500);
+});
 
-    // Gọi Popup Tết thay vì confirm mặc định
-    showTetModal(msg, function () {
-        submitQuiz(); // Nếu đồng ý thì mới chạy hàm nộp bài gốc
-    });
-}
-
-// 2. Hàm xác nhận làm đề mới (Gắn vào nút Làm đề mới)
-function confirmRestart() {
-    showTetModal("Bạn muốn tạo đề thi mới?", function () {
-        location.reload();
-    });
-}
-
-document.addEventListener('contextmenu', event => event.preventDefault());
-
-// Chặn phím F12 (Inspect)
-document.onkeydown = function (e) {
-    if (event.keyCode == 123) { // F12
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
-        return false;
-    }
-}
+// KHỞI CHẠY
+loadQuestions();
