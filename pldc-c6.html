@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="pldc.css">
 </head>
 
-<body data-chapter="6">
+<body data-chapter ="6">
 
     <div class="lantern-container left">
         <img src="./img/lantern.png" class="lantern">
@@ -49,7 +49,9 @@
     </button>
 
     <div class="container">
-        <a href="pldc.html" class="lhead"><h1>Đề Thi Pháp Luật Đại Cương</h1></a>
+        <a href="pldc.html" class="lhead">
+            <h1>Đề Thi Pháp Luật Đại Cương</h1>
+        </a>
         <div class="matrix-info">
             <strong>Cấu trúc đề thi (50 câu ngẫu nhiên theo ma trận):</strong><br>
             - Chương 1: 4 câu (1 Nhận biết, 3 Thông hiểu)<br>
@@ -67,64 +69,83 @@
 
         <button class="btn" id="submit-btn" onclick="confirmSubmit()">Nộp Bài</button>
 
-        <div id="result-area" style="display:none;">
-            <div class="score-board" id="score"></div>
-            <button class="btn btn-restart" onclick="confirmRestart()">Làm đề mới</button>
+        <div id="result-modal" class="modal-overlay">
+            <div class="modal-box result-box-tet">
+                <div class="corner-decoration top-left">🌸</div>
+                <div class="corner-decoration top-right">💰</div>
+
+                <div class="modal-header">
+                    🧧 KẾT QUẢ KHAI XUÂN 🧧
+                </div>
+
+                <div class="modal-body">
+                    <div class="tet-score-container">
+                        <div class="tet-score-circle">
+                            <span id="popup-score">0</span>
+                            <span class="score-total">/ <span id="popup-total">0</span></span>
+                        </div>
+                    </div>
+                    <div class="tet-message" id="popup-message">
+                        Chúc mừng năm mới!
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn-modal btn-close" onclick="closeResultModal()">Xem lại bài</button>
+                    <button class="btn-modal btn-agree" onclick="location.reload()">Thi lại</button>
+                </div>
+            </div>
         </div>
-        <div id="result-area" style="display:none;">
-        <div class="score-board" id="score"></div>
-        <button class="btn btn-restart" onclick="location.reload()">Làm đề mới</button>
-    </div>
 
-    <div class="related-exams">
-        <h3 class="related-title">🏮 Luyện tập theo chương</h3>
-        <div class="exam-grid">
-            <a href="pldc-c1.html" class="exam-card">
-                <span class="exam-icon">🏛️</span>
-                <span class="exam-name"> <b>Chương 1</b> <br> Lý luận chung về nhà nước</span>
-            </a>
-            
-            <a href="pldc-c2.html" class="exam-card">
-                <span class="exam-icon">⚖️</span>
-                <span class="exam-name"> <b>Chương 2</b> <br> Lý luận chung về pháp luật</span>
-            </a>
+        <div class="related-exams">
+            <h3 class="related-title">🏮 Luyện tập theo chương</h3>
+            <div class="exam-grid">
+                <a href="pldc-c1.html" class="exam-card">
+                    <span class="exam-icon">🏛️</span>
+                    <span class="exam-name"> <b>Chương 1</b> <br> Lý luận chung về nhà nước</span>
+                </a>
 
-            <a href="pldc-c3.html" class="exam-card">
-                <span class="exam-icon">📘</span>
-                <span class="exam-name"> <b>Chương 3</b> <br> Luật Hiến pháp</span>
-            </a>
+                <a href="pldc-c2.html" class="exam-card">
+                    <span class="exam-icon">⚖️</span>
+                    <span class="exam-name"> <b>Chương 2</b> <br> Lý luận chung về pháp luật</span>
+                </a>
 
-            <a href="pldc-c4.html" class="exam-card">
-                <span class="exam-icon">📄</span>
-                <span class="exam-name"> <b>Chương 4</b> <br> Luật Dân sự và Tố tụng Dân sự</span>
-            </a>
+                <a href="pldc-c3.html" class="exam-card">
+                    <span class="exam-icon">📘</span>
+                    <span class="exam-name"> <b>Chương 3</b> <br> Luật Hiến pháp</span>
+                </a>
 
-            <a href="pldc-c5.html" class="exam-card">
-                <span class="exam-icon">💍</span>
-                <span class="exam-name"> <b>Chương 5</b> <br> Luật Hôn nhân và Gia đình</span>
-            </a>
+                <a href="pldc-c4.html" class="exam-card">
+                    <span class="exam-icon">📄</span>
+                    <span class="exam-name"> <b>Chương 4</b> <br> Luật Dân sự và Tố tụng Dân sự</span>
+                </a>
 
-            <a href="pldc-c6.html" class="exam-card">
-                <span class="exam-icon">👷</span>
-                <span class="exam-name"> <b>Chương 6</b> <br> Luật Lao động</span>
-            </a>
+                <a href="pldc-c5.html" class="exam-card">
+                    <span class="exam-icon">💍</span>
+                    <span class="exam-name"> <b>Chương 5</b> <br> Luật Hôn nhân và Gia đình</span>
+                </a>
 
-            <a href="pldc-c7.html" class="exam-card">
-                <span class="exam-icon">⛓️</span>
-                <span class="exam-name"> <b>Chương 7</b> <br> Luật Hình sự và Tố tụng Hình sự</span>
-            </a>
+                <a href="pldc-c6.html" class="exam-card">
+                    <span class="exam-icon">👷</span>
+                    <span class="exam-name"> <b>Chương 6</b> <br> Luật Lao động</span>
+                </a>
 
-            <a href="pldc-c8.html" class="exam-card">
-                <span class="exam-icon">🏢</span>
-                <span class="exam-name"> <b>Chương 8</b> <br> Luật Hành chính và Tố tụng Hành chính</span>
-            </a>
+                <a href="pldc-c7.html" class="exam-card">
+                    <span class="exam-icon">⛓️</span>
+                    <span class="exam-name"> <b>Chương 7</b> <br> Luật Hình sự và Tố tụng Hình sự</span>
+                </a>
 
-            <a href="pldc.html" class="exam-card">
-                <span class="exam-icon">📝</span>
-                <span class="exam-name"><b>Đề thi thử tổng hợp</b></span>
-            </a>
+                <a href="pldc-c8.html" class="exam-card">
+                    <span class="exam-icon">🏢</span>
+                    <span class="exam-name"> <b>Chương 8</b> <br> Luật Hành chính và Tố tụng Hành chính</span>
+                </a>
+
+                <a href="pldc.html" class="exam-card">
+                    <span class="exam-icon">📝</span>
+                    <span class="exam-name"><b>Đề thi thử tổng hợp</b></span>
+                </a>
+            </div>
         </div>
-    </div>
     </div>
 
     <div id="tet-modal" class="modal-overlay">
