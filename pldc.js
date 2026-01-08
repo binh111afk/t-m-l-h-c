@@ -231,47 +231,86 @@ function updateProgress() {
 }
 
 // Nộp bài
+// --- Thay thế hàm submitQuiz cũ bằng hàm này ---
 function submitQuiz() {
     let score = 0;
     let unAnswered = 0;
 
+    // 1. Chấm điểm và khóa bài làm
     currentExam.forEach((q, idx) => {
         const picked = document.querySelector(`input[name="q-${idx}"]:checked`);
         const correct = (q.answer !== undefined) ? q.answer : q.correct;
 
-        // Nếu chưa làm thì hiện đáp án
+        // Xử lý giao diện đáp án trên bài làm (để lát nữa xem lại)
         if (!picked) {
             unAnswered++;
             const correctLbl = document.getElementById(`lbl-${idx}-${correct}`);
             if (correctLbl) correctLbl.classList.add('correct-answer');
 
+            // Hiện giải thích
             const explainDiv = document.getElementById(`explain-${idx}`);
             if (explainDiv) {
                 explainDiv.style.display = 'block';
-                // Hiện text báo chưa làm
-                if (!explainDiv.innerHTML.includes("Bạn chưa chọn")) {
-                    const correctChar = String.fromCharCode(65 + correct);
-                    explainDiv.innerHTML = `<div style="color:#856404; font-weight:bold;">⚠️ Bạn chưa chọn | 👉 Đáp án: ${correctChar}</div>` + explainDiv.innerHTML;
+                const correctChar = String.fromCharCode(65 + correct);
+                if (!explainDiv.innerHTML.includes("Đáp án")) {
+                    explainDiv.innerHTML = `<div style="color:#856404; font-weight:bold;">⚠️ Chưa làm | 👉 Đáp án: ${correctChar}</div>` + explainDiv.innerHTML;
                 }
             }
         } else {
-            if (parseInt(picked.value) === correct) score++;
+            if (parseInt(picked.value) === correct) {
+                score++;
+            }
         }
 
-        // Khóa tất cả input (phòng trường hợp sót)
+        // Khóa tất cả input
         document.getElementsByName(`q-${idx}`).forEach(i => i.disabled = true);
     });
 
-    // Hiện bảng điểm
-    const resArea = document.getElementById('result-area');
-    const scoreDiv = document.getElementById('score');
-    resArea.style.display = 'block';
-    scoreDiv.innerHTML = `Kết quả: <span style="color:red">${score}</span> / ${currentExam.length} câu đúng.`;
+    // 2. Ẩn nút nộp bài
+    const btnSubmit = document.getElementById('submit-btn');
+    if (btnSubmit) btnSubmit.style.display = 'none';
 
-    document.getElementById('submit-btn').style.display = 'none';
-    resArea.scrollIntoView({ behavior: "smooth" });
+    // 3. HIỆN POPUP KẾT QUẢ (Phần mới)
+    showResultModal(score, currentExam.length);
 }
 
+// --- Thêm các hàm hỗ trợ Popup Kết Quả ---
+
+function showResultModal(score, total) {
+    const modal = document.getElementById('result-modal');
+    const scoreEl = document.getElementById('popup-score');
+    const totalEl = document.getElementById('popup-total');
+    const msgEl = document.getElementById('popup-message');
+
+    // Gán dữ liệu
+    scoreEl.innerText = score;
+    totalEl.innerText = total;
+
+    // Tính phần trăm để đưa ra lời chúc Tết phù hợp
+    const percent = (score / total) * 100;
+    let message = "";
+
+    if (percent === 100) {
+        message = "😏 Chưa tài đâu";
+    } else if (percent >= 80) {
+        message = "Cũng tạm tạm 🧧";
+    } else if (percent >= 50) {
+        message = "Học hành gì mà không trên trung bình nổi nữa trời !";
+    } else {
+        message = "Non vê lờ ! Học lại đi bé! 😅";
+    }
+
+    msgEl.innerText = message;
+
+    // Hiện Modal
+    modal.style.display = 'flex';
+}
+
+function closeResultModal() {
+    document.getElementById('result-modal').style.display = 'none';
+    // Cuộn lên đầu để xem lại bài
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 // Vẽ Map câu hỏi
 function renderQuestionMap() {
     const map = document.getElementById('map-grid');

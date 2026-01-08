@@ -844,7 +844,8 @@ body {
 .related-exams {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 2px dashed #ffd700; /* Đường kẻ phân cách nét đứt màu vàng */
+    border-top: 2px dashed #ffd700;
+    /* Đường kẻ phân cách nét đứt màu vàng */
 }
 
 .related-title {
@@ -859,7 +860,8 @@ body {
 /* Lưới chứa các nút */
 .exam-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Rộng hơn xíu */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Rộng hơn xíu */
     gap: 20px;
     padding: 10px;
 }
@@ -870,29 +872,32 @@ body {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    
+
     /* Nền đỏ chuyển sắc (Gradient) nhìn cho sâu */
     background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
-    
+
     /* Viền vàng kim loại */
     border: 2px solid #ffd700;
-    border-radius: 12px; /* Bo góc vừa phải */
-    
+    border-radius: 12px;
+    /* Bo góc vừa phải */
+
     text-decoration: none;
-    color: #ffd700; /* Chữ màu vàng tươi */
+    color: #ffd700;
+    /* Chữ màu vàng tươi */
     font-weight: bold;
-    
+
     /* Đổ bóng nhẹ màu đỏ */
-    box-shadow: 0 4px 0px #8e0000; 
+    box-shadow: 0 4px 0px #8e0000;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    overflow: hidden; /* Để cắt các họa tiết trang trí thừa */
+    overflow: hidden;
+    /* Để cắt các họa tiết trang trí thừa */
 }
 
 /* Icon bên trái */
 .exam-icon {
     font-size: 2em;
     margin-right: 15px;
-    
+
     /* Tạo hình tròn nền trắng/vàng nhạt sau lưng icon cho nổi */
     background: #fffde7;
     width: 50px;
@@ -903,18 +908,20 @@ body {
     border-radius: 50%;
     border: 2px solid #ffca28;
     flex-shrink: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
 }
 
 /* Trang trí họa tiết chìm (Hình tròn mờ ở góc) */
 .exam-card::after {
-    content: '🌸'; /* Hoặc dùng ký tự đồng tiền 💰 nếu thích */
+    content: '🌸';
+    /* Hoặc dùng ký tự đồng tiền 💰 nếu thích */
     position: absolute;
     top: -10px;
     right: -10px;
     font-size: 4em;
-    opacity: 0.1; /* Làm mờ đi để không rối mắt */
+    opacity: 0.1;
+    /* Làm mờ đi để không rối mắt */
     transform: rotate(30deg);
     color: #ffd700;
     pointer-events: none;
@@ -922,11 +929,16 @@ body {
 
 /* --- HIỆU ỨNG HOVER (KHI DI CHUỘT VÀO) --- */
 .exam-card:hover {
-    transform: translateY(-5px); /* Nổi lên trên */
-    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%); /* Sáng hơn chút */
-    box-shadow: 0 8px 0px #8e0000, 0 15px 20px rgba(211, 47, 47, 0.4); /* Bóng đậm đà hơn */
-    border-color: #fff; /* Viền chuyển sang trắng lấp lánh */
-    color: #fff; /* Chữ chuyển trắng */
+    transform: translateY(-5px);
+    /* Nổi lên trên */
+    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+    /* Sáng hơn chút */
+    box-shadow: 0 8px 0px #8e0000, 0 15px 20px rgba(211, 47, 47, 0.4);
+    /* Bóng đậm đà hơn */
+    border-color: #fff;
+    /* Viền chuyển sang trắng lấp lánh */
+    color: #fff;
+    /* Chữ chuyển trắng */
     transition: 0.5s;
 }
 
@@ -943,10 +955,81 @@ body {
     .exam-grid {
         grid-template-columns: 1fr;
     }
+
     .exam-card {
-        margin-bottom: 5px; /* Tách rời nhau ra xíu */
+        margin-bottom: 5px;
+        /* Tách rời nhau ra xíu */
     }
 }
+
 div .lhead {
     text-decoration: none;
+}
+
+/* --- CSS CHO POPUP KẾT QUẢ TẾT --- */
+
+/* Tăng kích thước hộp kết quả */
+.result-box-tet {
+    background: #fffde7 url('https://www.transparenttextures.com/patterns/red-paper.png');
+    /* Thêm vân giấy đỏ nếu có, không thì giữ nền vàng */
+    border: 4px solid #d32f2f;
+    width: 95%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Vòng tròn điểm số */
+.tet-score-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tet-score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #d32f2f;
+    border: 5px solid #ffd700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffd700;
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.6);
+    animation: popUpScore 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popUpScore {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#popup-score {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    line-height: 1;
+}
+
+.score-total {
+    font-size: 1em;
+    color: #fff;
+    font-weight: normal;
+}
+
+/* Lời nhận xét */
+.tet-message {
+    font-size: 1.3em;
+    color: #b71c1c;
+    font-weight: bold;
+    font-family: 'Pangolin', sans-serif;
+    /* Hoặc font chữ cute nào đó */
+    margin-bottom: 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
