@@ -295,9 +295,9 @@ function showResultModal(score, total) {
     } else if (percent >= 80) {
         message = "Cũng tạm tạm 🧧";
     } else if (percent >= 50) {
-        message = "Học hành gì mà không trên trung bình nổi nữa trời !";
-    } else {
         message = "Non vê lờ ! Học lại đi bé! 😅";
+    } else {
+        message = "Học hành gì mà không trên trung bình nổi nữa trời!";
     }
 
     msgEl.innerText = message;
