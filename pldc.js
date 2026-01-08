@@ -133,7 +133,7 @@ function renderQuiz() {
     const quizArea = document.getElementById('quiz-area');
     quizArea.innerHTML = '';
 
-    currentExam = getExamQuestions(); // Gọi hàm thông minh ở trên
+    currentExam = getExamQuestions(); // Lấy danh sách câu hỏi
 
     if (currentExam.length === 0) {
         quizArea.innerHTML = '<p style="text-align:center;">Không tìm thấy câu hỏi phù hợp!</p>';
@@ -141,27 +141,51 @@ function renderQuiz() {
     }
 
     currentExam.forEach((q, index) => {
-        // Tạo thẻ câu hỏi
+        // 1. CHUẨN HÓA DỮ LIỆU ĐẦU VÀO
+        let opts = q.options || q.a;
+        let correctIdx = (q.answer !== undefined) ? q.answer : q.correct;
+        
+        // 2. BẮT ĐẦU ĐẢO ĐÁP ÁN (Logic mới thêm)
+        // Tạo mảng tạm chứa text đáp án và đánh dấu xem đâu là đáp án đúng
+        let tempOptions = opts.map((optText, i) => {
+            return {
+                text: optText,
+                isCorrect: (i === parseInt(correctIdx)) // Đánh dấu true nếu là đáp án đúng
+            };
+        });
+
+        // Trộn mảng tạm này lên (Dùng hàm shuffle có sẵn)
+        shuffle(tempOptions);
+
+        // Tách ngược trở lại thành mảng hiển thị và tìm index đúng mới
+        // Cập nhật trực tiếp vào biến q của currentExam để hàm chấm điểm (submitQuiz) hiểu
+        q.options = tempOptions.map(item => item.text); 
+        // Vì code dùng q.options hoặc q.a, ta gán đè vào q.options cho thống nhất
+        
+        // Tìm vị trí mới của đáp án đúng (ví dụ lúc đầu là A(0), giờ bị đảo xuống C(2))
+        q.answer = tempOptions.findIndex(item => item.isCorrect); 
+        
+        // Cập nhật lại biến cục bộ để render ra HTML
+        opts = q.options;
+        const newCorrect = q.answer; 
+
+        // 3. VẼ GIAO DIỆN (Như cũ)
         const card = document.createElement('div');
         card.className = 'question-card';
         card.id = `q-card-${index}`;
 
-        // Chuẩn hóa dữ liệu
         const chap = q.chapter || q.c;
         const lv = q.level || q.l;
         const content = q.question || q.q;
-        const opts = q.options || q.a;
         const explain = q.explanation || q.explain;
-        const correct = (q.answer !== undefined) ? q.answer : q.correct;
 
-        // Tạo các option
         let htmlOpts = '';
         opts.forEach((o, i) => {
             const letter = String.fromCharCode(65 + i);
             htmlOpts += `
                 <label id="lbl-${index}-${i}">
                     <input type="radio" name="q-${index}" value="${i}" 
-                           onchange="checkAnswer(${index}, ${i}, ${correct})">
+                           onchange="checkAnswer(${index}, ${i}, ${newCorrect})">
                     <span class="btn-letter">${letter}</span>
                     <span class="answer-text">${o}</span>
                 </label>
@@ -182,7 +206,6 @@ function renderQuiz() {
         quizArea.appendChild(card);
     });
 }
-
 // Hàm chấm điểm ngay lập tức (Instant Check)
 function checkAnswer(idx, userPick, correctPick) {
     // Khóa câu hỏi

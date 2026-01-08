@@ -1084,3 +1084,49 @@ div .lhead {
         background-position: 200% center;
     }
 }
+
+.correct-answer .answer-text {
+    color: #0f5132 !important; 
+    font-weight: bold;
+    text-shadow: none; 
+}
+
+.wrong-answer .answer-text {
+    color: #842029 !important; 
+    font-weight: bold;
+}
+
+.correct-answer .btn-letter {
+    background-color: #198754 !important; 
+    border-color: #198754 !important;
+    color: #fff !important; 
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.5); 
+}
+
+.wrong-answer .btn-letter {
+    background-color: #dc3545 !important; 
+    border-color: #dc3545 !important;
+    color: #fff !important;
+}
+
+.options label.correct-answer:hover {
+    border-color: #198754 !important; 
+    box-shadow: -5px 5px 10px rgba(25, 135, 84, 0.3) !important; 
+    background-color: #d1e7dd !important; 
+}
+
+.options label.wrong-answer:hover {
+    border-color: #dc3545 !important;
+    box-shadow: -5px 5px 10px rgba(220, 53, 69, 0.3) !important;
+    background-color: #f8d7da !important;
+}
+
+.correct-answer input[type="radio"]:checked + .btn-letter {
+    box-shadow: 0 0 15px rgba(25, 135, 84, 0.7) !important; 
+    border-color: #198754 !important; 
+}
+
+.wrong-answer input[type="radio"]:checked + .btn-letter {
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.7) !important; 
+    border-color: #dc3545 !important;
+}
