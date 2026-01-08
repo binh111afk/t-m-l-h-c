@@ -306,10 +306,20 @@ function showResultModal(score, total) {
     modal.style.display = 'flex';
 }
 
+// Tìm và sửa lại hàm này trong file pldc.js
+
 function closeResultModal() {
+    // 1. Tắt popup
     document.getElementById('result-modal').style.display = 'none';
-    // Cuộn lên đầu để xem lại bài
+
+    // 2. Cuộn lên đầu trang
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // 3. 👇 HIỆN NÚT "LÀM ĐỀ MỚI" Ở MÀN HÌNH CHÍNH 👇
+    const restartBtn = document.getElementById('restart-btn');
+    if (restartBtn) {
+        restartBtn.style.display = 'block'; // Hiện nút lên
+    }
 }
 // Vẽ Map câu hỏi
 function renderQuestionMap() {

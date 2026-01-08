@@ -1033,3 +1033,54 @@ div .lhead {
     margin-bottom: 10px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
+
+/* --- NÚT LÀM LẠI PHIÊN BẢN TẾT --- */
+.btn-restart {
+    /* Nền đỏ chuyển sắc như bao lì xì */
+    background: linear-gradient(to right, #b71c1c, #d32f2f, #b71c1c);
+    background-size: 200% auto;
+
+    /* Chữ vàng kim loại, font thư pháp */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    /* Chữ in hoa cho mạnh mẽ */
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-shadow: 1px 1px 0 #8e0000;
+
+    /* Viền vàng */
+    /* Gradient đỏ sang cam đậm */
+    background: linear-gradient(45deg, #b71c1c, #d32f2f, #f44336);
+    background-size: 200% auto;
+    /* Để làm hiệu ứng chuyển màu */
+    color: #ffd700;
+    /* Chữ màu Vàng kim loại */
+    border: 2px solid #ffd700;
+    /* Viền vàng */
+}
+
+/* Hiệu ứng khi di chuột vào */
+.btn-restart:hover {
+    background-position: right center;
+    /* Chạy dải màu */
+    transform: translateY(-3px) scale(1.02);
+    /* Nổi lên và phình to nhẹ */
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.6);
+    /* Đổ bóng đỏ rực rỡ */
+    color: #fff;
+    /* Chữ chuyển sang trắng cho nổi */
+    border-color: #fff;
+}
+
+/* Hiệu ứng lấp lánh nhẹ */
+@keyframes shine {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
