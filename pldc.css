@@ -1212,25 +1212,89 @@ div .lhead {
 }
 
 .question-card.highlighted {
-    animation: highlightTet 2s ease;
-    border-color: #ffd700;
+    /* Chạy animation tổng hợp trong 2s (khớp với JS) */
+    animation: tetFocus 2s ease-in-out;
+    
+    /* Đảm bảo nó nổi lên trên các thành phần khác */
+    position: relative; 
+    z-index: 10;
+    
+    /* Màu sắc khi được chọn */
+    border-color: #ffd700 !important; /* Viền vàng */
+    background-color: #fffde7 !important; /* Nền vàng kem nhẹ */
 }
 
-@keyframes highlightTet {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
-        transform: scale(1);
-    }
+/* --- TRANG TRÍ ICON NẢY RA (HOA & LÌ XÌ) --- */
 
-    50% {
-        box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
-        transform: scale(1.02);
-    }
+/* Tạo 2 phần tử giả để chứa icon */
+.question-card.highlighted::before,
+.question-card.highlighted::after {
+    position: absolute;
+    font-size: 2.5rem; /* Icon to rõ */
+    top: -25px; /* Nằm nhô lên trên khung */
+    opacity: 0; /* Mặc định ẩn */
+    
+    /* Animation: Hiện ra nhanh -> Giữ yên -> Mờ dần đi */
+    animation: popUpIcons 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
+               fadeOutIcons 0.5s ease-in 1.5s forwards;
+    pointer-events: none; /* Không che mất nội dung */
+}
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
-        transform: scale(1);
+/* Góc Trái: Hoa Đào */
+.question-card.highlighted::before {
+    content: '🧧'; 
+    left: -15px;
+    transform: rotate(-20deg);
+}
+
+/* Góc Phải: Bao Lì Xì */
+.question-card.highlighted::after {
+    content: '🧧'; 
+    right: -15px;
+    transform: rotate(20deg);
+}
+
+/* --- KEYFRAMES (CHUYỂN ĐỘNG) --- */
+
+/* Hiệu ứng rung, phóng to và đổi màu bóng */
+@keyframes tetFocus {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 rgba(255, 215, 0, 0); 
     }
+    15% { 
+        transform: scale(1.05) rotate(-1deg); /* Phóng to và nghiêng nhẹ */
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); /* Hào quang Vàng rực */
+    } 
+    30% { 
+        transform: scale(1.05) rotate(1deg); /* Lắc sang phải */
+    }
+    45% { 
+        transform: scale(1.02); 
+        box-shadow: 0 0 30px rgba(211, 47, 47, 0.6); /* Chuyển sang hào quang Đỏ */
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 rgba(211, 47, 47, 0); 
+    }
+}
+
+/* Hiệu ứng icon nảy lên */
+@keyframes popUpIcons {
+    0% { 
+        transform: scale(0) translateY(20px); /* Bắt đầu nhỏ xíu và ở thấp */
+        opacity: 0; 
+    }
+    100% { 
+        transform: scale(1) translateY(0); /* Nảy lên kích thước thật */
+        opacity: 1; 
+    }
+}
+
+/* Hiệu ứng icon biến mất */
+@keyframes fadeOutIcons {
+    0% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); } /* Bay lên trời rồi mất */
 }
 
 .map-item:focus,
