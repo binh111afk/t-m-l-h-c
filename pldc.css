@@ -1374,3 +1374,55 @@ input[type="radio"]:focus {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
+
+@media (max-width: 1024px) {
+    body { padding-top: 130px; }
+    
+    /* Ẩn bớt trang trí rườm rà */
+    .cau-doi-khung { display: none; }
+    .lantern-container { display: none; } /* Ẩn đèn lồng để đỡ che map */
+    
+    /* Map rộng hơn */
+    .question-map { width: 95%; max-width: none; }
+    
+    .container { padding: 20px; }
+}
+
+/* --- MOBILE (Dưới 768px) --- */
+@media (max-width: 768px) {
+    body { padding: 10px; padding-top: 120px; }
+    
+    h1 { font-size: 2em; }
+    
+    /* Grid câu hỏi nhỏ lại */
+    .map-grid { grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); }
+    .map-item { width: 30px; height: 30px; font-size: 10px; }
+    
+    /* Thẻ câu hỏi gọn hơn */
+    .question-card { padding: 15px; margin-bottom: 15px; }
+    
+    /* Options dễ bấm hơn */
+    .options label { padding: 10px; min-height: 50px; }
+    
+    .btn { font-size: 16px; padding: 12px; }
+    .btn-restart { font-size: 22px; }
+    
+    .matrix-info { font-size: 0.85em; }
+}
+
+/* --- ĐIỆN THOẠI NHỎ (Dưới 480px) --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    
+    .question-map { padding: 5px; top: 5px; }
+    body { padding-top: 110px; }
+    
+    .map-item { width: 28px; height: 28px; font-size: 9px; }
+    
+    .btn-letter { width: 28px; height: 28px; font-size: 0.9em; margin-right: 10px; }
+    
+    /* Modal nhỏ lại */
+    .modal-box { width: 95%; }
+    .tet-score-circle { width: 100px; height: 100px; }
+    #popup-score { font-size: 2.5em; }
+}
