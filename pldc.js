@@ -597,16 +597,12 @@ class QuizManager {
     }
 
     setupSecurity() {
-        // Chặn chuột phải
+        // 1. Chặn chuột phải (Để hạn chế Inspect Element/Xem source)
         document.addEventListener('contextmenu', (e) => {
-            if (window.location.pathname.includes('/exam')) {
-                e.preventDefault();
-            }
+            e.preventDefault(); // Chặn menu hiện ra
+            this.showToast('🚫 Không được nhấn chuột phải để xài Dev tools đâu pé ơi!', 'warning');
         });
-        
-        // Chặn phím tắt DevTools
         document.addEventListener('keydown', this.handleKeyDown);
-        
     }
 
     setupFallingFlowers() {

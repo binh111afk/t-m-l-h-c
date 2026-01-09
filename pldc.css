@@ -1245,3 +1245,68 @@ input[type="radio"]:focus {
     pointer-events: none;
     z-index: 9999;
 }
+
+/* =========================================
+   TOAST TẾT (THÔNG BÁO KIỂU CÂU ĐỐI/LÌ XÌ)
+   ========================================= */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px); /* Mặc định ẩn xuống dưới */
+    
+    /* Nền đỏ chuyển sắc sang trọng */
+    background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
+    
+    /* Chữ Vàng Kim Loại */
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    
+    /* Viền Vàng rực rỡ */
+    border: 2px solid #ffd700;
+    padding: 12px 30px;
+    
+    /* Bo tròn hình viên thuốc (Pill shape) */
+    border-radius: 50px;
+    
+    /* Đổ bóng đỏ (Tạo cảm giác phát sáng) */
+    box-shadow: 0 5px 20px rgba(183, 28, 28, 0.6);
+    
+    z-index: 10000;
+    opacity: 0;
+    
+    /* Hiệu ứng nảy nảy khi hiện lên cho vui mắt */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+/* Style riêng cho Cảnh báo (Warning) - Ví dụ: Chặn chuột phải */
+.toast-warning {
+    /* Đậm đà hơn chút để cảnh báo */
+    background: linear-gradient(135deg, #8e0000, #c62828);
+    border-color: #ffeb3b; /* Vàng chanh cho nổi */
+}
+
+/* Style cho Thông tin (Info) - Ví dụ: Thông báo điểm */
+.toast-info {
+    background: linear-gradient(135deg, #ff6f00, #ff8f00); /* Cam vàng */
+    color: #fff;
+    border-color: #fff;
+}
+.toast-info::before {
+    content: '🌸'; /* Thêm icon hoa đào */
+    font-size: 1.2em;
+}
+
+/* Class kích hoạt hiện lên */
+.toast-show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
