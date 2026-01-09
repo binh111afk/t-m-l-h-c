@@ -1,6 +1,3 @@
-/* --- FILE: pldc.js (Phiên bản hoàn hảo 10/10) --- */
-
-// ==================== CẤU TRÚC CHÍNH ====================
 class QuizManager {
     constructor() {
         this.questionBank = [];
@@ -24,6 +21,12 @@ class QuizManager {
         this.handleAnswerChange = this.handleAnswerChange.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
+        
+        // Giữ lại các hàm toàn cục để HTML gọi
+        window.confirmSubmit = () => this.confirmSubmit();
+        window.closeResultModal = () => this.closeResultModal();
+        window.closeModal = () => this.closeModal();
+        window.scrollToTop = () => this.scrollToTop();
     }
 
     // ==================== KHỞI TẠO ====================
@@ -273,6 +276,10 @@ class QuizManager {
             item.setAttribute('aria-label', `Nhảy tới câu ${index + 1}`);
             item.dataset.questionIndex = index;
             
+            item.addEventListener('click', () => {
+                this.scrollToQuestion(index);
+            });
+            
             map.appendChild(item);
         });
     }
@@ -380,6 +387,18 @@ class QuizManager {
     }
 
     // ==================== NỘP BÀI ====================
+    confirmSubmit() {
+        const done = document.querySelectorAll('input[type="radio"]:checked').length;
+        const total = this.currentExam.length;
+        const left = total - done;
+        
+        let message = left > 0 
+            ? `⚠️ Bạn còn <b>${left}</b> câu chưa làm! <br> 😏 Không biết thì chọn đại đi fen 😏`
+            : "Có chắc muốn nộp bài không fen?";
+        
+        this.showConfirmation(message, () => this.submitQuiz());
+    }
+
     submitQuiz() {
         if (this.currentExam.length === 0) return;
         
@@ -427,6 +446,10 @@ class QuizManager {
     hideSubmitButton() {
         const btn = document.getElementById('submit-btn');
         if (btn) btn.style.display = 'none';
+        
+        // Hiện nút làm đề mới
+        const restartBtn = document.getElementById('restart-btn');
+        if (restartBtn) restartBtn.style.display = 'block';
     }
 
     showResult(score, total, unanswered) {
@@ -447,8 +470,7 @@ class QuizManager {
         
         setTimeout(() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            this.showRestartButton();
-        }, 1000);
+        }, 500);
     }
 
     getResultMessage(percent) {
@@ -458,11 +480,41 @@ class QuizManager {
         return "Học hành gì mà không trên trung bình nổi nữa trời!";
     }
 
-    showRestartButton() {
-        const restartBtn = document.getElementById('restart-btn');
-        if (restartBtn) {
-            restartBtn.style.display = 'block';
-        }
+    confirmRestart() {
+        this.showConfirmation("Làm đề mới sẽ xóa kết quả hiện tại!", () => {
+            location.reload();
+        });
+    }
+
+    // ==================== MODAL FUNCTIONS ====================
+    showConfirmation(message, callback) {
+        const modal = document.getElementById('tet-modal');
+        const messageEl = document.getElementById('modal-message');
+        const confirmBtn = document.getElementById('btn-confirm-action');
+        
+        if (!modal || !messageEl || !confirmBtn) return;
+        
+        messageEl.innerHTML = message;
+        modal.style.display = 'flex';
+        
+        // Xóa event cũ và gắn event mới
+        const newBtn = confirmBtn.cloneNode(true);
+        confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
+        
+        newBtn.onclick = () => {
+            callback();
+            this.closeModal();
+        };
+    }
+
+    closeModal() {
+        const modal = document.getElementById('tet-modal');
+        if (modal) modal.style.display = 'none';
+    }
+
+    closeResultModal() {
+        const modal = document.getElementById('result-modal');
+        if (modal) modal.style.display = 'none';
     }
 
     // ==================== UTILITIES ====================
@@ -487,54 +539,8 @@ class QuizManager {
         }
     }
 
-    confirmSubmit() {
-        const done = document.querySelectorAll('input[type="radio"]:checked').length;
-        const total = this.currentExam.length;
-        const left = total - done;
-        
-        let message = left > 0 
-            ? `⚠️ Bạn còn <b>${left}</b> câu chưa làm! <br> 😏 Không biết thì chọn đại đi fen 😏`
-            : "Có chắc muốn nộp bài không fen?";
-        
-        this.showConfirmation(message, () => this.submitQuiz());
-    }
-
-    confirmRestart() {
-        this.showConfirmation("Làm đề mới sẽ xóa kết quả hiện tại!", () => {
-            location.reload();
-        });
-    }
-
-    showConfirmation(message, callback) {
-        const modal = document.getElementById('tet-modal');
-        const messageEl = document.getElementById('modal-message');
-        const confirmBtn = document.getElementById('btn-confirm-action');
-        
-        if (!modal || !messageEl || !confirmBtn) return;
-        
-        messageEl.innerHTML = message;
-        modal.style.display = 'flex';
-        
-        const newBtn = confirmBtn.cloneNode(true);
-        confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
-        
-        newBtn.onclick = () => {
-            callback();
-            this.closeModal();
-        };
-    }
-
-    closeModal() {
-        const modal = document.getElementById('tet-modal');
-        if (modal) modal.style.display = 'none';
-    }
-
-    closeResultModal() {
-        const modal = document.getElementById('result-modal');
-        if (modal) modal.style.display = 'none';
-        
+    scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        this.showRestartButton();
     }
 
     // ==================== SETUP ====================
@@ -545,31 +551,21 @@ class QuizManager {
             quizArea.addEventListener('change', this.handleAnswerChange);
         }
         
-        // Event Delegation cho bản đồ câu hỏi
-        const mapGrid = document.getElementById('map-grid');
-        if (mapGrid) {
-            mapGrid.addEventListener('click', (event) => {
-                const mapItem = event.target.closest('.map-item');
-                if (mapItem && mapItem.dataset.questionIndex) {
-                    const index = parseInt(mapItem.dataset.questionIndex);
-                    this.scrollToQuestion(index);
-                }
-            });
-        }
-        
-        // Back to top button
-        const backToTopBtn = document.getElementById("btn-back-to-top");
-        if (backToTopBtn) {
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-        
         // Scroll event
         window.addEventListener('scroll', this.handleScroll);
         
+        // Keyboard events
+        document.addEventListener('keydown', this.handleKeyDown);
+        
         // Hoa rơi
         this.setupFallingFlowers();
+        
+        // Nút làm đề mới (xử lý riêng vì HTML đang dùng onclick="location.reload()")
+        const restartBtn = document.getElementById('restart-btn');
+        if (restartBtn) {
+            // Giữ lại onclick từ HTML (location.reload())
+            // Không cần thêm event listener khác
+        }
     }
 
     setupAccessibility() {
@@ -579,30 +575,14 @@ class QuizManager {
             quizArea.setAttribute('role', 'region');
             quizArea.setAttribute('aria-label', 'Khu vực làm bài trắc nghiệm');
         }
-        
-        // Keyboard navigation cho bản đồ câu hỏi
-        const mapGrid = document.getElementById('map-grid');
-        if (mapGrid) {
-            mapGrid.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    const target = event.target;
-                    if (target.classList.contains('map-item') && target.dataset.questionIndex) {
-                        event.preventDefault();
-                        const index = parseInt(target.dataset.questionIndex);
-                        this.scrollToQuestion(index);
-                    }
-                }
-            });
-        }
     }
 
     setupSecurity() {
-        // 1. Chặn chuột phải (Để hạn chế Inspect Element/Xem source)
+        // 1. Chặn chuột phải
         document.addEventListener('contextmenu', (e) => {
-            e.preventDefault(); // Chặn menu hiện ra
+            e.preventDefault();
             this.showToast('🚫 Không được nhấn chuột phải để xài Dev tools đâu pé ơi!', 'warning');
         });
-        document.addEventListener('keydown', this.handleKeyDown);
     }
 
     setupFallingFlowers() {
@@ -664,7 +644,7 @@ class QuizManager {
             <div class="error-container">
                 <h2>⚠️ Lỗi tải dữ liệu</h2>
                 <p>${error.message}</p>
-                <button class="retry-btn" data-action="retry">
+                <button class="retry-btn" onclick="location.reload()">
                     Thử lại
                 </button>
                 <p><small>Kiểm tra file question.json và chạy Live Server</small></p>
@@ -674,23 +654,8 @@ class QuizManager {
         const quizArea = document.getElementById('quiz-area');
         if (quizArea) {
             quizArea.innerHTML = errorHTML;
-            
-            // Thêm event listener cho nút retry
-            const retryBtn = quizArea.querySelector('[data-action="retry"]');
-            if (retryBtn) {
-                retryBtn.addEventListener('click', () => {
-                    location.reload();
-                });
-            }
         } else {
             document.body.innerHTML = errorHTML;
-            
-            const retryBtn = document.querySelector('[data-action="retry"]');
-            if (retryBtn) {
-                retryBtn.addEventListener('click', () => {
-                    location.reload();
-                });
-            }
         }
     }
 
@@ -712,17 +677,29 @@ class QuizManager {
                 flower.parentNode.removeChild(flower);
             }
         });
+        
+        // Xóa các hàm toàn cục
+        delete window.confirmSubmit;
+        delete window.closeResultModal;
+        delete window.closeModal;
+        delete window.scrollToTop;
     }
 }
 
 // ==================== KHỞI CHẠY ====================
-// Giờ đây bạn có thể đặt tên biến bất kỳ mà không sợ lỗi
-const myApp = new QuizManager(); // Hoặc quizManager, app, examApp, testApp...
+// Tạo instance và gán vào biến toàn cục
+const myApp = new QuizManager();
 
+// Khởi động khi DOM sẵn sàng
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+        console.log("Khởi động QuizManager...");
         myApp.init();
     });
 } else {
+    console.log("DOM đã sẵn sàng, khởi động QuizManager...");
     myApp.init();
 }
+
+// Export ra window để có thể debug từ console
+window.myApp = myApp;
