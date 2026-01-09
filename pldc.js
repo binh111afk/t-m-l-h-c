@@ -45,12 +45,13 @@ function shuffle(array) {
     return array;
 }
 
-// --- 2. LOGIC LẤY CÂU HỎI THÔNG MINH (ĐA NĂNG) ---
 function getExamQuestions() {
     let examQuestions = [];
 
-    // KIỂM TRA: File HTML hiện tại có yêu cầu chương cụ thể không?
-    // (JS sẽ đọc thuộc tính data-chapter trong thẻ <body>)
+    // 1. Lấy lịch sử cũ ra trước (Để dùng cho cả 2 chế độ)
+    const lastExamIds = JSON.parse(localStorage.getItem('lastExamIds')) || [];
+
+    // KIỂM TRA: Chế độ luyện tập chương?
     const specificChapter = document.body.getAttribute('data-chapter');
 
     if (specificChapter) {
@@ -58,22 +59,24 @@ function getExamQuestions() {
         const chapNum = parseInt(specificChapter);
         console.log(`>>> Chế độ: Luyện tập riêng Chương ${chapNum}`);
 
-        // Lọc tất cả câu hỏi của chương đó
+        // Lấy tất cả câu của chương đó
         let pool = questionBank.filter(q => (q.chapter == chapNum || q.c == chapNum));
 
-        // Trộn và lấy 25 câu
-        shuffle(pool);
-        examQuestions = pool.slice(0, 25);
+        // --- THÊM LOGIC LỌC TRÙNG CHO CHƯƠNG (NẾU MUỐN) ---
+        // Nếu bạn muốn luyện chương cũng ưu tiên câu mới, dùng đoạn này:
+        const fresh = pool.filter(q => !lastExamIds.includes(q.id));
+        const used = pool.filter(q => lastExamIds.includes(q.id));
+        shuffle(fresh); shuffle(used);
 
-        // Sửa lại tiêu đề web cho phù hợp
+        // Ưu tiên fresh
+        let allSorted = fresh.concat(used);
+        examQuestions = allSorted.slice(0, 25); // Lấy 25 câu
+
         updateUIForChapterMode(chapNum, examQuestions.length);
 
     } else {
-        // === TRƯỜNG HỢP 2: THI THỬ TỔNG HỢP (Mặc định) ===
+        // === TRƯỜNG HỢP 2: THI THỬ TỔNG HỢP (Full Matrix) ===
         console.log(">>> Chế độ: Thi thử tổng hợp (Full Matrix)");
-
-        // Logic lấy theo ma trận (như cũ)
-        const lastExamIds = JSON.parse(localStorage.getItem('lastExamIds')) || [];
 
         for (let chap = 1; chap <= 8; chap++) {
             if (!matrix[chap]) continue;
@@ -84,28 +87,45 @@ function getExamQuestions() {
                         (q.chapter == chap || q.c == chap) &&
                         (q.level == level || q.l == level)
                     );
+
                     if (pool.length > 0) {
                         const fresh = pool.filter(q => !lastExamIds.includes(q.id));
                         const used = pool.filter(q => lastExamIds.includes(q.id));
-                        shuffle(fresh); shuffle(used);
+
+                        shuffle(fresh);
+                        shuffle(used);
 
                         let slot = (fresh.length >= countNeeded)
                             ? fresh.slice(0, countNeeded)
                             : fresh.concat(used.slice(0, countNeeded - fresh.length));
+
                         examQuestions = examQuestions.concat(slot);
                     }
                 }
             });
         }
-        // Lưu lịch sử để lần sau đỡ trùng
-        localStorage.setItem('lastExamIds', JSON.stringify(examQuestions.map(q => q.id)));
         shuffle(examQuestions);
+    }
+
+    // --- ĐƯA LOGIC LƯU LỊCH SỬ RA NGOÀI (ÁP DỤNG CHO CẢ 2 CHẾ ĐỘ) ---
+    if (examQuestions.length > 0) {
+        const newIds = examQuestions.map(q => q.id);
+        const updatedHistory = [...new Set([...lastExamIds, ...newIds])];
+
+        // Nếu lịch sử đã đầy (lớn hơn hoặc bằng tổng số câu trong kho) -> Reset
+        if (updatedHistory.length >= questionBank.length) {
+            console.log("Đã làm hết kho câu hỏi! Reset lịch sử vòng lặp mới.");
+            localStorage.setItem('lastExamIds', JSON.stringify(newIds));
+        } else {
+            localStorage.setItem('lastExamIds', JSON.stringify(updatedHistory));
+        }
+
+        console.log(`Đã lưu lịch sử: ${updatedHistory.length}/${questionBank.length} câu đã làm.`);
     }
 
     return examQuestions;
 }
 
-// Hàm cập nhật giao diện khi ở chế độ luyện chương
 function updateUIForChapterMode(chapNum, count) {
     // Đổi tiêu đề H1
     const h1 = document.querySelector('h1');
@@ -144,7 +164,7 @@ function renderQuiz() {
         // 1. CHUẨN HÓA DỮ LIỆU ĐẦU VÀO
         let opts = q.options || q.a;
         let correctIdx = (q.answer !== undefined) ? q.answer : q.correct;
-        
+
         // 2. BẮT ĐẦU ĐẢO ĐÁP ÁN (Logic mới thêm)
         // Tạo mảng tạm chứa text đáp án và đánh dấu xem đâu là đáp án đúng
         let tempOptions = opts.map((optText, i) => {
@@ -159,15 +179,15 @@ function renderQuiz() {
 
         // Tách ngược trở lại thành mảng hiển thị và tìm index đúng mới
         // Cập nhật trực tiếp vào biến q của currentExam để hàm chấm điểm (submitQuiz) hiểu
-        q.options = tempOptions.map(item => item.text); 
+        q.options = tempOptions.map(item => item.text);
         // Vì code dùng q.options hoặc q.a, ta gán đè vào q.options cho thống nhất
-        
+
         // Tìm vị trí mới của đáp án đúng (ví dụ lúc đầu là A(0), giờ bị đảo xuống C(2))
-        q.answer = tempOptions.findIndex(item => item.isCorrect); 
-        
+        q.answer = tempOptions.findIndex(item => item.isCorrect);
+
         // Cập nhật lại biến cục bộ để render ra HTML
         opts = q.options;
-        const newCorrect = q.answer; 
+        const newCorrect = q.answer;
 
         // 3. VẼ GIAO DIỆN (Như cũ)
         const card = document.createElement('div');
