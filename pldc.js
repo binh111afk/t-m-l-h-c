@@ -9,10 +9,10 @@ class QuizManager {
                 1: { NB: 1, TH: 3, VD: 0 },
                 2: { NB: 1, TH: 3, VD: 1 },
                 3: { NB: 2, TH: 1, VD: 0 },
-                4: { NB: 2, TH: 7, VD: 7 },
+                4: { NB: 2, TH: 7, VD: 3 },
                 5: { NB: 1, TH: 2, VD: 2 },
-                6: { NB: 1, TH: 2, VD: 1 },
-                7: { NB: 1, TH: 3, VD: 6 },
+                6: { NB: 1, TH: 2, VD: 3 },
+                7: { NB: 3, TH: 3, VD: 6 },
                 8: { NB: 2, TH: 1, VD: 0 }
             }
         };
