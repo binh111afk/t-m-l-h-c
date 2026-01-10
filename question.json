@@ -7789,7 +7789,7 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Xuân và Vân là vợ chồng có tài sản chung là 1,8 tỷ. Họ có con là Minh và Mai. Tháng 5\/2000, Vân mang thai 5 tháng, dự kiến đặt tên con là Phương. Tháng 6\/2000, Xuân mất. Tháng 9\/2000, Vân sinh Phương. Xác định số tài sản mà Minh được hưởng thừa kế nếu Vân và Phương chết cùng thời điểm trong một tai nạn giao thông sau khi ra viện (giả sử Xuân không để lại di chúc):",
+    "question":"Vợ chồng anh Xuân và chị Vân có khối tài sản chung trị giá 1,8 tỷ đồng. Họ có hai con chung là Minh và Mai. Tháng 6/2000, anh Xuân qua đời không để lại di chúc. Tại thời điểm này, chị Vân đang mang thai và đến tháng 9/2000 thì sinh ra bé Phương (bé sinh ra còn sống). Một thời gian sau, chị Vân và bé Phương không may gặp tai nạn và qua đời cùng một thời điểm. Hãy xác định phần di sản thừa kế mà Minh được hưởng riêng từ khối di sản của chị Vân để lại?",
     "options":[
       "562,5 triệu đồng",
       "375 triệu đồng",
@@ -7797,7 +7797,7 @@
       "Cả ba phương án trên đều sai"
     ],
     "answer":0,
-    "explanation":"1. Xuân chết (6\/2000): Di sản 900tr. Chia 4 suất (Vân, Minh, Mai, Phương - thai nhi sinh ra sống). Mỗi người 225tr. \n2. Vân và Phương chết cùng thời điểm (sau khi Phương đã sinh ra và sống được một thời gian). \n- Di sản Phương (225tr từ Xuân): Chia cho hàng 1. Cha (Xuân - chết), Mẹ (Vân - chết cùng lúc). Theo luật, người chết cùng thời điểm không thừa kế của nhau. Vậy chia cho hàng 2? Không, chia cho người thừa kế của Phương? (Anh chị em ruột: Minh, Mai). Minh nhận 225\/2 = 112.5. \n- Di sản Vân (900tr tài sản riêng + 225tr từ Xuân = 1125tr): Chia cho hàng 1 (Minh, Mai). (Phương chết cùng lúc không hưởng). Minh nhận 1125\/2 = 562.5. \nTổng Minh nhận: 225 (từ Xuân) + 112.5 (từ Phương) + 562.5 (từ Vân) = 900. \n*Lưu ý:* Đáp án A là 562.5. Có thể đề bài chỉ hỏi phần hưởng từ di sản của Vân? Hoặc cách tính khác. Nếu Phương chết cùng thời điểm Vân -> Phương không thừa kế của Vân và Vân không thừa kế của Phương. Di sản Vân (1125) chia Minh, Mai -> Minh 562.5. Hợp lý với đáp án A."
+    "explanation":"Để giải quyết tình huống này, trước hết ta cần phân chia di sản của anh Xuân (người mất trước). Di sản của anh Xuân là một nửa khối tài sản chung, tương đương 900 triệu đồng. Vì anh Xuân không để lại di chúc nên di sản được chia theo pháp luật cho hàng thừa kế thứ nhất gồm 4 người: vợ (Vân), 2 con (Minh, Mai) và thai nhi (bé Phương - vì sinh ra còn sống nên vẫn được hưởng). Như vậy, mỗi suất thừa kế của anh Xuân trị giá 225 triệu đồng (900 chia 4). Lúc này, tổng tài sản riêng của chị Vân sẽ bao gồm 900 triệu đồng (phần tài sản của chị trong khối tài sản chung) cộng với 225 triệu đồng thừa kế từ chồng, tổng cộng là 1 tỷ 125 triệu đồng. Khi chị Vân và bé Phương chết cùng thời điểm, theo luật định họ sẽ không thừa kế của nhau, do đó di sản của chị Vân sẽ được chia đều cho những người thừa kế còn sống của chị là Minh và Mai (loại trừ Phương). Vậy, phần di sản mà Minh được hưởng từ chị Vân là 1 tỷ 125 triệu chia đôi, bằng 562,5 triệu đồng."
   },
   {
     "chapter":4,
@@ -7854,19 +7854,6 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Xuân và Vân là vợ chồng... có con Minh, Mai. Vân mang thai... Xuân chết. Xác định số di sản mà Minh được hưởng nếu thai nhi chết lưu: (Lặp lại câu 876)",
-    "options":[
-      "450 triệu đồng",
-      "225 triệu đồng",
-      "300 triệu đồng",
-      "Cả ba phương án trên đều sai"
-    ],
-    "answer":2,
-    "explanation":"Như đã giải ở câu trước, suất của thai nhi chết lưu được chia đều lại cho các thừa kế khác. Minh nhận 225 + 75 = 300 triệu."
-  },
-  {
-    "chapter":4,
-    "level":"VD",
     "question":"Ông Hưng và bà Bình là vợ chồng có tài sản chung là 180 triệu, có hai con là Mạnh, 10 tuổi và Nga, 8 tuổi. Hưng có di chúc hợp pháp cho bạn mình là Sinh toàn bộ tài sản. Vậy, sau khi Hưng chết Sinh sẽ được hưởng:",
     "options":[
       "30 triệu đồng",
@@ -7893,7 +7880,7 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Anh Tiến và chị Hân là vợ chồng... Con chung Mẫn... Con nuôi Cảnh... Con riêng Trâm (của Hân). Năm 2006. Anh Tiến và chị Hân... chết cùng thời điểm. Hãy cho biết Trâm được hưởng bao nhiêu di sản (Tài sản chung 1.5 tỷ):",
+    "question":"Anh Tiến và chị Hân là vợ chồng hợp pháp, có khối tài sản chung trị giá 1,5 tỷ đồng. Họ có một người con chung là Mẫn và một người con nuôi hợp pháp là Cảnh. Ngoài ra, chị Hân có một người con riêng là Trâm. Năm 2006, do bị tai nạn, anh Tiến và chị Hân đã qua đời cùng một thời điểm và không để lại di chúc. Hãy cho biết Trâm được hưởng bao nhiêu phần di sản?",
     "options":[
       "250 triệu đồng",
       "375 triệu đồng",
@@ -7901,7 +7888,7 @@
       "Cả ba phương án trên đều sai"
     ],
     "answer":0,
-    "explanation":"Tiến và Hân chết cùng thời điểm -> Không thừa kế của nhau. \n1. Di sản Hân = 750tr. Chia cho hàng 1 của Hân: Mẫn, Cảnh, Trâm (3 con). \n2. Mỗi người nhận: 750 \/ 3 = 250 triệu. \nTrâm nhận 250 triệu."
+    "explanation":"Đầu tiên, ta cần xác định di sản riêng của từng người. Vì tài sản chung của vợ chồng là 1,5 tỷ đồng nên di sản của anh Tiến và chị Hân mỗi người là một nửa, tương đương 750 triệu đồng. Theo quy định tại Điều 619 Bộ luật Dân sự 2015 (hoặc Điều 641 BLDS 2005), vì anh Tiến và chị Hân chết cùng thời điểm nên họ sẽ không được thừa kế di sản của nhau, di sản của ai sẽ chuyển thẳng cho hàng thừa kế của người đó. Đối với Trâm, vì là con riêng của chị Hân nên Trâm chỉ thuộc hàng thừa kế của chị Hân (không được hưởng thừa kế của anh Tiến). Xét hàng thừa kế thứ nhất của chị Hân bao gồm 3 người là: Mẫn (con chung), Cảnh (con nuôi) và Trâm (con riêng). Như vậy, khối di sản 750 triệu đồng của chị Hân sẽ được chia đều cho 3 người con này. Kết quả, Trâm sẽ nhận được một suất thừa kế trị giá 250 triệu đồng."
   },
   {
     "chapter":4,
@@ -7932,28 +7919,15 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Ân và Bàn là vợ chồng hợp pháp. Năm 2009, Ân qua đời và trước khi chết có để lại di chúc miệng hợp lệ, trong đó định đoạt di sản cho Cương và Đạt. Hãy cho biết theo quy định của pháp luật về thừa kế, Bàn được hưởng bao nhiêu phần di sản của Ân.",
+    "question":"Ông Ân và bà Bàn là vợ chồng hợp pháp, có hai con chung là Cương và Đạt. Năm 2009, ông Ân qua đời. Trước khi chết ông để lại di chúc miệng hợp lệ, trong đó định đoạt toàn bộ di sản của mình cho hai con là Cương và Đạt. Biết rằng tài sản chung của vợ chồng Ân - Bàn là 900 triệu đồng (không có nghĩa vụ tài sản nào khác). Hãy cho biết theo quy định của pháp luật về thừa kế, bà Bàn được hưởng bao nhiêu phần di sản của ông Ân?",
     "options":[
       "0 đồng",
       "150 triệu đồng",
       "100 triệu đồng",
       "Cả ba phương án trên đều sai"
     ],
-    "answer":1,
-    "explanation":"Di sản Ân = 450tr. Di chúc cho Cương, Đạt. \nBàn (vợ) hưởng bắt buộc. \nSuất pháp luật (chia 3: Bàn, Cương, Đạt) = 150tr. \nSuất bắt buộc cho Bàn = 2\/3 * 150 = 100tr. \nVậy Bàn hưởng 100tr. \n(Đáp án B là 150, C là 100. Theo luật là 100. Nếu đáp án là 150 thì có thể đề bài coi di chúc miệng vô hiệu? Nhưng đề nói 'trước khi chết di chúc miệng trước nhiều người' -> thường là hợp lệ. Nếu vô hiệu -> chia đều 3 -> 150. Nếu hợp lệ -> Bàn nhận 100. Chọn C (100) là chuẩn theo tình huống di chúc có hiệu lực. Nếu đáp án ngân hàng là B thì do coi di chúc vô hiệu)."
-  },
-  {
-    "chapter":4,
-    "level":"VD",
-    "question":"Anh Tiến và chị Hân... chết cùng thời điểm (Lặp lại). Hãy cho biết Mẫn được hưởng bao nhiêu di sản (TS chung 1.5 tỷ):",
-    "options":[
-      "1,5 tỷ đồng",
-      "375 triệu đồng",
-      "750 triệu đồng",
-      "Cả ba phương án trên đều sai"
-    ],
     "answer":2,
-    "explanation":"1. Di sản Tiến (750): Chia Mẫn, Cảnh. Mỗi người 375. \n2. Di sản Hân (750): Chia Mẫn, Cảnh, Trâm. Mỗi người 250. \nTổng Mẫn nhận: 375 + 250 = 625. \nKhông có đáp án 625. \n*Lỗi đề bài\/đáp án*: Có thể đề bài không tính Cảnh là con nuôi hợp pháp? Hoặc Trâm? Nếu Cảnh không được -> Mẫn hưởng trọn Tiến (750) + 1\/2 Hân (375) = 1125. Nếu Trâm không được -> Tiến (375) + Hân (375) = 750. \nNếu chia đều tất cả cho các con (giả sử Cảnh, Trâm đều hưởng như nhau ở cả 2 bên - sai luật nhưng có thể là logic đề): 1.5 tỷ \/ 3 = 500. \nNếu Cảnh là con nuôi cả hai -> Hưởng cả hai. Trâm con riêng Hân -> Chỉ hưởng Hân. \nNếu đáp án C (750) đúng -> Có thể Mẫn là người duy nhất hưởng trọn phần Tiến (750) và không được tính phần Hân? Hoặc cộng gộp sai. Tuy nhiên, 750 là một con số tròn (1 nửa gia tài). Chọn C với sự dè dặt."
+    "explanation":"Căn cứ vào Điều 644 Bộ luật Dân sự (về người thừa kế không phụ thuộc vào nội dung di chúc), vợ ông Ân là bà Bàn thuộc đối tượng được hưởng thừa kế bắt buộc mà không cần xét đến ý chí của người lập di chúc. Trước tiên, ta cần xác định di sản thừa kế của riêng ông Ân là một nửa trong khối tài sản chung 900 triệu đồng của vợ chồng, tức là 450 triệu đồng. Nếu giả định chia thừa kế theo pháp luật (khi không có di chúc), hàng thừa kế thứ nhất của ông Ân sẽ gồm 3 người là vợ (bà Bàn) và hai người con (Cương, Đạt), tương ứng mỗi suất thừa kế trị giá 150 triệu đồng (450 chia 3). Tuy nhiên, vì ông Ân đã lập di chúc để lại toàn bộ tài sản cho các con và không chia cho vợ, nên pháp luật sẽ can thiệp để bảo vệ quyền lợi của bà Bàn. Cụ thể, bà Bàn sẽ được hưởng một khoản tối thiểu bằng 2/3 của một suất thừa kế theo pháp luật vừa tính được. Như vậy, số tiền bà Bàn thực nhận là 2/3 nhân với 150 triệu đồng, bằng 100 triệu đồng."
   },
   {
     "chapter":4,
@@ -8010,15 +7984,15 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Ông Tưởng và bà Hạnh. Hạnh chết di chúc cho Tưởng. Tưởng hưởng bao nhiêu (TS 2 tỷ, Nhung chưa thành niên):",
+    "question":"Ông Tưởng và bà Hạnh là vợ chồng hợp pháp, có một người con chung là Nhung (hiện chưa thành niên). Bà Hạnh qua đời, để lại khối di sản riêng trị giá 2 tỷ đồng. Trong di chúc hợp pháp, bà Hạnh định đoạt để lại toàn bộ tài sản cho ông Tưởng. Biết rằng bố mẹ bà Hạnh đều đã mất. Hỏi ông Tưởng thực tế được hưởng bao nhiêu từ di sản của vợ?",
     "options":[
       "777,8 triệu đồng",
       "1 tỷ đồng",
-      "555,6 triệu đồng",
+      "333,3 triệu đồng",
       "Cả ba phương án trên đều sai"
     ],
-    "answer":0,
-    "explanation":"Di sản Hạnh = 1 tỷ. \nSuất luật (chia 3: Tưởng, Thúy, Nhung) = 333.33. \nSuất bắt buộc cho Nhung = 2\/3 * 333.33 = 222.22. \nTưởng nhận: 1000 - 222.22 = 777.78 triệu. Chọn A."
+    "answer":2,
+    "explanation":"Căn cứ vào quy định tại Điều 644 Bộ luật Dân sự 2015 về người thừa kế không phụ thuộc vào nội dung di chúc, mặc dù bà Hạnh có nguyện vọng để lại toàn bộ tài sản cho ông Tưởng, nhưng em Nhung là con chưa thành niên nên vẫn được pháp luật bảo vệ quyền lợi. Cụ thể, nếu giả định chia di sản theo pháp luật thì hàng thừa kế thứ nhất gồm ông Tưởng và Nhung (2 người), mỗi suất thừa kế sẽ trị giá 1 tỷ đồng (2 tỷ chia 2). Tuy nhiên, vì Nhung thuộc đối tượng ưu tiên nên em sẽ được hưởng suất tối thiểu bằng 2/3 của một suất thừa kế theo pháp luật này, tương đương khoảng 666,7 triệu đồng. Do đó, số tiền thực tế ông Tưởng được nhận sẽ là phần còn lại sau khi đã trích phần bắt buộc cho Nhung, tức là ông Tưởng chỉ hưởng khoảng 1 tỷ 333,3 triệu đồng."
   },
   {
     "chapter":4,
@@ -8036,7 +8010,7 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Ông Tưởng... Hân con riêng... Hưng con nuôi. Tưởng chết không di chúc. Hân, Hưng hưởng bao nhiêu:",
+    "question":"Ông Tưởng qua đời đột ngột và không để lại di chúc, để lại khối di sản trị giá 990 triệu đồng. Tại thời điểm mở thừa kế, những người thân thích của ông Tưởng còn sống bao gồm: vợ hợp pháp, bố mẹ đẻ, anh Hưng là con nuôi hợp pháp của ông Tưởng và chị Hân là con riêng của vợ (không có quan hệ nuôi dưỡng với ông Tưởng). Căn cứ vào quy định của pháp luật dân sự, hãy xác định phần di sản thừa kế mà anh Hưng và chị Hân được hưởng là bao nhiêu?",
     "options":[
       "199 triệu đồng",
       "247,5 triệu đồng; riêng Hân không được hưởng di sản",
@@ -8049,7 +8023,7 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Ông Hân và bà Lan... Phát chết 1996 không di chúc. Tài sản chung Phát-Như 820. Mai táng 10. Chia di sản:",
+    "question":"Ông Hân và bà Lan là bố mẹ của anh Phát. Phát kết hôn với chị Như và có 2 người con chung. Năm 1996, anh Phát qua đời đột ngột không để lại di chúc. Vào thời điểm này, tổng tài sản chung của vợ chồng Phát - Như là 820 triệu đồng. Gia đình đã dùng 10 triệu đồng từ khối tài sản chung này để lo chi phí mai táng cho Phát. Hỏi mỗi suất thừa kế theo pháp luật của anh Phát được hưởng bao nhiêu?",
     "options":[
       "81 triệu đồng",
       "82 triệu đồng",
@@ -8057,7 +8031,7 @@
       "Cả ba phương án trên đều sai"
     ],
     "answer":0,
-    "explanation":"Di sản Phát = 410 - 10 = 400. Chia hàng 1: Vợ (Như), Con (Minh, Nhung), Cha (Hân), Mẹ (Lan). Tổng 5 người. Mỗi người: 400 \/ 5 = 80. Đáp án A là 81? Có thể trừ mai táng trước khi chia đôi? (820-10)\/2 = 405. 405\/5 = 81. Đúng. Mai táng phí là nghĩa vụ chung của tài sản vợ chồng hay riêng? Thường lấy từ di sản riêng. Nếu lấy từ khối chung thì tính như A. Chọn A."
+    "explanation":"Đầu tiên, xác định khối tài sản chung thực tế của vợ chồng ông Phát và bà Như tại thời điểm mở thừa kế là 810 triệu đồng, sau khi đã trừ đi chi phí mai táng 10 triệu đồng từ tổng tài sản ban đầu là 820 triệu. Vì đây là tài sản chung nên di sản thừa kế riêng của ông Phát được xác định là một nửa khối tài sản này, tương đương 405 triệu đồng. Do ông Phát chết không để lại di chúc nên di sản sẽ được chia theo pháp luật cho hàng thừa kế thứ nhất gồm 5 người là: bố đẻ (ông Hân), mẹ đẻ (bà Lan), vợ (bà Như) và 2 người con. Như vậy, lấy tổng di sản 405 triệu đồng chia đều cho 5 suất thừa kế, ta tính được mỗi người sẽ được hưởng một phần là 81 triệu đồng."
   },
   {
     "chapter":4,
