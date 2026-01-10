@@ -443,18 +443,28 @@ class QuizManager {
         
         if (!correctLabel || !explainDiv) return;
         
+        // 1. Highlight đáp án đúng trên giao diện
         correctLabel.classList.add('correct-answer');
         
-        if (!explainDiv.innerHTML.includes("Đáp án")) {
-            const correctChar = String.fromCharCode(65 + correctAnswer);
-            explainDiv.innerHTML = `
-                <div class="feedback-unanswered">
-                    ⚠️ Chưa làm | 👉 Đáp án: ${correctChar}
-                </div>
-                ${explainDiv.innerHTML}
-            `;
-            explainDiv.style.display = 'block';
-        }
+        // 2. Lấy dữ liệu gốc từ bộ đề (để tránh lỗi nối chuỗi lung tung)
+        const questionData = this.currentExam[index];
+        const correctChar = String.fromCharCode(65 + correctAnswer);
+        
+        // 3. Viết lại nội dung giải thích (Bao gồm cảnh báo + Nội dung gốc)
+        explainDiv.innerHTML = `
+            <div class="feedback-unanswered">
+                ⚠️ Chưa làm | 👉 Đáp án: ${correctChar}
+            </div>
+            <div style="margin-top: 5px;">
+                <strong>Giải thích:</strong> ${questionData.explanation || "Không có giải thích chi tiết cho câu này."}
+            </div>
+        `;
+        
+        // 4. QUAN TRỌNG: Bắt buộc hiện khung giải thích
+        explainDiv.style.display = 'block';
+        
+        // 5. Thêm hiệu ứng rung nhẹ để người dùng chú ý
+        explainDiv.style.animation = 'fadeIn 0.5s ease';
     }
 
     hideSubmitButton() {
