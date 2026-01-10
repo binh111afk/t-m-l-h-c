@@ -46,17 +46,27 @@ class QuizManager {
 
     // ==================== TẢI DỮ LIỆU ====================
     async loadQuestions() {
-        const response = await fetch('./question.json');
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: Không thể tải file question.json`);
+        try {
+            // Tạo một con số ngẫu nhiên dựa trên thời gian hiện tại
+            const timestamp = new Date().getTime();
+            
+            // Gắn ?v=... vào sau đường dẫn để ép trình duyệt tải mới
+            const response = await fetch(`./question.json?v=${timestamp}`);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: Không thể tải file question.json`);
+            }
+            
+            this.questionBank = await response.json();
+            this.questionBank.forEach((q, index) => { 
+                q.id = index; 
+            });
+            
+            console.log(`Đã tải ${this.questionBank.length} câu hỏi (No-Cache Mode)`);
+        } catch (error) {
+            // Ném lỗi ra để hàm init() bắt được và hiển thị giao diện lỗi
+            throw error;
         }
-        
-        this.questionBank = await response.json();
-        this.questionBank.forEach((q, index) => { 
-            q.id = index; 
-        });
-        
-        console.log(`Đã tải ${this.questionBank.length} câu hỏi`);
     }
 
     // ==================== LẤY ĐỀ THI ====================
@@ -70,24 +80,24 @@ class QuizManager {
         return this.getFullExamQuestions();
     }
 
+    // --- 1. SỬA HÀM LẤY CÂU HỎI THEO CHƯƠNG ---
+    // ==================== LẤY CÂU HỎI (ĐÃ FIX LỖI TRỘN) ====================
+
+    // 1. Hàm lấy câu hỏi theo chương
     getChapterQuestions(chapter) {
         console.log(`>>> Chế độ: Luyện tập riêng Chương ${chapter}`);
         
-        const lastExamIds = this.getHistory();
-        const pool = this.questionBank.filter(q => 
+        let pool = this.questionBank.filter(q => 
             (q.chapter == chapter || q.c == chapter)
         );
         
         if (pool.length === 0) return [];
         
-        const fresh = pool.filter(q => !lastExamIds.includes(q.id));
-        const used = pool.filter(q => lastExamIds.includes(q.id));
+        // --- SỬA LỖI TẠI ĐÂY: Gán kết quả đã trộn vào biến pool ---
+        pool = this.shuffle(pool); 
         
-        this.shuffle(fresh);
-        this.shuffle(used);
-        
-        const allQuestions = fresh.concat(used);
-        const selected = allQuestions.slice(0, this.examConfig.totalChapterQuestions);
+        // Bây giờ pool đã được xáo trộn, cắt lấy 25 câu
+        const selected = pool.slice(0, this.examConfig.totalChapterQuestions);
         
         this.updateChapterUI(chapter, selected.length);
         this.updateHistory(selected);
@@ -95,10 +105,10 @@ class QuizManager {
         return selected;
     }
 
+    // 2. Hàm lấy câu hỏi tổng hợp
     getFullExamQuestions() {
         console.log(">>> Chế độ: Thi thử tổng hợp");
         let examQuestions = [];
-        const lastExamIds = this.getHistory();
         
         for (let chapter = 1; chapter <= 8; chapter++) {
             if (!this.examConfig.matrix[chapter]) continue;
@@ -107,19 +117,23 @@ class QuizManager {
                 const countNeeded = this.examConfig.matrix[chapter][level];
                 if (countNeeded <= 0) continue;
                 
-                const pool = this.questionBank.filter(q =>
+                let pool = this.questionBank.filter(q =>
                     (q.chapter == chapter || q.c == chapter) &&
                     (q.level == level || q.l == level)
                 );
                 
                 if (pool.length === 0) continue;
                 
-                const selected = this.selectQuestionsFromPool(pool, lastExamIds, countNeeded);
+                // --- SỬA LỖI TẠI ĐÂY ---
+                pool = this.shuffle(pool); // Trộn xong phải lưu lại vào pool
+                const selected = pool.slice(0, countNeeded); // Lấy ngẫu nhiên
+                
                 examQuestions.push(...selected);
             }
         }
         
-        this.shuffle(examQuestions);
+        // Trộn lần cuối danh sách đề thi tổng
+        examQuestions = this.shuffle(examQuestions); // SỬA LỖI TẠI ĐÂY
         this.updateHistory(examQuestions);
         
         return examQuestions;
