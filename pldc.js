@@ -642,22 +642,26 @@ class QuizManager {
 
     showToast(message, type = 'info') {
         const toast = document.createElement('div');
-        toast.className = `toast toast-${type}`;
+        
+        // ĐỔI TÊN CLASS Ở ĐÂY: từ 'toast' thành 'tet-toast'
+        toast.className = `tet-toast tet-toast-${type}`;
         toast.textContent = message;
         
         document.body.appendChild(toast);
         
+        // Kích hoạt hiệu ứng hiện lên
         setTimeout(() => {
-            toast.classList.add('toast-show');
+            toast.classList.add('tet-toast-show');
         }, 10);
         
+        // Tự động ẩn sau 3 giây
         setTimeout(() => {
-            toast.classList.remove('toast-show');
+            toast.classList.remove('tet-toast-show');
             setTimeout(() => {
                 if (toast.parentNode) {
                     toast.parentNode.removeChild(toast);
                 }
-            }, 300);
+            }, 500); // Đợi transition chạy xong rồi mới xóa khỏi DOM
         }, 3000);
     }
 

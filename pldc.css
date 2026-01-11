@@ -1,603 +1,50 @@
+/* =========================================
+   1. CÀI ĐẶT CƠ BẢN
+   ========================================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #fff5f5;
     padding: 20px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-    border: 2px solid #ffd700;
-}
-
-h1 {
-    text-align: center;
-    color: #d32f2f;
-    text-shadow: 1px 1px 0px #ffd700;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3em;
-}
-
-.matrix-info {
-    background: #fffde7;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 0.9em;
-    border-left: 5px solid #FFD41D;
-    color: #3e2723;
-}
-
-.question-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.question-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.question-title {
-    font-weight: bold;
+    padding-top: 140px;
+    /* Giữ nguyên padding để né map */
     color: #333;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-/* Badge hiển thị chương/mức độ */
-.meta-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 6px;
-    /* Bo góc nhẹ vừa phải, không quá tròn */
-    font-size: 0.85em;
-    font-weight: bold;
-    margin-right: 8px;
-    margin-bottom: 5px;
-    position: relative;
-    top: -1px;
-}
-
-.badge-c {
-    background-color: #ffebee;
-    color: #b71c1c;
-    border: 1px solid #ffcdd2;
-}
-
-.badge-l {
-    background-color: #e8f5e9;
-    color: #1b5e20;
-    border: 1px solid #c8e6c9;
-}
-
-.meta-badge:hover {
-    opacity: 0.8;
-    cursor: default;
-}
-
-.options label {
-    display: block;
-    padding: 10px;
-    border: 1px solid #eee;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border: 1px solid #e0e0e0;
-    position: relative;
-    z-index: 1;
-}
-
-.options label:hover {
-    background-color: #fff0f0;
-    border-color: #d32f2f;
-    transform: translateX(10px);
-    box-shadow: -5px 5px 10px rgba(211, 47, 47, 0.1);
-}
-
-.options input {
-    color: #d32f2f;
-    font-weight: bold;
-    text-shadow: 0 0 1px rgba(211, 47, 47, 0.3);
-}
-
-/* Kết quả đúng sai */
-.correct-answer {
-    background-color: #d4edda !important;
-    border-color: #c3e6cb !important;
-    color: #155724;
-}
-
-.wrong-answer {
-    background-color: #f8d7da !important;
-    border-color: #f5c6cb !important;
-    color: #721c24;
-}
-
-.explanation {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #fff3cd;
-    border: 1px solid #ffeeba;
-    color: #856404;
-    border-radius: 5px;
-    display: none;
-    font-size: 0.95em;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 50px;
-    /* Bo tròn hình viên thuốc cho mềm mại */
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    /* Chữ in hoa cho mạnh mẽ */
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-top: 25px;
-    position: relative;
-    overflow: hidden;
-    /* Để làm hiệu ứng ánh sáng quét qua */
-    transition: all 0.4s ease;
-    /* Chuyển động mượt mà */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-#submit-btn {
-    /* Gradient đỏ sang cam đậm */
-    background: linear-gradient(45deg, #b71c1c, #d32f2f, #f44336);
-    background-size: 200% auto;
-    /* Để làm hiệu ứng chuyển màu */
-    color: #ffd700;
-    /* Chữ màu Vàng kim loại */
-    border: 2px solid #ffd700;
-    /* Viền vàng */
-}
-
-#submit-btn:hover {
-    background-position: right center;
-    /* Chạy dải màu */
-    transform: translateY(-3px) scale(1.02);
-    /* Nổi lên và phình to nhẹ */
-    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.6);
-    /* Đổ bóng đỏ rực rỡ */
-    color: #fff;
-    /* Chữ chuyển sang trắng cho nổi */
-    border-color: #fff;
-}
-
-.btn-restart {
-    /* Gradient Vàng sang Cam */
-    background: linear-gradient(45deg, #ff6f00, #ff8f00, #ffca28);
-    background-size: 200% auto;
-    color: #fff;
-    border: 2px solid #fff;
-    margin-top: 15px;
-}
-
-.btn-restart:hover {
-    background-position: right center;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(255, 143, 0, 0.6);
-    /* Đổ bóng vàng cam */
-    color: #b71c1c;
-    /* Chữ chuyển sang đỏ */
-    border-color: #b71c1c;
-}
-
-
-
-.score-board {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #dc3545;
-}
-
-
-body {
     overflow-x: hidden;
-    position: relative;
 }
 
-.falling-flower {
-    position: fixed;
-    top: -10%;
-    z-index: 999;
-    user-select: none;
-    pointer-events: none;
-    animation-name: fall-wind;
-    /* Tên animation mới */
-    animation-timing-function: linear;
-    /* Rơi đều */
-    animation-iteration-count: infinite;
-}
-
-/* Hiệu ứng Gió Thổi: Bay từ trên xuống và lệch sang Phải */
-@keyframes fall-wind {
-    0% {
-        /* Bắt đầu: Ở vị trí gốc */
-        transform: translate(0, 0) rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        /* Kết thúc: Rơi xuống đáy (100vh) VÀ bay sang phải (200px) */
-        transform: translate(200px, 100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.lantern-container {
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    pointer-events: none;
-}
-
-.lantern-container.left {
-    left: 20px;
-}
-
-.lantern-container.right {
-    right: 20px;
-}
-
-.lantern {
-    width: 180px;
-    height: auto;
-    transform-origin: 50% 0%;
-    animation: swing 3s infinite ease-in-out;
-}
-
-.lantern-container.right .lantern {
-    animation-delay: 1s;
-}
-
-@keyframes swing {
-    0% {
-        transform: rotate(-10deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(-10deg);
-    }
-}
-
-@media (max-width: 768px) {
-    .lantern {
-        width: 80px;
-    }
-}
-
-.cau-doi-khung {
-    position: fixed;
-    top: 180px;
-    /* Cách đỉnh 80px */
-    width: 700px;
-    /* Chiều rộng khung */
-    height: 550px;
-    /* Chiều cao khung */
-
-    /* Đây là ảnh cái khung trống tôi đã tách từ mẫu của bạn */
-    background-image: url('./img/khung.png');
-    background-size: 100% 100%;
-    /* Kéo dãn ảnh vừa khít khung */
-    background-repeat: no-repeat;
-
-    z-index: -2;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    box-sizing: border-box;
-}
-
-/* Vị trí */
-.trai {
-    left: -16%;
-}
-
-.phai {
-    right: -14%;
-}
-
-/* CSS cho phần chữ viết bên trong */
-.noi-dung-chu {
-    font-family: 'Dancing Script', cursive;
-    color: #ffd700;
-    font-size: 28px;
-    line-height: 1.7;
-    text-align: center;
-    padding-left: 23px;
-}
-
-/* Ẩn trên điện thoại */
-@media (max-width: 768px) {
-    .cau-doi-khung {
-        display: none;
-    }
-}
-
-/* Ẩn nút radio mặc định xấu xí */
-input[type="radio"] {
-    display: none;
-}
-
-/* Định dạng thẻ Label bao quanh đáp án */
-.options label {
-    display: flex;
-    /* Để căn hàng ngang */
-    align-items: center;
-    padding: 10px 15px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    /* Bo góc mềm mại */
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background: white;
-}
-
-/* Hiệu ứng khi di chuột vào */
-.options label:hover {
-    background-color: #fff5f5;
-    /* Nền hồng nhẹ */
-    border-color: #d32f2f;
-    /* Viền đỏ */
-}
-
-/* Tạo nút tròn chứa chữ A, B, C, D */
-.btn-letter {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #d32f2f;
-    /* Viền đỏ */
-    color: #d32f2f;
-    /* Chữ đỏ */
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    /* Cách phần nội dung text ra */
-    flex-shrink: 0;
-    /* Không bị méo khi text quá dài */
-    font-family: 'Segoe UI', sans-serif;
-    /* Font chữ cứng cáp cho dễ đọc */
-    transition: all 0.2s;
-}
-
-/* --- TRẠNG THÁI KHI ĐƯỢC CHỌN (CHECKED) --- */
-/* Khi input được check, thì cái .btn-letter ngay sau nó sẽ đổi màu */
-input[type="radio"]:checked+.btn-letter {
-    background-color: #d32f2f;
-    /* Nền đỏ */
-    color: #ffd700;
-    /* Chữ vàng */
-    box-shadow: 0 0 10px rgba(211, 47, 47, 0.4);
-}
-
-/* Đổi màu viền của cả dòng khi được chọn */
-input[type="radio"]:checked~.answer-text {
-    color: #d32f2f;
-    font-weight: 500;
-}
-
-/* --- TRẠNG THÁI ĐÚNG / SAI (Khi hiện kết quả) --- */
-/* Đúng: Màu xanh */
-.correct-answer .btn-letter {
-    background-color: #28a745 !important;
-    border-color: #28a745 !important;
-    color: white !important;
-}
-
-/* Sai: Màu đỏ nhạt hơn hoặc giữ nguyên đỏ */
-.wrong-answer .btn-letter {
-    background-color: #dc3545 !important;
-    border-color: #dc3545 !important;
-    color: white !important;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.explanation {
-    /* ... giữ nguyên code cũ ... */
-    margin-top: 15px;
-    /* Cách xa các đáp án ra một chút cho thoáng */
-}
-
-/* Thanh tiến độ dính trên cùng */
-.progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-color: #eee;
-    z-index: 1000;
-    /* Nằm trên tất cả */
-}
-
-.progress-bar {
-    height: 100%;
-    background-color: #dc3545;
-    /* Màu xanh lá */
-    width: 0%;
-    /* Khởi đầu là 0% */
-    transition: width 0.3s ease;
-    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
-}
-
-.timer-badge-one {
-    position: fixed;
-    bottom: 10px;
-    right: 50px;
-    /* Góc phải màn hình */
-    background-color: #fff;
-    border: 2px solid #d32f2f;
-    color: #d32f2f;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1.2em;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* Khi còn dưới 5 phút thì đổi màu đỏ nhấp nháy */
-.time-warning {
-    background-color: #d32f2f;
-    color: white;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 768px) {
-    .timer-badge-one {
-        top: auto;
-        bottom: 20px;
-        /* Trên điện thoại thì đưa xuống dưới để đỡ che đề */
-        right: 20px;
-        font-size: 1em;
-    }
-}
-
-.timer-badge-two {
-    position: fixed;
-    bottom: 10px;
-    left: 50px;
-    /* Góc phải màn hình */
-    background-color: #fff;
-    border: 2px solid #d32f2f;
-    color: #d32f2f;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1.2em;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* Khi còn dưới 5 phút thì đổi màu đỏ nhấp nháy */
-.time-warning {
-    background-color: #d32f2f;
-    color: white;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 768px) {
-    .timer-badge-one {
-        top: auto;
-        bottom: 20px;
-        /* Trên điện thoại thì đưa xuống dưới để đỡ che đề */
-        right: 20px;
-        font-size: 1em;
-    }
-}
-
-
-/* 1. Bảng dẫn đường nằm ngang ở trên đầu */
+/* =========================================
+   2. QUESTION MAP (GIỮ NGUYÊN BẢN GỐC CỦA BẠN)
+   ========================================= */
+/* Bảng dẫn đường nằm ngang ở trên đầu */
 .question-map {
     position: fixed;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-
-    /* --- THAY ĐỔI QUAN TRỌNG Ở ĐÂY --- */
     width: 92%;
-    /* Chiếm 92% màn hình */
     max-width: 850px;
-    /* Giới hạn tối đa 850px thôi, để chừa chỗ 2 bên cho đèn lồng */
-    /* -------------------------------- */
-
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     border: 2px solid #d32f2f;
     border-radius: 10px;
     padding: 8px 12px;
-    /* Padding gọn lại chút */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 990;
+    z-index: 1030;
+    /* Tăng z-index để cao hơn navbar bootstrap */
     overflow: hidden;
 }
 
-/* 2. Lưới hiển thị: 20 ô một hàng */
+/* Lưới hiển thị: 25 ô một hàng (YÊU CẦU CỦA BẠN) */
 .map-grid {
     display: grid;
     grid-template-columns: repeat(25, 1fr);
-    gap: 10px;
-    /* Vì bảng hẹp lại nên khoảng cách giữa các ô cũng phải nhỏ lại */
+    gap: 2px;
 }
 
-/* Style cho ô số (Giữ nguyên hoặc chỉnh nhỏ lại nếu cần) */
+/* Style cho ô số */
 .map-item {
     width: 100%;
     height: 26px;
-    /* Chiều cao gọn lại */
     background: #f8f9fa;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -606,10 +53,13 @@ input[type="radio"]:checked~.answer-text {
     align-items: center;
     cursor: pointer;
     font-size: 10px;
-    /* Cỡ chữ nhỏ lại 1 xíu để vừa ô */
     font-weight: bold;
     color: #333;
     transition: 0.2s;
+    text-decoration: none;
+    /* Fix lỗi bootstrap thêm gạch chân */
+    padding: 0;
+    /* Fix lỗi padding */
 }
 
 .map-item:hover {
@@ -633,21 +83,20 @@ input[type="radio"]:checked~.answer-text {
     color: white;
 }
 
-/* 3. XỬ LÝ QUAN TRỌNG: Đẩy nội dung bài thi xuống để không bị bảng che */
-/* Bạn thêm class này vào thẻ body hoặc .container nhé */
-body {
-    padding-top: 140px;
-    /* Đẩy nội dung xuống 140px (áng chừng chiều cao bảng) */
+.map-item.active {
+    /* Thêm style active cho map */
+    background-color: #ffc107 !important;
+    color: #b71c1c;
+    border-color: #b71c1c;
 }
 
-/* Màn hình Laptop nhỏ (dưới 1300px) -> Chia về 20 cột (2.5 dòng) */
+/* Responsive cho Map (Logic cũ của bạn) */
 @media (max-width: 1300px) {
     .map-grid {
         grid-template-columns: repeat(20, 1fr);
     }
 }
 
-/* Màn hình Tablet (dưới 900px) -> Chia 10 cột */
 @media (max-width: 900px) {
     .map-grid {
         grid-template-columns: repeat(10, 1fr);
@@ -658,97 +107,479 @@ body {
     }
 }
 
-/* Điện thoại -> Giữ nguyên logic cũ của bạn (Ẩn đi) */
 @media (max-width: 768px) {
     .question-map {
         display: none;
-        /* ... giữ nguyên các thuộc tính mobile cũ ... */
     }
 }
 
+/* =========================================
+   3. NỘI DUNG CHÍNH & BOOTSTRAP OVERRIDES
+   ========================================= */
+/* Container chính */
+.container.main-container {
+    /* Thêm class main-container để style riêng */
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    border: 2px solid #ffd700;
+}
+
+h1 {
+    text-align: center;
+    color: #d32f2f;
+    text-shadow: 1px 1px 0px #ffd700;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+}
+
+/* Thông tin ma trận */
+.matrix-info {
+    background: #fffde7;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    border-left: 5px solid #FFD41D;
+    color: #3e2723;
+}
+
+/* Thẻ câu hỏi */
+.question-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.question-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.question-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Badge */
+.meta-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.badge-c {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ffcdd2;
+}
+
+.badge-l {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+/* Options (Đáp án) */
+.options label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.options label:hover {
+    background-color: #fff5f5;
+    border-color: #d32f2f;
+}
+
+/* Nút tròn A, B, C, D */
+.btn-letter {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Trạng thái chọn/đúng/sai */
+input[type="radio"]:checked+.btn-letter {
+    background-color: #d32f2f;
+    color: #ffd700;
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.4);
+}
+
+input[type="radio"]:checked~.answer-text {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+.correct-answer {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+}
+
+.correct-answer .btn-letter {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: #fff !important;
+}
+
+.correct-answer .answer-text {
+    color: #0f5132 !important;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+}
+
+.wrong-answer .btn-letter {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #fff !important;
+}
+
+.wrong-answer .answer-text {
+    color: #842029 !important;
+    font-weight: bold;
+}
+
+/* Giải thích */
+.explanation {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.95em;
+}
+
+/* =========================================
+   4. CÁC NÚT BẤM (GIỮ STYLE CŨ)
+   ========================================= */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nút */
+    margin-top: 20px;
+}
+
+/* 2. Style chung cho cả 2 nút (Dùng chung 1 bộ CSS) */
+#submit-btn,
+.btn-restart {
+    display: block;
+    
+    /* Kích thước chuẩn 93% so với khung chứa */
+    width: 93% !important; 
+    max-width: 93% !important;
+    
+    margin: 10px 0; /* Khoảng cách giữa các nút */
+    padding: 12px 0;
+
+    /* Nền Đỏ chuyển sắc (Style Bao Lì Xì) */
+    background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #c62828 100%);
+
+    /* Font chữ cứng cáp (Segoe UI) - KHÔNG dùng Dancing Script */
+    color: #ffd700 !important; /* Chữ Vàng Kim */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 0px #5e0000; /* Bóng chữ cho dễ đọc trên nền đỏ */
+
+    /* Viền Vàng & Bo góc */
+    border: 2px solid #ffd700;
+    border-radius: 50px;
+
+    /* Hiệu ứng */
+    box-shadow: 0 5px 15px rgba(183, 28, 28, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse-red 2s infinite; /* Hiệu ứng thở */
+    
+    /* Đảm bảo không bị đè bởi style cũ */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng khi di chuột vào (Hover) */
+#submit-btn:hover,
+.btn-restart:hover {
+    transform: translateY(-3px) scale(1.01); 
+    background: linear-gradient(135deg, #d32f2f 0%, #ff5252 100%); /* Sáng hơn */
+    color: #fff !important; /* Chữ chuyển trắng */
+    border-color: #fff;
+    box-shadow: 0 10px 25px rgba(255, 23, 68, 0.6);
+}
+
+/* --- QUAN TRỌNG: XÓA SẠCH ICON HOA LÁ --- */
+#submit-btn::before, #submit-btn::after,
+.btn-restart::before, .btn-restart::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Keyframes hiệu ứng thở màu đỏ */
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+}
+/* =========================================
+   5. TRANG TRÍ THÊM (HOA, ĐÈN, CÂU ĐỐI, MODAL)
+   ========================================= */
+/* Falling Flower, Lantern, Couplet - Đã copy từ code gốc vào đây */
+/* (Giữ nguyên CSS phần này như code bạn cung cấp) */
+.falling-flower {
+    position: fixed;
+    top: -10%;
+    z-index: 999;
+    pointer-events: none;
+    animation: fall-wind linear infinite;
+}
+
+@keyframes fall-wind {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(200px, 100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.lantern-container {
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    pointer-events: none;
+}
+
+.lantern-container.left {
+    left: 20px;
+}
+
+.lantern-container.right {
+    right: 20px;
+}
+
+.lantern {
+    width: 150px;
+    height: auto;
+    /* Dời tâm xoay lên trên để tạo dây treo */
+    transform-origin: 50% -10px;
+
+    /* Tăng tốc độ: 2.5s (nhanh hơn cũ nhiều) */
+    animation: windSwing 2.5s ease-in-out infinite;
+}
+
+/* Đèn bên phải lắc lệch nhịp đi cho tự nhiên */
+.lantern-container.right .lantern {
+    animation-duration: 3s;
+    /* Lắc chậm hơn bên trái 1 xíu */
+    animation-delay: 0.5s;
+}
+
+/* Hiệu ứng gió thổi mạnh hơn */
+@keyframes windSwing {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    /* Nghiêng nhiều hơn */
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    /* Trả lại ít hơn (gió thổi 1 chiều) */
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    /* Đã ẩn bằng class d-none, dòng này dự phòng */
+    .lantern {
+        width: 80px;
+    }
+}
+
+/* Câu đối (Ẩn trên mobile trong CSS gốc) */
+@media (max-width: 768px) {
+    .lantern {
+        width: 80px;
+    }
+
+    .cau-doi-khung {
+        display: none;
+    }
+}
+
+.cau-doi-khung {
+    position: fixed;
+    top: 180px;
+    width: 700px;
+    height: 550px;
+    background-image: url('./img/khung.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -2;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+.trai {
+    left: -16%;
+}
+
+.phai {
+    right: -14%;
+}
+
+.noi-dung-chu {
+    font-family: 'Dancing Script';
+    color: #ffd700;
+    font-size: 28px;
+    line-height: 1.7;
+    text-align: center;
+    padding-left: 23px;
+}
+
+/* Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    z-index: 1040;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #dc3545;
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+}
+
+/* Back to Top */
 #btn-back-to-top {
     display: none;
-    /* Mặc định ẩn */
     position: fixed;
     bottom: 10px;
     right: 30px;
     z-index: 9999;
-    /* Luôn nằm trên cùng */
-
     width: 50px;
-    /* Kích thước nút */
     height: 50px;
-    padding: 0;
-
     border: none;
     border-radius: 50%;
-    /* Bo tròn */
     background-color: transparent;
-    /* Nền trong suốt để hiện hình ảnh png đẹp hơn */
     cursor: pointer;
-    transition: all 0.3s ease;
-
-    /* Nếu bạn không dùng ảnh mà dùng chữ thì dòng này sẽ style cho chữ */
-    background-color: #ffd700;
-    color: #d32f2f;
-    font-size: 24px;
-    font-weight: bold;
-    border: 2px solid #d32f2f;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 
-/* Style cho hình ảnh bên trong nút */
 #btn-back-to-top img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Căn chỉnh ảnh vừa khít */
     border-radius: 50%;
 }
 
-/* Hiệu ứng khi di chuột vào */
 #btn-back-to-top:hover {
     transform: translateY(-5px);
-    /* Bay lên một chút */
     box-shadow: 0 6px 15px rgba(211, 47, 47, 0.5);
-    /* Đổ bóng */
 }
 
-/* --- CSS POPUP TẾT --- */
+/* =========================================
+   6. MODAL & EXAM CARDS (GIỮ NGUYÊN)
+   ========================================= */
 .modal-overlay {
     display: none;
-    /* Mặc định ẩn */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Nền đen mờ */
     z-index: 10000;
-    /* Nằm trên tất cả */
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(3px);
-    /* Làm mờ hậu cảnh */
 }
 
 .modal-box {
-    background-color: #fffde7;
-    /* Vàng kem */
+    background-color: #fffde7; /* Màu kem vàng đặc trưng */
     width: 90%;
     max-width: 450px;
-    border: 3px solid #d32f2f;
-    /* Viền đỏ đậm */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.5);
+    border: none;
+    border-radius: 20px; /* Bo tròn mềm mại */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
     animation: zoomIn 0.3s ease;
-    /* Hiệu ứng phóng to */
 }
 
-/* Hiệu ứng phóng to khi hiện */
 @keyframes zoomIn {
     from {
         transform: scale(0.8);
@@ -762,21 +593,21 @@ body {
 }
 
 .modal-header {
-    background: linear-gradient(to right, #d32f2f, #b71c1c);
-    color: #ffd700;
-    /* Chữ vàng */
+    background: linear-gradient(to right, #d32f2f, #b71c1c); /* Gradient đỏ đậm */
+    color: #ffd700; /* Chữ vàng */
     padding: 15px;
     font-family: 'Dancing Script', cursive;
-    font-size: 1.5em;
+    font-size: 1.8rem;
     font-weight: bold;
     text-align: center;
     border-bottom: 2px solid #ffd700;
+    display: block; /* Để căn giữa text dễ hơn */
 }
 
 .modal-body {
-    padding: 20px;
-    font-size: 1.1em;
+    padding: 25px 20px;
     text-align: center;
+    font-size: 1.1rem;
     color: #333;
     font-weight: 500;
 }
@@ -786,41 +617,35 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    background-color: #fff5f5;
-}
-
-/* Nút trong popup */
-.btn-modal {
-    padding: 10px 20px;
-    border-radius: 20px;
+    background-color: #fff5f5; /* Màu nền chân modal */
     border: none;
-    cursor: pointer;
+}
+
+.btn-modal {
+    padding: 10px 30px; /* Tăng padding ngang lên chút cho chữ thoáng */
+    border-radius: 50px;
+    border: none;
     font-weight: bold;
-    transition: 0.2s;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+    white-space: nowrap; /* Chống xuống dòng nếu màn hình nhỏ */
 }
 
-.btn-close {
-    background-color: #eee;
-    color: #333;
-    border: 1px solid #ccc;
-}
-
-.btn-close:hover {
-    background-color: #ddd;
+.btn-cancel {
+    background-color: #e0e0e0;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .btn-agree {
-    background: linear-gradient(45deg, #d32f2f, #f44336);
+    background: #d32f2f;
     color: white;
-    border: 1px solid #b71c1c;
     box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
 }
 
-.btn-agree:hover {
-    transform: scale(1.05);
-}
+.btn-modal:hover { transform: scale(1.05); }
 
-/* Hoa trang trí góc */
 .corner-decoration {
     position: absolute;
     font-size: 1.5em;
@@ -839,66 +664,52 @@ body {
     opacity: 0.3;
 }
 
-/* --- KHU VỰC LUYỆN TẬP (STYLE BAO LÌ XÌ) --- */
-
+/* Exam Cards */
 .related-exams {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 2px dashed #ffd700;
-    /* Đường kẻ phân cách nét đứt màu vàng */
 }
 
 .related-title {
     text-align: center;
     color: #d32f2f;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script';
     font-size: 1.8em;
     margin-bottom: 20px;
     text-shadow: 1px 1px 0 #ffd700;
 }
 
-/* Lưới chứa các nút */
-.exam-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    /* Rộng hơn xíu */
-    gap: 20px;
-    padding: 10px;
-}
-
-/* STYLE BAO LÌ XÌ */
+/* Sửa lại Grid của Exam Card dùng Bootstrap Grid trong HTML nên CSS chỉ cần style card */
 .exam-card {
     position: relative;
     display: flex;
     align-items: center;
     padding: 15px 20px;
-
-    /* Nền đỏ chuyển sắc (Gradient) nhìn cho sâu */
     background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
-
-    /* Viền vàng kim loại */
     border: 2px solid #ffd700;
     border-radius: 12px;
-    /* Bo góc vừa phải */
-
     text-decoration: none;
     color: #ffd700;
-    /* Chữ màu vàng tươi */
     font-weight: bold;
-
-    /* Đổ bóng nhẹ màu đỏ */
     box-shadow: 0 4px 0px #8e0000;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s;
     overflow: hidden;
-    /* Để cắt các họa tiết trang trí thừa */
+    height: 100%;
+    /* Để các card cao bằng nhau */
 }
 
-/* Icon bên trái */
+.exam-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+    box-shadow: 0 8px 0px #8e0000;
+    color: #fff;
+    border-color: #fff;
+}
+
 .exam-icon {
     font-size: 2em;
     margin-right: 15px;
-
-    /* Tạo hình tròn nền trắng/vàng nhạt sau lưng icon cho nổi */
     background: #fffde7;
     width: 50px;
     height: 50px;
@@ -908,77 +719,34 @@ body {
     border-radius: 50%;
     border: 2px solid #ffca28;
     flex-shrink: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
 }
 
-/* Trang trí họa tiết chìm (Hình tròn mờ ở góc) */
+.exam-card:hover .exam-icon {
+    transform: rotate(15deg) scale(1.1);
+    background: #fff;
+    border-color: #d32f2f;
+}
+
 .exam-card::after {
     content: '🌸';
-    /* Hoặc dùng ký tự đồng tiền 💰 nếu thích */
     position: absolute;
     top: -10px;
     right: -10px;
     font-size: 4em;
     opacity: 0.1;
-    /* Làm mờ đi để không rối mắt */
-    transform: rotate(30deg);
     color: #ffd700;
     pointer-events: none;
 }
 
-/* --- HIỆU ỨNG HOVER (KHI DI CHUỘT VÀO) --- */
-.exam-card:hover {
-    transform: translateY(-5px);
-    /* Nổi lên trên */
-    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
-    /* Sáng hơn chút */
-    box-shadow: 0 8px 0px #8e0000, 0 15px 20px rgba(211, 47, 47, 0.4);
-    /* Bóng đậm đà hơn */
-    border-color: #fff;
-    /* Viền chuyển sang trắng lấp lánh */
-    color: #fff;
-    /* Chữ chuyển trắng */
-    transition: 0.5s;
-}
-
-/* Khi hover thì icon xoay nhẹ cho vui mắt */
-.exam-card:hover .exam-icon {
-    transform: rotate(15deg) scale(1.1);
-    background: #fff;
-    border-color: #d32f2f;
-    transition: 0.5s;
-}
-
-/* Responsive: Trên điện thoại */
-@media (max-width: 600px) {
-    .exam-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .exam-card {
-        margin-bottom: 5px;
-        /* Tách rời nhau ra xíu */
-    }
-}
-
-div .lhead {
-    text-decoration: none;
-}
-
-/* --- CSS CHO POPUP KẾT QUẢ TẾT --- */
-
-/* Tăng kích thước hộp kết quả */
+/* Result Popup Tet */
 .result-box-tet {
-    background: #fffde7 url('https://www.transparenttextures.com/patterns/red-paper.png');
-    /* Thêm vân giấy đỏ nếu có, không thì giữ nền vàng */
+    background: #fffde7;
     border: 4px solid #d32f2f;
     width: 95%;
     max-width: 500px;
-    text-align: center;
 }
 
-/* Vòng tròn điểm số */
 .tet-score-container {
     display: flex;
     justify-content: center;
@@ -997,23 +765,11 @@ div .lhead {
     align-items: center;
     color: #ffd700;
     box-shadow: 0 0 20px rgba(211, 47, 47, 0.6);
-    animation: popUpScore 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes popUpScore {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
 }
 
 #popup-score {
     font-size: 3em;
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script';
     line-height: 1;
 }
 
@@ -1023,406 +779,125 @@ div .lhead {
     font-weight: normal;
 }
 
-/* Lời nhận xét */
 .tet-message {
     font-size: 1.3em;
     color: #b71c1c;
     font-weight: bold;
-    font-family: 'Pangolin', sans-serif;
-    /* Hoặc font chữ cute nào đó */
+    font-family: 'Pangolin';
     margin-bottom: 10px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* --- NÚT LÀM LẠI PHIÊN BẢN TẾT --- */
-.btn-restart {
-    /* Nền đỏ chuyển sắc như bao lì xì */
-    background: linear-gradient(to right, #b71c1c, #d32f2f, #b71c1c);
-    background-size: 200% auto;
-
-    /* Chữ vàng kim loại, font thư pháp */
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    /* Chữ in hoa cho mạnh mẽ */
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-shadow: 1px 1px 0 #8e0000;
-
-    /* Viền vàng */
-    /* Gradient đỏ sang cam đậm */
-    background: linear-gradient(45deg, #b71c1c, #d32f2f, #f44336);
-    background-size: 200% auto;
-    /* Để làm hiệu ứng chuyển màu */
-    color: #ffd700;
-    /* Chữ màu Vàng kim loại */
-    border: 2px solid #ffd700;
-    /* Viền vàng */
+/* Highlight Effect */
+.question-card.highlighted {
+    animation: tetFocus 2s ease-in-out;
+    position: relative;
+    z-index: 10;
+    border-color: #ffd700 !important;
+    background-color: #fffde7 !important;
 }
 
-/* Hiệu ứng khi di chuột vào */
-.btn-restart:hover {
-    background-position: right center;
-    /* Chạy dải màu */
-    transform: translateY(-3px) scale(1.02);
-    /* Nổi lên và phình to nhẹ */
-    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.6);
-    /* Đổ bóng đỏ rực rỡ */
-    color: #fff;
-    /* Chữ chuyển sang trắng cho nổi */
-    border-color: #fff;
+.question-card.highlighted::before {
+    content: '🌸';
+    position: absolute;
+    top: -25px;
+    left: -10px;
+    font-size: 2.5rem;
+    animation: popUpIcons 0.5s forwards;
 }
 
-/* Hiệu ứng lấp lánh nhẹ */
-@keyframes shine {
+.question-card.highlighted::after {
+    content: '🧧';
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    font-size: 2.5rem;
+    animation: popUpIcons 0.5s forwards;
+}
+
+@keyframes tetFocus {
     0% {
-        background-position: 0% center;
+        transform: scale(1);
+        box-shadow: 0 0 0 transparent;
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
     }
 
     100% {
-        background-position: 200% center;
+        transform: scale(1);
     }
 }
 
-.correct-answer .answer-text {
-    color: #0f5132 !important;
-    font-weight: bold;
-    text-shadow: none;
-}
-
-.wrong-answer .answer-text {
-    color: #842029 !important;
-    font-weight: bold;
-}
-
-.correct-answer .btn-letter {
-    background-color: #198754 !important;
-    border-color: #198754 !important;
-    color: #fff !important;
-    box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
-}
-
-.wrong-answer .btn-letter {
-    background-color: #dc3545 !important;
-    border-color: #dc3545 !important;
-    color: #fff !important;
-}
-
-.options label.correct-answer:hover {
-    border-color: #198754 !important;
-    box-shadow: -5px 5px 10px rgba(25, 135, 84, 0.3) !important;
-    background-color: #d1e7dd !important;
-}
-
-.options label.wrong-answer:hover {
-    border-color: #dc3545 !important;
-    box-shadow: -5px 5px 10px rgba(220, 53, 69, 0.3) !important;
-    background-color: #f8d7da !important;
-}
-
-.correct-answer input[type="radio"]:checked+.btn-letter {
-    box-shadow: 0 0 15px rgba(25, 135, 84, 0.7) !important;
-    border-color: #198754 !important;
-}
-
-.wrong-answer input[type="radio"]:checked+.btn-letter {
-    box-shadow: 0 0 15px rgba(220, 53, 69, 0.7) !important;
-    border-color: #dc3545 !important;
-}
-
-.error-message {
-    text-align: center;
-    padding: 1.5rem;
-    color: #b71c1c;
-    background: #ffebee;
-    border: 1px solid #ffcdd2;
-    border-radius: 12px;
-    margin: 1rem;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(183, 28, 28, 0.1);
-}
-
-.error-container {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2.5rem;
-    background: #fffde7;
-    border: 3px double #d32f2f;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.error-container::before {
-    content: '⚠️';
-    display: block;
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.retry-btn {
-    background: linear-gradient(45deg, #d32f2f, #f44336);
-    color: #ffd700;
-    border: 2px solid #ffd700;
-    padding: 12px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
-}
-
-.retry-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(211, 47, 47, 0.5);
-    background: linear-gradient(45deg, #b71c1c, #d32f2f);
-}
-
-.feedback-correct {
-    color: #2e7d32;
-    font-weight: bold;
-    margin-bottom: 8px;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: rgba(46, 125, 50, 0.1);
-}
-
-.feedback-wrong {
-    color: #c62828;
-    font-weight: bold;
-    margin-bottom: 8px;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: rgba(198, 40, 40, 0.1);
-}
-
-.feedback-unanswered {
-    color: #f57f17;
-    font-weight: bold;
-    margin-bottom: 8px;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: #fff8e1;
-    border-left: 4px solid #f57f17;
-}
-
-.question-card.highlighted {
-    /* Chạy animation tổng hợp trong 2s (khớp với JS) */
-    animation: tetFocus 2s ease-in-out;
-    
-    /* Đảm bảo nó nổi lên trên các thành phần khác */
-    position: relative; 
-    z-index: 10;
-    
-    /* Màu sắc khi được chọn */
-    border-color: #ffd700 !important; /* Viền vàng */
-    background-color: #fffde7 !important; /* Nền vàng kem nhẹ */
-}
-
-/* --- TRANG TRÍ ICON NẢY RA (HOA & LÌ XÌ) --- */
-
-/* Tạo 2 phần tử giả để chứa icon */
-.question-card.highlighted::before,
-.question-card.highlighted::after {
-    position: absolute;
-    font-size: 2.5rem; /* Icon to rõ */
-    top: -25px; /* Nằm nhô lên trên khung */
-    opacity: 0; /* Mặc định ẩn */
-    
-    /* Animation: Hiện ra nhanh -> Giữ yên -> Mờ dần đi */
-    animation: popUpIcons 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
-               fadeOutIcons 0.5s ease-in 1.5s forwards;
-    pointer-events: none; /* Không che mất nội dung */
-}
-
-/* Góc Trái: Hoa Đào */
-.question-card.highlighted::before {
-    content: '🧧'; 
-    left: -15px;
-    transform: rotate(-20deg);
-}
-
-/* Góc Phải: Bao Lì Xì */
-.question-card.highlighted::after {
-    content: '🧧'; 
-    right: -15px;
-    transform: rotate(20deg);
-}
-
-/* --- KEYFRAMES (CHUYỂN ĐỘNG) --- */
-
-/* Hiệu ứng rung, phóng to và đổi màu bóng */
-@keyframes tetFocus {
-    0% { 
-        transform: scale(1); 
-        box-shadow: 0 0 0 rgba(255, 215, 0, 0); 
-    }
-    15% { 
-        transform: scale(1.05) rotate(-1deg); /* Phóng to và nghiêng nhẹ */
-        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); /* Hào quang Vàng rực */
-    } 
-    30% { 
-        transform: scale(1.05) rotate(1deg); /* Lắc sang phải */
-    }
-    45% { 
-        transform: scale(1.02); 
-        box-shadow: 0 0 30px rgba(211, 47, 47, 0.6); /* Chuyển sang hào quang Đỏ */
-    }
-    100% { 
-        transform: scale(1); 
-        box-shadow: 0 0 0 rgba(211, 47, 47, 0); 
-    }
-}
-
-/* Hiệu ứng icon nảy lên */
 @keyframes popUpIcons {
-    0% { 
-        transform: scale(0) translateY(20px); /* Bắt đầu nhỏ xíu và ở thấp */
-        opacity: 0; 
+    from {
+        transform: scale(0);
+        opacity: 0;
     }
-    100% { 
-        transform: scale(1) translateY(0); /* Nảy lên kích thước thật */
-        opacity: 1; 
+
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
-/* Hiệu ứng icon biến mất */
-@keyframes fadeOutIcons {
-    0% { opacity: 1; }
-    100% { opacity: 0; transform: translateY(-10px); } /* Bay lên trời rồi mất */
-}
-
-.map-item:focus,
-input[type="radio"]:focus {
-    outline: 2px dashed #d32f2f;
-    outline-offset: 3px;
-    background-color: #fffde7;
-}
-
-.falling-flower {
-    will-change: transform, opacity;
-    pointer-events: none;
-    z-index: 9999;
-}
-
-/* =========================================
-   TOAST TẾT (THÔNG BÁO KIỂU CÂU ĐỐI/LÌ XÌ)
-   ========================================= */
-.toast {
+/* Toast */
+.tet-toast {
     position: fixed;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%) translateY(100px); /* Mặc định ẩn xuống dưới */
-    
-    /* Nền đỏ chuyển sắc sang trọng */
+    transform: translateX(-50%) translateY(100px);
     background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
-    
-    /* Chữ Vàng Kim Loại */
     color: #ffd700;
     font-weight: bold;
     font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-    
-    /* Viền Vàng rực rỡ */
     border: 2px solid #ffd700;
     padding: 12px 30px;
-    
-    /* Bo tròn hình viên thuốc (Pill shape) */
     border-radius: 50px;
-    
-    /* Đổ bóng đỏ (Tạo cảm giác phát sáng) */
     box-shadow: 0 5px 20px rgba(183, 28, 28, 0.6);
-    
     z-index: 10000;
     opacity: 0;
-    
-    /* Hiệu ứng nảy nảy khi hiện lên cho vui mắt */
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
     display: flex;
     align-items: center;
     gap: 12px;
     white-space: nowrap;
 }
 
-/* Style riêng cho Cảnh báo (Warning) - Ví dụ: Chặn chuột phải */
-.toast-warning {
-    /* Đậm đà hơn chút để cảnh báo */
+.tet-toast-warning {
     background: linear-gradient(135deg, #8e0000, #c62828);
-    border-color: #ffeb3b; /* Vàng chanh cho nổi */
+    border-color: #ffeb3b;
 }
 
-/* Style cho Thông tin (Info) - Ví dụ: Thông báo điểm */
-.toast-info {
-    background: linear-gradient(135deg, #ff6f00, #ff8f00); /* Cam vàng */
-    color: #fff;
-    border-color: #fff;
-}
-.toast-info::before {
-    content: '🌸'; /* Thêm icon hoa đào */
+.tet-toast-warning::before {
     font-size: 1.2em;
 }
 
-/* Class kích hoạt hiện lên */
-.toast-show {
+.tet-toast-info {
+    background: linear-gradient(135deg, #ff6f00, #ff8f00);
+    color: #fff;
+    border-color: #fff;
+}
+
+.tet-toast-info::before {
+    content: '🌸';
+    font-size: 1.2em;
+}
+
+.tet-toast-show {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
 
-@media (max-width: 1024px) {
-    body { padding-top: 130px; }
-    
-    /* Ẩn bớt trang trí rườm rà */
-    .cau-doi-khung { display: none; }
-    .lantern-container { display: none; } /* Ẩn đèn lồng để đỡ che map */
-    
-    /* Map rộng hơn */
-    .question-map { width: 95%; max-width: none; }
-    
-    .container { padding: 20px; }
-}
-
-/* --- MOBILE (Dưới 768px) --- */
-@media (max-width: 768px) {
-    body { padding: 10px; padding-top: 120px; }
-    
-    h1 { font-size: 2em; }
-    
-    /* Grid câu hỏi nhỏ lại */
-    .map-grid { grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); }
-    .map-item { width: 30px; height: 30px; font-size: 10px; }
-    
-    /* Thẻ câu hỏi gọn hơn */
-    .question-card { padding: 15px; margin-bottom: 15px; }
-    
-    /* Options dễ bấm hơn */
-    .options label { padding: 10px; min-height: 50px; }
-    
-    .btn { font-size: 16px; padding: 12px; }
-    .btn-restart { font-size: 22px; }
-    
-    .matrix-info { font-size: 0.85em; }
-}
-
-/* --- ĐIỆN THOẠI NHỎ (Dưới 480px) --- */
+/* Responsive text overrides */
 @media (max-width: 480px) {
-    h1 { font-size: 1.8em; }
-    
-    .question-map { padding: 5px; top: 5px; }
-    body { padding-top: 110px; }
-    
-    .map-item { width: 28px; height: 28px; font-size: 9px; }
-    
-    .btn-letter { width: 28px; height: 28px; font-size: 0.9em; margin-right: 10px; }
-    
-    /* Modal nhỏ lại */
-    .modal-box { width: 95%; }
-    .tet-score-circle { width: 100px; height: 100px; }
-    #popup-score { font-size: 2.5em; }
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .matrix-info {
+        font-size: 0.8em;
+    }
 }
