@@ -274,16 +274,42 @@ input[type="radio"]:checked~.answer-text {
     font-weight: bold;
 }
 
-/* Giải thích */
+/* --- PHẦN GIẢI THÍCH (NÂNG CẤP GIAO DIỆN) --- */
 .explanation {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #fff3cd;
-    border: 1px solid #ffeeba;
-    color: #856404;
-    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
+    
+    /* 1. Nền Vàng Kem Sáng (Sạch và sang hơn màu cũ) */
+    background-color: #fffde7 !important;
+    
+    /* 2. Viền: Bo viền nhẹ + Điểm nhấn vạch Đỏ bên trái */
+    border: 1px solid #ffcc80 !important;
+    border-left: 6px solid #d32f2f !important; /* Vạch đỏ đậm chất Tết */
+    border-radius: 8px;
+    
+    /* 3. Màu chữ: Nâu đậm (Đen) để tương phản tốt, dễ đọc */
+    color: #3e2723 !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    
+    /* 4. Hiệu ứng nổi nhẹ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    
+    /* Mặc định ẩn (JS sẽ bật lên sau) */
     display: none;
-    font-size: 0.95em;
+    position: relative;
+}
+
+/* Tô màu đỏ & Viết hoa cho chữ "GIẢI THÍCH:" */
+.explanation strong {
+    color: #d32f2f;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 5px;
+    display: inline-block;
+    border-bottom: 2px solid #ffcc80; /* Gạch chân nhẹ */
+    margin-bottom: 5px;
 }
 
 /* =========================================
@@ -939,4 +965,53 @@ input[type="radio"]:checked~.answer-text {
     .matrix-info {
         font-size: 0.8em;
     }
+}
+
+/* =========================================
+   STYLE CHO DÒNG KẾT QUẢ (BẠN CHỌN / ĐÁP ÁN)
+   ========================================= */
+
+/* 1. Trường hợp ĐÚNG (Màu Xanh Đậm đà) */
+.feedback-correct {
+    color: #1b5e20; /* Xanh lá đậm (thay vì xanh nhạt mặc định) */
+    font-weight: 800; /* Chữ siêu đậm */
+    font-size: 1.1em;
+    padding: 10px;
+    background-color: #e8f5e9; /* Nền xanh nhẹ làm nổi chữ */
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+/* 2. Trường hợp SAI (Màu Đỏ Rực) */
+.feedback-wrong {
+    color: #b71c1c; /* Đỏ đậm */
+    font-weight: 800;
+    font-size: 1.1em;
+    padding: 10px;
+    background-color: #ffebee; /* Nền đỏ hồng nhẹ */
+    border: 1px solid #ffcdd2;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* 3. Trường hợp CHƯA LÀM (Màu Cam Đậm) */
+.feedback-unanswered {
+    color: #e65100; /* Cam đậm */
+    font-weight: 800;
+    font-size: 1.1em;
+    padding: 10px;
+    background-color: #fff3e0; /* Nền cam nhạt */
+    border: 1px solid #ffe0b2;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Tinh chỉnh lại chữ "Giải thích" cho đồng bộ */
+.explanation {
+    /* Đảm bảo chữ giải thích bên dưới không bị dính vào box kết quả */
+    margin-top: 15px; 
 }
