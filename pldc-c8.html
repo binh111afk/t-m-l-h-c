@@ -8,32 +8,27 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>Thi Thử Pháp Luật Đại Cương</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="pldc.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/luckymoney.png" />
 </head>
 
-<body data-chapter ="8">
+<body data-chapter="8">
 
-    <div class="lantern-container left">
-        <img src="./img/lantern.png" class="lantern">
+    <div class="lantern-container left"><img src="./img/lantern.png" class="lantern"></div>
+    <div class="lantern-container right"><img src="./img/lantern.png" class="lantern"></div>
+
+    <div class="cau-doi-khung trai d-none d-xl-flex">
+        <div class="noi-dung-chu">TUI <br> CHỈ <br> XEM <br> ÔNG <br> LÀ <br> BẠN</div>
     </div>
-
-    <div class="lantern-container right">
-        <img src="./img/lantern.png" class="lantern">
-    </div>
-
-    <div class="cau-doi-khung trai">
-        <div class="noi-dung-chu">
-            TUI <br> CHỈ <br> XEM <br> ÔNG <br> LÀ <br> BẠN
-        </div>
-    </div>
-
-    <div class="cau-doi-khung phai">
-        <div class="noi-dung-chu">
-            ÔNG <br> MƠ <br> CHI <br> LẮM <br> CHUYỆN <br> TÌNH <br> YÊU
-        </div>
+    <div class="cau-doi-khung phai d-none d-xl-flex">
+        <div class="noi-dung-chu">ÔNG <br> MƠ <br> CHI <br> LẮM <br> CHUYỆN <br> TÌNH <br> YÊU</div>
     </div>
 
     <div class="progress-container">
@@ -41,114 +36,128 @@
     </div>
 
     <div class="question-map" id="question-map">
-        <h3 style="text-align: center; color: #d32f2f; margin: 0 0 10px 0; font-family: 'Dancing Script', cursive;">Danh
-            sách câu</h3>
-        <div class="map-grid" id="map-grid">
-        </div>
+        <h3 style="text-align: center; color: #d32f2f; margin: 0 0 10px 0; font-family: 'Dancing Script', cursive;">
+            Danh sách câu
+        </h3>
+        <div class="map-grid" id="map-grid"></div>
     </div>
 
-    <button id="btn-back-to-top" onclick="scrollToTop()">
-        <img src="./img/rocket.png" alt="Lên đầu trang"
-            onerror="this.style.display='none'; this.parentNode.innerText='⬆'">
-    </button>
+    <div id="btn-back-to-top" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M13.13 2.67c-.64-.9-2.07-.9-2.71 0l-.82 1.15c-1.63 2.29-4.14 5.8-4.14 9.18 0 3.59 2.91 6.5 6.5 6.5s6.5-2.91 6.5-6.5c0-3.38-2.51-6.89-4.14-9.18l-.82-1.15zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+            <path
+                d="M5.5 15.5h-2c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2c0-.55-.45-1-1-1zm15 0h-2c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2c0-.55-.45-1-1-1z"
+                opacity="0.6" />
+        </svg>
+    </div>
 
-    <div class="container">
-        <a href="pldc.html" class="lhead">
+    <div class="container main-container">
+        <a href="pldc.html" class="text-decoration-none">
             <h1>Đề Thi Pháp Luật Đại Cương</h1>
         </a>
-        <div class="matrix-info">
+
+        <div class="matrix-info alert" role="alert">
             <strong>Cấu trúc đề thi (50 câu ngẫu nhiên theo ma trận):</strong><br>
             - Chương 1: 4 câu (1 Nhận biết, 3 Thông hiểu)<br>
             - Chương 2: 5 câu (1 Nhận biết, 3 Thông hiểu, 1 Vận dụng)<br>
             - Chương 3: 3 câu (2 Nhận biết, 1 Thông hiểu)<br>
-            - Chương 4: 15 câu (2 Nhận biết, 7 Thông hiểu, 7 Vận dụng)<br>
-            - Chương 5: 5 câu (1 Thông hiểu, 2 Thông hiểu, 2 Vận dụng)<br>
-            - Chương 6: 4 câu (1 Nhận biết, 2 Thông hiểu, 1 Vận dụng)<br>
-            - Chương 7: 10 câu (1 Nhận biết, 3 Thông hiểu, 6 Vận dụng)<br>
+            - Chương 4: 12 câu (2 Nhận biết, 7 Thông hiểu, 3 Vận dụng)<br>
+            - Chương 5: 5 câu (1 Nhận biết, 2 Thông hiểu, 2 Vận dụng)<br>
+            - Chương 6: 6 câu (1 Nhận biết, 2 Thông hiểu, 3 Vận dụng)<br>
+            - Chương 7: 12 câu (3 Nhận biết, 3 Thông hiểu, 6 Vận dụng)<br>
             - Chương 8: 3 câu (2 Nhận biết, 1 Thông hiểu)<br>
-            <em>Lưu ý câu hỏi trong đây phục vụ cho mục đích ôn tập và tham khảo. Kí tên : Quang Bình</em>
+            <div class="mt-2 fst-italic">
+                <em>Lưu ý câu hỏi trong đây phục vụ cho mục đích ôn tập và tham khảo. Kí tên : Quang Bình</em>
+            </div>
         </div>
 
         <div id="quiz-area"></div>
 
-        <button class="btn" id="submit-btn" onclick="confirmSubmit()">Nộp Bài</button>
-        <button class="btn btn-restart" id="restart-btn" style="display:none;" onclick="location.reload()">Làm đề mới</button>
+        <div class="button-wrapper">
+            <button class="btn" id="submit-btn" onclick="confirmSubmit()">Nộp Bài</button>
+            <button class="btn btn-restart" id="restart-btn" style="display:none;" onclick="location.reload()">Làm đề
+                mới</button>
+        </div>
 
         <div id="result-modal" class="modal-overlay">
             <div class="modal-box result-box-tet">
                 <div class="corner-decoration top-left">🌸</div>
                 <div class="corner-decoration top-right">💰</div>
-
-                <div class="modal-header">
-                    🧧 THÔNG BÁO TỪ BỐ BÌNH 🧧
-                </div>
-
-                <div class="modal-body">
-                    <div class="tet-score-container">
+                <div class="modal-header justify-content-center">🧧 THÔNG BÁO TỪ BỐ BÌNH 🧧</div>
+                <div class="modal-body text-center">
+                    <div class="tet-score-container justify-content-center">
                         <div class="tet-score-circle">
                             <span id="popup-score">0</span>
                             <span class="score-total">/ <span id="popup-total">0</span></span>
                         </div>
                     </div>
-                    <div class="tet-message" id="popup-message">
-                        Chúc mừng năm mới!
-                    </div>
+                    <div class="tet-message" id="popup-message">Chúc mừng năm mới!</div>
                 </div>
-
                 <div class="modal-footer">
-                    <button class="btn-modal btn-close" onclick="closeResultModal()">Xem lại bài</button>
+                    <button class="btn-modal btn-cancel" onclick="closeResultModal()">Xem lại bài</button>
                     <button class="btn-modal btn-agree" onclick="location.reload()">Thi lại</button>
                 </div>
             </div>
         </div>
 
-        <div class="related-exams">
+        <div class="related-exams mt-5 pt-4">
             <h3 class="related-title">🏮 Luyện tập theo chương</h3>
-            <div class="exam-grid">
-                <a href="pldc-c1.html" class="exam-card">
-                    <span class="exam-icon">🏛️</span>
-                    <span class="exam-name"> <b>Chương 1</b> <br> Lý luận chung về nhà nước</span>
-                </a>
-
-                <a href="pldc-c2.html" class="exam-card">
-                    <span class="exam-icon">⚖️</span>
-                    <span class="exam-name"> <b>Chương 2</b> <br> Lý luận chung về pháp luật</span>
-                </a>
-
-                <a href="pldc-c3.html" class="exam-card">
-                    <span class="exam-icon">📘</span>
-                    <span class="exam-name"> <b>Chương 3</b> <br> Luật Hiến pháp</span>
-                </a>
-
-                <a href="pldc-c4.html" class="exam-card">
-                    <span class="exam-icon">📄</span>
-                    <span class="exam-name"> <b>Chương 4</b> <br> Luật Dân sự và Tố tụng Dân sự</span>
-                </a>
-
-                <a href="pldc-c5.html" class="exam-card">
-                    <span class="exam-icon">💍</span>
-                    <span class="exam-name"> <b>Chương 5</b> <br> Luật Hôn nhân và Gia đình</span>
-                </a>
-
-                <a href="pldc-c6.html" class="exam-card">
-                    <span class="exam-icon">👷</span>
-                    <span class="exam-name"> <b>Chương 6</b> <br> Luật Lao động</span>
-                </a>
-
-                <a href="pldc-c7.html" class="exam-card">
-                    <span class="exam-icon">⛓️</span>
-                    <span class="exam-name"> <b>Chương 7</b> <br> Luật Hình sự và Tố tụng Hình sự</span>
-                </a>
-
-                <a href="pldc-c8.html" class="exam-card">
-                    <span class="exam-icon">🏢</span>
-                    <span class="exam-name"> <b>Chương 8</b> <br> Luật Hành chính và Tố tụng Hành chính</span>
-                </a>
-
-                <a href="pldc.html" class="exam-card">
-                    <span class="exam-icon">📝</span>
-                    <span class="exam-name"><b>Đề thi thử tổng hợp</b></span>
-                </a>
+            <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c1.html" class="exam-card">
+                        <span class="exam-icon">🏛️</span>
+                        <span class="exam-name"> <b>Chương 1</b> <br> Lý luận chung về nhà nước</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c2.html" class="exam-card">
+                        <span class="exam-icon">⚖️</span>
+                        <span class="exam-name"> <b>Chương 2</b> <br> Lý luận chung về pháp luật</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c3.html" class="exam-card">
+                        <span class="exam-icon">📘</span>
+                        <span class="exam-name"> <b>Chương 3</b> <br> Luật Hiến pháp</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c4.html" class="exam-card">
+                        <span class="exam-icon">📄</span>
+                        <span class="exam-name"> <b>Chương 4</b> <br> Luật Dân sự & Tố tụng DS</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c5.html" class="exam-card">
+                        <span class="exam-icon">💍</span>
+                        <span class="exam-name"> <b>Chương 5</b> <br> Luật Hôn nhân & Gia đình</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c6.html" class="exam-card">
+                        <span class="exam-icon">👷</span>
+                        <span class="exam-name"> <b>Chương 6</b> <br> Luật Lao động</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c7.html" class="exam-card">
+                        <span class="exam-icon">⛓️</span>
+                        <span class="exam-name"> <b>Chương 7</b> <br> Luật Hình sự & Tố tụng HS</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc-c8.html" class="exam-card">
+                        <span class="exam-icon">🏢</span>
+                        <span class="exam-name"> <b>Chương 8</b> <br> Luật Hành chính & Tố tụng HC</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="pldc.html" class="exam-card">
+                        <span class="exam-icon">📝</span>
+                        <span class="exam-name"><b>Đề thi thử tổng hợp</b></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -157,19 +166,16 @@
         <div class="modal-box">
             <div class="corner-decoration top-left">🌸</div>
             <div class="corner-decoration top-right">🌸</div>
-
-            <div class="modal-header">
-                🧧 THÔNG BÁO TỪ BỐ BÌNH
-            </div>
-            <div class="modal-body" id="modal-message">
-            </div>
-            <div class="modal-footer">
-                <button class="btn-modal btn-close" onclick="closeModal()">HỦY</button>
-                <button class="btn-modal btn-agree" id="btn-confirm-action">OKI</button>
+            <div class="modal-header justify-content-center">🧧 THÔNG BÁO TỪ BỐ BÌNH</div>
+            <div class="modal-body text-center" id="modal-message"></div>
+            <div class="modal-footer justify-content-center">
+                <button class="btn-modal btn-cancel" onclick="closeModal()">HỦY</button>
+                <button class="btn-modal btn-agree" id="btn-confirm-action">Vẫn nộp </button>
             </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="pldc.js?v=1.5"></script>
 
 </body>
