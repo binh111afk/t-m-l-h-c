@@ -29,7 +29,7 @@ body {
     border-radius: 10px;
     padding: 8px 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1030;
+    z-index: 998;
     /* Tăng z-index để cao hơn navbar bootstrap */
     overflow: hidden;
 }
@@ -523,32 +523,71 @@ input[type="radio"]:checked~.answer-text {
     box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
 }
 
-/* Back to Top */
+/* --- NÚT BACK TO TOP (PHIÊN BẢN TẾT RỰC RỠ) --- */
 #btn-back-to-top {
-    display: none;
+    /* 1. Vị trí & Kích thước */
     position: fixed;
-    bottom: 10px;
+    bottom: 30px;
     right: 30px;
-    z-index: 9999;
     width: 50px;
     height: 50px;
-    border: none;
-    border-radius: 50%;
-    background-color: transparent;
+    z-index: 99999;
+
+    /* 2. Căn giữa mũi tên (QUAN TRỌNG: JS sẽ đổi display: none thành flex) */
+    display: none; 
+    justify-content: center;
+    align-items: center;
+
+    /* 3. MÀU SẮC TẾT */
+    /* Nền đỏ chuyển sắc sang trọng */
+    background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #f44336 100%) !important;
+    
+    /* Viền Vàng Kim Loại */
+    border: 2px solid #ffd700 !important;
+    
+    /* Màu mũi tên */
+    color: #ffd700 !important;
+
+    /* 4. Hình dáng & Bóng đổ */
+    border-radius: 50%; /* Tròn vo */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Tỏa sáng vàng nhẹ */
+    
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* 5. Animation "Thở" liên tục */
+    animation: pulse-gold 2s infinite;
 }
 
-#btn-back-to-top img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+/* Tinh chỉnh mũi tên SVG bên trong */
+#btn-back-to-top svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 3px; /* Mũi tên đậm hơn */
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3)); /* Bóng đổ cho mũi tên nổi lên */
 }
 
+/* Hiệu ứng khi di chuột vào */
 #btn-back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(211, 47, 47, 0.5);
+    background: #ffd700 !important; /* Đảo màu: Nền Vàng */
+    border-color: #d32f2f !important; /* Viền Đỏ */
+    color: #d32f2f !important; /* Mũi tên Đỏ */
+    
+    transform: translateY(-8px) scale(1.1); /* Bay cao lên */
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.8); /* Bóng đỏ rực */
+}
+
+/* Keyframes cho hiệu ứng tỏa sáng (Thở) */
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); /* Tỏa vòng tròn vàng ra ngoài */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
 }
 
 /* =========================================

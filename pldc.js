@@ -315,7 +315,7 @@ class QuizManager {
     handleScroll() {
         const backToTopBtn = document.getElementById("btn-back-to-top");
         if (backToTopBtn) {
-            backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+            backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
         }
     }
 
