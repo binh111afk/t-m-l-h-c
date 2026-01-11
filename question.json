@@ -4390,7 +4390,7 @@
       "Thương yêu, trông nom, nuôi dưỡng...; Không được phân biệt đối xử giữa các con...",
       "Cha mẹ không có quyền và nghĩa vụ đối với con cái."
     ],
-    "answer":2,
+    "answer":0,
     "explanation": "<br>Cha mẹ có nghĩa vụ thương yêu, nuôi dưỡng, giáo dục con cái và không được phân biệt đối xử, ngược đãi con."
   },
   {
@@ -4427,7 +4427,7 @@
       "Tòa án nhân dân.",
       "Trưởng thôn, trưởng khối.",
       "UBND cấp xã.",
-      "Toà án nhân dân."
+      "Cảnh sát giao thông."
     ],
     "answer":0,
     "explanation": "<br>Tòa án nhân dân là cơ quan duy nhất có thẩm quyền giải quyết việc ly hôn."
@@ -7802,15 +7802,15 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Ban và Kim là vợ chồng hợp pháp. Năm 2000, Ban đi lao động xuất khẩu và trong thời gian này đã chung sống như vợ chồng với Quyên; Ban và Quyên cùng góp vốn tạo lập tài sản chung trị giá 6 tỷ đồng. Năm 2005, Ban trở về nước và yêu cầu Tòa án giải quyết ly hôn với Kim, tuy nhiên trong thời gian Tòa án đang thụ lý, giải quyết vụ việc thì Ban qua đời. Hãy cho biết sau khi Ban chết, Kim được hưởng bao nhiêu di sản thừa kế theo quy định của pháp luật.",
+    "question":"Ông Ban và bà Kim là vợ chồng hợp pháp. Năm 2000, ông Ban đi xuất khẩu lao động và trong thời gian này đã chung sống như vợ chồng với bà Quyên; ông Ban và bà Quyên cùng góp vốn tạo lập được khối tài sản chung trị giá 6 tỷ đồng. Năm 2005, ông Ban trở về nước và nộp đơn yêu cầu Tòa án giải quyết ly hôn với bà Kim. Tuy nhiên, khi Tòa án đang thụ lý và chưa ra bản án có hiệu lực pháp luật thì ông Ban đột ngột qua đời. Giả sử ông Ban không có tài sản nào khác và không có người thừa kế nào khác ngoài vợ. Hãy cho biết bà Kim được hưởng bao nhiêu tiền từ di sản của ông Ban?",
     "options":[
       "1,2 tỷ đồng",
-      "1,4 tỷ đồng",
+      "1,5 tỷ đồng",
       "0 đồng",
       "Cả ba phương án trên đều sai"
     ],
-    "answer":0,
-    "explanation": "<br>1. Tài sản chung Ban-Kim = 1.2 tỷ -> Phần Ban = 0.6 tỷ. \n2. Tài sản chung Ban-Quyên = 6 tỷ -> Phần Ban = 3 tỷ. (Quyên không phải vợ hợp pháp, chỉ là sở hữu chung theo phần\/hợp vốn). \n3. Tổng di sản Ban = 0.6 + 3 = 3.6 tỷ. \n4. Chia thừa kế theo luật (hàng 1): Kim (vợ), Dũng, Phương (con). Mỗi người: 3.6 \/ 3 = 1.2 tỷ. Kim nhận 1.2 tỷ."
+    "answer":1,
+    "explanation": "<br>Căn cứ vào Điều 655 Bộ luật Dân sự 2015, trường hợp vợ chồng đang xin ly hôn mà chưa có bản án hoặc quyết định có hiệu lực pháp luật của Tòa án thì nếu một bên chết, người còn sống vẫn được thừa kế di sản. Trước hết cần xác định quyền sở hữu tài sản: Khối tài sản 6 tỷ đồng là tài sản chung do Ban và Quyên cùng góp vốn tạo lập, nếu không có thỏa thuận khác thì chia theo phần đóng góp (giả định chia đều), phần quyền sở hữu của ông Ban là 3 tỷ đồng. Tiếp theo, xét mối quan hệ hôn nhân giữa Ban và Kim, số tiền 3 tỷ đồng này được ông Ban tạo lập trong thời kỳ hôn nhân hợp pháp (giai đoạn đi xuất khẩu lao động), nên theo Luật Hôn nhân và gia đình, đây được xác định là tài sản chung của vợ chồng Ban và Kim. Vì vậy, di sản thừa kế của ông Ban chỉ là một nửa trong khối tài sản chung này, tương đương 1,5 tỷ đồng. Do ông Ban chết không để lại di chúc và đề bài giả định không còn hàng thừa kế nào khác (cha mẹ, con cái), nên bà Kim là người thừa kế duy nhất thuộc hàng thứ nhất và sẽ được hưởng trọn vẹn khối di sản 1,5 tỷ đồng này"
   },
   {
     "chapter":4,
@@ -9986,7 +9986,7 @@
   {
     "chapter":5,
     "level":"VD",
-    "question":"Bà Góa A có con riêng là B. Ông Góa C có con riêng là D. Ông A và bà C kết hôn với nhau. Hỏi B và D có được kết hôn với nhau không?",
+    "question":"Bà Góa A có con riêng là B. Ông Góa C có con riêng là D. Bà A và ông C kết hôn với nhau. Hỏi B và D có được kết hôn với nhau không?",
     "options":[
       "Không, vì là anh em trên danh nghĩa.",
       "Được, vì họ không cùng dòng máu về trực hệ và không có họ trong phạm vi ba đời.",
