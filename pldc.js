@@ -731,3 +731,36 @@ if (document.readyState === 'loading') {
 
 // Export ra window để có thể debug từ console
 window.myApp = myApp;
+
+// ==================== PINK MODE LOGIC ====================
+
+// 1. Hàm bật/tắt
+function togglePinkMode() {
+    const body = document.body;
+    body.classList.toggle('pink-mode');
+    
+    // Lưu trạng thái vào bộ nhớ trình duyệt
+    const isPink = body.classList.contains('pink-mode');
+    localStorage.setItem('isPinkMode', isPink);
+    
+    // Hiệu ứng thông báo dễ thương
+    const btn = document.getElementById('btn-pink-mode');
+    btn.innerHTML = isPink ? '🌸' : '💗';
+    
+    if (window.myApp) {
+        window.myApp.showToast(
+            isPink ? 'Đã bật chế độ Pink Mode!' : 'Đã về lại chế độ Tết!', 
+            'info'
+        );
+    }
+}
+
+// 2. Tự động kiểm tra khi tải trang
+document.addEventListener('DOMContentLoaded', () => {
+    const isPinkSaved = localStorage.getItem('isPinkMode') === 'true';
+    if (isPinkSaved) {
+        document.body.classList.add('pink-mode');
+        const btn = document.getElementById('btn-pink-mode');
+        if (btn) btn.innerHTML = '🌸';
+    }
+});

@@ -154,14 +154,14 @@ h1 {
 .question-card {
     /* 1. Nền trắng */
     background-color: #fff;
-    
+
     /* 2. Viền Đỏ Đậm (Giữ nét Tết) */
     border: 2px solid #b71c1c;
     border-radius: 6px;
-    
+
     /* 3. BỎ BÓNG VÀNG KHỐI -> Thay bằng bóng mờ nhẹ nhàng cho nổi thẻ */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    
+
     padding: 30px;
     margin-bottom: 30px;
     position: relative;
@@ -172,12 +172,15 @@ h1 {
 .question-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     pointer-events: none;
     z-index: 1;
-    
+
     /* Họa tiết tam giác đỏ ở 4 góc */
-    background: 
+    background:
         linear-gradient(135deg, #b71c1c 8px, transparent 8px) top left,
         linear-gradient(-135deg, #b71c1c 8px, transparent 8px) top right,
         linear-gradient(45deg, #b71c1c 8px, transparent 8px) bottom left,
@@ -190,8 +193,12 @@ h1 {
 .question-card::after {
     content: '';
     position: absolute;
-    top: 5px; left: 5px; right: 5px; bottom: 5px;
-    border: 1px solid #ef9a9a; /* Viền trong mảnh màu hồng nhạt */
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid #ef9a9a;
+    /* Viền trong mảnh màu hồng nhạt */
     border-radius: 4px;
     pointer-events: none;
     z-index: 1;
@@ -200,7 +207,7 @@ h1 {
 /* --- TIÊU ĐỀ CÂU HỎI (VỀ MÀU ĐEN) --- */
 .question-title {
     /* Đổi về màu đen theo yêu cầu */
-    color: #333 !important; 
+    color: #333 !important;
     font-weight: 700;
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -209,7 +216,9 @@ h1 {
 }
 
 /* --- CÁC PHẦN KHÁC --- */
-.question-header, .options, .explanation {
+.question-header,
+.options,
+.explanation {
     position: relative;
     z-index: 2;
 }
@@ -330,23 +339,24 @@ input[type="radio"]:checked~.answer-text {
 .explanation {
     margin-top: 20px;
     padding: 20px;
-    
+
     /* 1. Nền Vàng Kem Sáng (Sạch và sang hơn màu cũ) */
     background-color: #fffde7 !important;
-    
+
     /* 2. Viền: Bo viền nhẹ + Điểm nhấn vạch Đỏ bên trái */
     border: 1px solid #ffcc80 !important;
-    border-left: 6px solid #d32f2f !important; /* Vạch đỏ đậm chất Tết */
+    border-left: 6px solid #d32f2f !important;
+    /* Vạch đỏ đậm chất Tết */
     border-radius: 8px;
-    
+
     /* 3. Màu chữ: Nâu đậm (Đen) để tương phản tốt, dễ đọc */
     color: #3e2723 !important;
     font-size: 1rem;
     line-height: 1.6;
-    
+
     /* 4. Hiệu ứng nổi nhẹ */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    
+
     /* Mặc định ẩn (JS sẽ bật lên sau) */
     display: none;
     position: relative;
@@ -360,7 +370,8 @@ input[type="radio"]:checked~.answer-text {
     letter-spacing: 0.5px;
     margin-right: 5px;
     display: inline-block;
-    border-bottom: 2px solid #ffcc80; /* Gạch chân nhẹ */
+    border-bottom: 2px solid #ffcc80;
+    /* Gạch chân nhẹ */
     margin-bottom: 5px;
 }
 
@@ -388,7 +399,8 @@ input[type="radio"]:checked~.answer-text {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Căn giữa nút */
+    align-items: center;
+    /* Căn giữa nút */
     margin-top: 20px;
 }
 
@@ -396,25 +408,28 @@ input[type="radio"]:checked~.answer-text {
 #submit-btn,
 .btn-restart {
     display: block;
-    
+
     /* Kích thước chuẩn 93% so với khung chứa */
-    width: 93% !important; 
+    width: 93% !important;
     max-width: 93% !important;
-    
-    margin: 10px 0; /* Khoảng cách giữa các nút */
+
+    margin: 10px 0;
+    /* Khoảng cách giữa các nút */
     padding: 12px 0;
 
     /* Nền Đỏ chuyển sắc (Style Bao Lì Xì) */
     background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #c62828 100%);
 
     /* Font chữ cứng cáp (Segoe UI) - KHÔNG dùng Dancing Script */
-    color: #ffd700 !important; /* Chữ Vàng Kim */
+    color: #ffd700 !important;
+    /* Chữ Vàng Kim */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    text-shadow: 1px 1px 0px #5e0000; /* Bóng chữ cho dễ đọc trên nền đỏ */
+    text-shadow: 1px 1px 0px #5e0000;
+    /* Bóng chữ cho dễ đọc trên nền đỏ */
 
     /* Viền Vàng & Bo góc */
     border: 2px solid #ffd700;
@@ -424,8 +439,9 @@ input[type="radio"]:checked~.answer-text {
     box-shadow: 0 5px 15px rgba(183, 28, 28, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: pulse-red 2s infinite; /* Hiệu ứng thở */
-    
+    animation: pulse-red 2s infinite;
+    /* Hiệu ứng thở */
+
     /* Đảm bảo không bị đè bởi style cũ */
     position: relative;
     overflow: hidden;
@@ -434,26 +450,39 @@ input[type="radio"]:checked~.answer-text {
 /* Hiệu ứng khi di chuột vào (Hover) */
 #submit-btn:hover,
 .btn-restart:hover {
-    transform: translateY(-3px) scale(1.01); 
-    background: linear-gradient(135deg, #d32f2f 0%, #ff5252 100%); /* Sáng hơn */
-    color: #fff !important; /* Chữ chuyển trắng */
+    transform: translateY(-3px) scale(1.01);
+    background: linear-gradient(135deg, #d32f2f 0%, #ff5252 100%);
+    /* Sáng hơn */
+    color: #fff !important;
+    /* Chữ chuyển trắng */
     border-color: #fff;
     box-shadow: 0 10px 25px rgba(255, 23, 68, 0.6);
 }
 
 /* --- QUAN TRỌNG: XÓA SẠCH ICON HOA LÁ --- */
-#submit-btn::before, #submit-btn::after,
-.btn-restart::before, .btn-restart::after {
+#submit-btn::before,
+#submit-btn::after,
+.btn-restart::before,
+.btn-restart::after {
     content: none !important;
     display: none !important;
 }
 
 /* Keyframes hiệu ứng thở màu đỏ */
 @keyframes pulse-red {
-    0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+    }
 }
+
 /* =========================================
    5. TRANG TRÍ THÊM (HOA, ĐÈN, CÂU ĐỐI, MODAL)
    ========================================= */
@@ -612,27 +641,29 @@ input[type="radio"]:checked~.answer-text {
     z-index: 99999;
 
     /* 2. Căn giữa mũi tên (QUAN TRỌNG: JS sẽ đổi display: none thành flex) */
-    display: none; 
+    display: none;
     justify-content: center;
     align-items: center;
 
     /* 3. MÀU SẮC TẾT */
     /* Nền đỏ chuyển sắc sang trọng */
     background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #f44336 100%) !important;
-    
+
     /* Viền Vàng Kim Loại */
     border: 2px solid #ffd700 !important;
-    
+
     /* Màu mũi tên */
     color: #ffd700 !important;
 
     /* 4. Hình dáng & Bóng đổ */
-    border-radius: 50%; /* Tròn vo */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Tỏa sáng vàng nhẹ */
-    
+    border-radius: 50%;
+    /* Tròn vo */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    /* Tỏa sáng vàng nhẹ */
+
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
+
     /* 5. Animation "Thở" liên tục */
     animation: pulse-gold 2s infinite;
 }
@@ -641,18 +672,25 @@ input[type="radio"]:checked~.answer-text {
 #btn-back-to-top svg {
     width: 28px;
     height: 28px;
-    stroke-width: 3px; /* Mũi tên đậm hơn */
-    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3)); /* Bóng đổ cho mũi tên nổi lên */
+    stroke-width: 3px;
+    /* Mũi tên đậm hơn */
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+    /* Bóng đổ cho mũi tên nổi lên */
 }
 
 /* Hiệu ứng khi di chuột vào */
 #btn-back-to-top:hover {
-    background: #ffd700 !important; /* Đảo màu: Nền Vàng */
-    border-color: #d32f2f !important; /* Viền Đỏ */
-    color: #d32f2f !important; /* Mũi tên Đỏ */
-    
-    transform: translateY(-8px) scale(1.1); /* Bay cao lên */
-    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.8); /* Bóng đỏ rực */
+    background: #ffd700 !important;
+    /* Đảo màu: Nền Vàng */
+    border-color: #d32f2f !important;
+    /* Viền Đỏ */
+    color: #d32f2f !important;
+    /* Mũi tên Đỏ */
+
+    transform: translateY(-8px) scale(1.1);
+    /* Bay cao lên */
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.8);
+    /* Bóng đỏ rực */
 }
 
 /* Keyframes cho hiệu ứng tỏa sáng (Thở) */
@@ -660,9 +698,12 @@ input[type="radio"]:checked~.answer-text {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
     }
+
     70% {
-        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); /* Tỏa vòng tròn vàng ra ngoài */
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+        /* Tỏa vòng tròn vàng ra ngoài */
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
     }
@@ -686,12 +727,14 @@ input[type="radio"]:checked~.answer-text {
 }
 
 .modal-box {
-    background-color: #fffde7; /* Màu kem vàng đặc trưng */
+    background-color: #fffde7;
+    /* Màu kem vàng đặc trưng */
     width: 90%;
     max-width: 450px;
     border: none;
-    border-radius: 20px; /* Bo tròn mềm mại */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    /* Bo tròn mềm mại */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
     animation: zoomIn 0.3s ease;
@@ -710,15 +753,18 @@ input[type="radio"]:checked~.answer-text {
 }
 
 .modal-header {
-    background: linear-gradient(to right, #d32f2f, #b71c1c); /* Gradient đỏ đậm */
-    color: #ffd700; /* Chữ vàng */
+    background: linear-gradient(to right, #d32f2f, #b71c1c);
+    /* Gradient đỏ đậm */
+    color: #ffd700;
+    /* Chữ vàng */
     padding: 15px;
     font-family: 'Dancing Script', cursive;
     font-size: 1.8rem;
     font-weight: bold;
     text-align: center;
     border-bottom: 2px solid #ffd700;
-    display: block; /* Để căn giữa text dễ hơn */
+    display: block;
+    /* Để căn giữa text dễ hơn */
 }
 
 .modal-body {
@@ -734,25 +780,28 @@ input[type="radio"]:checked~.answer-text {
     display: flex;
     justify-content: center;
     gap: 15px;
-    background-color: #fff5f5; /* Màu nền chân modal */
+    background-color: #fff5f5;
+    /* Màu nền chân modal */
     border: none;
 }
 
 .btn-modal {
-    padding: 10px 30px; /* Tăng padding ngang lên chút cho chữ thoáng */
+    padding: 10px 30px;
+    /* Tăng padding ngang lên chút cho chữ thoáng */
     border-radius: 50px;
     border: none;
     font-weight: bold;
     cursor: pointer;
     font-size: 1rem;
     transition: transform 0.2s;
-    white-space: nowrap; /* Chống xuống dòng nếu màn hình nhỏ */
+    white-space: nowrap;
+    /* Chống xuống dòng nếu màn hình nhỏ */
 }
 
 .btn-cancel {
     background-color: #e0e0e0;
     color: #555;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn-agree {
@@ -761,7 +810,9 @@ input[type="radio"]:checked~.answer-text {
     box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
 }
 
-.btn-modal:hover { transform: scale(1.05); }
+.btn-modal:hover {
+    transform: scale(1.05);
+}
 
 .corner-decoration {
     position: absolute;
@@ -906,20 +957,21 @@ input[type="radio"]:checked~.answer-text {
 }
 
 .question-card.highlighted {
-    animation: tetFocus 2s ease-in-out forwards; 
+    animation: tetFocus 2s ease-in-out forwards;
     position: relative;
     z-index: 10;
 }
 
 @keyframes tetFocus {
+
     /* 0%: Bắt đầu từ trạng thái gốc (Đỏ) */
     0% {
         transform: scale(1);
-        border-color: #b71c1c; 
+        border-color: #b71c1c;
         background-color: #fff;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
-    
+
     /* 20%: Chuyển sang Vàng rực rỡ & Phóng to */
     20% {
         transform: scale(1.03);
@@ -927,7 +979,7 @@ input[type="radio"]:checked~.answer-text {
         background-color: #fffde7;
         box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
     }
-    
+
     /* 70%: Giữ nguyên màu Vàng (để người dùng kịp nhìn) */
     70% {
         transform: scale(1.03);
@@ -935,10 +987,11 @@ input[type="radio"]:checked~.answer-text {
         background-color: #fffde7;
         box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
     }
-    
+
     100% {
         transform: scale(1);
-        border-color: #b71c1c; /* Về lại màu gốc */
+        border-color: #b71c1c;
+        /* Về lại màu gốc */
         background-color: #fff;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
@@ -1021,26 +1074,32 @@ input[type="radio"]:checked~.answer-text {
 
 /* 1. Trường hợp ĐÚNG (Màu Xanh Đậm đà) */
 .feedback-correct {
-    color: #1b5e20; /* Xanh lá đậm (thay vì xanh nhạt mặc định) */
-    font-weight: 800; /* Chữ siêu đậm */
+    color: #1b5e20;
+    /* Xanh lá đậm (thay vì xanh nhạt mặc định) */
+    font-weight: 800;
+    /* Chữ siêu đậm */
     font-size: 1.1em;
     padding: 10px;
-    background-color: #e8f5e9; /* Nền xanh nhẹ làm nổi chữ */
+    background-color: #e8f5e9;
+    /* Nền xanh nhẹ làm nổi chữ */
     border: 1px solid #c8e6c9;
     border-radius: 6px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 8px; /* Khoảng cách giữa icon và chữ */
+    gap: 8px;
+    /* Khoảng cách giữa icon và chữ */
 }
 
 /* 2. Trường hợp SAI (Màu Đỏ Rực) */
 .feedback-wrong {
-    color: #b71c1c; /* Đỏ đậm */
+    color: #b71c1c;
+    /* Đỏ đậm */
     font-weight: 800;
     font-size: 1.1em;
     padding: 10px;
-    background-color: #ffebee; /* Nền đỏ hồng nhẹ */
+    background-color: #ffebee;
+    /* Nền đỏ hồng nhẹ */
     border: 1px solid #ffcdd2;
     border-radius: 6px;
     margin-bottom: 10px;
@@ -1048,11 +1107,13 @@ input[type="radio"]:checked~.answer-text {
 
 /* 3. Trường hợp CHƯA LÀM (Màu Cam Đậm) */
 .feedback-unanswered {
-    color: #e65100; /* Cam đậm */
+    color: #e65100;
+    /* Cam đậm */
     font-weight: 800;
     font-size: 1.1em;
     padding: 10px;
-    background-color: #fff3e0; /* Nền cam nhạt */
+    background-color: #fff3e0;
+    /* Nền cam nhạt */
     border: 1px solid #ffe0b2;
     border-radius: 6px;
     margin-bottom: 10px;
@@ -1061,5 +1122,306 @@ input[type="radio"]:checked~.answer-text {
 /* Tinh chỉnh lại chữ "Giải thích" cho đồng bộ */
 .explanation {
     /* Đảm bảo chữ giải thích bên dưới không bị dính vào box kết quả */
-    margin-top: 15px; 
+    margin-top: 15px;
+}
+
+/* =========================================
+   🎀 CHẾ ĐỘ PINK MODE (TẾT NGỌT NGÀO) 🎀
+   ========================================= */
+
+/* Nút chuyển chế độ */
+#btn-pink-mode {
+    position: fixed;
+    top: 150px;
+    /* Nằm bên trái, dưới đèn lồng */
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #ff80ab;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+#btn-pink-mode:hover {
+    background: #ff80ab;
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* --- KHI KÍCH HOẠT PINK MODE --- */
+body.pink-mode {
+    background-color: #fff0f5;
+    /* Nền hồng phấn nhạt */
+    color: #880e4f;
+    /* Chữ màu hồng đậm đen */
+}
+
+/* 1. Đổi màu ĐỎ sang HỒNG ĐẬM cho các thành phần chính */
+body.pink-mode .question-map,
+body.pink-mode .question-card,
+body.pink-mode .exam-card,
+body.pink-mode #btn-back-to-top,
+body.pink-mode .modal-box {
+    border-color: #ec407a !important;
+    /* Viền hồng */
+}
+
+/* 2. Tiêu đề & Chữ */
+body.pink-mode h1,
+body.pink-mode .question-title,
+body.pink-mode .related-title,
+body.pink-mode .modal-header {
+    color: #d81b60 !important;
+    /* Chữ hồng đậm */
+}
+
+body.pink-mode .modal-header {
+    background: linear-gradient(to right, #ec407a, #d81b60) !important;
+}
+
+/* 3. Nút bấm (Gradient Hồng) */
+body.pink-mode #submit-btn,
+body.pink-mode .btn-restart,
+body.pink-mode #btn-back-to-top,
+body.pink-mode .btn-agree {
+    background: linear-gradient(135deg, #ec407a 0%, #d81b60 100%) !important;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4) !important;
+}
+
+body.pink-mode #btn-back-to-top:hover {
+    background: #ffd700 !important;
+    /* Hover vẫn giữ màu vàng */
+    color: #d81b60 !important;
+}
+
+/* 4. Thẻ câu hỏi (Question Card) */
+body.pink-mode .question-card::before {
+    /* Đổi màu họa tiết 4 góc sang hồng */
+    background:
+        linear-gradient(135deg, #ec407a 8px, transparent 8px) top left,
+        linear-gradient(-135deg, #ec407a 8px, transparent 8px) top right,
+        linear-gradient(45deg, #ec407a 8px, transparent 8px) bottom left,
+        linear-gradient(-45deg, #ec407a 8px, transparent 8px) bottom right !important;
+}
+
+body.pink-mode .question-title::before {
+    color: #d81b60 !important;
+    /* Dấu chấm tròn */
+}
+
+body.pink-mode .question-card::after {
+    border-color: #f8bbd0 !important;
+    /* Viền trong màu hồng nhạt */
+}
+
+/* 5. Question Map (Ô vuông) */
+body.pink-mode .question-map {
+    border-color: #ec407a;
+}
+
+body.pink-mode .map-item:hover,
+body.pink-mode .map-item.done {
+    background-color: #ec407a;
+    border-color: #d81b60;
+}
+
+body.pink-mode .map-item.active {
+    color: #d81b60;
+    border-color: #d81b60;
+}
+
+/* 6. Toast & Modal Footer */
+body.pink-mode .tet-toast {
+    background: linear-gradient(135deg, #ec407a 0%, #ad1457 100%);
+    box-shadow: 0 5px 20px rgba(233, 30, 99, 0.5);
+}
+
+body.pink-mode .modal-footer {
+    background-color: #fff0f5;
+}
+
+/* 7. Xử lý ảnh (Đèn lồng, Câu đối) - Dùng Filter để biến Đỏ thành Hồng/Tím */
+body.pink-mode .lantern,
+body.pink-mode .cau-doi-khung,
+body.pink-mode .falling-flower {
+    filter: hue-rotate(320deg) saturate(1.2);
+    /* Xoay màu đỏ sang hồng tím */
+}
+
+/* 8. Badge chương */
+body.pink-mode .badge-c {
+    background-color: #fce4ec;
+    color: #d81b60;
+    border-color: #f8bbd0;
+}
+
+/* 9. Radio Button khi chọn */
+body.pink-mode input[type="radio"]:checked+.btn-letter {
+    background-color: #ec407a;
+}
+
+body.pink-mode input[type="radio"]:checked~.answer-text {
+    color: #d81b60;
+}
+
+/* =========================================
+   🎀 CHẾ ĐỘ PINK MODE: PHỦ HỒNG TOÀN DIỆN 🎀
+   ========================================= */
+
+/* --- 1. QUESTION MAP (BẢNG CÂU HỎI) --- */
+body.pink-mode .question-map {
+    background: rgba(255, 240, 245, 0.98) !important; /* Nền hồng phấn (LavenderBlush) */
+    border-color: #f48fb1 !important; /* Viền hồng pastel */
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.15) !important;
+}
+
+body.pink-mode .map-item {
+    background-color: #fff0f5 !important; /* Ô chưa làm: Hồng rất nhạt */
+    border-color: #f8bbd0 !important;
+    color: #ad1457 !important; /* Chữ màu hồng đậm */
+}
+
+body.pink-mode .map-item:hover {
+    background-color: #ff4081 !important; /* Hover: Hồng cánh sen rực rỡ */
+    color: #fff !important;
+    border-color: #ff4081 !important;
+}
+
+body.pink-mode .map-item.done {
+    background-color: #ec407a !important; /* Đã làm: Hồng đậm vừa */
+    color: #fff !important;
+    border-color: #d81b60 !important;
+}
+
+body.pink-mode .map-item.active {
+    background-color: #ffd700 !important; /* Đang chọn: Vàng (giữ điểm nhấn) */
+    color: #c2185b !important;
+    border-color: #c2185b !important;
+}
+
+/* --- 2. QUESTION CARD (THẺ CÂU HỎI) --- */
+body.pink-mode .question-card {
+    background-color: #fff8fa !important; /* Nền thẻ: Hồng trắng tinh khôi */
+    border: 2px solid #f06292 !important; /* Viền: Hồng tươi */
+    box-shadow: 0 8px 20px rgba(244, 143, 177, 0.2) !important; /* Bóng đổ màu hồng */
+}
+
+/* Họa tiết 4 góc (Chuyển sang hồng) */
+body.pink-mode .question-card::before {
+    background: 
+        linear-gradient(135deg, #ec407a 8px, transparent 8px) top left,
+        linear-gradient(-135deg, #ec407a 8px, transparent 8px) top right,
+        linear-gradient(45deg, #ec407a 8px, transparent 8px) bottom left,
+        linear-gradient(-45deg, #ec407a 8px, transparent 8px) bottom right !important;
+}
+
+/* Viền kép bên trong */
+body.pink-mode .question-card::after {
+    border-color: #fce4ec !important; /* Viền trong màu hồng siêu nhạt */
+}
+
+/* Tiêu đề câu hỏi */
+body.pink-mode .question-title {
+    color: #c2185b !important; /* Chữ hồng tím đậm đà */
+    border-bottom-color: #ff80ab !important; /* Gạch chân hồng neon */
+}
+body.pink-mode .question-title::before {
+    color: #ff4081 !important; /* Dấu chấm tròn đầu dòng */
+}
+
+/* --- 3. CÁC THÀNH PHẦN KHÁC --- */
+
+/* Badge chương */
+body.pink-mode .badge-c {
+    background-color: #fce4ec !important;
+    color: #880e4f !important;
+    border: 1px solid #f48fb1 !important;
+}
+body.pink-mode .badge-l {
+    background-color: #f3e5f5 !important; /* Level chuyển sang màu tím nhạt cho đẹp */
+    color: #6a1b9a !important;
+    border: 1px solid #ce93d8 !important;
+}
+
+/* Đáp án (Options) */
+body.pink-mode .options label:hover {
+    background-color: #fff0f5 !important; /* Hover vào đáp án ra màu hồng */
+    border-color: #ff80ab !important;
+}
+body.pink-mode .btn-letter {
+    color: #ec407a !important;
+    border-color: #ec407a !important;
+}
+
+/* Khi chọn đáp án */
+body.pink-mode input[type="radio"]:checked+.btn-letter {
+    background-color: #ec407a !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px rgba(236, 64, 122, 0.4) !important;
+}
+body.pink-mode input[type="radio"]:checked~.answer-text {
+    color: #d81b60 !important;
+}
+
+/* Highlight (khi bấm map nhảy tới) */
+body.pink-mode .question-card.highlighted {
+    border-color: #ff4081 !important; /* Highlight màu hồng neon */
+    background-color: #fce4ec !important;
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.4) !important;
+}
+
+/* --- KHU VỰC LUYỆN TẬP THEO CHƯƠNG (EXAM CARDS PINK MODE) --- */
+
+/* 1. Tiêu đề mục lớn */
+body.pink-mode .related-title {
+    color: #ec407a !important; /* Hồng đậm */
+    text-shadow: 1px 1px 0 #fce4ec !important;
+}
+
+/* 2. Thẻ bài thi (Biến từ Đỏ -> Hồng Gradient) */
+body.pink-mode .exam-card {
+    /* Gradient Hồng ngọt ngào (thay vì đỏ bầm) */
+    background: linear-gradient(135deg, #ec407a 0%, #d81b60 100%) !important;
+    
+    /* Viền & Chữ */
+    border-color: #ff80ab !important; 
+    color: #fff !important; /* Chữ trắng cho nổi trên nền hồng đậm */
+    
+    /* Bóng đổ (Kiểu 3D) */
+    box-shadow: 0 4px 0px #ad1457 !important; 
+}
+
+/* 3. Icon tròn bên trong thẻ */
+body.pink-mode .exam-icon {
+    background: #fff0f5 !important; /* Nền icon hồng phấn */
+    border-color: #ff4081 !important; /* Viền icon hồng tươi */
+    /* Lưu ý: Emoji bên trong thường giữ nguyên màu, nhưng nếu muốn chỉnh filter thì thêm vào đây */
+}
+
+/* 4. Hiệu ứng Hover (Sáng lên) */
+body.pink-mode .exam-card:hover {
+    background: linear-gradient(135deg, #ff4081 0%, #f50057 100%) !important;
+    box-shadow: 0 8px 0px #880e4f !important;
+    border-color: #fff !important;
+    transform: translateY(-5px);
+}
+
+body.pink-mode .exam-card:hover .exam-icon {
+    background: #fff !important;
+    border-color: #c2185b !important;
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* 5. Hoa trang trí chìm ở góc thẻ */
+body.pink-mode .exam-card::after {
+    color: #fff !important; 
+    opacity: 0.2 !important;
 }
