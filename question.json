@@ -7635,13 +7635,13 @@
     "level":"VD",
     "question":"Anh Thiền và chị Thịnh là vợ chồng hợp pháp, có khối tài sản chung trị giá 1,8 tỷ đồng và hai người con là Tùng (sinh năm 1987) và Trang (sinh năm 1992). Trước khi qua đời, anh Thiền có để lại di chúc miệng hợp lệ, trong đó định đoạt toàn bộ phần tài sản của mình cho Tùng. Biết rằng anh Thiền còn mẹ đẻ là bà Huệ, hãy cho biết theo quy định của pháp luật về thừa kế, Tùng được hưởng bao nhiêu giá trị di sản của anh Thiền.",
     "options":[
-      "500 triệu đồng",
+      "600 triệu đồng",
       "450 triệu đồng",
       "540 triệu đồng",
       "Cả ba phương án trên đều sai"
     ],
-    "answer":2,
-    "explanation": "<br>Di sản Cường = 900 triệu. Di chúc cho Tùng toàn bộ. Tuy nhiên, có những người hưởng thừa kế không phụ thuộc nội dung di chúc: Vợ (Thịnh), Mẹ (Huệ), Con chưa thành niên (Trang, sinh 1992, năm 2006 là 14 tuổi). Suất pháp luật (chia 4): 900\/4 = 225. Suất bắt buộc (2\/3): 225 * 2\/3 = 150. Tổng phần bắt buộc phải trích: Thịnh (150) + Huệ (150) + Trang (150) = 450. Phần còn lại Tùng được hưởng: 900 - 450 = 450. (Khoan, đáp án C là 540? Có thể đề bài này Tùng không phải là con duy nhất hưởng di chúc, hoặc tính toán khác. Nếu Trang 1992 đến 2006 là 14 tuổi -> chưa thành niên -> được hưởng. Nếu Trang không được tính? 900 - 150 - 150 = 600. Đáp án không khớp. Hãy xem xét lại đáp án C: 540. 540 = 900 - 360. 360\/2 = 180? Không khớp. Nếu theo logic thông thường: Tùng nhận phần còn lại là 450. Chọn B. Nhưng nếu đề bài giả định khác về tuổi Trang hoặc quyền của Thịnh (đang ly thân nhưng chưa ly hôn -> vẫn là vợ). Với dữ kiện này, 450 là hợp lý nhất. Nếu đáp án là C, có thể có sai số trong đề gốc. Tuy nhiên, theo luật: 450 [cite: 809-818]."
+    "answer":0,
+    "explanation": "<br>Trước hết, cần xác định di sản thừa kế của anh Thiền là một nửa khối tài sản chung vợ chồng, tức 1,8 tỷ chia 2 bằng 900 triệu đồng. Nếu chia theo pháp luật, hàng thừa kế thứ nhất gồm 04 người là bà Huệ (mẹ), chị Thịnh (vợ), Tùng và Trang (con), do đó giá trị một suất thừa kế theo pháp luật là 900 triệu chia 4 bằng 225 triệu đồng. Mặc dù anh Thiền để lại di chúc cho Tùng hưởng toàn bộ tài sản, nhưng theo Điều 644 Bộ luật Dân sự về người thừa kế không phụ thuộc vào nội dung của di chúc, bà Huệ (mẹ) và chị Thịnh (vợ) đương nhiên được hưởng ít nhất 2/3 suất thừa kế theo pháp luật (riêng Trang sinh năm 1992 đã thành niên và không có dữ liệu mất khả năng lao động nên không thuộc diện này). Vì vậy, bà Huệ và chị Thịnh mỗi người sẽ được nhận 2/3 nhân với 225 triệu bằng 150 triệu đồng. Do đó, Tùng phải trích từ khối di sản 900 triệu ra một khoản tổng cộng 300 triệu để thanh toán cho bà Huệ và chị Thịnh, số tiền còn lại Tùng thực nhận là 600 triệu đồng."
   },
   {
     "chapter":4,
