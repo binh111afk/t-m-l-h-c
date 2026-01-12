@@ -1125,15 +1125,14 @@ input[type="radio"]:checked~.answer-text {
     margin-top: 15px;
 }
 
-/* =========================================
-   🎀 CHẾ ĐỘ PINK MODE (TẾT NGỌT NGÀO) 🎀
-   ========================================= */
+/* =================================================================
+   🎀 PINK MODE (FINAL VERSION - ĐÃ FIX LỖI MẤT MÀU BẢNG CÂU HỎI) 🎀
+   ================================================================= */
 
-/* Nút chuyển chế độ */
+/* --- 1. NÚT CHUYỂN CHẾ ĐỘ --- */
 #btn-pink-mode {
     position: fixed;
     top: 150px;
-    /* Nằm bên trái, dưới đèn lồng */
     left: 20px;
     width: 50px;
     height: 50px;
@@ -1150,171 +1149,80 @@ input[type="radio"]:checked~.answer-text {
     transition: all 0.3s ease;
     animation: bounce 2s infinite;
 }
-
 #btn-pink-mode:hover {
     background: #ff80ab;
     transform: scale(1.1) rotate(10deg);
 }
 
-/* --- KHI KÍCH HOẠT PINK MODE --- */
+/* --- 2. THIẾT LẬP CHUNG CHO BODY --- */
 body.pink-mode {
-    background-color: #fff0f5;
-    /* Nền hồng phấn nhạt */
+    background-color: #fff0f5; /* Nền hồng phấn */
     color: #880e4f;
-    /* Chữ màu hồng đậm đen */
 }
 
-/* 1. Đổi màu ĐỎ sang HỒNG ĐẬM cho các thành phần chính */
-body.pink-mode .question-map,
-body.pink-mode .question-card,
-body.pink-mode .exam-card,
-body.pink-mode #btn-back-to-top,
-body.pink-mode .modal-box {
-    border-color: #ec407a !important;
-    /* Viền hồng */
-}
-
-/* 2. Tiêu đề & Chữ */
-body.pink-mode h1,
-body.pink-mode .question-title,
-body.pink-mode .related-title,
-body.pink-mode .modal-header {
-    color: #d81b60 !important;
-    /* Chữ hồng đậm */
-}
-
-body.pink-mode .modal-header {
-    background: linear-gradient(to right, #ec407a, #d81b60) !important;
-}
-
-/* 3. Nút bấm (Gradient Hồng) */
-body.pink-mode #submit-btn,
-body.pink-mode .btn-restart,
-body.pink-mode #btn-back-to-top,
-body.pink-mode .btn-agree {
-    background: linear-gradient(135deg, #ec407a 0%, #d81b60 100%) !important;
-    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4) !important;
-}
-
-body.pink-mode #btn-back-to-top:hover {
-    background: #ffd700 !important;
-    /* Hover vẫn giữ màu vàng */
-    color: #d81b60 !important;
-}
-
-/* 4. Thẻ câu hỏi (Question Card) */
-body.pink-mode .question-card::before {
-    /* Đổi màu họa tiết 4 góc sang hồng */
-    background:
-        linear-gradient(135deg, #ec407a 8px, transparent 8px) top left,
-        linear-gradient(-135deg, #ec407a 8px, transparent 8px) top right,
-        linear-gradient(45deg, #ec407a 8px, transparent 8px) bottom left,
-        linear-gradient(-45deg, #ec407a 8px, transparent 8px) bottom right !important;
-}
-
-body.pink-mode .question-title::before {
-    color: #d81b60 !important;
-    /* Dấu chấm tròn */
-}
-
-body.pink-mode .question-card::after {
-    border-color: #f8bbd0 !important;
-    /* Viền trong màu hồng nhạt */
-}
-
-/* 5. Question Map (Ô vuông) */
+/* --- 3. QUESTION MAP (XỬ LÝ KỸ PHẦN MÀU SẮC) --- */
+/* Nền chung của bảng map */
 body.pink-mode .question-map {
-    border-color: #ec407a;
-}
-
-body.pink-mode .map-item:hover,
-body.pink-mode .map-item.done {
-    background-color: #ec407a;
-    border-color: #d81b60;
-}
-
-body.pink-mode .map-item.active {
-    color: #d81b60;
-    border-color: #d81b60;
-}
-
-/* 6. Toast & Modal Footer */
-body.pink-mode .tet-toast {
-    background: linear-gradient(135deg, #ec407a 0%, #ad1457 100%);
-    box-shadow: 0 5px 20px rgba(233, 30, 99, 0.5);
-}
-
-body.pink-mode .modal-footer {
-    background-color: #fff0f5;
-}
-
-/* 7. Xử lý ảnh (Đèn lồng, Câu đối) - Dùng Filter để biến Đỏ thành Hồng/Tím */
-body.pink-mode .lantern,
-body.pink-mode .cau-doi-khung,
-body.pink-mode .falling-flower {
-    filter: hue-rotate(320deg) saturate(1.2);
-    /* Xoay màu đỏ sang hồng tím */
-}
-
-/* 8. Badge chương */
-body.pink-mode .badge-c {
-    background-color: #fce4ec;
-    color: #d81b60;
-    border-color: #f8bbd0;
-}
-
-/* 9. Radio Button khi chọn */
-body.pink-mode input[type="radio"]:checked+.btn-letter {
-    background-color: #ec407a;
-}
-
-body.pink-mode input[type="radio"]:checked~.answer-text {
-    color: #d81b60;
-}
-
-/* =========================================
-   🎀 CHẾ ĐỘ PINK MODE: PHỦ HỒNG TOÀN DIỆN 🎀
-   ========================================= */
-
-/* --- 1. QUESTION MAP (BẢNG CÂU HỎI) --- */
-body.pink-mode .question-map {
-    background: rgba(255, 240, 245, 0.98) !important; /* Nền hồng phấn (LavenderBlush) */
-    border-color: #f48fb1 !important; /* Viền hồng pastel */
+    background: rgba(255, 240, 245, 0.98) !important;
+    border-color: #f48fb1 !important;
     box-shadow: 0 5px 15px rgba(233, 30, 99, 0.15) !important;
 }
 
+/* Ô MẶC ĐỊNH (Chưa làm) -> Màu Hồng */
 body.pink-mode .map-item {
-    background-color: #fff0f5 !important; /* Ô chưa làm: Hồng rất nhạt */
+    background-color: #fff0f5 !important;
     border-color: #f8bbd0 !important;
-    color: #ad1457 !important; /* Chữ màu hồng đậm */
+    color: #ad1457 !important;
 }
 
+/* Ô HOVER -> Hồng đậm */
 body.pink-mode .map-item:hover {
-    background-color: #ff4081 !important; /* Hover: Hồng cánh sen rực rỡ */
+    background-color: #ff4081 !important;
     color: #fff !important;
     border-color: #ff4081 !important;
 }
 
-body.pink-mode .map-item.done {
-    background-color: #ec407a !important; /* Đã làm: Hồng đậm vừa */
+/* [QUAN TRỌNG] Ô ĐÚNG -> Bắt buộc Xanh (Ghi đè màu hồng) */
+body.pink-mode .map-item.correct {
+    background-color: #66bb6a !important; /* Xanh lá dịu */
+    border-color: #2e7d32 !important;
     color: #fff !important;
-    border-color: #d81b60 !important;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
 }
 
+/* [QUAN TRỌNG] Ô SAI -> Bắt buộc Đỏ (Ghi đè màu hồng) */
+body.pink-mode .map-item.wrong {
+    background-color: #ef5350 !important; /* Đỏ cam */
+    border-color: #c62828 !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px rgba(229, 57, 53, 0.4);
+}
+
+/* Ô ĐANG CHỌN (Active) -> Vàng */
 body.pink-mode .map-item.active {
-    background-color: #ffd700 !important; /* Đang chọn: Vàng (giữ điểm nhấn) */
+    background-color: #ffeb3b !important;
     color: #c2185b !important;
-    border-color: #c2185b !important;
+    border-color: #f50057 !important;
+    transform: scale(1.1);
+    font-weight: bold;
 }
 
-/* --- 2. QUESTION CARD (THẺ CÂU HỎI) --- */
+/* --- 4. CÁC THÀNH PHẦN KHÁC (CARD, BUTTON...) --- */
+/* Đổi màu đỏ sang hồng cho các khung viền */
+body.pink-mode .question-card, 
+body.pink-mode .exam-card,
+body.pink-mode #btn-back-to-top,
+body.pink-mode .modal-box {
+    border-color: #ec407a !important;
+}
+
+/* Card câu hỏi: Nền hồng nhạt */
 body.pink-mode .question-card {
-    background-color: #fff8fa !important; /* Nền thẻ: Hồng trắng tinh khôi */
-    border: 2px solid #f06292 !important; /* Viền: Hồng tươi */
-    box-shadow: 0 8px 20px rgba(244, 143, 177, 0.2) !important; /* Bóng đổ màu hồng */
+    background-color: #fff8fa !important;
+    box-shadow: 0 8px 20px rgba(244, 143, 177, 0.2) !important;
 }
 
-/* Họa tiết 4 góc (Chuyển sang hồng) */
+/* Họa tiết 4 góc sang hồng */
 body.pink-mode .question-card::before {
     background: 
         linear-gradient(135deg, #ec407a 8px, transparent 8px) top left,
@@ -1323,105 +1231,57 @@ body.pink-mode .question-card::before {
         linear-gradient(-45deg, #ec407a 8px, transparent 8px) bottom right !important;
 }
 
-/* Viền kép bên trong */
-body.pink-mode .question-card::after {
-    border-color: #fce4ec !important; /* Viền trong màu hồng siêu nhạt */
+/* Tiêu đề hồng */
+body.pink-mode h1, 
+body.pink-mode .question-title,
+body.pink-mode .related-title,
+body.pink-mode .modal-header {
+    color: #d81b60 !important;
 }
 
-/* Tiêu đề câu hỏi */
-body.pink-mode .question-title {
-    color: #c2185b !important; /* Chữ hồng tím đậm đà */
-    border-bottom-color: #ff80ab !important; /* Gạch chân hồng neon */
-}
-body.pink-mode .question-title::before {
-    color: #ff4081 !important; /* Dấu chấm tròn đầu dòng */
+/* Nút bấm Gradient Hồng */
+body.pink-mode #submit-btn,
+body.pink-mode .btn-restart,
+body.pink-mode #btn-back-to-top,
+body.pink-mode .btn-agree {
+    background: linear-gradient(135deg, #ec407a 0%, #d81b60 100%) !important;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4) !important;
 }
 
-/* --- 3. CÁC THÀNH PHẦN KHÁC --- */
+/* Bộ lọc màu cho ảnh (Đèn lồng, Câu đối) */
+body.pink-mode .lantern, 
+body.pink-mode .cau-doi-khung,
+body.pink-mode .falling-flower {
+    filter: hue-rotate(320deg) saturate(1.2);
+}
 
-/* Badge chương */
+/* Badge & Radio Buttons */
 body.pink-mode .badge-c {
     background-color: #fce4ec !important;
     color: #880e4f !important;
     border: 1px solid #f48fb1 !important;
 }
-body.pink-mode .badge-l {
-    background-color: #f3e5f5 !important; /* Level chuyển sang màu tím nhạt cho đẹp */
-    color: #6a1b9a !important;
-    border: 1px solid #ce93d8 !important;
-}
-
-/* Đáp án (Options) */
-body.pink-mode .options label:hover {
-    background-color: #fff0f5 !important; /* Hover vào đáp án ra màu hồng */
-    border-color: #ff80ab !important;
-}
-body.pink-mode .btn-letter {
-    color: #ec407a !important;
-    border-color: #ec407a !important;
-}
-
-/* Khi chọn đáp án */
 body.pink-mode input[type="radio"]:checked+.btn-letter {
     background-color: #ec407a !important;
-    color: #fff !important;
     box-shadow: 0 0 10px rgba(236, 64, 122, 0.4) !important;
 }
 body.pink-mode input[type="radio"]:checked~.answer-text {
     color: #d81b60 !important;
 }
 
-/* Highlight (khi bấm map nhảy tới) */
-body.pink-mode .question-card.highlighted {
-    border-color: #ff4081 !important; /* Highlight màu hồng neon */
-    background-color: #fce4ec !important;
-    box-shadow: 0 0 20px rgba(255, 64, 129, 0.4) !important;
+/* Fix luôn cái bảng thông tin ma trận (Chương 1, 2...) cho hợp tông */
+body.pink-mode .matrix-info {
+    background-color: #fff8fa !important;
+    border-left-color: #ec407a !important;
+    color: #880e4f !important;
 }
 
-/* --- KHU VỰC LUYỆN TẬP THEO CHƯƠNG (EXAM CARDS PINK MODE) --- */
-
-/* 1. Tiêu đề mục lớn */
-body.pink-mode .related-title {
-    color: #ec407a !important; /* Hồng đậm */
-    text-shadow: 1px 1px 0 #fce4ec !important;
-}
-
-/* 2. Thẻ bài thi (Biến từ Đỏ -> Hồng Gradient) */
+/* Fix luôn Exam Cards (Thẻ bài thi) */
 body.pink-mode .exam-card {
-    /* Gradient Hồng ngọt ngào (thay vì đỏ bầm) */
     background: linear-gradient(135deg, #ec407a 0%, #d81b60 100%) !important;
-    
-    /* Viền & Chữ */
-    border-color: #ff80ab !important; 
-    color: #fff !important; /* Chữ trắng cho nổi trên nền hồng đậm */
-    
-    /* Bóng đổ (Kiểu 3D) */
-    box-shadow: 0 4px 0px #ad1457 !important; 
+    color: #fff !important;
 }
-
-/* 3. Icon tròn bên trong thẻ */
 body.pink-mode .exam-icon {
-    background: #fff0f5 !important; /* Nền icon hồng phấn */
-    border-color: #ff4081 !important; /* Viền icon hồng tươi */
-    /* Lưu ý: Emoji bên trong thường giữ nguyên màu, nhưng nếu muốn chỉnh filter thì thêm vào đây */
-}
-
-/* 4. Hiệu ứng Hover (Sáng lên) */
-body.pink-mode .exam-card:hover {
-    background: linear-gradient(135deg, #ff4081 0%, #f50057 100%) !important;
-    box-shadow: 0 8px 0px #880e4f !important;
-    border-color: #fff !important;
-    transform: translateY(-5px);
-}
-
-body.pink-mode .exam-card:hover .exam-icon {
-    background: #fff !important;
-    border-color: #c2185b !important;
-    transform: rotate(15deg) scale(1.1);
-}
-
-/* 5. Hoa trang trí chìm ở góc thẻ */
-body.pink-mode .exam-card::after {
-    color: #fff !important; 
-    opacity: 0.2 !important;
+    background: #fff0f5 !important;
+    border-color: #ff4081 !important;
 }
