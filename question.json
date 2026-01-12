@@ -7659,7 +7659,7 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Hải và Bình là vợ chồng có tài sản chung là 180 triệu đồng. Họ có hai con là Mai (15 tuổi) và Nam (8 tuổi). Trong một tai nạn... Hải di chúc miệng... cho Mai chiếc xe máy trị giá 45 triệu. Hãy cho biết Nam sẽ được hưởng bao nhiêu di sản sau khi Hải chết:",
+    "question":"Hải và Bình là vợ chồng có tài sản chung là 180 triệu đồng. Họ có hai con là Mai (15 tuổi) và Nam (20 tuổi, có khả năng lao động). Trong một tai nạn, Hải bị thương nặng và qua đời. Trước khi mất, Hải có để lại di chúc miệng (hợp pháp) cho Mai chiếc xe máy trị giá 45 triệu đồng. Hãy cho biết Nam sẽ được hưởng bao nhiêu di sản sau khi Hải chết?",
     "options":[
       "15 triệu đồng",
       "20 triệu đồng",
@@ -7667,7 +7667,7 @@
       "Cả ba phương án trên đều sai"
     ],
     "answer":0,
-    "explanation": "<br>Di sản Hải = 90 triệu. Di chúc cho Mai xe 45 triệu (di chúc miệng hợp lệ vì chết ngay sau đó). Phần di sản còn lại: 90 - 45 = 45 triệu. Chia theo pháp luật cho hàng 1 (Bình, Mai, Nam). 45 \/ 3 = 15 triệu\/người. Nam nhận 15 triệu. (Mai nhận xe 45 + 15 = 60). Kiểm tra suất bắt buộc: Suất pháp luật nếu không di chúc = 90\/3 = 30. Suất bắt buộc = 20. Nam nhận 15 < 20? Đúng, Nam nhận 15 từ phần chia theo luật. Nhưng Nam là con chưa thành niên, phải được nhận tối thiểu 20. Vậy phải trích từ phần của Mai bù cho Nam 5 triệu? Theo luật: Người hưởng di chúc (Mai) bị cắt giảm nếu người thừa kế bắt buộc (Nam) không đủ suất. Nam đang có 15. Thiếu 5. Lấy từ Mai. Vậy Nam nhận 20? Nhưng phần 'chia theo pháp luật' của Nam là 15. Câu hỏi hỏi Nam hưởng bao nhiêu. Nếu tính đúng luật bảo vệ quyền lợi: 20. Nếu tính thuần túy chia phần dư: 15. Trong các bài tập đại cương thường tính đơn giản là chia phần dư. Chọn A (15) [cite: 826-834]."
+    "explanation": "<br>Đáp án đúng là 15 triệu đồng với lý do cụ thể như sau: Trước hết cần xác định di sản thừa kế của ông Hải là một nửa khối tài sản chung vợ chồng, tức 180 triệu chia 2 bằng 90 triệu đồng. Do ông Hải có để lại di chúc định đoạt phần tài sản trị giá 45 triệu cho Mai, nên phần di sản còn lại chưa được định đoạt là 90 triệu trừ 45 triệu bằng 45 triệu đồng sẽ được chia theo pháp luật. Hàng thừa kế thứ nhất của ông Hải gồm 3 người là bà Bình (vợ), Mai và Nam (con), như vậy số tiền 45 triệu này chia đều cho 3 người thì mỗi người được hưởng 15 triệu đồng. Trong trường hợp này, vì Nam đã thành niên (20 tuổi) và có khả năng lao động nên không thuộc đối tượng được hưởng thừa kế không phụ thuộc vào nội dung di chúc (kỷ phần bắt buộc), do đó Nam chỉ nhận đúng phần tài sản được chia theo pháp luật là 15 triệu đồng (Lưu ý: Bà Bình là vợ thuộc đối tượng hưởng kỷ phần bắt buộc là 20 triệu nên sẽ được trích bù thêm 5 triệu từ phần di sản theo di chúc của Mai, nhưng việc này không ảnh hưởng đến số tiền 15 triệu mà Nam nhận được)."
   },
   {
     "chapter":4,
