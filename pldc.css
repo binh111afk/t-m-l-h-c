@@ -148,24 +148,76 @@ h1 {
 }
 
 /* Thẻ câu hỏi */
+/* =========================================
+   THẺ CÂU HỎI: PHIÊN BẢN "TẾT THANH LỊCH" (CHỮ ĐEN, KHÔNG BÓNG)
+   ========================================= */
 .question-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    transition: 0.3s;
+    /* 1. Nền trắng */
+    background-color: #fff;
+    
+    /* 2. Viền Đỏ Đậm (Giữ nét Tết) */
+    border: 2px solid #b71c1c;
+    border-radius: 6px;
+    
+    /* 3. BỎ BÓNG VÀNG KHỐI -> Thay bằng bóng mờ nhẹ nhàng cho nổi thẻ */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.question-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+/* --- TRANG TRÍ 4 GÓC (GIỮ NGUYÊN) --- */
+.question-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    
+    /* Họa tiết tam giác đỏ ở 4 góc */
+    background: 
+        linear-gradient(135deg, #b71c1c 8px, transparent 8px) top left,
+        linear-gradient(-135deg, #b71c1c 8px, transparent 8px) top right,
+        linear-gradient(45deg, #b71c1c 8px, transparent 8px) bottom left,
+        linear-gradient(-45deg, #b71c1c 8px, transparent 8px) bottom right;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
 }
 
+/* --- VIỀN KÉP BÊN TRONG (GIỮ NGUYÊN) --- */
+.question-card::after {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px solid #ef9a9a; /* Viền trong mảnh màu hồng nhạt */
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- TIÊU ĐỀ CÂU HỎI (VỀ MÀU ĐEN) --- */
 .question-title {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    /* Đổi về màu đen theo yêu cầu */
+    color: #333 !important; 
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- CÁC PHẦN KHÁC --- */
+.question-header, .options, .explanation {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover nhẹ nhàng (chỉ nổi lên xíu thôi, không đổi màu lòe loẹt) */
+.question-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Badge */
@@ -853,46 +905,42 @@ input[type="radio"]:checked~.answer-text {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* Highlight Effect */
 .question-card.highlighted {
-    animation: tetFocus 2s ease-in-out;
+    animation: tetFocus 2s ease-in-out forwards; 
     position: relative;
     z-index: 10;
-    border-color: #ffd700 !important;
-    background-color: #fffde7 !important;
-}
-
-.question-card.highlighted::before {
-    content: '🌸';
-    position: absolute;
-    top: -25px;
-    left: -10px;
-    font-size: 2.5rem;
-    animation: popUpIcons 0.5s forwards;
-}
-
-.question-card.highlighted::after {
-    content: '🧧';
-    position: absolute;
-    top: -25px;
-    right: -10px;
-    font-size: 2.5rem;
-    animation: popUpIcons 0.5s forwards;
 }
 
 @keyframes tetFocus {
+    /* 0%: Bắt đầu từ trạng thái gốc (Đỏ) */
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 transparent;
+        border-color: #b71c1c; 
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
-
-    50% {
-        transform: scale(1.02);
-        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    
+    /* 20%: Chuyển sang Vàng rực rỡ & Phóng to */
+    20% {
+        transform: scale(1.03);
+        border-color: #ffd700;
+        background-color: #fffde7;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
     }
-
+    
+    /* 70%: Giữ nguyên màu Vàng (để người dùng kịp nhìn) */
+    70% {
+        transform: scale(1.03);
+        border-color: #ffd700;
+        background-color: #fffde7;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    }
+    
     100% {
         transform: scale(1);
+        border-color: #b71c1c; /* Về lại màu gốc */
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 }
 

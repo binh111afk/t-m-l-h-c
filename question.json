@@ -7919,15 +7919,15 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Anh Long và chị Bình... ly thân... Long di chúc miệng cho em Kiên 1\/2 tài sản. Hãy cho biết Nam (10 tuổi) được hưởng bao nhiêu di sản của anh Long (Di sản 900tr):",
+    "question":"Anh Long và chị Bình là vợ chồng hợp pháp nhưng do mâu thuẫn nên đã sống ly thân. Anh Long có một người em ruột là Kiên và một con chung với chị Bình là cháu Nam (10 tuổi). Sau đó anh Long qua đời để lại khối di sản trị giá 900 triệu đồng. Trước khi mất, anh Long có để lại di chúc miệng (được coi là hợp pháp) với nội dung để lại 1/2 tài sản của mình cho em Kiên. Hãy cho biết cháu Nam được hưởng bao nhiêu di sản của anh Long?",
     "options":[
       "200 triệu đồng",
       "150 triệu đồng",
       "225 triệu đồng",
       "Cả ba phương án trên đều sai"
     ],
-    "answer":0,
-    "explanation": "<br>Di sản 900. Di chúc: Kiên 450 (1\/2). Còn lại 450 chia theo luật. \nHàng 1: Bình (vợ), Mai (20t), Nam (10t). \nPhần 450 chia 3 -> Mỗi người 150. Nam nhận 150. \nKiểm tra suất bắt buộc: Suất luật = 900\/3 = 300. Suất bắt buộc = 200. \nNam (chưa thành niên) phải được ít nhất 200. Hiện tại Nam mới nhận 150. \nThiếu 50. Phải trích từ phần của Kiên. \nVậy Nam nhận đủ 200. Chọn A."
+    "answer":3,
+    "explanation": "Đáp án đúng là <b>Cả ba phương án trên đều sai</b>, với lý do cụ thể như sau: Trước hết, xác định hàng thừa kế thứ nhất theo pháp luật của anh Long gồm 02 người là vợ (chị Bình) và con (cháu Nam), do đó nếu chia theo pháp luật thì giá trị một suất thừa kế sẽ là 900 triệu chia 2 bằng 450 triệu đồng. Tuy nhiên, anh Long có di chúc để lại 1/2 tài sản (tương đương 450 triệu) cho em Kiên, số còn lại 450 triệu nếu chia theo pháp luật cho Bình và Nam thì mỗi người chỉ nhận được 225 triệu đồng. Căn cứ vào Điều 644 Bộ luật Dân sự 2015 về người thừa kế không phụ thuộc vào nội dung của di chúc, cháu Nam (chưa thành niên) và chị Bình (vợ) đương nhiên được hưởng ít nhất 2/3 suất thừa kế theo pháp luật, tức là mỗi người phải nhận được tối thiểu 2/3 nhân với 450 triệu bằng 300 triệu đồng. Vì số tiền 225 triệu được chia ban đầu thấp hơn mức kỷ phần bắt buộc này, nên phải trích từ phần di sản của người thừa kế theo di chúc (em Kiên) để bù đắp cho đủ. Như vậy, cháu Nam sẽ được hưởng tròn 300 triệu đồng, kết quả này không trùng với các đáp án A, B hay C."
   },
   {
     "chapter":4,
