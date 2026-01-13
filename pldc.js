@@ -160,7 +160,7 @@ class QuizManager {
         const currentHistory = this.getHistory();
         const updatedHistory = [...new Set([...currentHistory, ...newIds])];
 
-        if (updatedHistory.length >= this.questionBank.length * 0.8) {
+        if (updatedHistory.length >= this.questionBank.length * 0.5) {
             console.log("Reset lịch sử để tránh lặp");
             localStorage.setItem('lastExamIds', JSON.stringify(newIds));
             return;
