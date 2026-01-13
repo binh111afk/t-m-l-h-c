@@ -7828,15 +7828,15 @@
   {
     "chapter":4,
     "level":"VD",
-    "question":"Sơn và Hà là vợ chồng. Sơn lập di chúc để lại tài sản cho Hạnh và Phúc. Hạnh cũng lập di chúc để lại tài sản của mình cho Phúc. Sau đó, Sơn qua đời; một thời gian sau, Hạnh cũng chết. Hỏi di sản thừa kế mà Hạnh để lại là bao nhiêu, biết rằng Hạnh có tài sản riêng trị giá 50 triệu đồng.",
+    "question":"Ông Sơn và bà Hà là vợ chồng hợp pháp, có khối tài sản chung trị giá 900 triệu đồng. Ông Sơn và bà Hà có hai người con là Hạnh và Phúc. Ông Sơn không may qua đời, trước khi mất ông có lập di chúc hợp pháp để lại toàn bộ tài sản của mình cho Hạnh và Phúc. Một thời gian sau, Hạnh cũng qua đời và để lại di chúc trao toàn bộ tài sản của mình cho Phúc. Biết rằng Hạnh có tài sản riêng trị giá 50 triệu đồng. Hỏi di sản thừa kế mà Hạnh để lại là bao nhiêu?",
     "options":[
-      "400 triệu đồng",
+      "225 triệu đồng",
       "450 triệu đồng",
       "350 triệu đồng",
       "Cả ba phương án trên đều sai"
     ],
     "answer":0,
-    "explanation": "<br>1. Sơn chết: Di sản 900. Hà (vợ) hưởng bắt buộc 200 (2\/3 của 300). Còn 700 chia đôi cho Hạnh, Phúc (theo di chúc) -> Hạnh nhận 350. \n2. Hạnh chết: Di sản Hạnh = 50 (riêng) + 350 (từ Sơn) = 400 triệu. (Câu hỏi chỉ hỏi 'di sản Hạnh để lại')."
+    "explanation": "<br>Đầu tiên xác định di sản của ông Sơn là một nửa khối tài sản chung, tức là 900 triệu chia 2 bằng 450 triệu đồng. Mặc dù ông Sơn di chúc toàn bộ cho Hạnh và Phúc, nhưng bà Hà (vợ) thuộc đối tượng hưởng thừa kế không phụ thuộc vào nội dung di chúc (kỷ phần bắt buộc). Nếu chia theo pháp luật, hàng thừa kế thứ nhất gồm 3 người (Hà, Hạnh, Phúc), giá trị một suất là 450 triệu chia 3 bằng 150 triệu đồng; do đó bà Hà phải được nhận tối thiểu 2/3 của 1 suất này, tức là 100 triệu đồng. Phần di sản còn lại của ông Sơn sau khi trích cho bà Hà là 450 triệu trừ 100 triệu bằng 350 triệu đồng, số tiền này được chia đều cho Hạnh và Phúc theo di chúc, mỗi người nhận 175 triệu đồng. Như vậy, tổng khối di sản mà Hạnh có được trước khi chết gồm 175 triệu thừa kế từ cha và 50 triệu tài sản riêng, tổng cộng là 225 triệu đồng"
   },
   {
     "chapter":4,
