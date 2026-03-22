@@ -186,7 +186,7 @@
     <div class="resource-box">
       <a
         class="resource-link"
-        href="https://drive.google.com/file/d/1RroSkYez6bixXaWmWat55PeGJ-ZtPGzR/view?usp=drive_link"
+        href="https://drive.google.com/drive/folders/19X_CHyYIINQwQGPE6hLszOjmvjVqK1_X?usp=drive_link"
         target="_blank"
         rel="noopener noreferrer"
       >📚 Tải Tài liệu Tâm lý học đại cương (PDF)</a>
@@ -4287,15 +4287,15 @@ function getExamQuestions() {
 // Render câu hỏi ra màn hình
 let currentExam = [];
 let supportPopupShownThisSession = false;
+const SUPPORT_PROJECT_KEY = 'is_supported_project';
 
-function getCorrectAnsweredCount() {
+function getAnsweredCount() {
   let count = 0;
 
   currentExam.forEach((q, index) => {
-    const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
     const selected = document.querySelector(`input[name="q${index}"]:checked`);
 
-    if (selected && parseInt(selected.value, 10) === correctVal) {
+    if (selected) {
       count++;
     }
   });
@@ -4303,14 +4303,14 @@ function getCorrectAnsweredCount() {
   return count;
 }
 
-function maybeShowSupportPopup() {
-  const supported = localStorage.getItem('is_supported_project');
+function maybeShowSupportPopup(answeredCountInput) {
+  const supported = localStorage.getItem(SUPPORT_PROJECT_KEY) === 'true';
   if (supported || supportPopupShownThisSession) {
     return;
   }
 
-  const correctCount = getCorrectAnsweredCount();
-  if (correctCount < 5) {
+  const answeredCount = (typeof answeredCountInput === 'number') ? answeredCountInput : getAnsweredCount();
+  if (answeredCount < 5) {
     return;
   }
 
@@ -4327,7 +4327,7 @@ function maybeShowSupportPopup() {
 function handleSupportClick() {
   const supportLink = 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689';
   window.open(supportLink, '_blank', 'noopener');
-  localStorage.setItem('is_supported_project', 'true');
+  localStorage.setItem(SUPPORT_PROJECT_KEY, 'true');
 
   const overlay = document.getElementById('support-overlay');
   if (!overlay) {
@@ -4422,13 +4422,17 @@ function checkAnswer(qIndex, selected, correct) {
 // Nộp bài (Tính điểm tổng)
 function submitQuiz() {
     let score = 0;
+  let answeredCount = 0;
     const total = currentExam.length;
     
     currentExam.forEach((q, index) => {
         const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
         
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
-        if (selected && parseInt(selected.value) === correctVal) {
+        if (selected) {
+          answeredCount++;
+        }
+        if (selected && parseInt(selected.value, 10) === correctVal) {
             score++;
         }
         
@@ -4440,6 +4444,9 @@ function submitQuiz() {
     document.getElementById('result-area').style.display = 'block';
     document.getElementById('score').innerText = `Kết quả: ${score}/${total} câu đúng`;
     document.getElementById('submit-btn').style.display = 'none';
+
+    // Dự phòng: nếu người dùng nộp bài mới làm đủ >= 5 câu thì vẫn hiển thị popup.
+    maybeShowSupportPopup(answeredCount);
     
     // Cuộn xuống xem kết quả
     window.scrollTo(0, document.body.scrollHeight);
