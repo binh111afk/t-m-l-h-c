@@ -187,8 +187,9 @@
 
   <script>
     const API_BASE = "https://api.counterapi.dev/v1/whalio_study/mlsa_clicks";
-    const READ_ENDPOINT = API_BASE;
+    const READ_ENDPOINT = API_BASE + "/";
     const UP_ENDPOINT = API_BASE + "/up";
+    const PROXY_PREFIX = "https://api.allorigins.win/raw?url=";
     const REFRESH_MS = 2000;
 
     const countEl = document.getElementById("count");
@@ -212,16 +213,28 @@
       return null;
     }
 
+    function withTs(url) {
+      return url + "?t=" + Date.now();
+    }
+
+    function buildProxyUrl(url) {
+      return PROXY_PREFIX + encodeURIComponent(withTs(url));
+    }
+
+    async function fetchJsonViaProxy(url) {
+      const res = await fetch(buildProxyUrl(url), { cache: "no-store" });
+      if (!res.ok) {
+        throw new Error("HTTP " + res.status);
+      }
+
+      const text = await res.text();
+      return JSON.parse(text);
+    }
+
     async function fetchCount() {
       try {
         setStatus("live", "🟢 ĐANG CẬP NHẬT (Real-time)");
-        const res = await fetch(READ_ENDPOINT, { cache: "no-store" });
-
-        if (!res.ok) {
-          throw new Error("HTTP " + res.status);
-        }
-
-        const json = await res.json();
+        const json = await fetchJsonViaProxy(READ_ENDPOINT);
         const count = extractCount(json);
 
         if (count === null) {
@@ -237,16 +250,7 @@
     async function increaseCountForTest() {
       try {
         setStatus("live", "🟢 ĐANG CẬP NHẬT (Real-time)");
-        const res = await fetch(UP_ENDPOINT, {
-          method: "GET",
-          cache: "no-store"
-        });
-
-        if (!res.ok) {
-          throw new Error("HTTP " + res.status);
-        }
-
-        const json = await res.json();
+        const json = await fetchJsonViaProxy(UP_ENDPOINT);
         const count = extractCount(json);
         if (count !== null) {
           countEl.textContent = String(count);

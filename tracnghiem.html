@@ -4552,11 +4552,14 @@ function maybeShowSupportPopup(answeredCountInput) {
 
 function handleSupportClick() {
   const supportLink = 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689';
-  const counterUpLink = 'https://api.counterapi.dev/v1/whalio_study/mlsa_clicks/up';
+  const counterUpLink = 'https://api.counterapi.dev/v1/whalio_study/mlsa_clicks/up?t=' + Date.now();
   window.open(supportLink, '_blank', 'noopener');
 
   // Ghi nhận 1 lượt click để dashboard CounterAPI theo dõi đúng từ popup này.
-  fetch(counterUpLink, { method: 'GET', cache: 'no-store' }).catch(() => {});
+  fetch(counterUpLink, { method: 'GET', cache: 'no-store', mode: 'no-cors' }).catch(() => {
+    const ping = new Image();
+    ping.src = counterUpLink;
+  });
 
   localStorage.setItem(SUPPORT_PROJECT_KEY, 'true');
 
