@@ -4,11 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thi Thử Tâm Lý Học Đại Cương</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f0f2f5; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    body { font-family: 'Google Sans', 'Google Sans Text', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f0f2f5; padding: 20px; }
+        .container { max-width: 1360px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
         h1 { text-align: center; color: #0056b3; }
         .matrix-info { background: #e7f3fe; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 0.9em; border-left: 5px solid #2196F3; }
+
+        .quiz-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 20px; align-items: start; }
+        .quiz-column { min-width: 0; }
+        .map-column { position: sticky; top: 16px; }
+
+        .question-map {
+          border: 1px solid #dce6f2;
+          border-radius: 12px;
+          background: #f9fbff;
+          padding: 14px;
+          box-shadow: 0 8px 22px rgba(15, 45, 77, 0.08);
+        }
+
+        .question-map h3 {
+          margin: 0 0 10px;
+          color: #0b3b66;
+          font-size: 1rem;
+        }
+
+        .question-map-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+
+        .qmap-item {
+          height: 42px;
+          border: 1px solid #c9d8ea;
+          border-radius: 8px;
+          background: #eef3f9;
+          color: #3b526b;
+          font-weight: 700;
+          cursor: pointer;
+          transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .qmap-item:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(9, 40, 72, 0.16);
+        }
+
+        .qmap-correct {
+          background: #28a745;
+          border-color: #1f8a39;
+          color: #ffffff;
+        }
+
+        .qmap-wrong {
+          background: #0d6efd;
+          border-color: #0b5ed7;
+          color: #ffffff;
+        }
+
+        .question-map-note {
+          margin-top: 10px;
+          font-size: 0.83rem;
+          color: #47698c;
+          line-height: 1.5;
+        }
         
         .question-card { background: #fff; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px; transition: 0.3s; }
         .question-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
@@ -21,7 +77,28 @@
 
         .options label { display: block; padding: 10px; border: 1px solid #eee; margin-bottom: 5px; border-radius: 5px; cursor: pointer; transition: 0.2s; }
         .options label:hover { background-color: #f9f9f9; }
-        .options input { margin-right: 10px; }
+        .options input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+          width: 0;
+          height: 0;
+          margin: 0;
+        }
+        .option-letter {
+          display: inline-flex;
+          width: 26px;
+          height: 26px;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          border-radius: 50%;
+          border: 1px solid #c4cfdd;
+          color: #3b4f67;
+          font-weight: 700;
+          font-size: 0.9rem;
+          background: #f6f9fd;
+        }
 
         /* Kết quả đúng sai */
         .correct-answer { background-color: #d4edda !important; border-color: #c3e6cb !important; color: #155724; }
@@ -156,6 +233,69 @@
           box-shadow: 0 14px 28px rgba(13, 110, 253, 0.38);
         }
 
+        .map-toggle-btn {
+          display: none;
+          position: fixed;
+          right: 80px;
+          bottom: 22px;
+          border: none;
+          border-radius: 24px;
+          padding: 10px 14px;
+          background: #0b3b66;
+          color: #ffffff;
+          font-weight: 600;
+          box-shadow: 0 10px 24px rgba(11, 59, 102, 0.3);
+          z-index: 21000;
+          cursor: pointer;
+        }
+
+        .mobile-map-panel {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(6, 17, 30, 0.42);
+          z-index: 25000;
+          justify-content: flex-end;
+        }
+
+        .mobile-map-panel.active {
+          display: flex;
+        }
+
+        .mobile-map-content {
+          width: min(92vw, 340px);
+          height: 100%;
+          background: #ffffff;
+          padding: 14px;
+          box-shadow: -12px 0 24px rgba(10, 31, 54, 0.2);
+          overflow-y: auto;
+        }
+
+        .mobile-map-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+
+        .mobile-map-header h3 {
+          margin: 0;
+          color: #0b3b66;
+          font-size: 1rem;
+        }
+
+        .mobile-map-close {
+          border: none;
+          background: #e7effa;
+          border-radius: 8px;
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          color: #0b3b66;
+          font-size: 18px;
+          line-height: 1;
+        }
+
         @media (max-width: 640px) {
           .support-popup {
             padding: 20px;
@@ -175,6 +315,26 @@
             width: 44px;
             height: 44px;
             font-size: 20px;
+          }
+
+          .map-toggle-btn {
+            right: 64px;
+            bottom: 14px;
+            padding: 9px 12px;
+          }
+        }
+
+        @media (max-width: 1100px) {
+          .quiz-layout {
+            grid-template-columns: 1fr;
+          }
+
+          .map-column {
+            display: none;
+          }
+
+          .map-toggle-btn {
+            display: inline-block;
           }
         }
 
@@ -213,13 +373,25 @@
         <em>Lưu ý câu hỏi trong đây phục vụ cho mục đích ôn tập và tham khảo. Kí tên : Quang Bình</em>
     </div>
 
-    <div id="quiz-area"></div>
-    
-    <button class="btn" id="submit-btn" onclick="submitQuiz()">Nộp Bài</button>
-    
-    <div id="result-area" style="display:none;">
-        <div class="score-board" id="score"></div>
-        <button class="btn btn-restart" onclick="location.reload()">Làm đề mới (Đảo câu hỏi)</button>
+    <div class="quiz-layout">
+      <div class="quiz-column">
+        <div id="quiz-area"></div>
+
+        <button class="btn" id="submit-btn" onclick="submitQuiz()">Nộp Bài</button>
+
+        <div id="result-area" style="display:none;">
+            <div class="score-board" id="score"></div>
+            <button class="btn btn-restart" onclick="location.reload()">Làm đề mới (Đảo câu hỏi)</button>
+        </div>
+      </div>
+
+      <aside class="map-column">
+        <div class="question-map">
+          <h3>Question Map</h3>
+          <div id="question-map-grid" class="question-map-grid"></div>
+          <div class="question-map-note">Đúng: màu xanh lá, Sai: màu xanh.</div>
+        </div>
+      </aside>
     </div>
 
     <div class="resource-box">
@@ -247,6 +419,18 @@
   </div>
 
   <button id="back-to-top" class="back-to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
+  <button id="map-toggle-btn" class="map-toggle-btn" type="button">Question Map</button>
+
+  <div id="mobile-map-panel" class="mobile-map-panel" aria-hidden="true">
+    <div class="mobile-map-content">
+      <div class="mobile-map-header">
+        <h3>Question Map</h3>
+        <button id="mobile-map-close" class="mobile-map-close" type="button" aria-label="Đóng">×</button>
+      </div>
+      <div id="mobile-question-map-grid" class="question-map-grid"></div>
+      <div class="question-map-note">Đúng: màu xanh lá, Sai: màu xanh.</div>
+    </div>
+  </div>
 
 <script>
 // --- NGÂN HÀNG CÂU HỎI TỔNG HỢP ---
@@ -4329,6 +4513,7 @@ function getExamQuestions() {
 let currentExam = [];
 let supportPopupShownThisSession = false;
 const SUPPORT_PROJECT_KEY = 'is_supported_project';
+let questionStatuses = [];
 
 function getAnsweredCount() {
   let count = 0;
@@ -4367,7 +4552,12 @@ function maybeShowSupportPopup(answeredCountInput) {
 
 function handleSupportClick() {
   const supportLink = 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689';
+  const counterUpLink = 'https://api.counterapi.dev/v1/whalio_study/mlsa_clicks/up';
   window.open(supportLink, '_blank', 'noopener');
+
+  // Ghi nhận 1 lượt click để dashboard CounterAPI theo dõi đúng từ popup này.
+  fetch(counterUpLink, { method: 'GET', cache: 'no-store' }).catch(() => {});
+
   localStorage.setItem(SUPPORT_PROJECT_KEY, 'true');
 
   const overlay = document.getElementById('support-overlay');
@@ -4387,6 +4577,7 @@ function renderQuiz() {
     
     // Lấy đề thi đã trộn
     currentExam = getExamQuestions();
+    questionStatuses = Array(currentExam.length).fill('unanswered');
     
     if (currentExam.length === 0) {
         quizArea.innerHTML = '<p style="text-align:center;">Chưa có dữ liệu câu hỏi. Vui lòng kiểm tra biến questionBank.</p>';
@@ -4396,6 +4587,7 @@ function renderQuiz() {
     currentExam.forEach((q, index) => {
         const card = document.createElement('div');
         card.className = 'question-card';
+      card.id = `question-${index}`;
         
         // Chuẩn hóa dữ liệu từ 2 định dạng cũ/mới
         const chapVal = q.chapter || q.c;
@@ -4408,9 +4600,11 @@ function renderQuiz() {
         // Tạo HTML cho các đáp án
         let optionsHtml = '';
         answers.forEach((opt, optIndex) => {
+          const optionLetter = String.fromCharCode(65 + optIndex);
             optionsHtml += `
                 <label id="label-${index}-${optIndex}">
                     <input type="radio" name="q${index}" value="${optIndex}" onchange="checkAnswer(${index}, ${optIndex}, ${correctVal})">
+              <span class="option-letter">${optionLetter}</span>
                     ${opt}
                 </label>
             `;
@@ -4429,6 +4623,92 @@ function renderQuiz() {
         `;
         quizArea.appendChild(card);
     });
+
+    renderQuestionMap();
+}
+
+function renderQuestionMap() {
+  const desktopGrid = document.getElementById('question-map-grid');
+  const mobileGrid = document.getElementById('mobile-question-map-grid');
+
+  if (!desktopGrid || !mobileGrid) {
+    return;
+  }
+
+  desktopGrid.innerHTML = '';
+  mobileGrid.innerHTML = '';
+
+  questionStatuses.forEach((status, index) => {
+    const desktopBtn = createQuestionMapButton(index, status);
+    const mobileBtn = createQuestionMapButton(index, status);
+    desktopGrid.appendChild(desktopBtn);
+    mobileGrid.appendChild(mobileBtn);
+  });
+}
+
+function createQuestionMapButton(index, status) {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'qmap-item';
+  btn.dataset.index = index;
+  btn.textContent = index + 1;
+
+  if (status === 'correct') {
+    btn.classList.add('qmap-correct');
+  } else if (status === 'wrong') {
+    btn.classList.add('qmap-wrong');
+  }
+
+  btn.addEventListener('click', () => {
+    scrollToQuestion(index);
+    closeMobileMapPanel();
+  });
+
+  return btn;
+}
+
+function updateQuestionMapStatus(index, status) {
+  questionStatuses[index] = status;
+
+  const allButtons = document.querySelectorAll(`.qmap-item[data-index="${index}"]`);
+  allButtons.forEach(btn => {
+    btn.classList.remove('qmap-correct', 'qmap-wrong');
+
+    if (status === 'correct') {
+      btn.classList.add('qmap-correct');
+    } else if (status === 'wrong') {
+      btn.classList.add('qmap-wrong');
+    }
+  });
+}
+
+function scrollToQuestion(index) {
+  const target = document.getElementById(`question-${index}`);
+  if (!target) {
+    return;
+  }
+
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function openMobileMapPanel() {
+  const panel = document.getElementById('mobile-map-panel');
+  if (!panel) {
+    return;
+  }
+
+  panel.classList.add('active');
+  panel.setAttribute('aria-hidden', 'false');
+}
+
+function closeMobileMapPanel() {
+  const panel = document.getElementById('mobile-map-panel');
+  if (!panel) {
+    return;
+  }
+
+  panel.classList.remove('active');
+  panel.setAttribute('aria-hidden', 'true');
 }
 
 // Kiểm tra đáp án ngay lập tức (Tô màu)
@@ -4448,10 +4728,12 @@ function checkAnswer(qIndex, selected, correct) {
     // Tô màu
     if (selected === correct) {
         selectedLabel.classList.add('correct-answer');
+      updateQuestionMapStatus(qIndex, 'correct');
     } else {
         selectedLabel.classList.add('wrong-answer');
         // Hiện đáp án đúng nếu chọn sai
         if(correctLabel) correctLabel.classList.add('correct-answer');
+      updateQuestionMapStatus(qIndex, 'wrong');
     }
     
     // Hiện giải thích
@@ -4499,6 +4781,25 @@ renderQuiz();
 const supportBtn = document.getElementById('support-btn');
 if (supportBtn) {
   supportBtn.addEventListener('click', handleSupportClick);
+}
+
+const mapToggleBtn = document.getElementById('map-toggle-btn');
+if (mapToggleBtn) {
+  mapToggleBtn.addEventListener('click', openMobileMapPanel);
+}
+
+const mobileMapCloseBtn = document.getElementById('mobile-map-close');
+if (mobileMapCloseBtn) {
+  mobileMapCloseBtn.addEventListener('click', closeMobileMapPanel);
+}
+
+const mobileMapPanel = document.getElementById('mobile-map-panel');
+if (mobileMapPanel) {
+  mobileMapPanel.addEventListener('click', (event) => {
+    if (event.target === mobileMapPanel) {
+      closeMobileMapPanel();
+    }
+  });
 }
 
 const backToTopBtn = document.getElementById('back-to-top');

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whalio Study - MLSA Clicks Dashboard</title>
+  <style>
+    :root {
+      --bg: #070b12;
+      --panel: #0f1625;
+      --panel-2: #131d31;
+      --text: #f5f8ff;
+      --muted: #9fb2d8;
+      --ok: #22c55e;
+      --accent: #2dd4bf;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: "Segoe UI", "SF Pro Display", "Roboto", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(45, 212, 191, 0.12), transparent 60%),
+        radial-gradient(1000px 700px at 100% 120%, rgba(99, 102, 241, 0.16), transparent 60%),
+        var(--bg);
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .dashboard {
+      width: min(940px, 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(159, 178, 216, 0.22);
+      border-radius: 20px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dashboard::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(45, 212, 191, 0.25) 0%, rgba(45, 212, 191, 0) 70%);
+      pointer-events: none;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+      font-size: clamp(1.2rem, 2.8vw, 2rem);
+      letter-spacing: 0.3px;
+      font-weight: 700;
+    }
+
+    .status {
+      margin-top: 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      min-height: 1.3em;
+    }
+
+    .status.live {
+      color: #9bf8b8;
+    }
+
+    .status.error {
+      color: #ffb4b4;
+    }
+
+    .counter-zone {
+      margin-top: 24px;
+      background: linear-gradient(180deg, rgba(45, 212, 191, 0.08), rgba(45, 212, 191, 0.02));
+      border: 1px solid rgba(45, 212, 191, 0.28);
+      border-radius: 18px;
+      min-height: 44vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .count {
+      margin: 0;
+      font-size: clamp(2rem, 9vw, 7rem);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-shadow: 0 0 30px rgba(45, 212, 191, 0.35);
+      word-break: break-word;
+    }
+
+    .count-label {
+      margin-top: 12px;
+      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .meta {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .test-btn {
+      position: fixed;
+      right: 14px;
+      bottom: 14px;
+      border: 1px solid rgba(159, 178, 216, 0.35);
+      background: rgba(19, 29, 49, 0.35);
+      color: rgba(245, 248, 255, 0.25);
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: all 0.18s ease;
+      z-index: 999;
+    }
+
+    .test-btn:hover {
+      color: rgba(245, 248, 255, 0.85);
+      border-color: rgba(159, 178, 216, 0.6);
+      background: rgba(19, 29, 49, 0.78);
+    }
+
+    @media (max-width: 640px) {
+      .dashboard {
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      .counter-zone {
+        min-height: 38vh;
+      }
+
+      .test-btn {
+        right: 10px;
+        bottom: 10px;
+        font-size: 0.72rem;
+        padding: 7px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="dashboard" aria-live="polite">
+      <h1 class="title">🚀 Whalio Study - MLSA Clicks Dashboard</h1>
+      <div id="status" class="status live">🟢 ĐANG CẬP NHẬT (Real-time)</div>
+
+      <div class="counter-zone">
+        <div>
+          <p id="count" class="count">0</p>
+          <div class="count-label">LƯỢT CLICK</div>
+        </div>
+      </div>
+
+      <div class="meta">Dữ liệu được lấy thực tế từ CounterAPI</div>
+    </section>
+  </main>
+
+  <button id="testUp" class="test-btn" type="button">Nộp bài / Tăng click</button>
+
+  <script>
+    const API_BASE = "https://api.counterapi.dev/v1/whalio_study/mlsa_clicks";
+    const READ_ENDPOINT = API_BASE;
+    const UP_ENDPOINT = API_BASE + "/up";
+    const REFRESH_MS = 2000;
+
+    const countEl = document.getElementById("count");
+    const statusEl = document.getElementById("status");
+    const testUpBtn = document.getElementById("testUp");
+
+    function setStatus(mode, text) {
+      statusEl.classList.remove("live", "error");
+      if (mode === "error") {
+        statusEl.classList.add("error");
+      } else {
+        statusEl.classList.add("live");
+      }
+      statusEl.textContent = text;
+    }
+
+    function extractCount(payload) {
+      if (!payload || typeof payload !== "object") return null;
+      if (typeof payload.count === "number") return payload.count;
+      if (payload.data && typeof payload.data.count === "number") return payload.data.count;
+      return null;
+    }
+
+    async function fetchCount() {
+      try {
+        setStatus("live", "🟢 ĐANG CẬP NHẬT (Real-time)");
+        const res = await fetch(READ_ENDPOINT, { cache: "no-store" });
+
+        if (!res.ok) {
+          throw new Error("HTTP " + res.status);
+        }
+
+        const json = await res.json();
+        const count = extractCount(json);
+
+        if (count === null) {
+          throw new Error("Sai cấu trúc dữ liệu API");
+        }
+
+        countEl.textContent = String(count);
+      } catch (error) {
+        setStatus("error", "🔴 MẤT KẾT NỐI API - ĐANG THỬ LẠI...");
+      }
+    }
+
+    async function increaseCountForTest() {
+      try {
+        setStatus("live", "🟢 ĐANG CẬP NHẬT (Real-time)");
+        const res = await fetch(UP_ENDPOINT, {
+          method: "GET",
+          cache: "no-store"
+        });
+
+        if (!res.ok) {
+          throw new Error("HTTP " + res.status);
+        }
+
+        const json = await res.json();
+        const count = extractCount(json);
+        if (count !== null) {
+          countEl.textContent = String(count);
+        }
+
+        await fetchCount();
+      } catch (error) {
+        setStatus("error", "🔴 KHÔNG THỂ TĂNG CLICK - KIỂM TRA API");
+      }
+    }
+
+    testUpBtn.addEventListener("click", increaseCountForTest);
+
+    fetchCount();
+    setInterval(fetchCount, REFRESH_MS);
+  </script>
+</body>
+</html>
