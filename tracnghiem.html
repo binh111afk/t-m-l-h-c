@@ -33,6 +33,112 @@
         .btn-restart { background: #007bff; margin-top: 10px; }
         .score-board { text-align: center; font-size: 24px; font-weight: bold; margin: 20px 0; color: #dc3545; }
 
+        .support-overlay {
+          position: fixed;
+          inset: 0;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          background: rgba(10, 22, 42, 0.35);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
+          z-index: 30000;
+          padding: 20px;
+        }
+
+        .support-overlay.active {
+          display: flex;
+        }
+
+        .support-popup {
+          width: min(680px, 96vw);
+          padding: 28px;
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.45);
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(240, 248, 255, 0.58));
+          box-shadow: 0 24px 50px rgba(0, 34, 68, 0.28);
+          color: #0d223a;
+          text-align: left;
+        }
+
+        .support-popup h2 {
+          margin: 0 0 12px;
+          color: #0a3d62;
+          font-size: 1.5rem;
+        }
+
+        .support-popup p {
+          margin: 0;
+          font-size: 1.02rem;
+          line-height: 1.75;
+        }
+
+        .support-btn {
+          margin-top: 18px;
+          width: 100%;
+          padding: 14px 16px;
+          border: none;
+          border-radius: 12px;
+          background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+          color: #fff;
+          font-weight: 700;
+          font-size: 1rem;
+          cursor: pointer;
+          box-shadow: 0 10px 24px rgba(13, 110, 253, 0.28);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .support-btn:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 14px 28px rgba(13, 110, 253, 0.36);
+        }
+
+        .support-note {
+          margin-top: 10px;
+          font-size: 0.9rem;
+          color: #174a7f;
+        }
+
+        .resource-box {
+          margin-top: 28px;
+          padding: 18px;
+          border: 1px solid #dce6f2;
+          border-radius: 12px;
+          background: #f9fbff;
+          text-align: center;
+        }
+
+        .resource-link {
+          display: inline-block;
+          padding: 12px 20px;
+          border-radius: 10px;
+          text-decoration: none;
+          font-weight: 600;
+          color: #0b3b66;
+          background: #e9f3ff;
+          border: 1px solid #c8ddf7;
+          transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .resource-link:hover {
+          background: #dcecff;
+          transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+          .support-popup {
+            padding: 20px;
+          }
+
+          .support-popup h2 {
+            font-size: 1.3rem;
+          }
+
+          .support-popup p {
+            font-size: 0.98rem;
+          }
+        }
+
     .snowflake {
     position: fixed;
     top: -10px;
@@ -76,7 +182,30 @@
         <div class="score-board" id="score"></div>
         <button class="btn btn-restart" onclick="location.reload()">Làm đề mới (Đảo câu hỏi)</button>
     </div>
+
+    <div class="resource-box">
+      <a
+        class="resource-link"
+        href="https://drive.google.com/file/d/1RroSkYez6bixXaWmWat55PeGJ-ZtPGzR/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >📚 Tải Tài liệu Tâm lý học đại cương (PDF)</a>
+    </div>
 </div>
+
+  <div id="support-overlay" class="support-overlay" aria-hidden="true">
+    <div class="support-popup" role="dialog" aria-modal="true" aria-labelledby="support-title">
+      <h2 id="support-title">Hỗ trợ dự án</h2>
+      <p>
+        Chào bạn, bộ đề TLHDC này mình đã dành rất nhiều công sức để lập trình và tổng hợp cho anh em.
+        Để giúp mình có thêm kinh phí duy trì Server cho dự án cá nhân và hoàn thành nhiệm vụ của Microsoft,
+        bạn chỉ cần giúp mình 1 click vào link tài trợ bên dưới. Hệ thống sẽ tự động mở đề thi ngay sau khi bạn click.
+        Cảm ơn bạn nhiều nhe ❤️
+      </p>
+      <button id="support-btn" type="button" class="support-btn">Click để ủng hộ & Tiếp tục làm bài</button>
+      <div class="support-note">Sau khi click, popup sẽ tự đóng sau 5 giây.</div>
+    </div>
+  </div>
 
 <script>
 // --- NGÂN HÀNG CÂU HỎI TỔNG HỢP ---
@@ -4157,6 +4286,59 @@ function getExamQuestions() {
 }
 // Render câu hỏi ra màn hình
 let currentExam = [];
+let supportPopupShownThisSession = false;
+
+function getCorrectAnsweredCount() {
+  let count = 0;
+
+  currentExam.forEach((q, index) => {
+    const correctVal = (q.answer !== undefined) ? q.answer : q.correct;
+    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+
+    if (selected && parseInt(selected.value, 10) === correctVal) {
+      count++;
+    }
+  });
+
+  return count;
+}
+
+function maybeShowSupportPopup() {
+  const supported = localStorage.getItem('is_supported_project');
+  if (supported || supportPopupShownThisSession) {
+    return;
+  }
+
+  const correctCount = getCorrectAnsweredCount();
+  if (correctCount < 5) {
+    return;
+  }
+
+  supportPopupShownThisSession = true;
+  const overlay = document.getElementById('support-overlay');
+  if (!overlay) {
+    return;
+  }
+
+  overlay.classList.add('active');
+  overlay.setAttribute('aria-hidden', 'false');
+}
+
+function handleSupportClick() {
+  const supportLink = 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689';
+  window.open(supportLink, '_blank', 'noopener');
+  localStorage.setItem('is_supported_project', 'true');
+
+  const overlay = document.getElementById('support-overlay');
+  if (!overlay) {
+    return;
+  }
+
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+  }, 5000);
+}
 
 function renderQuiz() {
     const quizArea = document.getElementById('quiz-area');
@@ -4233,6 +4415,8 @@ function checkAnswer(qIndex, selected, correct) {
     
     // Hiện giải thích
     if(explainBox) explainBox.style.display = 'block';
+
+    maybeShowSupportPopup();
 }
 
 // Nộp bài (Tính điểm tổng)
@@ -4263,6 +4447,11 @@ function submitQuiz() {
 
 // Khởi chạy
 renderQuiz();
+
+const supportBtn = document.getElementById('support-btn');
+if (supportBtn) {
+  supportBtn.addEventListener('click', handleSupportClick);
+}
 
 function createSnowflake() {
     const snowflake = document.createElement('div');
