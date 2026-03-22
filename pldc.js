@@ -21,6 +21,14 @@ class QuizManager {
         this.handleAnswerChange = this.handleAnswerChange.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
+        this.handleSupportAction = this.handleSupportAction.bind(this);
+
+        this.supportConfig = {
+            storageKey: 'is_supported_project_pldc',
+            supportLink: 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689',
+            counterUpLink: 'https://api.counterapi.dev/v1/whalio_study/mlsa_clicks/up',
+            popupShown: false
+        };
 
         // Giữ lại các hàm toàn cục để HTML gọi
         window.confirmSubmit = () => this.confirmSubmit();
@@ -32,6 +40,7 @@ class QuizManager {
     // ==================== KHỞI TẠO ====================
     async init() {
         try {
+            this.setupSupportUI();
             await this.loadQuestions();
             this.currentExam = this.getExamQuestions();
             this.renderQuiz();
@@ -358,6 +367,7 @@ class QuizManager {
         this.showAnswerFeedback(index, userPick, correctPick);
         this.updateProgress();
         this.updateQuestionMap(index, userPick === correctPick);
+        this.maybeShowSupportPopup();
     }
 
     disableQuestion(index) {
@@ -413,6 +423,106 @@ class QuizManager {
         }
     }
 
+    // ==================== HỖ TRỢ DỰ ÁN ====================
+    setupSupportUI() {
+        if (!document.body) return;
+
+        if (!document.getElementById('support-link-box')) {
+            const linkBox = document.createElement('div');
+            linkBox.id = 'support-link-box';
+            linkBox.className = 'support-link-box';
+            linkBox.innerHTML = `
+                <a id="support-link-anchor" class="support-link-anchor" href="${this.supportConfig.supportLink}" target="_blank" rel="noopener noreferrer">
+                    Học tập theo tài liệu
+                </a>
+            `;
+            document.body.appendChild(linkBox);
+        }
+
+        if (!document.getElementById('support-overlay')) {
+            const overlay = document.createElement('div');
+            overlay.id = 'support-overlay';
+            overlay.className = 'support-overlay';
+            overlay.setAttribute('aria-hidden', 'true');
+            overlay.innerHTML = `
+                <div class="support-popup" role="dialog" aria-modal="true" aria-labelledby="support-title">
+                    <h2 id="support-title">Hỗ trợ dự án</h2>
+                    <p>
+                        Chào bạn, bộ đề PLDC này mình đã dành rất nhiều công sức để lập trình và tổng hợp cho anh em.
+                        Để giúp mình có thêm kinh phí duy trì Server cho dự án cá nhân và hoàn thành nhiệm vụ của Microsoft,
+                        bạn chỉ cần giúp mình 1 click vào link tài trợ bên dưới. Hệ thống sẽ tự động mở đề thi ngay sau khi bạn click.
+                        Cảm ơn bạn nhiều nhe ❤️
+                    </p>
+                    <button id="support-action-btn" type="button" class="support-action-btn">Click để ủng hộ & Tiếp tục làm bài</button>
+                    <div class="support-note">Sau khi click, popup sẽ tự đóng sau 5 giây.</div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+        }
+
+        const supportBtn = document.getElementById('support-action-btn');
+        if (supportBtn) {
+            supportBtn.addEventListener('click', this.handleSupportAction);
+        }
+
+        const supportAnchor = document.getElementById('support-link-anchor');
+        if (supportAnchor) {
+            supportAnchor.addEventListener('click', () => {
+                this.trackSupportClick();
+            });
+        }
+    }
+
+    getAnsweredCount() {
+        return document.querySelectorAll('input[type="radio"]:checked').length;
+    }
+
+    maybeShowSupportPopup(answeredCountInput) {
+        const supported = localStorage.getItem(this.supportConfig.storageKey) === 'true';
+        if (supported || this.supportConfig.popupShown) {
+            return;
+        }
+
+        const answeredCount = typeof answeredCountInput === 'number' ? answeredCountInput : this.getAnsweredCount();
+        if (answeredCount < 5) {
+            return;
+        }
+
+        const overlay = document.getElementById('support-overlay');
+        if (!overlay) {
+            return;
+        }
+
+        this.supportConfig.popupShown = true;
+        overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    trackSupportClick() {
+        const counterUpLink = `${this.supportConfig.counterUpLink}?t=${Date.now()}`;
+
+        fetch(counterUpLink, { method: 'GET', cache: 'no-store', mode: 'no-cors' }).catch(() => {
+            const ping = new Image();
+            ping.src = counterUpLink;
+        });
+    }
+
+    handleSupportAction() {
+        window.open(this.supportConfig.supportLink, '_blank', 'noopener');
+        this.trackSupportClick();
+        localStorage.setItem(this.supportConfig.storageKey, 'true');
+
+        const overlay = document.getElementById('support-overlay');
+        if (!overlay) {
+            return;
+        }
+
+        setTimeout(() => {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+        }, 5000);
+    }
+
     // ==================== NỘP BÀI ====================
     confirmSubmit() {
         const done = document.querySelectorAll('input[type="radio"]:checked').length;
@@ -448,6 +558,7 @@ class QuizManager {
 
         this.hideSubmitButton();
         this.showResult(score, this.currentExam.length, unanswered);
+        this.maybeShowSupportPopup(this.currentExam.length - unanswered);
     }
 
     showUnansweredAnswer(index, correctAnswer) {

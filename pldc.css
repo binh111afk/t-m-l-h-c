@@ -1285,3 +1285,130 @@ body.pink-mode .exam-icon {
     background: #fff0f5 !important;
     border-color: #ff4081 !important;
 }
+
+/* =========================================
+   SUPPORT POPUP + LINK BOX
+   ========================================= */
+.support-link-box {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 19000;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(183, 28, 28, 0.25);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 24px rgba(183, 28, 28, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.support-link-anchor {
+    color: #b71c1c;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.support-link-anchor:hover {
+    text-decoration: underline;
+}
+
+.support-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 22, 42, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 30000;
+    padding: 20px;
+}
+
+.support-overlay.active {
+    display: flex;
+}
+
+.support-popup {
+    width: min(680px, 96vw);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 245, 245, 0.7));
+    box-shadow: 0 24px 50px rgba(0, 34, 68, 0.28);
+    color: #4e1111;
+    text-align: left;
+}
+
+.support-popup h2 {
+    margin: 0 0 12px;
+    color: #b71c1c;
+    font-size: 1.5rem;
+}
+
+.support-popup p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+.support-action-btn {
+    margin-top: 18px;
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #b71c1c, #e53935);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(183, 28, 28, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(183, 28, 28, 0.36);
+}
+
+.support-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #8d2b2b;
+}
+
+@media (max-width: 900px) {
+    .support-link-box {
+        top: auto;
+        bottom: 86px;
+        right: 14px;
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .support-popup {
+        padding: 20px;
+    }
+
+    .support-popup h2 {
+        font-size: 1.3rem;
+    }
+
+    .support-popup p {
+        font-size: 0.98rem;
+    }
+
+    .support-link-box {
+        padding: 8px 10px;
+    }
+
+    .support-link-anchor {
+        font-size: 0.82rem;
+    }
+}
