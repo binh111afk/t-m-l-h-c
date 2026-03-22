@@ -6,8 +6,8 @@ body {
     line-height: 1.6;
     background-color: #fff5f5;
     padding: 20px;
-    padding-top: 140px;
-    /* Giữ nguyên padding để né map */
+    padding-top: 20px;
+    padding-right: 360px;
     color: #333;
     overflow-x: hidden;
 }
@@ -18,11 +18,13 @@ body {
 /* Bảng dẫn đường nằm ngang ở trên đầu */
 .question-map {
     position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 92%;
-    max-width: 850px;
+    top: 18px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    width: 320px;
+    max-width: 320px;
+    max-height: calc(100vh - 40px);
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     border: 2px solid #d32f2f;
@@ -31,20 +33,20 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     z-index: 998;
     /* Tăng z-index để cao hơn navbar bootstrap */
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Lưới hiển thị: 25 ô một hàng (YÊU CẦU CỦA BẠN) */
 .map-grid {
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
 }
 
 /* Style cho ô số */
 .map-item {
     width: 100%;
-    height: 26px;
+    height: 42px;
     background: #f8f9fa;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -52,7 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
     color: #333;
     transition: 0.2s;
@@ -92,18 +94,21 @@ body {
 
 /* Responsive cho Map (Logic cũ của bạn) */
 @media (max-width: 1300px) {
-    .map-grid {
-        grid-template-columns: repeat(20, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .map-grid {
-        grid-template-columns: repeat(10, 1fr);
+    body {
+        padding-right: 20px;
     }
 
     .question-map {
-        width: 95%;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+
+    .map-grid {
+        grid-template-columns: repeat(10, 1fr);
     }
 }
 
@@ -119,7 +124,7 @@ body {
 /* Container chính */
 .container.main-container {
     /* Thêm class main-container để style riêng */
-    max-width: 900px;
+    max-width: 1360px;
     margin: 0 auto;
     background: #fff;
     padding: 30px;
@@ -513,6 +518,7 @@ input[type="radio"]:checked~.answer-text {
     top: 0;
     z-index: 998;
     pointer-events: none;
+    display: none;
 }
 
 .lantern-container.left {
@@ -1292,8 +1298,8 @@ body.pink-mode .exam-icon {
 .support-link-box {
     position: fixed;
     right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 16px;
+    transform: none;
     z-index: 19000;
     padding: 10px 12px;
     border-radius: 12px;
@@ -1384,8 +1390,7 @@ body.pink-mode .exam-icon {
 
 @media (max-width: 900px) {
     .support-link-box {
-        top: auto;
-        bottom: 86px;
+        top: 10px;
         right: 14px;
         transform: none;
     }
