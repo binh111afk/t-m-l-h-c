@@ -18,13 +18,13 @@ body {
 /* Bảng dẫn đường nằm ngang ở trên đầu */
 .question-map {
     position: fixed;
-    top: 18px;
+    top: 86px;
     right: 20px;
     left: auto;
     transform: none;
     width: 320px;
     max-width: 320px;
-    max-height: calc(100vh - 40px);
+    max-height: calc(100vh - 108px);
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     border: 2px solid #d32f2f;
@@ -34,6 +34,10 @@ body {
     z-index: 998;
     /* Tăng z-index để cao hơn navbar bootstrap */
     overflow-y: auto;
+}
+
+.question-map h3 {
+    display: none !important;
 }
 
 /* Lưới hiển thị: 25 ô một hàng (YÊU CẦU CỦA BẠN) */

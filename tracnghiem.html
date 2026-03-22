@@ -181,25 +181,45 @@
           top: 16px;
           right: 16px;
           z-index: 19000;
-          padding: 10px 12px;
-          border-radius: 12px;
-          border: 1px solid rgba(11, 59, 102, 0.24);
-          background: rgba(255, 255, 255, 0.9);
-          box-shadow: 0 10px 24px rgba(11, 59, 102, 0.16);
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
+          padding: 3px;
+          border-radius: 14px;
+          background: linear-gradient(135deg, #00b4d8, #0077b6, #4361ee);
+          box-shadow: 0 14px 34px rgba(0, 119, 182, 0.32);
+          animation: docGlow 2.2s ease-in-out infinite;
         }
 
         .learn-doc-link {
-          color: #0b3b66;
+          display: block;
+          color: #ffffff;
           text-decoration: none;
-          font-size: 0.9rem;
+          font-size: 0.92rem;
           font-weight: 700;
           white-space: nowrap;
+          padding: 10px 14px;
+          border-radius: 11px;
+          background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .learn-doc-link:hover {
-          text-decoration: underline;
+          text-decoration: none;
+          transform: translateY(-1px);
+          box-shadow: 0 10px 24px rgba(13, 110, 253, 0.35);
+        }
+
+        @keyframes docGlow {
+          0% {
+            box-shadow: 0 12px 28px rgba(0, 119, 182, 0.25);
+          }
+
+          50% {
+            box-shadow: 0 16px 36px rgba(67, 97, 238, 0.4);
+          }
+
+          100% {
+            box-shadow: 0 12px 28px rgba(0, 119, 182, 0.25);
+          }
         }
 
         .resource-box {
