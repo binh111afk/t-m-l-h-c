@@ -25,6 +25,7 @@ class QuizManager {
 
         this.supportConfig = {
             storageKey: 'is_supported_project_pldc',
+            pendingKey: 'is_support_popup_pending_pldc',
             supportLink: 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689',
             counterUpLink: 'https://api.counterapi.dev/v1/whalio_study/mlsa_clicks/up',
             popupShown: false
@@ -471,6 +472,8 @@ class QuizManager {
                 this.trackSupportClick();
             });
         }
+
+        this.restoreSupportPopupIfPending();
     }
 
     getAnsweredCount() {
@@ -488,6 +491,11 @@ class QuizManager {
             return;
         }
 
+        localStorage.setItem(this.supportConfig.pendingKey, 'true');
+        this.showSupportOverlay();
+    }
+
+    showSupportOverlay() {
         const overlay = document.getElementById('support-overlay');
         if (!overlay) {
             return;
@@ -496,6 +504,20 @@ class QuizManager {
         this.supportConfig.popupShown = true;
         overlay.classList.add('active');
         overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    restoreSupportPopupIfPending() {
+        const supported = localStorage.getItem(this.supportConfig.storageKey) === 'true';
+        const pending = localStorage.getItem(this.supportConfig.pendingKey) === 'true';
+
+        if (supported) {
+            localStorage.removeItem(this.supportConfig.pendingKey);
+            return;
+        }
+
+        if (pending) {
+            this.showSupportOverlay();
+        }
     }
 
     trackSupportClick() {
@@ -511,6 +533,7 @@ class QuizManager {
         window.open(this.supportConfig.supportLink, '_blank', 'noopener');
         this.trackSupportClick();
         localStorage.setItem(this.supportConfig.storageKey, 'true');
+        localStorage.removeItem(this.supportConfig.pendingKey);
 
         const overlay = document.getElementById('support-overlay');
         if (!overlay) {
