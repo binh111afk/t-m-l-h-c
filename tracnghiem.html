@@ -125,6 +125,37 @@
           transform: translateY(-1px);
         }
 
+        .back-to-top {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          width: 48px;
+          height: 48px;
+          border: none;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #0d6efd, #0aa2c0);
+          color: #ffffff;
+          font-size: 22px;
+          cursor: pointer;
+          box-shadow: 0 10px 24px rgba(13, 110, 253, 0.32);
+          z-index: 20000;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(8px);
+          transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        }
+
+        .back-to-top.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 14px 28px rgba(13, 110, 253, 0.38);
+        }
+
         @media (max-width: 640px) {
           .support-popup {
             padding: 20px;
@@ -136,6 +167,14 @@
 
           .support-popup p {
             font-size: 0.98rem;
+          }
+
+          .back-to-top {
+            right: 14px;
+            bottom: 14px;
+            width: 44px;
+            height: 44px;
+            font-size: 20px;
           }
         }
 
@@ -206,6 +245,8 @@
       <div class="support-note">Sau khi click, popup sẽ tự đóng sau 5 giây.</div>
     </div>
   </div>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
 
 <script>
 // --- NGÂN HÀNG CÂU HỎI TỔNG HỢP ---
@@ -4459,6 +4500,29 @@ const supportBtn = document.getElementById('support-btn');
 if (supportBtn) {
   supportBtn.addEventListener('click', handleSupportClick);
 }
+
+const backToTopBtn = document.getElementById('back-to-top');
+
+function toggleBackToTopButton() {
+  if (!backToTopBtn) {
+    return;
+  }
+
+  if (window.scrollY > 260) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+}
+
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+window.addEventListener('scroll', toggleBackToTopButton);
+toggleBackToTopButton();
 
 function createSnowflake() {
     const snowflake = document.createElement('div');
