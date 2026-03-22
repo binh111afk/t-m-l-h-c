@@ -26,7 +26,7 @@ class QuizManager {
         this.supportConfig = {
             storageKey: 'is_supported_project_pldc',
             pendingKey: 'is_support_popup_pending_pldc',
-            supportLink: 'https://learn.microsoft.com/vi-vn/training/modules/close-out-course/?wt.mc_id=studentamb_508689',
+            supportLink: 'https://learn.microsoft.com/vi-vn/plans/667ws7tmr06qx5?wt.mc_id=studentamb_508689',
             counterUpLink: 'https://api.counterapi.dev/v1/whalio_study/mlsa_clicks/up',
             popupShown: false
         };
