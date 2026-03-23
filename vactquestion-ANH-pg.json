@@ -179,5 +179,186 @@
                 "explain": "Đoạn cuối viết: 'Bing users were exposed to a greater variety of sources... This is likely caused by a technique used by Bing Chat called retrieval-augmented generation, which combines search results with AI prompting.' Nghĩa là sự đa dạng tăng lên nhờ việc tích hợp công cụ tìm kiếm với AI tạo sinh."
             }
         ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Anh",
+        "instruction": "Questions 46-52: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+        "passage_content": "1. Fairies today are the stuff of children's stories, little magical people with wings, often shining with light. Typically pretty and female, like Tinkerbell in Peter Pan, they usually use their magic to do small things and are mostly friendly to humans.\n2. We owe many of our modern ideas about fairies to Shakespeare and stories from the 18th and 19th centuries. Although we can see the origins of fairies as far back as the Ancient Greeks, we can see similar creatures in many cultures. The earliest fairy-like creatures can be found in the Greek idea that trees and rivers had spirits called dryads and nymphs. Some people think these creatures were originally the gods of earlier, pagan religions that worshipped nature. They were replaced by the Greek and Roman gods, and then later by the Christian God, and became smaller, less powerful figures as they lost importance.\n3. Another explanation suggests the origin of fairies is a memory of real people, not spirits. So, for example, when tribes with metal weapons invaded land where people only used stone weapons, some of the people escaped and hid in forests and caves. Further support for this idea is that fairies were thought to be afraid of iron and could not touch it. Living outside of society, the hiding people probably stole food and attacked villages. This might explain why fairies were often described as playing tricks on humans. Hundreds of years ago, people actually believed that fairies stole new babies and replaced them with a 'changeling' - or that they took new mothers and made them feed fairy babies with their milk.\n4. While most people no longer believe in fairies, only a hundred years ago some people were very willing to think they might exist. In 1917, 16-year-old Elsie Wright took two photos of her cousin, nine-year-old Frances Griffiths, sitting with fairies. Some photography experts thought they were fake, while others weren't sure. But Arthur Conan Doyle, the writer of the Sherlock Holmes detective stories, believed they were real. He published the original pictures, and three more the girls took for him, in a magazine called The Strand, in 1920. The girls only admitted the photos were fake years later in 1983, created using pictures of dancers that Elsie copied from a book.",
+        "questions": [
+            {
+                "question": "What is the passage mainly about?",
+                "options": [
+                    " The history of fairies",
+                    " The Cottingley Fairies incident",
+                    " The different types of fairies",
+                    " The magical powers of fairies"
+                ],
+                "answer": "A",
+                "explain": "Bài đọc bàn về hình ảnh các nàng tiên trong thời hiện đại (đoạn 1), nguồn gốc của chúng từ các vị thần cổ đại (đoạn 2), nguồn gốc từ ký ức về những người thật phải trốn tránh (đoạn 3), và niềm tin vào tiên nữ trong quá khứ gần đây (đoạn 4). Do đó, chủ đề chính khái quát nhất là Lịch sử của các nàng tiên (The history of fairies)."
+            },
+            {
+                "question": "In paragraph 2, which of the following is NOT mentioned as an early belief about fairies?",
+                "options": [
+                    " They were once powerful gods",
+                    " They were not afraid of iron",
+                    " They were associated with nature spirits",
+                    " They were often depicted as small and magical"
+                ],
+                "answer": "B",
+                "explain": "Trong đoạn 3, tác giả nói rõ ràng rằng: 'fairies were thought to be afraid of iron and could not touch it' (tiên nữ được cho là sợ sắt và không thể chạm vào nó). Vì vậy, nói họ không sợ sắt là thông tin KHÔNG được đề cập (hoặc sai với bài)."
+            },
+            {
+                "question": "What does the word \"changeling\" in paragraph 3 refer to?",
+                "options": [
+                    " A fairy disguise",
+                    " A stolen human baby",
+                    " A fairy baby",
+                    " A magical potion"
+                ],
+                "answer": "C",
+                "explain": "Đoạn 3 viết: 'fairies stole new babies and replaced them with a changeling'. Đánh cắp những em bé con người và thay thế bằng một 'changeling'. 'Changeling' ở đây ám chỉ em bé tiên (fairy baby) được để lại thay thế cho em bé loài người bị bắt đi."
+            },
+            {
+                "question": "The closest meaning to the word \"invaded\" in paragraph 3 is:",
+                "options": [
+                    " attacked",
+                    " visited",
+                    " explored",
+                    " conquered"
+                ],
+                "answer": "A",
+                "explain": "Từ 'invaded' (xâm lược, tràn vào) dùng để diễn tả các bộ lạc có vũ khí kim loại tấn công tràn vào vùng đất của những người chỉ có vũ khí bằng đá. Từ 'attacked' (tấn công) là từ mang ý nghĩa gần nhất trong ngữ cảnh này."
+            },
+            {
+                "question": "Which of the following is a stated detail about the beliefs of people hundreds of years ago, as mentioned in paragraph 3?",
+                "options": [
+                    " Fairies could control the weather",
+                    " Fairies were often seen dancing in moonlight",
+                    " Fairies could turn humans into animals",
+                    " Fairies were believed to steal babies"
+                ],
+                "answer": "D",
+                "explain": "Cuối đoạn 3 nêu rõ: 'Hundreds of years ago, people actually believed that fairies stole new babies...' (Hàng trăm năm trước, người ta thực sự tin rằng các nàng tiên hay đánh cắp trẻ sơ sinh)."
+            },
+            {
+                "question": "Which of the following is a stated detail about the Cottingley Fairies incident in paragraph 4?",
+                "options": [
+                    " The girls admitted the photos were fake in 1983",
+                    " The photos were taken in a secret forest",
+                    " The fairies in the photos were very large",
+                    " The girls used advanced technology to create the photos"
+                ],
+                "answer": "A",
+                "explain": "Câu cuối của đoạn 4 xác nhận: 'The girls only admitted the photos were fake years later in 1983' (Mãi đến năm 1983, những cô gái này mới thú nhận những bức ảnh đó là giả)."
+            },
+            {
+                "question": "What can be inferred about the public's belief in fairies in the early 20th century, based on paragraph 4?",
+                "options": [
+                    " People were skeptical about fairy lore",
+                    " People were completely dismissive of fairy tales",
+                    " Some people were still open to the possibility of fairies",
+                    " People were more interested in scientific explanations"
+                ],
+                "answer": "C",
+                "explain": "Câu mở đầu đoạn 4 viết: 'While most people no longer believe in fairies, only a hundred years ago some people were very willing to think they might exist' (Vào 100 năm trước, vẫn còn một số người rất cởi mở tin rằng tiên nữ có thể tồn tại). Arthur Conan Doyle cũng là một minh chứng."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Anh",
+        "instruction": "Questions 53-60: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+        "passage_content": "1. Social media, magazines and shop windows bombard people daily with things to buy, and British consumers are buying more clothes and shoes than ever before. Online shopping means it is easy for customers to buy without thinking, while major brands offer such cheap clothes that they can be treated like disposable items worn two or three times and then thrown away.\n2. In Britain, the average person spends more than £1,000 on new clothes a year, which is around four per cent of their income. That might not sound like much, but that figure hides two far more worrying trends for society and for the environment. First, a lot of that consumer spending is via credit cards. British people currently owe approximately £670 per adult to credit card companies. That's 66 per cent of the average wardrobe budget. Also, not only are people spending money they don't have, they're using it to buy things they don't need. Britain throws away 300,000 tons of clothing a year, most of which goes into landfill sites.\n3. People might not realise they are part of the disposable clothing problem because they donate their unwanted clothes to charities. But charity shops can't sell all those unwanted clothes. 'Fast fashion' goes out of fashion as quickly as it came in and is often too poor quality to recycle; people don't want to buy it second-hand. Huge quantities end up being thrown away, and a lot of clothes that charities can't sell are sent abroad, causing even more economic and environmental problems.\n4. However, a different trend is springing up in opposition to consumerism - the 'buy nothing' trend. The idea originated in Canada in the early 1990s and then moved to the US, where it became a rejection of the overspending and overconsumption of Black Friday and Cyber Monday during Thanksgiving weekend. On Buy Nothing Day people organise various types of protests and cut up their credit cards. Throughout the year, Buy Nothing groups organise the exchange and repair of items they already own.\n5. The trend has now reached influencers on social media who usually share posts of clothing and make-up that they recommend for people to buy. Some YouTube stars now encourage their viewers not to buy anything at all for periods as long as a year. Two friends in Canada spent a year working towards buying only food. For the first three months they learned how to live without buying electrical goods, clothes or things for the house. For the next stage, they gave up services, for example haircuts, eating out at restaurants or buying petrol for their cars. In one year, they'd saved $55,000.",
+        "questions": [
+            {
+                "question": "The best title of the passage can be",
+                "options": [
+                    " \"How Fast Fashion Fuels Environmental Change\"",
+                    " \"Buy More, Spend More: Trends in British Consumerism\"",
+                    " \"The Buy Nothing Movement\"",
+                    " \"Fashion in Britain: New Trends and Styles\""
+                ],
+                "answer": "C",
+                "explain": "Bài đọc mở đầu bằng tình trạng tiêu dùng quá mức, thời trang ăn liền (fast fashion) ở Anh gây lãng phí. Sau đó (ở đoạn 4, 5) giới thiệu về xu hướng đối lập đang lan rộng là 'The Buy Nothing Movement' (Phong trào Không Mua Sắm Gì Cả) như một giải pháp để chống lại chủ nghĩa tiêu dùng. Do đó, nhan đề bao quát nhất là C."
+            },
+            {
+                "question": "The word \"bombarded\" in paragraph 1 can be replaced by:",
+                "options": [
+                    " attacked",
+                    " overwhelmed",
+                    " influenced",
+                    " encouraged"
+                ],
+                "answer": "B",
+                "explain": "Từ 'bombard' nghĩa đen là oanh tạc, ném bom. Nghĩa bóng trong câu này là mạng xã hội, tạp chí 'khủng bố' hoặc 'làm choáng ngợp' người dùng bằng hàng loạt thông tin mời gọi mua sắm. 'Overwhelmed' (áp đảo, tràn ngập) là từ đồng nghĩa sát nhất trong ngữ cảnh."
+            },
+            {
+                "question": "What can be inferred from paragraph 2 about British consumer habits?",
+                "options": [
+                    " People are buying more clothes than they actually need",
+                    " Most people are paying off their credit card debt quickly",
+                    " People are saving money on clothes by shopping at charity shops",
+                    " Consumers in Britain spend the most money on electronics"
+                ],
+                "answer": "A",
+                "explain": "Đoạn 2 chỉ ra rằng người dân chi tiêu bằng tiền họ không có (thẻ tín dụng) để 'mua những thứ họ không cần' ('buy things they don't need'), dẫn đến vứt bỏ 300,000 tấn quần áo mỗi năm. Từ đó suy ra họ đang mua quần áo nhiều hơn so với mức thực tế họ cần."
+            },
+            {
+                "question": "The phrase \"fast fashion\" in paragraph 3 refers to",
+                "options": [
+                    " Clothes that are sold at high prices",
+                    " The speed at which fashion trends change",
+                    " The high quality of clothes sold",
+                    " Clothes that are too expensive to recycle"
+                ],
+                "answer": "B",
+                "explain": "Đoạn 3 có cụm: ''Fast fashion' goes out of fashion as quickly as it came in and is often too poor quality'. Từ này ám chỉ xu hướng thời trang ăn liền - sự thay đổi quá chóng vánh của các trào lưu thời trang ('the speed at which fashion trends change')."
+            },
+            {
+                "question": "In paragraph 3, it is NOT mentioned that",
+                "options": [
+                    " Fast fashion goes out of style quickly",
+                    " People throw away clothes they no longer want",
+                    " Charity shops sell all the unwanted clothes they receive",
+                    " Clothes donated to charity are often sent abroad"
+                ],
+                "answer": "C",
+                "explain": "Trong đoạn 3, tác giả nói rõ: 'But charity shops can't sell all those unwanted clothes' (Các cửa hàng từ thiện KHÔNG THỂ bán hết những bộ quần áo thừa đó). Do vậy, câu C (Cửa hàng từ thiện bán hết quần áo họ nhận được) là thông tin sai với bài đọc."
+            },
+            {
+                "question": "It can be seen in paragraphs 2, 3, and 4 that",
+                "options": [
+                    " People in Britain are becoming more environmentally conscious",
+                    " Charity shops are a major solution to waste in the fashion industry",
+                    " People are spending a significant amount of money on clothes they don't need",
+                    " The Buy Nothing trend is causing people to stop shopping altogether"
+                ],
+                "answer": "C",
+                "explain": "Thông tin xuyên suốt các đoạn là việc người dân lãng phí tiền bạc vào quần áo nhanh, bỏ đi một số lượng rác thải khổng lồ. Mọi người tiêu hàng ngàn bảng Anh (khoảng tiền đáng kể) cho những thứ họ không thực sự cần ('buy things they don't need')."
+            },
+            {
+                "question": "In paragraph 5, the author uses the word \"encourage\" in order to",
+                "options": [
+                    " Explain how people can save money",
+                    " Show how influencers promote consumerism",
+                    " Discuss the financial success of YouTube stars",
+                    " Highlight how some influencers support the Buy Nothing trend"
+                ],
+                "answer": "D",
+                "explain": "Từ 'encourage' (khuyến khích) xuất hiện trong câu: 'Some YouTube stars now encourage their viewers not to buy anything at all...'. Ý của tác giả là để nhấn mạnh việc ngay cả những người có sức ảnh hưởng trên mạng xã hội (vốn thường quảng cáo bán hàng) giờ đây cũng quay sang ủng hộ phong trào Không Mua Sắm (Buy Nothing)."
+            },
+            {
+                "question": "It can be inferred from paragraph 5 that",
+                "options": [
+                    " The Buy Nothing trend is not popular in Canada",
+                    " Influencers are encouraging people to spend more money on their clothes",
+                    " People in Britain and Canada are abandoning the Buy Nothing trend after a year",
+                    " Some people are willing to sacrifice material goods for financial gain"
+                ],
+                "answer": "D",
+                "explain": "Đoạn 5 đưa ra ví dụ về hai người bạn ở Canada quyết định hy sinh nhiều thứ vật chất (đồ điện tử, quần áo, làm tóc, ăn hàng, đổ xăng) trong một năm và kết quả là 'In one year, they'd saved $55,000' (họ tiết kiệm được 55.000 đô la). Từ đó suy ra một số người sẵn sàng từ bỏ lợi ích vật chất để đổi lấy lợi ích tài chính lớn hơn."
+            }
+        ]
     }
 ]

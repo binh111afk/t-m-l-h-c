@@ -281,6 +281,49 @@
 			overflow-x: hidden;
 		}
 
+		.learn-doc-box {
+			margin: 12px 0 14px;
+			padding: 12px;
+			border: 1px solid #cfe0f6;
+			border-radius: 12px;
+			background: linear-gradient(180deg, #eef6ff, #f9fbff);
+		}
+
+		.learn-doc-title {
+			margin: 0 0 6px;
+			font-size: 0.92rem;
+			font-weight: 700;
+			color: #0f4c8f;
+		}
+
+		.learn-doc-text {
+			margin: 0 0 10px;
+			font-size: 0.85rem;
+			line-height: 1.55;
+			color: #47698c;
+		}
+
+		.learn-doc-link {
+			display: block;
+			width: 100%;
+			padding: 11px 14px;
+			border: none;
+			border-radius: 10px;
+			background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+			color: #fff;
+			font-size: 0.92rem;
+			font-weight: 700;
+			text-align: center;
+			text-decoration: none;
+			box-shadow: 0 10px 24px rgba(13, 110, 253, 0.22);
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		.learn-doc-link:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 14px 28px rgba(13, 110, 253, 0.3);
+		}
+
 		.question-map h3 {
 			margin: 12px 0 10px;
 			font-size: 1rem;
@@ -1106,6 +1149,10 @@
 						<div class="timer-label">Thời gian còn lại</div>
 						<div id="timer-value" class="timer-value">150:00</div>
 					</div>
+					<div class="learn-doc-box">
+						<div class="learn-doc-title">Học tập theo tài liệu</div>
+						<a id="learn-doc-link" class="learn-doc-link" href="#" target="_blank" rel="noopener">Mở tài liệu hỗ trợ</a>
+					</div>
 					<button class="btn map-submit-btn" id="submit-btn" type="button">Nộp bài</button>
 					<h3>Bảng câu hỏi</h3>
 					<div id="question-map-grid" class="question-map-grid"></div>
@@ -1252,6 +1299,7 @@
 		const scienceCorrectEl = document.getElementById("science-correct");
 		const scienceFill = document.getElementById("science-fill");
 		const supportBtn = document.getElementById("support-btn");
+		const learnDocLink = document.getElementById("learn-doc-link");
 
 		const mapButtons = [];
 		const flatQuestions = [];
@@ -1330,12 +1378,15 @@
 			});
 		}
 
-		function handleSupportClick() {
+		function openSupportLink() {
 			window.open(MLSA_SUPPORT_LINK, "_blank", "noopener");
 			trackMlsaClick();
-
 			localStorage.setItem(SUPPORT_PROJECT_KEY, "true");
 			localStorage.removeItem(SUPPORT_POPUP_PENDING_KEY);
+		}
+
+		function handleSupportClick() {
+			openSupportLink();
 
 			const overlay = document.getElementById("support-overlay");
 			if (!overlay) return;
@@ -1461,6 +1512,74 @@
 		async function loadSectionEntries(files) {
 			const chunks = await Promise.all(files.map(loadJsonFile));
 			return chunks.flat();
+		}
+
+		function countRenderedQuestionsInEntry(entry) {
+			if (!entry) return 0;
+			return entry.type === "passage" ? (entry.questions || []).length : 1;
+		}
+
+		function shuffleArray(items) {
+			const cloned = [...items];
+			for (let i = cloned.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[cloned[i], cloned[j]] = [cloned[j], cloned[i]];
+			}
+			return cloned;
+		}
+
+		function takeEntriesByType(entries, type, count) {
+			const selected = shuffleArray(entries.filter((entry) => entry.type === type)).slice(0, count);
+			if (selected.length !== count) {
+				throw new Error("Không đủ " + count + " entry type '" + type + "'.");
+			}
+			return selected;
+		}
+
+		function takeEntriesUntilQuestionCount(entries, targetQuestions, allowedTypes) {
+			const selected = [];
+			let totalQuestions = 0;
+			const randomizedEntries = shuffleArray(entries);
+
+			for (const entry of randomizedEntries) {
+				if (allowedTypes && !allowedTypes.includes(entry.type)) continue;
+
+				const questionCount = countRenderedQuestionsInEntry(entry);
+				if (totalQuestions + questionCount > targetQuestions) continue;
+
+				selected.push(entry);
+				totalQuestions += questionCount;
+
+				if (totalQuestions === targetQuestions) {
+					return selected;
+				}
+			}
+
+			throw new Error("Không thể chọn đủ " + targetQuestions + " câu theo cấu hình yêu cầu.");
+		}
+
+		function buildExamSections(vietDonEntries, vietPgEntries, anhDonEntries, anhPgEntries, toanEntries, tdkhEntries) {
+			const vietEntries = [
+				...takeEntriesByType(vietDonEntries, "single", 20),
+				...takeEntriesByType(vietPgEntries, "passage", 2)
+			];
+
+			const anhEntries = [
+				...takeEntriesByType(anhDonEntries, "single", 5),
+				...takeEntriesByType(anhDonEntries, "check", 5),
+				...takeEntriesByType(anhDonEntries, "rewrite", 5),
+				...takeEntriesByType(anhPgEntries, "passage", 2)
+			];
+
+			const selectedToanEntries = takeEntriesUntilQuestionCount(toanEntries, 30, ["single", "passage"]);
+			const selectedTdkhEntries = takeEntriesUntilQuestionCount(tdkhEntries, 30, ["passage"]);
+
+			return [
+				{ key: "viet", entries: vietEntries },
+				{ key: "anh", entries: anhEntries },
+				{ key: "toan", entries: selectedToanEntries },
+				{ key: "tdkh", entries: selectedTdkhEntries }
+			];
 		}
 
 		function normalizeAnswer(rawAnswer) {
@@ -1932,6 +2051,14 @@
 			if (supportBtn) {
 				supportBtn.addEventListener("click", handleSupportClick);
 			}
+
+			if (learnDocLink) {
+				learnDocLink.href = MLSA_SUPPORT_LINK;
+				learnDocLink.addEventListener("click", (event) => {
+					event.preventDefault();
+					openSupportLink();
+				});
+			}
 		}
 
 		function runMathTypeset() {
@@ -1945,21 +2072,27 @@
 			restoreSupportPopupIfPending();
 
 			try {
-				const [vietEntries, anhEntries, toanEntries, tdkhEntries] = await Promise.all([
-					loadSectionEntries(SECTION_SOURCES.viet),
-					loadSectionEntries(SECTION_SOURCES.anh),
+				const [vietDonEntries, vietPgEntries, anhDonEntries, anhPgEntries, toanEntries, tdkhEntries] = await Promise.all([
+					loadJsonFile(SECTION_SOURCES.viet[0]),
+					loadJsonFile(SECTION_SOURCES.viet[1]),
+					loadJsonFile(SECTION_SOURCES.anh[0]),
+					loadJsonFile(SECTION_SOURCES.anh[1]),
 					loadSectionEntries(SECTION_SOURCES.toan),
 					loadSectionEntries(SECTION_SOURCES.tdkh)
 				]);
 
 				quizArea.innerHTML = "";
+				flatQuestions.length = 0;
+				mapButtons.length = 0;
 
-				const sections = [
-					{ key: "viet", entries: vietEntries },
-					{ key: "anh", entries: anhEntries },
-					{ key: "toan", entries: toanEntries },
-					{ key: "tdkh", entries: tdkhEntries }
-				];
+				const sections = buildExamSections(
+					vietDonEntries,
+					vietPgEntries,
+					anhDonEntries,
+					anhPgEntries,
+					toanEntries,
+					tdkhEntries
+				);
 
 				const indexRef = { value: 0 };
 

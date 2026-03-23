@@ -408,5 +408,415 @@
         "explain": "Để thu hẹp khoảng cách \"cung - cầu nhân lực ngày càng rõ rệt\", Nhà nước đóng vai trò quan trọng trong sự phối hợp 3 bên thông qua việc tạo ra các chính sách đào tạo nghề (giải quyết thiếu hụt tay nghề) và là cầu nối để đưa nguồn nhân lực đến đúng vị trí doanh nghiệp cần."
       }
     ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Dựa vào các thông tin được cung cấp dưới đây để trả lời các câu từ 91 đến 93.",
+    "passage_content": "Trong một hội thảo khoa học Quốc tế, 4 đại biểu nói chuyện với nhau bằng 4 thứ tiếng: Anh, Pháp, Nga, Trung. Mỗi đại biểu chỉ biết 2 thứ tiếng và có 3 đại biểu biết cùng một thứ tiếng. Cho biết:\n1. A biết tiếng Nga, D không biết tiếng Nga.\n2. B, C, D không cùng biết một thứ tiếng.\n3. Không có đại biểu nào biết cả tiếng Nga và tiếng Pháp.\n4. B không biết tiếng Anh nhưng có thể phiên dịch cho A và C.",
+    "questions": [
+      {
+        "question": "A biết những tiếng nào?",
+        "options": [
+          " Pháp, Trung",
+          " Nga, Anh",
+          " Trung, Nga",
+          " Anh, Pháp"
+        ],
+        "answer": "C",
+        "explain": "Từ (4), B dịch cho A và C nên A và C không có ngôn ngữ chung. B phải biết 1 tiếng chung với A và 1 tiếng chung với C. Từ (1) A biết tiếng Nga, từ (3) A không biết tiếng Pháp. B không biết tiếng Anh (4), nên B chỉ có thể biết (Nga, Trung) hoặc (Pháp, Trung). Nếu B biết (Nga, Trung), B chung tiếng Nga với A và tiếng Trung với C. Suy ra C phải biết tiếng Trung và 1 tiếng khác (Pháp hoặc Anh). Do C và A không có tiếng chung, ta tìm cấu hình thoả mãn điều kiện 'có 3 đại biểu biết cùng 1 thứ tiếng'. Sau khi phân tích, cấu hình duy nhất thoả mãn tất cả là: A (Nga, Trung), B (Pháp, Trung), C (Pháp, Anh) và D (Anh, Trung). Ngôn ngữ 3 người cùng biết là tiếng Trung (A, B, D). Vậy A biết Trung, Nga."
+      },
+      {
+        "question": "C biết những tiếng nào?",
+        "options": [
+          " Pháp, Trung",
+          " Nga, Anh",
+          " Trung, Nga",
+          " Anh, Pháp"
+        ],
+        "answer": "D",
+        "explain": "Dựa vào kết quả suy luận ở câu trên, C biết tiếng Pháp và tiếng Anh để có thể giao tiếp với B (nhờ tiếng Pháp) và D (nhờ tiếng Anh), đồng thời không có ngôn ngữ chung với A."
+      },
+      {
+        "question": "D biết những tiếng nào?",
+        "options": [
+          " Pháp, Trung",
+          " Trung, Anh",
+          " Trung, Nga",
+          " Anh, Pháp"
+        ],
+        "answer": "B",
+        "explain": "Dựa vào suy luận, để thoả mãn điều kiện B, C, D không cùng chung một thứ tiếng, và phải có 3 người biết cùng một tiếng (đó là tiếng Trung), D bắt buộc phải biết tiếng Trung và tiếng Anh."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Dựa vào các thông tin được cung cấp dưới đây để trả lời các câu từ 94 đến 96",
+    "passage_content": "Tình cờ trên một toa xe lửa có một nhà thơ, một nhà văn, một nhà viết kịch và một nhà sử học ngồi cạnh nhau. Tên của họ là: An, Vân, Khoa, Đạt.\nQua chuyện trò trao đổi thì thấy: Mỗi người đều mang theo một tác phẩm của một trong 3 người kia để đọc trong cuộc hành trình.\n- An và Vân trước đây đã đọc tác phẩm của nhau, nhưng giờ đây không có người nào mang theo tác phẩm của người kia.\n- Vân đọc tác phẩm của Đạt.\n- Đạt không bao giờ đọc thơ.\n- Nhà thơ đọc tác phẩm kịch.\n- Nhà văn trẻ vừa mới ra đời tác phẩm đầu tiên nói rằng: khi đọc xong tác phẩm mang theo anh ta sẽ mượn đọc tác phẩm của nhà sử học.\n- Trên tàu không có ai mang theo tác phẩm của chính mình.",
+    "questions": [
+      {
+        "question": "Nhà văn đọc tác phẩm gì?",
+        "options": [
+          " Thơ",
+          " Kịch",
+          " Sử",
+          " Không xác định được."
+        ],
+        "answer": "A",
+        "explain": "Từ dữ kiện 'Nhà văn trẻ vừa mới ra đời tác phẩm đầu tiên', ta suy ra An và Vân không thể là nhà văn vì họ đã 'đọc tác phẩm của nhau trước đây'. Nhà văn muốn mượn tác phẩm của nhà Sử học, vậy Nhà văn không cầm tác phẩm của nhà Sử học. Phân tích vòng lặp đọc: Nhà văn đọc Thơ -> Nhà thơ đọc Kịch -> Nhà viết kịch đọc Sử -> Nhà sử học đọc Văn. Do Vân đọc tác phẩm của Đạt (Nhà thơ đọc Kịch), suy ra Vân là Nhà thơ, Đạt là Nhà viết kịch. Khoa là Nhà văn (đọc của Vân - Thơ) và An là Nhà sử học. Vậy Nhà văn đọc tác phẩm Thơ."
+      },
+      {
+        "question": "Nhà văn tên là gì?",
+        "options": [
+          " An",
+          " Vân",
+          " Đạt",
+          " Khoa"
+        ],
+        "answer": "D",
+        "explain": "Từ phân tích ở câu 94, An và Vân loại vì đã có tác phẩm trước đây. Đạt là nhà viết kịch (bị Vân đọc). Vậy Khoa chính là Nhà văn trẻ."
+      },
+      {
+        "question": "Chọn đáp án sai trong các đáp án sau?",
+        "options": [
+          " Vân là nhà thơ",
+          " Đạt là người viết kịch",
+          " Đạt là nhà thơ",
+          " Vân đọc kịch"
+        ],
+        "answer": "C",
+        "explain": "Từ suy luận, Đạt là nhà viết kịch, không phải là nhà thơ. Hơn nữa, đề bài có nói 'Đạt không bao giờ đọc thơ', càng củng cố việc Đạt không thể là nhà thơ (điều vô lý nếu tác giả không đọc thơ). Vậy khẳng định Đạt là nhà thơ là sai."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Dựa vào các thông tin được cung cấp dưới đây để trả lời các câu từ 97 đến 99",
+    "passage_content": "Giá tiêu (13/03/2025) tại vùng Tây Nguyên và miền Nam:\n- ĐẮK LẮK (Ea H'leo): 37 500 VNĐ/kg\n- GIA LAI (Chư Sê): 36 000 VNĐ/kg\n- ĐẮK NÔNG (Gia Nghĩa): 37 500 VNĐ/kg\n- BÀ RỊA – VŨNG TÀU (Giá trung bình): 38 500 VNĐ/kg\n- BÌNH PHƯỚC (Giá trung bình): 38 000 VNĐ/kg\n- ĐỒNG NAI (Giá trung bình): 36 000 VNĐ/kg",
+    "questions": [
+      {
+        "question": "Giá tiêu trung bình (ngày 13/3/2025) tại Bà Rịa – Vũng Tàu cao hơn giá tiêu trung bình tại Đồng Nai là bao nhiêu phần trăm? (làm tròn đến số thập phân thứ nhất).",
+        "options": [
+          " 6,9%",
+          " 5,8%",
+          " 7,2%",
+          " 6,5%"
+        ],
+        "answer": "A",
+        "explain": "Giá tiêu tại BR-VT là 38 500 VNĐ/kg. Giá tiêu tại Đồng Nai là 36 000 VNĐ/kg. Phần trăm chênh lệch = (38 500 - 36 000) / 36 000 × 100% = 2500 / 36000 × 100% ≈ 6,944%, làm tròn thành 6,9%."
+      },
+      {
+        "question": "Giá tiêu (ngày 13/3/2020) tại Gia Nghĩa tỉnh Đăk Nông là:",
+        "options": [
+          " 36 000 đồng/kg",
+          " 37 000 đồng/kg",
+          " 37 500 đồng",
+          " 38 000 đồng"
+        ],
+        "answer": "C",
+        "explain": "Tra cứu thông tin trực tiếp từ bảng, giá thu mua tiêu tại Đắk Nông (Gia Nghĩa) là 37 500 VNĐ/kg."
+      },
+      {
+        "question": "Giá tiêu ở tỉnh/huyện (khu vực khảo sát) nào ở bảng trên cao nhất?",
+        "options": [
+          " Đắk Lắk",
+          " Đồng Nai",
+          " Bà Rịa – Vũng Tàu",
+          " Bình Phước"
+        ],
+        "answer": "C",
+        "explain": "Trong tất cả các số liệu, 38 500 VNĐ/kg của Bà Rịa – Vũng Tàu là mức giá cao nhất."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Dựa vào các thông tin được cung cấp dưới đây để trả lời các câu từ 100 đến 102",
+    "passage_content": "Mọi quá trình trong chuỗi cung ứng thực phẩm ít nhiều đều làm phát thải khí nhà kính. Tuy nhiên, chuỗi cung ứng thực phẩm từ động vật làm phát thải nhiều khí nhà kính hơn chuỗi thực phẩm thực vật.\nLƯỢNG PHÁT THẢI KHÍ NHÀ KÍNH KHI SẢN XUẤT 1KG THỰC PHẨM (kg CO2 tương đương):\nThịt bò (nuôi lấy thịt): 60\nThịt cừu: 24\nThịt bò (nuôi bò lấy sữa): 21\nSô cô la: 19\nCà phê: 17\nTôm (nuôi): 12\nThịt lợn: 7\nThịt gia cầm: 6\nCá (nuôi): 5\nTrứng: 4,5\nGạo: 4\nĐường: 3\nLúa mì: 1,4\nNgô: 1\nTáo: 0,4",
+    "questions": [
+      {
+        "question": "Thực phẩm nào tác động tới môi trường nhiều nhất?",
+        "options": [
+          " Táo",
+          " Trứng",
+          " Thịt lợn",
+          " Thịt bò"
+        ],
+        "answer": "D",
+        "explain": "Thịt bò (nuôi lấy thịt) có mức phát thải khí nhà kính là 60 kg CO2 tương đương cho mỗi 1 kg thực phẩm, cao nhất trong tất cả các loại thực phẩm được liệt kê."
+      },
+      {
+        "question": "Những giống bò cao sản, được chăn nuôi theo kiểu tăng trọng chủ yếu phục vụ cho mục đích lấy thịt bò. Trung bình mỗi con bò thịt có cân nặng 450kg khi còn sống sẽ cho một lượng thịt nặng khoảng 280 kg. Lượng phát thải (kg CO2 tương đương) khi đó là bao nhiêu kgCO2?",
+        "options": [
+          " 16900kg",
+          " 16800kg",
+          " 16700kg",
+          " 17600kg"
+        ],
+        "answer": "B",
+        "explain": "Mức phát thải được tính trên mỗi kg THỰC PHẨM (thịt), không phải trọng lượng sống của con vật. Vậy, với 280 kg thịt bò thu được, lượng phát thải là: 280 × 60 = 16 800 kg CO2."
+      },
+      {
+        "question": "Lượng phát thải khí nhà kính khi sản xuất 2 tấn thịt bò từ nuôi bò lấy thịt nhiều hơn so với khi sản xuất 2 tấn thịt bò từ nuôi bò lấy sữa là bao nhiêu ki-lô-gam?",
+        "options": [
+          " 72000kg",
+          " 68000kg",
+          " 78000kg",
+          " 87000kg"
+        ],
+        "answer": "C",
+        "explain": "Đổi 2 tấn = 2000 kg. Độ chênh lệch phát thải trên mỗi kg giữa hai loại thịt bò là: 60 - 21 = 39 kg CO2. Vậy sự chênh lệch đối với 2 tấn thực phẩm là: 39 × 2000 = 78 000 kg CO2."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Đọc thông tin sau để trả lời các câu hỏi từ 103 đến 105.",
+    "passage_content": "Hydrogen halide là hợp chất tạo thành từ phản ứng giữa halogen (nguyên tố Nhóm VIIA) và hydrogen. Độ phân cực liên kết của hydrogen halide giảm dần từ HF đến HI. Bảng sau cho biết một số dữ liệu liên quan:\n- HF: Nhiệt độ sôi 19°C, Năng lượng liên kết H-X là 562 kJ/mol.\n- HCl: Nhiệt độ sôi -85°C, Năng lượng liên kết H-X là 431 kJ/mol.\n- HBr: Nhiệt độ sôi -67°C, Năng lượng liên kết H-X là 366 kJ/mol.\n- HI: Nhiệt độ sôi -35°C, Năng lượng liên kết H-X là 299 kJ/mol.",
+    "questions": [
+      {
+        "question": "Độ bền nhiệt tương đối của hydrogen halide thay đổi thế nào khi đi từ trên xuống dưới trong Nhóm VIIA?",
+        "options": [
+          " Giảm dần",
+          " Tăng dần",
+          " Không thay đổi",
+          " Không xác định được"
+        ],
+        "answer": "A",
+        "explain": "Độ bền nhiệt của một chất phụ thuộc vào năng lượng liên kết. Từ HF đến HI, năng lượng liên kết giảm dần (từ 562 xuống 299 kJ/mol), nghĩa là liên kết dễ bị bẻ gãy hơn khi đun nóng. Do đó, độ bền nhiệt giảm dần."
+      },
+      {
+        "question": "Dưới đây là phản ứng điều chế hydrogen chloride từ sulfuric acid đặc\n$H_2SO_4 + NaCl \\rightarrow NaHSO_4 + HCl$\nCặp acid-base liên hợp trong phản ứng này là",
+        "options": [
+          " HCl / Cl-",
+          " HSO4- / H2SO4",
+          " H2SO4 / HSO4-",
+          " A và C"
+        ],
+        "answer": "D",
+        "explain": "Theo thuyết Bronsted-Lowry, acid là chất cho proton (H+), base là chất nhận proton. Trong phản ứng này, H2SO4 cho H+ để biến thành HSO4-, vậy H2SO4 / HSO4- là một cặp acid/base liên hợp. Đồng thời, ion Cl- (trong NaCl) nhận H+ để tạo thành HCl, nên HCl / Cl- cũng là một cặp acid/base liên hợp. Cả A và C đều đúng."
+      },
+      {
+        "question": "Hydrogen chloride tham gia phản ứng thuận nghịch với oxygen.\n$4HCl(g) + O_2(g) \\rightleftharpoons 2Cl_2(g) + 2H_2O(g)$\nPhản ứng được thực hiện ở $400^\\circ C$ với sự có mặt của xúc tác copper(II) chloride. Trong một thí nghiệm, hỗn hợp các khí ở trạng thái cân bằng có áp suất riêng phần như sau: HCl = $4,8 \\times 10^4$ Pa; O2 = $3,0 \\times 10^4$ Pa; Cl2 = $3,6 \\times 10^4$ Pa; H2O = $3,6 \\times 10^4$ Pa. Dựa vào các số liệu và công thức $K_p = \\frac{(p_{Cl_2})^2 \\times (p_{H_2O})^2}{(p_{HCl})^4 \\times (p_{O_2})}$, giá trị Kp là bao nhiêu?",
+        "options": [
+          " $1,05 \\cdot 10^5 \\text{ Pa}$",
+          " $1,05 \\cdot 10^{-5} \\frac{1}{\\text{Pa}}$",
+          " $5,01 \\cdot 10^5 \\frac{1}{\\text{Pa}^2}$",
+          " $5,10 \\cdot 10^5 \\frac{1}{\\text{Pa}^3}$"
+        ],
+        "answer": "B",
+        "explain": "Lưu ý: Đáp án gốc trong đề có thể in lỗi dấu âm của số mũ. Theo công thức: $K_p = \\frac{(3,6 \\times 10^4)^2 \\times (3,6 \\times 10^4)^2}{(4,8 \\times 10^4)^4 \\times (3,0 \\times 10^4)} = \\frac{(3,6)^4 \\times 10^{16}}{(4,8)^4 \\times 10^{16} \\times 3,0 \\times 10^4} = \\frac{(3/4)^4}{30000} = \\frac{81/256}{30000} \\approx 1,05 \\times 10^{-5}$. Đơn vị là $\\text{Pa}^4 / \\text{Pa}^5 = 1/\\text{Pa}$. Đáp án B đúng về mặt đơn vị và giá trị (chỉnh lại lỗi in ấn $10^5 \\to 10^{-5}$)."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Đọc thông tin sau để trả lời các câu hỏi từ 106 đến 108.",
+    "passage_content": "Máy lọc bụi tĩnh điện có nguyên lý: Không khí ô nhiễm sau khi được hút qua màng lọc sẽ còn lại các hạt bụi nhỏ, nhẹ bay vào vùng điện trường mạnh. Tại đây, các hạt bụi chủ yếu bị ion hóa thành các điện tích âm sau đó bay vào vùng có chứa các tấm thu bụi (là hệ thống các tấm phẳng song song được đấu vào các điện cực trái dấu). Bụi bị các tấm tích điện dương hút và giữ lại.\nXét một máy lọc bụi tĩnh điện có các tấm thu bụi được đặt song song với nhau, khoảng cách giữa hai tấm liên tiếp là $d = 2 \\text{ cm}$, hiệu điện thế giữa hai tấm là $U = 1,6 \\text{ kV}$. Một hạt bụi có khối lượng $m = 10^{-6} \\text{ g}$, tích điện $q = -1,6 \\cdot 10^{-12} \\text{ C}$ bay vào khoảng không gian giữa hai tấm thu bụi liên tiếp theo phương ngang và song song với các tấm thu bụi tại vị trí cách đều các tấm. Giả sử sau đó hạt bụi bị tấm thu giữ lại và không xảy ra va chạm với các hạt khác.",
+    "questions": [
+      {
+        "question": "Cho các yếu tố sau: (1) Tính chất của các điện cực, (2) Tốc độ chuyển động của hạt bụi trong điện trường, (3) Kích thước hạt bụi, (4) Độ lớn điện tích của hạt bụi. Hiệu quả lọc bụi của hệ thống lọc bụi tĩnh điện phụ thuộc vào bao nhiêu yếu tố đã đề cập ở trên?",
+        "options": [
+          " 1",
+          " 2",
+          " 3",
+          " 4"
+        ],
+        "answer": "D",
+        "explain": "Hiệu quả lọc bụi phụ thuộc vào quỹ đạo bay của hạt bụi. Quỹ đạo này bị quyết định bởi: gia tốc điện trường $a = \\frac{qU}{md}$ (phụ thuộc độ lớn điện tích, hiệu điện thế, khoảng cách), tính chất điện cực (1), tốc độ bay ban đầu (2), và khối lượng/kích thước hạt bụi (3, 4) ảnh hưởng tới sức cản không khí cũng như gia tốc. Nên cả 4 yếu tố đều có tác động."
+      },
+      {
+        "question": "Thời gian từ lúc hạt bụi bắt đầu vào khoảng không gian giữa hai tấm thu bụi đến lúc nó bị tấm cực (dương) giữ lại là",
+        "options": [
+          " 12,0 ms",
+          " 12,5 ms",
+          " 24,0 ms",
+          " 25,0 ms"
+        ],
+        "answer": "B",
+        "explain": "Đổi đơn vị: $m = 10^{-9} \\text{ kg}$, $U = 1600 \\text{ V}$, $d = 0,02 \\text{ m}$. Cường độ điện trường $E = \\frac{U}{d} = 80000 \\text{ V/m}$. Lực điện $F = |q|E = 1,6 \\cdot 10^{-12} \\times 80000 = 1,28 \\cdot 10^{-7} \\text{ N}$. Gia tốc theo phương thẳng đứng $a = \\frac{F}{m} = 128 \\text{ m/s}^2$. Hạt bụi bay ở chính giữa nên cần đi quãng đường $y = \\frac{d}{2} = 0,01 \\text{ m}$ theo phương Oy để chạm cực. Từ $y = \\frac{1}{2}at^2 \\Rightarrow t = \\sqrt{\\frac{2y}{a}} = \\sqrt{\\frac{2 \\times 0,01}{128}} = \\frac{1}{80} \\text{ s} = 12,5 \\text{ ms}."
+      },
+      {
+        "question": "Tốc độ hạt bụi lúc bắt đầu vào khoảng không gian giữa hai tấm thu bụi là $v_x = 2 \\text{ m/s}$ và giả sử theo phương ngang tốc độ không đổi. Tốc độ va chạm của hạt bụi với tấm thu là:",
+        "options": [
+          " 3,1 m/s",
+          " 2,8 m/s",
+          " 2,6 m/s",
+          " 2,5 m/s"
+        ],
+        "answer": "C",
+        "explain": "Tốc độ theo phương ngang không đổi: $v_x = 2 \\text{ m/s}$. Tốc độ theo phương thẳng đứng ngay trước khi va chạm: $v_y = a \\cdot t = 128 \\times \\frac{1}{80} = 1,6 \\text{ m/s}$. Tốc độ va chạm tổng hợp: $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{2^2 + 1,6^2} = \\sqrt{4 + 2,56} = \\sqrt{6,56} \\approx 2,561 \\text{ m/s}$, làm tròn thành $2,6 \\text{ m/s}$."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Đọc thông tin sau để trả lời các câu hỏi từ 109 đến 111.",
+    "passage_content": "Nghiên cứu di truyền học đóng vai trò cốt lõi trong việc làm sáng tỏ cơ chế tiến hóa thông qua việc phân tích sự biến đổi của vật chất di truyền qua các thế hệ. Theo thuyết tiến hóa tổng hợp hiện đại, nguyên liệu sơ cấp cho quá trình chọn lọc tự nhiên chính là các đột biến gene, tạo ra sự đa dạng về kiểu hình trong quần thể. Bằng cách so sánh trình tự nucleotide trong DNA hoặc trình tự amino acid trong protein, các nhà khoa học có thể xác định mức độ quan hệ họ hàng giữa các loài. Những loài có quan hệ họ hàng càng gần thì trình tự các đơn phân này càng giống nhau.\nNgoài ra, việc nghiên cứu các \"gene giả\" (pseudogenes) – những đoạn DNA không còn chức năng nhưng vẫn tồn tại trong bộ gene – giúp chúng ta lần lại dấu vết của các đặc điểm đã mất đi trong quá trình thích nghi. Di truyền học cũng giải thích hiện tượng trôi dạt di truyền, nơi các yếu tố ngẫu nhiên có thể làm thay đổi tần số allele của quần thể một cách đột ngột. Sự kết hợp giữa di truyền và tiến hóa khẳng định rằng mọi sự sống trên Trái Đất đều có chung một nguồn gốc thống nhất.",
+    "questions": [
+      {
+        "question": "Sự tồn tại của các \"gene giả\" (không còn chức năng) trong bộ gene người là minh chứng cho điều gì?",
+        "options": [
+          " Bộ gene của con người đang bị thoái hóa theo thời gian.",
+          " Các gene này được hình thành do sai sót trong quá trình giải trình tự gene.",
+          " Dấu vết của các đặc điểm di truyền từ tổ tiên vốn từng có chức năng nhưng nay không còn cần thiết.",
+          " Khả năng tự sửa chữa tuyệt vời của tế bào trước các tác nhân gây đột biến."
+        ],
+        "answer": "C",
+        "explain": "Đoạn văn nêu rõ: Việc nghiên cứu các \"gene giả\" giúp chúng ta 'lần lại dấu vết của các đặc điểm đã mất đi trong quá trình thích nghi'. Điều này chứng tỏ đó là di tích từ tổ tiên vốn có chức năng nhưng do chọn lọc tự nhiên không còn dùng nữa nên bị vô hiệu hóa."
+      },
+      {
+        "question": "Tại sao trình tự amino acid của protein Cytochrome c (một loại protein quan trọng trong chuỗi truyền electron ở ti thể) lại thường được dùng để thiết lập sơ đồ quan hệ họ hàng giữa các loài?",
+        "options": [
+          " Vì protein này chỉ xuất hiện ở những loài có quan hệ họ hàng rất xa.",
+          " Vì đây là protein thiết yếu, biến đổi rất chậm, cho phép quan sát các dấu vết tiến hóa trong thời gian dài.",
+          " Vì protein này có khả năng tự đột biến để thích nghi với môi trường sống.",
+          " Vì trình tự của nó hoàn toàn giống nhau ở tất cả các loài sinh vật."
+        ],
+        "answer": "B",
+        "explain": "Cytochrome c là protein tham gia vào hô hấp tế bào ở hầu hết mọi sinh vật nhân thực. Do là protein sống còn, nó rất ít bị đột biến làm thay đổi cấu trúc (tốc độ tiến hóa phân tử chậm), giúp khoa học so sánh trình tự của nó để lập bản đồ tiến hóa từ sinh vật đơn bào đến con người (phù hợp với nguyên lý được nêu trong bài)."
+      },
+      {
+        "question": "Trong việc điều trị bệnh ung thư, các bác sĩ thường giải trình tự gene của khối u nhiều lần trong quá trình điều trị. Việc này ứng dụng tư duy tiến hóa di truyền như thế nào?",
+        "options": [
+          " Để tìm cách biến tế bào ung thư trở lại thành tế bào bình thường.",
+          " Để theo dõi sự \"tiến hóa\" của khối u thông qua các đột biến mới giúp chúng kháng thuốc, từ đó điều chỉnh phác đồ điều trị kịp thời.",
+          " Để chứng minh rằng bệnh ung thư không có khả năng di truyền cho thế hệ sau.",
+          " Để xác định xem khối u đó có quan hệ họ hàng với các virus gây bệnh hay không."
+        ],
+        "answer": "B",
+        "explain": "Dưới áp lực của các loại thuốc trị ung thư (chọn lọc nhân tạo/tự nhiên ở mức tế bào), khối u liên tục tích lũy các đột biến gene mới để sống sót (kháng thuốc). Bác sĩ giải trình tự nhiều lần là để theo sát quá trình \"tiến hóa vi mô\" này nhằm thay đổi phương pháp điều trị."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Đọc thông tin sau để trả lời các câu hỏi từ 112 đến 114.",
+    "passage_content": "Vụ lúa đông xuân là vụ lúa chính trong năm, chiếm hơn 40% diện tích gieo trồng lúa, năng suất cao nhất và sản lượng chiếm từ 45-47% tổng sản lượng cả năm.\nTheo kết quả tổng hợp sơ bộ, diện tích gieo cấy lúa đông xuân 2023 cả nước đạt gần 2.952,5 nghìn ha, giảm 39,8 nghìn ha so với vụ đông xuân năm trước.\nTại các địa phương phía Bắc: Diện tích gieo trồng sơ bộ đạt 1.067,7 nghìn ha, giảm 10,4 nghìn ha.\nTại các địa phương phía Nam: Diện tích gieo trồng đạt 1.884,8 nghìn ha, giảm 29,3 nghìn ha so với năm trước. Trong đó, vùng Đồng bằng sông Cửu Long có diện tích lớn nhất, đạt 1.478,7 nghìn ha, giảm 28,2 nghìn ha. Diện tích giảm chủ yếu do chuyển đổi mục đích sử dụng đất, các tỉnh giảm nhiều là: Sóc Trăng giảm 7,7 nghìn ha; Vĩnh Long giảm 6,6 nghìn ha...",
+    "questions": [
+      {
+        "question": "Diện tích lúa được tính bằng",
+        "options": [
+          " sản lượng chia năng suất lúa",
+          " năng suất chia sản lượng lúa",
+          " sản lượng nhân năng suất lúa",
+          " tổng diện tích đất nông nghiệp"
+        ],
+        "answer": "A",
+        "explain": "Theo công thức cơ bản trong nông nghiệp: Sản lượng (tổng thu hoạch) = Diện tích × Năng suất (thu hoạch trên mỗi đơn vị diện tích). Do đó, Diện tích = Sản lượng / Năng suất."
+      },
+      {
+        "question": "Diện tích gieo cấy lúa đông xuân cả nước năm 2022 đạt",
+        "options": [
+          " 1884,8 nghìn ha",
+          " 2.952,5 nghìn ha",
+          " 2 992,3 nghìn ha",
+          " 2 912,7 nghìn ha"
+        ],
+        "answer": "C",
+        "explain": "Đoạn văn viết: 'diện tích gieo cấy lúa đông xuân 2023 cả nước đạt gần 2.952,5 nghìn ha, giảm 39,8 nghìn ha so với vụ đông xuân năm trước'. Nghĩa là năm 2022 (năm trước) có diện tích lớn hơn: 2952,5 + 39,8 = 2992,3 nghìn ha."
+      },
+      {
+        "question": "Diện tích lúa đông xuân năm 2023 ở Đồng bằng sông Cửu Long có xu hướng giảm chủ yếu do",
+        "options": [
+          " chuyển đổi mục đích sử dụng đất",
+          " thời tiết khó khăn trên vùng miền",
+          " trình độ kỹ thuật canh tác lạc hậu",
+          " chuyên đổi cơ cấu giống lương thực"
+        ],
+        "answer": "A",
+        "explain": "Thông tin nằm trực tiếp ở cuối đoạn văn: 'Diện tích giảm chủ yếu do chuyển đổi mục đích sử dụng đất, các tỉnh có diện tích giảm nhiều là: Sóc Trăng...'"
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 115 đến 117",
+    "passage_content": "“Cách mạng công nghiệp là cuộc cách mạng về kỹ thuật, nhưng nó không chỉ có tác dụng thúc đẩy sản xuất phát triển mà còn đem lại những thay đổi sâu sắc về mặt xã hội. Hệ quả, ảnh hưởng của cuộc cách mạng này không chỉ ở Anh mà còn đối với cả xã hội loài người.\nSự phát triển mạnh mẽ của công nghiệp nặng và nhẹ đã dẫn đến sự biến đổi sâu sắc bản đồ địa lý kinh tế của nước Anh. Nếu trước kia, đại đa số các trung tâm công thương nghiệp và các vùng đông dân cư đều tập trung ở miền Đông Nam, thì trong thời gian diễn ra cách mạng công nghiệp, Tây Bắc đã trở thành một vùng công nghiệp mới. Có nhiều thành phố mới phát triển nhanh chóng như: Manxexto, Livopun, Bócminhham. Luân Đôn trở thành thành phố đầu tiên trên thế giới tiến lên con đường công nghiệp hóa và là một trung tâm thương mại của thế giới với số dân 80 vạn người.”",
+    "questions": [
+      {
+        "question": "Cuộc cách mạng công nghiệp lần thứ nhất được khởi đầu tại quốc gia nào sau đây?",
+        "options": [
+          " Pháp",
+          " Anh",
+          " Đức",
+          " Mỹ"
+        ],
+        "answer": "B",
+        "explain": "Đoạn trích nêu rõ sự thay đổi và ảnh hưởng của cuộc cách mạng này bắt đầu từ việc làm biến đổi bản đồ kinh tế của 'nước Anh' (với các địa danh nổi tiếng như Luân Đôn, Manchester, Liverpool...)."
+      },
+      {
+        "question": "Nội dung nào sau đây là tác động về mặt xã hội của cuộc cách mạng công nghiệp lần thứ nhất?",
+        "options": [
+          " Giảm bớt mâu thuẫn giữa tư sản và vô sản",
+          " Đời sống của công nhân ngày càng cải thiện",
+          " Hình thành hai giai cấp cơ bản của xã hội tư bản",
+          " Xuất hiện các thành thị trung đại sầm uất"
+        ],
+        "answer": "C",
+        "explain": "Kiến thức lịch sử cốt lõi: Cách mạng công nghiệp lần thứ nhất không chỉ là bước nhảy vọt về kỹ thuật mà còn định hình lại cơ cấu xã hội sâu sắc, đặc biệt là dẫn tới sự ra đời và phân hoá rõ rệt của hai giai cấp đối kháng: Tư sản công nghiệp (chủ nhà máy) và Vô sản công nghiệp (công nhân làm thuê)."
+      },
+      {
+        "question": "Nội dung nào sau đây không phải là ý nghĩa của các cuộc cách mạng công nghiệp thời cận đại đối với sự phát triển kinh tế?",
+        "options": [
+          " Chuyển nền sản xuất thủ công sang cơ khí hoá",
+          " Thúc đẩy sự phát triển của nông nghiệp, giao thông vận tải",
+          " Nâng cao năng suất và hiệu quả lao động",
+          " Đưa nhân loại bước sang nền văn minh thông tin"
+        ],
+        "answer": "D",
+        "explain": "Thời kỳ cận đại chứng kiến Cách mạng công nghiệp lần 1 (cơ giới hóa) và lần 2 (điện khí hóa). Việc 'bước sang nền văn minh thông tin' là hệ quả của Cách mạng công nghiệp lần thứ 3 (cuối thế kỷ XX ở thời hiện đại) với sự ra đời của máy tính, vi mạch và Internet."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tư duy khoa học",
+    "instruction": "Đọc thông tin sau để trả lời các câu hỏi từ 118 đến 120.",
+    "passage_content": "Năm 2022, với việc triển khai đồng bộ các loại chính sách an sinh, công tác an sinh xã hội nước ta đã mang lại nhiều kết quả tích cực góp phần tạo ra sự ổn định, phát triển đất nước. Một trong những biểu hiện cụ thể nhất chính là chính sách hỗ trợ việc làm cho người dân.\nCụ thể: Số lao động có việc làm trong các ngành kinh tế năm 2022 là 50,6 triệu người, tăng 1.532,7 nghìn người so với năm 2021. GDP bình quân đầu người năm 2022 đạt 4.125 USD/người, tăng 404 USD so với năm 2021. Tỉ lệ thất nghiệp trong độ tuổi lao động của cả nước năm 2022 là 2,34% giảm 0,86 điểm phần trăm so với năm trước.",
+    "questions": [
+      {
+        "question": "GDP là viết tắt của chỉ tiêu nào sau đây?",
+        "options": [
+          " Tổng sản phẩm quốc nội",
+          " Tổng sản phẩm quốc gia",
+          " Tổng thu nhập quốc nội",
+          " Tổng thu nhập quốc gia"
+        ],
+        "answer": "A",
+        "explain": "GDP (Gross Domestic Product) dịch sang tiếng Việt là Tổng sản phẩm quốc nội. (GNP mới là Tổng sản phẩm quốc gia)."
+      },
+      {
+        "question": "Dựa vào thông tin đoạn trích, GDP bình quân đầu người năm 2022 đã tăng bao nhiêu phần trăm so với năm 2021?",
+        "options": [
+          " 9,8%",
+          " 10,9%",
+          " 2,34%",
+          " 3,1%"
+        ],
+        "answer": "B",
+        "explain": "Năm 2022 đạt 4125 USD, mức này đã tăng 404 USD so với 2021. Suy ra mức GDP năm 2021 là: 4125 - 404 = 3721 USD. Phần trăm tăng trưởng so với năm 2021 là: (404 / 3721) × 100% ≈ 10,857%, làm tròn thành 10,9%."
+      },
+      {
+        "question": "Chỉ tiêu nào thường được chọn để đánh giá tăng trưởng kinh tế?",
+        "options": [
+          " Mức tăng GDP trong một thời kỳ nhất định",
+          " Tỉ lệ lạm phát của nền kinh tế quốc gia trong một thời kỳ nhất định",
+          " Mức tăng/giảm tỷ lệ thất nghiệp trong một thời kỳ nhất định",
+          " Chỉ số phát triển con người tăng nhanh trong một giai đoạn."
+        ],
+        "answer": "A",
+        "explain": "Tăng trưởng kinh tế là sự gia tăng quy mô sản lượng của một nền kinh tế trong một khoảng thời gian. Chỉ tiêu cốt lõi và phổ biến nhất được sử dụng trên toàn cầu để đo lường điều này chính là sự thay đổi (mức tăng) của Tổng sản phẩm quốc nội (GDP)."
+      }
+    ]
   }
 ]

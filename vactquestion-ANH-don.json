@@ -132,7 +132,7 @@
     {
         "type": "rewrite",
         "subject": "Tiếng Anh",
-        "question": "Which of the following best restates each of the given sentences?\nHe asked me, “Are you working on the proposal now?”",
+        "question": "He asked me, “Are you working on the proposal now?”",
         "options": [
             " He asked if I am working on the proposal now.",
             " He asked whether I was working on the proposal then.",
@@ -145,7 +145,7 @@
     {
         "type": "rewrite",
         "subject": "Tiếng Anh",
-        "question": "Which of the following best restates each of the given sentences?\nThey gave the students clear instructions.",
+        "question": "They gave the students clear instructions.",
         "options": [
             " The students were given clear instructions.",
             " Clear instructions were given the students.",
@@ -158,7 +158,7 @@
     {
         "type": "rewrite",
         "subject": "Tiếng Anh",
-        "question": "Which of the following best restates each of the given sentences?\nIf it hadn’t been for her support, he would have failed.",
+        "question": "If it hadn’t been for her support, he would have failed.",
         "options": [
             " Without her support, he would fail.",
             " But for her support, he would have failed.",
@@ -171,7 +171,7 @@
     {
         "type": "rewrite",
         "subject": "Tiếng Anh",
-        "question": "Which of the following best restates each of the given sentences?\nNothing is more important than health.",
+        "question": "Nothing is more important than health.",
         "options": [
             " Health is the most important thing.",
             " Health is more important than nothing.",
@@ -184,7 +184,7 @@
     {
         "type": "rewrite",
         "subject": "Tiếng Anh",
-        "question": "Which of the following best restates each of the given sentences?\nIt’s possible that they took a different route.",
+        "question": "It’s possible that they took a different route.",
         "options": [
             " They must have taken a different route.",
             " They could have taken a different route.",
@@ -193,5 +193,200 @@
         ],
         "answer": "B",
         "explain": "'It’s possible that...' diễn tả một khả năng có thể đã xảy ra trong quá khứ nhưng không chắc chắn. Cấu trúc Modal Verb hoàn thành tương đương là 'could/may/might + have + V3/ed'. (Must have: chắc chắn đã; Should have: lẽ ra nên)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "She was offered a great job in another city, but she decided to turn it _________",
+        "options": [
+            " off",
+            " over",
+            " back",
+            " down"
+        ],
+        "answer": "D",
+        "explain": "Cụm động từ 'turn down' có nghĩa là từ chối (một lời mời, một công việc). Các cụm từ khác: turn off (tắt), turn over (lật lại), turn back (quay lại) không phù hợp với ngữ cảnh 'cô ấy được đề nghị một công việc tuyệt vời nhưng quyết định từ chối'."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "We _________ dinner at 7 p.m. when the power went out.",
+        "options": [
+            " have",
+            " had",
+            " were having",
+            " have had"
+        ],
+        "answer": "C",
+        "explain": "Cấu trúc với 'when' diễn tả một hành động đang xảy ra trong quá khứ (chia thì Quá khứ tiếp diễn - was/were V-ing) thì một hành động khác xen vào (chia thì Quá khứ đơn - V2/ed). Việc 'chúng tôi đang ăn tối' là hành động đang diễn ra nên dùng 'were having'."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "Although the new movie was good, many fans found it _________ than the previous one.",
+        "options": [
+            " entertaining",
+            " most entertaining",
+            " less entertaining",
+            " entertaining as"
+        ],
+        "answer": "C",
+        "explain": "Câu có chứa từ 'than' là dấu hiệu của cấu trúc so sánh hơn/kém. Nghĩa của câu: 'Mặc dù bộ phim mới rất hay, nhiều người hâm mộ nhận thấy nó kém tính giải trí hơn so với phần trước'. Do đó chọn 'less entertaining'."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "The students are really looking forward to _________ their friends during the holiday break.",
+        "options": [
+            " seeing",
+            " seen",
+            " sees",
+            " see"
+        ],
+        "answer": "A",
+        "explain": "Cấu trúc 'look forward to + V-ing / Noun' mang nghĩa là mong đợi, mong ngóng điều gì đó. Do vậy, động từ theo sau phải ở dạng V-ing ('seeing')."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "There is not _________ of syntactical sense to be had here, on the page at least, and this is intentional.",
+        "options": [
+            " some",
+            " a number",
+            " a huge amount",
+            " many"
+        ],
+        "answer": "C",
+        "explain": "'Sense' (ý nghĩa, sự hợp lý) là danh từ không đếm được. 'A number of' và 'many' chỉ đi với danh từ đếm được số nhiều. 'Some' dùng trong câu khẳng định, còn câu này mang nghĩa phủ định 'not'. 'A huge amount of' + danh từ không đếm được là lựa chọn chính xác."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "<u>A</u> poor often struggled <u>to</u> access basic healthcare because <u>they</u> lacked the necessary <u>resources</u>.",
+        "options": [
+            " A",
+            " to",
+            " they",
+            " resources"
+        ],
+        "answer": "A",
+        "explain": "Để chỉ một tầng lớp hay một nhóm người có chung một đặc điểm, ta dùng mạo từ 'The + Adjective' (The poor: những người nghèo). Lỗi sai ở A, phải sửa 'A' thành 'The'."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "<u>The</u> professor, along <u>with</u> the students, <u>were</u> excited about the <u>upcoming</u> seminar.",
+        "options": [
+            " The",
+            " with",
+            " were",
+            " upcoming"
+        ],
+        "answer": "C",
+        "explain": "Quy tắc sự hòa hợp giữa chủ ngữ và động từ: Khi chủ ngữ 1 và chủ ngữ 2 được nối với nhau bởi các cụm từ như 'along with', 'together with', 'as well as',... thì động từ được chia theo chủ ngữ 1. Chủ ngữ 1 là 'The professor' (ngôi thứ ba số ít), do đó động từ phải là 'was', không phải 'were'."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "The house, in <u>where</u> my family and <u>I</u> <u>had lived</u> for over two decades, <u>is</u> now being demolished to make space for new buildings.",
+        "options": [
+            " where",
+            " I",
+            " had lived",
+            " is"
+        ],
+        "answer": "A",
+        "explain": "Trong mệnh đề quan hệ, 'where' được dùng để thay thế cho trạng ngữ chỉ nơi chốn và bằng với 'in/at/on + which'. Do đó, ta không thể dùng giới từ 'in' đi kèm với 'where'. Sửa 'where' thành 'which' (in which)."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "<u>I</u> accidentally left my <u>mom</u> <u>books</u> at your house yesterday, could you please bring <u>them</u> back tomorrow?",
+        "options": [
+            " I",
+            " mom",
+            " books",
+            " them"
+        ],
+        "answer": "B",
+        "explain": "Để chỉ sự sở hữu 'những cuốn sách của mẹ tôi', ta phải dùng sở hữu cách thêm phẩy s ('s) vào danh từ chỉ người. Sửa 'mom' thành 'mom's'."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": " Find it.\n<u>The</u> research findings <u>were</u> presented at the national <u>conference</u>, and <u>it</u> received considerable attention from the media.",
+        "options": [
+            " The",
+            " were",
+            " conference",
+            " it"
+        ],
+        "answer": "D",
+        "explain": "Đại từ nhân xưng 'it' trong mệnh đề thứ hai thay thế cho chủ ngữ 'The research findings' (những kết quả nghiên cứu) ở mệnh đề đầu. Vì 'findings' là danh từ số nhiều nên đại từ thay thế phải là 'they' thay vì 'it'."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nSarah asked, \"Tom, have you seen my phone? I left it on the kitchen counter.\"",
+        "options": [
+            " Sarah told Tom to leave her phone on the kitchen counter when he saw it.",
+            " Sarah asked Tom if he had seen her phone, as she had left it on the kitchen counter.",
+            " Sarah told Tom that she found her phone on the kitchen counter.",
+            " Sarah said to Tom that he should leave his phone on the counter."
+        ],
+        "answer": "B",
+        "explain": "Chuyển câu trực tiếp sang câu gián tiếp: Đổi đại từ (you -> he, my -> her, I -> she), lùi thì (have seen -> had seen, left -> had left), mượn từ nối 'if/whether' cho câu hỏi Yes/No. Câu B đáp ứng chính xác mọi yếu tố biến đổi ngữ pháp và ngữ nghĩa."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nI forgot my umbrella at home, so I got soaked in the rain.",
+        "options": [
+            " If I hadn't forgotten my umbrella at home, I wouldn't have gotten soaked in the rain.",
+            " If I don't forget my umbrella at home, I won't get soaked in the rain.",
+            " If I forget my umbrella at home, I will get soaked in the rain.",
+            " If I had remembered my umbrella at home, I would get soaked in the rain."
+        ],
+        "answer": "A",
+        "explain": "Câu gốc nêu một tình huống thực tế đã xảy ra trong quá khứ. Để giả định một điều ngược với quá khứ, ta dùng câu điều kiện loại 3 (If + S + had + V3/ed, S + would/could + have + V3/ed). Nếu tôi không quên ô thì tôi đã không bị ướt."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nHer latest novel has been praised, but I found her previous one much more exciting and emotionally engaging.",
+        "options": [
+            " I think her latest novel is as exciting as her previous one.",
+            " Her previous novel was the least exciting one of all.",
+            " Her previous novel was much more exciting than her latest one.",
+            " Her latest novel is much more exciting than her previous one."
+        ],
+        "answer": "C",
+        "explain": "Câu gốc có nghĩa: Cuốn tiểu thuyết mới nhất được khen ngợi, nhưng tôi thấy cuốn trước đó thú vị và cuốn hút về cảm xúc hơn nhiều. Đồng nghĩa với việc cuốn trước đó thú vị hơn nhiều so với cuốn mới nhất (Câu C)."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nAttention! Submit student's assignments by the end of the week.",
+        "options": [
+            " Students must submit their assignments by the end of the week.",
+            " Students can submit their assignments if they wish.",
+            " It is not required for students to submit assignments by the end of the week.",
+            " Students may submit assignments whenever they like."
+        ],
+        "answer": "A",
+        "explain": "Câu gốc là một lời thông báo mang tính bắt buộc (nộp bài tập vào cuối tuần). 'Must' diễn tả sự bắt buộc, quy định. Các đáp án khác như 'can' (có thể), 'not required' (không bắt buộc), 'may' (có quyền) không diễn đạt đúng tính chất mệnh lệnh của câu gốc."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nThe company's drop in sales might be due to increased competition.",
+        "options": [
+            " Increased competition must be the only reason for the company's drop in sales.",
+            " The company's sales are definitely dropping because of competition.",
+            " Increased competition could be a factor in the company's recent drop in sales.",
+            " The company's drop in sales is not related to competition."
+        ],
+        "answer": "C",
+        "explain": "Từ 'might' trong câu gốc mang nghĩa là 'có lẽ, có thể' (diễn tả một khả năng không chắc chắn). Từ 'could' trong đáp án C mang nghĩa tương đương (sự cạnh tranh gia tăng có thể là một yếu tố). Các đáp án A (must be - chắc chắn là) và B (definitely - dứt khoát) mang sắc thái quá chắc chắn so với câu gốc."
     }
 ]

@@ -134,5 +134,131 @@
                 "explain": "Tác giả chỉ rõ: Điện ảnh và sân khấu là loại hình 'tổng hợp thông thường' (tổng hợp trực tiếp cả hình ảnh, âm thanh vật lý), trong khi đó văn học là loại hình mang tính chất 'tổng hợp gián tiếp' thông qua công cụ ngôn từ."
             }
         ]
-    }
+    },
+    {
+    "type": "passage",
+    "subject": "Tiếng Việt",
+    "instruction": "Đọc đoạn trích dưới đây và trả lời các câu hỏi 21 đến 25.",
+    "passage_content": "(1) Con người, tự thuở sơ khai, đã khát khao vượt qua những giới hạn. Vượt qua giới hạn đường chân trời, con người chinh phục đại dương, khám phá ra những lục địa mới. Vượt qua giới hạn sức hút của Trái Đất, loài người tiếp tục nuôi dưỡng giấc mơ chinh phục không gian. Lịch sử tiến hóa của loài người là những trang biên niên sử về những giới hạn đã được chinh phục, đã được vượt qua. Loài người tiến lên vì đã biết đứng thẳng và không ngừng đi tới.\n(2) Con người khác muôn loài là biết biến những tình huống ngặt nghèo, những giới hạn thành động lực để nỗ lực vượt qua. Trong thể thao là cao hơn, xa hơn, nhanh hơn. Trong làm ăn là vượt thoát đói nghèo vươn lên khá giả. Trong khoa học là khao khát khám phá những điều chưa biết, chưa được gọi tên. (...) Con Người sở dĩ có thể tự khẳng định mình là hoa của đất, là vì luôn nghĩ cách không để cho những tình huống tuyệt vọng trở thành cái cớ cho những hành động tuyệt vọng. Nếu luôn lo sợ thì những cơn mưa cuối trời sẽ khiến ta lầm tưởng đó là chân trời và ta cứ mãi khóc than. Nếu biết giữ mình luôn đi tới thì chân trời cứ rộng dài ra mãi. Người can đảm sẽ chọn rộng dài thay cho những cơn mưa.\n(Hà Nhân, Sống như cây rừng, NXB Văn học, 2016, tr. 115)",
+    "questions": [
+      {
+        "question": "Thao tác lập luận chính của đoạn (1) là:",
+        "options": [
+          " chứng minh, bác bỏ.",
+          " giải thích, phân tích.",
+          " chứng minh.",
+          " so sánh, giải thích."
+        ],
+        "answer": "C",
+        "explain": "Đoạn (1) đưa ra luận điểm: 'Con người khát khao vượt qua những giới hạn'. Để làm sáng tỏ luận điểm này, tác giả đã đưa ra các dẫn chứng lịch sử: chinh phục đại dương, chinh phục không gian. Thao tác dùng dẫn chứng thực tế để làm rõ luận điểm chính là thao tác lập luận chứng minh."
+      },
+      {
+        "question": "Theo tác giả, con người tự thuở sơ khai đã vượt qua những giới hạn nào?",
+        "options": [
+          " Giới hạn ước mơ cá nhân và giới hạn tiềm năng bản thân.",
+          " Giới hạn thời gian lịch sử và giới hạn không gian sống.",
+          " Giới hạn tri thức nhân loại và giới hạn khả năng sáng tạo.",
+          " Giới hạn đường chân trời và giới hạn sức hút của Trái Đất."
+        ],
+        "answer": "D",
+        "explain": "Thông tin nằm trực tiếp ở đầu đoạn 1: 'Vượt qua giới hạn đường chân trời, con người chinh phục đại dương... Vượt qua giới hạn sức hút của Trái Đất, loài người tiếp tục nuôi dưỡng giấc mơ chinh phục không gian'."
+      },
+      {
+        "question": "Hình ảnh “hoa của đất” trong câu “Con Người sở dĩ có thể tự khẳng định mình là hoa của đất, là vì luôn nghĩ cách không để cho những tình huống tuyệt vọng trở thành cái cớ cho những hành động tuyệt vọng” có ý nghĩa như thế nào?",
+        "options": [
+          " Con người là kết quả phát triển tự nhiên, mang trong mình khả năng vươn lên không ngừng.",
+          " Con người là phần tinh túy, có ý thức vượt qua nghịch cảnh để tự khẳng định mình.",
+          " Con người là một bộ phận của đất trời, chịu sự chi phối của quy luật sinh tồn khắc nghiệt.",
+          " Con người là chủ thể của tiến hóa, luôn tìm cách thích nghi với hoàn cảnh sống."
+        ],
+        "answer": "B",
+        "explain": "'Hoa của đất' là một ẩn dụ chỉ những gì đẹp đẽ, tinh túy và quý giá nhất của tự nhiên. Con người được coi là tinh túy của tự nhiên vì họ có ý thức, có bản lĩnh không gục ngã trước sự tuyệt vọng mà luôn nỗ lực vượt qua nghịch cảnh để tự khẳng định giá trị bản thân."
+      },
+      {
+        "question": "Với cách diễn đạt Nếu biết giữ mình luôn đi tới thì chân trời cứ rộng dài ra mãi, tác giả đã sử dụng biện pháp tu từ nào?",
+        "options": [
+          " Ẩn dụ hình thức.",
+          " Ẩn dụ cách thức.",
+          " Ẩn dụ chuyển đổi cảm giác.",
+          " Ẩn dụ vị trí."
+        ],
+        "answer": "B",
+        "explain": "Ở đây tác giả ngầm so sánh cách thức hành động: việc 'giữ mình luôn đi tới' (sự nỗ lực, cố gắng không ngừng nghỉ của con người) giống như việc đi về phía 'chân trời' - đi càng xa thì chân trời càng mở rộng, giới hạn khả năng của con người càng được nới rộng. Đây là biện pháp ẩn dụ (phần nhiều nghiêng về hình tượng ẩn dụ biểu tượng/cách thức phát triển)."
+      },
+      {
+        "question": "Quan điểm của người viết thể hiện trong văn bản trên là gì?",
+        "options": [
+          " Con người cần chấp nhận những giới hạn tự nhiên và sống hài hòa trong phạm vi của chúng.",
+          " Con người phát triển khi biết vượt qua những giới hạn và biến thành động lực vươn lên.",
+          " Con người luôn phải đối diện với những giới hạn và học cách thích nghi để tồn tại.",
+          " Con người chỉ có thể thay đổi những giới hạn khi có điều kiện thuận lợi hỗ trợ."
+        ],
+        "answer": "B",
+        "explain": "Chủ đề bao trùm toàn bộ văn bản là lời ngợi ca sức vươn lên của loài người. Tác giả khẳng định: 'Con người khác muôn loài là biết biến những tình huống ngặt nghèo, những giới hạn thành động lực để nỗ lực vượt qua'. Do đó, đáp án B phản ánh chính xác nhất quan điểm này."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tiếng Việt",
+    "instruction": "Đọc đoạn trích dưới đây và trả lời các câu hỏi 26 đến 30.",
+    "passage_content": "Tuổi chiếc áo bằng một nửa tuổi Cha\nmỗi nếp gấp mang dáng hình đồng đội\nmỗi mảnh vá chứa bao điều muốn nói\nvề một thời trận mạc của Cha.\nNgày con sinh ra\nđất nước hoà bình\nvới bạn bè con hay xấu hổ\nkhi thấy Cha mặc chiếc áo xanh cũ kĩ\nđâu biết với Cha là kỉ vật cuộc đời\nNơi nghĩa trang nghi ngút khói hương\ntrước hàng hàng ngôi mộ\ncha đắp áo sẻ chia hơi ấm\nvới đồng đội xưa yên nghỉ chốn này\nKhoé mắt con chợt cay\nkhi chứng kiến nghĩa tình người lính\nkhông khoảng cách nào giữa người còn người mất\nchiếc áo bạc màu hoá gạch nối âm dương.\n(Ngô Bá Hoà, Chiếc áo của cha, dẫn theo: Hội nhà văn Việt Nam, van.vn,\n04/09/2021)",
+    "questions": [
+      {
+        "question": "Chủ thể trữ tình của đoạn trích trên là:",
+        "options": [
+          " người cha.",
+          " chiếc áo.",
+          " người con.",
+          " người lính."
+        ],
+        "answer": "C",
+        "explain": "Đoạn thơ sử dụng ngôi thứ nhất xưng 'con' ('với bạn bè con hay xấu hổ', 'Khoé mắt con chợt cay'). Mọi cảm xúc, suy ngẫm về người cha và chiếc áo đều được bộc lộ qua lăng kính của người con. Vậy chủ thể trữ tình là người con."
+      },
+      {
+        "question": "Dòng nào nói đúng về đặc điểm hình thức chính của bài thơ?",
+        "options": [
+          " Thơ tự do, chia khổ không đều, gieo vần cách.",
+          " Thơ tự do; số tiếng, số khổ linh hoạt.",
+          " Thơ hỗn hợp, dòng, khổ dài ngắn khác nhau.",
+          " Thơ tự do, các khổ dài, không có vần."
+        ],
+        "answer": "B",
+        "explain": "Đoạn thơ có số chữ trong mỗi dòng không cố định (có dòng 4 chữ, dòng 7, dòng 9 chữ...), chia khổ rất linh hoạt theo mạch cảm xúc, không tuân theo quy tắc vần điệu khắt khe. Đây là đặc điểm điển hình của thể thơ tự do."
+      },
+      {
+        "question": "Đâu không phải là một đặc điểm mang tính lãng mạn trong tác phẩm trên?",
+        "options": [
+          " Thể hiện cảm xúc trân trọng, xúc động của người con trước kỉ vật gắn với quá khứ của cha.",
+          " Xây dựng hình ảnh “chiếc áo” giàu tính biểu tượng, gợi vẻ đẹp thiêng liêng của tình đồng đội.",
+          " Sử dụng ngôn ngữ giàu chất thơ, gợi hình, gợi cảm, sử dụng nhiều biện pháp tu từ.",
+          " Miêu tả chi tiết hiện thực chiến tranh bằng lối kể khách quan, thiên về tái hiện sự kiện lịch sử."
+        ],
+        "answer": "D",
+        "explain": "Bài thơ mang đậm tính chất trữ tình, biểu cảm, tái hiện cảm xúc chủ quan của người con trước nghĩa tình đồng đội của cha. Tác phẩm không miêu tả chi tiết hiện thực chiến tranh (bom rơi, đạn nổ...) bằng lối kể sự kiện lịch sử khách quan. Do đó D là nhận định không đúng về đặc điểm tác phẩm."
+      },
+      {
+        "question": "Sự thay đổi cảm xúc của người con đối với chiếc áo của cha được thể hiện như thế nào?",
+        "options": [
+          " Từ sự xấu hổ, ngại ngùng đến niềm xúc động, tự hào sâu sắc.",
+          " Từ cảm giác dửng dưng, thờ ơ đến niềm kính trọng chân thành.",
+          " Từ nỗi băn khoăn, nghi ngại đến sự thấu hiểu và sẻ chia.",
+          " Từ tâm trạng mặc cảm, tự ti đến tình yêu thương bền chặt."
+        ],
+        "answer": "A",
+        "explain": "Trong khổ 2, người con thú nhận ngày nhỏ từng 'xấu hổ khi thấy Cha mặc chiếc áo xanh cũ kĩ'. Đến khổ cuối, khi hiểu được ý nghĩa của chiếc áo tại nghĩa trang, 'Khóe mắt con chợt cay khi chứng kiến nghĩa tình người lính', thể hiện niềm xúc động, thấu hiểu và tự hào sâu sắc."
+      },
+      {
+        "question": "Nhận định nào sau đây khái quát đầy đủ nhất ý nghĩa biểu tượng của hình ảnh “chiếc áo” trong bài thơ?",
+        "options": [
+          " Chiếc áo là kỉ vật chiến tranh, gợi nhớ quá khứ trận mạc và những năm tháng gian khổ.",
+          " Chiếc áo là biểu tượng lịch sử, lưu giữ kí ức chiến trường và tình đồng đội thiêng liêng.",
+          " Chiếc áo là biểu tượng đa nghĩa, kết nối quá khứ với hiện tại và người sống với người đã khuất.",
+          " Chiếc áo là hình ảnh nghệ thuật, thể hiện lòng tri ân và niềm tự hào của người con."
+        ],
+        "answer": "C",
+        "explain": "Chiếc áo không chỉ là kỉ vật của riêng người cha, mà nó còn là chứng nhân của một thời chiến trận (quá khứ). Ở hiện tại, hành động cha đắp áo lên mộ đồng đội đã biến chiếc áo thành 'gạch nối âm dương', xóa nhòa khoảng cách giữa người sống và người mất. Đáp án C khái quát được đầy đủ tính đa nghĩa và chiều sâu biểu tượng này."
+      }
+    ]
+  }  
 ]
