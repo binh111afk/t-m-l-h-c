@@ -1,0 +1,183 @@
+[
+    {
+        "type": "passage",
+        "subject": "Tiếng Anh",
+        "instruction": "Questions 46-52: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+        "passage_content": "Feeding the global population as it heads towards 10 billion while also protecting the environment is one of the great challenges of our time. The world’s food sector is a huge contributor to global heating, emitting about 30% of the greenhouse gases created by human activities. But at the same time there is a crisis in food availability as undernutrition and dietary deficiencies coexist with obesity and excessive consumption.\nCreating a rational food system that minimises environmental damage while providing a healthy diet for all requires a coordinated approach, says Prof Aedín Cassidy, an expert in nutrition and preventive medicine who is co-director of the Co-Centre for Sustainable Food Systems and director of inter-disciplinary research at the Institute for Global Food Security, at Queen’s University Belfast. “Food production, what we eat, and the environment are all very closely interconnected, and they are key for optimising human health. So how do we transition to a healthy diet from sustainable food systems?” she asks.\nCassidy’s nutritional research has looked at the impact of diet on health conditions such as diabetes and dementia. A 2024 study led by Cassidy shows that consuming food and drink rich in natural compounds known as flavonoids significantly reduces the risks of dementia. A separate study she supervised found that a plant-based diet high in fruit, vegetables and wholegrains greatly reduces the risk of developing type 2 diabetes compared with a plant-based diet high in refined grains, snack foods and desserts.\nSharon Huws, who is a professor in animal science and microbiology, has led several significant studies. One of the latest involves research into reducing methane emissions from sheep, beef and dairy animals by adding locally sourced seaweed to cattle feed. The greatest impact is reducing emissions by up to 80%. “It is the most substantial methane reduction that we’ve ever seen with any dietary intervention we’ve tried,” she says. 150 studies have shown that no trace of the chemical additive is found in any milk produced by cows who have been fed it, so it poses no risk to humans.\nAs part of its work analysing issues concerned with food production and distribution, the Institute of Global Food Security has conducted extensive research into the role of soil health in sustainable agriculture. Not only does healthy soil act as a carbon sink locking in greenhouse gases, but it also promotes biodiversity. Regenerative farming, which prioritises soil health through promoting biodiversity and reducing tillage and disturbance of the soil, will be vital in addressing the many challenges of sustainable food production.\n(Source: Adapted from https://www.theguardian.com/research-to-reality/2025/jan/24/feed-the-world-but-can-we-do-it-without-wrecking-the-planet-further)",
+        "questions": [
+            {
+                "question": "In paragraph 2, the word “rational” is closest in meaning to?",
+                "options": [
+                    " logically designed to balance multiple practical concerns",
+                    " emotionally appealing and widely accepted by society",
+                    " traditional and resistant to scientific change",
+                    " flexible enough to change according to public opinion"
+                ],
+                "answer": "A",
+                "explain": "Trong ngữ cảnh này, 'rational food system' (hệ thống thực phẩm hợp lý) được định nghĩa tiếp nối là hệ thống vừa 'giảm thiểu thiệt hại môi trường' vừa 'cung cấp chế độ ăn lành mạnh'. Nó tương đương với đáp án A: được thiết kế một cách logic để cân bằng nhiều mối bận tâm thực tiễn."
+            },
+            {
+                "question": "According to paragraph 5, what does the word “it” refer to?",
+                "options": [
+                    " carbon sink",
+                    " healthy soil",
+                    " agriculture",
+                    " greenhouse gases"
+                ],
+                "answer": "B",
+                "explain": "Câu trong bài: 'Not only does healthy soil act as a carbon sink..., but it also promotes biodiversity.' Đại từ 'it' ở vế sau thay thế cho chủ ngữ 'healthy soil' (đất khỏe) ở vế trước."
+            },
+            {
+                "question": "Which of the following is NOT mentioned as a challenge facing the global food system?",
+                "options": [
+                    " The coexistence of undernutrition and excessive food consumption",
+                    " The contribution of food production to greenhouse gas emissions",
+                    " The unequal global distribution of agricultural technology",
+                    " The environmental impact of current food production practices"
+                ],
+                "answer": "C",
+                "explain": "Đoạn 1 có nhắc đến nạn suy dinh dưỡng song hành với tiêu thụ quá mức (A), khí nhà kính từ sản xuất thực phẩm (B), và tác động môi trường nói chung (D). Việc phân bố công nghệ nông nghiệp không đồng đều (C) không được đề cập trong bài."
+            },
+            {
+                "question": "What is the main idea of the passage?",
+                "options": [
+                    " Developing sustainable food systems is essential for human health and environmental protection",
+                    " Scientific research has proven plant-based diets superior to animal-based diets",
+                    " Climate change is primarily caused by inefficient global agricultural practices",
+                    " Soil health is the most critical factor in ensuring future food security"
+                ],
+                "answer": "A",
+                "explain": "Xuyên suốt bài đọc, tác giả bàn về cách hệ thống thực phẩm ảnh hưởng tới sức khỏe (dinh dưỡng, bệnh tật) và môi trường (khí nhà kính, sức khỏe của đất), từ đó khẳng định việc phát triển hệ thống lương thực bền vững là cần thiết cho cả sức khỏe con người và bảo vệ môi trường."
+            },
+            {
+                "question": "What can be inferred from the studies led or supervised by Prof Cassidy?",
+                "options": [
+                    " Not all plant-based diets offer the same health benefits",
+                    " Dementia is caused primarily by poor dietary choices",
+                    " Refined grains are more harmful than animal-based foods",
+                    " Flavonoids completely prevent the development of dementia."
+                ],
+                "answer": "A",
+                "explain": "Đoạn 3 đề cập: 'a plant-based diet high in fruit... greatly reduces the risk... compared with a plant-based diet high in refined grains...'. Điều này chứng tỏ hai chế độ ăn đều nguồn gốc thực vật nhưng lại có lợi ích sức khỏe khác nhau, suy ra không phải chế độ ăn thuần chay nào cũng mang lại lợi ích y hệt nhau."
+            },
+            {
+                "question": "The author most likely believes that future food security depends on:",
+                "options": [
+                    " Educating consumers without changing production systems.",
+                    " Increasing global food output regardless of environmental costs",
+                    " Relying primarily on technological fixes within animal agriculture",
+                    " A comprehensive transformation of how food is produced and consumed"
+                ],
+                "answer": "D",
+                "explain": "Tác giả trích lời Prof Cassidy: 'Food production, what we eat, and the environment are all very closely interconnected...' và nêu ra các thay đổi cả về chế độ ăn uống lẫn cách canh tác (regenerative farming, giảm methane). Điều này đòi hỏi sự chuyển đổi toàn diện về cả sản xuất lẫn tiêu thụ."
+            },
+            {
+                "question": "The word “regenerative” in the context of farming most strongly suggests:",
+                "options": [
+                    " A return to traditional farming without modern science",
+                    " A method that prioritises short-term agricultural yields",
+                    " An approach that restores and enhances ecological systems",
+                    " A farming model focused exclusively on economic efficiency."
+                ],
+                "answer": "C",
+                "explain": "Ngữ cảnh miêu tả 'Regenerative farming' là việc 'ưu tiên sức khỏe của đất thông qua thúc đẩy đa dạng sinh học và giảm thiểu việc cày xới/xáo trộn đất'. Nghĩa là nó hướng tới phương pháp tiếp cận giúp phục hồi và tăng cường các hệ thống sinh thái (restores and enhances ecological systems)."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Anh",
+        "instruction": "Questions 53-60: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+        "passage_content": "Over the past three years, generative artificial intelligence (AI) has had a profound impact on society. AI’s impact on human writing, in particular, has been enormous. The large language models that power AI tools such as ChatGPT are trained on a wide variety of textual data, and they can now produce complex and high-quality texts of their own. Most importantly, the widespread use of AI tools has resulted in hyperproduction of so-called “AI slop”: low-quality AI-generated outputs produced with minimal or even no human effort. Much has been said about what AI writing means for education, work, and culture. But what about science? Does AI improve academic writing, or does it merely produce “scientific AI slop”?\nThe researchers examined whether use of AI is linked to higher academic productivity, manuscript quality and use of more diverse literature. The number of preprints an author produced was a measure of their productivity, while eventual publication in a journal was a measure of an article’s quality. The study found that when an author started using AI, the number of preprints they produced increased dramatically. Depending on the preprint platform, the overall number of articles an author published per month after adopting AI increased between 36.2% and 59.8%. The increase was biggest among non-native English speakers, and especially for Asian authors, where it ranged from 43% to 89.3%. For authors from English-speaking institutions and with “Caucasian” names, the increase was more modest, in the range of 23.7% to 46.2%. These results suggest AI was often used by non-native speakers to improve their written English.\nThe study found articles written with AI used more complex language on average than those written without AI. However, among articles written without AI, ones that used more complex language were more likely to be published. This suggests that more complex and high-quality writing is perceived as having greater scientific merit. However, when it comes to articles written with AI support, this relationship was reversed – the more complex the language, the less likely the article was to be published. This suggests that AI-generated complex language was used to hide the low quality of the scholarly work.\nAI increased the variety of academic sources. The study also looked at the differences in article downloads originating from Google and Microsoft search platforms. Microsoft’s Bing search engine introduced an AI-powered Bing Chat feature in February 2023. This allowed the researchers to compare what kind of articles were recommended by AI-enhanced search versus regular search engine. Interestingly, Bing users were exposed to a greater variety of sources than Google users, and also to more recent publications. This is likely caused by a technique used by Bing Chat called retrieval-augmented generation, which combines search results with AI prompting.\n(Source: Adapted from https://theconversation.com/what-the-hyperproduction-of-ai-slop-is-doing-to-science-272250)",
+        "questions": [
+            {
+                "question": "In paragraph 1, the word “enormous” can be replaced by ____.",
+                "options": [
+                    " ordinary",
+                    " tiny",
+                    " miniscule",
+                    " colossal"
+                ],
+                "answer": "D",
+                "explain": "Từ 'enormous' có nghĩa là to lớn, khổng lồ. Trong các đáp án, từ đồng nghĩa và có thể thay thế là 'colossal'. Các từ còn lại mang nghĩa bình thường (ordinary) hoặc rất nhỏ bé (tiny, miniscule)."
+            },
+            {
+                "question": "The word “their” in paragraph 2 refers to ______.",
+                "options": [
+                    " preprints",
+                    " authors",
+                    " researchers",
+                    " AI"
+                ],
+                "answer": "B",
+                "explain": "Trong câu: 'The number of preprints an author produced was a measure of their productivity...', từ 'their' được dùng để chỉ năng suất của các tác giả (an author - sử dụng 'their' mang ý nghĩa số ít trung lập giới tính để chỉ chung về người viết/tác giả)."
+            },
+            {
+                "question": "Which of the following is NOT discussed in paragraph 2?",
+                "options": [
+                    " Differences in publication output before and after AI adoption",
+                    " Variation in AI benefits between native and non-native English speakers",
+                    " The percentage increase in productivity among Asian authors",
+                    " Ethical concerns surrounding authorship and AI usage"
+                ],
+                "answer": "D",
+                "explain": "Đoạn 2 có nói về sản lượng xuất bản trước và sau AI (A), sự chênh lệch lợi ích giữa người bản xứ và không bản xứ (B), cùng mức tăng phần trăm của các tác giả châu Á (C). Tuy nhiên, các lo ngại về đạo đức (Ethical concerns) khi dùng AI không được đề cập trong đoạn này."
+            },
+            {
+                "question": "Which of the following would be the best title for the passage?",
+                "options": [
+                    " Does AI Enhance Scholarship or Produce Scientific “Slop”?",
+                    " The Technological Revolution Behind Large Language Models",
+                    " AI Tools and Their Impact on Online Search Engines",
+                    " Academic Writing Standards in the Digital Age"
+                ],
+                "answer": "A",
+                "explain": "Tiêu đề phù hợp nhất bao quát toàn bộ nội dung văn bản. Tác giả mở đầu bằng câu hỏi: 'Does AI improve academic writing, or does it merely produce scientific AI slop?', sau đó phân tích tính hai mặt của AI (tăng năng suất, đa dạng nguồn tài liệu, nhưng cũng che đậy bài kém chất lượng). Đáp án A phản ánh chính xác nhất chủ đề này."
+            },
+            {
+                "question": "The phrase “hyperproduction” is used mainly to",
+                "options": [
+                    " describe improved efficiency in academic research processes",
+                    " indicate higher creativity achieved through AI assistance",
+                    " highlight the rapid and excessive volume of AI-generated outputs",
+                    " suggest a balanced growth in scientific publishing"
+                ],
+                "answer": "C",
+                "explain": "Tiền tố 'hyper-' biểu thị sự vượt mức, thái quá. 'Hyperproduction of AI slop' được dùng để nhấn mạnh khối lượng sản phẩm văn bản do AI tạo ra một cách quá nhiều, ồ ạt, nhanh chóng nhưng chất lượng thấp."
+            },
+            {
+                "question": "What can be inferred from the findings about AI-written articles?",
+                "options": [
+                    " Journals generally prefer linguistically complex academic writing",
+                    " AI helps authors improve both language quality and research depth",
+                    " Articles without AI support tend to lack linguistic sophistication",
+                    " Complex language generated by AI may mask weak scientific contributions"
+                ],
+                "answer": "D",
+                "explain": "Đoạn 3 kết luận: 'when it comes to articles written with AI support... the more complex the language, the less likely the article was to be published. This suggests that AI-generated complex language was used to hide the low quality of the scholarly work.' (Ngôn ngữ phức tạp do AI tạo ra được dùng để che giấu những đóng góp khoa học yếu kém)."
+            },
+            {
+                "question": "The author most likely believes that AI in academic writing:",
+                "options": [
+                    " presents both opportunities for efficiency and risks to scholarly standards",
+                    " should replace traditional academic writing practices entirely",
+                    " mainly improves citation diversity without affecting research quality",
+                    " has a uniformly positive impact across all scientific disciplines"
+                ],
+                "answer": "A",
+                "explain": "Toàn bài đọc thể hiện quan điểm khách quan, hai chiều của tác giả. AI tạo ra cơ hội (opportunities) làm tăng năng suất, hỗ trợ người không dùng tiếng Anh bản xứ, đa dạng hóa nguồn; nhưng đồng thời mang tới rủi ro (risks) làm giảm tiêu chuẩn học thuật thông qua 'scientific slop'."
+            },
+            {
+                "question": "Based on paragraph 4, source diversity in AI-enhanced search results ________________",
+                "options": [
+                    " decline because AI favors frequently cited publications",
+                    " depend mainly on user-selected filtering preferences",
+                    " increase due to the integration of search retrieval with generative AI",
+                    " be unrelated to the use of AI-powered search tools"
+                ],
+                "answer": "C",
+                "explain": "Đoạn cuối viết: 'Bing users were exposed to a greater variety of sources... This is likely caused by a technique used by Bing Chat called retrieval-augmented generation, which combines search results with AI prompting.' Nghĩa là sự đa dạng tăng lên nhờ việc tích hợp công cụ tìm kiếm với AI tạo sinh."
+            }
+        ]
+    }
+]

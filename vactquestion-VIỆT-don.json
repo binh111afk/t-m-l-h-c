@@ -1,0 +1,262 @@
+[
+  {
+    "type": "single",
+    "question": "Câu nào sau đây KHÔNG mắc lỗi chính tả hoặc dùng từ?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Công việc này đòi hỏi sự tỉ mỉ và chỉnh chu trong từng công đoạn.",
+      " Anh ta bị buộc tội tham ô và chiếm đoạt tài sản công.",
+      " Sau khi bình phục, sức khỏe của ông ấy đã trở nên khả quan hơn.",
+      " Đừng nên quá tự cao tự đại mà coi thường mọi người."
+    ],
+    "answer": "B",
+    "explain": "Đáp án A sai chính tả ở từ 'chỉnh chu' (từ đúng phải là 'chỉn chu'). Đáp án C dùng từ 'khả quan' chưa phù hợp với 'sức khỏe' (nên dùng 'tốt lên' hoặc 'tiến triển tốt'). Đáp án D mắc lỗi lặp từ gần nghĩa (tự cao tự đại). Đáp án B hoàn toàn chuẩn xác về chính tả và ngữ nghĩa."
+  },
+  {
+    "type": "single",
+    "question": "Cho câu văn sau: “Trong buổi đấu giá từ thiện, mười doanh nhân đã quyên góp được mười tỷ đồng cho quỹ trẻ em vùng cao.” Câu trên bị mắc lỗi gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Lỗi câu mơ hồ",
+      " Sai phong cách",
+      " Sai logic",
+      " Lặp từ"
+    ],
+    "answer": "A",
+    "explain": "Câu này mắc lỗi mơ hồ về nghĩa. Người đọc không thể xác định chính xác là tổng cộng 10 doanh nhân quyên góp được 10 tỷ đồng, hay mỗi một doanh nhân quyên góp được 10 tỷ đồng (tổng cộng 100 tỷ)."
+  },
+  {
+    "type": "single",
+    "question": "“Bằng những nỗ lực không ngừng nghỉ trong việc cải thiện quy trình sản xuất và nâng cao tay nghề cho đội ngũ nhân viên.” Câu trên là câu:",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Thiếu chủ ngữ.",
+      " Thiếu vị ngữ.",
+      " Thiếu chủ ngữ và vị ngữ.",
+      " Câu đúng cấu trúc."
+    ],
+    "answer": "C",
+    "explain": "Đoạn văn trên chỉ mới có thành phần trạng ngữ chỉ phương thức (bắt đầu bằng từ 'Bằng'), hoàn toàn chưa có cụm chủ - vị nòng cốt để tạo thành một câu hoàn chỉnh."
+  },
+  {
+    "type": "single",
+    "question": "Trăng bỏ ta đi, trăng áo huyền! Mấy trùng biến lạ nhớ bình nguyên? Sầu ta đọng khắp trường giang thủy, Vào cuộc tuần du lại đắm thuyền. Ta hát lên trời muộn thuở trước, Giờ đây còn lặng khúc giao duyên. Hỷ thần lưu lạc về sông núi, Người gọi hồn ai? Hỡi đỗ quyên! <br> (Lạc hồn ca – Đinh Hùng) <br> Đáp án nào sau đây chứa những hình ảnh mang màu sắc cổ điển trong đoạn thơ?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Trăng áo huyền, trường giang thủy, khúc giao duyên, hỷ thần, đỗ quyên.",
+      " Trăng bỏ ta đi, sầu ta đọng, đắm thuyền, hát lên trời.",
+      " Bình nguyên, sông núi, tuần du, muộn thuở trước, gọi hồn ai.",
+      " Trăng, sầu, thuyền, trời, người gọi, hồn ai."
+    ],
+    "answer": "A",
+    "explain": "Các từ ngữ như 'trường giang thủy' (sông dài), 'khúc giao duyên', 'hỷ thần', 'đỗ quyên' mang đậm chất liệu văn học cổ điển, sử dụng nhiều từ Hán Việt và điển tích, điển cố phương Đông."
+  },
+  {
+    "type": "single",
+    "question": "Cho đoạn thơ sau: Hai người sống giữa cô đơn, Nàng như cũng có nỗi buồn giống tôi. Giá đừng có giậu mùng tơi, Thế nào tôi cũng sang chơi thăm nàng. (Nguyễn Bính, Người hàng xóm ) Biện pháp tu từ nào được sử dụng trong đoạn thơ trên?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Ẩn dụ, điệp từ, so",
+      " Hoán dụ, nói quá, so sánh",
+      " Ẩn dụ, biểu cảm",
+      " Ẩn dụ, so sánh"
+    ],
+    "answer": "D",
+    "explain": "Biện pháp ẩn dụ thể hiện qua hình ảnh 'giậu mùng tơi' (chỉ ranh giới, khoảng cách vô hình về mặt tâm lý, tình cảm). Biện pháp so sánh hiện diện qua câu 'Nàng như cũng có nỗi buồn giống tôi'."
+  },
+  {
+    "type": "single",
+    "question": "Định nghĩa thành công cũng khác nhau ở mỗi người. Tôi còn nhớ sự chia sẻ của Jessica Lu, chuyên gia tư vấn nhân sự của Tập đoàn Towers Watson, người đã nghỉ hưu ở tuổi 40 vì đã đạt được những mục tiêu về tài chính: “Tôi tự thấy mình là người thành công, vì hiện giờ tôi đã trở thành chính xác con người mà tôi từng mong ước”. Thành công tức là trở thành người mình từng mong muốn trở thành, một định nghĩa thú vị. Quả thật, điều thử thách nhất và mãn nguyện nhất trong cuộc sống, không phải là trở thành người thành công trong mắt người khác, hay trong cái nhìn của xã hội, mà là vượt lên bản thân, đạt được những mục tiêu của mình, và trở thành người mà mình từng mong ước. Còn đối với tôi, thành công chính là sống trọn vẹn với tất cả tiềm năng của mình. <br> ( Rossie Nguyễn, Tuổi trẻ đáng giá bao nhiêu?, Hà Nội: NXB Hội Nhà văn, 2018) <br> Luận đề chính của đoạn trích trên là gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Thành công là trở thành con người mình mong muốn, sống trọn vẹn tiềm năng.",
+      " Thành công trước hết là vượt lên bản thân, không chạy theo chuẩn mực xã hội.",
+      " Thành công là cảm giác mãn nguyện khi đạt được những mục tiêu cá nhân.",
+      " Thành công được nhìn nhận khác nhau, tùy quan niệm và hoàn cảnh mỗi người."
+    ],
+    "answer": "A",
+    "explain": "Đoạn trích tập trung làm rõ quan điểm cốt lõi của tác giả: thành công không phải là đạt được theo cái nhìn của xã hội mà là vượt lên bản thân, trở thành người mình mong muốn và sống trọn vẹn với tiềm năng của mình."
+  },
+  {
+    "type": "single",
+    "question": "Một tờ lịch vèo bay một đi không trở lại khoảng vắng teo treo cái bóng một ngày Một tờ lịch từ trần tương lai mỏng một tí quá khứ dày một tị Một tờ lịch tạ thế chuông trời buông nhẹ không xác thời gian xếp lớp xuôi giòng Một tờ lịch băng hà bao nhiêu ai tùy tiện hiện ra bao nhiêu ai đột ngột biến mất Một tờ lịch viên tịch tuổi mỗi cao người mỗi thấp vui mỗi thiếu buồn mỗi thừa Một tờ lịch đổi ngôi thương mỗi đời vừa vinh vừa nhục dài một chút ngắn một chút Một tờ lịch thế thôi lõm bõm thêm một ngày ta sống và trắng xóa thêm một ngày ta rụng. <br> (Xác thời gian – Nguyễn Duy, trong Bụi, NXB Hội Nhà văn, 1997) <br> Cảm xúc của nhân vật trữ tình trong đoạn thơ trên là gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Nỗi buồn man mác trước sự trôi chảy không ngừng của thời gian.",
+      " Tâm trạng chiêm nghiệm sâu lắng, pha chút ngậm ngùi về kiếp người.",
+      " Cảm giác hoang mang, bất an trước sự mất mát và biến thiên cuộc sống.",
+      " Nỗi tiếc nuối day dứt về quá khứ dày lên theo từng tờ lịch rơi."
+    ],
+    "answer": "B",
+    "explain": "Đoạn thơ sử dụng các từ chỉ cái chết (từ trần, tạ thế, băng hà, viên tịch) gắn liền với sự rơi rụng của tờ lịch để thể hiện tâm trạng chiêm nghiệm sâu sắc, ngậm ngùi về sự trôi chảy của thời gian và kiếp người mong manh."
+  },
+  {
+    "type": "single",
+    "question": "Những nhân vật nào sau đây thuộc kiểu nhân vật nữ lệch trong nghệ thuật chèo?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Thị Mầu, Thiệt Thê",
+      " Thị Mầu, Thị Phương",
+      " Thiệt Thê, Trinh Nguyên",
+      " Thị Phương, Châu Long"
+    ],
+    "answer": "A",
+    "explain": "Thị Mầu (trong Quan Âm Thị Kính) và Thiệt Thê (trong Chu Mãi Thần) là hai nhân vật tiêu biểu cho đào lệch (nữ lệch) trong chèo cổ. Họ mang tính cách phóng khoáng, táo bạo, dám phá vỡ khuôn phép phong kiến. Thị Phương, Châu Long là đào thương."
+  },
+  {
+    "type": "single",
+    "question": "Cho đoạn thơ sau: “Gương nga chênh chếch dòm song, Vàng gieo ngấn nước, cây lồng bóng sân. Hải đường lả ngọn đông lân, Giọt sương gieo nặng, cành xuân la đà.” <br> (Nguyễn Du, Truyện Kiều) <br> Cụm từ “vàng gieo ngấn nước” trong đoạn thơ có ý nghĩa gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Ánh trăng vàng chiếu xuống mặt nước tạo vẻ lung linh.",
+      " Sắc vàng của trăng làm nổi bật không gian đêm xuân.",
+      " Ánh sáng phản chiếu khiến cảnh vật trở nên huyền ảo.",
+      " Hình ảnh thiên nhiên gợi cảm giác tĩnh lặng, yên bình."
+    ],
+    "answer": "A",
+    "explain": "'Vàng' ở đây là hình ảnh hoán dụ cho ánh trăng (Gương nga). 'Vàng gieo ngấn nước' miêu tả ánh trăng vàng chiếu rọi, soi bóng lung linh xuống mặt nước."
+  },
+  {
+    "type": "single",
+    "question": "Thần Mưa là vị thần hình rồng, thường xuống hạ giới hút nước biển, nước sông vào bụng rồi bay lên trời cao phun nước ra làm mưa cho thế gian có nước uống và cày cấy, cây cỏ trên mặt đất được tốt tươi. Thần Mưa thường theo lệnh Trời đi phân phát nước ở các nơi. Nhưng Thần Mưa có tật hay quên, có vùng cả năm không đến, sinh ra hạn hán ở hạ giới; có vùng lại đến luôn, làm thành lụt lội. Bức xúc vì hạn hán kéo dài, một hôm có con Cóc kéo binh đoàn Gấu, Cọp, Cua, Gà và Ong lên thiên đình kiện Trời. Chúng đánh binh đoàn nhà Trời tơi tả, đến thần Sét cũng bại trận tan tành. Trời phải đích thân ra nghênh tiếp và phát hiện Thần Mưa đã ngủ quên cả năm trời. Trời cuống quýt sai Thần Mưa xuống hạ giới làm mưa gấp, rồi dặn Cóc rằng: hễ trời hạn hán thì hãy nghiến răng, Trời sẽ biết mà làm mưa. Từ đó có câu: Con cóc là cậu ông Trời, Ai mà đánh nó thì Trời đánh cho. Sau vụ đó, Trời nhận ra công việc phân phối nước cho khắp mặt đất rất nặng nề, một mình Thần Mưa không thể làm xuể, nên mở một cuộc thi chọn các giống thủy tộc có tài để trở thành rồng, giúp sức cho Thần Mưa. Cuộc thi ấy Trời đặt địa điểm ở cửa Vũ (Vũ Môn) thuộc Hà Tĩnh ngày nay. <br> (Theo: http://truyenxuatichcu.com/than-thoai-viet-nam) <br> Dòng nào sau đây đúng nhất thể hiện đặc trưng nghệ thuật của văn bản trên?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Xây dựng cốt truyện li kì, giàu kịch tính nhằm gây hứng thú cho người đọc.",
+      " Sử dụng yếu tố hoang đường, nhân hóa để lí giải hiện tượng tự nhiên.",
+      " Kết hợp trí tưởng tượng phong phú với lời kể sinh động, giàu cảm xúc.",
+      " Phản ánh ước mơ chinh phục thiên nhiên của con người thời cổ đại."
+    ],
+    "answer": "B",
+    "explain": "Văn bản thuộc thể loại thần thoại. Đặc trưng nổi bật nhất của thần thoại là sử dụng các yếu tố hoang đường, kì ảo (thần Mưa hình rồng, cóc lên kiện Trời...) để giải thích nguồn gốc các hiện tượng tự nhiên (mưa, hạn hán)."
+  },
+  {
+    "type": "single",
+    "question": "Đâu có biết, chỉ tại chưa quên được. Anh chưa dám nhìn thẳng vô mắt Hoài để cười, chưa dám nựng nịu con của Hoài mỗi khi chị bồng nó đi tiêm ngừa. Chưa thanh thản để chào nhau như một người bạn gặp một người bạn. Hào có hiểu không? Hiểu, nên tôi chờ đây nè. Thêm một mùa gió bấc nữa, chị Hảo vẫn chưa lấy chồng. Ai lại cũng hỏi, chị chờ ai vậy cả? Chị bảo chờ người ta xức dầu Nhị Thiên Đường của chị mà hết đau, chờ người ta đánh cờ mà trong tâm “Viễn ly điên đảo mộng tưởng cứu cánh Niết bàn”, chờ người ta thôi buồn khi đưa chốt qua sông. Nhưng mà chờ tới chừng nào lận? Ai mà biết. Mùa nay gió bấc hiu hiu lại về. <br> ( Nguyễn Ngọc Tư, Hiu hiu gió bấc, Tập truyện ngắn “Giao thừa”, NXB Trẻ, 2020, tr. 109–117) <br> Từ ngữ nào sau đây mang đậm dấu ấn khẩu ngữ Nam Bộ được sử dụng trong đoạn văn?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Tiêm ngừa, nựng nịu, có hiểu không.",
+      " Thanh thản, điên đảo, chời ơi chời.",
+      " Chờ đây nè, chừng nào lận, xức dầu.",
+      " Thiệt là hay, bự chà bá, nựng nịu, ai vậy cả"
+    ],
+    "answer": "C",
+    "explain": "Các từ 'nè' (chờ đây nè), 'lận' (chừng nào lận), 'xức dầu' là những phương ngữ, từ vựng mang đậm dấu ấn giao tiếp sinh hoạt đời thường của người dân Nam Bộ."
+  },
+  {
+    "type": "single",
+    "question": "Những câu nói bị ngắt quãng thể hiện điều gì ở Đan Thiềm? Đan Thiềm – Tướng quân tha…. Quân khởi loạn (xúm vào trói nàng) – Đừng nói nữa vô ích, con dâm phụ. Đan Thiềm –….. Tha cho ông Cả. Ngô Hạch (thấy Như Tô chạy lại) – Trói thẳng Vũ Như Tô lại (quân sĩ xông vào trói chàng có vẻ đắc ý). Đan Thiềm (thất vọng) – Chỉ tại ông không nghe tôi, dùng dằng mãi. Bây giờ….. (nói với Ngô Hạch) Xin tướng quân….. Ngô Hạch – Dẫn nó đi, không cho nó nói nhảm nữa, rờm tai (quân sĩ dẫn nàng ra). <br> (Vũ Như Tô – Nguyễn Huy Tưởng, Theo Tuyển tập Nguyễn Huy Tưởng, tập I, NXB Văn học, Hà Nội, 1984) <br> Những câu nói bị ngắt quãng bằng dấu chấm lửng của Đan Thiềm trong đoạn trích chủ yếu phản ánh điều gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Sự sợ hãi, hoảng loạn trước tình thế nguy cấp và bạo lực loạn quân.",
+      " Tâm trạng đau đớn, xót xa khi chứng kiến lý tưởng nghệ thuật sụp đổ.",
+      " Nỗi tuyệt vọng khi mọi lời khuyên và nỗ lực đều không còn tác dụng.",
+      " Bi kịch tinh thần giằng xé giữa lý trí tỉnh táo và bất lực thực tế."
+    ],
+    "answer": "C",
+    "explain": "Những dấu chấm lửng thể hiện lời nói đứt quãng, nghẹn ngào, bộc lộ sự bất lực và nỗi tuyệt vọng tột cùng của Đan Thiềm khi mọi lời cầu xin, nỗ lực bảo vệ Vũ Như Tô của bà đều trở nên vô ích trước đám loạn quân hung bạo."
+  },
+  {
+    "type": "single",
+    "question": "Cho câu văn sau: “Sự kết hợp tinh tế giữa phong cách kiến trúc hiện đại phương Tây và những nét chạm trổ hoa văn truyền thống của dân tộc trong các công trình đô thị mới.” Câu trên là câu:",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Thiếu chủ ngữ.",
+      " Thiếu vị ngữ.",
+      " Thiếu trạng ngữ.",
+      " Câu tỉnh lược chủ ngữ."
+    ],
+    "answer": "B",
+    "explain": "Toàn bộ cụm từ trên mới chỉ là một danh ngữ (đóng vai trò chủ ngữ) được mở rộng các thành phần phụ, hoàn toàn chưa có thành phần vị ngữ để tạo thành một câu trọn vẹn."
+  },
+  {
+    "type": "single",
+    "question": "Cho câu văn sau: “Được xem là một trong những tác phẩm hội họa quan trọng nhất của thời Phục Hưng, bức chân dung nàng Mona Lisa được vẽ bởi danh họa Leonardo da Vinci với nụ cười bí ẩn đã thu hút hàng triệu du khách đến chiêm ngưỡng.” Câu trên bị mắc lỗi gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Lặp từ",
+      " Sai cấu tạo ngữ pháp",
+      " Sai phong cách",
+      " Lỗi câu mơ hồ"
+    ],
+    "answer": "B",
+    "explain": "Câu này mắc lỗi sai cấu tạo ngữ pháp do sắp xếp sai trật tự từ. Cụm 'với nụ cười bí ẩn' đặt sau cụm 'được vẽ bởi danh họa Leonardo da Vinci' làm cho câu văn trở nên tối nghĩa, không rõ là bức tranh có nụ cười bí ẩn hay Leonardo da Vinci có nụ cười bí ẩn."
+  },
+  {
+    "type": "single",
+    "question": "Từ “cẩn trọng” KHÔNG trái nghĩa với từ nào sau đây?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Cẩu thả",
+      " Khinh suất",
+      " Liều lĩnh",
+      " Chu tất"
+    ],
+    "answer": "D",
+    "explain": "'Chu tất' có nghĩa là chu đáo, trọn vẹn, cẩn thận mọi bề. Nó mang nét nghĩa tương đồng (đồng nghĩa) với 'cẩn trọng', do đó không trái nghĩa với từ này. Các từ còn lại đều là từ trái nghĩa."
+  },
+  {
+    "type": "single",
+    "question": "Tôi thấy rồi em ơi giữa cuộc hành quân Niềm kiêu hãnh trong mắt em kỳ lạ Trong chiếc áo bạc màu đôi miếng vá Cô gái Việt Nam đẹp đến lạ thường Ôi! Những bông hoa nở giữa chiến trường (Trích “Những bông hoa trên tuyến lửa”, Đỗ Trung Quân) Hình tượng trung tâm được khắc họa trong đoạn trích trên là ai?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Người lính trẻ mang niềm kiêu hãnh trong cuộc hành quân gian khổ.",
+      " Tuổi trẻ Việt Nam anh dũng, giàu lý tưởng giữa chiến trường ác liệt.",
+      " Cô gái Việt Nam trong chiến tranh, vừa giản dị vừa cao đẹp.",
+      " Những con người bình dị tỏa sáng như hoa giữa tuyến lửa."
+    ],
+    "answer": "C",
+    "explain": "Đoạn thơ trực tiếp nhắc đến 'Cô gái Việt Nam đẹp đến lạ thường' với 'chiếc áo bạc màu đôi miếng vá'. Hình tượng trung tâm chính là vẻ đẹp nữ thanh niên xung phong, cô gái Việt Nam bình dị mà kiêu hãnh, cao đẹp giữa tuyến lửa."
+  },
+  {
+    "type": "single",
+    "question": "[…] Ít lâu nay, chúng ta hay nói đến thực tế Việt Nam, đến vấn đề thực tiễn Việt Nam, đến những đặc tính của Việt Nam trong mọi điều kiện chuyển mình tiến lên. Tôi thấy rằng trong muôn vàn thực tế phong phú của nhân dân Việt Nam, có một cái thực tế mà hàng ngày ít ai nỡ tách rời nó, tức là cái thực tế phở. Cái thực tế phở ấy lồng vào trong những cái thực tế vĩ đại của dân tộc. Trong một giọt nước rơi lóng lánh có cả câu chuyện của vầng thái dương; trong một miếng ăn, cũng thấy rộng được ra những điều cao cả yên vui trên đất nước bao la giàu có tươi đẹp. Tôi thấy tổ quốc chúng ta có núi cao vòi vọi điệp điệp, có sông dài dằng dặc, có biển bờ thăm thẳm, có những con người Việt Nam dũng cảm xây đắp lịch sử quang vinh, có những công trình lao động thần thánh như chiến thắng Điện Biên, nhưng bên cạnh những cái đó, tôi biết rằng Tổ quốc tôi còn có phở nữa” […] <br> (Trích “Phở” – Nguyễn Tuân – 1957) <br> Đoạn trích trên được viết theo thể loại văn học nào?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Truyện ngắn.",
+      " Tùy bút.",
+      " Tiểu thuyết.",
+      " Hồi kí."
+    ],
+    "answer": "B",
+    "explain": "Bài 'Phở' của Nguyễn Tuân được viết theo thể tùy bút – thể loại sở trường của ông. Lối viết tự do, phóng túng, giàu chất suy tư và đậm dấu ấn cái tôi cá nhân của người nghệ sĩ."
+  },
+  {
+    "type": "single",
+    "question": "Thị vào cắp một cái rổ, trong có một nồi gì đậy vung. Đó là một nồi cháo hành còn nóng nguyên. [.] Thằng này rất ngạc nhiên. Hết ngạc nhiên thì hắn thấy mắt mình như ươn ướt. Bởi vì lần này là lần thứ nhất hắn được một người đàn bà cho. Xưa nay, nào hắn có thấy ai tự nhiên cho cái gì. Hắn vẫn phải dọa nạt hay là giật cướp. Hắn phải làm cho người ta sợ. Hắn nhìn bát cháo bốc khói mà bâng khuâng. Thị Nở thì chỉ nhìn trộm hắn rồi lại toe toét cười. Trông thị thế mà có duyên. Tình yêu làm cho có duyên. Tình yêu làm cho có duyên. Hắn thấy vừa vui vừa buồn. Và một cái gì nữa giống như là ăn năn. Cũng có thể như thế lắm. Nhưng người ta hay hối hận về tội ác khi không đủ sức mà ác nữa.Thị Nở giục hắn ăn nóng. Hắn cầm lấy bát cháo đưa lên mồm. Trời ơi, cháo mới thơm làm sao! <br> ( Chí Phèo – Nam Cao) <br> Dòng nào sau đây KHÔNG đúng khi nói về ý nghĩa của bát cháo hành trong đoạn trích?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Biểu tượng cho hạnh phúc lứa đôi trọn vẹn và viên mãn của Chí Phèo.",
+      " Thể hiện tình thương mộc mạc, chân thành của Thị Nở dành cho Chí Phèo.",
+      " Đánh thức phần người, khơi dậy cảm giác ăn năn trong Chí Phèo.",
+      " Mở ra khát vọng được sống lương thiện, làm người bình thường."
+    ],
+    "answer": "A",
+    "explain": "Bát cháo hành khơi dậy tình người và khao khát hoàn lương trong Chí Phèo, tuy nhiên nó không phải là biểu tượng cho 'hạnh phúc lứa đôi trọn vẹn và viên mãn', vì mối tình của họ sau đó bị xã hội (bà cô Thị Nở) cự tuyệt, dẫn đến kết cục bi thảm."
+  },
+  {
+    "type": "single",
+    "question": "Du lịch bền vững không gây tổn hại đến các cấu trúc xã hội hoặc văn hóa của cộng đồng, mà là chất xúc tác nâng cao giá trị văn hóa và truyền thống địa phương. Du lịch bền vững khuyến khích các bên liên quan (các cá nhân, cộng đồng, công ty du lịch và quản lý chính quyền) tham gia trong tất cả các giai đoạn của việc lập kế hoạch, phát triển và giám sát, giáo dục các bên liên quan về vai trò của họ. Sự tham gia đầy đủ sẽ đảm bảo việc phân bố lợi ích và chi phí du lịch công bằng với mỗi bên. (.) Kinh doanh du lịch giúp tạo ra các nguồn kinh phí để bảo tồn, nâng cao giá trị và khôi phục các di sản kiến trúc, nghệ thuật, vật thể và phi vật thể, văn hoá, thủ công mỹ nghệ, trang phục, phong tục truyền thống,. Tuy nhiên, có nhiều thách thức trong việc gìn giữ các di sản. Ví dụ: văn hóa đặc sắc của các dân tộc thiểu số dễ bị biến đổi do tiếp xúc với các nền văn hóa xa lạ, do xu hướng thị trường hóa các hoạt động văn hoá, do mâu thuẫn nảy sinh khi phát triển du lịch hoặc do tương phản về lối sống. Hay các di sản văn hoá, lịch sử, khảo cổ thường được xây dựng bằng các vật liệu đất nung như di tích Mỹ Sơn – Quảng Nam, khó bảo tồn nguyên vẹn do tác động của khí hậu nhiệt đới gió mùa ở Việt Nam. Do đó, nhu cầu bảo tồn di sản bền vững ngày càng cấp thiết hơn. <br> ( Booking.com, Báo cáo Thường niên về Du lịch Bền vững. Vietnamtourism, 2020 – Tốc độ tăng trưởng khách cao, đóng góp quan trọng vào phát triển kinh tế – xã hội. Visualcapitalist, 2020 – Visualizing the Countries Most Reliant on Tourism, Theo digital.fpt.com.vn) <br> Thông điệp cốt lõi mà văn bản muốn truyền tải thông qua việc nêu ra các thách thức bảo tồn là gì?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Du lịch bền vững cần hạn chế tối đa tác động tiêu cực đến di sản văn hóa.",
+      " Bảo tồn di sản gặp nhiều khó khăn do tác động của kinh tế và môi trường.",
+      " Phát triển du lịch luôn tiềm ẩn nguy cơ làm biến đổi các giá trị văn hóa dân tộc.",
+      " Cần gắn phát triển du lịch với trách nhiệm bảo tồn di sản một cách bền vững."
+    ],
+    "answer": "D",
+    "explain": "Đoạn văn nêu ra những mặt tích cực của du lịch bền vững, tiếp đó chỉ ra các thách thức bảo tồn để đi đến kết luận 'Do đó, nhu cầu bảo tồn di sản bền vững ngày càng cấp thiết hơn'. Thông điệp cốt lõi là phải gắn kết phát triển du lịch với trách nhiệm bảo tồn di sản bền vững."
+  },
+  {
+    "type": "single",
+    "question": "[Lược một đoạn: Munro quay về nhà và tiếp tục theo dõi ngôi biệt thự. Ông gửi điện tín cho Holmes khi thấy ngôi biệt thự có người ở. Holmes và Watson nhanh chóng đến Norbury để giúp Munro giải quyết bí ẩn. Munro khi ấy đã đợi sẵn chúng tôi tại sân ga, mặt xanh xao, người run rẩy. Holmes, Watson và Munro tiến vào ngôi biệt thự và gặp vợ của Munro cùng một bà già. Họ leo lên gác và gặp một cô bé da đen với mặt nạ. Vợ Munro giải thích rằng đó là con riêng của nàng và chồng đầu tiên – người đã chết ở Mỹ. Nàng đã che giấu đứa trẻ để bảo vệ danh tiếng và hạnh phúc hiện tại]. Munro không nói lời nào đến bế đứa bé lên hôn nó. Và sau khi chìa tay ra cho vợ mình, ông bước ra khỏi cửa nói thật ngọt ngào: – Tốt hơn là chúng ta nên về nhà! Anh là một người không được hoàn hảo cho lắm Ephia! Song anh cho rằng, anh tốt hơn là em nghĩ về anh. Holmes và tôi bước theo sau họ đến con đường mòn. Sau đó Holmes kéo tay áo tôi lại: – Thôi! Chúng ta về London sẽ có ích lợi hơn là ở Norbury. Anh không nói thêm một lời nào về chuyện đó. Tuy nhiên, vào tối hôm đó lúc đã khuya, anh cầm ngọn đèn đi vào phòng ngủ: – Anh Watson này, nếu một lúc nào đó anh thấy tôi trở nên quá tự tin hoặc cố gắng ít hơn so với đòi hỏi của công việc thì hãy nói nhỏ vào tai tôi: \"Norbury!\". Tôi sẽ vô cùng cảm ơn anh. <br> (Theo Những vụ kì án của Sherlock Holmes, Conan Doyle, NXB Văn hóa Thông tin, 2011, tr. 167–181). <br> Tình huống kịch trong đoạn trích trên được thể hiện chủ yếu qua điểm nào sau đây?",
+    "subject": "Tiếng Việt",
+    "options": [
+      " Sự thật được phơi bày, xung đột đạo đức được giải quyết bằng bao dung.",
+      " Cao trào và sự thật điều tra dẫn đến kết thúc bất ngờ của vụ án Norbury.",
+      " Cuộc đối đầu căng thẳng giữa Munro và người vợ che giấu quá khứ.",
+      " Hành động suy luận tài tình của Holmes trước một bí ẩn gia đình."
+    ],
+    "answer": "A",
+    "explain": "Tình huống kịch tính nhất là khoảnh khắc sự thật về đứa con riêng của người vợ được tiết lộ. Điểm thắt nút của kịch tính được mở ra và giải quyết một cách đầy cảm động thông qua hành động bao dung của Munro khi ông dang tay đón nhận đứa bé và tha thứ cho vợ."
+  }
+]

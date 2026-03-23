@@ -1,0 +1,197 @@
+[
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "The movie was so boring that many viewers ____________ before it ended.",
+        "options": [
+            " turned up",
+            " walked out",
+            " settled down",
+            " took off"
+        ],
+        "answer": "B",
+        "explain": "Cụm động từ 'walk out' có nghĩa là rời đi, bỏ ra ngoài trước khi một sự kiện kết thúc (thường do chán nản hoặc phản đối). Phù hợp với ngữ cảnh 'bộ phim quá nhàm chán' nên người xem bỏ về."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "By 2030, the company __________________ internationally, creating jobs and diversifying revenue streams worldwide.",
+        "options": [
+            " will expand",
+            " will be expanding",
+            " will have expanded",
+            " expand"
+        ],
+        "answer": "C",
+        "explain": "Trạng từ chỉ thời gian 'By + mốc thời gian trong tương lai' (By 2030) là dấu hiệu nhận biết của thì Tương lai hoàn thành (Future Perfect: will have + V3/ed), diễn tả một hành động sẽ hoàn tất trước một thời điểm trong tương lai."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "Urban living is generally ________________ than rural life in developing economies.",
+        "options": [
+            " more expensive",
+            " much expensive",
+            " cheaper",
+            " less expensive"
+        ],
+        "answer": "A",
+        "explain": "Cấu trúc so sánh hơn của tính từ dài 'expensive' là 'more expensive than'. Xét về mặt ý nghĩa thực tế, sống ở thành thị thường đắt đỏ (more expensive) hơn ở nông thôn."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "He recently purchased a _________________________ car for long-distance travel.",
+        "options": [
+            " powerful German large",
+            " large German powerful",
+            " powerful large German",
+            " large powerful German"
+        ],
+        "answer": "C",
+        "explain": "Trật tự tính từ trước danh từ tuân theo quy tắc OSASCOMP: Opinion (Ý kiến: powerful) - Size (Kích thước: large) - Origin (Nguồn gốc: German). Do đó, trật tự đúng là 'powerful large German'."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "The lecture offered _______________ practical examples alongside theory.",
+        "options": [
+            " much",
+            " a little",
+            " a lots",
+            " plenty of"
+        ],
+        "answer": "D",
+        "explain": "'Examples' là danh từ đếm được số nhiều. 'Much' và 'a little' chỉ đi với danh từ không đếm được. 'A lots' sai ngữ pháp (đúng phải là a lot of hoặc lots of). 'Plenty of' (nhiều) đi được với cả danh từ đếm được và không đếm được."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "The company aims to become <u>a</u> <u>leading</u> provider of renewable energy in <u>an</u> Asia-Pacific <u>region</u>.",
+        "options": [
+            " a",
+            " leading",
+            " an",
+            " region"
+        ],
+        "answer": "C",
+        "explain": "Khu vực Châu Á - Thái Bình Dương (Asia-Pacific region) là một khu vực xác định và duy nhất trên thế giới. Do đó, ta phải dùng mạo từ xác định 'the' thay vì mạo từ không xác định 'an'. Lỗi sai ở C (sửa an -> the)."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "The book <u>which</u> <u>cover</u> was <u>damaged</u> had to be <u>returned</u> to the library.",
+        "options": [
+            " which",
+            " cover",
+            " damaged",
+            " returned"
+        ],
+        "answer": "A",
+        "explain": "Ở đây cần một đại từ quan hệ chỉ sự sở hữu để thay thế cho 'cái bìa của cuốn sách' (the cover of the book). Do đó, phải dùng 'whose' thay vì 'which'. Lỗi sai ở A (sửa which -> whose)."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "<u>The number</u> of <u>applicants</u> <u>have increased</u> significantly <u>this</u> year.",
+        "options": [
+            " this",
+            " the number",
+            " applicants",
+            " have increased"
+        ],
+        "answer": "D",
+        "explain": "Cấu trúc 'The number of + Danh từ số nhiều' (Số lượng những...) luôn đi với động từ chia ở ngôi thứ ba số ít. Lỗi sai ở D (sửa have increased -> has increased)."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "I <u>borrowed</u> <u>the manager car’s</u> <u>keys</u> <u>by mistake.</u>",
+        "options": [
+            " borrowed",
+            " by mistake",
+            " the manager car’s",
+            " keys"
+        ],
+        "answer": "C",
+        "explain": "Lỗi sử dụng sở hữu cách. 'Chìa khóa xe của người quản lý' phải được viết là 'the manager\\'s car keys' (sở hữu cách nằm ở danh từ chỉ người 'manager'), không phải 'the manager car\\'s'."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "My father <u>taught</u> <u>myself</u> how <u>to manage</u> <u>personal finances.</u>",
+        "options": [
+            " to manage",
+            " taught",
+            " personal finances",
+            " myself"
+        ],
+        "answer": "D",
+        "explain": "Đại từ phản thân (myself) chỉ được dùng khi Chủ ngữ và Tân ngữ là cùng một người. Ở đây chủ ngữ là 'My father' (ngôi thứ ba), tân ngữ là 'tôi' nên phải dùng đại từ nhân xưng tân ngữ 'me'. Lỗi sai ở D (sửa myself -> me)."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "Which of the following best restates each of the given sentences?\nHe asked me, “Are you working on the proposal now?”",
+        "options": [
+            " He asked if I am working on the proposal now.",
+            " He asked whether I was working on the proposal then.",
+            " He asked whether was I working on the proposal then.",
+            " He asked if I had worked on the proposal now."
+        ],
+        "answer": "B",
+        "explain": "Khi chuyển câu hỏi Yes/No sang gián tiếp, ta thêm từ nối 'if' hoặc 'whether', đồng thời phải: 1. Đổi ngôi (you -> I); 2. Lùi thì (hiện tại tiếp diễn am/are working -> quá khứ tiếp diễn was working); 3. Đổi trạng từ (now -> then); 4. Không đảo ngữ động từ to be lên trước chủ ngữ."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "Which of the following best restates each of the given sentences?\nThey gave the students clear instructions.",
+        "options": [
+            " The students were given clear instructions.",
+            " Clear instructions were given the students.",
+            " The students gave clear instructions.",
+            " Clear instructions have given to the students."
+        ],
+        "answer": "A",
+        "explain": "Đây là câu bị động với hai tân ngữ (the students và clear instructions). Nếu lấy tân ngữ chỉ người 'the students' lên làm chủ ngữ: 'The students were given clear instructions'. Nếu đưa tân ngữ chỉ vật lên, ta phải thêm giới từ 'to': 'Clear instructions were given TO the students' (đáp án B thiếu 'to')."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "Which of the following best restates each of the given sentences?\nIf it hadn’t been for her support, he would have failed.",
+        "options": [
+            " Without her support, he would fail.",
+            " But for her support, he would have failed.",
+            " Without her support, he wouldn’t fail.",
+            " But for her support, he wouldn’t fail."
+        ],
+        "answer": "B",
+        "explain": "Cấu trúc 'If it hadn\\'t been for + N/V-ing' (Nếu không vì...) trong câu điều kiện loại 3 có thể được viết lại bằng 'But for + N/V-ing' hoặc 'Without + N/V-ing'. Mệnh đề chính giữ nguyên thì: 'he would have failed'."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "Which of the following best restates each of the given sentences?\nNothing is more important than health.",
+        "options": [
+            " Health is the most important thing.",
+            " Health is more important than nothing.",
+            " Health is as important as everything.",
+            " Health is too important to compare."
+        ],
+        "answer": "A",
+        "explain": "Câu gốc 'Không có gì quan trọng hơn sức khỏe' mang ý nghĩa so sánh tuyệt đối, viết lại bằng cấu trúc so sánh nhất: 'Sức khỏe là thứ quan trọng nhất' (Health is the most important thing)."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "Which of the following best restates each of the given sentences?\nIt’s possible that they took a different route.",
+        "options": [
+            " They must have taken a different route.",
+            " They could have taken a different route.",
+            " They can’t have taken a different route.",
+            " They should have taken a different route."
+        ],
+        "answer": "B",
+        "explain": "'It’s possible that...' diễn tả một khả năng có thể đã xảy ra trong quá khứ nhưng không chắc chắn. Cấu trúc Modal Verb hoàn thành tương đương là 'could/may/might + have + V3/ed'. (Must have: chắc chắn đã; Should have: lẽ ra nên)."
+    }
+]

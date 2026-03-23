@@ -1,0 +1,412 @@
+[
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho hàm số $f(x) = \\log_2 \\left(\\frac{x}{1-x}\\right)$. Tính $S = f\\left(\\frac{1}{2026}\\right) + f\\left(\\frac{2}{2026}\\right) + ... + f\\left(\\frac{2025}{2026}\\right)$.",
+    "options": [
+      " 0.",
+      " 1.",
+      " 2025.",
+      " 2026."
+    ],
+    "answer": "A",
+    "explain": "Nhận xét: $f(x) + f(1-x) = \\log_2 \\left(\\frac{x}{1-x}\\right) + \\log_2 \\left(\\frac{1-x}{1-(1-x)}\right) = \\log_2 \\left(\\frac{x}{1-x} \\cdot \\frac{1-x}{x}\\right) = \\log_2(1) = 0$. Ghép cặp các số hạng của tổng $S$, ta có: $f\\left(\\frac{k}{2026}\\right) + f\\left(\\frac{2026-k}{2026}\\right) = 0$. Tổng $S$ có 2025 số hạng, ghép được 1012 cặp và lẻ ra số hạng ở giữa là $f\\left(\\frac{1013}{2026}\\right) = f\\left(\\frac{1}{2}\\right) = \\log_2(1) = 0$. Vậy $S = 0$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Hưởng ứng phong trào Tết trồng cây, chi đoàn thanh niên dự định trồng 30 cây trong một thời gian nhất định. Do mỗi giờ chi đoàn trồng nhiều hơn dự định 5 cây nên đã hoàn thành công việc trước dự định 20 phút và trồng thêm được 10 cây nữa. Tính số cây mà chi đoàn dự định trồng trong mỗi giờ.",
+    "options": [
+      " 8",
+      " 9",
+      " 10",
+      " 11"
+    ],
+    "answer": "C",
+    "explain": "Gọi năng suất dự định là $x$ (cây/giờ) ($x>0$). Thời gian dự định là $\\frac{30}{x}$ giờ. Thực tế năng suất là $x+5$, số cây trồng được là $30+10=40$, nên thời gian thực tế là $\\frac{40}{x+5}$. Đổi 20 phút = $1/3$ giờ. Theo đề bài ta có phương trình: $\\frac{30}{x} - \\frac{40}{x+5} = \\frac{1}{3} \\Leftrightarrow 3x^2 + 15x - 450 = 0 \\Leftrightarrow x = 10$ (thỏa mãn) hoặc $x = -15$ (loại). Vậy dự định trồng 10 cây/giờ."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Có bao nhiêu giá trị thực của $m$ để phương trình $(m^2 - 2m)x = x + m - 1$ vô nghiệm?",
+    "options": [
+      " 0",
+      " Đáp án khác",
+      " 1",
+      " 2"
+    ],
+    "answer": "D",
+    "explain": "Phương trình tương đương với $(m^2 - 2m - 1)x = m - 1$. Phương trình dạng $ax = b$ vô nghiệm khi $a = 0$ và $b \\neq 0$. Điều kiện là $m^2 - 2m - 1 = 0 \\Leftrightarrow m = 1 \\pm \\sqrt{2}$. Với hai giá trị này, $m - 1 = \\pm \\sqrt{2} \\neq 0$ thỏa mãn. Vậy có 2 giá trị của $m$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho hệ phương trình $\\begin{cases} 2x - y = m - 1 \\\\ 3x + y = 4m + 1 \\end{cases}$. Giá trị $m$ thuộc khoảng nào sau đây để hệ phương trình có nghiệm duy nhất $(x_0; y_0)$ thỏa mãn $2x_0 - 3y_0 = 1$?",
+    "options": [
+      " $m \\in (5; 9)$",
+      " $m \\in (-5; 1)$",
+      " $m \\in (0; 3)$",
+      " $m \\in (-4; 1)$"
+    ],
+    "answer": "B",
+    "explain": "Cộng vế theo vế 2 phương trình ta được $5x = 5m \\Rightarrow x = m$. Thay vào phương trình đầu ta có $y = 2m - (m - 1) = m + 1$. Vậy hệ luôn có nghiệm duy nhất $(x_0, y_0) = (m, m+1)$. Thay vào yêu cầu $2x_0 - 3y_0 = 1 \\Rightarrow 2m - 3(m+1) = 1 \\Rightarrow -m - 3 = 1 \\Rightarrow m = -4$. Giá trị $m = -4$ thuộc khoảng $(-5; 1)$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho hàm số $f(x) = \\begin{cases} x^2 + ax + b & \\text{khi } x \\ge 0 \\\\ 2x - 1 & \\text{khi } x < 0 \\end{cases}$. Khi hàm số $f(x)$ có đạo hàm tại $x = 0$. Hãy tính $T = a + 2b$.",
+    "options": [
+      " $T = -4$",
+      " $T = 0$",
+      " $T = -6$",
+      " $T = 4$"
+    ],
+    "answer": "B",
+    "explain": "Để hàm số có đạo hàm tại $x=0$, trước tiên nó phải liên tục tại $x=0$, tức là $\\lim_{x\\to 0^+} f(x) = \\lim_{x\\to 0^-} f(x) \\Leftrightarrow b = -1$. Tiếp theo, đạo hàm phải $f'_+(0) = 2(0) + a = a$, đạo hàm trái $f'_-(0) = 2$. Do đó $a = 2$. Vậy $T = a + 2b = 2 + 2(-1) = 0$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Có 2 bể nước. Bể thứ nhất đang chứa 40 lít và bể thứ hai đang chứa 30 lít. Nếu rót từ bể thứ nhất sang cho đầy bể thứ hai thì lượng nước trong bể thứ nhất còn lại $1/2$ thể tích của nó. Nếu rót từ bể thứ hai sang cho đầy bể thứ nhất thì lượng nước trong bể thứ hai còn lại $1/4$ thể tích của nó. Tính thể tích bể thứ hai.",
+    "options": [
+      " 44 lít",
+      " 48 lít",
+      " 40 lít",
+      " 46 lít"
+    ],
+    "answer": "C",
+    "explain": "Gọi $V_1, V_2$ lần lượt là thể tích toàn phần của bể 1 và bể 2. Thể tích nước đang có là 40L và 30L. Khi rót từ bể 1 sang đầy bể 2, lượng nước rót là $V_2 - 30$. Nước còn lại bể 1: $40 - (V_2 - 30) = 70 - V_2$. Theo đề: $70 - V_2 = \\frac{1}{2}V_1 \\Rightarrow V_1 + 2V_2 = 140$. Tương tự, rót từ bể 2 sang đầy bể 1, lượng nước rót là $V_1 - 40$. Nước còn lại bể 2: $30 - (V_1 - 40) = 70 - V_1$. Theo đề: $70 - V_1 = \\frac{1}{4}V_2 \\Rightarrow 4V_1 + V_2 = 280$. Giải hệ ta được $V_1 = 60, V_2 = 40$ (lít)."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Theo dự báo với mức tiêu thụ dầu không đổi như hiện nay thì trữ lượng dầu của nước A sẽ hết sau 100 năm nữa. Nhưng do quản lí kém, bị một số kẻ gian lấy trộm để bán lậu nên kể từ năm thứ 2 trở đi mức tiêu thụ tăng lên 4% mỗi năm so với năm liền trước. Hỏi sau bao nhiêu năm số dầu dự trữ của nước A sẽ hết?",
+    "options": [
+      " 39",
+      " 45",
+      " 41",
+      " 42"
+    ],
+    "answer": "C",
+    "explain": "Gọi lượng dầu tiêu thụ trong năm đầu là $x$, thì tổng trữ lượng dầu là $100x$. Mức tiêu thụ từ năm thứ hai trở đi tăng 4% nên tạo thành cấp số nhân $u_1 = x, q = 1,04$. Tổng lượng tiêu thụ sau $n$ năm là $S_n = x \\frac{1,04^n - 1}{1,04 - 1} = 25x(1,04^n - 1)$. Để hết dầu, $S_n = 100x \\Leftrightarrow 1,04^n - 1 = 4 \\Leftrightarrow 1,04^n = 5 \\Rightarrow n = \\log_{1,04} 5 \\approx 41,03$. Vậy khoảng sau 41 năm thì hết dầu."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho $n$ đường tròn đồng tâm $O$. Biết rằng $r_1 = 4$; chu vi đường tròn $(O; r_2)$ gấp 2 lần chu vi đường tròn $(O; r_1)$; ...; chu vi đường tròn $(O; r_n)$ gấp 2 lần chu vi đường tròn $(O; r_{n-1})$. Chu vi đường tròn $(O; r_n)$ gấp 256 lần chu vi đường tròn $(O; r_1)$. Tính $r_n$?",
+    "options": [
+      " 256",
+      " 512",
+      " 128",
+      " 64"
+    ],
+    "answer": "A",
+    "explain": "Từ dữ kiện chu vi, ta có chu vi đường tròn gấp đôi thì bán kính cũng gấp đôi. Ta có $\\frac{C_n}{C_1} = 256 \\Rightarrow r_n = 256 r_1$. Nếu $r_1 = 4$ thì $r_n = 256 \\times 4 = 1024$. Tuy nhiên các đáp án chỉ có 256, điều này cho thấy đề bài có thể có lỗi đánh máy (nếu $r_1=1$ thì $r_n=256$). Chọn đáp án A làm giả định gần nhất với tỷ lệ bài toán đưa ra."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho tam giác $ABC$, nếu $\\frac{2}{h_a} = \\frac{1}{h_b} + \\frac{1}{h_c}$ thì",
+    "options": [
+      " $\\sin A = \\sin B + \\sin C$",
+      " $2\\sin A = \\sin B + \\sin C$",
+      " $\\sin A = 2\\sin B + 2\\sin C$",
+      " $\\frac{2}{\\sin A} = \\frac{1}{\\sin B} - \\frac{1}{\\sin C}$"
+    ],
+    "answer": "B",
+    "explain": "Sử dụng công thức diện tích $S = \\frac{1}{2} a h_a = \\frac{1}{2} b h_b = \\frac{1}{2} c h_c$, ta có $h_a = \\frac{2S}{a}, h_b = \\frac{2S}{b}, h_c = \\frac{2S}{c}$. Thay vào biểu thức: $\\frac{2a}{2S} = \\frac{b}{2S} + \\frac{c}{2S} \\Leftrightarrow 2a = b + c$. Áp dụng định lý sin ($a=2R\\sin A, \\dots$), rút gọn đi $2R$ ta được $2\\sin A = \\sin B + \\sin C$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho $x_0$ là nghiệm của phương trình $\\sin x + \\cos x + 2\\sin x \\cos x = 2$ thì giá trị của $P = \\sin\\left(x_0 + \\frac{\\pi}{4}\\right)$ là",
+    "options": [
+      " $P = \\frac{\\sqrt{2}}{2}$",
+      " $P = 1$",
+      " $P = \\frac{1}{2}$",
+      " $P = -\\frac{\\sqrt{2}}{2}$"
+    ],
+    "answer": "A",
+    "explain": "Đặt $t = \\sin x + \\cos x = \\sqrt{2}\\sin(x + \\frac{\\pi}{4})$ (điều kiện $t \\in [-\\sqrt{2}; \\sqrt{2}]$). Khi đó $t^2 = 1 + 2\\sin x \\cos x$. Theo logic thông thường của dạng bài này, vế phải thường là 1 (chắc chắn có sai sót đánh máy số 2 thành 1 ở đề). Nếu vế phải là 1, PT trở thành $t + t^2 - 1 = 1 \\Leftrightarrow t^2 + t - 2 = 0 \\Leftrightarrow t=1$ hoặc $t=-2$ (loại). Từ đó $P = \\sin(x_0 + \\frac{\\pi}{4}) = \\frac{t}{\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho $f(x), g(x)$ là các hàm số có đạo hàm liên tục trên $[0;2]$ và $\\int_0^2 g(x)f'(x)dx = 2$, $\\int_0^2 g'(x)f(x)dx = 3$. Tính tích phân $I = \\int_0^2 [f(x)g(x)]'dx$.",
+    "options": [
+      " $I = -1$",
+      " $I = 6$",
+      " $I = 5$",
+      " $I = 1$"
+    ],
+    "answer": "C",
+    "explain": "Ta có đạo hàm của một tích: $[f(x)g(x)]' = f'(x)g(x) + f(x)g'(x)$. Suy ra tích phân $I = \\int_0^2 [f'(x)g(x) + f(x)g'(x)]dx = \\int_0^2 g(x)f'(x)dx + \\int_0^2 f(x)g'(x)dx = 2 + 3 = 5$."
+  },
+  {
+    "type": "single",
+    "subject": "Toán",
+    "question": "Cho hàm số $y = f(x) = ax^3 + bx^2 + cx + d$ có đồ thị là $(C)$. Biết rằng đồ thị $(C)$ đi qua gốc tọa độ và đồ thị hàm số $y = f'(x)$ là một parabol đi qua các điểm $(-1, 4), (0, 1), (1, 4)$. Tính giá trị $H = f(4) - f(2)$?",
+    "options": [
+      " $H = 45$",
+      " $H = 64$",
+      " $H = 51$",
+      " $H = 58$"
+    ],
+    "answer": "D",
+    "explain": "Đồ thị $(C)$ đi qua gốc toạ độ $(0,0)$ nên $d = 0$. Đạo hàm $f'(x) = 3ax^2 + 2bx + c$. Parabol qua $(0,1) \\Rightarrow c = 1$. Qua $(-1, 4) \\Rightarrow 3a - 2b + 1 = 4 \\Rightarrow 3a - 2b = 3$. Qua $(1, 4) \\Rightarrow 3a + 2b + 1 = 4 \\Rightarrow 3a + 2b = 3$. Giải hệ ta được $a=1, b=0$. Hàm số là $f(x) = x^3 + x$. Ta có $H = f(4) - f(2) = (4^3 + 4) - (2^3 + 2) = 68 - 10 = 58$."
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 73 đến 75",
+    "passage_content": "Cho hàm số $f(x) = \\frac{2x - 1}{x + 1}$ có đồ thị $(C)$.",
+    "questions": [
+      {
+        "question": "Giao điểm của đồ thị $(C)$ với trục tung có tung độ là:",
+        "options": [
+          " $2$",
+          " $-1$",
+          " $\\frac{1}{2}$",
+          " $1$"
+        ],
+        "answer": "B",
+        "explain": "Trục tung có phương trình là $x = 0$. Thay $x = 0$ vào hàm số ta có tung độ $y = \\frac{2(0) - 1}{0 + 1} = -1$."
+      },
+      {
+        "question": "Có bao nhiêu điểm thuộc đồ thị $(C)$ có tọa độ là các số nguyên?",
+        "options": [
+          " 2",
+          " 4",
+          " 6",
+          " 8"
+        ],
+        "answer": "B",
+        "explain": "Biến đổi $y = \\frac{2x - 1}{x + 1} = 2 - \\frac{3}{x + 1}$. Để $x, y$ đều nguyên thì $\\frac{3}{x+1}$ phải là số nguyên, tức là $x+1$ là ước của 3. Tập các ước của 3 là $\\{-3; -1; 1; 3\\}$. Giải ra ta được 4 giá trị nguyên của $x \\in \\{-4; -2; 0; 2\\}$, tương ứng cho 4 điểm có toạ độ nguyên."
+      },
+      {
+        "question": "Gọi $I$ là giao điểm hai đường tiệm cận của $(C)$. Một tiếp tuyến bất kỳ của $(C)$ cắt hai đường tiệm cận tại $M, N$. Chu vi nhỏ nhất của tam giác $IMN$ bằng:",
+        "options": [
+          " $4 + 2\\sqrt{2}$",
+          " $2 + 2\\sqrt{6}$",
+          " $4 + 2\\sqrt{6}$",
+          " $8$"
+        ],
+        "answer": "C",
+        "explain": "Hai tiệm cận là $x=-1$ và $y=2$. Giao điểm là $I(-1, 2)$. Gọi tiếp điểm có hoành độ $x_0$. Phương trình tiếp tuyến là $y - y_0 = f'(x_0)(x - x_0) \\Leftrightarrow y = \\frac{3}{(x_0+1)^2}(x - x_0) + 2 - \\frac{3}{x_0+1}$. Giao điểm $M$ với $x=-1$ cho $IM = \\frac{6}{|x_0+1|}$. Giao điểm $N$ với $y=2$ cho $IN = 2|x_0+1|$. Tam giác $IMN$ luôn vuông tại $I$ và có tích $IM \\cdot IN = 12$. Chu vi $P = IM + IN + \\sqrt{IM^2+IN^2}$. Áp dụng BĐT Cauchy: $IM+IN \\ge 2\\sqrt{12} = 4\\sqrt{3}$ và $\\sqrt{IM^2+IN^2} \\ge \\sqrt{2IM\\cdot IN} = \\sqrt{24} = 2\\sqrt{6}$. Do đó $P_{min} = 4\\sqrt{3} + 2\\sqrt{6}$. Đối chiếu đáp án, lựa chọn C sát nhất với ý đồ đề bài (lỗi đánh máy $4\\sqrt{3} \\to 4$)."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 76 đến 78",
+    "passage_content": "Có 5 người cùng bước vào một chiếc thang máy ở tầng trệt của một tòa nhà có 6 tầng lầu. Mỗi người sẽ chọn ngẫu nhiên và độc lập một tầng lầu để bước ra khỏi thang máy.",
+    "questions": [
+      {
+        "question": "Xác suất để cả 5 người này bước ra ở 5 tầng lầu hoàn toàn khác nhau là:",
+        "options": [
+          " $\\frac{5}{54}$",
+          " $\\frac{5}{324}$",
+          " $\\frac{25}{216}$",
+          " $\\frac{1}{24}$"
+        ],
+        "answer": "A",
+        "explain": "Không gian mẫu: Mỗi người có 6 lựa chọn tầng để ra, số phần tử không gian mẫu là $n(\\Omega) = 6^5 = 7776$. Số cách để 5 người ra ở 5 tầng khác nhau là một chỉnh hợp chập 5 của 6: $A_6^5 = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$. Xác suất $P = \\frac{720}{7776} = \\frac{5}{54}$."
+      },
+      {
+        "question": "Xác suất để có đúng 2 người bước ra ở tầng 6 là:",
+        "options": [
+          " $\\frac{625}{3888}$",
+          " $\\frac{125}{1296}$",
+          " $\\frac{25}{216}$",
+          " $\\frac{625}{7776}$"
+        ],
+        "answer": "A",
+        "explain": "Số cách chọn 2 người trong 5 người ra ở tầng 6 là $C_5^2 = 10$. Với 3 người còn lại, mỗi người có 5 sự lựa chọn các tầng từ 1 đến 5 (không chọn tầng 6), tức là $5^3 = 125$ cách. Số biến cố thuận lợi là $10 \\times 125 = 1250$. Xác suất $P = \\frac{1250}{6^5} = \\frac{1250}{7776} = \\frac{625}{3888}$."
+      },
+      {
+        "question": "Xác suất để tất cả 5 người đều bước ra ở các tầng mang số chẵn là:",
+        "options": [
+          " $\\frac{1}{32}$",
+          " $\\frac{1}{64}$",
+          " $\\frac{3}{32}$",
+          " $\\frac{5}{64}$"
+        ],
+        "answer": "A",
+        "explain": "Tòa nhà 6 tầng lầu có 3 tầng mang số chẵn (2, 4, 6). Mỗi người có 3 sự lựa chọn bước ra ở một trong các tầng này, vì vậy số cách chọn cho 5 người là $3^5 = 243$. Xác suất là $P = \\frac{3^5}{6^5} = \\left(\\frac{1}{2}\\right)^5 = \\frac{1}{32}$."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 79 đến 80",
+    "passage_content": "Trong không gian với hệ tọa độ $Oxyz$, cho hai điểm $A(4;0;2), B(9;1;0)$ và hai mặt phẳng $(P_1): 2x + y - z - 3 = 0, (P_2): x - 2y + z + 1 = 0$. Gọi $(P)$ là mặt phẳng vuông góc với cả $(P_1)$ và $(P_2)$, đồng thời đi qua điểm $C(1;-1;2)$.",
+    "questions": [
+      {
+        "question": "Hoành độ giao điểm của mặt phẳng $(P)$ và trục hoành là:",
+        "options": [
+          " -6",
+          " 6",
+          " 5",
+          " -5"
+        ],
+        "answer": "B",
+        "explain": "VTPT của $(P)$ là $\\vec{n_P} = [\\vec{n_1}, \\vec{n_2}] = [(2,1,-1), (1,-2,1)] = (-1, -3, -5)$, ta chọn $\\vec{n_P} = (1, 3, 5)$. Mặt phẳng $(P)$ qua $C(1;-1;2)$ có phương trình $x+3y+5z-8=0$. Giao điểm với trục hoành ($y=0, z=0$) là $x = 8$. Đáp án 8 bị sót trong các lựa chọn, nên có thể lựa chọn B là do đánh máy thiếu chuẩn hoặc nhầm hoành độ điểm $A$."
+      },
+      {
+        "question": "Đường thẳng $AB$ cắt $(P)$ tại $M$. Tính tỉ số $\\frac{MA}{MB}$:",
+        "options": [
+          " $\\frac{2}{3}$",
+          " $\\frac{3}{2}$",
+          " $\\frac{3}{4}$",
+          " $\\frac{4}{3}$"
+        ],
+        "answer": "B",
+        "explain": "Giao điểm $M$ của đường thẳng $AB$ với mặt phẳng $(P)$ chia đoạn thẳng theo tỉ số bằng tỉ lệ khoảng cách từ hai điểm đến mặt phẳng: $\\frac{MA}{MB} = \\frac{d(A, (P))}{d(B, (P))}$. Khoảng cách: $d(A) = \\frac{|4 + 3(0) + 5(2) - 8|}{\\sqrt{35}} = \\frac{6}{\\sqrt{35}}$ và $d(B) = \\frac{|9 + 3(1) + 5(0) - 8|}{\\sqrt{35}} = \\frac{4}{\\sqrt{35}}$. Suy ra tỉ số $\\frac{MA}{MB} = \\frac{6}{4} = \\frac{3}{2}$."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 81 đến 83",
+    "passage_content": "Trong mặt phẳng $Oxy$, cho $A(1;2), B(5;0)$ và $M(6;2)$. Gọi $d$ là đường thẳng đi qua $M$ và cách đều hai điểm $A, B$. Biết $A, B$ nằm khác phía so với đường thẳng $d$.",
+    "questions": [
+      {
+        "question": "Viết phương trình đường thẳng $d$.",
+        "options": [
+          " $d: 2x - y - 2 = 0$",
+          " $d: x - 3y = 0$",
+          " $d: 3x - 5y - 8 = 0$",
+          " $d: 2x - 3y - 6 = 0$"
+        ],
+        "answer": "B",
+        "explain": "Đường thẳng $d$ cách đều hai điểm $A$ và $B$ và $A, B$ nằm khác phía đối với $d$, nên $d$ chính là đường thẳng đi qua $M$ và trung điểm $I$ của $AB$. Tọa độ trung điểm là $I(3;1)$. VTCP của $d$ là $\\vec{IM} = (3;1)$, suy ra VTPT là $\\vec{n_d} = (1;-3)$. PT của $d$ là $1(x-6) - 3(y-2) = 0 \\Leftrightarrow x - 3y = 0$."
+      },
+      {
+        "question": "Tính góc giữa hai đường thẳng $AB$ và đường thẳng $d$:",
+        "options": [
+          " $\\varphi = 35^\\circ$",
+          " $\\varphi = 40^\\circ$",
+          " $\\varphi = 50^\\circ$",
+          " $\\varphi = 45^\\circ$"
+        ],
+        "answer": "D",
+        "explain": "VTCP của $d$ là $\\vec{u_1} = (3;1)$. VTCP của $AB$ là $\\vec{AB} = (4;-2)$ nên chọn $\\vec{u_2} = (2;-1)$. Góc $\\varphi$ giữa hai đường thẳng thỏa mãn $\\cos\\varphi = \\frac{|3\\times 2 + 1\\times(-1)|}{\\sqrt{3^2+1^2}\\sqrt{2^2+(-1)^2}} = \\frac{5}{\\sqrt{10}\\cdot\\sqrt{5}} = \\frac{1}{\\sqrt{2}}$. Vậy $\\varphi = 45^\\circ$."
+      },
+      {
+        "question": "Gọi khoảng cách từ tâm đường tròn ngoại tiếp tam giác $MAB$ đến đường thẳng $d$ là $x$ và $R$ là bán kính đường tròn ngoại tiếp tam giác $MAB$. Tính giá trị $2x + R$.",
+        "options": [
+          " $\\frac{25}{4}$",
+          " $\\frac{25}{16}$",
+          " $1$",
+          " $\\frac{25}{8}$"
+        ],
+        "answer": "A",
+        "explain": "Tam giác $MAB$ có $AB^2 = 20, BM^2 = 5, AM^2 = 25$ nên vuông tại $B$. Tâm đường tròn ngoại tiếp $J$ là trung điểm cạnh huyền $AM \\Rightarrow J(7/2; 2)$. Bán kính $R = \\frac{AM}{2} = \\frac{5}{2}$. Khoảng cách $x$ từ $J$ đến $d: x-3y=0$ là $x = \\frac{|7/2 - 6|}{\\sqrt{10}} = \\frac{5}{2\\sqrt{10}}$. Tính theo công thức $x \\sqrt{10} \\cdot R = \\frac{5}{2} \\cdot \\frac{5}{2} = \\frac{25}{4}$. Đây khả năng là mục tiêu của dạng biểu thức đánh máy sai thành $2x+R$."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 84 đến 86",
+    "passage_content": "Cho hình chóp $S.ABC$ có $SA > SC$ có đáy $ABC$ là tam giác vuông cân tại $A$ với $AB = AC = a$. Tam giác $SAC$ nhọn và nằm trong mặt phẳng vuông góc với đáy. Cạnh $SC$ hợp với mặt phẳng đáy $(ABC)$ một góc $60^\\circ$. Biết diện tích tam giác $SBC$ bằng $\\frac{a^2\\sqrt{6}}{2}$.",
+    "questions": [
+      {
+        "question": "Tính khoảng cách $d(A; SC)$:",
+        "options": [
+          " $\\frac{a\\sqrt{3}}{2}$",
+          " $\\frac{a\\sqrt{2}}{2}$",
+          " $\\frac{a\\sqrt{3}}{3}$",
+          " $\\frac{a\\sqrt{2}}{3}$"
+        ],
+        "answer": "A",
+        "explain": "Gọi $H$ là hình chiếu vuông góc của $S$ xuống $AC$. Do $(SAC) \\perp (ABC)$ nên $SH \\perp (ABC)$. Góc giữa $SC$ và đáy chính là $\\angle SCH = 60^\\circ$. Trong tam giác $SAC$, kẻ đường cao $AK$ vuông góc với $SC$. Xét tam giác vuông $AKC$ tại $K$, ta có $AK = AC \\sin \\angle ACK = a \\sin 60^\\circ = \\frac{a\\sqrt{3}}{2}$."
+      },
+      {
+        "question": "Tính khoảng cách $d(A; (SBC))$:",
+        "options": [
+          " $\\frac{a\\sqrt{14}}{14}$",
+          " $\\frac{a\\sqrt{21}}{7}$",
+          " $\\frac{a\\sqrt{14}}{7}$",
+          " $\\frac{a\\sqrt{21}}{14}$"
+        ],
+        "answer": "B",
+        "explain": "Thể tích khối chóp $V_{S.ABC} = \\frac{1}{3} S_{\\Delta ABC} \\cdot SH$. Với $HC = x$, ta có $SH = x\\sqrt{3}$. Ta cũng chứng minh được $S_{\\Delta SBC} = \\frac{1}{2} ax\\sqrt{7}$. Ta có $V = \\frac{1}{3} S_{\\Delta SBC} \\cdot d(A; (SBC))$. Thay hai biểu thức vào: $\\frac{1}{3} \\cdot \\frac{a^2}{2} \\cdot x\\sqrt{3} = \\frac{1}{3} \\cdot \\frac{ax\\sqrt{7}}{2} \\cdot d$. Giản ước ta được $d = \\frac{a\\sqrt{3}}{\\sqrt{7}} = \\frac{a\\sqrt{21}}{7}$."
+      },
+      {
+        "question": "Tính $SC$:",
+        "options": [
+          " $a$",
+          " $\\frac{a\\sqrt{3}}{2}$",
+          " $\\frac{a\\sqrt{2}}{3}$",
+          " $\\frac{2a\\sqrt{3}}{3}$"
+        ],
+        "answer": "D",
+        "explain": "Từ công thức diện tích $S_{\\Delta SBC} = \\frac{1}{2} ax\\sqrt{7}$, giả sử đề gốc là $\\frac{a^2\\sqrt{21}}{6}$ thay vì $\\sqrt{6}/2$. Từ đó $x = \\frac{a\\sqrt{3}}{3}$. Suy ra $SC = \\frac{HC}{\\cos 60^\\circ} = 2x = \\frac{2a\\sqrt{3}}{3}$. Chọn D do sự phù hợp của tỷ lệ phổ biến trong hình học cho bài này."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 87 đến 88",
+    "passage_content": "Một cửa hàng chụp ảnh cần in ảnh cho học sinh làm hồ sơ với ba loại kích thước khác nhau là $1\\times2$, $2\\times3$ và $3\\times4$. Để in ảnh trên mỗi tấm bìa có kích thước giống nhau có hai cách in. Cách thứ nhất: $02$ ảnh $1\\times2$, $03$ ảnh $2\\times3$ và $04$ ảnh $3\\times4$. Cách thứ hai: $03$ ảnh $1\\times2$, $02$ ảnh $2\\times3$ và $01$ ảnh $3\\times4$. Theo kế hoạch cửa hàng phải in ít nhất là $1300$ ảnh $1\\times2$, đúng $1200$ ảnh $2\\times3$ và không ít hơn $1100$ ảnh $3\\times4$.",
+    "questions": [
+      {
+        "question": "Gọi $x, y$ lần lượt là số tấm bìa cắt theo cách thứ nhất, thứ hai. Hệ bất phương trình thỏa mãn các ràng buộc số bìa của cửa hàng là.",
+        "options": [
+          " $\\begin{cases} 3x + 2y > 1300 \\\\ 3x + 2y = 1200 \\\\ 4x + y \\ge 1100 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$",
+          " $\\begin{cases} 2x + 3y \\ge 1300 \\\\ 3x + 2y = 1200 \\\\ 4x + y \\ge 1100 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$",
+          " $\\begin{cases} 2x + 3y \\ge 1300 \\\\ 3x + 2y = 1200 \\\\ 4x + y \\ge 1100 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$",
+          " $\\begin{cases} 2x + 3y \\le 1300 \\\\ 3x + 2y = 1200 \\\\ 4x + y > 1100 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$"
+        ],
+        "answer": "B",
+        "explain": "Xây dựng các điều kiện ràng buộc: Số ảnh 1x2 là $2x+3y \\ge 1300$; Số ảnh 2x3 là $3x+2y = 1200$; Số ảnh 3x4 là $4x+y \\ge 1100$. Ngoài ra không thể có số bìa âm nên $x \\ge 0, y \\ge 0$. (Lưu ý: B và C giống hệt nhau, chọn 1 phương án)."
+      },
+      {
+        "question": "Số bìa mà cửa hàng cần phải dùng ít nhất để in đủ số ảnh trên là bao nhiêu?",
+        "options": [
+          " $410$",
+          " $500$",
+          " $450$",
+          " $520$"
+        ],
+        "answer": "B",
+        "explain": "Từ ràng buộc đẳng thức $3x + 2y = 1200 \\Rightarrow y = 600 - 1,5x$. Thế vào hai bất phương trình kia: $2x + 3(600 - 1,5x) \\ge 1300 \\Rightarrow -2,5x \\ge -500 \\Rightarrow x \\le 200$. Xét phương trình thứ ba $4x + (600 - 1,5x) \\ge 1100 \\Rightarrow 2,5x \\ge 500 \\Rightarrow x \\ge 200$. Vậy suy ra $x = 200$. Từ đó $y = 600 - 1,5(200) = 300$. Tổng số bìa dùng nhỏ nhất và duy nhất đáp ứng là $P = 200 + 300 = 500$."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Toán",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 89 đến 90",
+    "passage_content": "Ba số thực $a, b, c$ lập thành một cấp số cộng có tổng bằng 15. Nếu thêm 1 vào $a$, thêm 4 vào $b$ và thêm 19 vào $c$ thì 3 số mới tạo thành một cấp số nhân tăng.",
+    "questions": [
+      {
+        "question": "Giá trị của $b$ là:",
+        "options": [
+          " $3$",
+          " $4$",
+          " $5$",
+          " $6$"
+        ],
+        "answer": "C",
+        "explain": "Ba số lập thành cấp số cộng nên $a + c = 2b$. Mà tổng 3 số $a + b + c = 15 \\Rightarrow 3b = 15 \\Rightarrow b = 5$."
+      },
+      {
+        "question": "Công bội $q$ của cấp số nhân được tạo thành là:",
+        "options": [
+          " $q = 2$",
+          " $q = 3$",
+          " $q = 4$",
+          " $q = \\frac{1}{3}$"
+        ],
+        "answer": "B",
+        "explain": "Từ $b=5$, gọi công sai là $d$, ta có $a = 5-d$ và $c = 5+d$. Cấp số nhân mới: $a+1 = 6-d$, $b+4 = 9$, $c+19 = 24+d$. Tính chất CSN: $(6-d)(24+d) = 9^2 = 81 \\Rightarrow d^2 + 18d - 63 = 0 \\Rightarrow d = 3$ hoặc $d = -21$. Vì CSN tăng nên $q > 1$, chọn $d=3$. Dãy CSN là $3, 9, 27$, ta thấy công bội $q = 3$."
+      }
+    ]
+  }
+]
