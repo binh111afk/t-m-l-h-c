@@ -388,5 +388,200 @@
         ],
         "answer": "C",
         "explain": "Từ 'might' trong câu gốc mang nghĩa là 'có lẽ, có thể' (diễn tả một khả năng không chắc chắn). Từ 'could' trong đáp án C mang nghĩa tương đương (sự cạnh tranh gia tăng có thể là một yếu tố). Các đáp án A (must be - chắc chắn là) và B (definitely - dứt khoát) mang sắc thái quá chắc chắn so với câu gốc."
-    }
+    },
+    {
+    "type": "single",
+    "subject": "Tiếng Anh",
+    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nShe finally _________ a brilliant solution to the problem after thinking about it for days.",
+    "options": [
+      " came down with",
+      " came up with",
+      " got along with",
+      " put up with"
+    ],
+    "answer": "B",
+    "explain": "Cụm động từ 'come up with' có nghĩa là nảy ra, nghĩ ra (một ý tưởng, một giải pháp). Các cụm từ khác: 'come down with' (mắc bệnh), 'get along with' (hòa hợp với), 'put up with' (chịu đựng) không phù hợp với ngữ cảnh."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Anh",
+    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nBy the time we arrived at the cinema, the movie _________.",
+    "options": [
+      " started",
+      " has started",
+      " was starting",
+      " had started"
+    ],
+    "answer": "D",
+    "explain": "Cấu trúc 'By the time + S + V(quá khứ đơn), S + V(quá khứ hoàn thành)' dùng để diễn tả một hành động đã hoàn tất trước một thời điểm hoặc một hành động khác trong quá khứ. Việc bộ phim bắt đầu đã xảy ra trước khi 'chúng tôi đến' nên dùng thì Quá khứ hoàn thành (had started)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Anh",
+    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nIf I had known you were in town, I _________ to visit you.",
+    "options": [
+      " would have gone",
+      " would go",
+      " will go",
+      " went"
+    ],
+    "answer": "A",
+    "explain": "Đây là câu điều kiện loại 3, diễn tả một giả định trái ngược với thực tế trong quá khứ. Cấu trúc: If + S + had + V3/ed, S + would/could/might + have + V3/ed. Do đó, đáp án đúng là 'would have gone'."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Anh",
+    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nThe man _________ car was stolen reported the incident to the local police station.",
+    "options": [
+      " who",
+      " which",
+      " whose",
+      " whom"
+    ],
+    "answer": "C",
+    "explain": "Đại từ quan hệ 'whose' được dùng để chỉ sự sở hữu cho danh từ đứng trước nó (người đàn ông mà chiếc xe của ông ấy...). Theo sau 'whose' luôn là một danh từ (car)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Anh",
+    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nYou need to _________ a decision soon, or someone else will choose for you.",
+    "options": [
+      " do",
+      " make",
+      " take",
+      " give"
+    ],
+    "answer": "B",
+    "explain": "Sự kết hợp từ (collocation) cố định trong tiếng Anh: 'make a decision' mang nghĩa là đưa ra quyết định."
+  },
+  {
+    "type": "check",
+    "subject": "Tiếng Anh",
+    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nThe <u>number</u> of <u>students</u> attending the lecture <u>were</u> very <u>small</u>.",
+    "options": [
+      " number",
+      " students",
+      " were",
+      " small"
+    ],
+    "answer": "C",
+    "explain": "Cấu trúc 'The number of + Danh từ số nhiều' (chỉ số lượng những cái gì đó) luôn đi với động từ được chia ở ngôi thứ ba số ít. Do đó, 'were' phải sửa thành 'was'. (Lưu ý: Khác với 'A number of' + Danh từ số nhiều + Động từ số nhiều)."
+  },
+  {
+    "type": "check",
+    "subject": "Tiếng Anh",
+    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nShe <u>enjoys</u> <u>reading</u> books, playing tennis, and <u>to watch</u> movies <u>on</u> weekends.",
+    "options": [
+      " enjoys",
+      " reading",
+      " to watch",
+      " on"
+    ],
+    "answer": "C",
+    "explain": "Lỗi cấu trúc song song (Parallelism). Các động từ được liệt kê sau 'enjoys' phải cùng dạng V-ing. Trong câu đã có 'reading', 'playing', nên 'to watch' phải được sửa thành 'watching'."
+  },
+  {
+    "type": "check",
+    "subject": "Tiếng Anh",
+    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nThe <u>results</u> of the experiment <u>were</u> very <u>surprised</u> to <u>everyone</u> in the lab.",
+    "options": [
+      " results",
+      " were",
+      " surprised",
+      " everyone"
+    ],
+    "answer": "C",
+    "explain": "Lỗi sai về cách dùng tính từ tận cùng bằng -ing và -ed. Tính từ đuôi '-ed' dùng để chỉ cảm xúc của người, còn tính từ đuôi '-ing' dùng để chỉ bản chất của sự vật/sự việc gây ra cảm xúc đó. Ở đây chủ ngữ là 'The results' (những kết quả) mang bản chất gây ngạc nhiên, nên phải dùng 'surprising' thay vì 'surprised'."
+  },
+  {
+    "type": "check",
+    "subject": "Tiếng Anh",
+    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nMy brother is <u>very</u> <u>good</u> <u>in</u> playing chess and <u>often</u> wins local tournaments.",
+    "options": [
+      " very",
+      " good",
+      " in",
+      " often"
+    ],
+    "answer": "C",
+    "explain": "Cấu trúc giới từ đi kèm với tính từ: 'good at + V-ing/Noun' có nghĩa là giỏi về việc gì đó. Dùng 'in' là sai, cần sửa 'in' thành 'at'."
+  },
+  {
+    "type": "check",
+    "subject": "Tiếng Anh",
+    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\n<u>Despite</u> of the <u>heavy</u> rain, they <u>continued</u> their football <u>match</u> until the end.",
+    "options": [
+      " Despite",
+      " heavy",
+      " continued",
+      " match"
+    ],
+    "answer": "A",
+    "explain": "Giới từ chỉ sự nhượng bộ: 'Despite' không bao giờ đi kèm với 'of'. Ta chỉ có thể dùng 'Despite + Noun/V-ing' hoặc 'In spite of + Noun/V-ing'. Do đó, lỗi sai ở A, sửa thành 'In spite' hoặc bỏ chữ 'of' trong câu."
+  },
+  {
+    "type": "rewrite",
+    "subject": "Tiếng Anh",
+    "question": "Which of the following best restates the given sentence?\n\"Why don't we go out for dinner tonight?\" said Mary.",
+    "options": [
+      " Mary ordered them to go out for dinner tonight.",
+      " Mary suggested going out for dinner that night.",
+      " Mary asked why they didn't go out for dinner tonight.",
+      " Mary refused to go out for dinner that night."
+    ],
+    "answer": "B",
+    "explain": "Cấu trúc 'Why don't we + V' được dùng để đưa ra một lời gợi ý. Khi chuyển sang câu gián tiếp, ta dùng động từ tường thuật 'suggest + V-ing'. Trạng từ 'tonight' được đổi thành 'that night'."
+  },
+  {
+    "type": "rewrite",
+    "subject": "Tiếng Anh",
+    "question": "Which of the following best restates the given sentence?\nThey are building a new hospital in my neighborhood.",
+    "options": [
+      " A new hospital is building in my neighborhood.",
+      " A new hospital is being built in my neighborhood.",
+      " A new hospital has been built in my neighborhood.",
+      " A new hospital was built in my neighborhood."
+    ],
+    "answer": "B",
+    "explain": "Câu gốc là câu chủ động ở thì Hiện tại tiếp diễn (are building). Cấu trúc câu bị động của thì này là: S + is/are/am + being + V3/ed. 'A new hospital' là số ít nên dùng 'is being built'."
+  },
+  {
+    "type": "rewrite",
+    "subject": "Tiếng Anh",
+    "question": "Which of the following best restates the given sentence?\nNo one else in the class is taller than John.",
+    "options": [
+      " John is the tallest student in the class.",
+      " John is taller than some students in the class.",
+      " John is as tall as the other students in the class.",
+      " Everyone in the class is taller than John."
+    ],
+    "answer": "A",
+    "explain": "Câu gốc mang nghĩa: Không một ai trong lớp cao hơn John. Điều này tương đương với so sánh nhất: John là học sinh cao nhất trong lớp."
+  },
+  {
+    "type": "rewrite",
+    "subject": "Tiếng Anh",
+    "question": "Which of the following best restates the given sentence?\nI'm sure he didn't steal the money because he was with me all day.",
+    "options": [
+      " He might not have stolen the money.",
+      " He shouldn't have stolen the money.",
+      " He can't have stolen the money.",
+      " He needn't have stolen the money."
+    ],
+    "answer": "C",
+    "explain": "Để diễn đạt sự suy luận chắc chắn về một sự việc không thể đã xảy ra trong quá khứ (dựa trên bằng chứng có thật), ta dùng cấu trúc 'can't have + V3/ed' (chắc chắn là đã không). 'Might not have' chỉ sự không chắc chắn, 'shouldn't have' là lẽ ra không nên."
+  },
+  {
+    "type": "rewrite",
+    "subject": "Tiếng Anh",
+    "question": "Which of the following best restates the given sentence?\nHe was very tired, but he finished the report on time.",
+    "options": [
+      " Because he was very tired, he finished the report on time.",
+      " In spite of being very tired, he finished the report on time.",
+      " Despite he was very tired, he finished the report on time.",
+      " However tired he was, he didn't finish the report on time."
+    ],
+    "answer": "B",
+    "explain": "Câu gốc thể hiện sự nhượng bộ (anh ấy mệt nhưng vẫn hoàn thành báo cáo). Cấu trúc 'In spite of + V-ing / Noun Phrase' diễn đạt sự nhượng bộ là chính xác nhất. Câu C sai vì sau 'Despite' không dùng mệnh đề (S + V)."
+  }
 ]

@@ -818,5 +818,405 @@
                 "explain": "Tâm mặt cầu là $M(1;2;2)$. Khoảng cách từ tâm $M$ đến mặt phẳng $(P)$ là $d = d(M, (P)) = \\frac{|1 - 2 + 2 + 3|}{\\sqrt{1^2 + (-1)^2 + 1^2}} = \\frac{4}{\\sqrt{3}}$. Bán kính của mặt cầu là $R = \\sqrt{d^2 + r^2} = \\sqrt{\\frac{16}{3} + 16} = \\sqrt{\\frac{64}{3}} \\Rightarrow R^2 = \\frac{64}{3}$. Phương trình mặt cầu là $(x-1)^2 + (y-2)^2 + (z-2)^2 = \\frac{64}{3}$."
             }
         ]
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Tìm tập xác định $D$ của hàm số $y = \\log_3(x-1)$.",
+        "options": [
+            "A. $D = \\mathbb{R}$",
+            "B. $D = (1; +\\infty)$",
+            "C. $D = [1; +\\infty)$",
+            "D. $D = (-\\infty; 1)$"
+        ],
+        "answer": "B",
+        "explain": "Hàm số logarit $y = \\log_a f(x)$ xác định khi và chỉ khi $f(x) > 0$. Do đó, điều kiện xác định là $x - 1 > 0 \\Leftrightarrow x > 1$. Tập xác định $D = (1; +\\infty)$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Đạo hàm của hàm số $y = 3^x$ là:",
+        "options": [
+            "A. $y' = x \\cdot 3^{x-1}$",
+            "B. $y' = \\frac{3^x}{\\ln 3}$",
+            "C. $y' = 3^x \\ln 3$",
+            "D. $y' = 3^x$"
+        ],
+        "answer": "C",
+        "explain": "Áp dụng công thức đạo hàm của hàm số mũ cơ bản $(a^x)' = a^x \\ln a$. Vậy đạo hàm của $y = 3^x$ là $y' = 3^x \\ln 3$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Nghiệm của phương trình $2^{x+1} = 8$ là:",
+        "options": [
+            "A. $x = 1$",
+            "B. $x = 2$",
+            "C. $x = 3$",
+            "D. $x = 4$"
+        ],
+        "answer": "B",
+        "explain": "Ta có $8 = 2^3$. Phương trình trở thành $2^{x+1} = 2^3 \\Leftrightarrow x + 1 = 3 \\Leftrightarrow x = 2$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Thể tích của khối lập phương có cạnh bằng $2a$ là:",
+        "options": [
+            "A. $8a^3$",
+            "B. $2a^3$",
+            "C. $4a^3$",
+            "D. $6a^3$"
+        ],
+        "answer": "A",
+        "explain": "Thể tích khối lập phương được tính bằng lập phương chiều dài cạnh: $V = (2a)^3 = 8a^3$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Trong không gian $Oxyz$, mặt cầu $(S): x^2 + y^2 + z^2 - 2x - 4y + 6z - 2 = 0$ có bán kính $R$ bằng:",
+        "options": [
+            "A. $R = 2$",
+            "B. $R = 16$",
+            "C. $R = 4$",
+            "D. $R = \\sqrt{14}$"
+        ],
+        "answer": "C",
+        "explain": "Từ phương trình mặt cầu, ta xác định được tâm $I(1; 2; -3)$. Bán kính $R = \\sqrt{a^2 + b^2 + c^2 - d} = \\sqrt{1^2 + 2^2 + (-3)^2 - (-2)} = \\sqrt{1 + 4 + 9 + 2} = \\sqrt{16} = 4$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Số phức liên hợp của số phức $z = 3 - 4i$ là:",
+        "options": [
+            "A. $\\bar{z} = -3 - 4i$",
+            "B. $\\bar{z} = 3 + 4i$",
+            "C. $\\bar{z} = -3 + 4i$",
+            "D. $\\bar{z} = 4 - 3i$"
+        ],
+        "answer": "B",
+        "explain": "Số phức liên hợp của $z = a + bi$ là $\\bar{z} = a - bi$. Vậy liên hợp của $3 - 4i$ là $3 + 4i$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Tích phân $I = \\int_0^1 e^x dx$ có giá trị bằng:",
+        "options": [
+            "A. $e - 1$",
+            "B. $e + 1$",
+            "C. $e$",
+            "D. $1 - e$"
+        ],
+        "answer": "A",
+        "explain": "Ta có $\\int e^x dx = e^x$. Do đó, $I = e^x \\Big|_0^1 = e^1 - e^0 = e - 1$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Giá trị lớn nhất của hàm số $y = -x^2 + 4x - 1$ trên tập xác định $\\mathbb{R}$ là:",
+        "options": [
+            "A. 1",
+            "B. 2",
+            "C. 3",
+            "D. 4"
+        ],
+        "answer": "C",
+        "explain": "Hàm số bậc hai $y = -x^2 + 4x - 1$ có hệ số $a = -1 < 0$ nên đạt giá trị lớn nhất tại đỉnh parabol. Hoành độ đỉnh $x = -\\frac{b}{2a} = -\\frac{4}{2(-1)} = 2$. Giá trị lớn nhất $y_{max} = -(2)^2 + 4(2) - 1 = -4 + 8 - 1 = 3$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Một tổ có 10 học sinh. Có bao nhiêu cách chọn ra một nhóm gồm 3 học sinh từ tổ đó?",
+        "options": [
+            "A. $A_{10}^3$",
+            "B. $C_{10}^3$",
+            "C. $10^3$",
+            "D. $3!$"
+        ],
+        "answer": "B",
+        "explain": "Việc chọn ra 3 học sinh từ 10 học sinh (không phân biệt thứ tự) là một tổ hợp chập 3 của 10 phần tử. Kí hiệu là $C_{10}^3$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Cho khối chóp có diện tích đáy $B = 6$ và chiều cao $h = 4$. Thể tích của khối chóp đã cho bằng:",
+        "options": [
+            "A. 24",
+            "B. 12",
+            "C. 8",
+            "D. 10"
+        ],
+        "answer": "C",
+        "explain": "Thể tích khối chóp được tính bằng công thức $V = \\frac{1}{3}Bh = \\frac{1}{3} \\times 6 \\times 4 = 8$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 2$ và công sai $d = 3$. Số hạng thứ tư $u_4$ của cấp số cộng đó bằng:",
+        "options": [
+            "A. 11",
+            "B. 14",
+            "C. 8",
+            "D. 5"
+        ],
+        "answer": "A",
+        "explain": "Công thức số hạng tổng quát của cấp số cộng là $u_n = u_1 + (n-1)d$. Do đó, $u_4 = u_1 + 3d = 2 + 3(3) = 11$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Đường tiệm cận ngang của đồ thị hàm số $y = \\frac{2x-1}{x+1}$ có phương trình là:",
+        "options": [
+            "A. $x = -1$",
+            "B. $y = -1$",
+            "C. $x = 2$",
+            "D. $y = 2$"
+        ],
+        "answer": "D",
+        "explain": "Đồ thị hàm phân thức $y = \\frac{ax+b}{cx+d}$ có tiệm cận ngang là đường thẳng $y = \\frac{a}{c}$. Ở đây $a=2, c=1$ nên phương trình tiệm cận ngang là $y = 2$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Hàm số $y = x^3 - 3x$ nghịch biến trên khoảng nào dưới đây?",
+        "options": [
+            "A. $(-\\infty; -1)$",
+            "B. $(1; +\\infty)$",
+            "C. $(-1; 1)$",
+            "D. $(-\\infty; +\\infty)$"
+        ],
+        "answer": "C",
+        "explain": "Ta có $y' = 3x^2 - 3$. Đặt $y' = 0 \\Leftrightarrow x^2 = 1 \\Leftrightarrow x = \\pm 1$. Bảng xét dấu đạo hàm cho thấy $y' < 0$ khi $x \\in (-1; 1)$. Vậy hàm số nghịch biến trên khoảng $(-1; 1)$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Diện tích xung quanh của hình nón có bán kính đáy $r = 3$ và độ dài đường sinh $l = 5$ là:",
+        "options": [
+            "A. $15\\pi$",
+            "B. $30\\pi$",
+            "C. $45\\pi$",
+            "D. $12\\pi$"
+        ],
+        "answer": "A",
+        "explain": "Diện tích xung quanh của hình nón được tính bằng công thức $S_{xq} = \\pi r l = \\pi \\times 3 \\times 5 = 15\\pi$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Môđun của số phức $z = 1 + \\sqrt{3}i$ bằng:",
+        "options": [
+            "A. 1",
+            "B. $\\sqrt{2}$",
+            "C. 2",
+            "D. 4"
+        ],
+        "answer": "C",
+        "explain": "Môđun của số phức $z = a + bi$ là $|z| = \\sqrt{a^2 + b^2}$. Với $z = 1 + \\sqrt{3}i$, ta có $|z| = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1 + 3} = \\sqrt{4} = 2$."
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 16 đến 18.",
+        "passage_content": "Một doanh nghiệp cần sản xuất các thùng sơn hình trụ tròn xoay có nắp đậy với thể tích cố định là $V = 16\\pi$ (lít). Biết rằng chi phí vật liệu làm hai đáy của thùng sơn là $100.000$ đồng/$dm^2$, trong khi chi phí vật liệu làm mặt xung quanh là $50.000$ đồng/$dm^2$.",
+        "questions": [
+            {
+                "question": "Biểu thức biểu diễn diện tích xung quanh $S_{xq}$ của thùng sơn theo bán kính đáy $R$ (dm) là:",
+                "options": [
+                    "A. $S_{xq} = \\frac{16\\pi}{R}$",
+                    "B. $S_{xq} = \\frac{32\\pi}{R}$",
+                    "C. $S_{xq} = 32\\pi R$",
+                    "D. $S_{xq} = \\frac{8\\pi}{R^2}$"
+                ],
+                "answer": "B",
+                "explain": "Thể tích khối trụ $V = \\pi R^2 h = 16\\pi \\Rightarrow h = \\frac{16}{R^2}$. Diện tích xung quanh được tính bằng $S_{xq} = 2\\pi R h = 2\\pi R \\left(\\frac{16}{R^2}\\right) = \\frac{32\\pi}{R}$."
+            },
+            {
+                "question": "Hàm số biểu diễn tổng chi phí vật liệu $C(R)$ (đơn vị: nghìn đồng) theo bán kính đáy $R$ là:",
+                "options": [
+                    "A. $C(R) = 200\\pi R^2 + \\frac{1600\\pi}{R}$",
+                    "B. $C(R) = 100\\pi R^2 + \\frac{1600\\pi}{R}$",
+                    "C. $C(R) = 200\\pi R^2 + \\frac{800\\pi}{R}$",
+                    "D. $C(R) = 100\\pi R^2 + \\frac{3200\\pi}{R}$"
+                ],
+                "answer": "A",
+                "explain": "Diện tích hai đáy là $S_d = 2\\pi R^2$. Tổng chi phí (nghìn đồng): $C(R) = 100 \\times S_d + 50 \\times S_{xq} = 100(2\\pi R^2) + 50\\left(\\frac{32\\pi}{R}\\right) = 200\\pi R^2 + \\frac{1600\\pi}{R}$."
+            },
+            {
+                "question": "Để chi phí sản xuất một thùng sơn là thấp nhất, bán kính đáy $R$ phải bằng bao nhiêu?",
+                "options": [
+                    "A. $R = 2$ dm",
+                    "B. $R = \\sqrt[3]{2}$ dm",
+                    "C. $R = \\sqrt[3]{4}$ dm",
+                    "D. $R = 4$ dm"
+                ],
+                "answer": "C",
+                "explain": "Xét hàm $C(R) = 200\\pi R^2 + \\frac{1600\\pi}{R}$. Đạo hàm $C'(R) = 400\\pi R - \\frac{1600\\pi}{R^2}$. Đặt $C'(R) = 0 \\Leftrightarrow 400\\pi R^3 = 1600\\pi \\Leftrightarrow R^3 = 4 \\Leftrightarrow R = \\sqrt[3]{4}$. Đây là điểm cực tiểu làm cho chi phí đạt giá trị nhỏ nhất."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 19 đến 21.",
+        "passage_content": "Thống kê số lượng sách bán được trong 20 ngày của một cửa hàng nhỏ được cho bởi bảng phân bố tần số ghép nhóm sau:\n\\begin{array}{|c|c|c|c|c|c|}\n\\hline\n\\text{Số sách (cuốn)} & [0;10) & [10;20) & [20;30) & [30;40) & [40;50) \\\\\n\\hline\n\\text{Số ngày} & 2 & 5 & 8 & 4 & 1 \\\\\n\\hline\n\\end{array}",
+        "questions": [
+            {
+                "question": "Nhóm chứa trung vị của mẫu số liệu trên là:",
+                "options": [
+                    "A. $[10;20)$",
+                    "B. $[20;30)$",
+                    "C. $[30;40)$",
+                    "D. $[40;50)$"
+                ],
+                "answer": "B",
+                "explain": "Cỡ mẫu $N = 20$. Vị trí của trung vị nằm ở phần tử thứ 10 và 11. Lập bảng tần số tích lũy: Nhóm 1 có 2, nhóm 2 có 2+5=7, nhóm 3 có 7+8=15. Vậy phần tử thứ 10 và 11 đều nằm trong nhóm $[20;30)$."
+            },
+            {
+                "question": "Ước lượng số lượng sách trung bình bán được mỗi ngày là:",
+                "options": [
+                    "A. 22,5",
+                    "B. 23,5",
+                    "C. 24,5",
+                    "D. 25,0"
+                ],
+                "answer": "B",
+                "explain": "Giá trị đại diện của các nhóm lần lượt là: 5, 15, 25, 35, 45. Số trung bình $\\bar{x} = \\frac{5 \\times 2 + 15 \\times 5 + 25 \\times 8 + 35 \\times 4 + 45 \\times 1}{20} = \\frac{10 + 75 + 200 + 140 + 45}{20} = \\frac{470}{20} = 23,5$."
+            },
+            {
+                "question": "Nhóm chứa mốt của mẫu số liệu là:",
+                "options": [
+                    "A. $[0;10)$",
+                    "B. $[10;20)$",
+                    "C. $[20;30)$",
+                    "D. $[30;40)$"
+                ],
+                "answer": "C",
+                "explain": "Nhóm chứa mốt là nhóm có tần số lớn nhất. Quan sát bảng số liệu, nhóm $[20;30)$ có tần số cao nhất là 8. Do đó nhóm chứa mốt là $[20;30)$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 22 đến 24.",
+        "passage_content": "Trong không gian với hệ tọa độ $Oxyz$, cho tứ diện $ABCD$ với các đỉnh có tọa độ lần lượt là $A(1; 0; 0), B(0; 2; 0), C(0; 0; 3)$ và $D(1; 2; 3)$.",
+        "questions": [
+            {
+                "question": "Tọa độ trọng tâm $G$ của tam giác $ABC$ là:",
+                "options": [
+                    "A. $G(1; 2; 3)$",
+                    "B. $G\\left(\\frac{1}{3}; \\frac{2}{3}; 1\\right)$",
+                    "C. $G\\left(\\frac{1}{2}; 1; \\frac{3}{2}\\right)$",
+                    "D. $G(3; 6; 9)$"
+                ],
+                "answer": "B",
+                "explain": "Tọa độ trọng tâm $G$ của tam giác $ABC$ bằng trung bình cộng tọa độ 3 đỉnh: $x_G = \\frac{1+0+0}{3} = \\frac{1}{3}$; $y_G = \\frac{0+2+0}{3} = \\frac{2}{3}$; $z_G = \\frac{0+0+3}{3} = 1$. Vậy $G\\left(\\frac{1}{3}; \\frac{2}{3}; 1\\right)$."
+            },
+            {
+                "question": "Phương trình mặt phẳng $(ABC)$ là:",
+                "options": [
+                    "A. $6x + 3y + 2z - 6 = 0$",
+                    "B. $x + 2y + 3z - 6 = 0$",
+                    "C. $3x + 2y + 6z - 6 = 0$",
+                    "D. $\\frac{x}{1} + \\frac{y}{2} + \\frac{z}{3} = 0$"
+                ],
+                "answer": "A",
+                "explain": "Các điểm $A, B, C$ lần lượt nằm trên các trục tọa độ $Ox, Oy, Oz$. Áp dụng phương trình mặt phẳng theo đoạn chắn: $\\frac{x}{1} + \\frac{y}{2} + \\frac{z}{3} = 1$. Quy đồng mẫu số chung là 6, ta được: $6x + 3y + 2z - 6 = 0$."
+            },
+            {
+                "question": "Thể tích của khối tứ diện $ABCD$ là:",
+                "options": [
+                    "A. 6",
+                    "B. 4",
+                    "C. 3",
+                    "D. 2"
+                ],
+                "answer": "D",
+                "explain": "Ta tính $\\vec{AB} = (-1; 2; 0)$, $\\vec{AC} = (-1; 0; 3)$, $\\vec{AD} = (0; 2; 3)$. Tích có hướng $[\\vec{AB}, \\vec{AC}] = (6; 3; 2)$. Thể tích $V = \\frac{1}{6} \\big|[\\vec{AB}, \\vec{AC}] \\cdot \\vec{AD}\\big| = \\frac{1}{6} |6(0) + 3(2) + 2(3)| = \\frac{1}{6} \\times 12 = 2$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 25 đến 27.",
+        "passage_content": "Một hộp chứa 5 quả cầu màu đỏ được đánh số thứ tự từ 1 đến 5 và 4 quả cầu màu xanh được đánh số thứ tự từ 1 đến 4. Các quả cầu có kích thước và khối lượng giống hệt nhau. Người ta lấy ngẫu nhiên đồng thời 2 quả cầu từ hộp.",
+        "questions": [
+            {
+                "question": "Số phần tử của không gian mẫu $\\Omega$ là:",
+                "options": [
+                    "A. 20",
+                    "B. 36",
+                    "C. 72",
+                    "D. 9"
+                ],
+                "answer": "B",
+                "explain": "Tổng số quả cầu trong hộp là $5 + 4 = 9$ quả. Chọn ngẫu nhiên đồng thời 2 quả cầu từ 9 quả, số cách chọn là tổ hợp chập 2 của 9: $C_9^2 = \\frac{9 \\times 8}{2} = 36$."
+            },
+            {
+                "question": "Xác suất để lấy được 2 quả cầu cùng màu là:",
+                "options": [
+                    "A. $\\frac{4}{9}$",
+                    "B. $\\frac{5}{9}$",
+                    "C. $\\frac{1}{2}$",
+                    "D. $\\frac{5}{18}$"
+                ],
+                "answer": "A",
+                "explain": "Số cách lấy 2 quả cầu cùng màu đỏ là $C_5^2 = 10$. Số cách lấy 2 quả cầu cùng màu xanh là $C_4^2 = 6$. Tổng số cách thuận lợi là $10 + 6 = 16$. Xác suất $P = \\frac{16}{36} = \\frac{4}{9}$."
+            },
+            {
+                "question": "Xác suất để lấy được 2 quả cầu có tổng các số ghi trên đó là một số lẻ bằng:",
+                "options": [
+                    "A. $\\frac{4}{9}$",
+                    "B. $\\frac{5}{9}$",
+                    "C. $\\frac{1}{2}$",
+                    "D. $\\frac{5}{18}$"
+                ],
+                "answer": "B",
+                "explain": "Tổng hai số là số lẻ khi và chỉ khi ta chọn được 1 quả mang số chẵn và 1 quả mang số lẻ. Trong 9 quả cầu, các số lẻ gồm {Đ1, Đ3, Đ5, X1, X3} (5 quả). Các số chẵn gồm {Đ2, Đ4, X2, X4} (4 quả). Số cách chọn 1 chẵn 1 lẻ là $5 \\times 4 = 20$. Xác suất $P = \\frac{20}{36} = \\frac{5}{9}$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 28 đến 30.",
+        "passage_content": "Cho hàm số phân thức bậc nhất trên bậc nhất $f(x) = \\frac{ax+b}{cx+d}$ có đồ thị là $(C)$, với $a, b, c, d$ là các hằng số thực ($c \\ne 0$). Biết rằng đồ thị $(C)$ có đường tiệm cận đứng là $x = 1$, đường tiệm cận ngang là $y = 2$ và đi qua điểm $M(2; 5)$.",
+        "questions": [
+            {
+                "question": "Tỉ số $\\frac{a}{c}$ có giá trị bằng:",
+                "options": [
+                    "A. 1",
+                    "B. 2",
+                    "C. -1",
+                    "D. 5"
+                ],
+                "answer": "B",
+                "explain": "Đường tiệm cận ngang của hàm số $y = \\frac{ax+b}{cx+d}$ là $y = \\frac{a}{c}$. Theo giả thiết, tiệm cận ngang là $y = 2$, suy ra $\\frac{a}{c} = 2$."
+            },
+            {
+                "question": "Tỉ số $\\frac{d}{c}$ có giá trị bằng:",
+                "options": [
+                    "A. 1",
+                    "B. 2",
+                    "C. -1",
+                    "D. -2"
+                ],
+                "answer": "C",
+                "explain": "Đường tiệm cận đứng của hàm số $y = \\frac{ax+b}{cx+d}$ là $x = -\\frac{d}{c}$. Theo giả thiết, tiệm cận đứng là $x = 1$, suy ra $-\\frac{d}{c} = 1 \\Leftrightarrow \\frac{d}{c} = -1$."
+            },
+            {
+                "question": "Phương trình tiếp tuyến của đồ thị $(C)$ tại điểm có hoành độ $x = 2$ là:",
+                "options": [
+                    "A. $y = 3x - 1$",
+                    "B. $y = -3x + 11$",
+                    "C. $y = -x + 7$",
+                    "D. $y = 3x + 1$"
+                ],
+                "answer": "B",
+                "explain": "Từ 2 câu trên, chia cả tử và mẫu cho $c$ ta được dạng hàm số $f(x) = \\frac{2x + b'}{x - 1}$. Đồ thị đi qua $M(2; 5)$ nên $\\frac{2(2) + b'}{2 - 1} = 5 \\Leftrightarrow 4 + b' = 5 \\Leftrightarrow b' = 1$. Vậy $f(x) = \\frac{2x+1}{x-1}$. Tính đạo hàm: $f'(x) = \\frac{2(-1) - 1(1)}{(x-1)^2} = \\frac{-3}{(x-1)^2}$. Tại $x_0 = 2$, ta có hệ số góc $k = f'(2) = -3$. Tung độ $y_0 = 5$. Phương trình tiếp tuyến: $y = -3(x - 2) + 5 = -3x + 11$."
+            }
+        ]
     }
 ]

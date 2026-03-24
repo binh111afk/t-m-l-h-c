@@ -1,141 +1,141 @@
 [
-    {
-        "type": "passage",
+  {
+    "type": "passage",
+    "subject": "Tiếng Việt",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 21 đến 25:",
+    "passage_content": "“Mỗi người đều có một mơ ước riêng cho mình. Có những ước mơ nhỏ nhoi như của cô bé bán diêm trong truyện cổ An-đéc-xen: một mái nhà trong đêm đông giá buốt. Cũng có những ước mơ lớn lao làm thay đổi cả thế giới như của tỷ phú Bill Gates. Mơ ước khiến chúng ta trở nên năng động một cách sáng tạo. Nhưng chỉ mơ thôi thì chưa đủ. Ước mơ chỉ trở thành hiện thực khi đi kèm với hành động và nỗ lực thực hiện mơ ước. Tất cả chúng ta đều phải hành động nhằm biến mơ ước của mình thành hiện thực.[.] Ngày bạn thôi mơ mộng là ngày cuộc đời bạn mất hết ý nghĩa. Những người biết mơ ước là những người đang sống cuộc sống của các thiên thần. Ngay cả khi giấc mơ của bạn không bao giờ trọn vẹn, bạn cũng sẽ không phải hối tiếc vì nó. Như Đôn-ki-hô-tê đã nói: “Việc mơ những giấc mơ diệu kỳ là điều tốt nhất một người có thể làm”. Tôi vẫn tin vào những câu chuyện cổ tích - nơi mà lòng kiên nhẫn, ý chí bền bỉ sẽ được đền đáp. Hãy tự tin tiến bước trên con đường mơ ước của bạn”. <br> (Quà tặng cuộc sống - Thu Quỳnh, Hạnh Nguyên dịch, NXB Tổng hợp TP.HCM, 2016)",
+    "questions": [
+      {
+        "question": "Theo đoạn trích, yếu tố nào giúp biến ước mơ thành hiện thực?",
         "subject": "Tiếng Việt",
-        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 21 đến 25:",
-        "passage_content": "“Mỗi người đều có một mơ ước riêng cho mình. Có những ước mơ nhỏ nhoi như của cô bé bán diêm trong truyện cổ An-đéc-xen: một mái nhà trong đêm đông giá buốt. Cũng có những ước mơ lớn lao làm thay đổi cả thế giới như của tỷ phú Bill Gates. Mơ ước khiến chúng ta trở nên năng động một cách sáng tạo. Nhưng chỉ mơ thôi thì chưa đủ. Ước mơ chỉ trở thành hiện thực khi đi kèm với hành động và nỗ lực thực hiện mơ ước. Tất cả chúng ta đều phải hành động nhằm biến mơ ước của mình thành hiện thực.[.] Ngày bạn thôi mơ mộng là ngày cuộc đời bạn mất hết ý nghĩa. Những người biết mơ ước là những người đang sống cuộc sống của các thiên thần. Ngay cả khi giấc mơ của bạn không bao giờ trọn vẹn, bạn cũng sẽ không phải hối tiếc vì nó. Như Đôn-ki-hô-tê đã nói: “Việc mơ những giấc mơ diệu kỳ là điều tốt nhất một người có thể làm”. Tôi vẫn tin vào những câu chuyện cổ tích - nơi mà lòng kiên nhẫn, ý chí bền bỉ sẽ được đền đáp. Hãy tự tin tiến bước trên con đường mơ ước của bạn”. <br> (Quà tặng cuộc sống - Thu Quỳnh, Hạnh Nguyên dịch, NXB Tổng hợp TP.HCM, 2016)",
-        "questions": [
-            {
-                "question": "Theo đoạn trích, yếu tố nào giúp biến ước mơ thành hiện thực?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Niềm tin lạc quan vào giá trị của những giấc mơ cá nhân.",
-                    " Khả năng mơ ước lớn lao và nuôi dưỡng khát vọng lâu dài.",
-                    " Hành động cụ thể và nỗ lực bền bỉ để thực hiện ước mơ.",
-                    " Sự kiên nhẫn chờ đợi cơ hội và may mắn trong cuộc sống."
-                ],
-                "answer": "C",
-                "explain": "Văn bản nêu rõ: 'Ước mơ chỉ trở thành hiện thực khi đi kèm với hành động và nỗ lực thực hiện mơ ước'. Vì vậy hành động và nỗ lực là yếu tố cốt lõi."
-            },
-            {
-                "question": "Ý nghĩa của câu “Ngày bạn thôi mơ mộng là ngày cuộc đời bạn mất hết ý nghĩa” là gì?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Con người cần duy trì những ước mơ để nuôi dưỡng cảm xúc tích cực.",
-                    " Mơ ước giúp con người sống lạc quan và vượt qua khó khăn cuộc sống.",
-                    " Cuộc sống trở nên tẻ nhạt khi con người đánh mất niềm tin vào tương lai.",
-                    " Mơ ước là động lực tinh thần cốt lõi làm nên giá trị và ý nghĩa đời sống."
-                ],
-                "answer": "D",
-                "explain": "Câu nói khẳng định giá trị sống còn của ước mơ; nếu thiếu đi ước mơ, con người sẽ mất đi định hướng và động lực, từ đó cuộc sống không còn giá trị ý nghĩa cốt lõi."
-            },
-            {
-                "question": "Cách lập luận nào sau đây KHÔNG được sử dụng trong đoạn trích trên?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Lập luận giải thích nhằm làm rõ vai trò của ước mơ trong cuộc sống.",
-                    " Lập luận so sánh đối chiếu trực tiếp giữa các quan điểm trái ngược.",
-                    " Lập luận chứng minh bằng dẫn chứng cụ thể từ văn học và đời sống.",
-                    " Lập luận bình luận để bày tỏ quan điểm, thái độ của người viết."
-                ],
-                "answer": "B",
-                "explain": "Đoạn văn sử dụng giải thích, chứng minh (qua các dẫn chứng thực tế như Bill Gates, cô bé bán diêm) và bình luận (khuyên con người tự tin tiến bước). Tác giả không hề sử dụng thao tác so sánh đối chiếu các quan điểm trái ngược (bác bỏ)."
-            },
-            {
-                "question": "Dòng nào sau đây KHÔNG thể hiện thái độ của người viết trong đoạn trích?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Tin tưởng vào giá trị của ước mơ và nỗ lực cá nhân.",
-                    " Khích lệ con người sống tích cực, kiên trì theo đuổi mơ ước.",
-                    " Trình bày khách quan các quan niệm khác nhau về thành công.",
-                    " Bày tỏ sự trân trọng đối với những người biết mơ ước và hành động."
-                ],
-                "answer": "C",
-                "explain": "Người viết bày tỏ thái độ chủ quan rất rõ rệt: tin tưởng, khích lệ và trân trọng. Việc 'trình bày khách quan các quan niệm khác nhau' là không có trong đoạn trích này."
-            },
-            {
-                "question": "Thông điệp chính của đoạn trích trên là gì?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Con người cần nuôi dưỡng ước mơ và hành động để sống có ý nghĩa.",
-                    " Ước mơ giúp con người vượt qua khó khăn và tạo nên thành công.",
-                    " Sự kiên nhẫn và bền bỉ sẽ luôn được đền đáp trong cuộc sống.",
-                    " Mỗi người nên tin tưởng vào khả năng và lựa chọn con đường riêng."
-                ],
-                "answer": "A",
-                "explain": "Thông điệp bao trùm của toàn đoạn trích là đề cao việc mỗi người phải có một ước mơ và hơn hết, phải hành động để biến ước mơ đó thành sự thật, như thế mới sống trọn vẹn ý nghĩa."
-            }
-        ]
-    },
-    {
-        "type": "passage",
+        "options": [
+          " Niềm tin lạc quan vào giá trị của những giấc mơ cá nhân.",
+          " Khả năng mơ ước lớn lao và nuôi dưỡng khát vọng lâu dài.",
+          " Hành động cụ thể và nỗ lực bền bỉ để thực hiện ước mơ.",
+          " Sự kiên nhẫn chờ đợi cơ hội và may mắn trong cuộc sống."
+        ],
+        "answer": "C",
+        "explain": "Văn bản nêu rõ: 'Ước mơ chỉ trở thành hiện thực khi đi kèm với hành động và nỗ lực thực hiện mơ ước'. Vì vậy hành động và nỗ lực là yếu tố cốt lõi."
+      },
+      {
+        "question": "Ý nghĩa của câu “Ngày bạn thôi mơ mộng là ngày cuộc đời bạn mất hết ý nghĩa” là gì?",
         "subject": "Tiếng Việt",
-        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 26 đến 30:",
-        "passage_content": "Dựa vào thông tin dưới đây để trả lời các câu từ 26 đến 30\n(1) Văn học thì hoàn toàn ngược lại. Trên một ý nghĩa nhất định, văn học không phải là loại hình nghệ thuật tổng hợp thông thường như điện ảnh và sân khấu, v.v. mà là loại hình nghệ thuật mang tính chất tổng hợp gián tiếp. Mặc dù tuyệt đối khác với bất cứ loại hình nghệ thuật nào khác, nhưng văn học lại vừa liên quan với loại hình nghệ thuật này lại vừa liên quan với loại hình nghệ thuật kia trong bất cứ sự phân loại nào (động - tĩnh; thính giác - thị giác; tạo hình - biểu hiện). Nghĩa là văn học liên quan với tất cả các loại hình nghệ thuật khác. Nguyên nhân ở chỗ chất liệu của nó là ngôn từ, là cái kho vô tận những \"âm thanh, bức tranh, và khái niệm\", có thể hình dung bất cứ sự vật và hiện tượng nào trong thế giới hữu hình cũng như vô hình. Bất cứ một loại hình nghệ thuật nào cũng có thể tìm thấy những \"đại lý gián tiếp\" cho chất liệu, cho \"ngôn ngữ\" của chính mình trong cái kho vô tận đó. Do vậy, bất cứ loại hình nào cũng có khả năng chuyển dịch một phần nào đó thích hợp trong văn học thành hình tượng nghệ thuật của mình. Và ngược lại, văn học thì có khả năng chuyển dịch tác phẩm của bất cứ loại hình nghệ thuật nào thành hình tượng ngôn từ, tất nhiên là theo một cách riêng như Sóng Hồng đã nói: \"Thơ là thơ, đồng thời cũng là vẽ, là nhạc, là chạm khắc theo một cách riêng\"(1). (2) Dĩ nhiên, tất cả những điều trên là mới nằm trong thế khả năng. Cũng như bất cứ lĩnh vực nào khác, từ khả năng đến hiện thực là một quá trình gian lao. Từ khả năng đến hiện thực hoàn mỹ còn phải qua chủ thể sáng tạo đầy tài năng, cho nên lại càng hiếm. Tuy vậy, có thể kể ra đây không ít ví dụ về sự chuyển dịch của văn học đối với các loại hình nghệ thuật khác. Trong Nhà thờ Đức Bà Pa-ri, Huygô đã miêu tả một hình tượng sinh động về một công trình kiến trúc. Trong Anna Carênina, khi kể chuyện về họa sĩ Mikhailốp, L. Tônxtôi đã đi sâu vào bản chất của hình tượng hội họa. Trong Chiến tranh và hòa bình khi miêu tả Natasa đến chơi nhà Bêdukhốp, biểu diễn những điệu múa dân gian, L. Tônxtôi đã dựng lên một hình tượng vũ đạo sinh động, sôi nổi. Trong bút kí nổi tiếng Vupriamin, Upenxki đã khá thành công trong việc chuyển dịch ra ngôn ngữ văn học một hình tượng điêu khắc. Và trong Giăng Crixtôpho, Rômanh Rôlăng đã nhiều lần xen kẽ vào những hình tượng âm nhạc. Mấy lần đánh đàn của nàng Kiều cũng minh chứng cho đại thi hào dân tộc chúng ta đã đưa được vào văn học một hình tượng âm nhạc khá hoàn chỉnh. <br> (Phương Lựu (Chủ biên), Lí luận văn học, Nhà xuất bản Giáo dục)",
-        "questions": [
-            {
-                "question": "Theo đoạn (1), vì sao văn học được coi là loại hình nghệ thuật có khả năng liên quan đến tất cả các loại hình nghệ thuật khác?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Vì chất liệu ngôn từ có khả năng tái hiện mọi hình thức nghệ thuật.",
-                    " Vì văn học vừa mang tính động vừa mang tính tĩnh trong biểu hiện.",
-                    " Vì văn học có thể chuyển dịch trực tiếp các loại hình nghệ thuật khác.",
-                    " Vì văn học luôn giữ vị trí trung tâm trong hệ thống các loại hình nghệ thuật."
-                ],
-                "answer": "A",
-                "explain": "Đoạn (1) lý giải điều này: 'Nguyên nhân ở chỗ chất liệu của nó là ngôn từ, là cái kho vô tận những âm thanh, bức tranh, và khái niệm, có thể hình dung bất cứ sự vật và hiện tượng nào'. Nhờ chất liệu ngôn từ, văn học có thể bao quát và liên quan đến tất cả loại hình khác."
-            },
-            {
-                "question": "Ý kiến của Sóng Hồng “Thơ là thơ, đồng thời cũng là vẽ, là nhạc, là chạm khắc theo một cách riêng” nhằm khẳng định đặc điểm gì của văn học?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Văn học có khả năng phản ánh hiện thực đa chiều bằng hình tượng ngôn từ.",
-                    " Văn học mang tính chất tổng hợp gián tiếp các loại hình nghệ thuật khác.",
-                    " Văn học là loại hình nghệ thuật trung tâm chi phối các nghệ thuật khác.",
-                    " Văn học có thể thay thế vai trò biểu hiện của hội họa, âm nhạc, điêu khắc."
-                ],
-                "answer": "B",
-                "explain": "Nhận định này chứng minh cho việc văn học mang tính chất 'tổng hợp gián tiếp'. Dù bằng chất liệu ngôn từ, văn học vẫn có sức gợi lên màu sắc, đường nét (vẽ), âm thanh (nhạc), và hình khối (chạm khắc) bên trong tâm trí người đọc."
-            },
-            {
-                "question": "Cụm từ “đại lý gián tiếp” trong câu “Bất cứ một loại hình nghệ thuật nào cũng có thể tìm thấy những ‘đại lý gián tiếp’ cho chất liệu… của chính mình” có thể được hiểu là:",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Phương tiện trung gian giúp các loại hình nghệ thuật thay thế lẫn nhau.",
-                    " Cách thức văn học mô phỏng trực tiếp chất liệu của nghệ thuật khác.",
-                    " Ngôn từ văn học có khả năng gợi tái hiện chất liệu nghệ thuật khác.",
-                    " Sự vay mượn hình thức biểu đạt giữa các loại hình nghệ thuật."
-                ],
-                "answer": "C",
-                "explain": "Ngôn từ văn học không trực tiếp dùng màu, dùng âm thanh vật lý, nhưng qua nghĩa của từ ngữ, nó làm 'đại lý gián tiếp', tạo sức gợi để tâm trí người đọc tự tái hiện lại màu sắc, hình khối, âm thanh của các nghệ thuật khác."
-            },
-            {
-                "question": "Thao tác lập luận chủ yếu được sử dụng trong đoạn (2) là?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " đưa số liệu",
-                    " Phân tích",
-                    " Chứng minh",
-                    " Diễn dịch"
-                ],
-                "answer": "C",
-                "explain": "Đoạn (2) sử dụng thao tác chứng minh. Để chứng minh khả năng văn học chuyển dịch các hình tượng nghệ thuật khác, tác giả đã đưa ra hàng loạt dẫn chứng từ các tác phẩm văn học kinh điển (Nhà thờ Đức Bà Pa-ri, Anna Carênina, Chiến tranh và hòa bình, Truyện Kiều...)."
-            },
-            {
-                "question": "Điểm khác biệt cốt yếu giữa tính chất “tổng hợp” của văn học so với điện ảnh và sân khấu được nêu trong văn bản là gì?",
-                "subject": "Tiếng Việt",
-                "options": [
-                    " Văn học kết hợp nhiều giác quan tiếp nhận trong cùng một hình thức biểu hiện.",
-                    " Văn học có khả năng bao quát nội dung và đề tài rộng hơn các nghệ thuật khác.",
-                    " Văn học tổng hợp các nghệ thuật khác bằng ngôn từ, theo cách gián tiếp.",
-                    " Văn học chuyển hóa trực tiếp các yếu tố tạo hình của nghệ thuật khác."
-                ],
-                "answer": "C",
-                "explain": "Tác giả chỉ rõ: Điện ảnh và sân khấu là loại hình 'tổng hợp thông thường' (tổng hợp trực tiếp cả hình ảnh, âm thanh vật lý), trong khi đó văn học là loại hình mang tính chất 'tổng hợp gián tiếp' thông qua công cụ ngôn từ."
-            }
-        ]
-    },
-    {
+        "options": [
+          " Con người cần duy trì những ước mơ để nuôi dưỡng cảm xúc tích cực.",
+          " Mơ ước giúp con người sống lạc quan và vượt qua khó khăn cuộc sống.",
+          " Cuộc sống trở nên tẻ nhạt khi con người đánh mất niềm tin vào tương lai.",
+          " Mơ ước là động lực tinh thần cốt lõi làm nên giá trị và ý nghĩa đời sống."
+        ],
+        "answer": "D",
+        "explain": "Câu nói khẳng định giá trị sống còn của ước mơ; nếu thiếu đi ước mơ, con người sẽ mất đi định hướng và động lực, từ đó cuộc sống không còn giá trị ý nghĩa cốt lõi."
+      },
+      {
+        "question": "Cách lập luận nào sau đây KHÔNG được sử dụng trong đoạn trích trên?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Lập luận giải thích nhằm làm rõ vai trò của ước mơ trong cuộc sống.",
+          " Lập luận so sánh đối chiếu trực tiếp giữa các quan điểm trái ngược.",
+          " Lập luận chứng minh bằng dẫn chứng cụ thể từ văn học và đời sống.",
+          " Lập luận bình luận để bày tỏ quan điểm, thái độ của người viết."
+        ],
+        "answer": "B",
+        "explain": "Đoạn văn sử dụng giải thích, chứng minh (qua các dẫn chứng thực tế như Bill Gates, cô bé bán diêm) và bình luận (khuyên con người tự tin tiến bước). Tác giả không hề sử dụng thao tác so sánh đối chiếu các quan điểm trái ngược (bác bỏ)."
+      },
+      {
+        "question": "Dòng nào sau đây KHÔNG thể hiện thái độ của người viết trong đoạn trích?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Tin tưởng vào giá trị của ước mơ và nỗ lực cá nhân.",
+          " Khích lệ con người sống tích cực, kiên trì theo đuổi mơ ước.",
+          " Trình bày khách quan các quan niệm khác nhau về thành công.",
+          " Bày tỏ sự trân trọng đối với những người biết mơ ước và hành động."
+        ],
+        "answer": "C",
+        "explain": "Người viết bày tỏ thái độ chủ quan rất rõ rệt: tin tưởng, khích lệ và trân trọng. Việc 'trình bày khách quan các quan niệm khác nhau' là không có trong đoạn trích này."
+      },
+      {
+        "question": "Thông điệp chính của đoạn trích trên là gì?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Con người cần nuôi dưỡng ước mơ và hành động để sống có ý nghĩa.",
+          " Ước mơ giúp con người vượt qua khó khăn và tạo nên thành công.",
+          " Sự kiên nhẫn và bền bỉ sẽ luôn được đền đáp trong cuộc sống.",
+          " Mỗi người nên tin tưởng vào khả năng và lựa chọn con đường riêng."
+        ],
+        "answer": "A",
+        "explain": "Thông điệp bao trùm của toàn đoạn trích là đề cao việc mỗi người phải có một ước mơ và hơn hết, phải hành động để biến ước mơ đó thành sự thật, như thế mới sống trọn vẹn ý nghĩa."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tiếng Việt",
+    "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 26 đến 30:",
+    "passage_content": "Dựa vào thông tin dưới đây để trả lời các câu từ 26 đến 30\n(1) Văn học thì hoàn toàn ngược lại. Trên một ý nghĩa nhất định, văn học không phải là loại hình nghệ thuật tổng hợp thông thường như điện ảnh và sân khấu, v.v. mà là loại hình nghệ thuật mang tính chất tổng hợp gián tiếp. Mặc dù tuyệt đối khác với bất cứ loại hình nghệ thuật nào khác, nhưng văn học lại vừa liên quan với loại hình nghệ thuật này lại vừa liên quan với loại hình nghệ thuật kia trong bất cứ sự phân loại nào (động - tĩnh; thính giác - thị giác; tạo hình - biểu hiện). Nghĩa là văn học liên quan với tất cả các loại hình nghệ thuật khác. Nguyên nhân ở chỗ chất liệu của nó là ngôn từ, là cái kho vô tận những \"âm thanh, bức tranh, và khái niệm\", có thể hình dung bất cứ sự vật và hiện tượng nào trong thế giới hữu hình cũng như vô hình. Bất cứ một loại hình nghệ thuật nào cũng có thể tìm thấy những \"đại lý gián tiếp\" cho chất liệu, cho \"ngôn ngữ\" của chính mình trong cái kho vô tận đó. Do vậy, bất cứ loại hình nào cũng có khả năng chuyển dịch một phần nào đó thích hợp trong văn học thành hình tượng nghệ thuật của mình. Và ngược lại, văn học thì có khả năng chuyển dịch tác phẩm của bất cứ loại hình nghệ thuật nào thành hình tượng ngôn từ, tất nhiên là theo một cách riêng như Sóng Hồng đã nói: \"Thơ là thơ, đồng thời cũng là vẽ, là nhạc, là chạm khắc theo một cách riêng\"(1). (2) Dĩ nhiên, tất cả những điều trên là mới nằm trong thế khả năng. Cũng như bất cứ lĩnh vực nào khác, từ khả năng đến hiện thực là một quá trình gian lao. Từ khả năng đến hiện thực hoàn mỹ còn phải qua chủ thể sáng tạo đầy tài năng, cho nên lại càng hiếm. Tuy vậy, có thể kể ra đây không ít ví dụ về sự chuyển dịch của văn học đối với các loại hình nghệ thuật khác. Trong Nhà thờ Đức Bà Pa-ri, Huygô đã miêu tả một hình tượng sinh động về một công trình kiến trúc. Trong Anna Carênina, khi kể chuyện về họa sĩ Mikhailốp, L. Tônxtôi đã đi sâu vào bản chất của hình tượng hội họa. Trong Chiến tranh và hòa bình khi miêu tả Natasa đến chơi nhà Bêdukhốp, biểu diễn những điệu múa dân gian, L. Tônxtôi đã dựng lên một hình tượng vũ đạo sinh động, sôi nổi. Trong bút kí nổi tiếng Vupriamin, Upenxki đã khá thành công trong việc chuyển dịch ra ngôn ngữ văn học một hình tượng điêu khắc. Và trong Giăng Crixtôpho, Rômanh Rôlăng đã nhiều lần xen kẽ vào những hình tượng âm nhạc. Mấy lần đánh đàn của nàng Kiều cũng minh chứng cho đại thi hào dân tộc chúng ta đã đưa được vào văn học một hình tượng âm nhạc khá hoàn chỉnh. <br> (Phương Lựu (Chủ biên), Lí luận văn học, Nhà xuất bản Giáo dục)",
+    "questions": [
+      {
+        "question": "Theo đoạn (1), vì sao văn học được coi là loại hình nghệ thuật có khả năng liên quan đến tất cả các loại hình nghệ thuật khác?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Vì chất liệu ngôn từ có khả năng tái hiện mọi hình thức nghệ thuật.",
+          " Vì văn học vừa mang tính động vừa mang tính tĩnh trong biểu hiện.",
+          " Vì văn học có thể chuyển dịch trực tiếp các loại hình nghệ thuật khác.",
+          " Vì văn học luôn giữ vị trí trung tâm trong hệ thống các loại hình nghệ thuật."
+        ],
+        "answer": "A",
+        "explain": "Đoạn (1) lý giải điều này: 'Nguyên nhân ở chỗ chất liệu của nó là ngôn từ, là cái kho vô tận những âm thanh, bức tranh, và khái niệm, có thể hình dung bất cứ sự vật và hiện tượng nào'. Nhờ chất liệu ngôn từ, văn học có thể bao quát và liên quan đến tất cả loại hình khác."
+      },
+      {
+        "question": "Ý kiến của Sóng Hồng “Thơ là thơ, đồng thời cũng là vẽ, là nhạc, là chạm khắc theo một cách riêng” nhằm khẳng định đặc điểm gì của văn học?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Văn học có khả năng phản ánh hiện thực đa chiều bằng hình tượng ngôn từ.",
+          " Văn học mang tính chất tổng hợp gián tiếp các loại hình nghệ thuật khác.",
+          " Văn học là loại hình nghệ thuật trung tâm chi phối các nghệ thuật khác.",
+          " Văn học có thể thay thế vai trò biểu hiện của hội họa, âm nhạc, điêu khắc."
+        ],
+        "answer": "B",
+        "explain": "Nhận định này chứng minh cho việc văn học mang tính chất 'tổng hợp gián tiếp'. Dù bằng chất liệu ngôn từ, văn học vẫn có sức gợi lên màu sắc, đường nét (vẽ), âm thanh (nhạc), và hình khối (chạm khắc) bên trong tâm trí người đọc."
+      },
+      {
+        "question": "Cụm từ “đại lý gián tiếp” trong câu “Bất cứ một loại hình nghệ thuật nào cũng có thể tìm thấy những ‘đại lý gián tiếp’ cho chất liệu… của chính mình” có thể được hiểu là:",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Phương tiện trung gian giúp các loại hình nghệ thuật thay thế lẫn nhau.",
+          " Cách thức văn học mô phỏng trực tiếp chất liệu của nghệ thuật khác.",
+          " Ngôn từ văn học có khả năng gợi tái hiện chất liệu nghệ thuật khác.",
+          " Sự vay mượn hình thức biểu đạt giữa các loại hình nghệ thuật."
+        ],
+        "answer": "C",
+        "explain": "Ngôn từ văn học không trực tiếp dùng màu, dùng âm thanh vật lý, nhưng qua nghĩa của từ ngữ, nó làm 'đại lý gián tiếp', tạo sức gợi để tâm trí người đọc tự tái hiện lại màu sắc, hình khối, âm thanh của các nghệ thuật khác."
+      },
+      {
+        "question": "Thao tác lập luận chủ yếu được sử dụng trong đoạn (2) là?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " đưa số liệu",
+          " Phân tích",
+          " Chứng minh",
+          " Diễn dịch"
+        ],
+        "answer": "C",
+        "explain": "Đoạn (2) sử dụng thao tác chứng minh. Để chứng minh khả năng văn học chuyển dịch các hình tượng nghệ thuật khác, tác giả đã đưa ra hàng loạt dẫn chứng từ các tác phẩm văn học kinh điển (Nhà thờ Đức Bà Pa-ri, Anna Carênina, Chiến tranh và hòa bình, Truyện Kiều...)."
+      },
+      {
+        "question": "Điểm khác biệt cốt yếu giữa tính chất “tổng hợp” của văn học so với điện ảnh và sân khấu được nêu trong văn bản là gì?",
+        "subject": "Tiếng Việt",
+        "options": [
+          " Văn học kết hợp nhiều giác quan tiếp nhận trong cùng một hình thức biểu hiện.",
+          " Văn học có khả năng bao quát nội dung và đề tài rộng hơn các nghệ thuật khác.",
+          " Văn học tổng hợp các nghệ thuật khác bằng ngôn từ, theo cách gián tiếp.",
+          " Văn học chuyển hóa trực tiếp các yếu tố tạo hình của nghệ thuật khác."
+        ],
+        "answer": "C",
+        "explain": "Tác giả chỉ rõ: Điện ảnh và sân khấu là loại hình 'tổng hợp thông thường' (tổng hợp trực tiếp cả hình ảnh, âm thanh vật lý), trong khi đó văn học là loại hình mang tính chất 'tổng hợp gián tiếp' thông qua công cụ ngôn từ."
+      }
+    ]
+  },
+  {
     "type": "passage",
     "subject": "Tiếng Việt",
     "instruction": "Đọc đoạn trích dưới đây và trả lời các câu hỏi 21 đến 25.",
@@ -260,5 +260,130 @@
         "explain": "Chiếc áo không chỉ là kỉ vật của riêng người cha, mà nó còn là chứng nhân của một thời chiến trận (quá khứ). Ở hiện tại, hành động cha đắp áo lên mộ đồng đội đã biến chiếc áo thành 'gạch nối âm dương', xóa nhòa khoảng cách giữa người sống và người mất. Đáp án C khái quát được đầy đủ tính đa nghĩa và chiều sâu biểu tượng này."
       }
     ]
-  }  
+  },
+  {
+    "type": "passage",
+    "subject": "Tiếng Việt",
+    "instruction": "Đọc đoạn trích sau và trả lời các câu hỏi từ 21 đến 25.",
+    "passage_content": "Văn hóa đọc không chỉ là thói quen cầm một cuốn sách lên và đọc. Nó là cả một thái độ ứng xử với tri thức. Trong thời đại kỹ thuật số hiện nay, khi chỉ cần một cú nhấp chuột là hàng vạn thông tin hiện ra, nhiều người tưởng rằng sách đã trở nên lỗi thời. Nhưng thực tế, internet cung cấp cho chúng ta 'thông tin', còn sách cung cấp 'tri thức' và 'sự chiêm nghiệm'. Thông tin trên mạng trôi qua rất nhanh, rời rạc và thường mang tính bề mặt. Trong khi đó, một cuốn sách là một hệ thống tư duy mạch lạc, đòi hỏi người đọc phải chậm lại, phải suy nghĩ và đối thoại với tác giả. Người có văn hóa đọc là người biết chắt lọc cuốn sách đáng đọc, biết cách đọc sâu và ứng dụng những điều đã học vào việc hoàn thiện nhân cách. Nếu chỉ đọc để khoe khoang hay đọc theo phong trào thì đó chưa phải là văn hóa đọc thực sự. Một xã hội phát triển bền vững cần phải được xây đắp từ những khối óc biết tư duy sâu sắc, và điều đó chỉ có được khi thói quen đọc sách được nuôi dưỡng đúng cách.",
+    "questions": [
+      {
+        "question": "Theo tác giả, sự khác biệt cốt lõi giữa những gì internet và sách cung cấp là gì?",
+        "options": [
+          " Internet cung cấp sự giải trí, sách cung cấp bài học đạo đức.",
+          " Internet cung cấp thông tin bề mặt, sách cung cấp tri thức và sự chiêm nghiệm.",
+          " Internet cung cấp dữ liệu nhanh, sách cung cấp câu chuyện dài.",
+          " Internet cung cấp tin tức cập nhật, sách cung cấp các học thuyết cổ điển."
+        ],
+        "answer": "B",
+        "explain": "Đoạn trích ghi rõ: 'internet cung cấp cho chúng ta thông tin, còn sách cung cấp tri thức và sự chiêm nghiệm. Thông tin trên mạng... thường mang tính bề mặt'."
+      },
+      {
+        "question": "Người có 'văn hóa đọc' theo quan điểm của đoạn trích KHÔNG có biểu hiện nào sau đây?",
+        "options": [
+          " Biết lựa chọn, chắt lọc những cuốn sách có giá trị.",
+          " Biết đọc sâu và đối thoại với tác giả.",
+          " Đọc sách theo phong trào để bắt kịp xu hướng xã hội.",
+          " Ứng dụng điều đã đọc để hoàn thiện nhân cách bản thân."
+        ],
+        "answer": "C",
+        "explain": "Tác giả khẳng định: 'Nếu chỉ đọc để khoe khoang hay đọc theo phong trào thì đó chưa phải là văn hóa đọc thực sự'. Do đó, đọc theo phong trào không phải là biểu hiện của người có văn hóa đọc."
+      },
+      {
+        "question": "Thao tác lập luận chủ yếu được sử dụng trong đoạn văn trên là gì?",
+        "options": [
+          " Phân tích và so sánh.",
+          " Bác bỏ và bình luận.",
+          " Chứng minh và giải thích.",
+          " So sánh và bác bỏ."
+        ],
+        "answer": "A",
+        "explain": "Tác giả phân tích khái niệm 'văn hóa đọc', đồng thời liên tục so sánh sự khác biệt giữa việc tiếp nhận thông tin từ internet và việc thu nhận tri thức từ sách để làm nổi bật luận điểm."
+      },
+      {
+        "question": "Từ 'mạch lạc' trong câu 'một cuốn sách là một hệ thống tư duy mạch lạc' gần nghĩa nhất với từ nào sau đây?",
+        "options": [
+          " Khô khan.",
+          " Chặt chẽ.",
+          " Phức tạp.",
+          " Dông dài."
+        ],
+        "answer": "B",
+        "explain": "'Mạch lạc' chỉ sự rõ ràng, có sự liên kết logic, chặt chẽ từ đầu đến cuối, không bị mâu thuẫn hay đứt quãng. Do đó 'chặt chẽ' là từ đồng nghĩa phù hợp nhất."
+      },
+      {
+        "question": "Thông điệp chính mà đoạn trích muốn gửi gắm là gì?",
+        "options": [
+          " Internet đang dần phá hủy văn hóa đọc của giới trẻ hiện nay.",
+          " Cần tẩy chay việc đọc tin tức trên mạng để tập trung đọc sách.",
+          " Văn hóa đọc thực sự là thái độ tiếp nhận tri thức sâu sắc, giúp phát triển tư duy và nhân cách.",
+          " Bất kỳ ai cầm cuốn sách lên đọc đều là người có nhân cách tốt."
+        ],
+        "answer": "C",
+        "explain": "Đoạn trích không bài xích internet mà chỉ phân tích giá trị chiều sâu của sách, từ đó nhấn mạnh văn hóa đọc là biết đọc sâu, chiêm nghiệm để rèn luyện tư duy và hoàn thiện bản thân."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tiếng Việt",
+    "instruction": "Đọc bài thơ sau và trả lời các câu hỏi từ 26 đến 30:\n\nCon gặp lại nhân dân như nai về suối cũ\nGrass đón giêng hai, chim én gặp mùa,\nNhư đứa trẻ thơ đói lòng gặp sữa\nChiếc nôi ngừng bỗng gặp cánh tay đưa.\n\n(Trích \"Tiếng hát con tàu\" - Chế Lan Viên)\n\nLưu ý: Chữ \"Grass\" trong bản gốc thường được in là \"Cỏ\" (Cỏ đón giêng hai). Ở đây trích nguyên văn theo một số dị bản.",
+    "questions": [
+      {
+        "question": "Cảm hứng chủ đạo của đoạn thơ trên là gì?",
+        "options": [
+          " Tình yêu thiên nhiên say đắm.",
+          " Nỗi xót xa trước cảnh đời nghèo khó.",
+          " Niềm vui sướng, hạnh phúc tột cùng khi được trở về với nhân dân.",
+          " Khát vọng tự do cháy bỏng của con người."
+        ],
+        "answer": "C",
+        "explain": "Bốn câu thơ sử dụng một loạt các hình ảnh so sánh để diễn tả cảm xúc vui sướng, hân hoan, sự hồi sinh mãnh liệt của tâm hồn nhà thơ (con) khi được trở về trong vòng tay yêu thương của nhân dân."
+      },
+      {
+        "question": "Biện pháp tu từ nổi bật nhất được sử dụng trong đoạn thơ là:",
+        "options": [
+          " Điệp ngữ và nhân hóa.",
+          " So sánh và điệp cấu trúc.",
+          " Ẩn dụ và hoán dụ.",
+          " Nói quá và tương phản."
+        ],
+        "answer": "B",
+        "explain": "Đoạn thơ sử dụng cấu trúc so sánh liên tiếp với từ 'như' (như nai về..., như đứa trẻ thơ...). Việc lặp lại cấu trúc 'như... gặp...' tạo ra phép điệp cấu trúc, nhấn mạnh sự thiết yếu và niềm khát khao mãnh liệt."
+      },
+      {
+        "question": "Hình ảnh \"nai về suối cũ\", \"chim én gặp mùa\" gợi ý nghĩa gì?",
+        "options": [
+          " Sự trở về với môi trường quen thuộc, cội nguồn tự nhiên của sự sống.",
+          " Sự tuần hoàn của thời gian và các mùa trong năm.",
+          " Sự lạc lõng, bơ vơ của sinh thể giữa thiên nhiên rộng lớn.",
+          " Sự khát khao được tự do bay nhảy giữa đất trời."
+        ],
+        "answer": "A",
+        "explain": "Nai cần suối, chim én cần mùa xuân. Đó là những môi trường sinh tồn tự nhiên thiết yếu. Qua đó, nhà thơ ngầm khẳng định: Nhân dân chính là cội nguồn, là môi trường sống tự nhiên và thiết yếu nhất nuôi dưỡng tâm hồn người nghệ sĩ."
+      },
+      {
+        "question": "Từ \"nhân dân\" trong đoạn thơ được hiểu theo nghĩa hình tượng nào?",
+        "options": [
+          " Là những người dân nghèo sống ở vùng núi Tây Bắc.",
+          " Là đất nước, là những con người lao động bình dị đã đùm bọc, chở che nhà thơ.",
+          " Là độc giả, những người mua và đọc thơ của tác giả.",
+          " Là gia đình, người thân ruột thịt của nhà thơ."
+        ],
+        "answer": "B",
+        "explain": "Trong bài 'Tiếng hát con tàu', 'nhân dân' mang ý nghĩa biểu tượng cho đất nước, cho những con người lao động kháng chiến bình dị, vĩ đại đã cưu mang, khơi nguồn cảm hứng sáng tạo cho nhà thơ."
+      },
+      {
+        "question": "Âm hưởng chung của cả đoạn thơ mang sắc thái gì?",
+        "options": [
+          " Trầm buồn, u uất.",
+          " Trang nghiêm, bi tráng.",
+          " Dạt dào, sôi nổi, tha thiết.",
+          " Nhẹ nhàng, bâng khuâng."
+        ],
+        "answer": "C",
+        "explain": "Nhờ sử dụng điệp từ 'gặp', 'như' kết hợp với nhịp thơ dồn dập, hình ảnh tươi sáng rộn ràng, đoạn thơ tạo ra âm hưởng dạt dào, sôi nổi, thể hiện sự vỡ òa trong cảm xúc tha thiết của nhà thơ."
+      }
+    ]
+  }
 ]

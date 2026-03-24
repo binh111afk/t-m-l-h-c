@@ -360,5 +360,186 @@
                 "explain": "Đoạn 5 đưa ra ví dụ về hai người bạn ở Canada quyết định hy sinh nhiều thứ vật chất (đồ điện tử, quần áo, làm tóc, ăn hàng, đổ xăng) trong một năm và kết quả là 'In one year, they'd saved $55,000' (họ tiết kiệm được 55.000 đô la). Từ đó suy ra một số người sẵn sàng từ bỏ lợi ích vật chất để đổi lấy lợi ích tài chính lớn hơn."
             }
         ]
-    }
+    },
+    {
+    "type": "passage",
+    "subject": "Tiếng Anh",
+    "instruction": "Questions 16-22: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+    "passage_content": "Artificial Intelligence (AI) is rapidly reshaping the modern workplace, bringing both unprecedented opportunities and significant challenges. By automating routine and repetitive tasks, AI allows employees to focus on more complex, creative, and strategic activities. For instance, in customer service, AI-powered chatbots can handle basic inquiries, freeing human agents to deal with more nuanced customer issues. This shift not only increases productivity but also has the potential to make work more engaging for individuals.\nHowever, the integration of AI also raises concerns about job displacement. Many workers fear that as machines become smarter, human roles will become obsolete. While it is true that certain jobs, particularly those involving manual data entry or basic assembly line work, are at risk, historical trends suggest a different outcome. Every major technological revolution, from the steam engine to the internet, has ultimately created more jobs than it destroyed. AI is expected to follow this pattern by generating new roles such as data ethicists, AI trainers, and machine learning engineers.\nThe key to surviving and thriving in this new era lies in adaptability and continuous learning. Workers must be willing to upskill and reskill to remain relevant. Educational institutions and corporations alike share the responsibility of providing training programs that equip the workforce with the necessary digital literacy and uniquely human skills, like emotional intelligence and critical thinking, which machines cannot replicate. Ultimately, the future of work is not about humans competing with machines, but rather humans collaborating with them to achieve greater efficiency and innovation.",
+    "questions": [
+      {
+        "question": "What is the main idea of the passage?",
+        "options": [
+          " AI will eventually replace all human jobs in the customer service sector.",
+          " AI is transforming the workplace by automating tasks and requiring humans to adapt.",
+          " The primary goal of AI is to eliminate repetitive tasks and reduce company costs.",
+          " Educational institutions are failing to prepare workers for the AI revolution."
+        ],
+        "answer": "B",
+        "explain": "Bài đọc thảo luận về cách AI đang định hình lại nơi làm việc (tự động hóa các nhiệm vụ lặp đi lặp lại, tạo ra cơ hội mới) và nhấn mạnh rằng con người cần phải thích nghi (upskill, reskill) để hợp tác với AI. Đáp án B bao quát đầy đủ nhất các ý này."
+      },
+      {
+        "question": "According to paragraph 1, what is a benefit of using AI-powered chatbots in customer service?",
+        "options": [
+          " They completely replace human agents.",
+          " They make work more repetitive for human agents.",
+          " They handle basic inquiries, allowing humans to tackle complex issues.",
+          " They reduce the need for creative and strategic activities."
+        ],
+        "answer": "C",
+        "explain": "Đoạn 1 viết: 'AI-powered chatbots can handle basic inquiries, freeing human agents to deal with more nuanced customer issues'. (Chatbot xử lý các câu hỏi cơ bản, giải phóng con người để giải quyết các vấn đề phức tạp hơn)."
+      },
+      {
+        "question": "The word \"obsolete\" in paragraph 2 is closest in meaning to:",
+        "options": [
+          " updated",
+          " outdated",
+          " important",
+          " demanding"
+        ],
+        "answer": "B",
+        "explain": "Từ 'obsolete' có nghĩa là lỗi thời, không còn được sử dụng nữa. Trong ngữ cảnh này, công nhân lo sợ vai trò của con người sẽ trở nên 'outdated' (lỗi thời) khi máy móc thông minh hơn."
+      },
+      {
+        "question": "The word \"them\" in the last sentence refers to:",
+        "options": [
+          " human skills",
+          " training programs",
+          " educational institutions",
+          " machines"
+        ],
+        "answer": "D",
+        "explain": "Câu cuối: '...humans collaborating with them to achieve greater efficiency...'. 'Them' ở đây thay thế cho 'machines' (máy móc) đã được nhắc đến ở vế trước."
+      },
+      {
+        "question": "According to the passage, what does historical trend suggest about technological revolutions?",
+        "options": [
+          " They always lead to long-term massive unemployment.",
+          " They destroy more jobs than they create.",
+          " They only benefit highly educated workers.",
+          " They eventually create more jobs than they eliminate."
+        ],
+        "answer": "D",
+        "explain": "Đoạn 2 nêu rõ: 'Every major technological revolution... has ultimately created more jobs than it destroyed' (Mọi cuộc cách mạng công nghệ lớn cuối cùng đều tạo ra nhiều việc làm hơn là phá hủy chúng)."
+      },
+      {
+        "question": "Which of the following is NOT mentioned as a uniquely human skill?",
+        "options": [
+          " Emotional intelligence",
+          " Critical thinking",
+          " Manual data entry",
+          " Adaptability"
+        ],
+        "answer": "C",
+        "explain": "Đoạn 3 liệt kê các kỹ năng đặc thù của con người (uniquely human skills) như 'emotional intelligence' và 'critical thinking'. Khả năng thích nghi (adaptability) cũng được nhấn mạnh. Trong khi đó, 'manual data entry' (nhập liệu thủ công) ở đoạn 2 được nhắc đến như một công việc có nguy cơ bị máy móc thay thế."
+      },
+      {
+        "question": "What is the author's attitude towards the integration of AI in the workplace?",
+        "options": [
+          " Highly pessimistic",
+          " Cautiously optimistic",
+          " Indifferent",
+          " Fearful"
+        ],
+        "answer": "B",
+        "explain": "Tác giả thừa nhận những thách thức (job displacement) nhưng lập luận rằng theo lịch sử, công nghệ sẽ tạo ra việc làm mới và con người có thể phát triển nếu biết thích nghi, học hỏi. Thái độ này mang tính lạc quan thận trọng (Cautiously optimistic)."
+      }
+    ]
+  },
+  {
+    "type": "passage",
+    "subject": "Tiếng Anh",
+    "instruction": "Questions 23-30: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+    "passage_content": "Sleep is a fundamental human need, yet it is often the first thing we sacrifice in our busy, modern lives. While many view sleep merely as a period of rest, scientists understand it as an incredibly active state for both the brain and the body. A normal sleep cycle consists of two main types of sleep: Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM) sleep. During the night, we cycle through these stages multiple times, and each plays a critical role in our overall health.\nNREM sleep, which makes up about 75% of our sleep time, is primarily responsible for physical restoration. During its deepest stages, the body repairs tissues, builds bone and muscle, and strengthens the immune system. REM sleep, on the other hand, is crucial for cognitive functions. It is during REM sleep that the brain consolidates memories, processes emotions, and clears out neurological toxins accumulated during waking hours. Without sufficient REM sleep, individuals often struggle with memory retention and emotional regulation.\nChronic sleep deprivation has profound consequences on mental and physical well-being. Short-term effects include irritability, lack of focus, and impaired judgment. Over the long term, insufficient sleep is linked to severe health issues, including obesity, cardiovascular disease, and severe depression. Furthermore, chronic lack of sleep elevates cortisol levels, a stress hormone, which keeps the body in a constant state of high alert and anxiety.\nHealth experts generally recommend that adults aim for seven to nine hours of quality sleep per night. To achieve this, maintaining good 'sleep hygiene' is essential. This includes establishing a consistent sleep schedule, keeping the bedroom dark and cool, and avoiding blue light emitted by screens for at least an hour before bedtime. By prioritizing sleep, individuals can significantly enhance their quality of life, productivity, and long-term health.",
+    "questions": [
+      {
+        "question": "What is the primary purpose of the passage?",
+        "options": [
+          " To explain the causes of sleep disorders.",
+          " To compare NREM and REM sleep patterns.",
+          " To highlight the importance of sleep and the dangers of sleep deprivation.",
+          " To provide a medical guide for curing insomnia."
+        ],
+        "answer": "C",
+        "explain": "Bài đọc giải thích vai trò của các chu kỳ giấc ngủ (NREM và REM) đối với sức khỏe, hậu quả nghiêm trọng của việc thiếu ngủ, và cách cải thiện chất lượng giấc ngủ. Mục đích chính là nhấn mạnh tầm quan trọng của giấc ngủ và sự nguy hiểm của việc thiếu ngủ."
+      },
+      {
+        "question": "According to paragraph 2, what is a primary function of NREM sleep?",
+        "options": [
+          " Processing complex emotions",
+          " Consolidating daily memories",
+          " Clearing out neurological toxins",
+          " Repairing tissues and strengthening the immune system"
+        ],
+        "answer": "D",
+        "explain": "Đoạn 2 nêu rõ: 'NREM sleep... is primarily responsible for physical restoration. During its deepest stages, the body repairs tissues, builds bone and muscle, and strengthens the immune system' (Giấc ngủ NREM chịu trách nhiệm phục hồi thể chất, sửa chữa mô, tăng cường hệ miễn dịch)."
+      },
+      {
+        "question": "The word \"consolidates\" in paragraph 2 is closest in meaning to:",
+        "options": [
+          " strengthens and secures",
+          " erases and forgets",
+          " creates and invents",
+          " separates and divides"
+        ],
+        "answer": "A",
+        "explain": "Từ 'consolidates' có nghĩa là củng cố, làm cho vững chắc. Trong ngữ cảnh 'the brain consolidates memories', nó có nghĩa là não bộ củng cố và lưu giữ lại các ký ức một cách chắc chắn (strengthens and secures)."
+      },
+      {
+        "question": "What happens if a person does not get enough REM sleep?",
+        "options": [
+          " Their muscles fail to grow.",
+          " They may have trouble remembering things and controlling emotions.",
+          " Their immune system immediately shuts down.",
+          " They will sleepwalk during the night."
+        ],
+        "answer": "B",
+        "explain": "Đoạn 2 nêu: 'Without sufficient REM sleep, individuals often struggle with memory retention and emotional regulation' (Nếu thiếu giấc ngủ REM, con người sẽ gặp khó khăn trong việc ghi nhớ và điều chỉnh cảm xúc)."
+      },
+      {
+        "question": "The word \"deprivation\" in paragraph 3 most likely means:",
+        "options": [
+          " abundance",
+          " lack or shortage",
+          " overconsumption",
+          " improvement"
+        ],
+        "answer": "B",
+        "explain": "Từ 'deprivation' nghĩa là sự thiếu hụt, tước đoạt. 'Sleep deprivation' là tình trạng thiếu ngủ."
+      },
+      {
+        "question": "Which of the following is NOT mentioned in the passage as a long-term consequence of poor sleep?",
+        "options": [
+          " Obesity",
+          " Cardiovascular disease",
+          " Vision loss",
+          " Severe depression"
+        ],
+        "answer": "C",
+        "explain": "Đoạn 3 liệt kê các hậu quả lâu dài bao gồm: obesity (béo phì), cardiovascular disease (bệnh tim mạch), và severe depression (trầm cảm nặng). Việc giảm thị lực (Vision loss) không được nhắc đến."
+      },
+      {
+        "question": "According to the passage, why is it advised to avoid screens before bedtime?",
+        "options": [
+          " They make the bedroom too warm.",
+          " They emit blue light which negatively affects sleep hygiene.",
+          " They cause immediate long-term depression.",
+          " They increase the amount of NREM sleep excessively."
+        ],
+        "answer": "B",
+        "explain": "Đoạn cuối khuyên: 'avoiding blue light emitted by screens for at least an hour before bedtime' để duy trì 'sleep hygiene' (thói quen ngủ tốt). Ánh sáng xanh từ màn hình gây ảnh hưởng tiêu cực đến chất lượng giấc ngủ."
+      },
+      {
+        "question": "What can be inferred from the passage about the relationship between cortisol and sleep?",
+        "options": [
+          " High cortisol levels help individuals sleep more deeply.",
+          " Cortisol is the hormone responsible for repairing tissues during NREM sleep.",
+          " A chronic lack of sleep leads to higher stress levels due to elevated cortisol.",
+          " Cortisol clears out neurological toxins from the brain."
+        ],
+        "answer": "C",
+        "explain": "Đoạn 3 nêu: 'chronic lack of sleep elevates cortisol levels, a stress hormone, which keeps the body in a constant state of high alert and anxiety' (Thiếu ngủ mãn tính làm tăng nồng độ cortisol, một loại hormone căng thẳng, giữ cơ thể ở trạng thái cảnh giác cao và lo âu). Điều này suy ra thiếu ngủ dẫn đến mức độ căng thẳng cao hơn do cortisol."
+      }
+    ]
+  }
 ]

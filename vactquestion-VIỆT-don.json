@@ -518,5 +518,265 @@
     ],
     "answer": "D",
     "explain": "Trong bối cảnh nói về 'khoảng lặng' (sự yên tĩnh, chậm lại giữa cuộc sống ồn ào vội vã), từ 'lắng nghe' (lắng nghe lại chính mình - thấu hiểu tiếng nói nội tâm) là từ kết hợp tinh tế và có tính gợi cảm nhất so với các từ thiên về hành động lí trí như 'suy xét' hay 'khám phá'."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Đặc trưng cơ bản nhất làm nên sự khác biệt giữa văn học dân gian và văn học viết là gì?",
+    "options": [
+      " Tính truyền miệng và tính tập thể.",
+      " Tính hư cấu và tính nhân văn.",
+      " Tính lịch sử và tính biểu cảm.",
+      " Tính giáo dục và tính thẩm mỹ."
+    ],
+    "answer": "A",
+    "explain": "Văn học dân gian là những tác phẩm nghệ ngôn từ do tập thể sáng tạo ra và được lưu truyền từ đời này qua đời khác bằng phương thức truyền miệng. Đây là hai đặc trưng cơ bản nhất phân biệt nó với văn học viết (sáng tác cá nhân, lưu truyền bằng chữ viết)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Dòng nào dưới đây chứa từ viết SAI chính tả?",
+    "options": [
+      " Xuất xứ, súc tích, xán lạn.",
+      " Cọ xát, bàng quan, lãng mạn.",
+      " Chắp nhặt, bôn ba, dã ngoại.",
+      " Chấp bút, vô hình trung, tựu trung."
+    ],
+    "answer": "C",
+    "explain": "Từ viết sai chính tả là 'chắp nhặt'. Từ đúng phải là 'chắt nhặt' (chắt chiu, nhặt nhạnh từng tí một) hoặc 'chắp vá'. Các từ ở các phương án khác đều viết đúng chính tả."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Xác định lỗi sai trong câu văn sau: \"Qua tác phẩm 'Chí Phèo' đã cho ta thấy được bi kịch bị cự tuyệt quyền làm người của người nông dân trước Cách mạng.\"",
+    "options": [
+      " Lỗi dùng từ không đúng phong cách.",
+      " Lỗi thiếu chủ ngữ.",
+      " Lỗi sai trật tự từ.",
+      " Lỗi thiếu vị ngữ."
+    ],
+    "answer": "B",
+    "explain": "Việc sử dụng quan hệ từ 'Qua' ở đầu câu đã biến cụm 'tác phẩm Chí Phèo' thành trạng ngữ. Câu này chỉ có cụm động từ 'đã cho ta thấy...' làm vị ngữ nên bị thiếu chủ ngữ. Cách sửa: Bỏ chữ 'Qua' hoặc thêm chủ ngữ (Ví dụ: Qua tác phẩm, nhà văn đã cho ta thấy...)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Trong các từ sau, từ nào là từ ghép chính phụ?",
+    "options": [
+      " Trầm bổng.",
+      " Bàn ghế.",
+      " Xanh ngắt.",
+      " Đi đứng."
+    ],
+    "answer": "C",
+    "explain": "Từ ghép chính phụ là từ có tiếng chính và tiếng phụ bổ nghĩa cho tiếng chính. Trong từ 'xanh ngắt', 'xanh' là tiếng chính chỉ màu sắc chung, 'ngắt' là tiếng phụ bổ sung sắc thái mức độ cho màu xanh. Các từ còn lại là từ ghép đẳng lập."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Biện pháp tu từ nào được sử dụng nổi bật nhất trong câu ca dao: \"Bàn tay ta làm nên tất cả / Có sức người sỏi đá cũng thành cơm\"?",
+    "options": [
+      " So sánh và nhân hóa.",
+      " Hoán dụ và nói quá.",
+      " Ẩn dụ và nói giảm nói tránh.",
+      " Điệp từ và liệt kê."
+    ],
+    "answer": "B",
+    "explain": "'Bàn tay ta' là hình ảnh hoán dụ chỉ sức lao động của con người (lấy bộ phận để gọi toàn thể). 'Sỏi đá cũng thành cơm' là phép nói quá (thậm xưng) nhằm nhấn mạnh sức mạnh to lớn của lao động có thể cải tạo được thiên nhiên."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Yếu tố \"thiên\" trong từ nào dưới đây mang ý nghĩa là \"nghìn\"?",
+    "options": [
+      " Thiên vị.",
+      " Thiên nhiên.",
+      " Thiên thu.",
+      " Thiên đô."
+    ],
+    "answer": "C",
+    "explain": "'Thiên' trong 'thiên thu' có nghĩa là một nghìn (nghìn mùa thu - chỉ thời gian rất dài). Trong khi đó, 'thiên vị' (thiên = nghiêng lệch), 'thiên nhiên' (thiên = trời), 'thiên đô' (thiên = dời đi)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Câu thành ngữ \"Đẽo cày giữa đường\" mang hàm ý khuyên răn con người điều gì?",
+    "options": [
+      " Phải biết lắng nghe ý kiến của những người xung quanh.",
+      " Cần phải có lập trường, chính kiến kiên định của bản thân.",
+      " Làm việc gì cũng cần có sự cẩn thận, tỉ mỉ và trau chuốt.",
+      " Không nên bỏ dở công việc giữa chừng kẻo chuốc lấy thất bại."
+    ],
+    "answer": "B",
+    "explain": "Thành ngữ 'Đẽo cày giữa đường' chỉ những người không có chủ kiến, ai bảo sao cũng nghe theo dẫn đến việc hỏng bét, không đạt được mục đích. Lời khuyên rút ra là con người cần có lập trường và chính kiến riêng."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Câu nào sau đây mắc lỗi mơ hồ về nghĩa?",
+    "options": [
+      " Ông lão nhìn con chó bằng ánh mắt trìu mến.",
+      " Đêm qua, trộm đã lấy đi chiếc xe máy của anh trai tôi.",
+      " Tôi vừa gặp anh ruột của cô giáo dạy Toán.",
+      " Chúng tôi đang bàn về việc tổ chức hội trại cho thanh niên."
+    ],
+    "answer": "C",
+    "explain": "Câu C mắc lỗi mơ hồ do không thể xác định rõ 'dạy Toán' là cụm từ bổ nghĩa cho 'anh ruột' (người anh ruột là giáo viên dạy Toán) hay bổ nghĩa cho 'cô giáo' (cô giáo dạy môn Toán)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Thành phần in đậm trong câu sau giữ vai trò gì: \"**Với sự nỗ lực không ngừng nghỉ**, anh ấy đã đạt được học bổng toàn phần.\"",
+    "options": [
+      " Chủ ngữ.",
+      " Vị ngữ.",
+      " Trạng ngữ.",
+      " Khởi ngữ."
+    ],
+    "answer": "C",
+    "explain": "Cụm từ in đậm bắt đầu bằng giới từ 'Với' và đứng ở đầu câu, phân cách với nòng cốt câu bằng dấu phẩy. Đây là thành phần trạng ngữ chỉ phương thức/nguyên nhân."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Đâu là tác phẩm thuộc khuynh hướng văn học hiện thực phê phán giai đoạn 1930 - 1945?",
+    "options": [
+      " Số đỏ (Vũ Trọng Phụng).",
+      " Chữ người tử tù (Nguyễn Tuân).",
+      " Hai đứa trẻ (Thạch Lam).",
+      " Vội vàng (Xuân Diệu)."
+    ],
+    "answer": "A",
+    "explain": "'Số đỏ' là kiệt tác của Vũ Trọng Phụng, đại diện tiêu biểu cho trào lưu văn học hiện thực phê phán 1930 - 1945. 'Chữ người tử tù', 'Hai đứa trẻ', 'Vội vàng' đều thuộc trào lưu văn học lãng mạn."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Chọn từ thích hợp điền vào chỗ trống: \"Văn học dân gian là kho tàng (...) vô giá của dân tộc, là cội nguồn của văn học viết.\"",
+    "options": [
+      " trí thức.",
+      " tri thức.",
+      " kiến thức.",
+      " hiểu biết."
+    ],
+    "answer": "B",
+    "explain": "Từ 'tri thức' (những hiểu biết có hệ thống về sự vật, hiện tượng) phù hợp với ngữ cảnh chỉ một kho tàng đúc kết của dân tộc. 'Trí thức' là danh từ chỉ người có học vấn cao; 'kiến thức' thường chỉ sự hiểu biết thu nhận qua học tập."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Biện pháp tu từ nào được sử dụng trong câu thơ: \"Ngoài thềm rơi chiếc lá đa / Tiếng rơi rất mỏng như là rơi nghiêng\" (Trần Hòa Bình)?",
+    "options": [
+      " Ẩn dụ chuyển đổi cảm giác.",
+      " Hoán dụ hình thức.",
+      " Nhân hóa và điệp từ.",
+      " Ẩn dụ phẩm chất."
+    ],
+    "answer": "A",
+    "explain": "'Tiếng rơi' vốn được cảm nhận bằng thính giác, nhưng lại được tác giả miêu tả là 'mỏng' (cảm nhận bằng xúc giác/thị giác). Đây là biện pháp ẩn dụ chuyển đổi cảm giác, làm tăng sức biểu cảm và tinh tế cho câu thơ."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Trong văn bản \"Vợ nhặt\" của Kim Lân, tiếng trống thúc thuế ở cuối tác phẩm mang ý nghĩa biểu tượng gì?",
+    "options": [
+      " Báo hiệu sự kết thúc của một ngày tàn tạ, u ám.",
+      " Lời cảnh báo về những tai ương sắp giáng xuống gia đình Tràng.",
+      " Gợi lên hiện thực ngột ngạt và mở ra hướng giải quyết bế tắc qua hình ảnh lá cờ đỏ.",
+      " Thể hiện sự phẫn nộ của người dân trước sự bóc lột của địa chủ."
+    ],
+    "answer": "C",
+    "explain": "Tiếng trống thúc thuế ở cuối truyện dội lên không khí ngột ngạt, cùng cực của thực tại; nhưng chính nó cũng khơi gợi trong tâm trí Tràng hình ảnh đám người đói phá kho thóc và lá cờ đỏ sao vàng. Nó báo hiệu sự thức tỉnh và con đường đấu tranh để giải phóng."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Câu nào sau đây thuộc kiểu câu bị động?",
+    "options": [
+      " Cơn mưa lớn làm ngập lụt nhiều tuyến phố.",
+      " Chiếc áo này mẹ tôi may từ năm ngoái.",
+      " Ngôi nhà được xây dựng cách đây hơn một thế kỷ.",
+      " Chúng ta cần bảo vệ môi trường sống xanh sạch đẹp."
+    ],
+    "answer": "C",
+    "explain": "Câu C có cấu trúc bị động với từ 'được' (Ngôi nhà - chủ thể chịu tác động, được xây dựng). Câu B là câu chủ động có phép đảo ngữ (Tân ngữ 'chiếc áo này' được đưa lên đầu câu để nhấn mạnh)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Từ \"xuân\" trong câu thơ nào dưới đây được dùng theo nghĩa gốc?",
+    "options": [
+      " \"Ngày xuân em hãy còn dài / Xót tình máu mủ thay lời nước non\" (Nguyễn Du).",
+      " \"Mùa xuân là tết trồng cây / Làm cho đất nước càng ngày càng xuân\" (Hồ Chí Minh).",
+      " \"Xuân đang tới nghĩa là xuân đang qua\" (Xuân Diệu).",
+      " \"Sáu mươi tuổi hãy còn xuân chán\" (Hồ Chí Minh)."
+    ],
+    "answer": "C",
+    "explain": "Từ 'xuân' trong câu C chỉ mùa đầu tiên trong một năm, đây là nghĩa gốc. Trong câu A và D, 'xuân' chỉ tuổi trẻ (nghĩa chuyển). Trong câu B (từ xuân thứ 2), 'xuân' chỉ sự tươi đẹp, sức sống mới (nghĩa chuyển)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Ai là người được mệnh danh là \"Ông hoàng thơ tình\" của văn học Việt Nam hiện đại?",
+    "options": [
+      " Hàn Mặc Tử.",
+      " Nguyễn Bính.",
+      " Xuân Diệu.",
+      " Chế Lan Viên."
+    ],
+    "answer": "C",
+    "explain": "Xuân Diệu được nhà phê bình Hoài Thanh đánh giá là \"nhà thơ mới nhất trong các nhà thơ mới\" và được công chúng yêu thơ suy tôn là \"Ông hoàng thơ tình\" của nền văn học Việt Nam nhờ những vần thơ tình say đắm, nồng nàn."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Từ \"tuyệt\" trong \"tuyệt giao\" có nghĩa là gì?",
+    "options": [
+      " Vô cùng, cực kì.",
+      " Đẹp đẽ, hoàn hảo.",
+      " Dứt khoát, cắt đứt.",
+      " Giỏi giang, xuất chúng."
+    ],
+    "answer": "C",
+    "explain": "Từ 'tuyệt' trong tiếng Hán Việt có nhiều nghĩa. Trong 'tuyệt giao' (cắt đứt quan hệ), 'tuyệt thực' (nhịn ăn), 'tuyệt' có nghĩa là cắt đứt, chấm dứt. Còn trong 'tuyệt đẹp', 'tuyệt' nghĩa là vô cùng, cực kì."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Chọn cặp quan hệ từ thích hợp điền vào câu sau: \"(...) trời mưa to (...) chúng tôi vẫn đi học đúng giờ.\"",
+    "options": [
+      " Nếu ... thì ...",
+      " Tuy ... nhưng ...",
+      " Vì ... nên ...",
+      " Không những ... mà còn ..."
+    ],
+    "answer": "B",
+    "explain": "Cặp quan hệ từ 'Tuy ... nhưng ...' dùng để biểu thị quan hệ tương phản, nhượng bộ, hoàn toàn phù hợp với ngữ cảnh 'trời mưa to' (nghịch cảnh) nhưng 'vẫn đi học đúng giờ' (kết quả trái với suy luận thông thường)."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Phong cách ngôn ngữ nào được sử dụng trong các văn bản luật pháp, nghị định, thông tư?",
+    "options": [
+      " Phong cách ngôn ngữ chính luận.",
+      " Phong cách ngôn ngữ khoa học.",
+      " Phong cách ngôn ngữ báo chí.",
+      " Phong cách ngôn ngữ hành chính."
+    ],
+    "answer": "D",
+    "explain": "Phong cách ngôn ngữ hành chính được dùng trong giao tiếp thuộc lĩnh vực hành chính, pháp luật (chỉ thị, nghị quyết, thông tư, hợp đồng...). Nó có đặc trưng là tính khuôn mẫu, minh xác và khách quan."
+  },
+  {
+    "type": "single",
+    "subject": "Tiếng Việt",
+    "question": "Thao tác lập luận nào sử dụng lý lẽ và dẫn chứng để làm sáng tỏ một vấn đề nhằm thuyết phục người đọc, người nghe tin vào vấn đề đó?",
+    "options": [
+      " Giải thích.",
+      " Phân tích.",
+      " Chứng minh.",
+      " Bình luận."
+    ],
+    "answer": "C",
+    "explain": "Chứng minh là thao tác lập luận dùng những lý lẽ và dẫn chứng chân thực, đã được thừa nhận để chứng tỏ sự đúng đắn của một nhận định, một luận điểm nào đó."
   }
 ]
