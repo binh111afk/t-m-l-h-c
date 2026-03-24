@@ -392,7 +392,7 @@
     {
     "type": "single",
     "subject": "Tiếng Anh",
-    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nShe finally _________ a brilliant solution to the problem after thinking about it for days.",
+    "question": "\nShe finally _________ a brilliant solution to the problem after thinking about it for days.",
     "options": [
       " came down with",
       " came up with",
@@ -405,7 +405,7 @@
   {
     "type": "single",
     "subject": "Tiếng Anh",
-    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nBy the time we arrived at the cinema, the movie _________.",
+    "question": "\nBy the time we arrived at the cinema, the movie _________.",
     "options": [
       " started",
       " has started",
@@ -418,7 +418,7 @@
   {
     "type": "single",
     "subject": "Tiếng Anh",
-    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nIf I had known you were in town, I _________ to visit you.",
+    "question": "\nIf I had known you were in town, I _________ to visit you.",
     "options": [
       " would have gone",
       " would go",
@@ -431,7 +431,7 @@
   {
     "type": "single",
     "subject": "Tiếng Anh",
-    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nThe man _________ car was stolen reported the incident to the local police station.",
+    "question": "\nThe man _________ car was stolen reported the incident to the local police station.",
     "options": [
       " who",
       " which",
@@ -444,7 +444,7 @@
   {
     "type": "single",
     "subject": "Tiếng Anh",
-    "question": "Choose a suitable word or phrase (A, B, C, or D) to fill in each blank.\nYou need to _________ a decision soon, or someone else will choose for you.",
+    "question": "\nYou need to _________ a decision soon, or someone else will choose for you.",
     "options": [
       " do",
       " make",
@@ -457,7 +457,7 @@
   {
     "type": "check",
     "subject": "Tiếng Anh",
-    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nThe <u>number</u> of <u>students</u> attending the lecture <u>were</u> very <u>small</u>.",
+    "question": "\nThe <u>number</u> of <u>students</u> attending the lecture <u>were</u> very <u>small</u>.",
     "options": [
       " number",
       " students",
@@ -470,7 +470,7 @@
   {
     "type": "check",
     "subject": "Tiếng Anh",
-    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nShe <u>enjoys</u> <u>reading</u> books, playing tennis, and <u>to watch</u> movies <u>on</u> weekends.",
+    "question": "\nShe <u>enjoys</u> <u>reading</u> books, playing tennis, and <u>to watch</u> movies <u>on</u> weekends.",
     "options": [
       " enjoys",
       " reading",
@@ -483,7 +483,7 @@
   {
     "type": "check",
     "subject": "Tiếng Anh",
-    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nThe <u>results</u> of the experiment <u>were</u> very <u>surprised</u> to <u>everyone</u> in the lab.",
+    "question": "\nThe <u>results</u> of the experiment <u>were</u> very <u>surprised</u> to <u>everyone</u> in the lab.",
     "options": [
       " results",
       " were",
@@ -496,7 +496,7 @@
   {
     "type": "check",
     "subject": "Tiếng Anh",
-    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\nMy brother is <u>very</u> <u>good</u> <u>in</u> playing chess and <u>often</u> wins local tournaments.",
+    "question": "\nMy brother is <u>very</u> <u>good</u> <u>in</u> playing chess and <u>often</u> wins local tournaments.",
     "options": [
       " very",
       " good",
@@ -509,7 +509,7 @@
   {
     "type": "check",
     "subject": "Tiếng Anh",
-    "question": "Each of the following sentences has one error (A, B, C, or D). Find it.\n<u>Despite</u> of the <u>heavy</u> rain, they <u>continued</u> their football <u>match</u> until the end.",
+    "question": "\n<u>Despite</u> of the <u>heavy</u> rain, they <u>continued</u> their football <u>match</u> until the end.",
     "options": [
       " Despite",
       " heavy",
@@ -522,7 +522,7 @@
   {
     "type": "rewrite",
     "subject": "Tiếng Anh",
-    "question": "Which of the following best restates the given sentence?\n\"Why don't we go out for dinner tonight?\" said Mary.",
+    "question": "\n\"Why don't we go out for dinner tonight?\" said Mary.",
     "options": [
       " Mary ordered them to go out for dinner tonight.",
       " Mary suggested going out for dinner that night.",
@@ -535,7 +535,7 @@
   {
     "type": "rewrite",
     "subject": "Tiếng Anh",
-    "question": "Which of the following best restates the given sentence?\nThey are building a new hospital in my neighborhood.",
+    "question": "\nThey are building a new hospital in my neighborhood.",
     "options": [
       " A new hospital is building in my neighborhood.",
       " A new hospital is being built in my neighborhood.",
@@ -548,7 +548,7 @@
   {
     "type": "rewrite",
     "subject": "Tiếng Anh",
-    "question": "Which of the following best restates the given sentence?\nNo one else in the class is taller than John.",
+    "question": "\nNo one else in the class is taller than John.",
     "options": [
       " John is the tallest student in the class.",
       " John is taller than some students in the class.",
@@ -561,7 +561,7 @@
   {
     "type": "rewrite",
     "subject": "Tiếng Anh",
-    "question": "Which of the following best restates the given sentence?\nI'm sure he didn't steal the money because he was with me all day.",
+    "question": "\nI'm sure he didn't steal the money because he was with me all day.",
     "options": [
       " He might not have stolen the money.",
       " He shouldn't have stolen the money.",
@@ -574,7 +574,7 @@
   {
     "type": "rewrite",
     "subject": "Tiếng Anh",
-    "question": "Which of the following best restates the given sentence?\nHe was very tired, but he finished the report on time.",
+    "question": "\nHe was very tired, but he finished the report on time.",
     "options": [
       " Because he was very tired, he finished the report on time.",
       " In spite of being very tired, he finished the report on time.",
