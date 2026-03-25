@@ -648,10 +648,10 @@
                     " $(-\\infty; 1)$",
                     " $(1; +\\infty)$",
                     " $\\mathbb{R}$",
-                    " $\\mathbb{R} \\setminus \\{-1\\}$"
+                    " $\\mathbb{R} \\setminus \\{1\\}$"
                 ],
                 "answer": "D",
-                "explain": "Với $m=2$, bpt thành $\\ln(7x^2+7) \\ge \\ln(2x^2-4x+2)$. Điều kiện: $2x^2-4x+2 > 0 \\Leftrightarrow 2(x-1)^2 > 0 \\Leftrightarrow x \\ne 1$. Do hàm $\\ln(t)$ đồng biến, ta có $7x^2+7 \\ge 2x^2-4x+2 \\Leftrightarrow 5x^2+4x+5 \\ge 0$ (luôn đúng do $\\Delta' < 0$). Wait, my previous derivation had $x \\neq 1$, so it's $\\mathbb{R} \\setminus \\{1\\}$. Looking at standard options text from input, if D was $\\mathbb{R} \\setminus \\{1\\}$, then the answer is D. (Note: using logic to match the provided option text D. $\\mathbb{R}\\setminus\\{1\\}$)."
+                "explain": "Với $m=2$, bất phương trình trở thành $\\ln(7x^2+7) \\ge \\ln(2x^2-4x+2)$. Điều kiện xác định: $2x^2-4x+2 > 0 \\Leftrightarrow 2(x-1)^2 > 0 \\Leftrightarrow x \\ne 1$. Do hàm số $y = \\ln(t)$ đồng biến trên khoảng $(0; +\\infty)$, bất phương trình tương đương với: $7x^2+7 \\ge 2x^2-4x+2 \\Leftrightarrow 5x^2+4x+5 \\ge 0$. Tam thức bậc hai $5x^2+4x+5$ có $\\Delta' = 4 - 25 = -21 < 0$ và $a = 5 > 0$ nên luôn nhận giá trị dương với mọi $x \\in \\mathbb{R}$. Kết hợp với điều kiện xác định, tập nghiệm chính xác của bất phương trình là $S = \\mathbb{R} \\setminus \\{1\\}$."
             },
             {
                 "question": "Gọi $S$ là tổng tất cả các giá trị nguyên của $m$ để bất phương trình $\\ln(7x^2+7) \\ge \\ln(mx^2-4x+m)$ nghiệm đúng với mọi $x$ thuộc $\\mathbb{R}$. Tính $S$.",
