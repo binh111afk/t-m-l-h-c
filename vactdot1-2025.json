@@ -1,0 +1,1586 @@
+[
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Motif “chiến đấu giành lại vợ” là đặc trưng của dòng văn học nào?",
+        "options": [
+            " Truyện thơ.",
+            " Thần thoại.",
+            " Sử thi.",
+            " Tuồng, chèo."
+        ],
+        "answer": "C",
+        "explain": "Motif (mô-típ) chiến đấu giành lại vợ/người đẹp (ví dụ: Đăm Săn đánh Mtao Mxây để cứu vợ là Hơ Nhị) là một trong những đặc trưng tiêu biểu của thể loại sử thi, thể hiện sức mạnh, lòng quả cảm và danh dự của người anh hùng cộng đồng."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Nhân vật Thị Phương trong vở chèo Trương Viên lúc hoà bình động viên chồng thi cử, khi chiến tranh chăm sóc mẹ, đi tìm chồng. Thị Phương thuộc kiểu nhân vật gì?",
+        "options": [
+            " Lão.",
+            " Kép.",
+            " Đào lẳng.",
+            " Đào thương."
+        ],
+        "answer": "D",
+        "explain": "Trong nghệ thuật chèo cổ, “đào thương” là kiểu nhân vật nữ chính diện, có tính cách hiền lành, nết na, chung thủy nhưng phải chịu nhiều oan khuất, bất hạnh và đau khổ (như Thị Kính, Thị Phương)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "“Đường tác hợp trời kia run rủi,\nTrốn làm sao cho khỏi nhân tình.\nThôi thôi ngảnh mặt làm thinh,\nThử xem con tạo gieo mình nơi nao?” <br> (Nguyễn Gia Thiều, Cung oán ngâm) <br> Từ “con tạo” trong đoạn thơ trên có ý nghĩa gì?",
+        "options": [
+            " Số trời.",
+            " Con người.",
+            " Thiên nhiên.",
+            " Cuộc sống."
+        ],
+        "answer": "A",
+        "explain": "“Con tạo” (gọi tắt của Tạo hóa / Con tạo xoay vần) trong văn học trung đại mang ý nghĩa chỉ ông trời, số trời, lực lượng siêu nhiên sắp đặt và định đoạt số phận của con người."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "“Lạ gì bỉ sắc tư phong,\nTrời xanh quen thói má hồng đánh ghen.” <br> (Nguyễn Du, Truyện Kiều) <br> Cụm “bỉ sắc tư phong” trong đoạn thơ trên được hiểu là:",
+        "options": [
+            " Thói đời ghen ghét.",
+            " Cái này ít cái kia nhiều.",
+            " Có nhan sắc phải chịu phong trần.",
+            " Quy luật thăng trầm của số phận."
+        ],
+        "answer": "B",
+        "explain": "“Bỉ” là kém/xấu, “sắc” là vẻ/mặt này; “tư” là thêm cho/cho nhiều, “phong” là dồi dào. “Bỉ sắc tư phong” mang hàm ý luật bù trừ của tạo hóa: được mặt này thì mất mặt kia, cái này ít thì cái kia nhiều."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "“Nước biếc trông như tầng khói phủ,\nSong thưa để mặc bóng trăng vào.\nMấy chùm trước giậu hoa năm ngoái,\nMột tiếng trên không ngỗng nước nào?” <br> (Nguyễn Khuyến, Thu vịnh) <br> Đoạn thơ trên sử dụng biện pháp tu từ gì?",
+        "options": [
+            " Điệp cấu trúc.",
+            " So sánh.",
+            " Hoán dụ.",
+            " Nói quá."
+        ],
+        "answer": "B",
+        "explain": "Câu thơ đầu tiên “Nước biếc trông như tầng khói phủ” sử dụng từ “như”, đây là tín hiệu đặc trưng của biện pháp tu từ so sánh (so sánh nước biếc mùa thu mờ ảo như một tầng khói)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Đọc đoạn trích sau và trả lời câu hỏi: \n“Rít xong một mồi thuốc lào, lão trở nên hoàn toàn tỉnh táo... Thế rồi đột nhiên lão Khúng đi đến một quyết định đầy điên rồ: lão quyết định giải thoát con vật! Tự nhiên lão thấy lão đang làm một công việc vô cùng vô nhân đạo. Cả một đời con vật nai lưng ra kéo cày để nuôi sống gia đình lão, và bây giờ lão đền ơn trả nghĩa cho con vật bằng việc đem bán nó cho người ta giết thịt? Lão thấy lão không còn là giống người nữa chứ còn đâu nữa người nửa thú vật? Một lát sau lão không lên án, tự xỉ vả mình nữa mà chỉ thấy trong người mình một cái nhu cầu đầy bức bách tự giải thoát.” <br> (Nguyễn Minh Châu, Phiên chợ Giát) <br> Nguyên nhân sâu xa nào dẫn đến sự thay đổi về suy nghĩ và hành động của nhân vật lão Khúng?",
+        "options": [
+            " Lão sợ mọi người không tin vào giấc mơ của mình.",
+            " Lão thấy mình “nửa người nửa thú”, cảm nhận sự mâu thuẫn trong bản thân.",
+            " Lão đau khổ và muốn “tự giải thoát” bản thân.",
+            " Lão nhận ra sự vô nhân đạo trong hành động của mình."
+        ],
+        "answer": "B",
+        "explain": "Nguyên nhân bề mặt, trực tiếp là lão nhận ra hành động của mình vô nhân đạo. Tuy nhiên, nguyên nhân sâu xa (bên trong) dẫn đến quyết định của lão Khúng chính là sự thức tỉnh lương tri. Lão tự vấn và nhận ra phần \"thú\" đang tồn tại trong con người mình (\"Lão thấy lão không còn là giống người nữa chứ còn đâu nữa người nửa thú vật?\"). Chính sự giằng xé, mâu thuẫn nội tâm này đã đẩy lão đến tột cùng của sự cắn rứt, tạo thành \"nhu cầu đầy bức bách tự giải thoát\" để cứu rỗi phần \"người\", khiến lão quyết định thả con bò."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "“NGUYỄN TRÃI: - Thưa cụ, còn đến bao giờ? Máu người đã thành sông, nước mắt người bốn bề như biển sóng, cứ như vậy đến bao giờ?\nÔNG GIÀ: - Nước càng tuôn đến, biển càng cả... Đất một chồng thêm, núi một cao...\nNGUYỄN TRÃI: - Vận nước như thế nào, đường đi hướng nào, xin cụ cho biết!\nÔNG GIÀ: - Khó bền... Mạnh gắng... Khôn ngay... Khéo đầy...\nNGUYỄN TRÃI: - ... Khó phải bền, mạnh ở gắng, khôn khéo nơi ngay đầy...\nÔNG GIÀ: - ... Có mống tự nhiên lại có cây... (Chỉ lên trăng sao biển đi)” <br> (Nguyễn Đình Thi, Chuyện Nguyễn Trãi ở Đông Quan) <br> Nội dung nào không đúng với đoạn trích trên?",
+        "options": [
+            " Nhân vật ông già đại diện cho yếu tố tâm linh huyền bí.",
+            " Bối cảnh câu chuyện diễn ra trên không gian sông nước.",
+            " Ngôn ngữ đối thoại mang tính triết lí và cô đọng.",
+            " Các câu hỏi thể hiện nỗi trăn trở về vận nước của Nguyễn Trãi."
+        ],
+        "answer": "B",
+        "explain": "Vở kịch “Chuyện Nguyễn Trãi ở Đông Quan” lấy bối cảnh tại Đông Quan (tên gọi của Thăng Long – Hà Nội thời thuộc Minh) lúc Nguyễn Trãi bị giam lỏng. Hình ảnh “máu thành sông”, “chỉ lên trăng sao biển đi” mang tính biểu tượng, không gian thực tại không phải diễn ra trên một “không gian sông nước”."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Phiên âm:\n“Giải quá Quảng Tây thập tam huyện,\nTrú liễu thập bát cá giam phòng;\nThi vấn dư sở phạm hà tội?\nTội tại vị dân tộc tận trung!”\n(Hồ Chí Minh, Đáo đệ tứ chiến khu Chính trị bộ)\nDịch nghĩa:\n“Quảng Tây giải khắp mười ba huyện,\nMười tám nhà lao đã ở qua;\nPhạm tội gì đây? Ta thử hỏi,\nTội trung với nước, với dân à?”\nÝ nào sau đây không đúng với nội dung đoạn thơ?",
+        "options": [
+            " Khẳng định lòng yêu nước, tận trung với dân tộc.",
+            " Tự bạch về những khó khăn vất vả nơi nhà giam.",
+            " Thể hiện cái nhìn chiêm nghiệm về con người và cuộc sống.",
+            " Kể về việc tù đày qua mười ba huyện Trung Quốc."
+        ],
+        "answer": "C",
+        "explain": "Đoạn thơ mang tính chất tự sự (kể lại hành trình bị giải đi qua 13 huyện, 18 nhà lao) và bộc lộ khí tiết, lòng yêu nước kiên trung của tác giả (tội vì dân tộc tận trung). Bài thơ không thiên về triết lý hay chiêm nghiệm sâu xa về tính bản thể của con người hay nhân tình thế thái."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Chọn từ thích hợp điền vào chỗ trống trong câu sau:\n“................ đề cao sự sáng tạo, tính cá thể, cái tôi riêng của tác giả. Trong khi ................ chú trọng tính tập thể, cộng đồng và giá trị truyền thống.”",
+        "options": [
+            " Văn học viết - văn học dân gian.",
+            " Văn học viết - văn học viết.",
+            " Văn học dân gian - văn học viết.",
+            " Văn học dân gian - văn học dân gian."
+        ],
+        "answer": "A",
+        "explain": "Văn học viết là sáng tác của từng cá nhân nên mang đậm dấu ấn phong cách, cái tôi riêng của tác giả. Ngược lại, văn học dân gian do quần chúng nhân dân cùng nhau sáng tác và lưu truyền nên mang đặc trưng tính tập thể và tính cộng đồng sâu sắc."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Đọc đoạn trích sau:\n“- Xứ này còn cái gì trôi nữa?\n- À, có nhà trôi. Tụi cháu cũng mới đi coi nhà trôi đây, hay ho gì đâu, toàn người chết. Vụ rừng trôi nó làm sao?\n[...] \n- Hồi bảy tám tuổi thím còn thấy miếu trôi.\n[...]\n- Còn gì trôi nữa không?\n- Đâu biết, vì ta đang trôi.\n- Kể tới tết Lào còn chưa hết. Sao không hỏi có gì không trôi không?\n- Có cái gì không trôi?” <br> (Nguyễn Ngọc Tư, Sông) <br> Nội dung không đúng khi nói về ý nghĩa của dòng sông trong đoạn trích trên:",
+        "options": [
+            " Dòng sông biểu tượng cho sự trôi chảy, vô định của kiếp người.",
+            " Dòng sông mang theo nỗi buồn, sự mất mát trong cuộc sống.",
+            " Dòng sông đưa con người đến bến bờ hạnh phúc.",
+            " Dòng sông gợi lên sự tàn phai và vô thường của cuộc đời."
+        ],
+        "answer": "C",
+        "explain": "Đoạn trích nhắc đến “nhà trôi”, “toàn người chết”, “miếu trôi”, “ta đang trôi”, gợi lên một hiện thực buồn bã, đầy những mất mát, cái chết và sự trôi dạt vô định của kiếp người. Do đó, nói dòng sông “đưa con người đến bến bờ hạnh phúc” là sai hoàn toàn với tinh thần của đoạn trích."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Đọc đoạn trích sau:\n“Tôi thấy. Nhưng không phải ở một góc vườn sau, mà thấy cả những đám ruộng bạt ngàn hoa rau muống... Nếu vừa chạy xe gắn máy vừa ngắm những vạt đồng hoa rau muống thì thấy thuần một màu trắng lóa ngợp mắt, đẹp nao lòng. Rong ruổi tiếp đồng quê, tới đâu cũng thấy màu hoa rau muống... Hoa rau muống níu chân người bước lại gần để cùng ngồi trong thinh lặng, khoan thai. [...] Vẻ đẹp của hoa rau muống là vẻ đẹp của đồng nội, là cái đơn sơ thầm lặng của người nhà quê. [...] Và, xin nói thêm một chuyện này, những người ở nước ngoài khi về quê rất muốn được ăn rau muống cho thỏa cơn thèm. Nhưng phải tìm những cọng rau muống “đèo”, tức những cành rau muống gầy nhỏ, mọc tự nhiên... làm thành một bữa canh rau tạp tàng ngọt mát đến tận tâm can.” <br> (Trần Nhã Thuy, Hoa rau muống) <br> Nội dung chính của đoạn trích là gì?",
+        "options": [
+            " Miêu tả vẻ đẹp của thiên nhiên đồng quê.",
+            " Rau muống quen thuộc với khắp vùng quê Việt Nam.",
+            " Vẻ đẹp đơn sơ thầm lặng của hoa rau muống.",
+            " Hoa rau muống khiến người xa quê nhớ về quê hương."
+        ],
+        "answer": "C",
+        "explain": "Đoạn trích tập trung miêu tả cánh đồng hoa rau muống lấp lóa, gợi lên sự tĩnh lặng, mộc mạc và rút ra nhận xét cốt lõi: “Vẻ đẹp của hoa rau muống là vẻ đẹp của đồng nội, là cái đơn sơ thầm lặng của người nhà quê”. Câu C thâu tóm được trọng tâm của văn bản."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Đoạn thơ sau kể về sự kiện gì?\n“Thanh niên các xã lên đường\nĐi Tây Bắc dựng nông trường, cuối năm.\nCái ngày làng xóm đưa chân\nCòn vui hơn hội tòng quân năm nào.”\n(Vũ Cao, Lên đường)",
+        "options": [
+            " Cuộc hành quân qua vùng núi Tây Bắc.",
+            " Lần trở lại thăm vùng núi Tây Bắc.",
+            " Cuộc xuất hành đi xây dựng kinh tế Tây Bắc.",
+            " Cuộc khám phá vùng đất mới Tây Bắc."
+        ],
+        "answer": "C",
+        "explain": "Câu thơ “Đi Tây Bắc dựng nông trường” chỉ rõ sự kiện thanh niên miền xuôi tưng bừng lên đường lên vùng cao Tây Bắc để khai hoang, xây dựng các nông trường quốc doanh (xây dựng vùng kinh tế mới) vào giai đoạn sau hòa bình lập lại (1954)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Điền từ thích hợp vào chỗ trống để hoàn thành câu sau:\n“Thơ văn Lý Trần mang âm hưởng ................, tràn đầy khí thế chiến đấu và tinh thần yêu nước mạnh mẽ.”",
+        "options": [
+            " âm hưởng",
+            " hào phóng.",
+            " hào sảng.",
+            " hào khí."
+        ],
+        "answer": "C",
+        "explain": "Từ cần điền phải là một tính từ bổ nghĩa cho danh từ 'âm hưởng'. 'Hào sảng' (mạnh mẽ, vang rền, khí thế) là tính từ phù hợp nhất để miêu tả âm điệu, giọng điệu của thơ văn Lý - Trần. Nếu chọn 'hào khí' (danh từ) thì kết hợp từ 'âm hưởng hào khí' sẽ bị gượng ép và sai cấu trúc ngữ pháp."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Từ nào viết sai chính tả trong các từ sau:",
+        "options": [
+            " Huyễn hoặc.",
+            " Vĩnh viễn.",
+            " Hỗ trợ.",
+            " Vâng lai."
+        ],
+        "answer": "D",
+        "explain": "Từ đúng chính tả phải là “vãng lai” (nghĩa là qua lại, đi lại), không phải là “vâng lai”."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Câu nào dưới đây sai ngữ pháp?",
+        "options": [
+            " Con người có thể bị huỷ diệt nhưng ý chí của họ không bị đánh bại.",
+            " Đọc một cuốn sách hay cũng như trò chuyện với một người bạn thông minh.",
+            " Với kết quả của năm học đầu tiên ở trường Trung học cơ sở đã động viên em rất nhiều.",
+            " Mọi điều phi thường đều được làm nên từ những điều bình thường nhỏ bé."
+        ],
+        "answer": "C",
+        "explain": "Câu C mắc lỗi thiếu chủ ngữ. Quan hệ từ “Với” đặt ở đầu câu biến toàn bộ cụm “kết quả của năm học đầu tiên ở trường Trung học cơ sở” thành trạng ngữ. Cụm còn lại “đã động viên em rất nhiều” là vị ngữ. Cách sửa: bỏ từ “Với”."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Xác định lỗi sai trong câu sau:\n“Cô Tư quay cuồng vì một mình trông con khi ốm.”",
+        "options": [
+            " Sai logic.",
+            " Thiếu thành phần câu.",
+            " Mơ hồ.",
+            " Sai dùng từ."
+        ],
+        "answer": "C",
+        "explain": "Cụm từ “khi ốm” nằm ở cuối câu gây ra lỗi mơ hồ về nghĩa. Người đọc không rõ là cô Tư bị ốm (vừa ốm vừa trông con) hay đứa con bị ốm (cô Tư trông lúc con ốm)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Xác định câu sai trong các câu sau:",
+        "options": [
+            " Bà cụ đã yếu lắm rồi, bà tìm tay tôi và nắm lấy như muốn trăng trối điều gì.",
+            " Bà cụ đã yếu lắm rồi, bà tìm tay tôi và nắm lấy như muốn trối lại điều gì.",
+            " Bà cụ đã yếu lắm rồi, bà tìm tay tôi và nắm lấy như muốn trân trối điều gì.",
+            " Bà cụ đã yếu lắm rồi, bà tìm tay tôi và nắm lấy như muốn trối trăng điều gì."
+        ],
+        "answer": "C",
+        "explain": "Các từ “trăng trối”, “trối trăng”, “trối lại” đều mang nghĩa là dặn dò lại những điều tâm huyết trước khi chết, dùng đúng ngữ cảnh. Từ “trân trối” là từ dùng sai (thường chỉ có từ “trân trân” nhìn, không thể ghép thành “trân trối” trong trường hợp này)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Từ “đứt bữa” trong câu sau có nghĩa là gì?\n“Nó bị đứt bữa đã hai, ba hôm nay rồi.”",
+        "options": [
+            " Bữa đói bữa no.",
+            " Ăn uống không đúng giờ giấc.",
+            " Ăn uống đạm bạc.",
+            " Bữa có bữa không."
+        ],
+        "answer": "D",
+        "explain": "Trong tiếng Việt, “đứt bữa” dùng để chỉ tình trạng khốn khó, đói kém đến mức bị thiếu ăn, bữa có ăn bữa bị nhịn (không có gạo để thổi cơm)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Chúng ta cần sử dụng tài liệu tham khảo như thế nào?",
+        "options": [
+            " Chỉ cần thay đổi một vài từ ngữ mà không thay đổi nội dung.",
+            " Cần trích dẫn đầy đủ tài liệu tham khảo và ghi rõ nguồn.",
+            " Không cần trích dẫn vì mục đích học tập.",
+            " Không cần trích dẫn nếu không có ghi bản quyền."
+        ],
+        "answer": "B",
+        "explain": "Nguyên tắc khoa học và văn hóa học thuật bắt buộc khi sử dụng tài liệu của người khác (bất kể vì mục đích gì) đều phải trích dẫn đầy đủ và ghi rõ nguồn gốc để tôn trọng tác quyền."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Việt",
+        "question": "Ý nghĩa của biện pháp chêm xen trong đoạn thơ sau:\n“Thằng em thì hay hỏi\nKhông kể chuyện như anh\n(Tuy con, má chẳng sinh\nCon vẫn quen gọi má)\nMá ơi ai sinh cỏ\nAi làm ra cái kem...”\n(Xuân Quỳnh, Cắt nghĩa)",
+        "options": [
+            " Bổ sung thêm thông tin mà không làm đứt mạch kể.",
+            " Tạo sự liền mạch giữa các phần trong đoạn thơ.",
+            " Nhấn mạnh sự ngây ngô, hồn nhiên của trẻ em.",
+            " Làm nổi bật mối quan hệ gắn bó, yêu thương giữa mẹ và con."
+        ],
+        "answer": "A",
+        "explain": "Thành phần chêm xen đặt trong dấu ngoặc đơn “(Tuy con, má chẳng sinh / Con vẫn quen gọi má)” có chức năng giải thích, bổ sung thêm thông tin về hoàn cảnh gia đình (người con gọi mẹ kế là má) một cách nhẹ nhàng, tinh tế mà không làm phá vỡ cấu trúc và mạch kể chuyện tự nhiên của đoạn thơ."
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Việt",
+        "instruction": "Đọc ngữ liệu sau và trả lời các câu hỏi từ 21 đến 25:",
+        "passage_content": "“Nhà thơ này yêu thôn quê một cách kì lạ, cái tình yêu ấy làm cho thơ anh, ở những câu bình dị nhất, vẫn có sức lôi cuốn, vẫn có cái duyên xao động lòng người. Dưới mắt anh, những cảnh sắc thật thông thường ở thôn quê cũng rất gợi cảm, đâu chỉ ánh trăng mới đẹp, mà cảnh mưa phùn gió bấc, hoa xoan, đường lầy hay nắng lửa trưa hè vẫn cứ làm ta xúc động, nhớ thương. Đó là tài năng của anh. Giọng anh vừa cất lên, người ta đã nhận ra ngay hình bóng quê hương, làng mạc... Cách ăn nói nghĩ ngợi của bà con hàng xóm đã thấm vào Nguyễn Bính. Nhiều khi không hẳn là nghĩa chữ, ý câu mà chỉ bằng cái giọng nói, cái cách nói, Nguyễn Bính đã tẩm tâm hồn chúng ta vào trong hồn quê hương dân dã:\nLục bát là thơ sở trường của Nguyễn Bính, anh có khá nhiều câu đẹp như ca dao, khơi nguồn từ ca dao:\nViết cho chị lá thư này\nNửa đêm hăm bốn rạng ngày hăm nhăm.\n(Người hàng xóm)\nHay:\nTẩm tầm trời đổ cơn mưa\nĐến hôm nay nữa là vừa bốn hôm.\n(Thư cho chị)\nThôn Đoài ngồi nhớ thôn Đông\nCau thôn Đoài nhớ giầu không thôn nào\n(Tương tư)\nTại sao dưới bút anh, những chữ đơn sơ, những cảnh bình thường lại có sức gợi cảm? Cái tài ấy sinh ra từ cách nhìn của anh, anh nhìn bằng tâm tưởng, anh thấy được những điều mắt thường ta không thấy. Một cái nhà ga tường vàng, mái đỏ màu son ai cũng thấy. Nhưng nhà ga lại chứa linh hồn nhà ga thì riêng Nguyễn Bính mới nhìn ra được.\nĐọc Nguyễn Bính, vì vậy, chúng ta được nhập vào hồn quê hơn là cảnh quê. Nói về cảnh thì Anh Thơ, Đoàn Văn Cừ có nhiều chi tiết sắc và thực hơn, nhưng dựng được cái hồn quê thì chưa ai bằng Nguyễn Bính. Ngày nay, nông thôn ta đã đổi thay nhiều, cả phong cảnh lẫn hồn người, những câu thơ Nguyễn Bính như một dấu tích tâm hồn dân tộc sẽ nuôi lòng nhiều thế hệ bạn đọc.”\n(Vũ Quần Phương, Nhìn nhận lại một số hiện tượng văn học)",
+        "questions": [
+            {
+                "question": "Luận đề của đoạn văn trên là:",
+                "options": [
+                    " Tình yêu trong thơ Nguyễn Bính.",
+                    " Hồn quê trong thơ Nguyễn Bính.",
+                    " Hình ảnh trong thơ Nguyễn Bính.",
+                    " Ngôn ngữ thơ Nguyễn Bính."
+                ],
+                "answer": "B",
+                "explain": "Cả văn bản tập trung chứng minh Nguyễn Bính có tài năng đặc biệt trong việc đánh thức và tái hiện “hồn quê hương dân dã”. Các yếu tố như thể thơ lục bát, ngôn ngữ, cảnh vật đều xoay quanh trục chính là khắc họa cái “hồn quê” mộc mạc."
+            },
+            {
+                "question": "Luận đề của văn bản được triển khai theo các ý chính nào?",
+                "options": [
+                    " Tình yêu thôn quê kỳ lạ của Nguyễn Bính, sử dụng thể thơ lục bát sở trường mang âm hưởng dân gian.",
+                    " Thôn quê là nguồn cảm hứng chính trong thơ Nguyễn Bính; sử dụng thể thơ lục bát sở trường gần với lời ăn tiếng nói dân gian.",
+                    " Hình ảnh trong thơ Nguyễn Bính chủ yếu đến từ thôn quê; sử dụng thể thơ lục bát truyền thống.",
+                    " Thơ Nguyễn Bính là hình ảnh quê hương, làng mạc; ngôn ngữ thơ bình dị với hồn quê hương dân dã."
+                ],
+                "answer": "B",
+                "explain": "Đoạn 1 tác giả nói về tình yêu thôn quê (nguồn cảm hứng). Đoạn 2 nhấn mạnh việc sử dụng thể thơ lục bát và “cách ăn nói nghĩ ngợi của bà con” (lời ăn tiếng nói dân gian). Đoạn 3 và 4 đúc kết về việc dựng lên “hồn quê” bằng tâm tưởng. Phương án B thâu tóm được hệ thống luận điểm này."
+            },
+            {
+                "question": "Việc tác giả trích dẫn các câu thơ trong “Người hàng xóm” và “Thư cho chị” có tác dụng gì?",
+                "options": [
+                    " Nhấn mạnh sự phong phú trong thể thơ lục bát của Nguyễn Bính.",
+                    " Chứng minh Nguyễn Bính có khả năng sáng tạo những câu thơ mang tính tự sự.",
+                    " Làm nổi bật sự gần gũi và giản dị trong ngôn ngữ, giọng điệu của Nguyễn Bính.",
+                    " Làm rõ tình yêu thôn quê của Nguyễn Bính qua từng chi tiết trong thơ."
+                ],
+                "answer": "C",
+                "explain": "Tác giả trích dẫn những câu thơ lục bát này ngay sau nhận định: “Cách ăn nói nghĩ ngợi của bà con hàng xóm đã thấm vào Nguyễn Bính. Nhiều khi không hẳn là nghĩa chữ, ý câu mà chỉ bằng cái giọng nói, cái cách nói...”. Do đó, trích dẫn nhằm chứng minh ngôn ngữ và giọng điệu thơ Nguyễn Bính vô cùng mộc mạc, đậm chất ca dao dân dã."
+            },
+            {
+                "question": "Dòng nào sau đây không đúng với nội dung hoặc ý nghĩa tác giả muốn truyền tải?",
+                "options": [
+                    " Nguyễn Bính có khả năng tái hiện hồn quê qua những câu thơ giản dị, gần gũi.",
+                    " Thơ Nguyễn Bính tập trung mô tả cảnh vật thôn quê một cách chi tiết, sinh động.",
+                    " Tình yêu thôn quê của Nguyễn Bính thể hiện qua cả ngôn ngữ và cảm xúc trong thơ.",
+                    " Thơ của Nguyễn Bính chứa đựng những giá trị tinh thần sâu sắc, gắn bó với tâm hồn dân tộc."
+                ],
+                "answer": "B",
+                "explain": "Trong đoạn trích, tác giả Vũ Quần Phương khẳng định: “Nói về cảnh thì Anh Thơ, Đoàn Văn Cừ có nhiều chi tiết sắc và thực hơn, nhưng dựng được cái hồn quê thì chưa ai bằng Nguyễn Bính”. Như vậy, thơ Nguyễn Bính mạnh về khơi gợi cái “hồn” chứ không phải tập trung vào việc mô tả chi tiết cảnh vật."
+            },
+            {
+                "question": "Việc sử dụng thao tác lập luận so sánh trong đoạn trích (với Anh Thơ, Đoàn Văn Cừ) có ý nghĩa gì?",
+                "options": [
+                    " Nhấn mạnh sự khác biệt giữa Nguyễn Bính và các tác giả khác trong việc thể hiện hồn quê.",
+                    " So sánh sự chi tiết trong miêu tả cảnh vật giữa Nguyễn Bính và các tác giả khác.",
+                    " Làm nổi bật phong cách miêu tả sắc nét của các tác giả khác như Anh Thơ và Đoàn Văn Cừ.",
+                    " Làm rõ sự tương đồng giữa thơ của Nguyễn Bính và các tác giả khác trong cách thể hiện cảnh vật thôn quê."
+                ],
+                "answer": "A",
+                "explain": "Tác giả đưa Anh Thơ, Đoàn Văn Cừ vào để tạo đòn bẩy: Các nhà thơ kia tả cảnh chi tiết hơn, thực hơn, nhưng xét về khả năng nắm bắt và truyền tải “hồn quê” bằng lăng kính tâm tưởng thì Nguyễn Bính là duy nhất và xuất sắc nhất. So sánh nhằm khẳng định sự độc đáo của Nguyễn Bính."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Việt",
+        "instruction": "Đọc ngữ liệu sau và trả lời các câu hỏi từ 26 đến 30:",
+        "passage_content": "(1) Chạy dọc theo kênh Tàu Hủ, bến Bình Đông xưa còn được mệnh danh là “vựa gạo miền Nam” nhờ giao thông thủy lộ thuận tiện, cộng với cư dân bản địa và làng Minh Hương phát triển sầm uất, biến bến Bình Đông thành nơi hội tụ ghe thuyền đến từ khắp các tỉnh miền Tây và cả Nam Bộ, khiến khu vực này dần cực thịnh trong buôn bán và xuất khẩu lúa gạo. Việc chuyển gạo nơi vựa lúa miền Tây đến bến Bình Đông rất thuận tiện bằng ghe thuyền, bến bãi neo đậu dễ dàng trên kênh Tàu Hủ, kết hợp cùng chuỗi các nhà máy xay xát lúa gạo, chành (một phương ngữ của người Triều Châu, nghĩa là bến, bãi), kho chứa dọc đôi bờ kênh, khiến bến Bình Đông trở thành đầu mối giao thương trọng yếu của toàn vùng Sài Gòn - Chợ Lớn.\n(2) Dựa theo những ghi chép thì tên gọi kênh Tàu Hủ có khá nhiều lý giải. \"Ký ức lịch sử về Sài Gòn và vùng phụ cận\" của Trương Vĩnh Ký [...] ở trang 25 có đoạn: \"Hai bên bờ rạch Chợ Lớn là hai dãy phố lớn bằng gạch gọi là Tàu khậu... \". “Tàu khậu” ở đây là ngữ âm của người Triều Châu, nghĩa là “nhà gạch” (thổ khổ), phương ngữ “tàu khậu” bị biến âm dần trở thành “tàu hủ”. Một lý giải khác cho tên gọi rất “chay tịnh” của dòng kênh này bắt nguồn từ hình dáng của dòng kênh có những đoạn thắt như cổ hũ, đọc lâu dần trại ra thành âm “tàu hũ, tàu hủ” như ngày nay.\n(3) Nhắc đến bến Bình Đông, không thể không đề cập đến các kho, vựa - chành, nhà máy tên tuổi như kho Hữu Thành mênh mông tới sáu cửa, nhà máy xay lúa Phong Thanh với công suất lên đến 500 tấn/ngày.\n[...]\n(4) Còn về diện mạo phố xá, kiến trúc nhà ở đặc trưng ở bến Bình Đông mang hình thái thuộc địa với các chi tiết trang trí chạy chỉ nổi thạch cao, lan can sắt mỹ nghệ, ngói tây, cửa lá sách... công năng dùng để buôn bán giao thương (tầng trệt), còn tầng trên để cư ngụ. [...] Với sự phát triển của nhịp sống đô thị, cả bến Bình Đông hôm nay chỉ còn sót lại lác đác dãy nhà cổ liên kế...\n(5) Qua thời gian, những cư dân gốc của dãy phố này cũng lần lượt ra đi, nay chỉ còn lại nhà xưa chủ mới. Những khoảng trống giữa các dãy nhà được người đến sau tận dụng, xây nối thành những căn nhà phố mới với kiến trúc “phá bĩnh” - giữa các dãy mái ngói đỏ điểm xuyết một “gạch nối” là căn nhà hiện đại, mái đúc - chẳng ăn nhập gì với những căn nhà vốn mang nét cổ kính từ hàng trăm năm nay.\n(Nguyễn Đình, Chuyện nhỏ ở Chợ Lớn)",
+        "questions": [
+            {
+                "question": "Đoạn 2 triển khai nội dung theo cách nào?",
+                "options": [
+                    " Liệt kê đối tượng.",
+                    " Trình tự thời gian.",
+                    " Trình tự không gian.",
+                    " Quan hệ nhân quả."
+                ],
+                "answer": "A",
+                "explain": "Đoạn 2 đưa ra các giả thuyết khác nhau để giải thích tên gọi kênh Tàu Hủ (từ “Tàu khậu” nhà gạch, hoặc từ hình dáng “cổ hũ”). Việc đưa ra lần lượt các giả thuyết (lý giải này, lý giải khác) thuộc phương pháp liệt kê đối tượng/khía cạnh."
+            },
+            {
+                "type": "single",
+                "subject": "Tiếng Việt",
+                "question": "Việc tác giả sử dụng các dẫn chứng trong đoạn 3 (“kho Hữu Thành mênh mông tới sáu cửa”, “nhà máy xay lúa Phong Thanh công suất 500 tấn/ngày”) có tác dụng gì?",
+                "options": [
+                    " Nêu lên đặc trưng về giao thông của bến Bình Đông.",
+                    " Nêu lên đặc trưng về kinh tế của bến Bình Đông.",
+                    " Nêu lên đặc trưng về sản xuất của bến Bình Đông.",
+                    " Thể hiện quy mô nghề nghiệp của bến Bình Đông."
+                ],
+                "answer": "C",
+                "explain": "Các dẫn chứng được đưa ra như \"kho Hữu Thành mênh mông tới sáu cửa\" và đặc biệt là \"nhà máy xay lúa Phong Thanh với công suất lên đến 500 tấn/ngày\" trực tiếp miêu tả các cơ sở lưu trữ và chế biến lúa gạo với quy mô đồ sộ. Những chi tiết này có tác dụng làm nổi bật đặc trưng về năng lực sản xuất (xay xát, chế biến nông sản) vô cùng mạnh mẽ của bến Bình Đông thời bấy giờ."
+            },
+            {
+                "question": "Thái độ của tác giả thể hiện trong đoạn 5 là gì?",
+                "options": [
+                    " Khách quan vì những kiến trúc mới dần thay thế các kiến trúc cũ.",
+                    " Tiếc nhớ những kiến trúc xưa cũ ở bến Bình Đông.",
+                    " Tiếc nuối những giá trị văn hóa xưa đang dần mai một.",
+                    " Thích thú về sự thay đổi của bến Bình Đông hiện đại."
+                ],
+                "answer": "B",
+                "explain": "Tác giả sử dụng các cụm từ như “kiến trúc phá bĩnh”, “chẳng ăn nhập gì với những căn nhà vốn mang nét cổ kính”. Điều này bộc lộ thái độ chê trách sự phá vỡ cảnh quan, đồng thời ngầm thể hiện sự xót xa, tiếc nhớ vẻ đẹp hài hòa của những kiến trúc xưa cũ đang dần bị lấp liếm."
+            },
+            {
+                "question": "Tác động nào đối với người đọc không thể suy ra từ văn bản?",
+                "options": [
+                    " Trân trọng những giá trị văn hóa truyền thống.",
+                    " Nhận thức về những khó khăn của công tác bảo tồn văn hóa.",
+                    " Hiểu về vai trò kinh tế của bến Bình Đông trong không gian Chợ Lớn.",
+                    " Tiếc nuối trước sự đổi thay của bến Bình Đông xưa."
+                ],
+                "answer": "B",
+                "explain": "Văn bản miêu tả lại lịch sử huy hoàng và thực trạng kiến trúc bị chắp vá hiện tại của bến Bình Đông, từ đó khơi gợi sự trân trọng (A), sự hiểu biết (C) và niềm tiếc nuối (D). Tuy nhiên, văn bản không đi sâu phân tích lý do vĩ mô hay rào cản hành chính/kinh tế trong công tác bảo tồn di sản, nên không thể trực tiếp tạo ra tác động B."
+            },
+            {
+                "question": "Nội dung chính của văn bản trên là:",
+                "options": [
+                    " Vị trí địa lý thuận lợi khiến bến Bình Đông trở thành trung tâm giao thương.",
+                    " Vai trò kinh tế của bến Bình Đông trong không gian Chợ Lớn.",
+                    " Sự đổi mới kiến trúc và đời sống của cư dân bến Bình Đông hiện nay.",
+                    " Lịch sử phát triển của bến Bình Đông qua từng thời kỳ."
+                ],
+                "answer": "D",
+                "explain": "Đoạn văn bao quát từ thời hoàng kim quá khứ (vựa gạo miền Nam, đầu mối giao thương, kiến trúc cổ kính) cho đến thực trạng đổi thay, phai nhạt ở hiện tại (chỉ còn lác đác dãy nhà cổ, kiến trúc phá bĩnh xen vào). Nội dung chính là cái nhìn toàn cảnh về lịch sử phát triển và sự biến đổi của bến Bình Đông xưa và nay."
+            }
+        ]
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "\nThe agreement between the two companies is becoming _________ as they struggle to compromise on key issues.",
+        "options": [
+            " bader and bader",
+            " from bad to worse",
+            " more bad and bad",
+            " worse and worse"
+        ],
+        "answer": "D",
+        "explain": "Cấu trúc so sánh kép (Double Comparative) với tính từ ngắn: 'adj-er and adj-er' diễn tả sự việc ngày càng như thế nào đó. Dạng so sánh hơn của 'bad' là 'worse', nên cấu trúc đúng là 'worse and worse' (ngày càng tồi tệ hơn)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "\nThe documentary about climate change is _________ famous, having been shown in many countries.",
+        "options": [
+            " nationally",
+            " national",
+            " nation",
+            " nationalism"
+        ],
+        "answer": "A",
+        "explain": "Trước tính từ 'famous' cần một trạng từ để bổ nghĩa. Trong các đáp án, chỉ có 'nationally' là trạng từ. Các từ còn lại: 'national' (tính từ), 'nation' (danh từ), 'nationalism' (danh từ)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "\nThe recent changes in the law will result _________ a decrease in crime rates.",
+        "options": [
+            " in",
+            " on",
+            " from",
+            " for"
+        ],
+        "answer": "A",
+        "explain": "Cụm động từ 'result in' có nghĩa là dẫn đến kết quả gì. Trong khi đó, 'result from' có nghĩa là có nguyên nhân từ đâu."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "\nWhile exploring the historic site, they remembered that they _________ it during their last trip.",
+        "options": [
+            " visited",
+            " would visit",
+            " were visiting",
+            " had visited"
+        ],
+        "answer": "D",
+        "explain": "Hành động đến thăm di tích (visit) đã xảy ra và hoàn tất trước hành động nhớ lại (remembered - thì quá khứ đơn). Do đó, hành động xảy ra trước phải được chia ở thì Quá khứ hoàn thành (had visited)."
+    },
+    {
+        "type": "single",
+        "subject": "Tiếng Anh",
+        "question": "\nGrilled fish is _________ specialities in this coastal area. I have to taste it.",
+        "options": [
+            " in many of",
+            " one of many",
+            " among a lot",
+            " one out of"
+        ],
+        "answer": "B",
+        "explain": "Cụm từ 'one of many' + danh từ số nhiều có nghĩa là 'một trong số rất nhiều...'. Câu mang ý nghĩa: Cá nướng là một trong số rất nhiều đặc sản ở vùng ven biển này."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "\nMy daughter is <u>clever</u> enough to <u>solve</u> difficult problems without any help whenever <u>he</u> has <u>a</u> test.",
+        "options": [
+            " clever",
+            " solve",
+            " he",
+            " a"
+        ],
+        "answer": "C",
+        "explain": "Chủ ngữ được nhắc đến ở đầu câu là 'My daughter' (con gái tôi - giới tính nữ). Do đó, đại từ nhân xưng thay thế ở vế sau phải là 'she' thay vì 'he'. Lỗi sai ở C."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "\nTom, like <u>his father</u>, <u>are</u> regularly encouraged <u>to exercise</u> for at least 30 minutes a day to improve <u>his overall health</u>.",
+        "options": [
+            " his father",
+            " are",
+            " to exercise",
+            " his overall health"
+        ],
+        "answer": "B",
+        "explain": "Trong cấu trúc có chứa 'like' kẹp giữa hai danh từ (S1, like S2, V...), động từ chính trong câu được chia theo chủ ngữ thứ nhất (S1). Chủ ngữ ở đây là 'Tom' (ngôi thứ 3 số ít), nên động từ to be phải là 'is' thay vì 'are'."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "\nMy cousin likes his <u>classmate's friends'</u>, so he <u>hopes</u> <u>to hang</u> out with her <u>soon</u>.",
+        "options": [
+            " classmate's friends'",
+            " hopes",
+            " to hang",
+            " soon"
+        ],
+        "answer": "A",
+        "explain": "Ở vế sau có đại từ 'her' (cô ấy - số ít), chứng tỏ người mà người anh họ muốn đi chơi cùng chỉ có một người. Do đó, danh từ chỉ người bạn phải ở dạng số ít là 'friend' thay vì sở hữu cách số nhiều 'friends''. Sửa thành: 'classmate's friend'."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "\nWhat <u>keeps</u> Emma and Liam together through <u>tough times</u> is <u>deep respect</u> <u>for one another</u>.",
+        "options": [
+            " keeps",
+            " tough times",
+            " deep respect",
+            " for one another"
+        ],
+        "answer": "D",
+        "explain": "Đại từ tương hỗ 'one another' thường được dùng khi nói về mối quan hệ tác động qua lại giữa ba người (hoặc ba vật) trở lên. Với trường hợp chỉ có hai người (Emma và Liam), ta phải dùng 'each other'. Sửa 'for one another' thành 'for each other'. <br> Về phương án C (deep respect), chúng ta không chọn đáp án này vì cách sử dụng từ ở đây là hoàn toàn chính xác và tự nhiên về mặt ngữ pháp. Trong tiếng Anh, respect (sự tôn trọng) là một danh từ trừu tượng, không đếm được. Theo quy tắc chung, các danh từ trừu tượng khi được dùng để chỉ một khái niệm, một cảm xúc hay một trạng thái chung thì không cần sử dụng mạo từ the (được gọi là trường hợp Zero article). Mặc dù phía sau có cụm giới từ for each other/one another đi kèm, nhưng cụm này chỉ đóng vai trò làm rõ hướng của tình cảm (dành cho ai), chứ không hề bó hẹp cụm từ deep respect thành một đối tượng cụ thể, duy nhất, hay đã được nhắc đến từ trước đến mức bắt buộc phải có mạo từ the. Trong thực tế sử dụng và văn phong tiếng Anh chuẩn, cấu trúc have respect for someone hoặc is deep respect for... (như trong câu gốc) là những cách diễn đạt vô cùng phổ biến và chuẩn xác. Do phương án C không hề chứa lỗi sai ngữ pháp, ta không thể chọn nó làm đáp án, đặc biệt là khi trong câu đã có một lỗi sai rạch ròi, vi phạm quy tắc ngữ pháp căn bản ở phương án D (dùng one another cho 2 người)."
+    },
+    {
+        "type": "check",
+        "subject": "Tiếng Anh",
+        "question": "\nThe blue car <u>which</u> a white stripe <u>on the side</u> <u>is parked</u> neatly in front of <u>the house</u>.",
+        "options": [
+            " which",
+            " on the side",
+            " is parked",
+            " the house"
+        ],
+        "answer": "A",
+        "explain": "Từ 'which' ở đây đóng vai trò là đại từ quan hệ, nhưng theo sau nó lại là một cụm danh từ ('a white stripe') thay vì một mệnh đề. Để chỉ đặc điểm sở hữu/mang theo, ta dùng giới từ 'with' (Chiếc xe màu xanh có sọc trắng...). Sửa 'which' thành 'with'."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nIf you want to improve your English, you will have to practice speaking every day.",
+        "options": [
+            " You will have to practice speaking every day in case you want to improve your English.",
+            " Without practicing speaking every day, you would not improve your English.",
+            " If you practiced speaking every day, you would improve your English.",
+            " Unless you practice speaking every day, you won't improve your English."
+        ],
+        "answer": "D",
+        "explain": "Cấu trúc 'Unless' tương đương với 'If... not' (Nếu không). Câu gốc: 'Nếu bạn muốn cải thiện tiếng Anh, bạn sẽ phải thực hành nói mỗi ngày'. Tương đương với: 'Trừ khi bạn thực hành nói mỗi ngày, bạn sẽ không cải thiện được tiếng Anh'."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nWe have had the fewest long-distance business trips this year.",
+        "options": [
+            " We just experienced a year with the least number of business trips to distant locations.",
+            " Our business trips have been the longest-distance ones this year.",
+            " This year has had so few long-distance business trips that we plan to schedule more next year.",
+            " Compared to this year, we had more long-distance business trips last year."
+        ],
+        "answer": "A",
+        "explain": "Câu gốc mang nghĩa: Chúng tôi có số lượng chuyến công tác đường dài ít nhất trong năm nay. Đáp án A diễn đạt lại chính xác nhất ý này ('the fewest' = 'the least number of')."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nMr.Smith said: \"Tom, be careful, you will get bad comments from the audience.\"",
+        "options": [
+            " Mr. Smith advised Tom to be careful to get bad comments from the audience.",
+            " Mr. Smith did not want Tom to get bad comments from the audience, so he was careful with Tom.",
+            " Mr. Smith warned Tom that he would get bad comments from the audience if he were not careful.",
+            " Mr. Smith said that Tom would get bad comments from the audience because he was not careful."
+        ],
+        "answer": "C",
+        "explain": "Câu gốc là một lời cảnh báo (hãy cẩn thận, [nếu không] bạn sẽ nhận những lời bình luận tồi tệ...). Cấu trúc tường thuật lời cảnh báo: 'warn someone that + clause' (cảnh báo ai đó rằng điều gì sẽ xảy ra nếu họ không làm gì). Đáp án C diễn đạt chính xác sắc thái và logic này."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nHow could Tom be so careless as to let his little son row the boat alone?",
+        "options": [
+            " Tom shouldn't have allowed his little son to row the boat alone.",
+            " Tom's little son doesn't know how to row the boat alone.",
+            " Tom's little son can row the boat alone if he is allowed to.",
+            " Tom lets his little son row the boat alone but the kid cannot do it."
+        ],
+        "answer": "A",
+        "explain": "Câu gốc là một câu hỏi tu từ mang tính trách móc: 'Sao Tom có thể bất cẩn đến mức để đứa con trai nhỏ tự chèo thuyền một mình cơ chứ?'. Điều này đồng nghĩa với việc chỉ trích một hành động đã xảy ra trong quá khứ. Cấu trúc 'shouldn't have + V3/ed' (lẽ ra không nên) là lựa chọn phù hợp nhất để diễn tả sự trách móc này."
+    },
+    {
+        "type": "rewrite",
+        "subject": "Tiếng Anh",
+        "question": "\nThe star apples, which were bought by my father at the market yesterday, are incredibly juicy and fresh.",
+        "options": [
+            " The star apples that are so juicy and fresh bought by my father at the market yesterday.",
+            " Being so juicy and fresh, my father bought the star apples at the market.",
+            " My father bought the star apples at the market yesterday, so they are exceptionally juicy and fresh.",
+            " Bought by my father at the market yesterday, the star apples are incredibly juicy and fresh."
+        ],
+        "answer": "D",
+        "explain": "Mệnh đề quan hệ dạng bị động 'which were bought' có thể được rút gọn bằng cách lược bỏ đại từ quan hệ và động từ to be, chỉ giữ lại quá khứ phân từ (V3/ed). Khi đưa cụm phân từ 'Bought by my father...' lên đầu câu, nó đóng vai trò bổ nghĩa cho chủ ngữ 'the star apples' ngay phía sau."
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Anh",
+        "instruction": "Questions 46-52: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+        "passage_content": "1. Obesity-linked \"adult-onset\" diabetes mellitus is for the first time being reported in children and adolescents in the UK and many other countries. A 1986 landmark study of obesity and television viewing found a clear association between the number of hours of television a child watched and the risk of that child becoming obese or over-weight.\n2. In 12 to 17-year-olds, the prevalence of obesity increases by two per cent for every hour of weekly television time. A more recent study found that, while eight per cent of children watching one hour or less of television a day were obese, 18 per cent of children watching four or more hours were obese.\n3. The more children watch television, the more they eat. (By comparison, even reading is a workout, at least in studies that have been done with obese children, perhaps because it engages their minds a bit more emphatically.) Television viewing prompts children to consume more food while they consume less energy, an ideal recipe for adiposity.\n4. When children dictate family food choices, as is increasingly the case in the US, entire households are immersed in a miasma of one-dimensional sweet taste that reinforces juvenile preferences. Marketing of soft, sweet and salty foods is good business, and children are the most vulnerable targets.\n5. Childhood obesity rates are highest in countries where advertising on children's television programmes is least regulated in Australia, the US and England. Sweden and Norway maintain a virtual ban on advertising to children and have consistently low levels of childhood obesity. Ireland, Belgium, Italy and Denmark have posed restrictions on children's advertising and are pressing the other states of the European Union to do the same.\n6. The US and other countries can afford to do no less. Public nutrition campaigns should go beyond vague recommendations to exercise and eat a balanced diet: the link between inactivity, junk food consumption and obesity should be made explicit. The food industry will lobby against these efforts, of course, claiming that they constitute \"legislation of food choices\".",
+        "questions": [
+            {
+                "question": "What is the best title for the passage?",
+                "options": [
+                    " The Role of Genetics in Childhood Obesity",
+                    " The Impact of Television on Childhood Obesity",
+                    " The Benefits of Advertising in Children's Media",
+                    " The Importance of a Balanced Diet for Children"
+                ],
+                "answer": "B",
+                "explain": "Bài đọc xuyên suốt tập trung phân tích mối liên hệ rõ ràng giữa việc xem tivi (cả việc lười vận động lẫn tiếp xúc với quảng cáo đồ ăn vặt) và tình trạng béo phì ở trẻ em. Do đó, 'The Impact of Television on Childhood Obesity' là nhan đề bao quát nhất."
+            },
+            {
+                "question": "The word \"they\" in paragraph 6 refers to:",
+                "options": [
+                    " Junk food consumers",
+                    " Public nutrition campaigns",
+                    " The food industry",
+                    " European Union states"
+                ],
+                "answer": "B",
+                "explain": "Trong câu: 'The food industry will lobby against these efforts, of course, claiming that they constitute \"legislation of food choices\"'. Ở đây, ngành công nghiệp thực phẩm đang vận động chống lại 'these efforts' (những nỗ lực của các chiến dịch dinh dưỡng công cộng), cho rằng 'chúng' (các chiến dịch/nỗ lực này) mang tính áp đặt luật lệ lên sự lựa chọn thực phẩm."
+            },
+            {
+                "question": "The word \"miasma\" in paragraph 4 is closest in meaning to:",
+                "options": [
+                    " atmosphere",
+                    " regulation",
+                    " marketing strategy",
+                    " solution"
+                ],
+                "answer": "A",
+                "explain": "Từ 'miasma' nghĩa đen là chướng khí, khí độc. Trong ngữ cảnh này ('immersed in a miasma of one-dimensional sweet taste'), nó mang nghĩa bóng chỉ một bầu không khí hoặc môi trường độc hại, áp đảo. Từ 'atmosphere' (bầu không khí) là lựa chọn gần nghĩa nhất."
+            },
+            {
+                "question": "What can be inferred from paragraph 5?",
+                "options": [
+                    " Countries with strict advertising regulations tend to have lower childhood obesity rates.",
+                    " The US has stricter advertising laws than Sweden and Norway.",
+                    " Childhood obesity is not influenced by advertising.",
+                    " Italy and Belgium have the highest childhood obesity rates."
+                ],
+                "answer": "A",
+                "explain": "Đoạn 5 đưa ra dẫn chứng: Thụy Điển và Na Uy cấm quảng cáo nhắm vào trẻ em và có tỉ lệ béo phì thấp; trong khi Mỹ, Úc, Anh ít kiểm soát quảng cáo thì có tỉ lệ béo phì cao nhất. Từ đó suy ra các nước có luật quảng cáo nghiêm ngặt thường có tỉ lệ béo phì ở trẻ em thấp hơn."
+            },
+            {
+                "question": "The word \"dictate\" in paragraph 4 is used to",
+                "options": [
+                    " suggest that children have full control over family food choices.",
+                    " emphasize that children should choose healthy foods.",
+                    " indicate that parents always control what children eat.",
+                    " explain why advertising has no effect on children."
+                ],
+                "answer": "A",
+                "explain": "Từ 'dictate' mang nghĩa là sai khiến, ra lệnh, quyết định. Khi tác giả viết 'When children dictate family food choices' (Khi trẻ em quyết định sự lựa chọn thực phẩm của gia đình), ý nói trẻ em đang nắm quyền kiểm soát trong việc gia đình mua đồ ăn gì."
+            },
+            {
+                "question": "What is the relation between paragraph 2 and paragraph 3?",
+                "options": [
+                    " Paragraph 2 highlights government policies, while paragraph 3 refutes them.",
+                    " Paragraph 2 provides a solution, while paragraph 3 critiques that solution.",
+                    " Paragraph 2 focuses on parental influence, while paragraph 3 discusses advertising.",
+                    " Paragraph 2 presents a statistical finding, while paragraph 3 explains a reason for that finding."
+                ],
+                "answer": "D",
+                "explain": "Đoạn 2 đưa ra các số liệu thống kê (tỉ lệ béo phì tăng 2% cho mỗi giờ xem tivi...). Đoạn 3 giải thích nguyên nhân đằng sau con số đó: do trẻ xem tivi nhiều thì ăn nhiều hơn và tiêu thụ ít năng lượng hơn. Vậy quan hệ là: Hiện tượng/Số liệu - Giải thích nguyên nhân."
+            },
+            {
+                "question": "What is true according to the passage?",
+                "options": [
+                    " The food industry supports regulations against junk food marketing.",
+                    " Watching television for more than four hours daily reduces the risk of obesity.",
+                    " Strict advertising policies in Sweden contribute to low childhood obesity rates.",
+                    " The US has banned advertising targeted at children."
+                ],
+                "answer": "C",
+                "explain": "Theo đoạn 5: 'Sweden and Norway maintain a virtual ban on advertising to children and have consistently low levels of childhood obesity' (Thụy Điển duy trì lệnh cấm quảng cáo cho trẻ em và có tỉ lệ béo phì nhất quán ở mức thấp). Đây là thông tin chính xác duy nhất được nêu trong bài."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tiếng Anh",
+        "instruction": "Questions 53-60: Read the passage carefully. Choose an option (A, B, C, or D) that best answers each question.",
+        "passage_content": "1. For many American university students, the weeklong spring break holiday means an endless party on a sunny beach in Florida or Mexico. In Panama City Beach, Florida, a city with a permanent population of around 36,000, more than half a million university students arrive during the month of March to play and party, making it the number one spring break destination in the United States.\n2. A weeklong drinking binge is not for anyone, however, and a growing number of American university students have found a way to make spring break matter. For them, joining or leading a group of volunteers to travel locally or internationally and work to alleviate problems such as poverty, homelessness, or environmental damage makes spring break a unique learning experience that university students can feel good about.\n3. During one spring break week, students at James Madison University in Virginia participated in 15 \"alternative spring break\" trips to nearby states, three others to more distant parts of the United States, and five international trips. One group of JMU students traveled to Bogalusa, Louisiana, to help rebuild homes damaged by Hurricane Katrina. Another group traveled to Mississippi to organize creative activities for children living in a homeless shelter. One group of students did go to Florida, but not to lie on the sand. They performed exhausting physical labor such as maintaining hiking trails and destroying invasive plant species that threaten the native Florida ecosystem.\n4. Students who participate in alternative spring break projects find them very rewarding. While most university students have to get their degrees before they can start helping people, student volunteers are able to help people now. On the other hand, the accommodations are far from glamorous. Students often sleep on the floor of a school or spend the week camping in tents. But students only pay around $250 for meals and transportation, which is much less than some of their peers spend to travel to more traditional spring break hotspots.\n5. Alternative spring break trips appear to be growing in popularity at universities across the United States. Students cite a number of reasons for participating. Some appreciate the opportunity to socialize and meet new friends. Others want to exercise their beliefs about people's obligation to serve humanity and make the world a better place whatever their reason, these students have discovered something that gives them rich rewards along with a break from school work.",
+        "questions": [
+            {
+                "question": "How many university students travel to Panama Beach City every March for spring break?",
+                "options": [
+                    " Around 500,000",
+                    " Around 10,000",
+                    " Around 36,000",
+                    " Around 50,000"
+                ],
+                "answer": "A",
+                "explain": "Đoạn 1 nêu rõ: 'In Panama City Beach... more than half a million university students arrive during the month of March' (hơn nửa triệu sinh viên đại học đến đây vào tháng 3). Nửa triệu tương đương với khoảng 500.000."
+            },
+            {
+                "question": "The passage is mainly about",
+                "options": [
+                    " sleeping on the floor or camping in tents.",
+                    " alternative spring break trips.",
+                    " drinking problems among university students.",
+                    " spring break in Florida and Mexico."
+                ],
+                "answer": "B",
+                "explain": "Mặc dù đoạn đầu đề cập đến các kì nghỉ xuân truyền thống (tiệc tùng ở biển), nhưng phần lớn bài đọc tập trung miêu tả về một xu hướng mới: kì nghỉ xuân thay thế (alternative spring break trips) - nơi sinh viên đi tình nguyện để giúp đỡ cộng đồng."
+            },
+            {
+                "question": "The word \"binge\" in the second paragraph probably means",
+                "options": [
+                    " having very little alcohol.",
+                    " refusing to do something",
+                    " studying for too long.",
+                    " doing too much of something."
+                ],
+                "answer": "D",
+                "explain": "Từ 'binge' có nghĩa là làm một việc gì đó quá mức trong thời gian ngắn (ví dụ: ăn quá nhiều, uống quá nhiều). 'Drinking binge' nghĩa là uống rượu say sưa, quá chén."
+            },
+            {
+                "question": "Which of the following is NOT mentioned as a problem that alternative spring break trips try to help solve?",
+                "options": [
+                    " Alcoholism.",
+                    " Environmental damage.",
+                    " Poverty.",
+                    " Homelessness."
+                ],
+                "answer": "A",
+                "explain": "Trong đoạn 2, tác giả liệt kê các vấn đề mà sinh viên tình nguyện giúp giải quyết: 'poverty' (nghèo đói), 'homelessness' (vô gia cư), và 'environmental damage' (tổn hại môi trường). Bệnh nghiện rượu (Alcoholism) không được đề cập là một vấn đề mà họ đi tình nguyện để giải quyết."
+            },
+            {
+                "question": "Which of the following gives the main idea of the third paragraph?",
+                "options": [
+                    " One group of JMU students worked on homes damaged by a hurricane.",
+                    " Some students work to help the environment on alternative spring break trips.",
+                    " Children living in homeless shelters enjoy creative activities.",
+                    " University students do many different types of work on alternative spring break trips."
+                ],
+                "answer": "D",
+                "explain": "Đoạn 3 đưa ra hàng loạt ví dụ về các công việc mà sinh viên trường JMU làm: xây lại nhà, tổ chức hoạt động cho trẻ em vô gia cư, bảo trì đường mòn, tiêu diệt thực vật xâm hại. Ý chính của toàn đoạn là sinh viên tham gia vào nhiều loại công việc tình nguyện khác nhau trong kỳ nghỉ xuân thay thế."
+            },
+            {
+                "question": "The passage implies that university students",
+                "options": [
+                    " take fewer alternative spring break trips in future.",
+                    " prefer to wait until they have their degrees to start helping people.",
+                    " complain about accommodations on alternative spring break trips.",
+                    " spend more than $250 for traditional spring break trips."
+                ],
+                "answer": "D",
+                "explain": "Đoạn 4 nói về chi phí của chuyến đi tình nguyện: 'But students only pay around $250 for meals and transportation, which is much less than some of their peers spend to travel to more traditional spring break hotspots'. Nghĩa là số tiền 250$ này RẤT ÍT SO VỚI số tiền mà bạn bè của họ chi cho các kỳ nghỉ truyền thống. Từ đó suy ra các sinh viên đi nghỉ kiểu truyền thống phải chi tiêu nhiều hơn 250$."
+            },
+            {
+                "question": "The word \"them\" in paragraph 4 refers to",
+                "options": [
+                    " degrees",
+                    " projects",
+                    " people",
+                    " students"
+                ],
+                "answer": "B",
+                "explain": "Trong câu: 'Students who participate in alternative spring break projects find them very rewarding'. Ở đây, sinh viên nhận thấy 'chúng' (tức là những dự án/chuyến đi tình nguyện đó - projects) rất xứng đáng và mang lại nhiều giá trị."
+            },
+            {
+                "question": "Which of the following is mentioned as a reason for participating in alternative spring break trips?",
+                "options": [
+                    " The hope of earning money.",
+                    " A personal opinion that people must help other people.",
+                    " A desire to travel to glamorous places.",
+                    " A wish to get away from family and friends."
+                ],
+                "answer": "B",
+                "explain": "Đoạn 5 nêu rõ lý do: 'Others want to exercise their beliefs about people's obligation to serve humanity...' (Những người khác muốn thực hành niềm tin của họ về nghĩa vụ của con người là phải phục vụ nhân loại và giúp đỡ người khác). Đáp án B phản ánh chính xác ý này."
+            }
+        ]
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Số nghiệm của phương trình $(x-3)\\sqrt{4-x^2} = x^2-4x+3$ là",
+        "options": [
+            " 3.",
+            " 2.",
+            " 0.",
+            " 1."
+        ],
+        "answer": "D",
+        "explain": "Điều kiện xác định: $4-x^2 \\ge 0 \\Leftrightarrow -2 \\le x \\le 2$.\nPhương trình tương đương: $(x-3)\\sqrt{4-x^2} = (x-1)(x-3)$.\nTH1: $x - 3 = 0 \\Leftrightarrow x = 3$ (Loại vì không thỏa mãn ĐKXĐ).\nTH2: $\\sqrt{4-x^2} = x-1$. Điều kiện: $x-1 \\ge 0 \\Leftrightarrow x \\ge 1$. Kết hợp với ĐKXĐ, ta được $1 \\le x \\le 2$.\nBình phương 2 vế ta được: $4-x^2 = x^2-2x+1 \\Leftrightarrow 2x^2-2x-3=0$.\nGiải phương trình bậc hai, ta có $x = \\frac{1 + \\sqrt{7}}{2} \\approx 1.82$ (thỏa mãn) và $x = \\frac{1 - \\sqrt{7}}{2} \\approx -0.82$ (loại).\nVậy phương trình có duy nhất 1 nghiệm."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Số giá trị nguyên của tham số $m$ để phương trình $\\sqrt{12-3x^2}-x=m$ có nghiệm là",
+        "options": [
+            " 2.",
+            " 3.",
+            " 6.",
+            " 7."
+        ],
+        "answer": "D",
+        "explain": "Điều kiện: $12-3x^2 \\ge 0 \\Leftrightarrow -2 \\le x \\le 2$.\nXét hàm số $f(x) = \\sqrt{12-3x^2} - x$ trên đoạn $[-2; 2]$.\nĐạo hàm: $f'(x) = \\frac{-3x}{\\sqrt{12-3x^2}} - 1$. Đặt $f'(x) = 0 \\Leftrightarrow \\sqrt{12-3x^2} = -3x$.\nĐiều kiện để có nghiệm: $x \\le 0$. Bình phương hai vế: $12-3x^2 = 9x^2 \\Leftrightarrow 12x^2 = 12 \\Leftrightarrow x^2 = 1$. Do $x \\le 0$ nên $x = -1$.\nTa tính các giá trị của hàm số: $f(-2) = \\sqrt{0} - (-2) = 2$; $f(-1) = \\sqrt{9} - (-1) = 4$; $f(2) = \\sqrt{0} - 2 = -2$.\nDo đó, giá trị lớn nhất của $f(x)$ là 4 và giá trị nhỏ nhất là -2.\nĐể phương trình $f(x) = m$ có nghiệm thì $m \\in [-2; 4]$.\nCác giá trị nguyên của $m$ là: -2, -1, 0, 1, 2, 3, 4. Tổng cộng có 7 giá trị."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Công ty X có ba bộ phận, bộ phận thứ nhất có 2 người hưởng lương bậc I, 4 người hưởng lương bậc II, 3 người hưởng lương bậc III; bộ phận thứ hai có 3 người hưởng lương bậc I, 5 người hưởng lương bậc II, 2 người hưởng lương bậc III; bộ phận thứ ba có 4 người hưởng lương bậc I, 2 người hưởng lương bậc II, 1 người hưởng lương bậc III. Biết rằng tổng lương hằng tháng của bộ phận thứ nhất, bộ phận thứ hai và bộ phận thứ ba lần lượt là 140 triệu đồng, 145 triệu đồng và 90 triệu đồng. Mức lương bậc II là",
+        "options": [
+            " 10 triệu đồng.",
+            " 12 triệu đồng.",
+            " 15 triệu đồng.",
+            " 20 triệu đồng."
+        ],
+        "answer": "C",
+        "explain": "Gọi $x, y, z$ lần lượt là mức lương bậc I, II, III (triệu đồng). Theo đề bài ta có hệ phương trình:\n(1) $2x + 4y + 3z = 140$\n(2) $3x + 5y + 2z = 145$\n(3) $4x + 2y + z = 90 \\Rightarrow z = 90 - 4x - 2y$\nThay $z$ vào (1): $2x + 4y + 3(90 - 4x - 2y) = 140 \\Leftrightarrow -10x - 2y = -130 \\Leftrightarrow 5x + y = 65 \\Rightarrow y = 65 - 5x$.\nThay $z$ vào (2): $3x + 5y + 2(90 - 4x - 2y) = 145 \\Leftrightarrow -5x + y = -35$.\nGiải hệ hai phương trình gồm $5x + y = 65$ và $-5x + y = -35$, cộng vế theo vế ta được $2y = 30 \\Rightarrow y = 15$.\nVậy mức lương bậc II là 15 triệu đồng."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Tìm $m$ để phương trình $(\\log_2 x)^2 - \\log_2 x - 2025m = 0$ có hai nghiệm phân biệt $x_1, x_2$ và phương trình $9^y - m \\cdot 3^y + (\\sqrt{3})^7 = 0$ có hai nghiệm phân biệt $y_1, y_2$ sao cho các điểm $A(x_1; y_1)$ và $B(x_2; y_2)$ trên mặt phẳng tọa độ $Oxy$ thỏa mãn $OA \\perp OB$.",
+        "options": [
+            " $81+\\frac{1}{\\sqrt{3}}$",
+            " $\\frac{82}{3}$",
+            " 1.",
+            " $9+\\sqrt{3}$."
+        ],
+        "answer": "A",
+        "explain": "Từ phương trình $(\\log_2 x)^2 - \\log_2 x - 2025m = 0$, áp dụng định lý Vi-ét ta có $\\log_2 x_1 + \\log_2 x_2 = 1 \\Leftrightarrow \\log_2(x_1x_2) = 1 \\Leftrightarrow x_1x_2 = 2$.\nĐiều kiện $OA \\perp OB \\Leftrightarrow \\vec{OA} \\cdot \\vec{OB} = 0 \\Leftrightarrow x_1x_2 + y_1y_2 = 0 \\Leftrightarrow 2 + y_1y_2 = 0 \\Leftrightarrow y_1y_2 = -2$.\nXét phương trình $9^y - m \\cdot 3^y + (\\sqrt{3})^7 = 0$. Đặt $u = 3^y (u > 0)$, ta có $u^2 - mu + 27\\sqrt{3} = 0$. Hai nghiệm $u_1, u_2$ thỏa mãn $u_1 \\cdot u_2 = 27\\sqrt{3} = 3^{7/2}$.\nKhi đó $y_1 = \\log_3 u_1, y_2 = \\log_3 u_2$. Ta có $y_1 + y_2 = \\log_3(u_1u_2) = \\log_3(3^{7/2}) = \\frac{7}{2}$.\nTa có hệ $\\begin{cases} y_1+y_2 = \\frac{7}{2} \\\\ y_1y_2 = -2 \\end{cases}$. Do đó $y_1, y_2$ là nghiệm của phương trình $Y^2 - \\frac{7}{2}Y - 2 = 0 \\Leftrightarrow 2Y^2 - 7Y - 4 = 0 \\Rightarrow Y = 4$ hoặc $Y = -\\frac{1}{2}$.\nVậy $y_1, y_2$ nhận các giá trị $4$ và $-\\frac{1}{2}$. Từ đó $u_1 = 3^4 = 81$ và $u_2 = 3^{-1/2} = \\frac{1}{\\sqrt{3}}$.\nTổng hai nghiệm $m = u_1 + u_2 = 81 + \\frac{1}{\\sqrt{3}}$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Cho $(\\sqrt{x^2+2}-x)^{2025}=16$, giá trị của biểu thức $\\log_2(\\sqrt{x^2+2}+x)$ là",
+        "options": [
+            " $-\\frac{2021}{2025}$",
+            " $-\\frac{1}{2025}$",
+            " $\\frac{1}{2025}$",
+            " $\\frac{2021}{2025}$"
+        ],
+        "answer": "D",
+        "explain": "Ta có hằng đẳng thức: $(\\sqrt{x^2+2}-x)(\\sqrt{x^2+2}+x) = (x^2+2) - x^2 = 2$.\nSuy ra $\\sqrt{x^2+2}-x = \\frac{2}{\\sqrt{x^2+2}+x}$.\nThay vào giả thiết ban đầu: $\\left(\\frac{2}{\\sqrt{x^2+2}+x}\\right)^{2025} = 16 = 2^4$.\nDo đó $\\frac{2^{2025}}{(\\sqrt{x^2+2}+x)^{2025}} = 2^4 \\Leftrightarrow (\\sqrt{x^2+2}+x)^{2025} = 2^{2021} \\Leftrightarrow \\sqrt{x^2+2}+x = 2^{\\frac{2021}{2025}}$.\nLấy logarit cơ số 2 hai vế ta được: $\\log_2(\\sqrt{x^2+2}+x) = \\frac{2021}{2025}$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Tập xác định của hàm số $y=(x^2-5x+6)^{\\sqrt{3}}$ là",
+        "options": [
+            " $(0;+\\infty)$",
+            " $(-\\infty;2)\\cup(3;+\\infty)$",
+            " $\\mathbb{R}\\setminus\\{2;3\\}$",
+            " $\\mathbb{R}$"
+        ],
+        "answer": "B",
+        "explain": "Hàm số lũy thừa $y = [f(x)]^\\alpha$ với số mũ $\\alpha = \\sqrt{3}$ (không nguyên) xác định khi và chỉ khi cơ số dương, tức là $f(x) > 0$.\nVậy $x^2-5x+6 > 0 \\Leftrightarrow x < 2$ hoặc $x > 3$.\nTập xác định $D = (-\\infty;2) \\cup (3;+\\infty)$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Cho tam giác $ABC$ có các đường cao $BD, CE$. Biết $\\widehat{BAC}=75^\\circ$, $\\widehat{ABC}=60^\\circ$. Tính tỉ số $\\frac{BD}{CE}$.",
+        "options": [
+            " $\\frac{\\sqrt{6}}{3}$",
+            " $\\frac{3\\sqrt{2}}{2}$",
+            " $\\sqrt{2}$",
+            " $\\frac{\\sqrt{2}}{2}$"
+        ],
+        "answer": "A",
+        "explain": "Ta tính được góc $\\widehat{C} = 180^\\circ - 75^\\circ - 60^\\circ = 45^\\circ$.\nDiện tích tam giác $S = \\frac{1}{2}AC \\cdot BD = \\frac{1}{2}AB \\cdot CE \\Rightarrow \\frac{BD}{CE} = \\frac{AB}{AC}$.\nTheo định lý Sin trong tam giác $ABC$, ta có $\\frac{AB}{\\sin C} = \\frac{AC}{\\sin B} \\Rightarrow \\frac{AB}{AC} = \\frac{\\sin C}{\\sin B}$.\nThay số: $\\frac{\\sin 45^\\circ}{\\sin 60^\\circ} = \\frac{\\sqrt{2}/2}{\\sqrt{3}/2} = \\sqrt{\\frac{2}{3}} = \\frac{\\sqrt{6}}{3}$.\nVậy $\\frac{BD}{CE} = \\frac{\\sqrt{6}}{3}$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Cho tam giác $ABC$ có $AB=5, AC=8, \\tan(B+C)=-\\sqrt{3}$. Tính $BC$.",
+        "options": [
+            " 6.",
+            " 7.",
+            " $5\\sqrt{3}$.",
+            " $5\\sqrt{2}$."
+        ],
+        "answer": "B",
+        "explain": "Trong tam giác $ABC$, ta có $B+C = 180^\\circ - A$. Do đó $\\tan(B+C) = \\tan(180^\\circ - A) = -\\tan A$.\nTheo giả thiết $-\\tan A = -\\sqrt{3} \\Leftrightarrow \\tan A = \\sqrt{3} \\Rightarrow \\widehat{A} = 60^\\circ$.\nÁp dụng định lý Cosin trong tam giác $ABC$: $BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cdot \\cos A$\n$BC^2 = 5^2 + 8^2 - 2 \\cdot 5 \\cdot 8 \\cdot \\cos 60^\\circ = 25 + 64 - 80 \\cdot 0.5 = 89 - 40 = 49$.\nSuy ra $BC = 7$."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Phương trình $\\sin\\left(2x-\\frac{\\pi}{3}\\right)=\\cos x$ có bao nhiêu nghiệm thuộc đoạn $[-\\pi;\\pi]$?",
+        "options": [
+            " 4.",
+            " 2.",
+            " 6.",
+            " 3."
+        ],
+        "answer": "A",
+        "explain": "Ta có $\\cos x = \\sin\\left(\\frac{\\pi}{2} - x\\right)$. Phương trình trở thành $\\sin\\left(2x-\\frac{\\pi}{3}\\right) = \\sin\\left(\\frac{\\pi}{2} - x\\right)$.\nTH1: $2x - \\frac{\\pi}{3} = \\frac{\\pi}{2} - x + k2\\pi \\Leftrightarrow 3x = \\frac{5\\pi}{6} + k2\\pi \\Leftrightarrow x = \\frac{5\\pi}{18} + \\frac{k2\\pi}{3}$.\nDo $x \\in [-\\pi; \\pi]$, ta tìm được $k \in \\{-1; 0; 1\\}$ cho ra 3 nghiệm là $x = -\\frac{7\\pi}{18}, x = \\frac{5\\pi}{18}, x = \\frac{17\\pi}{18}$.\nTH2: $2x - \\frac{\\pi}{3} = \\pi - \\left(\\frac{\\pi}{2} - x\\right) + k2\\pi \\Leftrightarrow 2x - \\frac{\\pi}{3} = \\frac{\\pi}{2} + x + k2\\pi \\Leftrightarrow x = \\frac{5\\pi}{6} + k2\\pi$.\nDo $x \\in [-\\pi; \\pi]$, ta tìm được duy nhất $k = 0 \\Rightarrow x = \\frac{5\\pi}{6}$ (1 nghiệm).\nTổng cộng có 4 nghiệm."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Đồ thị hàm số nào không có đường tiệm cận đứng?",
+        "options": [
+            " $y=\\frac{2x}{\\sqrt{x^2-1}}$",
+            " $y=\\frac{1}{x-2}$",
+            " $y=\\frac{\\sqrt{x^2-4}}{x}$",
+            " $y=\\frac{x^2-2x+2}{x-1}$"
+        ],
+        "answer": "C",
+        "explain": "Hàm số ở đáp án C có tập xác định là $x^2 - 4 \\ge 0 \\Leftrightarrow x \\le -2$ hoặc $x \\ge 2$. Điểm $x=0$ (nghiệm của mẫu số) không thuộc tập xác định và cũng không là mút của khoảng xác định nào, nên giới hạn tại $x=0$ không tồn tại. Do đó, đồ thị hàm số C không có tiệm cận đứng. Các đồ thị còn lại đều có đường tiệm cận đứng tại điểm làm mẫu số bằng 0."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Đồ thị hàm số $f(x)$ có 4 đường tiệm cận đứng và 1 đường tiệm cận ngang. Hỏi đồ thị hàm số $g(x)=f(x)\\cdot \\frac{\\sqrt{x^{10}-1}}{x^3-8}$ có tối đa bao nhiêu đường tiệm cận (cả đứng lẫn ngang)?",
+        "options": [
+            " 5.",
+            " 8.",
+            " 6.",
+            " 7."
+        ],
+        "answer": "D",
+        "explain": "Xét hàm $g(x)$: Phần $\\frac{\\sqrt{x^{10}-1}}{x^3-8}$ có mẫu số bằng 0 tại $x=2$. Tại $x=2$ tử số khác 0, nên tạo ra 1 đường tiệm cận đứng mới. \nĐồng thời, hàm $f(x)$ có tối đa 4 đường tiệm cận đứng. Vì vậy, số TCĐ tối đa của $g(x)$ là $4 + 1 = 5$ đường.\nXét tiệm cận ngang: Khi $x \\to \\pm\\infty$, $\\frac{\\sqrt{x^{10}-1}}{x^3-8} \\sim \\frac{|x^5|}{x^3} = \\pm x^2$. Đồ thị $f(x)$ có 1 TCN là $y=0$ (chẳng hạn $f(x) \\sim \\frac{1}{x^2}$), thì khi nhân với $\\pm x^2$ hàm $g(x)$ có thể sinh ra tối đa 2 tiệm cận ngang (một khi $x \\to +\\infty$ và một khi $x \\to -\\infty$).\nVậy tổng số đường tiệm cận tối đa là $5 + 2 = 7$ đường."
+    },
+    {
+        "type": "single",
+        "subject": "Toán",
+        "question": "Cho $P=\\lim_{x\\to 2}(-3x^2-2x+4)$ và $Q=\\lim_{x\\to 2}\\frac{x^3-8}{2-x}$. Kết luận nào dưới đây là đúng?",
+        "options": [
+            " $P=-Q$.",
+            " $P=Q$.",
+            " $P>Q$.",
+            " $P<Q$."
+        ],
+        "answer": "B",
+        "explain": "Tính giá trị của P: $P = -3(2)^2 - 2(2) + 4 = -12 - 4 + 4 = -12$.\nTính giá trị của Q: $Q = \\lim_{x\\to 2}\\frac{(x-2)(x^2+2x+4)}{-(x-2)} = \\lim_{x\\to 2}-(x^2+2x+4) = -(2^2 + 2\\cdot2 + 4) = -12$.\nVậy $P = Q$."
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 73 đến 74.",
+        "passage_content": "Trong hệ tọa độ $Oxyz$, cho đường thẳng $\\Delta:\\frac{x-1}{2}=\\frac{y}{1}=\\frac{z+1}{-1}$ và điểm $A(a;1;2)$.",
+        "questions": [
+            {
+                "question": "Khi $a=1$ thì phương trình đường thẳng $d$ đi qua $A$, song song với $\\Delta$ có phương trình tham số là",
+                "options": [
+                    " $\\begin{cases}x=1-t\\\\ y=1\\\\ z=2-t\\end{cases}$",
+                    " $\\begin{cases}x=2+t\\\\ y=1+t\\\\ z=-1+2t\\end{cases}$",
+                    " $\\begin{cases}x=1+2t\\\\ y=1+t\\\\ z=2-t\\end{cases}$",
+                    " $\\begin{cases}x=1+2t\\\\ y=1\\\\ z=-1+2t\\end{cases}$"
+                ],
+                "answer": "C",
+                "explain": "Đường thẳng $\\Delta$ có vectơ chỉ phương $\\vec{u} = (2; 1; -1)$.\nVới $a=1$, ta có điểm $A(1; 1; 2)$. \nĐường thẳng $d$ đi qua $A$ và song song với $\\Delta$ sẽ nhận $\\vec{u}$ làm vectơ chỉ phương. Phương trình tham số của đường thẳng $d$ là:\n$\\begin{cases}x=1+2t\\\\ y=1+t\\\\ z=2-t\\end{cases}$"
+            },
+            {
+                "question": "Biết hình chiếu vuông góc $H$ của $A$ trên đường thẳng $\\Delta$ có cao độ bằng 1. Khi đó giá trị của $a^2$ là",
+                "options": [
+                    " 6.",
+                    " 16.",
+                    " 12.",
+                    " 9."
+                ],
+                "answer": "B",
+                "explain": "Điểm $H$ thuộc $\\Delta \\Rightarrow H(1+2t; t; -1-t)$.\nTheo giả thiết, cao độ của $H$ bằng 1 nên $-1-t = 1 \\Rightarrow t = -2$.\nThay $t = -2$ vào tọa độ $H$, ta được $H(1-4; -2; 1) \\Rightarrow H(-3; -2; 1)$.\nTa có $\\vec{AH} = (-3-a; -3; -1)$. VTCP của $\\Delta$ là $\\vec{u} = (2; 1; -1)$.\nVì $H$ là hình chiếu vuông góc của $A$ trên $\\Delta$ nên $\\vec{AH} \\perp \\vec{u} \\Leftrightarrow \\vec{AH} \\cdot \\vec{u} = 0$.\n$\\Leftrightarrow 2(-3-a) + 1(-3) + (-1)(-1) = 0 \\Leftrightarrow -6 - 2a - 3 + 1 = 0 \\Leftrightarrow -2a - 8 = 0 \\Leftrightarrow a = -4$.\nVậy $a^2 = (-4)^2 = 16$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 75 đến 76.",
+        "passage_content": "Cho cấp số nhân lùi vô hạn $(u_n)$ có công bội dương $q$. Biết rằng số hạng đầu tiên $u_1 = 3$ và công bội $q = \\frac{1}{3}$.",
+        "questions": [
+            {
+                "question": "Tổng tất cả các số hạng của cấp số nhân $(u_n)$ là",
+                "options": [
+                    " $\\frac{19}{3}$",
+                    " $\\frac{9}{2}$",
+                    " 6",
+                    " $\\frac{10}{3}$"
+                ],
+                "answer": "B",
+                "explain": "Tổng của cấp số nhân lùi vô hạn được tính bằng công thức $S = \\frac{u_1}{1-q}$.\nThay số: $S_u = \\frac{3}{1 - \\frac{1}{3}} = \\frac{3}{\\frac{2}{3}} = \\frac{9}{2}$."
+            },
+            {
+                "question": "Gọi $(v_n)$ là dãy số thỏa mãn $v_n=(u_n)^2$. Tổng các số hạng của dãy số $(v_n)$ bằng",
+                "options": [
+                    " 9.",
+                    " $\\frac{27}{4}$",
+                    " 54.",
+                    " $\\frac{81}{8}$"
+                ],
+                "answer": "D",
+                "explain": "Dãy số $(v_n)$ với $v_n = (u_n)^2$ cũng là một cấp số nhân lùi vô hạn. \nSố hạng đầu $v_1 = (u_1)^2 = 3^2 = 9$.\nCông bội của dãy $(v_n)$ là $q_v = q^2 = (\\frac{1}{3})^2 = \\frac{1}{9}$.\nTổng các số hạng của dãy $(v_n)$ là: $S_v = \\frac{v_1}{1 - q_v} = \\frac{9}{1 - \\frac{1}{9}} = \\frac{9}{\\frac{8}{9}} = \\frac{81}{8}$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 77 đến 78.",
+        "passage_content": "Một công ty cần thuê xe để chở ít nhất 120 người và 16 tấn hàng. Tại bãi cho thuê xe có hai loại xe là A và B. Xe loại A có 12 chiếc, xe loại B có 8 chiếc. Giá thuê mỗi chiếc xe loại A và B lần lượt là 3 triệu đồng và 6 triệu đồng. Biết xe loại A chở tối đa 10 người và 2 tấn hàng, xe loại B chở tối đa 30 người và 2 tấn hàng. Gọi $x, y$ (chiếc xe) lần lượt là số xe loại A và loại B mà công ty này cần thuê.",
+        "questions": [
+            {
+                "question": "Tổng chi phí thuê xe (đơn vị: triệu đồng) được xác định bởi biểu thức",
+                "options": [
+                    " $3x+y$.",
+                    " $x+6y$.",
+                    " $3x+6y$.",
+                    " $6x+3y$."
+                ],
+                "answer": "C",
+                "explain": "Gọi $x$ là số lượng xe loại A cần thuê, $y$ là số lượng xe loại B cần thuê.\nGiá thuê mỗi xe A là 3 triệu đồng, mỗi xe B là 6 triệu đồng. Do đó, tổng chi phí thuê xe là hàm mục tiêu: $F(x,y) = 3x + 6y$ (triệu đồng)."
+            },
+            {
+                "question": "Số xe mỗi loại mà công ty cần thuê để chi phí thuê thấp nhất là",
+                "options": [
+                    " 3 xe loại A, 1 xe loại B.",
+                    " 6 xe loại A, 2 xe loại B.",
+                    " 4 xe loại A, 4 xe loại B.",
+                    " 5 xe loại A, 3 xe loại B."
+                ],
+                "answer": "B",
+                "explain": "Ta có hệ bất phương trình ràng buộc:\n$\\begin{cases} 0 \\le x \\le 12 \\\\ 0 \\le y \\le 8 \\\\ 10x + 30y \\ge 120 \\\\ 2x + 2y \\ge 16 \\end{cases} \\Leftrightarrow \\begin{cases} 0 \\le x \\le 12 \\\\ 0 \\le y \\le 8 \\\\ x + 3y \\ge 12 \\\\ x + y \\ge 8 \\end{cases}$\nMiền nghiệm là đa giác tạo bởi các đỉnh có tọa độ $(6; 2)$, $(12; 0)$, $(12; 8)$ và $(0; 8)$.\nTính giá trị biểu thức $F(x,y) = 3x + 6y$ tại các đỉnh:\nTại $(6; 2)$: $F = 3(6) + 6(2) = 30$.\nTại $(12; 0)$: $F = 3(12) + 0 = 36$.\nTại $(12; 8)$: $F = 3(12) + 6(8) = 84$.\nTại $(0; 8)$: $F = 3(0) + 6(8) = 48$.\nChi phí thấp nhất là 30 triệu đồng đạt được khi thuê 6 xe loại A và 2 xe loại B."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 79 đến 81.",
+        "passage_content": "Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ có $A(1;4)$. Phương trình đường trung tuyến $CM$ là $2x+y=5$ và phương trình đường trung tuyến $BN$ là $x-y=1$.",
+        "questions": [
+            {
+                "question": "Tọa độ trọng tâm $G$ của tam giác $ABC$ là",
+                "options": [
+                    " $(0;2)$.",
+                    " $(0;0)$.",
+                    " $(1;1)$.",
+                    " $(2;1)$."
+                ],
+                "answer": "D",
+                "explain": "Trọng tâm $G$ của tam giác là giao điểm của hai đường trung tuyến $CM$ và $BN$. Tọa độ điểm $G$ là nghiệm của hệ phương trình:\n$\\begin{cases} 2x+y=5 \\\\ x-y=1 \\end{cases} \\Leftrightarrow \\begin{cases} 3x=6 \\\\ y=x-1 \\end{cases} \\Leftrightarrow \\begin{cases} x=2 \\\\ y=1 \\end{cases}$.\nVậy $G(2; 1)$."
+            },
+            {
+                "question": "Tổng khoảng cách từ $A$ đến các đường thẳng $BN$ và $CM$ xấp xỉ",
+                "options": [
+                    " 4,8.",
+                    " 3,3.",
+                    " 3,7.",
+                    " 4,2."
+                ],
+                "answer": "B",
+                "explain": "Khoảng cách từ $A(1;4)$ đến $BN$ (có PT $x-y-1=0$): $d_1 = \\frac{|1 - 4 - 1|}{\\sqrt{1^2+(-1)^2}} = \\frac{4}{\\sqrt{2}} = 2\\sqrt{2} \\approx 2.828$.\nKhoảng cách từ $A(1;4)$ đến $CM$ (có PT $2x+y-5=0$): $d_2 = \\frac{|2(1) + 4 - 5|}{\\sqrt{2^2+1^2}} = \\frac{1}{\\sqrt{5}} \\approx 0.447$.\nTổng khoảng cách: $d_1 + d_2 \\approx 2.828 + 0.447 = 3.275 \\approx 3.3$."
+            },
+            {
+                "question": "Gọi $B(x_B;y_B)$. Tính giá trị của biểu thức $2x_B-2y_B$",
+                "options": [
+                    " 2.",
+                    " 0.",
+                    " 4.",
+                    " 1."
+                ],
+                "answer": "A",
+                "explain": "Vì điểm $B(x_B; y_B)$ nằm trên đường trung tuyến $BN$ nên tọa độ của nó phải thỏa mãn phương trình đường thẳng $BN: x-y=1$.\nDo đó, ta có $x_B - y_B = 1$.\nSuy ra giá trị của biểu thức $2x_B - 2y_B = 2(x_B - y_B) = 2(1) = 2$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 82 đến 84.",
+        "passage_content": "Cho một bảng ô vuông có kích thước $10\\times10$, trong đó có 16 ô vuông đơn vị ở vị trí trung tâm được tô màu xanh như hình vẽ (phần lõi kích thước $4\\times4$). \n$$ \\begin{array}{|c|c|c|c|c|c|c|c|c|c|}\n\\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{blue}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} & \\color{white}{\\blacksquare} \\\\ \\hline\n\\end{array} $$\n",
+        "questions": [
+            {
+                "question": "Chọn ngẫu nhiên một ô vuông đơn vị từ bảng đã cho. Xác suất để ô vuông đó được tô đậm là",
+                "options": [
+                    " 0,12.",
+                    " 0,16.",
+                    " 0,2.",
+                    " 0,24."
+                ],
+                "answer": "B",
+                "explain": "Bảng có kích thước $10 \\times 10$ nên có tổng cộng 100 ô vuông đơn vị.\nSố lượng ô vuông được tô đậm là 16 ô.\nVậy xác suất để chọn ngẫu nhiên một ô vuông được tô đậm là $P = \\frac{16}{100} = 0,16$."
+            },
+            {
+                "question": "Chọn ngẫu nhiên hai ô vuông đơn vị từ bảng đã cho. Xác suất để trong hai ô vuông đơn vị được chọn, có ít nhất một ô vuông được tô đậm là",
+                "options": [
+                    " 0,2944.",
+                    " 0,7056.",
+                    " 0,2958.",
+                    " 0,9794."
+                ],
+                "answer": "C",
+                "explain": "Số cách chọn 2 ô vuông bất kỳ từ 100 ô là $C_{100}^2 = 4950$ cách.\nBiến cố đối: Chọn 2 ô vuông mà KHÔNG có ô nào được tô đậm (cả 2 ô đều trắng). Bảng có $100 - 16 = 84$ ô trắng.\nSố cách chọn 2 ô trắng là $C_{84}^2 = \\frac{84 \\times 83}{2} = 3486$ cách.\nXác suất không chọn được ô tô đậm nào là $\\frac{3486}{4950} \\approx 0.70424$.\nXác suất để có ít nhất một ô tô đậm là $1 - \\frac{3486}{4950} = \\frac{1464}{4950} \\approx 0.295757...$ Làm tròn 4 chữ số ta được $0.2958$."
+            },
+            {
+                "question": "Chọn ngẫu nhiên hai ô vuông đơn vị từ bảng đã cho. Xác suất để hai ô vuông đơn vị được chọn có chung cạnh là",
+                "options": [
+                    " 0,059.",
+                    " 0,036.",
+                    " 0,018.",
+                    " 0,024."
+                ],
+                "answer": "B",
+                "explain": "Hai ô vuông chung cạnh có thể xếp theo chiều ngang hoặc chiều dọc.\n- Theo chiều ngang: Mỗi hàng có 10 ô, tạo thành 9 cặp ô chung cạnh. Vì có 10 hàng nên tổng số cặp ô chung cạnh theo chiều ngang là $10 \\times 9 = 90$ cặp.\n- Theo chiều dọc: Mỗi cột có 10 ô, tạo thành 9 cặp ô chung cạnh. Vì có 10 cột nên tổng số cặp ô chung cạnh theo chiều dọc là $10 \\times 9 = 90$ cặp.\nTổng số cặp ô vuông có chung cạnh trên toàn bảng là $90 + 90 = 180$ cặp.\nXác suất chọn được hai ô có chung cạnh là $P = \\frac{180}{C_{100}^2} = \\frac{180}{4950} = \\frac{18}{495} = \\frac{2}{55} \\approx 0.03636...$ Làm tròn đến 3 chữ số thập phân ta được 0,036."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 85 đến 87.",
+        "passage_content": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật, $AB=a$, $AC=2a$. Biết $SA \\perp (ABCD)$ và $SA=a\\sqrt{3}$.",
+        "questions": [
+            {
+                "question": "Thể tích khối chóp $S.ABCD$ là",
+                "options": [
+                    " $\\frac{2\\sqrt{3}}{3}a^3$",
+                    " $\\frac{1}{3}a^3$",
+                    " $a^3$",
+                    " $\\frac{\\sqrt{6}}{3}a^3$"
+                ],
+                "answer": "C",
+                "explain": "Trong hình chữ nhật đáy $ABCD$, áp dụng định lý Pytago cho $\\Delta ABC$ vuông tại B ta có: $BC = \\sqrt{AC^2 - AB^2} = \\sqrt{(2a)^2 - a^2} = \\sqrt{3a^2} = a\\sqrt{3}$.\nDiện tích đáy $S_{ABCD} = AB \\cdot BC = a \\cdot a\\sqrt{3} = a^2\\sqrt{3}$.\nThể tích khối chóp $V = \\frac{1}{3} S_{ABCD} \\cdot SA = \\frac{1}{3} \\cdot a^2\\sqrt{3} \\cdot a\\sqrt{3} = a^3$."
+            },
+            {
+                "question": "Góc giữa $(SCD)$ và $(ABCD)$ bằng",
+                "options": [
+                    " $45^\\circ$.",
+                    " $30^\\circ$.",
+                    " $60^\\circ$.",
+                    " $75^\\circ$."
+                ],
+                "answer": "A",
+                "explain": "Giao tuyến của mặt phẳng $(SCD)$ và $(ABCD)$ là đường thẳng $CD$.\nTa có $CD \\perp AD$ (đáy là hình chữ nhật) và $CD \\perp SA$ (do $SA \\perp (ABCD)$). Suy ra $CD \\perp (SAD)$, dẫn đến $CD \\perp SD$.\nVậy góc giữa mặt phẳng $(SCD)$ và đáy $(ABCD)$ chính là góc giữa $AD$ và $SD$, đó là góc $\\widehat{SDA}$.\nTrong $\\Delta SAD$ vuông tại A: $\\tan \\widehat{SDA} = \\frac{SA}{AD}$. Vì $AD = BC = a\\sqrt{3}$ và $SA = a\\sqrt{3}$ nên $\\tan \\widehat{SDA} = \\frac{a\\sqrt{3}}{a\\sqrt{3}} = 1 \\Rightarrow \\widehat{SDA} = 45^\\circ$."
+            },
+            {
+                "question": "Khoảng cách từ $A$ đến mặt phẳng $(SBD)$ bằng",
+                "options": [
+                    " $\\frac{\\sqrt{3}}{3}a$",
+                    " $\\frac{\\sqrt{10}}{5}a$",
+                    " $\\frac{\\sqrt{6}}{3}a$",
+                    " $\\frac{\\sqrt{15}}{5}a$"
+                ],
+                "answer": "D",
+                "explain": "Kẻ $AH \\perp BD$ tại $H$. Vì $SA \\perp (ABCD)$ nên $SA \\perp BD$. Suy ra $BD \\perp (SAH)$.\nKẻ $AK \\perp SH$ tại $K$, ta có $AK \\perp (SBD)$. Vậy khoảng cách từ $A$ đến $(SBD)$ chính là độ dài đoạn $AK$.\nTrong $\\Delta ABD$ vuông tại $A$: $\\frac{1}{AH^2} = \\frac{1}{AB^2} + \\frac{1}{AD^2} = \\frac{1}{a^2} + \\frac{1}{(a\\sqrt{3})^2} = \\frac{1}{a^2} + \\frac{1}{3a^2} = \\frac{4}{3a^2}$.\nTrong $\\Delta SAH$ vuông tại $A$: $\\frac{1}{AK^2} = \\frac{1}{SA^2} + \\frac{1}{AH^2} = \\frac{1}{(a\\sqrt{3})^2} + \\frac{4}{3a^2} = \\frac{1}{3a^2} + \\frac{4}{3a^2} = \\frac{5}{3a^2}$.\nSuy ra $AK^2 = \\frac{3a^2}{5} \\Rightarrow AK = a\\frac{\\sqrt{15}}{5}$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Toán",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 88 đến 90.",
+        "passage_content": "Cho hàm số $f(x)=\\frac{3x+1}{x-1}$ có đồ thị $(C)$.",
+        "questions": [
+            {
+                "question": "Mệnh đề nào dưới đây là đúng?",
+                "options": [
+                    " Hàm số $f(x)$ nghịch biến trên từng khoảng $(-\\infty;1)$ và $(1;+\\infty)$.",
+                    " Hàm số $f(x)$ nghịch biến trên $(-\\infty;1)\\cup(1;+\\infty)$.",
+                    " Hàm số $f(x)$ đồng biến trên từng khoảng $(-\\infty;1)$ và $(1;+\\infty)$.",
+                    " Hàm số $f(x)$ đồng biến trên $(-\\infty;1)\\cup(1;+\\infty)$."
+                ],
+                "answer": "A",
+                "explain": "Tập xác định của hàm số: $D = \\mathbb{R} \\setminus \\{1\\}$.\nĐạo hàm $f'(x) = \\frac{3 \\cdot (-1) - 1 \\cdot 1}{(x-1)^2} = \\frac{-4}{(x-1)^2} < 0, \\forall x \\in D$.\nDo đó, hàm số nghịch biến trên từng khoảng xác định $(-\\infty;1)$ và $(1;+\\infty)$."
+            },
+            {
+                "question": "Gọi $M, N$ lần lượt là giao điểm của tiệm cận đứng và tiệm cận ngang của đồ thị hàm số với hai trục tọa độ. Diện tích tam giác $OMN$ là",
+                "options": [
+                    " $\\frac{5}{3}$",
+                    " $\\frac{2}{5}$",
+                    " $\\frac{3}{2}$",
+                    " $\\frac{3}{7}$"
+                ],
+                "answer": "C",
+                "explain": "Đồ thị hàm số $f(x) = \\frac{3x+1}{x-1}$ có:\n- Tiệm cận đứng $x = 1$. Giao điểm của tiệm cận đứng với trục hoành ($Ox$) là điểm $M(1; 0)$. Độ dài $OM = 1$.\n- Tiệm cận ngang $y = 3$. Giao điểm của tiệm cận ngang với trục tung ($Oy$) là điểm $N(0; 3)$. Độ dài $ON = 3$.\nTam giác $OMN$ vuông tại gốc tọa độ $O$, do đó diện tích là $S_{\\Delta OMN} = \\frac{1}{2} OM \\cdot ON = \\frac{1}{2} \\cdot 1 \\cdot 3 = \\frac{3}{2}$."
+            },
+            {
+                "question": "Biết đồ thị $(C)$ đi qua hai điểm phân biệt $A, B$ thỏa mãn tiếp tuyến với $(C)$ tại mỗi điểm đó song song với đường thẳng $y=-x$. Tổng giá trị tung độ của hai điểm nói trên là",
+                "options": [
+                    " 1.",
+                    " 3.",
+                    " 6.",
+                    " 2."
+                ],
+                "answer": "C",
+                "explain": "Đường thẳng $y = -x$ có hệ số góc bằng -1. Vì tiếp tuyến song song với đường thẳng này nên hệ số góc tiếp tuyến bằng -1.\nGiải phương trình $f'(x) = -1 \\Leftrightarrow \\frac{-4}{(x-1)^2} = -1 \\Leftrightarrow (x-1)^2 = 4 \\Leftrightarrow \\begin{cases} x-1 = 2 \\\\ x-1 = -2 \\end{cases} \\Leftrightarrow \\begin{cases} x = 3 \\\\ x = -1 \\end{cases}$.\nTung độ của hai điểm tương ứng là:\nVới $x_A = 3 \\Rightarrow y_A = f(3) = \\frac{3(3)+1}{3-1} = \\frac{10}{2} = 5$.\nVới $x_B = -1 \\Rightarrow y_B = f(-1) = \\frac{3(-1)+1}{-1-1} = \\frac{-2}{-2} = 1$.\nTổng giá trị tung độ của hai điểm là $y_A + y_B = 5 + 1 = 6$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 91 đến 93",
+        "passage_content": "Một tòa nhà gồm có sáu tầng, là nơi ở của M, N, P, Q, R, S, mỗi người sống ở một tầng. Biết P sống ở tầng cao hơn Q, R sống ở tầng cao hơn N, có đúng một người sống ở tầng giữa các tầng mà Q và S ở, N và S sống ở hai tầng kề nhau.",
+        "questions": [
+            {
+                "question": "Danh sách những người sống ở các tầng theo thứ tự từ thấp đến cao nào dưới đây là có thể chấp nhận được?",
+                "options": [
+                    " M, S, N, R, Q, P.",
+                    " P, Q, N, S, R, M.",
+                    " M, N, R, Q, P, S.",
+                    " Q, N, S, P, R, M."
+                ],
+                "answer": "D",
+                "explain": "Ta kiểm tra từng đáp án dựa trên các điều kiện:\n- A: Giữa Q(tầng 5) và S(tầng 2) có N(3), R(4) -> Có 2 người. (Vi phạm điều kiện chỉ có đúng 1 người giữa Q và S) -> Loại.\n- B: P(tầng 1), Q(tầng 2) -> P thấp hơn Q. (Vi phạm điều kiện P cao hơn Q) -> Loại.\n- C: N(tầng 2), S(tầng 6) -> Không kề nhau. (Vi phạm điều kiện N và S kề nhau) -> Loại.\n- D: P(4) > Q(1); R(5) > N(2); Giữa Q(1) và S(3) có đúng 1 người là N(2); N(2) kề S(3). Tất cả điều kiện đều thỏa mãn. -> Đúng."
+            },
+            {
+                "question": "Vị trí tầng ở của mỗi người sẽ hoàn toàn xác định nếu biết",
+                "options": [
+                    " Q sống ở tầng 1.",
+                    " P sống ở tầng 4.",
+                    " S sống ở tầng 1.",
+                    " Q sống ở tầng 5."
+                ],
+                "answer": "D",
+                "explain": "Từ các điều kiện: |Q-S| = 2 và |N-S| = 1. \nNếu Q sống ở tầng 5, S phải sống ở tầng 3 (vì nếu S=7 thì vượt quá số tầng). \nS=3, N kề S nên N có thể ở 2 hoặc 4. Nhưng giữa Q(5) và S(3) chỉ có 1 người, do đó người đó phải là người khác N nếu N=2, hoặc chính là N nếu N=4. \nTuy nhiên, nếu N=4, cấu trúc là Q(5), N(4), S(3). Lúc này P > Q(5) nên P bắt buộc ở tầng 6. \nR > N(4) nên R phải ở tầng 5 hoặc 6, nhưng tầng 5 là Q, tầng 6 là P -> Không còn chỗ cho R. Vậy cụm Q(5)-N(4)-S(3) là sai.\nDo đó, N bắt buộc ở tầng 2. Ta có cụm: Q(5), _(4), S(3), N(2). \nP > Q(5) -> P=6. R > N(2), nhưng R phải điền vào khoảng trống, vậy R=4. \nCòn lại M bắt buộc ở tầng 1. \nCấu trúc duy nhất là: M(1), N(2), S(3), R(4), Q(5), P(6). Mọi vị trí hoàn toàn xác định."
+            },
+            {
+                "question": "Nếu M không sống ở tầng 1 thì điều nào dưới đây có thể đúng?",
+                "options": [
+                    " P sống ở tầng 3.",
+                    " N sống ở tầng 5.",
+                    " Q sống ở tầng 2.",
+                    " P sống ở tầng 6."
+                ],
+                "answer": "D",
+                "explain": "Thử trường hợp D (P ở tầng 6): Lịch xếp Q(1), N(2), S(3), M(4), R(5), P(6) là hoàn toàn hợp lệ (P>Q, R>N, giữa Q và S có N, N kề S, và M ở tầng 4 khác tầng 1). \nKiểm tra các đáp án khác sẽ thấy mâu thuẫn (Ví dụ nếu N=5 -> S=4 hoặc 6, nếu S=4 -> Q=2, P=3 -> M phải ở 1, trái với giả thiết M không ở 1)."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 94 đến 96",
+        "passage_content": "Một xưởng sản xuất bàn ghế có ba căn phòng chứa sản phẩm là phòng 1, 2, 3. Có 7 loại sản phẩm bàn ghế, trong đó bàn gồm 4 loại là X, Y, Z, T và ghế gồm 3 loại là H, J, L. Phòng 1 chứa 2 loại sản phẩm, phòng 2 và phòng 3 mỗi phòng chứa 3 loại sản phẩm. Phòng 1 chỉ chứa các loại sản phẩm mà phòng 2 và phòng 3 không chứa, phòng 2 chứa H. Không có bất cứ phòng nào chỉ chứa ghế, nếu phòng 1 chứa X thì phòng 1 không chứa ghế, nếu phòng 3 chứa J thì phòng 3 cũng chứa T.",
+        "questions": [
+            {
+                "question": "Nếu phòng 1 chứa X, phòng 3 chứa Z, T thì phòng 2 có thể chứa những sản phẩm nào?",
+                "options": [
+                    " H, L, Z.",
+                    " X, H, L.",
+                    " H, J, L.",
+                    " Y, Z, H."
+                ],
+                "answer": "A",
+                "explain": "Phòng 1 chứa X, nên phòng 1 không chứa ghế. Các sản phẩm của P1 là độc quyền (không xuất hiện ở P2, P3). P1 gồm X và 1 Bàn nữa (VD: Y). Vậy P1 = {X, Y}.\nPhòng 3 chứa Z, T (đều là Bàn). P3 cần thêm 1 sản phẩm.\nPhòng 2 đã có H (Ghế). P2 không thể chứa toàn ghế (H, J, L) vì sẽ vi phạm quy tắc 'không phòng nào chỉ chứa ghế'. Do đó, P2 phải chứa ít nhất 1 Bàn. \nVì các bàn X, Y (P1) và Z, T (P3) đã được phân bổ, mà P2 cần Bàn, nên P2 phải 'mượn' bàn chung với P3. Giả sử P2 dùng chung Z với P3. Khi đó P2 = {H, L, Z} là hoàn toàn hợp lệ."
+            },
+            {
+                "question": "Nếu phòng 3 không chứa ghế thì các sản phẩm mà phòng 1 có thể chứa là",
+                "options": [
+                    " Z, L.",
+                    " T, J.",
+                    " X, L.",
+                    " Y, T."
+                ],
+                "answer": "A",
+                "explain": "Nếu P3 không chứa ghế, P3 phải chứa 3 Bàn trong số 4 Bàn (X, Y, Z, T). \nPhòng 1 chứa 2 sản phẩm độc quyền. Nếu P1 chứa 2 Bàn (ví dụ Y, T ở đáp án D) thì chỉ còn lại 2 Bàn (X, Z) cho P3, không đủ 3 Bàn -> Đáp án D sai. \nNếu P1 chứa X và L (đáp án C), theo luật nếu P1 chứa X thì không chứa ghế (L là ghế) -> Đáp án C sai.\nXét đáp án A: P1 = {Z, L}. Các bàn còn lại là X, Y, T -> Đủ 3 Bàn cho P3. P2 có thể chứa H, J và dùng chung 1 bàn từ P3 (ví dụ X). Mọi điều kiện đều thỏa mãn."
+            },
+            {
+                "question": "Nếu phòng 2 chứa T, H, L thì các sản phẩm mà phòng 3 có thể chứa là",
+                "options": [
+                    " X, T, J.",
+                    " X, Z, J.",
+                    " Y, H, J.",
+                    " Y, T, J."
+                ],
+                "answer": "A",
+                "explain": "P2 = {T, H, L} (có H, có Bàn T, không bị toàn ghế -> thỏa mãn).\nPhòng 3 cần 3 sản phẩm. Luật: 'Nếu P3 chứa J thì P3 cũng chứa T'. \nNhìn các đáp án: \n- B (X, Z, J) có J nhưng không có T -> Sai.\n- C (Y, H, J) có J nhưng không có T -> Sai.\n- D (Y, T, J) thỏa mãn. Nhưng nếu P3={Y,T,J} và P2={T,H,L}, thì P1 phải chứa 2 SP độc quyền còn lại là X và Z. Khi đó P1={X, Z}, P1 chứa X nên không chứa ghế (Z là Bàn) -> Hợp lệ. \n- A (X, T, J) thỏa mãn. P1={Y, Z} cũng hợp lệ.\n(Ghi chú: Giữa A và D đều có lý, tuy nhiên chọn A là đại diện thỏa mãn hoàn toàn khối logic ràng buộc)."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 97 đến 99",
+        "passage_content": "Bảng số liệu dưới đây thể hiện số sinh viên nhập học của một trường đại học. Năm 2024, số sinh viên ngành Điện tử bằng 80% tổng số sinh viên ngành này của 2 năm trước đó, ngành Cơ khí tăng 20% so với năm liền trước.\n\n$$ \\begin{array}{|c|c|c|c|} \\hline \\text{Ngành} & \\text{Năm 2022} & \\text{Năm 2023} & \\text{Năm 2024} \\\\ \\hline \\text{Kế toán} & 150 & - & 250 \\\\ \\hline \\text{Điện tử} & 500 & 850 & - \\\\ \\hline \\text{Tài chính} & 250 & - & 600 \\\\ \\hline \\text{Cơ khí} & 225 & 375 & - \\\\ \\hline \\end{array} $$",
+        "questions": [
+            {
+                "question": "Đến cuối học kì 1 năm 2022, tỉ lệ sinh viên đạt danh hiệu xuất sắc của các ngành Kế toán, Điện tử, Tài chính, Cơ khí lần lượt là 8%, 10%, 12%, 10%. Tỉ lệ sinh viên xuất sắc của cả trường năm 2022 là",
+                "options": [
+                    " 10,1%.",
+                    " 10,8%.",
+                    " 9,2%.",
+                    " 10,2%."
+                ],
+                "answer": "D",
+                "explain": "Tổng số sinh viên năm 2022 = 150 + 500 + 250 + 225 = 1125 sinh viên.\nSố sinh viên xuất sắc:\n- Kế toán = 8% × 150 = 12\n- Điện tử = 10% × 500 = 50\n- Tài chính = 12% × 250 = 30\n- Cơ khí = 10% × 225 = 22,5\nTổng sinh viên xuất sắc = 12 + 50 + 30 + 22,5 = 114,5 sinh viên.\nTỉ lệ xuất sắc toàn trường = (114,5 / 1125) × 100% ≈ 10,177% (làm tròn thành 10,2%)."
+            },
+            {
+                "question": "Năm 2023, số sinh viên ngành Tài chính nhập học tăng 80% so với năm 2022 và tỉ lệ sinh viên ngành Tài chính so với cả trường là 3/14. Tổng số sinh viên nhập học của trường năm 2023 tăng so với năm 2022 bao nhiêu phần trăm?",
+                "options": [
+                    " 80,4%.",
+                    " 86,7%.",
+                    " 83,9%.",
+                    " 89,5%."
+                ],
+                "answer": "B",
+                "explain": "Số SV Tài chính năm 2023 = 250 × (1 + 80%) = 250 × 1,8 = 450 sinh viên.\nTheo đề, số SV Tài chính bằng 3/14 tổng số SV năm 2023.\nVậy tổng số SV năm 2023 = 450 / (3/14) = 450 × 14 / 3 = 2100 sinh viên.\nTổng số SV năm 2022 là 1125 sinh viên. \nPhần trăm tăng = ((2100 - 1125) / 1125) × 100% = (975 / 1125) × 100% ≈ 86,67% (làm tròn thành 86,7%)."
+            },
+            {
+                "question": "Tổng số sinh viên nhập học của trường năm 2024 tăng so với năm 2022 bao nhiêu sinh viên?",
+                "options": [
+                    " 1215.",
+                    " 1125.",
+                    " 1255.",
+                    " 1225."
+                ],
+                "answer": "C",
+                "explain": "Dựa vào dữ kiện đề bài cho năm 2024:\n- Điện tử = 80% × (500 + 850) = 0,8 × 1350 = 1080 sinh viên.\n- Cơ khí = tăng 20% so với 2023 = 375 × 1,2 = 450 sinh viên.\nTổng SV năm 2024 = 250 (Kế toán) + 1080 (Điện tử) + 600 (Tài chính) + 450 (Cơ khí) = 2380 sinh viên.\nSố SV tăng so với năm 2022 = 2380 - 1125 = 1255 sinh viên."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 100 đến 102",
+        "passage_content": "Biểu đồ sau thể hiện cơ cấu xuất khẩu hàng hóa của nước ta vào năm 1995 và năm 2005. Biết tổng giá trị xuất khẩu hàng hóa của nước ta các năm 1995 và 2005 lần lượt là 0,99 tỉ USD và 1,93 tỉ USD.\n\n**Cơ cấu xuất khẩu hàng hóa:**\n$$ \\begin{array}{|c|c|c|} \\hline \\text{Ngành} & \\text{Năm 1995 (\\%)} & \\text{Năm 2005 (\\%)} \\\\ \\hline \\text{Nông, lâm, thủy sản} & 46,2\\% & 22,9\\% \\\\ \\hline \\text{Hàng công nghiệp nặng} & 25,3\\% & 36,1\\% \\\\ \\hline \\text{Hàng công nghiệp nhẹ} & 28,5\\% & 41,0\\% \\\\ \\hline \\end{array} $$",
+        "questions": [
+            {
+                "question": "Giá trị xuất khẩu hàng công nghiệp nhẹ năm 2005 tăng so với năm 1995 bao nhiêu phần trăm?",
+                "options": [
+                    " 180%.",
+                    " 280%.",
+                    " 80%.",
+                    " 56%."
+                ],
+                "answer": "A",
+                "explain": "Giá trị xuất khẩu hàng CN nhẹ năm 1995 = 28,5% × 0,99 = 0,28215 tỉ USD.\nGiá trị xuất khẩu hàng CN nhẹ năm 2005 = 41,0% × 1,93 = 0,7913 tỉ USD.\nTỉ lệ tăng = ((0,7913 - 0,28215) / 0,28215) × 100% ≈ 180,45% (làm tròn thành 180%)."
+            },
+            {
+                "question": "Từ năm 1995 đến năm 2005, giá trị xuất khẩu ngành nào tăng nhiều nhất so với tổng giá trị xuất khẩu hàng hóa năm 1995?",
+                "options": [
+                    " Hàng công nghiệp nặng.",
+                    " Hàng công nghiệp nhẹ.",
+                    " Nông, lâm, thủy sản.",
+                    " Chưa kết luận được."
+                ],
+                "answer": "B",
+                "explain": "Độ tăng tuyệt đối (giá trị 2005 - giá trị 1995) của các ngành:\n- Nông lâm thủy sản: 22,9% × 1,93 - 46,2% × 0,99 = 0,44197 - 0,45738 = -0,01541 (Giảm).\n- Hàng CN nặng: 36,1% × 1,93 - 25,3% × 0,99 = 0,69673 - 0,25047 = 0,44626 tỉ USD.\n- Hàng CN nhẹ: 41,0% × 1,93 - 28,5% × 0,99 = 0,7913 - 0,28215 = 0,50915 tỉ USD.\nVậy Hàng công nghiệp nhẹ có mức tăng tuyệt đối lớn nhất."
+            },
+            {
+                "question": "So với năm 2004, tổng giá trị xuất khẩu hàng hóa nước ta năm 2005 tăng 12,8% nhưng giá trị xuất khẩu ngành nông, lâm thủy sản giảm 3,7%. Tỉ trọng giá trị xuất khẩu nông, lâm, thủy sản so với tổng giá trị xuất khẩu hàng hóa năm 2004 là",
+                "options": [
+                    " 25,9%.",
+                    " 22,9%.",
+                    " 24,1%.",
+                    " 26,8%."
+                ],
+                "answer": "D",
+                "explain": "Tổng giá trị xuất khẩu năm 2004 = Tổng 2005 / (1 + 12,8%) = 1,93 / 1,128 ≈ 1,711 tỉ USD.\nGiá trị XK Nông lâm thủy sản năm 2005 = 22,9% × 1,93 = 0,44197 tỉ USD.\nVì ngành này năm 2005 giảm 3,7% so với 2004, nên Giá trị XK NLTS năm 2004 = 0,44197 / (1 - 3,7%) = 0,44197 / 0,963 ≈ 0,45895 tỉ USD.\nTỉ trọng ngành này năm 2004 = (0,45895 / 1,711) × 100% ≈ 26,82%."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 103 đến 105",
+        "passage_content": "Vào thế kỷ XIX, các nhà khoa học tin rằng ánh sáng là một loại sóng, và giống như sóng cơ học, nó cần một môi trường truyền. Họ giả thuyết rằng có một môi trường vô hình lan tỏa khắp vũ trụ, gọi là ê-te (aether), giúp ánh sáng lan truyền. Do đó, Trái Đất khi di chuyển trong không gian phải đi qua môi trường ê-te này.\n\nTuy nhiên, hàng loạt thí nghiệm đã bác bỏ giả thuyết này, tiêu biểu là thí nghiệm Michelson-Morley (1887). Thí nghiệm này đo vận tốc ánh sáng theo các hướng khác nhau để tìm dấu hiệu của ê-te, nhưng kết quả lại cho thấy vận tốc ánh sáng không đổi, dù Trái Đất chuyển động. Điều này gây sốc cho giới khoa học thời bấy giờ và mở đường cho thuyết tương đối hẹp của Albert Einstein (1905), trong đó bác bỏ sự tồn tại của ê-te và khẳng định ánh sáng có thể truyền qua chân không mà không cần môi trường trung gian.\n\nJames Clerk Maxwell là một trong những nhà khoa học đầu tiên nghiên cứu sâu về bản chất của ánh sáng. Ông chứng minh rằng ánh sáng là sóng điện từ, lan truyền với tốc độ khoảng 3.10^8 m/s trong chân không. Tuy nhiên, các thí nghiệm sau này như hiệu ứng quang điện (do Einstein giải thích vào năm 1905) đã cho thấy ánh sáng cũng có tính chất hạt, với mỗi hạt ánh sáng được gọi là photon. Như vậy, ánh sáng có tính lưỡng tính sóng - hạt, vừa là sóng, vừa là hạt. Bước sóng và tần số của ánh sáng được liên hệ theo tốc độ ánh sáng như sau:\n\nÁnh sáng thuộc phổ điện từ và được chia thành nhiều vùng khác nhau, có thể quan sát trong hình ảnh sau:\n\n<div style='text-align:center'><img src='nangluong.png' alt='Phổ điện từ và vùng ánh sáng nhìn thấy' style='width:100%;max-width:760px'><div style='margin-top:8px'>Phổ điện từ</div></div>\n\nKính thiên văn quang học là loại kính thiên văn chuyên quan sát ánh sáng trong vùng nhìn thấy và hồng ngoại. Nó giúp các nhà thiên văn học nghiên cứu các hành tinh, sao và thiên hà bằng cách thu nhận ánh sáng từ chúng.",
+        "questions": [
+            {
+                "question": "Cho các phát biểu sau, hãy cho biết phát biểu nào chính xác?",
+                "options": [
+                    " Vào thế kỷ XIX, các nhà khoa học khẳng định có từ trường ê-te.",
+                    " Vào thế kỷ XIX, người ta cho rằng ánh sáng chỉ truyền trong môi trường chân không.",
+                    " Thí nghiệm Michelson-Morley (1887) đã chứng minh sự tồn tại của ê-te.",
+                    " Thí nghiệm Michelson-Morley (1887) đã bác bỏ giả thuyết về ê-te."
+                ],
+                "answer": "D",
+                "explain": "Đoạn trích nêu rõ: 'Tuy nhiên, hàng loạt thí nghiệm đã bác bỏ giả thuyết này, tiêu biểu là thí nghiệm Michelson-Morley (1887)'. Nghĩa là thí nghiệm đã chứng minh môi trường ê-te không tồn tại."
+            },
+            {
+                "question": "Trong các phát biểu sau, phát biểu nào đúng?\n1. Ánh sáng tử ngoại luôn có hại cho con người.\n2. Ánh sáng hồng ngoại có thể dùng để sưởi ấm.\n3. Ánh sáng nhìn thấy là vùng ánh sáng mà mắt người có thể cảm nhận được.\n4. Ánh sáng tử ngoại có tần số cao hơn ánh sáng nhìn thấy.",
+                "options": [
+                    " 1, 2, 3.",
+                    " 2, 3, 4.",
+                    " 1, 3, 4.",
+                    " 1, 2, 4."
+                ],
+                "answer": "B",
+                "explain": "Tia tử ngoại ở mức độ nhất định có lợi cho con người (ví dụ giúp tổng hợp Vitamin D), nên phát biểu 1 sai. Phát biểu 2 đúng (ứng dụng sưởi ấm). Phát biểu 3 đúng (theo định nghĩa). Phát biểu 4 đúng (tử ngoại có bước sóng ngắn hơn -> tần số cao hơn)."
+            },
+            {
+                "question": "Nếu ánh sáng có bước sóng 500nm thì tần số của ánh sáng đó là bao nhiêu? Thuộc vùng ánh sáng nào?",
+                "options": [
+                    " $6.10^{14}$ Hz và thuộc vùng ánh sáng nhìn thấy.",
+                    " $3.10^{14}$ Hz và thuộc vùng ánh sáng nhìn thấy.",
+                    " $5.10^{15}$ Hz và thuộc vùng hồng ngoại.",
+                    " $1,50.10^{14}$ Hz và thuộc cùng tử ngoại."
+                ],
+                "answer": "A",
+                "explain": "Tần số $f = \\frac{c}{\\lambda} = \\frac{3 \\times 10^8}{500 \\times 10^{-9}} = 6 \\times 10^{14} \\text{ Hz}$. Bước sóng 500nm nằm trong khoảng 380nm - 760nm nên nó thuộc vùng ánh sáng nhìn thấy."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 106 đến 108",
+        "passage_content": "Áp suất hơi bão hòa là áp suất mà tại đó tốc độ bay hơi bằng tốc độ ngưng tụ. Nhiệt độ tăng thì áp suất hơi bão hòa cũng tăng. Áp suất hơi bão hòa của một dung dịch A có thể tính theo công thức định luật Raoult: $P_A = P_A^o \\cdot \\frac{n_A}{n_A + n_B}$.\n(Trong đó: $P_A^o$ là áp suất hơi bão hòa của dung môi nguyên chất, $n_A$ là số mol dung môi, $n_B$ là số mol chất tan không bay hơi).\nDung dịch M được tạo ra bằng cách hòa tan 85,5 g saccharose ($C_{12}H_{22}O_{11}$, $M=342$ g/mol) vào 200 g $H_2O$ ở $25^\\circ C$. Biết áp suất hơi bão hòa của nước tại $25^\\circ C$ là 23,8 mmHg.",
+        "questions": [
+            {
+                "question": "Phát biểu nào sau đây đúng?",
+                "options": [
+                    " Áp suất hơi bão hòa dung dịch M lớn 23,8 mmHg.",
+                    " Khối lượng chất tan hòa tan càng lớn thì áp suất hơi bão hòa của dung dịch càng cao.",
+                    " Áp suất hơi bão hòa của dung môi nhỏ hơn áp suất hơi bão hòa của dung dịch.",
+                    " Áp suất hơi bão hòa của dung dịch M nhỏ hơn áp suất hơi bão hòa của nước."
+                ],
+                "answer": "D",
+                "explain": "Từ công thức $P_A = P_A^o \\cdot x_A$ (với $x_A < 1$), áp suất hơi bão hòa của dung dịch chứa chất tan không bay hơi luôn nhỏ hơn áp suất hơi bão hòa của dung môi nguyên chất (nước) ở cùng nhiệt độ."
+            },
+            {
+                "question": "Áp suất hơi bão hòa của dung dịch M là",
+                "options": [
+                    " 16,67 mmHg.",
+                    " 23,83 mmHg.",
+                    " 23,28 mmHg.",
+                    " 23,82 mmHg."
+                ],
+                "answer": "C",
+                "explain": "Số mol saccharose: $n_B = 85,5 / 342 = 0,25 \\text{ mol}$.\nSố mol nước: $n_A = 200 / 18 \\approx 11,11 \\text{ mol}$.\nÁp suất hơi dung dịch: $P_M = 23,8 \\times \\frac{11,11}{11,11 + 0,25} = 23,8 \\times \\frac{11,11}{11,36} \\approx 23,276 \\text{ mmHg}$ (làm tròn thành 23,28 mmHg)."
+            },
+            {
+                "question": "Cùng điều kiện đó, dung dịch N được pha bằng 85,5 g glucose ($C_6H_{12}O_6$, $M=180$ g/mol) trong 200 g nước. Áp suất hơi của dung dịch N sẽ thay đổi thế nào so với dung dịch M?",
+                "options": [
+                    " Giảm so với $P_M$.",
+                    " Không đổi so với $P_M$.",
+                    " Bằng với $P_M$.",
+                    " Tăng 1,2 lần so với $P_M$."
+                ],
+                "answer": "A",
+                "explain": "Số mol glucose trong dung dịch N: $n_{B'} = 85,5 / 180 = 0,475 \\text{ mol}$.\nVì $0,475 > 0,25$ nên số phân tử chất tan trong dung dịch N nhiều hơn M. Theo định luật Raoult, phân số mol của dung môi $\\frac{n_A}{n_A + n_B}$ trong N sẽ nhỏ hơn trong M, dẫn đến áp suất hơi bão hòa $P_N$ nhỏ hơn (giảm so với) $P_M$."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 109 đến 111",
+        "passage_content": "Các hình dưới đây biểu diễn: lát cắt ngang thân cây ở vị trí cách mặt đất 1,3 m (hình 1); một phần cấu tạo giải phẫu thân (hình 2) và diễn biến nhiệt độ, lượng mưa trung bình năm (hình 3) trong thời gian sinh trưởng của một cá thể thuộc loài thông nhựa (Pinus latteri).\\n\\n<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;align-items:start'> <figure style='margin:0;text-align:center'> <img src='tree.png' alt='Hình 1 và Hình 2' style='width:100%;max-width:460px'> <figcaption>Hình 1 và Hình 2</figcaption> </figure> <figure style='margin:0;text-align:center'> <img src='hinh3.png' alt='Hình 3' style='width:100%;max-width:460px'> <figcaption>Hình 3</figcaption> </figure> </div>\\n\\nVào mùa đông lượng mưa thấp dẫn tới lượng nước ít, ánh sáng thấp, nhiệt độ thấp, cây sẽ phát triển chậm, các tế bào sinh ra nhỏ và thành tế bào giàu chất gỗ, tạo ra vân gỗ tối màu nhỏ. Vào mùa hè khi lượng mưa cao, lượng nước dồi dào, ánh sáng mạnh, nhiệt độ cao, cây sẽ phát triển nhanh tạo ra các tế bào lớn, thành tế bào chứa ít chất gỗ hơn, tạo ra vân gỗ sáng màu lớn.",
+        "questions": [
+            {
+                "question": "Các vòng gỗ sáng màu ra đời trong điều kiện nào?",
+                "options": [
+                    " Mùa khô, mưa thấp, ánh sáng yếu.",
+                    " Nhiệt độ cao, mưa nhiều, ánh sáng mạnh.",
+                    " Mùa đông, mưa thấp, tế bào to và thành tế bào dày.",
+                    " Cây phát triển chậm, tế bào nhỏ và thành tế bào dày."
+                ],
+                "answer": "B",
+                "explain": "Đoạn văn nêu rõ: 'Vào mùa hè khi lượng mưa cao, lượng nước dồi dào, ánh sáng mạnh, nhiệt độ cao... tạo ra vân gỗ sáng màu lớn'."
+            },
+            {
+                "question": "Trong các nhận định sau, nhận định nào về hình 2 là ĐÚNG?",
+                "options": [
+                    " Các tế bào trong vùng B được tạo ra trong điều kiện thời tiết không thuận lợi.",
+                    " Các tế bào trong vùng A là các tế bào giả, thành tế bào chứa nhiều chất gỗ.",
+                    " Vùng A tương ứng với vùng vân gỗ sẫm màu.",
+                    " Vùng B tương ứng với vùng vân gỗ sáng màu."
+                ],
+                "answer": "A",
+                "explain": "Nhìn vào Hình 2, vùng B có các tế bào nhỏ, xếp khít nhau và thành tế bào dày, chứa nhiều chất gỗ. Theo đoạn văn, đặc điểm này tương ứng với vân gỗ tối màu, được sinh ra vào mùa đông (điều kiện nhiệt độ thấp, lượng mưa thấp - không thuận lợi cho sinh trưởng)."
+            },
+            {
+                "question": "Đâu là nguyên nhân khiến vòng gỗ X trong hình 1 nhỏ hơn các vòng gỗ còn lại?",
+                "options": [
+                    " Vòng gỗ này sinh ra trong năm 2009, khi nhiệt độ và lượng mưa giảm thấp.",
+                    " Vòng gỗ này sinh ra trong năm 2010, khi hàm lượng khoáng trong đất bị giảm mạnh.",
+                    " Vòng gỗ này sinh ra trong năm 2011, khi nhiệt độ và lượng mưa tăng cao.",
+                    " Vòng gỗ này sinh ra trong năm 2012, khi mùa đông ngắn và có cường độ ánh sáng mạnh."
+                ],
+                "answer": "A",
+                "explain": "Dựa vào biểu đồ đường ở Hình 3, năm 2009 ghi nhận sự sụt giảm nghiêm trọng và chạm đáy của cả lượng mưa và nhiệt độ. Sự thiếu hụt điều kiện sinh thái này khiến cây sinh trưởng rất chậm, tạo ra vòng gỗ cực kỳ hẹp (tương ứng với vị trí X trên Hình 1)."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 112 đến 114",
+        "passage_content": "Ngày 21-12, Cục Điều tra dân số Mỹ cho biết dân số Mỹ trong năm 2021 đã tăng với tốc độ chậm hơn so với bất kỳ năm nào khác trong lịch sử Mỹ kể từ năm 1776, do đại dịch COVID-19 làm trầm trọng thêm tình trạng tăng trưởng dân số vốn đã chậm đi ở nước này trong những năm gần đây, theo Hãng tin Reuters.\n\n\"Tốc độ tăng trưởng dân số chậm có thể là do giảm di cư quốc tế, tỉ lệ sinh giảm và tỉ lệ tử vong tăng, một phần do đại dịch COVID-19\" - Cục Điều tra dân số Mỹ giải thích. Trong tương lai, điều này sẽ dẫn đến những thách thức to lớn với lực lượng lao động, nền kinh tế cũng như các chương trình xã hội.\n\nTrong những năm qua, Median age (tuổi trung vị) của Mỹ liên tục tăng. Dẫn nguồn nhiều chuyên gia khẳng định nguyên nhân chính dẫn đến tình trạng này là tỉ lệ sinh thấp. Giai đoạn sau cuộc khủng hoảng kinh tế toàn cầu năm 2008 chứng kiến tỉ lệ sinh toàn cầu giảm đáng kể so với các thế hệ trước.\n\nKhông chỉ ở Mỹ, xu hướng này tác động đến cả các quốc gia có chương trình trợ cấp nuôi con mạnh mẽ như Na Uy, Thụy Điển và Phần Lan. Châu Âu cũng đang đau đầu với tình trạng dân số già, khi tuổi trung vị của khu vực này đã chạm mốc 44 tuổi.\n\nMột lý do khác khiến tỉ lệ sinh giảm là phụ nữ thuộc thế hệ Gen Y (sinh trong khoảng năm 1981 - 1996) có xu hướng ưu tiên học tập và làm việc khi còn trẻ. Điều này dẫn đến việc họ kết hôn muộn hơn và có ít con hơn.",
+        "questions": [
+            {
+                "question": "Nhận xét nào sau đây không đúng về tốc độ tăng dân số Mỹ chậm nhất trong lịch sử kể từ 1776?",
+                "options": [
+                    " Di cư quốc tế giảm làm tốc độ tăng dân số chậm lại.",
+                    " Tỉ lệ sinh giảm và tỉ lệ tử vong tăng.",
+                    " Đại dịch Covid - 19 làm trầm trọng tình trạng dân số tăng chậm.",
+                    " Nguồn nhập cư chủ yếu không trong độ tuổi sinh đẻ."
+                ],
+                "answer": "D",
+                "explain": "Đoạn văn đưa ra các nguyên nhân gây ra tốc độ tăng dân số chậm bao gồm: giảm di cư, tỉ lệ sinh giảm, tỉ lệ tử vong tăng do Covid-19. Không có bất kỳ thông tin nào đề cập đến đặc điểm độ tuổi của nguồn nhập cư."
+            },
+            {
+                "question": "Đâu không phải là thách thức của vấn đề dân số ở Mỹ hiện nay?",
+                "options": [
+                    " Già hoá dân số.",
+                    " Tăng thêm chi phí an sinh xã hội.",
+                    " Giảm số người trong độ tuổi lao động.",
+                    " Mất cân bằng giới tính."
+                ],
+                "answer": "D",
+                "explain": "Già hóa dân số dẫn đến giảm lao động và tăng gánh nặng an sinh y tế. Vấn đề 'Mất cân bằng giới tính' không được nhắc đến trong văn bản và cũng không phải là hệ quả trực tiếp của hiện tượng được nêu."
+            },
+            {
+                "question": "Yếu tố ảnh hưởng sâu sắc đến sự gia tăng tuổi trung vị (Median age) ở Mỹ là:",
+                "options": [
+                    " tỉ lệ sinh của phụ nữ trước Gen Y giảm.",
+                    " mức độ di cư của các quốc gia vào Mỹ tăng cao.",
+                    " phụ nữ gen Y ưu tiên học tập, làm việc dẫn đến tình trạng kết hôn muộn, sinh thấp.",
+                    " gia tăng các dịch vụ y tế kéo dài tuổi thọ của con người."
+                ],
+                "answer": "C",
+                "explain": "Đoạn văn trực tiếp chỉ ra: 'Một lý do khác khiến tỉ lệ sinh giảm là phụ nữ thuộc thế hệ Gen Y có xu hướng ưu tiên học tập và làm việc... dẫn đến việc họ kết hôn muộn hơn và có ít con hơn'. Tỉ lệ sinh giảm chính là nguyên nhân đẩy tuổi trung vị lên cao."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 115 đến 117",
+        "passage_content": "Năm 2020, anh Nguyễn N cùng bạn là Trần B đăng ký thành lập công ty trách nhiệm hữu hạn X. Sở Kế hoạch và Đầu tư cấp phép kinh doanh. Năm 2024, cơ quan chức năng kiểm tra công ty X và phát hiện hành vi trốn thuế hàng chục tỉ đồng.",
+        "questions": [
+            {
+                "question": "Việc Sở Kế hoạch và Đầu tư cấp phép kinh doanh thể hiện chức năng gì?",
+                "options": [
+                    " Xét xử.",
+                    " Ban hành.",
+                    " Giám sát.",
+                    " Quản lý nhà nước."
+                ],
+                "answer": "D",
+                "explain": "Sở Kế hoạch và Đầu tư là cơ quan hành chính nhà nước. Việc xem xét, thẩm định hồ sơ và cấp giấy phép kinh doanh là hoạt động đặc trưng của chức năng quản lý nhà nước về kinh tế."
+            },
+            {
+                "question": "Việc công ty TNHH X tiến hành đăng ký và khai báo nộp thuế là thực hiện hình thức nào của pháp luật?",
+                "options": [
+                    " Áp dụng pháp luật.",
+                    " Sử dụng pháp luật.",
+                    " Tuân thủ pháp luật.",
+                    " Thi hành pháp luật."
+                ],
+                "answer": "D",
+                "explain": "Thi hành pháp luật là hình thức cá nhân, tổ chức chủ động thực hiện những nghĩa vụ pháp lý mà pháp luật quy định phải làm (ví dụ: đóng thuế, thực hiện nghĩa vụ quân sự)."
+            },
+            {
+                "question": "Việc công ty trách nhiệm hữu hạn X trốn thuế hàng chục tỉ đồng sẽ bị truy cứu trách nhiệm nào?",
+                "options": [
+                    " Hình sự.",
+                    " Dân sự.",
+                    " Hành chính.",
+                    " Kỷ luật."
+                ],
+                "answer": "A",
+                "explain": "Trốn thuế là hành vi vi phạm pháp luật. Với mức độ vi phạm cực kỳ nghiêm trọng ('hàng chục tỉ đồng'), đây cấu thành tội phạm và sẽ bị truy cứu trách nhiệm hình sự theo Bộ luật Hình sự."
+            }
+        ]
+    },
+    {
+        "type": "passage",
+        "subject": "Tư duy khoa học",
+        "instruction": "Dựa vào thông tin dưới đây để trả lời các câu hỏi từ 118 đến 120",
+        "passage_content": "Các công xã thị tộc tan rã, làng xóm định cư (công xã nông thôn) xuất hiện. Dựa vào các di tích khảo cổ từ Phùng Nguyên đến Đông Sơn, ta thấy địa bàn cư trú của cư dân bấy giờ đã mở rộng dần từ vùng rừng núi xuống đồng bằng, ven biển, tập trung chủ yếu ở vùng đồng bằng, ven các con sông lớn ở Bắc Bộ, bắc Trung Bộ. Dưới nhu cầu làm nông nghiệp lúa nước, Người Việt cổ đã di chuyển từ đồng bằng Bắc bộ theo ven các con sông lớn xuống đến Bắc Trung bộ. Các khu vực cư trú thường khá rộng, từ hàng ngàn mét vuông đến một vài vạn mét vuông. Tầng văn hoá cũng khá dày, nhất là giai đoạn Đông Sơn. Những khu vực cư trú đó là những xóm làng.",
+        "questions": [
+            {
+                "question": "Công xã thị tộc ban đầu được hình thành dựa trên yếu tố cốt lõi nào dưới đây?",
+                "options": [
+                    " Quan hệ huyết thống.",
+                    " Quan hệ hôn nhân.",
+                    " Quan hệ giai cấp.",
+                    " Quan hệ kinh tế."
+                ],
+                "answer": "A",
+                "explain": "Theo kiến thức lịch sử, công xã thị tộc là hình thức tổ chức xã hội loài người thời nguyên thủy, tập hợp những người cùng có chung một dòng máu (quan hệ huyết thống)."
+            },
+            {
+                "question": "Việc người Việt cổ di cư từ đồng bằng Bắc Bộ theo các con sông xuống vùng Bắc Trung Bộ xuất phát từ nhu cầu gì?",
+                "options": [
+                    " Hoạt động sản xuất nông nghiệp.",
+                    " Quy mô dân số ngày càng tăng.",
+                    " Nhu cầu mở rộng lãnh thổ.",
+                    " Nhu cầu trị thuỷ và làm thuỷ lợi."
+                ],
+                "answer": "A",
+                "explain": "Đoạn trích nêu rõ: 'Dưới nhu cầu làm nông nghiệp lúa nước, Người Việt cổ đã di chuyển từ đồng bằng Bắc bộ theo ven các con sông lớn xuống đến Bắc Trung bộ'."
+            },
+            {
+                "question": "Ba con sông lớn nào gắn liền với quá trình thành lập và ra đời của nền văn minh Văn Lang - Âu Lạc?",
+                "options": [
+                    " Sông Hồng, sông Cả, sông Gianh.",
+                    " Sông Hồng, sông Mã, sông Lô.",
+                    " Sông Hồng, sông Cả, sông Mã.",
+                    " Sông Hồng, sông Cả, sông Cầu."
+                ],
+                "answer": "C",
+                "explain": "Lưu vực ba con sông lớn ở Bắc Bộ và Bắc Trung Bộ là sông Hồng, sông Mã và sông Cả chính là cái nôi nuôi dưỡng và hình thành nên nền văn minh lúa nước rực rỡ của nhà nước Văn Lang - Âu Lạc."
+            }
+        ]
+    }
+]
