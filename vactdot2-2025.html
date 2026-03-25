@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Thi Thử ĐGNL</title>
+	<title>VACT Đợt 2 2025</title>
 	<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 	<style>
@@ -139,6 +139,18 @@
 			font-size: 0.95rem;
 		}
 
+		.passage-note {
+			margin: 0 0 12px;
+			padding: 10px 12px;
+			border: 1px solid #f3d48a;
+			border-left: 4px solid #f59e0b;
+			border-radius: 10px;
+			background: #fff8e6;
+			color: #8a5a00;
+			font-size: 0.93rem;
+			font-weight: 600;
+		}
+
 		.passage-content {
 			margin-bottom: 14px;
 			padding: 12px;
@@ -148,6 +160,14 @@
 			color: #1f3854;
 			white-space: pre-wrap;
 			line-height: 1.75;
+		}
+
+		.passage-content img,
+		.passage-content svg {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 12px auto;
 		}
 
 		.type-hint {
@@ -1112,16 +1132,21 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Thi Thử Đánh Giá Năng Lực - 120 Câu</h1>
+		<h1>VACT Đợt 2 2025</h1>
 		<div class="matrix-info">
-			<strong>Cấu trúc bài thi:</strong>
+			<strong>📝 CẤU TRÚC CHI TIẾT 3 PHẦN</strong>
 			<ul>
-				<li>• Tổng quan bài thi: Bài thi gồm 120 câu hỏi trắc nghiệm khách quan, thời gian làm bài là 150 phút, tổng điểm tối đa đạt 1.200 điểm.</li>
-				<li>• Phần 1 - Sử dụng ngôn ngữ: Chiếm 60 câu (600 điểm) với 30 câu tiếng Việt và 30 câu tiếng Anh, tăng số lượng câu hỏi so với năm 2024 nhằm đánh giá toàn diện hơn năng lực ngôn ngữ của thí sinh.</li>
-				<li>• Phần 2 - Toán học: Gồm 30 câu (300 điểm) tập trung vào các vấn đề toán phổ thông, tách biệt hoàn toàn với phần logic như cấu trúc cũ.</li>
-				<li>• Phần 3 - Tư duy khoa học: Là phần mới thay thế cho "Giải quyết vấn đề" của các năm trước, gồm 30 câu (300 điểm) chia làm hai nhóm nhỏ: 12 câu logic và phân tích số liệu, 18 câu suy luận khoa học.</li>
+				<li><strong>Phần 1: Sử dụng ngôn ngữ (60 câu - 600 điểm)</strong></li>
+				<li>Tiếng Việt: 30 câu, từ câu 1 - 30, tối đa 300 điểm.</li>
+				<li>Tiếng Anh: 30 câu, từ câu 31 - 60, tối đa 300 điểm.</li>
+				<li>Nội dung: Kiến thức văn học, khả năng dùng từ, đọc hiểu, phân tích bài viết.</li>
+				<li><strong>Phần 2: Toán học (30 câu - 300 điểm)</strong></li>
+				<li>Toán học: 30 câu, từ câu 61 - 90.</li>
+				<li>Nội dung: Các vấn đề toán phổ thông.</li>
+				<li><strong>Phần 3: Tư duy khoa học (30 câu - 300 điểm)</strong></li>
+				<li>Logic, phân tích số liệu: 12 câu, từ câu 91 - 102.</li>
+				<li>Suy luận khoa học: 18 câu, từ câu 103 - 120.</li>
 			</ul>
-			<em>Thang điểm áp dụng đồng đều: 10 điểm/câu, tổng tối đa 1.200 điểm.</em>
 		</div>
 
 		<div id="status-box" class="status-box">Đang tải dữ liệu đề thi...</div>
@@ -1243,18 +1268,12 @@
 	</div>
 
 	<script>
-		const SECTION_SOURCES = {
-			viet: ["vactquestion-VIỆT-don.json", "vactquestion-VIỆT-pg.json"],
-			anh: ["vactquestion-ANH-don.json", "vactquestion-ANH-pg.json"],
-			toan: ["vactquestion-TOÁN.json"],
-			tdkh: ["vactquestion-TDKH.json"]
-		};
-
-		const SECTION_TITLES = {
-			viet: "PHẦN 1 - TIẾNG VIỆT (Câu 1-30)",
-			anh: "PHẦN 2 - TIẾNG ANH (Câu 31-60)",
-			toan: "PHẦN 3 - TOÁN HỌC (Câu 61-90)",
-			tdkh: "PHẦN 4 - TƯ DUY KHOA HỌC (Câu 91-120)"
+		const QUESTION_SOURCE = "vactdot2-2025.json";
+		const SUBJECT_TO_SECTION_KEY = {
+			"Tiếng Việt": "viet",
+			"Tiếng Anh": "anh",
+			"Toán": "toan",
+			"Tư duy khoa học": "tdkh"
 		};
 
 		const TYPE_HINTS = {
@@ -1501,17 +1520,59 @@
 			}
 		}
 
+		function sanitizeJsonText(rawText) {
+			const text = String(rawText || "");
+			let result = "";
+			let inString = false;
+			let runLength = 0;
+
+			for (let i = 0; i < text.length; i++) {
+				const char = text[i];
+
+				if (!inString) {
+					result += char;
+					if (char === '"') {
+						inString = true;
+					}
+					continue;
+				}
+
+				if (char === "\\") {
+					runLength += 1;
+					result += char;
+					continue;
+				}
+
+				if (char === '"' && runLength % 2 === 0) {
+					inString = false;
+				}
+
+				if (runLength > 0) {
+					const isValidEscapeChar = /["\\/bfnrtu]/.test(char);
+					if (!isValidEscapeChar && runLength % 2 === 1) {
+						result = result.slice(0, -1) + "\\\\";
+					}
+					runLength = 0;
+				}
+
+				result += char;
+			}
+
+			return result;
+		}
+
 		async function loadJsonFile(fileName) {
 			const response = await fetch(encodeURI(fileName), { cache: "no-store" });
 			if (!response.ok) {
 				throw new Error("Không thể tải file " + fileName);
 			}
-			return response.json();
-		}
 
-		async function loadSectionEntries(files) {
-			const chunks = await Promise.all(files.map(loadJsonFile));
-			return chunks.flat();
+			const rawText = await response.text();
+			try {
+				return JSON.parse(rawText);
+			} catch (error) {
+				return JSON.parse(sanitizeJsonText(rawText));
+			}
 		}
 
 		function countRenderedQuestionsInEntry(entry) {
@@ -1519,67 +1580,39 @@
 			return entry.type === "passage" ? (entry.questions || []).length : 1;
 		}
 
-		function shuffleArray(items) {
-			const cloned = [...items];
-			for (let i = cloned.length - 1; i > 0; i--) {
-				const j = Math.floor(Math.random() * (i + 1));
-				[cloned[i], cloned[j]] = [cloned[j], cloned[i]];
-			}
-			return cloned;
+		function getExamSectionKey(subject) {
+			return SUBJECT_TO_SECTION_KEY[String(subject || "").trim()] || "khac";
 		}
 
-		function takeEntriesByType(entries, type, count) {
-			const selected = shuffleArray(entries.filter((entry) => entry.type === type)).slice(0, count);
-			if (selected.length !== count) {
-				throw new Error("Không đủ " + count + " entry type '" + type + "'.");
-			}
-			return selected;
-		}
+		function buildExamSections(entries) {
+			const sections = [];
 
-		function takeEntriesUntilQuestionCount(entries, targetQuestions, allowedTypes) {
-			const selected = [];
-			let totalQuestions = 0;
-			const randomizedEntries = shuffleArray(entries);
+			entries.forEach((entry) => {
+				const subject = String(entry.subject || "Khác").trim() || "Khác";
+				const key = getExamSectionKey(subject);
+				const lastSection = sections[sections.length - 1];
 
-			for (const entry of randomizedEntries) {
-				if (allowedTypes && !allowedTypes.includes(entry.type)) continue;
-
-				const questionCount = countRenderedQuestionsInEntry(entry);
-				if (totalQuestions + questionCount > targetQuestions) continue;
-
-				selected.push(entry);
-				totalQuestions += questionCount;
-
-				if (totalQuestions === targetQuestions) {
-					return selected;
+				if (!lastSection || lastSection.subject !== subject) {
+					sections.push({
+						key,
+						subject,
+						entries: [entry]
+					});
+					return;
 				}
-			}
 
-			throw new Error("Không thể chọn đủ " + targetQuestions + " câu theo cấu hình yêu cầu.");
-		}
+				lastSection.entries.push(entry);
+			});
 
-		function buildExamSections(vietDonEntries, vietPgEntries, anhDonEntries, anhPgEntries, toanEntries, tdkhEntries) {
-			const vietEntries = [
-				...takeEntriesByType(vietDonEntries, "single", 20),
-				...takeEntriesByType(vietPgEntries, "passage", 2)
-			];
+			let startIndex = 1;
+			sections.forEach((section) => {
+				const totalQuestions = section.entries.reduce((sum, entry) => sum + countRenderedQuestionsInEntry(entry), 0);
+				const endIndex = startIndex + totalQuestions - 1;
+				section.title = section.subject.toUpperCase() + " (Câu " + startIndex + "-" + endIndex + ")";
+				startIndex = endIndex + 1;
+			});
 
-			const anhEntries = [
-				...takeEntriesByType(anhDonEntries, "single", 5),
-				...takeEntriesByType(anhDonEntries, "check", 5),
-				...takeEntriesByType(anhDonEntries, "rewrite", 5),
-				...takeEntriesByType(anhPgEntries, "passage", 2)
-			];
-
-			const selectedToanEntries = takeEntriesUntilQuestionCount(toanEntries, 30, ["single", "passage"]);
-			const selectedTdkhEntries = takeEntriesUntilQuestionCount(tdkhEntries, 30, ["passage"]);
-
-			return [
-				{ key: "viet", entries: vietEntries },
-				{ key: "anh", entries: anhEntries },
-				{ key: "toan", entries: selectedToanEntries },
-				{ key: "tdkh", entries: selectedTdkhEntries }
-			];
+			return sections;
 		}
 
 		function normalizeAnswer(rawAnswer) {
@@ -1781,14 +1814,22 @@
 			const wrapper = document.createElement("div");
 			wrapper.className = "passage-block";
 
+			const instructionText = String(passageEntry.instruction || "");
+			if (/Questions\s*54\s*-\s*60/i.test(instructionText)) {
+				const note = document.createElement("div");
+				note.className = "passage-note";
+				note.textContent = "Vì không có đầy đủ thông tin về câu 54-60 của đề đợt 2 nên phần câu 54-60 mình sẽ thay vào một bài đọc khác";
+				wrapper.appendChild(note);
+			}
+
 			const instruction = document.createElement("div");
 			instruction.className = "passage-instruction";
-			instruction.innerHTML = String(passageEntry.instruction || "");
+			instruction.innerHTML = instructionText;
 			wrapper.appendChild(instruction);
 
 			const passage = document.createElement("div");
 			passage.className = "passage-content";
-			passage.textContent = String(passageEntry.passage_content || "");
+			passage.innerHTML = String(passageEntry.passage_content || "");
 			wrapper.appendChild(passage);
 
 			(passageEntry.questions || []).forEach((subQuestion) => {
@@ -2072,32 +2113,21 @@
 			restoreSupportPopupIfPending();
 
 			try {
-				const [vietDonEntries, vietPgEntries, anhDonEntries, anhPgEntries, toanEntries, tdkhEntries] = await Promise.all([
-					loadJsonFile(SECTION_SOURCES.viet[0]),
-					loadJsonFile(SECTION_SOURCES.viet[1]),
-					loadJsonFile(SECTION_SOURCES.anh[0]),
-					loadJsonFile(SECTION_SOURCES.anh[1]),
-					loadSectionEntries(SECTION_SOURCES.toan),
-					loadSectionEntries(SECTION_SOURCES.tdkh)
-				]);
+				const entries = await loadJsonFile(QUESTION_SOURCE);
+				if (!Array.isArray(entries) || entries.length === 0) {
+					throw new Error("Dữ liệu đề thi rỗng hoặc sai định dạng.");
+				}
 
 				quizArea.innerHTML = "";
 				flatQuestions.length = 0;
 				mapButtons.length = 0;
 
-				const sections = buildExamSections(
-					vietDonEntries,
-					vietPgEntries,
-					anhDonEntries,
-					anhPgEntries,
-					toanEntries,
-					tdkhEntries
-				);
+				const sections = buildExamSections(entries);
 
 				const indexRef = { value: 0 };
 
 				sections.forEach((section) => {
-					quizArea.appendChild(createSectionTitle(SECTION_TITLES[section.key]));
+					quizArea.appendChild(createSectionTitle(section.title));
 
 					section.entries.forEach((entry) => {
 						if (entry.type === "passage") {
@@ -2114,17 +2144,17 @@
 
 				if (flatQuestions.length !== EXPECTED_TOTAL) {
 					setStatus(
-						"Đã render " + flatQuestions.length + " câu. Cảnh báo: không trùng khớp mốc 120 câu, vui lòng kiểm tra lại dữ liệu JSON.",
+						"Đã render " + flatQuestions.length + " câu theo đúng thứ tự trong " + QUESTION_SOURCE + ". Cảnh báo: không trùng khớp mốc 120 câu, vui lòng kiểm tra lại dữ liệu JSON.",
 						true
 					);
 				} else {
-					setStatus("Đã tải đề thi thành công. Tổng số câu: 120.", false);
+					setStatus("Đã tải đề thi thành công từ " + QUESTION_SOURCE + " và giữ nguyên thứ tự 120 câu.", false);
 				}
 
 				remainingSeconds = EXAM_TIME_SECONDS;
 				startCountdown();
 				renderFooterState();
-				setStatus("Đang ở chế độ Thi thật: nộp bài xong mới hiện đáp án và đúng/sai.", false);
+				setStatus("Đang ở chế độ Thi thật, nộp bài xong mới hiện đáp án và đúng/sai.", false);
 				runMathTypeset();
 			} catch (error) {
 				setStatus("Lỗi khi tải đề thi: " + error.message, true);
