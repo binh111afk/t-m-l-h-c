@@ -1350,7 +1350,7 @@
 			if (supported || supportPopupShownThisSession) return;
 
 			const answeredCount = typeof answeredCountInput === "number" ? answeredCountInput : getAnsweredCount();
-			if (answeredCount < 5) return;
+			if (answeredCount < 2) return;
 
 			localStorage.setItem(SUPPORT_POPUP_PENDING_KEY, "true");
 			showSupportOverlay();
