@@ -158,6 +158,16 @@
 			margin: 12px auto;
 		}
 
+		.question-context-box img,
+		.question-context-box svg,
+		.question-main-text img,
+		.question-main-text svg {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 12px auto;
+		}
+
 		.type-hint {
 			margin: 0 0 8px;
 			color: #245078;
@@ -1269,9 +1279,9 @@
 			rewrite: "Choose the sentence that is closest in meaning"
 		};
 
-		const EXPECTED_TOTAL = 95;
+		const EXPECTED_TOTAL = 120;
 		const EXAM_TIME_SECONDS = 150 * 60;
-		const MAX_SCORE = 950;
+		const MAX_SCORE = 1200;
 		const SUPPORT_PROJECT_KEY = "is_supported_project";
 		const SUPPORT_POPUP_PENDING_KEY = "is_support_popup_pending_vact";
 		const MLSA_SUPPORT_LINK = "https://learn.microsoft.com/vi-vn/plans/667ws7tmr06qx5?wt.mc_id=studentamb_508689";
@@ -1619,7 +1629,7 @@
 		}
 
 		function getScorePerQuestion(totalQuestions) {
-			return MAX_SCORE / totalQuestions;
+			return 10;
 		}
 
 		function stripHtmlToText(html) {

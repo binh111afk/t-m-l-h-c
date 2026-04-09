@@ -816,7 +816,7 @@
     {
         "type": "single",
         "subject": "Toán",
-        "question": "Một khu du lịch gồm 6 địa điểm $A, B, C, D, E, F$ được nối với nhau như hình vẽ. Bạn Thủy muốn đi từ $E$ lần lượt qua các điểm khác và kết thúc tại $F$.\n\n$$ \\begin{tikzpicture}[scale=1.2, thick] \\coordinate (A) at (0,2); \\coordinate (B) at (4,2); \\coordinate (C) at (4,0); \\coordinate (D) at (0,0); \\coordinate (E) at (2,1.5); \\coordinate (F) at (2,0.5); \\draw (A) -- (B) -- (C) -- (D) -- cycle; \\draw (A) -- (E) -- (B); \\draw (E) -- (F); \\draw (D) -- (F) -- (C); \\foreach \\p in {A,B,C,D,E,F} \\fill (\\p) circle (2pt); \\node[left] at (A) {$A$}; \\node[right] at (B) {$B$}; \\node[right] at (C) {$C$}; \\node[left] at (D) {$D$}; \\node[above] at (E) {$E$}; \\node[below] at (F) {$F$}; \\end{tikzpicture} $$\n\nSố cách đi là:",
+        "question": "Một khu du lịch gồm 6 địa điểm $A, B, C, D, E, F$ được nối với nhau như hình vẽ. Bạn Thủy muốn đi từ $E$ lần lượt qua các điểm khác và kết thúc tại $F$.\n\n<img src=\"ảnh 1.png\" alt=\"Hình câu 65\" loading=\"lazy\">\n\nSố cách đi là:",
         "options": [
             "A. 3.",
             "B. 2.",
@@ -1298,7 +1298,7 @@
         "type": "passage",
         "subject": "Tư duy khoa học",
         "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 100 đến 102:",
-        "passage_content": "Tổng trị giá hàng nhập khẩu và hàng xuất khẩu của một quốc gia trong giai đoạn 1995--2000 được thể hiện trong biểu đồ dưới đây:\n\n$$ \\begin{tikzpicture} \\begin{axis}[ ybar, width=15cm, height=8cm, ylabel={Triệu USD}, symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000}, xtick=data, nodes near coords, nodes near coords align={vertical}, legend style={at={(0.5,-0.15)}, anchor=north, legend columns=-1}, ymin=0, ymax=750, bar width=15pt, ] \\addplot[fill=accent!30, postaction={pattern=dots}] coordinates {(1995,120) (1996,225) (1997,375) (1998,330) (1999,525) (2000,420)}; \\addplot[fill=accent!70] coordinates {(1995,200) (1996,300) (1997,500) (1998,400) (1999,600) (2000,460)}; \\legend{Nhập khẩu, Xuất khẩu} \\end{axis} \\end{tikzpicture} $$",
+        "passage_content": "Tổng trị giá hàng nhập khẩu và hàng xuất khẩu của một quốc gia trong giai đoạn 1995--2000 được thể hiện trong biểu đồ dưới đây:\n\n<img src=\"ảnh 2.png\" alt=\"Biểu đồ câu 100-102\" loading=\"lazy\">",
         "questions": [
             {
                 "question": "Trong các năm 1995, 1996, 1998, 1999, năm nào có độ chênh lệch giữa tổng trị giá hàng nhập khẩu và tổng trị giá hàng xuất khẩu lớn nhất?",
@@ -1421,7 +1421,7 @@
         "type": "passage",
         "subject": "Tư duy khoa học",
         "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 109 đến 111:",
-        "passage_content": "Máy biến áp là một thiết bị có khả năng biến đổi điện áp sử dụng nguyên lý cảm ứng điện từ. Điện áp xoay chiều được đưa vào hai đầu cuộn dây sơ cấp, dòng điện này sẽ sinh ra từ trường biến thiên trong cuộn sơ cấp và từ trường biến thiên này theo lõi thép được chuyển sang cuộn thứ cấp. Từ trường biến thiên trong cuộn thứ cấp sẽ làm sinh ra sức điện động cảm ứng và từ đó tạo ra điện áp ở hai đầu cuộn thứ cấp $U_2$. Trong trường hợp lý tưởng, tỷ lệ điện áp trên cuộn thứ cấp $U_2$ và điện áp cuộn sơ cấp $U_1$ bằng với tỷ lệ số vòng dây trên cuộn thứ cấp $N_2$ so với trên cuộn sơ cấp $N_1$ theo công thức: $$\\frac{U_2}{U_1} = \\frac{N_2}{N_1}$$\n\n$$ \\begin{tikzpicture}[scale=0.8] \\draw[thick, fill=gray!20] (0,0) rectangle (5,4); \\draw[thick, fill=white] (1,1) rectangle (4,3); \\node at (2.5, 3.5) {Lõi thép}; \\draw[ultra thick, blue] (-0.5, 3.2) -- (0.5, 3.2); \\foreach \\i in {0,1,2,3,4} { \\draw[ultra thick, blue] (0, 3.2 - \\i*0.5) arc (90:270:0.2 and 0.25); } \\draw[ultra thick, blue] (-0.5, 0.8) -- (0.5, 0.8); \\node[left] at (-0.5, 2) {$U_1$}; \\node[below] at (0, 0.5) {$N_1$}; \\node[below] at (0, 0) {Cuộn sơ cấp}; \\draw[ultra thick, red] (4.5, 3.2) -- (5.5, 3.2); \\foreach \\i in {0,1,2,3,4,5,6} { \\draw[ultra thick, red] (5, 3.2 - \\i*0.35) arc (90:-90:0.2 and 0.175); } \\draw[ultra thick, red] (4.5, 0.8) -- (5.5, 0.8); \\node[right] at (5.5, 2) {$U_2$}; \\node[below] at (5, 0.5) {$N_2$}; \\node[below] at (5, 0) {Cuộn thứ cấp}; \\end{tikzpicture} $$\n\nTuy nhiên trong quá trình hoạt động, chính hiện tượng cảm ứng điện từ cũng sinh ra dòng điện cảm ứng bên trong lõi thép, có thể dẫn tới việc tỏa nhiệt mạnh, gây hao phí, biến dạng hoặc cháy nổ. Do đó, người ta chế tạo lõi thép bằng các lá thép mỏng cách điện với nhau để hạn chế dòng điện này. Trong truyền tải điện năng, việc tăng điện áp tại nguồn lên $n$ lần sẽ giảm hao phí truyền tải đi $n^2$ lần. Sử dụng một máy biến áp lý tưởng có số vòng dây cuộn sơ cấp là 10.000 vòng, cuộn thứ cấp là 50.000 vòng.",
+        "passage_content": "Máy biến áp là một thiết bị có khả năng biến đổi điện áp sử dụng nguyên lý cảm ứng điện từ. Điện áp xoay chiều được đưa vào hai đầu cuộn dây sơ cấp, dòng điện này sẽ sinh ra từ trường biến thiên trong cuộn sơ cấp và từ trường biến thiên này theo lõi thép được chuyển sang cuộn thứ cấp. Từ trường biến thiên trong cuộn thứ cấp sẽ làm sinh ra sức điện động cảm ứng và từ đó tạo ra điện áp ở hai đầu cuộn thứ cấp $U_2$. Trong trường hợp lý tưởng, tỷ lệ điện áp trên cuộn thứ cấp $U_2$ và điện áp cuộn sơ cấp $U_1$ bằng với tỷ lệ số vòng dây trên cuộn thứ cấp $N_2$ so với trên cuộn sơ cấp $N_1$ theo công thức: $$\\frac{U_2}{U_1} = \\frac{N_2}{N_1}$$\n\n<img src=\"ảnh 3.png\" alt=\"Sơ đồ câu 109-111\" loading=\"lazy\">\n\nTuy nhiên trong quá trình hoạt động, chính hiện tượng cảm ứng điện từ cũng sinh ra dòng điện cảm ứng bên trong lõi thép, có thể dẫn tới việc tỏa nhiệt mạnh, gây hao phí, biến dạng hoặc cháy nổ. Do đó, người ta chế tạo lõi thép bằng các lá thép mỏng cách điện với nhau để hạn chế dòng điện này. Trong truyền tải điện năng, việc tăng điện áp tại nguồn lên $n$ lần sẽ giảm hao phí truyền tải đi $n^2$ lần. Sử dụng một máy biến áp lý tưởng có số vòng dây cuộn sơ cấp là 10.000 vòng, cuộn thứ cấp là 50.000 vòng.",
         "questions": [
             {
                 "question": "Nếu điện áp vào cuộn sơ cấp là 1.500 V thì điện áp trên cuộn thứ cấp là:",
@@ -1462,7 +1462,7 @@
         "type": "passage",
         "subject": "Tư duy khoa học",
         "instruction": "Dựa vào thông tin dưới đây để trả lời các câu từ 112 đến 114:",
-        "passage_content": "Biểu đồ sự thay đổi số lượng quần thể cừu hoang tại đảo Tasmania. Sức chứa môi trường ($K$) là kích thước quần thể tối đa có thể duy trì ổn định.\n\n$$ \\begin{tikzpicture} \\begin{axis}[ width=12cm, height=6cm, xlabel={Năm}, ylabel={Số lượng (x1.000)}, xmin=1810, xmax=1960, ymin=0, ymax=2500, xtick={1820,1840,1860,1880,1900,1920,1940}, ymajorgrids=true, xmajorgrids=false, grid style={dashed, gray!35}, axis line style={black!70}, tick style={black!70} ] \\addplot[very thick, color=black!75, smooth] coordinates { (1818,20) (1822,180) (1828,450) (1834,700) (1839,1050) (1844,1650) (1848,2280) (1852,1400) (1857,1780) (1863,1200) (1870,1820) (1877,1450) (1884,1620) (1890,1420) (1898,1750) (1906,1700) (1913,1450) (1923,2050) (1931,1660) (1938,1760) (1944,1650) }; \\draw[dashed, red, thick] (axis cs:1810,1650) -- (axis cs:1960,1650) node[right] {$K$}; \\end{axis} \\end{tikzpicture} $$",
+        "passage_content": "Biểu đồ sự thay đổi số lượng quần thể cừu hoang tại đảo Tasmania. Sức chứa môi trường ($K$) là kích thước quần thể tối đa có thể duy trì ổn định.\n\n<img src=\"ảnh 4.png\" alt=\"Biểu đồ câu 112-114\" loading=\"lazy\">",
         "questions": [
             {
                 "question": "Số lượng cá thể tối đa quần thể đạt tới trong thời gian nghiên cứu là:",
@@ -1582,3 +1582,4 @@
         ]
     }
 ]
+
