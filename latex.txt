@@ -1,0 +1,1573 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tasks}
+\usepackage{tcolorbox}
+\usetikzlibrary{patterns}
+\pgfplotsset{compat=1.18}
+\usepackage{pgfplots}
+
+% --- BẢNG MÀU TỐI GIẢN, DỄ ĐỌC ---
+\definecolor{ink}{HTML}{1F2937}
+\definecolor{accent}{HTML}{C2410C}
+\definecolor{accentsoft}{HTML}{FFF1E8}
+\definecolor{line}{HTML}{F1D6C7}
+\definecolor{titlebg}{HTML}{FFF7F2}
+\colorlet{lavender}{accent}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.3em}
+
+% --- CẤU HÌNH DANH SÁCH CÂU HỎI (CĂN LỀ CHUẨN) ---
+\newlist{exam}{enumerate}{1}
+\setlist[exam]{
+    label=\bfseries\color{accent} Câu \arabic*:, 
+    leftmargin=1.75cm,
+    labelsep=0.75em,
+    itemsep=3.2ex,
+    topsep=1.2ex,
+    start=1
+}
+
+% --- CẤU HÌNH ĐÁP ÁN ---
+\settasks{
+    label=\bfseries\color{accent}\Alph*., 
+    label-width=1.5em,
+    column-sep=1.5em,
+    after-item-skip=0.8ex
+}
+
+% --- KHUNG CHO ĐOẠN DẪN ---
+\newtcolorbox{context}{
+    colback=white,
+    colframe=line,
+    borderline west={1.5pt}{0pt}{accent},
+    arc=1.5mm,
+    boxrule=0.6pt,
+    left=1em, right=1em, top=1.1ex, bottom=1.1ex,
+    before skip=2ex, after skip=1.8ex
+}
+
+\newtcolorbox{titlebox}{
+    colback=titlebg,
+    colframe=line,
+    arc=2mm,
+    boxrule=0.8pt,
+    left=1.4em, right=1.4em, top=1.2ex, bottom=1.2ex
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{0.6cm}%
+    {\large\bfseries\color{ink} #1\par}%
+    \vspace{0.15cm}%
+    {\color{accent}\rule{\linewidth}{0.8pt}\par}%
+    \vspace{0.2cm}%
+}
+
+\begin{document}
+
+\color{ink}
+
+\begin{titlebox}
+\begin{center}
+    {\LARGE \bfseries ĐỀ PHỤC DỰNG VACT 2026}\\[0.25em]
+    {\large \color{accent}\bfseries Đợt 1}
+\end{center}
+\end{titlebox}
+
+\sectiontitle{PHẦN TIẾNG VIỆT}
+
+\begin{exam}
+    \item ``Ngày ấy thú vật hãy còn làm chủ mặt đất chưa có dấu tích con người. Một hôm có một cây si bị bão đổ xuống trong đó bay ra hai con chim lớn gọi là Áccác Ùaquê (hay Ay và Ua). Chúng đến làm tổ ở động Hào và đẻ trăm trứng trong đó có 3 cái to lớn dị thường. Nhờ được thần bày cho cách ấp, sau 50 ngày 97 trứng nở ra người: 50 người đi về mạn đồng bằng thành người Kinh, còn 47 người lẫn lên mạn ngược sau trở thành tổ tiên các dân Lào, Mường, Mán, Thổ,. Còn lại ba trứng ấp đủ 100 ngày nở ra ba người hai trai một gái. Đại ca, anh cả được tộc trưởng người Kinh và người Mường Mán rước về làm Lang, nhưng bị yêu tinh đón đường ăn thịt.''
+
+\par\vspace{0.3cm} % Đẩy câu hỏi xuống dòng và tạo khoảng cách đều
+Văn bản trên thuộc thể loại gì?
+
+\begin{tasks}(2)
+    \task Sử thi.
+    \task Truyền thuyết.
+    \task Truyện truyền kỳ.
+    \task Thần thoại.
+\end{tasks}
+
+    \item Ngoại hình của nàng Daphné được miêu tả bởi những biện pháp tu từ nào trong đoạn trích?
+    \begin{tasks}(2)
+        \task Liệt kê, nhân hóa.
+        \task Nhân hóa, hoán dụ.
+        \task So sánh, liệt kê.
+        \task Ẩn dụ, hoán dụ.
+    \end{tasks}
+
+    \item \textit{``Tam nguyệt xuân thì trưởng đậu miều / Hoàng hồ phì mãn, bạch hồ kiêu.''} Nhận xét nào sau đây đúng về quy tắc niêm giữa các câu trong bài thơ trên?
+    \begin{tasks}(1)
+        \task Câu 1 niêm với câu 2, câu 3 niêm với câu 4.
+        \task Câu 1 niêm với câu 4, câu 2 niêm với câu 3.
+        \task Câu 1 niêm với câu 3, câu 2 niêm với câu 4.
+        \task Không có câu nào niêm với câu nào.
+    \end{tasks}
+
+    \item Biện pháp tu từ nào đã được tác giả sử dụng trong bài thơ \textit{Ăn mày} của Nguyễn Khuyến? 
+    \begin{tasks}(4)
+        \task Chơi chữ.
+        \task Chêm xen.
+        \task Nói quá.
+        \task Ẩn dụ.
+    \end{tasks}
+
+    \item Nội dung chính của văn bản \textit{Tịch cư ninh thể phú} (Nguyễn Hàng) là :
+    \begin{tasks}(1)
+        \task Lòng yêu thích sự tự do của kẻ ẩn sĩ giữa cảnh thôn dã.
+        \task Tình yêu dành cho miền thôn quê u tịch, nghèo khó.
+        \task Khí phách ngang tàng của bậc anh hùng tráng sĩ giữa tự nhiên.
+        \task Đời sống cư dân thôn quê thanh bình, nhộn nhịp.
+    \end{tasks}
+
+    \item \textbf{Vũ Như Tô:} Xây Cửu Trùng Đài cho một tên bạo chúa, một tên thoán nghịch, cho một lũ gái dâm ô? Tôi không thể đem tài ra làm một việc ô uế, muôn năm làm bia miệng cho người đời được.
+
+\par \textbf{Đan Thiềm:} Ông biết một mà không biết hai. Ông có tài, tài ấy phải đem cống hiến cho non sông, không nên để mục nát với cỏ cây. Ông không có tiền, ông không có thể dựng lấy một tòa đài như ý nguyện. Chấp kinh, phải tòng quyền. Đây là lúc ông nên mượn tay vua Hồng Thuận mà thực hành cái mộng lớn của ông. Ông khẽ tiếng. Đó là tiểu tiết. Ông cứ xây lấy một tòa đài cao cả. Vua Hồng Thuận và lũ cung nữ kia rồi mất đi nhưng sự nghiệp của ông còn lại về muôn đời. Dân ta nghìn thu được hãnh diện, không thẹn với những cung điện đẹp của nước ngoài, thế là đủ. Hậu thế sẽ xét công cho ông, và nhớ ơn ông mãi mãi.
+
+\par\vspace{0.4cm} % Tạo khoảng cách thoáng trước khi vào câu hỏi
+Nhận xét nào sau đây phù hợp với nhân vật Đan Thiềm trong đoạn trích trên?
+
+\begin{tasks}(1)
+    \task Cung nữ tài sắc vẹn toàn, có lương tâm và trách nhiệm.
+    \task Người trải đời, biết những mánh khóe để tồn tại trong cung.
+    \task Người có tài năng xứng đáng được lưu danh.
+    \task Người biết khích lệ người tài thực hiện khao khát sáng tạo.
+\end{tasks}
+
+    \item 
+    \textit{``Nhưng tôi biết cái màu đỏ ấy `` \\
+    Cái màu đỏ như cái màu đỏ ấy \\
+    Ta về, \\
+    Sẽ là bông hoa chuối đỏ tươi \\
+    Trên đỉnh giốc cao vẫy gọi đoàn người''.}
+    
+    \par\vspace{0.2cm}
+    \noindent \textit{(Nguyễn Mỹ, Cuộc chia ly màu đỏ)}
+
+    \vspace{0.5cm}
+
+    \textit{``Ta về, mình có nhớ ta \\
+    ta nhớ những hoa cùng người. \\
+    Rừng xanh hoa chuối đỏ tươi \\
+    Đèo cao nắng ánh dao gài thắt lưng''.}
+    
+    \par\vspace{0.2cm}
+    \noindent \textit{(Tố Hữu, Việt Bắc)}
+
+    \par\vspace{0.5cm}
+    Hình ảnh ``hoa chuối đỏ'' trong hai đoạn thơ trên cùng thể hiện:
+
+    \begin{tasks}(1)
+        \task Tinh thần kháng chiến, quyết chiến đấu chống giặc ngoại xâm.
+        \task Sức sống, vẻ đẹp của thiên nhiên trong những cuộc kháng chiến.
+        \task Sự hy sinh thầm lặng của những người phụ nữ ở hậu phương.
+        \task Màu máu và sự hy sinh của những chiến sĩ nơi tiền tuyến.
+    \end{tasks}
+
+    \item \textit{``Chú mải mê nhìn nên không nghe thấy những tiếng gõ lanh canh trên đường tàu từ xa đã đến gần. \\
+    - Prù...rù...ù...ù. \\
+    Cậu bé giật mình quay lại: một người đàn ông trẻ, khỏe mạnh, trên môi còn rung rung vì hồi còi mồm. Bộ quần áo xanh thợ nham nhở những vết gỉ sắt vàng khè hơi chật so với đôi vai rất nở. Bàn tay to bè xách chiếc búa. Khuôn mặt cởi mở và đôi mắt nom chẳng có vẻ gì là nghiêm khắc khiến chú bé mạnh dạn hẳn lên: \\
+    - Chào chú! \\
+    - Chào bạn! --- Người đàn ông đáp lại, giọng oang oang --- Bạn làm gì ở đấy?''}
+
+    \par\vspace{0.2cm}
+    \noindent \textit{(Nguyễn Thị Như Trang, Cây cúc tần)} 
+
+    \par\vspace{0.4cm}
+    Dòng nào dưới đây chỉ chứa những từ tượng thanh, tượng hình xuất hiện trong đoạn trích trên? 
+
+    \begin{tasks}(2)
+        \task lanh canh, chào chú, chào bạn. 
+        \task oang oang, rung rung, lanh canh. 
+        \task lanh canh, rung rung, cởi mở.
+        \task oang oang, gỉ sắt, nham nhở.
+    \end{tasks}
+
+    \item 
+    \textit{``rồi chúng ta sẽ trở thành những ông già và những bà già \\
+    trong một thế giới trẻ trung luôn đổi khác \\
+    [...] những người trẻ đi qua ta không hề quen biết \\
+    họ cười nói râm ran trong ánh nắng tưng bừng \\
+    lễ phép chào ta nhưng trong bụng xót thương \\
+    ``ai nói chuyện với người già lâu được'' \\
+    [...] họ lạ lùng thấy ta cam chịu \\
+    những đau khổ ta mang, họ không còn hiểu được \\
+    như lúa gặt, chỉ còn cuống rạ \\
+    nằm im lìm dưới những đám mây bay \\
+    tan vào trong quên lãng ngàn đời \\
+    như con vờ, như que diêm vụt tắt \\
+    như viên sỏi dưới hè, như giọt nắng \\
+    trong bài ca bất tận của đời.''}
+
+    \par\vspace{0.2cm}
+    \noindent \textit{(Lưu Quang Vũ, Không đề)} 
+
+    \par\vspace{0.5cm}
+    Tác dụng của việc xây dựng hình ảnh đối lập giữa hình ảnh tuổi già và tuổi trẻ trong đoạn thơ? 
+
+    \begin{tasks}(1)
+        \task Tuổi già chắc chắn sẽ sự cô độc và mất giá trị trong thế giới hiện đại, cho nên phải tìm cách chống lại bi kịch thời gian bằng cách sống hết mình với đời. 
+        \task Mặc dù thân xác tan biến, nhưng con người vẫn có sự hòa nhập vĩnh viễn của linh hồn vào sự sống chung của vũ trụ trong từng khoảnh khắc.
+        \task Người trẻ không nên lặp lại bi kịch của thế hệ trước bằng cách giữ những giá trị nhân văn và loại bỏ những yếu tố cũ kỹ, lạc hậu để đón nhận tất cả những giá trị của đời sống mới.
+        \task Con người rất mong manh, dù từng là chủ nhân huy hoàng của thời đại mình, đến một ngày rồi sẽ bị giảm giá trị, mọi thành tựu, dấu ấn rồi sẽ lùi lại trước bước đi của lịch sử.
+    \end{tasks}
+
+    \item 
+    \textit{``Bạch Tuyết thấy chồng thương cảm, thừa dịp nói rằng: \\
+    - Mình đừng kêu tôi bằng cô nữa chớ. Tiếng cô nghe vô tình quá. \\
+    - Thì em cũng đừng kêu qua bằng thầy nữa. \\
+    - Hai người cười với nhau rồi kề vai nằm ngủ''.} % [cite: 211, 212, 213]
+
+    \par\vspace{0.2cm}
+    \noindent \textit{(Hồ Biểu Chánh, Ai làm được)} % [cite: 213]
+
+    \par\vspace{0.4cm}
+    Phương ngữ Nam Bộ trong đoạn trích trên không thể hiện điều gì? % [cite: 214]
+
+    \begin{tasks}(2)
+        \task Sự châm biếm, trào phúng, đả kích các nhân vật. % [cite: 215]
+        \task Tình cảm và quan hệ giữa các nhân vật. % [cite: 216]
+        \task Tính chân thực trong nghệ thuật kể chuyện. % [cite: 217]
+        \task Bản sắc địa phương của ngôn ngữ tiểu thuyết. % [cite: 218]
+    \end{tasks}
+
+    \item 
+    \textit{``Tặng Huy Cận \\
+    - Một tối bầu trời đắm sắc mây, \\
+    Cây tìm nghiêng xuống nhánh hoa gầy, \\
+    Hoa nghiêng xuống cỏ, trong khi cỏ, \\
+    Nghiêng xuống làn rêu, một tối đây. \\
+    Những lời huyền bí toả lên trăng, \\
+    Những ý bao la rủ xuống trần, \\
+    Những tiếng ân tình hoa bảo gió, \\
+    Gió đào thỏ thẻ bảo hoa xuân.''} 
+
+    \par\vspace{0.2cm}
+    \noindent \textit{(Xuân Diệu)} 
+
+    \par\vspace{0.5cm}
+    Hình ảnh thơ tượng trưng thể hiện điều gì? 
+
+    \begin{tasks}(1)
+        \task Sự đối lập, tách biệt của vạn vật, gợi lên nỗi tịch liêu và sự chia cắt. 
+        \task Sự chia lìa, mất mát của vạn vật, gợi lên niềm cô đơn trong đêm văng quạnh quẽ. 
+        \task Sự bí ẩn, thâm u của vạn vật, gợi lên những dự cảm về sự mất mát, hoang tàn. 
+        \task Sự quấn quyện, đan hòa của vạn vật, gợi lên niềm khao khát tương giao. 
+    \end{tasks}
+
+    \item \textit{``Những ngày hè, ngọn lửa rơm cứ táp vào mặt nóng hầm hập, để nấu xong nồi cơm như thế phải ``đổ mồ hôi, sôi nước mắt''. Vậy nhưng chưa bao giờ tôi nghe người dân làng tôi than thở một lời về cái bếp rơm cực nhọc đấy. Ngược lại, chúng tôi đã quá thân quen với cái mùi rơm thơm nồng và cái ngọn khói no ấm này. Những năm mất mùa, rơm nhiều mà lúa ít, cái bếp ở góc sân hay sau hè nhà ấy cứ lạnh tanh. Từ ngoài đồng nhìn vào làng, những mái nhà tranh vắng đi ngọn khói chiều của những bếp rơm, không thấy bụng đói cồn cào nữa mà chỉ thấy một nỗi buồn dâng lên từ bốn phía.''}
+
+    \par\vspace{0.2cm}
+    \noindent \textit{(Minh Tự, Củi lúa)}
+
+    \par\vspace{0.4cm}
+    Đặc điểm nào của ``Cái tôi'' tác giả được thể hiện rõ nét nhất trong đoạn trích?
+
+    \begin{tasks}(1)
+        \task Cái ``tôi'' tính trung lập, để thu thập thông tin và ghi chép các tập quán và sự kiện diễn ra trong đời sống người Huế.
+        \task Cái ``tôi'' đại diện cho tầng lớp trí thức, đóng vai trò nhân chứng nhằm phát hiện và ca ngợi vẻ đẹp của con người xứ Huế.
+        \task Cái ``tôi'' trải nghiệm thể hiện sự gắn bó với làng quê, đồng cảm sâu sắc với nỗi buồn của con người xứ Huế.
+        \task Cái ``tôi'' được hư cấu để tái hiện khách quan những sự kiện lịch sử đã qua của cộng đồng người dân xứ Huế.
+    \end{tasks}
+
+    \item Trong các câu sau, câu nào đúng ngữ pháp? 
+    \begin{tasks}(1)
+        \task Trong khi quá vui sướng và bất ngờ vì món quà anh tặng...
+        \task Với chị vào những ngày hè gió thổi trên những vòm cây...
+        \task Ngày hôm qua, chị vừa về đến nhà thì nhìn thấy đôi chim...
+        \task Trên dòng sông có những cánh buồm trắng nên thơ...
+    \end{tasks}
+
+    \item Câu nào sau đây có sử dụng biện pháp lặp cấu trúc? 
+    \begin{tasks}(1)
+        \task Ngôn ngữ thi ca khác văn xuôi bởi quan hệ đặc biệt...
+        \task Đắc nhân tâm là một cuốn sách kinh điển, một cuốn sách gối đầu giường.
+        \task Gương mặt kịch nghệ không được viết bằng ngôn từ.
+        \task Đa nghĩa, đồng nghĩa, đồng âm là các phương tiện tạo nghĩa.
+    \end{tasks}
+
+    \item \textit{``Bàn về cách nhìn nhận và đánh giá con người, cố nhân có câu ``họa hổ họa bì nan họa cốt, tri nhân tri diện bất tri tâm'', nghĩa là vẽ hổ có thể vẽ được da, khó vẽ được xương; biết người chỉ biết mặt, khó biết lòng''.} 
+
+    \par\vspace{0.4cm}
+    Câu trên mắc lỗi gì?
+
+    \begin{tasks}(2)
+        \task Sai dùng từ. 
+        \task Sai phong cách. 
+        \task Sai ngữ pháp.
+        \task Sai logic.
+    \end{tasks}
+
+    \item Câu nào sau đây có từ sai chính tả? 
+    \begin{tasks}(1)
+        \task Từ điển giải thích ``bàn hoàn'' có nghĩa là quẩn quanh.
+        \task Anh ta bàng hoàng, ngơ ngác không biết có chuyện gì.
+        \task Cầu thủ Ủ RŨ rời khỏi sân.
+        \task Treo cờ rũ là nghi thức đặc biệt khi có quốc tang.
+    \end{tasks}
+
+    \item Cụm từ nào sau đây viết đúng chính tả? 
+    \begin{tasks}(2)
+        \task Quẫn trí.
+        \task Túng quẫn.
+        \task Quẫn bách.
+        \task Nghĩ quẩn.
+    \end{tasks}
+
+    \item Từ ``lục'' trong câu nào khác nhóm? 
+    \begin{tasks}(1)
+        \task Diệp lục là hợp chất tự nhiên làm cho lá cây có màu xanh.
+        \task U23 Việt Nam tạo cơn địa chấn tại đấu trường châu lục.
+        \task Cấu trúc siêu lục địa sẽ hình thành khi các khối đất liền hợp thành.
+        \task Lục quân hai nước đã phối hợp thực hiện huấn luyện đúng kế hoạch.
+    \end{tasks}
+
+    \item Từ ``chịu'' trong câu nào mang nghĩa ``tiếp nhận tác động từ bên ngoài''? 
+    \begin{tasks}(1)
+        \task Đành bụng làm dạ chịu, không thể trách người bán.
+        \task Các bên đều cho rằng mình có lý và không ai chịu ai.
+        \task Việt Nam đứng thứ 6 trong số các quốc gia chịu ảnh hưởng biến đổi khí hậu.
+        \task Đứa trẻ rất chịu khó học tập dù hoàn cảnh khó khăn.
+    \end{tasks}
+
+    \item Việc sử dụng từ ``thanh toán không chạm'' thay cho ``contactless payment'' có tác dụng gì? 
+    \begin{tasks}(2)
+        \task Tạo cảm giác hiện đại cho người tiêu dùng.
+        \task Tạo cảm giác gần gũi, dễ hiểu cho người tiêu dùng.
+        \task Làm nổi bật tính tiên phong của sản phẩm.
+        \task Phản ánh đầy đủ tính chất của hình thức thanh toán.
+    \end{tasks}
+
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 21 đến 25:} 
+    
+    (1) Dân trí tài chính là mức độ hiểu biết, kỹ năng, thái độ để đưa ra các quyết định tài
+chính đúng đắn và quản lý tài chính cá nhân hiệu quả. Nó có thể được đo qua: (i) mức độ
+hiểu biết kiến thức tài chính; (ii) khả năng quản lý tài chính cá nhân và ra quyết định tài
+chính; (iii) mức độ tiếp cận và sử dụng dịch vụ tài chính. Tại Việt Nam, cách thứ ba thường
+được sử dụng và cho thấy thực trạng dân trí tài chính còn khá thấp. Theo Ngân hàng Thế
+giới (2021), tỷ lệ người Việt Nam có tài khoản ngân hàng chỉ đạt 69%, thấp hơn các nước
+phát triển (80-100%). Hoặc theo Ủy ban Chứng khoán Nhà nước (2023), số lượng tài khoản
+chứng khoán tại Việt Nam chỉ chiếm hơn 7% quy mô dân số.
+(2) Dân trí tài chính thấp có thể dẫn đến những hệ quả như mất tiền trong các vụ lừa đảo
+tài chính, đầu tư sai, mất vốn, khủng hoảng nợ cá nhân, thiếu chuẩn bị cho tương lai tài
+chính.
+(3) Khảo sát của nhóm nghiên cứu cho thấy gần 75% số người được hỏi cho rằng giáo dục
+tài chính cho trẻ em là cần thiết. Điều này rất quan trọng vì:
+- Trẻ em và thanh thiếu niên thường tiếp xúc với gia đình, nhà trường, xã hội và các
+chính sách nhà nước, nên có cơ hội tiếp nhận sự giáo dục tài chính từ nhiều phía.
+- Khi được giáo dục tài chính sớm, kiến thức và thói quen tài chính tốt không chỉ ảnh
+hưởng đến các em mà còn có thể tạo ra những tác động tích cực, bền vững cho toàn
+xã hội.
+- Tuổi thiếu niên thuộc giai đoạn đầu của vòng đời tài chính, khi các em bắt đầu tiếp
+thu những kiến thức cơ bản về tài chính. Sau đó là giai đoạn tích lũy tài sản. Để tích
+lũy hiệu quả, các cá nhân cần có hiểu biết và kỹ năng để lập kế hoạch tài chính, đầu
+tư và quản lý nợ, chuẩn bị tốt hơn cho những giai đoạn tiếp theo của cuộc đời (bảo vệ
+tài sản và tiêu dùng trong hưu trí).
+(4) Như vậy, giáo dục tài chính cho trẻ em là yêu cầu cấp bách, góp phần nâng cao dân trí
+tài chính, giảm thiểu rủi ro và cải thiện khả năng đạt các mục tiêu tài chính dài hạn.
+\par\vspace{0.2cm}
+    \noindent \textit{(Theo Phạm Thị Thành - Lê Hoàng Gia Bảo, trích Giáo dục tài chính cho trẻ em)}
+\end{context}
+
+\begin{exam}[resume]
+    \item Văn bản trên đã sử dụng những cách trình bày thông tin nào sau đây?
+    \begin{tasks}(2)
+        \task Liệt kê, phân loại đối tượng.
+        \task Liệt kê, quan hệ nhân - quả.
+        \task Liệt kê, vấn đề và cách giải quyết.
+        \task Liệt kê, so sánh và đối chiếu.
+    \end{tasks}
+
+    \item Việc trích dẫn số liệu của Ngân hàng Thế giới (2021) và Ủy ban Chứng khoán Nhà nước (2023) có tác dụng gì?
+    \begin{tasks}(1)
+        \task Cung cấp minh chứng cụ thể cho thấy khả năng khai thác các dịch vụ tài chính ở Việt Nam còn thấp so với quy mô dân số.
+        \task Cung cấp minh chứng củng cố cho nhận định về thực trạng dân trí tài chính ở Việt Nam và cách thức đo lường thực trạng ấy.
+        \task Cung cấp minh chứng cụ thể về tỷ lệ người Việt Nam được tiếp cận với các dịch vụ tài chính trong giai đoạn 2021-2023.
+        \task Cung cấp minh chứng cụ thể, đáng tin cậy cho thấy biểu hiện của thực trạng dân trí tài chính ở Việt Nam giai đoạn 2021-2023.
+    \end{tasks}
+
+    \item Quan điểm chính của người viết được thể hiện qua văn bản là gì?
+    \begin{tasks}(1)
+        \task Nhận định thực trạng dân trí tài chính Việt Nam còn ở mức thấp và cần thiết giáo dục tài chính cho trẻ em.
+        \task Khách quan cung cấp thông tin về cách đo lường dân trí tài chính và lý do cần giáo dục tài chính cho trẻ em.
+        \task Khẳng định thực trạng dân trí tài chính của Việt Nam còn ở mức thấp và tính khách quan của các nhận định.
+        \task Cảnh báo thực trạng người Việt có hiểu biết, kỹ năng và thái độ với lĩnh vực tài chính còn ở mức thấp và hệ quả.
+    \end{tasks}
+
+    \item Việc mở đầu đoạn (3) bằng một kết quả khảo sát có tác dụng gì?
+    \begin{tasks}(1)
+        \task Cung cấp tín hiệu chuyển tiếp tự nhiên, gắn kết với thực tiễn từ phần nêu thực trạng đến đề xuất giải pháp.
+        \task Cung cấp kết quả khảo sát thực tế, tạo hứng thú cho người đọc bằng một bằng chứng ấn tượng.
+        \task Cung cấp bằng chứng khách quan, khẳng định sự đồng thuận giữa ý kiến của tác giả với số đông.
+        \task Cung cấp kết quả khảo sát thực tế, tạo tính xác thực, khách quan cho lập luận và dẫn dắt vào những lý do tiếp theo.
+    \end{tasks}
+
+    \item Dòng nào dưới đây không thể hiện ý nghĩa mà văn bản có thể đem đến cho người đọc?
+    \begin{tasks}(1)
+        \task Cần có hành động tích cực, tự chủ trong việc tìm hiểu kiến thức tài chính từ khi còn nhỏ.
+        \task Nhận thức đầy đủ, rõ ràng hơn về khái niệm dân trí tài chính và thực trạng ấy ở Việt Nam.
+        \task Trang bị cho người đọc hiểu biết về các kỹ năng tài chính và biểu hiện lừa đảo tài chính.
+        \task Nâng cao nhận thức của người đọc về tầm quan trọng của việc giáo dục tài chính cho trẻ em.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 26 đến 30:} 
+
+    (1) Con người thường cảm thấy vui sướng khi nhận ra bản thân mình đang dần trưởng
+thành. Ví dụ trong một trò game có tính gây nghiện, những người thiết kế game đều phải
+cài đặt những bước “trưởng thành” cho game thủ ở những yếu tố quan trọng như level,
+rank,. để khiến họ càng đắm chìm hơn trong game.
+(2) Nếu trong trò giải trí, trưởng thành là cội nguồn của niềm vui, thì trong công việc, điều
+này còn cần thiết hơn. Vì sự trưởng thành trong công việc sẽ khiến chúng ta thấy yêu thích
+công việc đó. Ví dụ khi làm thêm ở cửa hàng tiện lợi, cả ngày phải đứng quét mã vạch
+hàng hóa, chắc sẽ không ai định làm công việc này cả đời vì chẳng có gì thú vị, mà cũng
+chẳng kiếm được bao nhiêu. Vì vậy, đa số chỉ tranh thủ làm thêm để kiếm chút tiền công
+nhật. Nhưng nếu nghĩ khác đi thì công việc này mang lại nhiều giá trị hơn so với chỗ tiền
+công ấy. Chẳng hạn chúng ta có thể hiểu thêm về hành vi mua sắm của người tiêu dùng,
+nắm được đặc điểm vị trí của cửa hàng, học được phương pháp quản lý kho khi nhận
+hàng mới. Nhờ vậy, chúng ta có thể tận hưởng niềm vui “học hỏi và trưởng thành” mỗi
+ngày, và có thể điềm nhiên nói rằng mình yêu công việc đó. Rồi khi sự nghiệp của bản
+thân mở ra, quá trình trưởng thành trên sẽ là nền tảng dẫn dắt sự nghiệp đó đến thành
+công lớn. Điều quan trọng là tập trung vào điều mình quan tâm, và khát khao học hỏi,
+tích lũy kinh nghiệm từ những điều nhỏ nhất.
+(3) Đương nhiên, tiền cũng là bằng chứng cho thấy giá trị công việc và sức lao động của
+mình. Nếu bạn kiếm tiền vì trách nhiệm với bản thân và gia đình, bạn sẽ thấy thiết tha với
+công việc và có động lực làm việc tốt hơn. Nhưng nếu bị giam hãm trong suy nghĩ phải
+kiếm thật nhiều tiền, chúng ta sẽ trở thành tù nhân của công việc. Điều thật sự quan trọng
+không phải là thu nhập nhiều hay ít, mà là niềm vui của sự trưởng thành và tình yêu trong
+công việc. Cứ thế, lúc bạn từng bước tiến gần hơn đến “hình ảnh hoàn thiện nhất” của
+bản thân, tiền sẽ tự nhiên đi theo bạn.
+    
+    \par\vspace{0.2cm}
+    \noindent \textit{(Theo Random Kim, Trưởng thành sau ngàn lần tranh đấu)}
+\end{context}
+
+\begin{exam}[resume]
+    \item Xác định bằng chứng được sử dụng trong văn bản trên.
+    \begin{tasks}(1)
+        \task Cách mà đồng tiền chứng minh cho giá trị công việc và sức lao động của bản thân. 
+        \task Cách một người làm thêm ở cửa hàng tiện lợi tìm thấy niềm yêu thích trong công việc.
+        \task Cách đồng tiền giam hãm chúng ta và biến chúng ta thành tù nhân của công việc. 
+        \task Cách những người thiết kế game tạo ra niềm khao khát chinh phục ở người chơi.
+    \end{tasks}
+
+    \item Dòng nào dưới đây nêu đúng cách sắp xếp, trình bày luận điểm, lý lẽ và bằng chứng trong văn bản? 
+    \begin{tasks}(1)
+        \task Nêu các lý lẽ, bằng chứng cụ thể, $\rightarrow$ khái quát, tổng hợp thành luận điểm.
+        \task Trình bày các lý lẽ, bằng chứng tương đối độc lập và hướng đến luận điểm ẩn. 
+        \task Triển khai luận điểm thành các lý lẽ, bằng chứng, sau đó tổng hợp, mở rộng luận điểm.
+        \task Nêu luận điểm, sau đó triển khai thành các lý lẽ, bằng chứng cụ thể. 
+    \end{tasks}
+
+    \item Câu chuyện về việc làm thêm tại cửa hàng tiện lợi có vai trò gì trong văn bản? 
+    \begin{tasks}(1)
+        \task Nêu sự việc cho thấy cách chúng ta có thể tạo dựng sự nghiệp thành công từ những việc nhỏ nhặt.
+        \task Nêu sự việc cho thấy quá trình học hỏi và trưởng thành có thể đến từ những việc bình thường nhất. 
+        \task Nêu sự việc cho thấy cách nhìn nhận cuộc sống thay đổi có thể khiến công việc dễ thành công hơn.
+        \task Nêu sự việc cho thấy sự chuyên chú, thay đổi tư duy là yếu tố tiên quyết đưa đến sự thành công.
+    \end{tasks}
+
+    \item Dòng nào dưới đây có thể khái quát nhất tác động của văn bản đến quan niệm sống của người đọc? 
+    \begin{tasks}(1)
+        \task Nhận ra sự trưởng thành đem đến niềm vui cho con người trong cả công việc lẫn cuộc sống.
+        \task Quan tâm nhiều hơn đến những giá trị mà chúng ta có thể nhận về từ những hoạt động quen thuộc.
+        \task Cần chuyên chú ngay từ những việc nhỏ nhặt vì nó giúp con người sống có mục tiêu cụ thể hơn.
+        \task Tránh cái nhìn thờ ơ, đơn giản vì cuộc sống vốn phức tạp và chứa đựng nhiều cơ hội học tập. 
+    \end{tasks}
+
+    \item Điều thật sự quan trọng không phải là thu nhập nhiều hay ít, mà là niềm vui của sự trưởng thành và tình yêu trong công việc. Đánh giá nào dưới đây thể hiện cách nhìn phê phán phù hợp đối với quan điểm trên?
+    \begin{tasks}(1)
+        \task Quan điểm trên còn phiến diện vì chỉ tập trung nhấn mạnh vào niềm vui của sự trưởng thành mà chưa quan tâm đến những khó khăn nảy sinh trong môi trường công việc. 
+        \task Quan điểm trên chưa phù hợp với thực tế vì trong công việc, mỗi người cần phải ưu tiên thu nhập trước để có thể hoàn thành trách nhiệm với bản thân và gia đình họ. 
+        \task Quan điểm trên hoàn toàn đúng vì trong mọi công việc, chúng ta cần đặt niềm vui và sự thoải mái lên hàng đầu, đó là nền tảng dẫn dắt sự nghiệp đến thành công. 
+        \task Quan điểm trên có ý nghĩa tích cực khi nhấn mạnh giá trị học hỏi do công việc mang lại, nhưng trên thực tế cần cân bằng giữa sự phát triển bản thân và giá trị thu nhập từ công việc. 
+    \end{tasks}
+\end{exam}
+
+\sectiontitle{PHẦN TIẾNG ANH}
+
+\begin{center}
+    \textit{Question 31-35: Choose a suitable word or phrase (marker A, B, C, D) to fill in each blank.}
+\end{center}
+
+\begin{exam}[resume]
+    \item Being used in nearly all walks of life, QR codes bring us \underline{\hspace{1cm}} convenience.
+    \begin{tasks}(2)
+        \task desire
+        \task desirably
+        \task desirable
+        \task desirability
+    \end{tasks}
+
+    \item Most employers look for critical thinking skills, so I \underline{\hspace{1cm}} hard for them now that I'm in college.
+    \begin{tasks}(2)
+        \task would have trained
+        \task am training
+        \task was training
+        \task trained
+    \end{tasks}
+
+    \item Don't rush. We still have \underline{\hspace{1cm}} time to make an impressive presentation by the end of April.
+    \begin{tasks}(2)
+        \task most
+        \task a lot 
+        \task plenty of
+        \task many of
+    \end{tasks}
+
+    \item Small handmade gifts are often considered \underline{\hspace{1cm}} store-bought gifts or money gifts.
+    \begin{tasks}(2)
+        \task as meaningful as
+        \task as meaningful
+        \task more meaningful
+        \task the most meaningful
+    \end{tasks}
+
+    \item Business people look \underline{\hspace{1cm}} selling as many of their products as possible.
+    \begin{tasks}(2)
+        \task out
+        \task ahead
+        \task into
+        \task forward to
+    \end{tasks}
+\end{exam}
+
+\begin{center}
+    \textit{Question 36-40: Each of the following sentences has one error (A, B, C, or D). Find it and blacken your choice on your answer sheet.}
+\end{center}
+
+\begin{exam}[resume]
+    \item \underline{Mary's picture's} in \underline{her} school brochure shows that \underline{she} is leading \underline{a group discussion}.
+
+    \begin{tasks}(2)
+        \task Mary's picture's
+        \task her
+        \task she
+        \task a group discussion
+    \end{tasks}
+    
+    \item The student, \underline{who} hard work impressed \underline{all the} teachers, \underline{was} finally rewarded \underline{with} some scholarships.
+
+    \begin{tasks}(2)
+        \task who
+        \task all the
+        \task was
+        \task with
+    \end{tasks}
+
+    \item There was \underline{the football match} in \underline{the neighborhood}, but \underline{the event} attracted \underline{too few} spectators.
+
+    \begin{tasks}(2)
+        \task the football match
+        \task the neighborhood
+        \task the event
+        \task too few
+    \end{tasks}
+
+    \item When \underline{my} friends and \underline{plan} a trip, our teacher always gives \underline{them} useful advice about \underline{staying safe}.
+
+    \begin{tasks}(2)
+        \task my
+        \task plan
+        \task them
+        \task staying safe
+    \end{tasks}
+
+    \item \underline{As a} professional dancer, Laura makes beautiful \underline{moves}, but her singing \underline{are} not \underline{as attractive}.
+
+    \begin{tasks}(2)
+        \task As a
+        \task moves
+        \task are
+        \task not as attractive
+    \end{tasks}
+\end{exam}
+
+\begin{center}
+    \textit{Question 41-45: Which of the following best restates each of the given sentences?}
+\end{center}
+
+\begin{exam}[resume]
+    \item Mini is obviously the cutest poodle on the puppy farm I've just visited.
+    \begin{tasks}(1)
+        \task As the cutest puppy on the farm I've just visited, Mini is certainly a beautiful poodle.
+        \task It is a matter of fact that no puppy is as cute as Mini on the poodle farm I've just visited.
+        \task As a cute poodle I've just visited, Mini is definitely the most beautiful of all the puppies.
+        \task It is for sure that no other poodle on the puppy farm I've just visited is cuter than Mini.
+    \end{tasks}
+
+    \item A police officer said to a teenager, ``Don't walk alone down this street at night. It's not safe!'' 
+    \begin{tasks}(1)
+        \task A police officer told a teenager not to walk alone down that street at night because it was not safe.
+        \task A police officer said a teenager should not walk alone down this street at night because it wasn't safe.
+        \task A police officer reminded a teenager not to walk alone down this street at night because it was not safe.
+        \task A police officer told a teenager don't walk alone down that street at night because it was not safe.
+    \end{tasks}
+
+    \item I felt unhappy when Tim said some bad words last night.
+    \begin{tasks}(1)
+        \task If Tim had not said some bad words the night before, I would not have felt unhappy.
+        \task If Tim did not say some bad words the night before, I would not feel unhappy.
+        \task If Tim does not say bad words, I will feel very happy.
+        \task Unless Tim said good words, I would feel unhappy.
+    \end{tasks}
+
+    \item Frequent meetings discourage the new manager considerably.
+    \begin{tasks}(1)
+        \task The new manager's frequent meetings are considerably discouraging.
+        \task Frequent meetings are considered as a discouragement by the new manager.
+        \task The new manager is considerably discouraged by frequent meetings.
+        \task The new manager considerably discourages frequent meetings.
+    \end{tasks}
+
+    \item Those who start first will come last.
+    \begin{tasks}(1)
+        \task Start first or you will come last.
+        \task First, start with those who will come last.
+        \task Unlike those who start first, you will come last.
+        \task The first starters will be the last finishers.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \noindent \textbf{(1)} Renewable energy comes from natural sources like the sun, wind, and water. These sources can be replaced faster than they are used. Renewable energy, when produced and used responsibly, is an effective solution and a long-lasting strategy to fight climate change. It helps reduce pollution and create energy systems that can last. However, we still need new technology to make them work even better. 
+    
+    \vspace{0.4cm}
+    \noindent \textbf{(2)} Solar power turns sunlight into electricity using solar panels. In the past 10 years, the cost of solar energy has dropped a lot, making it cheaper. New solar panels are lighter and can even work in low sunlight. Solar power is growing fast, and countries like India, Brazil, and the U.S. are planning to double their solar energy by 2028.
+
+    \vspace{0.4cm}
+    \noindent \textbf{(3)} Wind power has been used for many years and is a clean way to make energy. Wind turbines, which can be on land or in the ocean, turn wind into electricity. Wind farms in the ocean catch stronger winds, making more energy. The US plans to add a lot of wind power by 2030, enough to power 10 million homes. Using new technology like artificial intelligence (AI) helps predict how much wind energy will be made, which makes power sources more reliable.
+
+    \vspace{0.4cm}
+    \noindent \textbf{(4)} Hydropower uses moving water to spin turbines and make electricity. It is the largest renewable energy source today. New technology, like small hydropower systems, is helping bring energy to rural areas without hurting the environment. Better materials, like recyclable (reusable) turbines, are also making hydropower more efficient and environmentally friendly.
+
+    \vspace{0.4cm}
+    \noindent \textbf{(5)} Other renewable energy sources are geothermal energy and bioenergy. Geothermal energy uses heat from inside the Earth, and bioenergy is made from plants and other natural materials. New ideas and improved production methods are making bioenergy cleaner, more efficient, and better for the environment. Scientists are also developing ways to turn agricultural waste and food waste into energy, which helps reduce the amount of rubbish while producing electricity and fuel. These energy sources are helping to create a cleaner and greener future.
+\end{context}
+
+\begin{exam}[resume]
+    \item What is the passage mainly about?
+    \begin{tasks}(1)
+        \task Comparing traditional and renewable energy resources.
+        \task Providing reasons renewable energy is good for users.
+        \task Listing some technologies used to produce green energy.
+        \task Describing some types of efficient renewable energy.
+    \end{tasks}
+
+    \item What does the word \textbf{``It''} in paragraph 1 refer to?
+    \begin{tasks}(4)
+        \task Climate change
+        \task Renewable energy
+        \task Strategy
+        \task Solution
+    \end{tasks}
+
+    \item In paragraph 2, what can be inferred about solar power?
+    \begin{tasks}(1)
+        \task It needs a lot of investment in new technology.
+        \task It was much more expensive ten years ago.
+        \task It is the most efficient out of renewable energy.
+        \task Its solar panels can be used to replace lighters.
+    \end{tasks}
+
+    \item In paragraph 3, which of the following is NOT stated about the production of wind energy?
+    \begin{tasks}(1)
+        \task Wind farms in the ocean are more productive.
+        \task The production is best controlled by AI applications.
+        \task Wind energy is not a new type of renewable energy.
+        \task The US will be producing a lot of wind power.
+    \end{tasks}
+
+    \item In paragraph 4, what is mentioned about hydropower?
+    \begin{tasks}(1)
+        \task It is now the biggest supply of renewable energy.
+        \task Its production is better in the ocean than in rivers.
+        \task Even small hydropower systems damage the environment.
+        \task It turns water into electricity, which turns turbines.
+    \end{tasks}
+
+    \item What is the word \textbf{``recyclable''} in paragraph 4 closest in meaning to?
+    \begin{tasks}(4)
+        \task Reducible
+        \task Savable
+        \task Moveable
+        \task Reusable
+    \end{tasks}
+
+    \item In paragraph 5, what does the author say about bioenergy?
+    \begin{tasks}(1)
+        \task It is the main source of energy for a cleaner and greener future.
+        \task It is available in more places due to new ideas and inventions.
+        \task It uses heat from inside the Earth; therefore, it is totally natural.
+        \task Its input materials include plants and other materials found in nature.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \noindent \textbf{(1)} High-rise buildings are now central features of many urban landscapes, offering efficient use of land and convenient access to services. However, their height, density, and complex internal structures increase fire risks. As a result, it is essential to strengthen fire-prevention practices and redesign everyday habits to create safer living environments. 
+
+    \vspace{0.4cm}
+    \noindent \textbf{(2)} Reducing fire accidents starts inside each apartment. Electrical devices are a common cause of ignition when they are damaged, cheaply made, or used carelessly. Residents have a direct duty to check wires and plugs, stop overloading sockets, replace poor-quality chargers, and unplug appliances that are not in use. Kitchens require the same level of care. Cooking should be treated as focused work, with clear surfaces and full attention. When residents adopt these habits, they create the first and strongest barrier against fire. 
+
+    \vspace{0.4cm}
+    \noindent \textbf{(3)} Building infrastructure is the next layer of protection, and it is the clear responsibility of building management. Smoke alarms, extinguishers, and emergency lighting systems must be installed correctly and tested on a regular schedule. These systems exist in many high-rise buildings, but they lose their value when inspections are delayed or problems are ignored. Elevators may fail during a fire, so managers must ensure that stairwells stay open, well lit, and free of storage items. Management should also organise regular safety checks and drills so that evacuation procedures are practical and effective.
+
+    \vspace{0.4cm}
+    \noindent \textbf{(4)} Local governments and fire authorities hold responsibility at a wider level. Regular inspections backed by real penalties push owners and managers to maintain safe conditions. Public information campaigns can teach residents how to prevent fires and respond safely when alarms sound. When authorities take this role seriously, they create a framework in which responsible residents and managers can truly protect their buildings. 
+
+    \vspace{0.4cm}
+    \noindent \textbf{(5)} Fires have devastating consequences, but they are also preventable. When residents commit to careful daily habits and insist on properly maintained safety systems, risks can be significantly reduced. Safer behavior in tall buildings is not an optional extra or a polite suggestion; it is a duty to oneself, one's family, and every neighbor who shares the same walls, corridors, and stairwells.
+\end{context}
+
+\begin{exam}[resume]
+    \item The best title of the passage can be: 
+    \begin{tasks}(1)
+        \task Why People Avoid Living in High-Rise Buildings.
+        \task Common Causes of Fires in High-Rise Buildings.
+        \task Reducing Fire Risks in High-Rise Buildings.
+        \task Solutions to Safety Problems in High-Rise Buildings.
+    \end{tasks}
+
+    \item The word \textbf{``their''} in paragraph 1 refers to: 
+    \begin{tasks}(4)
+        \task features
+        \task landscapes
+        \task buildings
+        \task services
+    \end{tasks}
+
+    \item In paragraph 2, the word \textbf{``duty''} is closest in meaning to:
+    \begin{tasks}(4)
+        \task tax
+        \task permission
+        \task force
+        \task responsibility
+    \end{tasks}
+
+    \item According to paragraph 2, cooking is advised as an activity that:
+    \begin{tasks}(1)
+        \task should be done quickly to avoid accidents.
+        \task can be left unattended if the heat is low.
+        \task needs protective equipment to ensure safety.
+        \task requires full attention and unoccupied areas.
+    \end{tasks}
+
+    \item In paragraph 3, it is NOT mentioned that:
+    \begin{tasks}(1)
+        \task elevators must be upgraded to prevent fire damage.
+        \task smoke alarms and extinguishers must be fixed properly.
+        \task stairwells need to remain unlocked and unblocked.
+        \task emergency lighting must be checked on a regular basis.
+    \end{tasks}
+
+    \item In paragraph 3, the author uses the phrase \textbf{``so that''} in order to:
+    \begin{tasks}(4)
+        \task confirm a cause
+        \task offer a solution
+        \task support a point
+        \task indicate a result
+    \end{tasks}
+
+    \item It can be inferred from paragraph 4 that public information:
+    \begin{tasks}(1)
+        \task helps residents become more proactive in preventing fires.
+        \task can guarantee that destructive fires will never happen.
+        \task mainly benefits building managers rather than residents.
+        \task can completely replace the need for inspections and penalties.
+    \end{tasks}
+
+    \item Paragraphs 2, 3, and 4 present \underline{\hspace{1cm}} respectively as the agents to prevent fires.
+    \begin{tasks}(1)
+        \task building management, residents, and local authorities.
+        \task building management, residents, and national fire fighters.
+        \task residents, building management, and local authorities.
+        \task residents, building management, and security guards.
+    \end{tasks}
+\end{exam}
+
+\sectiontitle{PHẦN TOÁN HỌC}
+
+\begin{exam}[resume]
+    \item Một công ty có lợi nhuận tuân theo hàm số $y = f(x) = \sqrt{x^2 - x + 5} - \sqrt{x^2 + 2x + 2}$. Sau rất lâu (có thể coi $x \to \infty$), nhận xét đúng về lợi nhuận của công ty đó là:
+    \begin{tasks}(2)
+        \task Công ty lỗ.
+        \task Không xác định.
+        \task Công ty lãi.
+        \task Công ty hòa vốn.
+    \end{tasks}
+
+    \item Nếu $\int_1^3 ((m+1)x^m + 1) dx = 28$ thì:
+    \begin{tasks}(2)
+        \task Không tồn tại giá trị của $m$.
+        \task $m \in [1; 3]$.
+        \task $m \in [-3; -1)$.
+        \task $m \in (-1; 1)$.
+    \end{tasks}
+
+    \item Trong mặt phẳng $Oxy$, một khu vườn được giới hạn bởi đồ thị của hai hàm số $y = \frac{1}{2}x^2$ và $y = \sqrt{2x}$. Diện tích khu vườn là:
+    \begin{tasks}(4)
+        \task $\frac{5}{3}$.
+        \task $2$.
+        \task $1$.
+        \task $\frac{4}{3}$.
+    \end{tasks}
+
+    \item Một phân tử cấu tạo từ 8 nguyên tử liên kết với nhau. Tổng số liên kết là 8. Số liên kết của 7 nguyên tử đầu là $4, 2, 2, 1, 1, 1, 1$. Nguyên tử thứ 8 có bao nhiêu liên kết?
+    \begin{tasks}(4)
+        \task $1$.
+        \task $4$.
+        \task $2$.
+        \task $3$.
+    \end{tasks}
+
+    \item Một khu du lịch gồm 6 địa điểm $A, B, C, D, E, F$ được nối với nhau như hình vẽ. Bạn Thủy muốn đi từ $E$ lần lượt qua các điểm khác và kết thúc tại $F$.
+    \begin{center}
+        \begin{tikzpicture}[scale=1.2, thick]
+            % Định nghĩa tọa độ các điểm
+            \coordinate (A) at (0,2);
+            \coordinate (B) at (4,2);
+            \coordinate (C) at (4,0);
+            \coordinate (D) at (0,0);
+            \coordinate (E) at (2,1.5);
+            \coordinate (F) at (2,0.5);
+
+            % Vẽ các đoạn thẳng nối (cạnh của đồ thị)
+            \draw (A) -- (B) -- (C) -- (D) -- cycle; % Hình chữ nhật ngoài
+            \draw (A) -- (E) -- (B);
+            \draw (E) -- (F);
+            \draw (D) -- (F) -- (C);
+
+            % Vẽ các điểm (nút)
+            \foreach \p in {A,B,C,D,E,F} \fill (\p) circle (2pt);
+
+            % Ghi nhãn tên các điểm
+            \node[left] at (A) {$A$};
+            \node[right] at (B) {$B$};
+            \node[right] at (C) {$C$};
+            \node[left] at (D) {$D$};
+            \node[above] at (E) {$E$};
+            \node[below] at (F) {$F$};
+        \end{tikzpicture}
+    \end{center}
+    Số cách đi là:
+    \begin{tasks}(4)
+        \task 3.
+        \task 2.
+        \task 1.
+        \task 4.
+    \end{tasks}
+
+    \item Cho một tam giác có độ dài 3 cạnh $5, 6, 7$. Tính độ dài đường cao ứng với cạnh có độ dài bằng $6$.
+    \begin{tasks}(4)
+        \task $\sqrt{2}$.
+        \task $2\sqrt{2}$.
+        \task $2\sqrt{6}$.
+        \task $\sqrt{6}$.
+    \end{tasks}
+
+    \item Cho $\triangle ABC$ thỏa mãn $\frac{\tan B}{\tan C} = \frac{\sin^2 B}{\sin^2 C}$. Khi đó $\triangle ABC$:
+    \begin{tasks}(2)
+        \task Cân.
+        \task Vuông.
+        \task Đều.
+        \task Vuông hoặc cân.
+    \end{tasks}
+
+    \item Giá trị của $m$ để bất phương trình $\log_{\frac{1}{7}} m > \log_{\frac{1}{5}} (2x+3)$ có đúng 3 nghiệm nguyên là:
+    \begin{tasks}(2)
+        \task $\frac{1}{7} < m < \frac{1}{5}$.
+        \task $0 < m < 1$.
+        \task $\frac{1}{7} < m < \frac{1}{3}$.
+        \task $\frac{1}{5} < m < \frac{1}{3}$.
+    \end{tasks}
+
+    \item Gọi $S$ là tập nghiệm của bất phương trình $\frac{x^2 + x + 3}{x^2 - 4} \geq 1$. Khi đó $S \cap (-2; 2)$ là:
+    \begin{tasks}(2)
+        \task $(-1; 2)$.
+        \task $(-2; -1]$.
+        \task $\varnothing$.
+        \task $(-2; 1)$.
+    \end{tasks}
+
+    \item Xét 2 số thực $x, y > 0$ thỏa mãn $\log_x (y^5 x) = \log_y (x^8 y) = 20$. Tính giá trị $xy$.
+    \begin{tasks}(4)
+        \task $4$.
+        \task $40$.
+        \task $2$.
+        \task $10$.
+    \end{tasks}
+
+    \item Tập nghiệm của bất phương trình $|2x - 3| > x + 1$ là:
+    \begin{tasks}(2)
+        \task $\mathbb{R}$.
+        \task $(-\infty; \frac{4}{3})$.
+        \task $(2; +\infty)$.
+        \task $(-\infty; \frac{2}{3}) \cup (4; +\infty)$.
+    \end{tasks}
+
+    \item Đồ thị hàm số $y = \frac{6 - 4x}{2x + 3}$ có 2 tiệm cận giao với $Ox, Oy$ tạo thành hình chữ nhật. Diện tích là:
+    \begin{tasks}(4)
+        \task $3$.
+        \task $4$.
+        \task $6$.
+        \task $12$.
+    \end{tasks}
+
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin sau để trả lời các câu hỏi 73, 74:} Một nhà máy sử dụng hai loại nguyên liệu $X$ và $Y$ để sản xuất sản phẩm mỹ nghệ. Tổng khối lượng nguyên liệu sử dụng không quá 8 tạ. Để sản xuất 1 tạ sản phẩm từ nguyên liệu $X$ cần 20 ngày và thu về lợi nhuận 3 tỷ đồng; để sản xuất 1 tạ sản phẩm từ nguyên liệu $Y$ cần 30 ngày và thu về 4 tỷ đồng. Tổng thời gian sản xuất không quá 180 ngày. Gọi $x, y$ lần lượt là khối lượng (tính bằng tạ) của nguyên liệu $X$ và $Y$ mà nhà máy sử dụng ($x \geq 0, y \geq 0$).
+\end{context}
+
+\begin{exam}[resume]
+    \item Bất phương trình biểu diễn số ngày làm việc là:
+    \begin{tasks}(2)
+        \task $2x + 3y \leq 18$.
+        \task $x + y \leq 8$.
+        \task $2x + 3y \geq 18$.
+        \task $x + y \geq 8$.
+    \end{tasks}
+
+    \item Lợi nhuận lớn nhất thu được là:
+    \begin{tasks}(4)
+        \task $30$.
+        \task $24$.
+        \task $28$.
+        \task $26$.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin sau trả lời câu hỏi 75, 76:} Thả bóng từ độ cao $10\text{m}$. Mỗi lần chạm đất nó nảy lên theo phương thẳng đứng một đoạn bằng $\frac{3}{4}$ độ cao trước đó.
+\end{context}
+
+\begin{exam}[resume]
+    \item Sau 5 lần chạm đất, độ cao cực đại của quả bóng là:
+    \begin{tasks}(4)
+        \task $3,16$.
+        \task $1,78$.
+        \task $2,37$.
+        \task $3,25$.
+    \end{tasks}
+
+    \item Tổng quãng đường quả bóng đi được đến khi dừng hẳn là:
+    \begin{tasks}(4)
+        \task $40$.
+        \task $70$.
+        \task $50$.
+        \task $80$.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin sau trả lời câu hỏi 77, 78:} Trong hệ trục $Oxyz$, cho $A(1; 1; 1), B(2; 0; 2)$ và $C(3; 1; -3)$.
+\end{context}
+
+\begin{exam}[resume]
+    \item Tính độ dài đoạn thẳng $AB$.
+    \begin{tasks}(4)
+        \task $2$.
+        \task $\sqrt{3}$.
+        \task $2\sqrt{6}$.
+        \task $2\sqrt{3}$.
+    \end{tasks}
+
+    \item Tìm giao điểm $E$ của mặt phẳng $(ABC)$ và trục $Ox$.
+    \begin{tasks}(2)
+        \task $E(3; 0; 0)$.
+        \task $E(2; 0; 0)$.
+        \task $E(1; 0; 0)$.
+        \task $E(0; 3; 0)$.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin sau trả lời câu hỏi 79, 80, 81:} Xếp ngẫu nhiên 6 học sinh (3 lớp A, 2 lớp B, 1 lớp C) vào 6 ghế hàng ngang.
+\end{context}
+
+\begin{exam}[resume]
+    \item Số cách xếp 6 học sinh ngồi vào hàng ghế là:
+    \begin{tasks}(4)
+        \task $6!$.
+        \task $6! - 1$.
+        \task $C_6^4$.
+        \task $A_6^4$.
+    \end{tasks}
+
+    \item Số cách xếp sao cho hai học sinh lớp B ngồi ở hai đầu ghế là:
+    \begin{tasks}(4)
+        \task $48$.
+        \task $42$.
+        \task $60$.
+        \task $124$.
+    \end{tasks}
+
+    \item Xác suất để học sinh lớp C chỉ ngồi cạnh học sinh lớp B là:
+    \begin{tasks}(4)
+        \task $\frac{1}{6}$.
+        \task $\frac{2}{15}$.
+        \task $\frac{1}{5}$.
+        \task $\frac{3}{20}$.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin sau trả lời câu hỏi 82, 83, 84:} Cho tọa độ các điểm $A(1; 2), B(-1; 1), C(3; -1)$.
+\end{context}
+
+\begin{exam}[resume]
+    \item Tọa độ trung điểm $M$ của đoạn thẳng $BC$ là:
+    \begin{tasks}(2)
+        \task $M(1; 0)$.
+        \task $M(0; 1)$.
+        \task $M(0; \frac{3}{2})$.
+        \task $M(-1; \frac{3}{2})$.
+    \end{tasks}
+
+    \item Phương trình tổng quát đường cao kẻ từ đỉnh $A$ của tam giác $ABC$ là:
+    \begin{tasks}(2)
+        \task $2x - y = 0$.
+        \task $2x + y = 0$.
+        \task $2x - 3y = 0$.
+        \task $x - 2y = 0$.
+    \end{tasks}
+
+    \item Tổng hoành độ và tung độ tâm đường tròn ngoại tiếp $\triangle ABC$ là:
+    \begin{tasks}(4)
+        \task $\frac{4}{7}$.
+        \task $\frac{5}{8}$.
+        \task $\frac{3}{5}$.
+        \task $\frac{3}{8}$.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin sau trả lời câu hỏi 85, 86, 87:} Hình chóp $S.ABCD$ đáy hình vuông tâm $O$, cạnh $a$. $\triangle SAB$ đều nằm trong mặt phẳng vuông góc với đáy. $H, N$ là trung điểm $AB, AD$.
+\end{context}
+
+\begin{exam}[resume]
+    \item Hình chiếu vuông góc của $S$ lên mặt phẳng $(ABCD)$ là điểm:
+    \begin{tasks}(4)
+        \task $H$.
+        \task $O$.
+        \task $N$.
+        \task $A$.
+    \end{tasks}
+
+    \item Phát biểu nào sau đây \textbf{sai}?
+    \begin{tasks}(1)
+        \task $d(D; (SAC)) = d(H; (SAC))$.
+        \task $d(D; (SAC)) = d(B; (SAC))$.
+        \task $V_{S.ABCD} = \frac{a^3\sqrt{3}}{6}$.
+        \task $SH = \frac{a\sqrt{3}}{2}$.
+    \end{tasks}
+
+    \item Khoảng cách từ $D$ đến mặt phẳng $(SAC)$ là:
+    \begin{tasks}(4)
+        \task $\frac{a\sqrt{21}}{14}$.
+        \task $\frac{a\sqrt{21}}{28}$.
+        \task $\frac{a\sqrt{21}}{7}$.
+        \task $\frac{a\sqrt{2}}{2}$.
+    \end{tasks}
+
+    \item Với $m = 2$, giá trị lớn nhất của $y = \frac{-mx + 1}{x - m}$ trên $[3; 5]$ là:
+    \begin{tasks}(4)
+        \task $-2$.
+        \task $-1$.
+        \task $3$.
+        \task $-3$.
+    \end{tasks}
+
+    \item Tìm $m$ để hàm số $y = \frac{-mx + 1}{x - m}$ đồng biến trên từng khoảng xác định?
+    \begin{tasks}(1)
+        \task $m \in (-\infty; -1) \cup (1; +\infty)$.
+        \task $m \in (-\infty; 0) \cup (5; +\infty)$.
+        \task $m \in (-\infty; -2) \cup (1; +\infty)$.
+        \task $m \in (-\infty; 0) \cup (1; +\infty)$.
+    \end{tasks}
+
+    \item Khi $m \in (3; +\infty)$ thì đồ thị hàm số đi qua mấy điểm cố định?
+    \begin{tasks}(4)
+        \task $2$.
+        \task $1$.
+        \task $0$.
+        \task $4$.
+    \end{tasks}
+\end{exam}
+
+\sectiontitle{SUY LUẬN KHOA HỌC}
+
+\vspace{0.5cm}
+\sectiontitle{LOGIC VÀ PHÂN TÍCH SỐ LIỆU}
+
+% --- NHÓM CÂU 91-93 ---
+\begin{context}
+    \textbf{Dựa vào thông tin sau để trả lời các câu hỏi 91, 92, 93:} Một biên tập viên sẽ biên tập 7 bài viết, mỗi lần một bài: có 3 bài viết $G, H$ và $J$ thuộc chủ đề tài chính; 3 bài viết khác $Q, R$ và $S$ thuộc chủ đề dinh dưỡng; và bài viết còn lại là $Y$ thuộc chủ đề động vật hoang dã. Thứ tự biên tập phải tuân theo các điều kiện sau:
+    \begin{itemize}
+        \item Các bài viết liên tiếp không được thuộc cùng một chủ đề.
+        \item $S$ chỉ có thể được biên tập trước $Q$ nếu $Q$ là bài viết thứ ba được biên tập.
+        \item $S$ phải được biên tập trước $Y$ ($S < Y$).
+        \item $J$ phải được biên tập trước $G$, và $G$ phải được biên tập trước $R$ ($J < G < R$).
+    \end{itemize}
+\end{context}
+
+\begin{exam}[resume]
+    \item Một thứ tự biên tập các bài viết thỏa mãn các yêu cầu nêu trên là:
+    \begin{tasks}(1)
+        \task $Q, J, Y, S, G, R, H$.
+        \task $Q, J, S, H, Y, G, R$.
+        \task $J, Q, G, H, S, Y, R$.
+        \task $J, Q, S, Y, G, R, H$.
+    \end{tasks}
+
+    \item Nếu $G$ là bài viết thứ tư được biên tập, khẳng định nào sau đây \textbf{có thể đúng}?
+    \begin{tasks}(2)
+        \task $Q$ là bài viết thứ hai được biên tập.
+        \task $Y$ là bài viết thứ sáu được biên tập.
+        \task $S$ là bài viết thứ năm được biên tập.
+        \task $J$ là bài viết thứ nhất được biên tập.
+    \end{tasks}
+
+    \item Thứ tự biên tập 7 bài viết có thể được xác định \textbf{hoàn toàn} nếu như:
+    \begin{tasks}(2)
+        \task $H$ là bài viết thứ tư được biên tập.
+        \task $R$ là bài viết thứ tư được biên tập.
+        \task $H$ là bài viết thứ sáu được biên tập.
+        \task $R$ là bài viết thứ bảy được biên tập.
+    \end{tasks}
+\end{exam} % ĐÓNG CÂU 91-93 TẠI ĐÂY
+
+% --- NHÓM CÂU 94-96 ---
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 94 đến 96:} Trong bảy ngày, một công ty sắp xếp để 5 nhân viên $M, N, P, Q, R$ tham gia các khóa huấn luyện. Mỗi nhân viên sẽ được huấn luyện trong một ngày; hai nhân viên khác nhau sẽ được huấn luyện trong hai ngày khác nhau. Ngoài ra, các khóa huấn luyện được tổ chức tuân thủ các điều kiện sau:
+    \begin{itemize}
+        \item Không có nhân viên nào tham gia huấn luyện vào ngày thứ sáu.
+        \item $R$ phải được tham gia huấn luyện trước $N$.
+        \item $M$ được huấn luyện ở ngày ngay trước ngày mà $Q$ được huấn luyện.
+        \item $P$ là người thứ ba được huấn luyện.
+    \end{itemize}
+\end{context}
+
+\begin{exam}[resume]
+    \item Nếu $P$ được huấn luyện ở ngày thứ tư thì điều nào sau đây \textbf{phải đúng}?
+    \begin{tasks}(1)
+        \task $R$ được huấn luyện ở ngày thứ năm.
+        \task $M$ được huấn luyện ở ngày thứ hai.
+        \task $M$ được huấn luyện ở ngày thứ nhất.
+        \task Không ai được huấn luyện ở ngày thứ ba.
+    \end{tasks}
+
+    \item Ngày nào dưới đây \textbf{có thể} là ngày mà $R$ được huấn luyện?
+    \begin{tasks}(4)
+        \task Ngày thứ hai.
+        \task Ngày thứ tư.
+        \task Ngày thứ bảy.
+        \task Ngày thứ ba.
+    \end{tasks}
+
+    \item Ngày nào dưới đây là ngày \textbf{phải} có một nhân viên được huấn luyện?
+    \begin{tasks}(4)
+        \task Ngày thứ hai.
+        \task Ngày thứ tư.
+        \task Ngày thứ ba.
+        \task Ngày thứ nhất.
+    \end{tasks}
+\end{exam} % CHỈ CÒN MỘT LỆNH ĐÓNG Ở ĐÂY
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 97 đến 99:} Bảng sau thể hiện sản lượng mía đường (đơn vị: tấn) ở 6 nông trường $M, N, P, Q, R, S$ của một tập đoàn trong giai đoạn 2016--2020.
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Năm} & \textbf{M} & \textbf{N} & \textbf{P} & \textbf{Q} & \textbf{R} & \textbf{S} \\ \hline
+        2016 & 150 & 75 & 58 & 48 & 49 & 32 \\ \hline
+        2017 & 137 & 68 & 67 & 61 & 45 & 28 \\ \hline
+        2018 & 160 & 65 & 82 & 59 & 46 & 37 \\ \hline
+        2019 & 168 & 70 & 45 & 75 & 43 & 35 \\ \hline
+        2020 & 180 & 55 & 80 & 67 & 47 & 28 \\ \hline
+    \end{tabular}
+    \end{center}
+\end{context}
+
+\begin{exam}[resume]
+    \item Trong giai đoạn 2016--2020, năm nào tập đoàn đạt tổng sản lượng mía đường cao nhất? 
+    \begin{tasks}(4)
+        \task Năm 2018.
+        \task Năm 2016.
+        \task Năm 2020.
+        \task Năm 2019.
+    \end{tasks}
+
+    \item Tổng sản lượng của tập đoàn trong năm 2020 tăng bao nhiêu phần trăm so với năm 2016? 
+    \begin{tasks}(4)
+        \task 9,1\%.
+        \task 8,2\%.
+        \task 7,0\%.
+        \task 10,9\%.
+    \end{tasks}
+
+    \item So sánh thời điểm đầu và cuối giai đoạn 2016--2020, nông trường nào trong những nông trường dưới đây có tỷ lệ tăng sản lượng cao nhất? 
+    \begin{tasks}(4)
+        \task M.
+        \task S.
+        \task Q.
+        \task P.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 100 đến 102:} Tổng trị giá hàng nhập khẩu và hàng xuất khẩu của một quốc gia trong giai đoạn 1995--2000 được thể hiện trong biểu đồ dưới đây:
+
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=15cm, height=8cm,
+            ylabel={Triệu USD},
+            symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000},
+            xtick=data,
+            nodes near coords,
+            nodes near coords align={vertical},
+            legend style={at={(0.5,-0.15)}, anchor=north, legend columns=-1},
+            ymin=0, ymax=750,
+            bar width=15pt,
+        ]
+            \addplot[fill=lavender!30, postaction={pattern=dots}] coordinates {(1995,120) (1996,225) (1997,375) (1998,330) (1999,525) (2000,420)};
+            \addplot[fill=lavender!70] coordinates {(1995,200) (1996,300) (1997,500) (1998,400) (1999,600) (2000,460)};
+            \legend{Nhập khẩu, Xuất khẩu}
+        \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{context}
+
+\begin{exam}[resume]
+    \item Trong các năm 1995, 1996, 1998, 1999, năm nào có độ chênh lệch giữa tổng trị giá hàng nhập khẩu và tổng trị giá hàng xuất khẩu lớn nhất? 
+    \begin{tasks}(4)
+        \task 1995.
+        \task 1999.
+        \task 1996.
+        \task 1998.
+    \end{tasks}
+
+    \item Tổng trị giá hàng xuất khẩu trong năm 1999 xấp xỉ bao nhiêu phần trăm tổng trị giá hàng nhập khẩu trong các năm 1997, 1998 và 1999?
+    \begin{tasks}(4)
+        \task 49\%.
+        \task 37\%.
+        \task 45\%.
+        \task 33\%.
+    \end{tasks}
+
+    \item Trong các năm từ 1996 đến năm 1999, tổng trị giá xuất -- nhập khẩu của năm nào có tỷ lệ phần trăm tăng nhiều nhất so với năm trước đó? 
+    \begin{tasks}(4)
+        \task Năm 1999.
+        \task Năm 1996.
+        \task Năm 1998.
+        \task Năm 1997.
+    \end{tasks}
+\end{exam}
+
+
+\sectiontitle{SUY LUẬN KHOA HỌC}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 103 đến 105:} 
+    
+    Các chất có khuynh hướng tách khỏi bề mặt của chất lỏng để chuyển thành trạng thái hơi và gây áp suất hơi. Khi tốc độ bay hơi bằng tốc độ ngưng tụ thì áp suất hơi lúc đó gọi là áp suất hơi bão hòa. Áp suất hơi bão hòa tỷ lệ thuận với nhiệt độ. Ở nhiệt độ mà áp suất hơi bão hòa bằng áp suất khí quyển thì nhiệt độ đó chính là nhiệt độ sôi của chất lỏng.
+
+    Kết quả xác định áp suất hơi bão hòa của 7 hỗn hợp gồm $n$-heptane và $n$-octane ở $25^\circ C$ được thể hiện trong bảng sau:
+    \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Hỗn hợp} & \textbf{$n$-heptane (mol)} & \textbf{$n$-octane (mol)} & \textbf{Áp suất hơi bão hòa (mmHg)} \\ \hline
+        1 & 0,0 & 1,0 & 14,0 \\ \hline
+        2 & 0,2 & 0,8 & 20,4 \\ \hline
+        3 & 0,4 & 0,6 & 26,8 \\ \hline
+        4 & 0,5 & 0,5 & 30,0 \\ \hline
+        5 & 0,6 & 0,4 & 33,2 \\ \hline
+        6 & 0,8 & 0,2 & 39,6 \\ \hline
+        7 & 1,0 & 0,0 & 46,0 \\ \hline
+    \end{tabular}
+    \end{center}
+\end{context}
+
+\begin{exam}[resume]
+    \item Một dung dịch gồm 0,5 mol $n$-heptane và 0,6 mol $n$-octane ở $25^\circ C$ thì giá trị áp suất hơi bão hòa (mmHg) nằm trong khoảng:
+    \begin{tasks}(2)
+        \task 26,8 -- 30,0.
+        \task 30,0 -- 33,2.
+        \task 20,4 -- 26,8.
+        \task 14,0 -- 20,4.
+    \end{tasks}
+
+    \item Trong các nhận định sau về áp suất hơi bão hòa của hỗn hợp $n$-heptane và $n$-octane, nhận định nào \textbf{sai}? 
+    \begin{tasks}(1)
+        \task Trong hỗn hợp, $n$-heptane trở nên khó bay hơi hơn so với $n$-heptane tinh khiết.
+        \task Khi tăng số mol $n$-heptane thì áp suất hơi bão hòa của hỗn hợp tăng.
+        \task Áp suất hơi bão hòa của hỗn hợp không phụ thuộc vào tỷ lệ $n$-heptane và $n$-octane.
+        \task Áp suất hơi bão hòa của hỗn hợp luôn thấp hơn $n$-heptane và cao hơn $n$-octane tinh khiết.
+    \end{tasks}
+
+    \item Nhận định nào sau đây phản ánh đúng bản chất của quá trình bay hơi? 
+    \begin{tasks}(1)
+        \task Khi tăng tỷ lệ $n$-octane, áp suất hơi bão hòa tăng, nhiệt độ sôi giảm.
+        \task Nếu áp suất khí quyển giảm, nhiệt độ sôi của $n$-heptane sẽ tăng.
+        \task Ở áp suất 760 mmHg, $n$-heptane có nhiệt độ sôi cao hơn $n$-octane.
+        \task Ở áp suất 760 mmHg, nhiệt độ sôi của hỗn hợp nằm trong khoảng giữa hai chất thành phần.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 106 đến 108:}
+    
+    Theo UBND tỉnh Quảng Ngãi, năm 2025, GRDP (theo giá so sánh năm 2010) tăng $10,02\%$ so với năm 2024. Quy mô nền kinh tế (GRDP) theo giá hiện hành đạt $192.000$ tỷ đồng, vượt mục tiêu tăng trưởng được Chính phủ giao, dẫn đầu miền Trung, đứng $6/34$ địa phương cả nước về tốc độ tăng GRDP.
+
+    Địa phương này là một trong 6 tỉnh, thành phố tăng GRDP trên $10\%$, tạo đà cho mục tiêu tăng trưởng hai con số nhiều năm liên tiếp được Trung ương đặt ra. Nếu năm 2024, GRDP của tỉnh chỉ tăng trưởng $4,07\%$, thấp hơn trung bình cả nước là $8,02\%$ thì năm 2025 địa phương này vượt lên nhóm dẫn đầu nhờ tăng trưởng mạnh trong sản xuất công nghiệp, xây dựng và dịch vụ. Đặc biệt, lọc dầu và luyện thép --- hai ngành đóng góp đến hơn $73\%$ giá trị ngành công nghiệp, đều tăng tốc sản xuất, tạo sức bật cho tăng trưởng. Sản phẩm lọc hóa dầu tăng $20\%$, giá trị sản xuất ngành thép tăng gần $35\%$
+\end{context}
+
+\begin{exam}[resume]
+    \item Tình hình kinh tế Quảng Ngãi năm 2025 so với năm 2024 đã thay đổi như thế nào? 
+    \begin{tasks}(1)
+        \task Duy trì tốc độ tăng trưởng ổn định.
+        \task Tăng trưởng thấp hơn mức trung bình cả nước.
+        \task Giữ vị trí thấp nhất khu vực miền Trung.
+        \task Trở thành nhóm địa phương dẫn đầu cả nước về tăng trưởng.
+    \end{tasks}
+
+    \item Trung ương đặt mục tiêu dài hạn cho tỉnh Quảng Ngãi là: 
+    \begin{tasks}(1)
+        \task Tập trung đầu tư vào ngành lọc dầu và luyện thép.
+        \task Tăng tỷ trọng ngành công nghiệp, giảm dịch vụ.
+        \task Tăng trưởng kinh tế nhiều năm liên tiếp từ hai con số trở lên.
+        \task Trở thành một trong sáu tỉnh dẫn đầu về quy mô GRDP.
+    \end{tasks}
+
+    \item Động lực tăng trưởng kinh tế của tỉnh Quảng Ngãi năm 2025 là:
+    \begin{tasks}(1)
+        \task Phát triển mạnh sản xuất công nghiệp, xây dựng và dịch vụ.
+        \task Mở rộng thị trường tiêu thụ sản phẩm.
+        \task Đầu tư mạnh vào cơ sở hạ tầng trọng điểm.
+        \task Thu hút vốn đầu tư từ nước ngoài.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 109 đến 111:} 
+    
+   Máy biến áp là một thiết bị có khả năng biến đổi điện áp sử dụng nguyên lý cảm ứng điện từ. Điện áp xoay chiều được đưa vào hai đầu cuộn dây sơ cấp, dòng điện này sẽ sinh ra từ trường biến thiên trong cuộn sơ cấp và từ trường biến thiên này theo lõi thép được chuyển sang cuộn thứ cấp. Từ trường biến thiên trong cuộn thứ cấp sẽ làm sinh ra sức điện động cảm ứng và từ đó tạo ra điện áp ở hai đầu cuộn thứ cấp $U_2$. Trong trường hợp lý tưởng, tỷ lệ điện áp trên cuộn thứ cấp $U_2$ và điện áp cuộn sơ cấp $U_1$ bằng với tỷ lệ số vòng dây trên cuộn thứ cấp $N_2$ so với trên cuộn sơ cấp $N_1$ theo công thức:
+\begin{equation}
+\frac{U_2}{U_1} = \frac{N_2}{N_1} \text{}
+\end{equation}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Lõi thép
+    \draw[thick, fill=gray!20] (0,0) rectangle (5,4);
+    \draw[thick, fill=white] (1,1) rectangle (4,3);
+    \node at (2.5, 3.5) {Lõi thép};
+
+    % Cuộn sơ cấp (N1)
+    \draw[ultra thick, blue] (-0.5, 3.2) -- (0.5, 3.2);
+    \foreach \i in {0,1,2,3,4} {
+        \draw[ultra thick, blue] (0, 3.2 - \i*0.5) arc (90:270:0.2 and 0.25);
+    }
+    \draw[ultra thick, blue] (-0.5, 0.8) -- (0.5, 0.8);
+    \node[left] at (-0.5, 2) {$U_1$};
+    \node[below] at (0, 0.5) {$N_1$};
+    \node[below] at (0, 0) {Cuộn sơ cấp};
+
+    % Cuộn thứ cấp (N2)
+    \draw[ultra thick, red] (4.5, 3.2) -- (5.5, 3.2);
+    \foreach \i in {0,1,2,3,4,5,6} {
+        \draw[ultra thick, red] (5, 3.2 - \i*0.35) arc (90:-90:0.2 and 0.175);
+    }
+    \draw[ultra thick, red] (4.5, 0.8) -- (5.5, 0.8);
+    \node[right] at (5.5, 2) {$U_2$};
+    \node[below] at (5, 0.5) {$N_2$};
+    \node[below] at (5, 0) {Cuộn thứ cấp};
+\end{tikzpicture}
+\end{center}
+
+Tuy nhiên trong quá trình hoạt động, chính hiện tượng cảm ứng điện từ cũng sinh ra dòng điện cảm ứng bên trong lõi thép, có thể dẫn tới việc tỏa nhiệt mạnh, gây hao phí, biến dạng hoặc cháy nổ. Do đó, người ta chế tạo lõi thép bằng các lá thép mỏng cách điện với nhau để hạn chế dòng điện này. Trong truyền tải điện năng, việc tăng điện áp tại nguồn lên $n$ lần sẽ giảm hao phí truyền tải đi $n^2$ lần. Sử dụng một máy biến áp lý tưởng có số vòng dây cuộn sơ cấp là 10.000 vòng, cuộn thứ cấp là 50.000 vòng.
+
+\end{context}
+
+\begin{exam}[resume]
+    \item Nếu điện áp vào cuộn sơ cấp là 1.500 V thì điện áp trên cuộn thứ cấp là: 
+    \begin{tasks}(4)
+        \task 5.000 V.
+        \task 300 V.
+        \task 7.500 V.
+        \task 750 V.
+    \end{tasks}
+
+    \item Giả sử trước khi dùng máy biến áp, hiệu suất truyền tải là 80,0\%. Sau khi dùng máy biến áp lý tưởng trên, hiệu suất mới là: 
+    \begin{tasks}(4)
+        \task 99,2\%.
+        \task 99,6\%.
+        \task 96,0\%.
+        \task 92,0\%.
+    \end{tasks}
+
+    \item Việc sử dụng các lá thép mỏng làm lõi thép \textbf{không} có tác dụng nào sau đây? 
+    \begin{tasks}(1)
+        \task Giảm hao phí năng lượng do tỏa nhiệt.
+        \task Tăng tuổi thọ cho máy biến áp.
+        \task Giảm nguy cơ cháy nổ, biến dạng.
+        \task Giảm giá trị điện trở lõi thép.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 112 đến 114:}
+    
+    Biểu đồ sự thay đổi số lượng quần thể cừu hoang tại đảo Tasmania. Sức chứa môi trường ($K$) là kích thước quần thể tối đa có thể duy trì ổn định.
+    
+    \begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=12cm, height=6cm,
+        xlabel={Năm}, ylabel={Số lượng (x1.000)},
+        xmin=1810, xmax=1960, ymin=0, ymax=2500,
+        xtick={1820,1840,1860,1880,1900,1920,1940},
+        ymajorgrids=true,
+        xmajorgrids=false,
+        grid style={dashed, gray!35},
+        axis line style={black!70},
+        tick style={black!70}
+    ]
+        \addplot[very thick, color=black!75, smooth] coordinates {
+            (1818,20)
+            (1822,180)
+            (1828,450)
+            (1834,700)
+            (1839,1050)
+            (1844,1650)
+            (1848,2280)
+            (1852,1400)
+            (1857,1780)
+            (1863,1200)
+            (1870,1820)
+            (1877,1450)
+            (1884,1620)
+            (1890,1420)
+            (1898,1750)
+            (1906,1700)
+            (1913,1450)
+            (1923,2050)
+            (1931,1660)
+            (1938,1760)
+            (1944,1650)
+        };
+        \draw[dashed, red, thick] (axis cs:1810,1650) -- (axis cs:1960,1650) node[right] {$K$};
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{context}
+
+\begin{exam}[resume]
+    \item Số lượng cá thể tối đa quần thể đạt tới trong thời gian nghiên cứu là:
+    \begin{tasks}(4)
+        \task 500.000.
+        \task 1.000.000.
+        \task 1.500.000.
+        \task 2.200.000.
+    \end{tasks}
+
+    \item Khi quần thể phát triển ổn định, số lượng cá thể dao động quanh khoảng: 
+    \begin{tasks}(2)
+        \task 1.000.000 -- 1.300.000.
+        \task 1.300.000 -- 1.500.000.
+        \task 1.600.000 -- 1.700.000.
+        \task 2.000.000 -- 2.200.000.
+    \end{tasks}
+
+    \item Nhận định nào sau đây \textbf{đúng} dựa vào biểu đồ? 
+    \begin{tasks}(1)
+        \task Số lượng cá thể giai đoạn 1820--1850 luôn tăng.
+        \task Số lượng cừu không giảm trong giai đoạn 1820--1880.
+        \task Từ 1850 đến 1920, số lượng luôn ở dưới mức $K$.
+        \task Nguồn thức ăn, khí hậu làm thay đổi sức chứa $K$.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu hỏi liên quan:}
+
+    Triều đại Lê Thánh Tông là một trong những triều đại hưng thịnh nhất trong lịch sử phong kiến Việt Nam. Một trong các yếu tố làm nên sự hưng thịnh ấy chính là những cải cách pháp luật và xây dựng bộ máy nhà nước. Trong thời gian trị vì ($1460$--$1497$), vua Lê Thánh Tông đã có nhiều cải cách quan trọng đối với hệ thống pháp luật và bộ máy chính quyền nhà nước, để lại nhiều bài học cho đến nay vẫn còn nguyên giá trị [...].
+
+    Nhờ những cải cách mạnh mẽ về pháp luật và bộ máy nhà nước, triều đại Lê Thánh Tông đã xây dựng được một hệ thống pháp luật đồng bộ, một bộ máy nhà nước thông suốt và hiệu quả vận hành bởi một hệ thống quan lại thực việc, thực tài.
+
+    \par\vspace{0.2cm}
+    \noindent \textit{(Theo Phan Chí Hiếu, Thành tựu cải cách pháp luật dưới triều vua Lê Thánh Tông)} 
+\end{context}
+
+\begin{exam}[resume]
+    \item Lê Thánh Tông là vị vua ở giai đoạn nào? 
+    \begin{tasks}(4)
+        \task Tiền Lê.
+        \task Lê Trung Hưng.
+        \task Lê Sơ.
+        \task Lê Mạt.
+    \end{tasks}
+
+    \item Thành tựu nổi bật trong hoạt động cải cách của triều vua Lê Thánh Tông là: 
+    \begin{tasks}(1)
+        \task Cải cách hệ thống pháp luật đồng bộ.
+        \task Cải cách bộ máy nhà nước và bộ máy quan lại.
+        \task Cải cách bộ máy nhà nước thông suốt.
+        \task Cải cách bộ máy nhà nước và pháp luật.
+    \end{tasks}
+
+    \item Thành tựu lớn nhất về pháp luật dưới triều Lê Thánh Tông là:
+    \begin{tasks}(4)
+        \task Quốc triều đại điển.
+        \task Hình thư.
+        \task Luật Gia Long.
+        \task Luật Hồng Đức.
+    \end{tasks}
+\end{exam}
+
+\begin{context}
+    \textbf{Dựa vào thông tin dưới đây để trả lời các câu từ 118 đến 120:} 
+    
+   Công ty A không thực hiện thu gom, đấu nối nước thải của cơ sở trong khu sản xuất vào hệ thống xử lý nước thải tập trung mà đấu nối đường ống nước thải vào hệ thống thoát nước mưa. Điều này đã dẫn đến khu vực bãi lắng nước mưa của khu công nghiệp có màu đen, bốc mùi hôi thối chảy thẳng ra kênh thủy lợi gần đó. Hiện tượng này đã bị người dân ở khu vực phát hiện và báo cho chính quyền địa phương. UBND tỉnh Y đã ban hành quyết định xử phạt vi phạm hành chính $250$ triệu đồng đối với công ty này. Đồng thời, công ty được yêu cầu khắc phục hậu quả, đảm bảo hệ thống xử lý nước thải hoạt động hiệu quả để bảo vệ môi trường và sức khỏe cộng đồng.
+\end{context}
+
+\begin{exam}[resume]
+    \item Hành vi của Công ty A vi phạm quy định nào trong luật bảo vệ môi trường?
+    \begin{tasks}(1)
+        \task Không đóng phí bảo vệ môi trường.
+        \task Không qua xử lý mà xả thải trực tiếp ra môi trường.
+        \task Không đảm bảo an toàn lao động.
+        \task Không công khai báo cáo môi trường.
+    \end{tasks}
+
+    \item Mức phạt 250 triệu đồng đối với Công ty A được xác định dựa trên yếu tố nào? 
+    \begin{tasks}(1)
+        \task Thời gian hoạt động của công ty.
+        \task Đánh giá tác động đến sức khỏe cộng đồng và môi trường.
+        \task Số lượng nước thải không qua xử lý.
+        \task Doanh thu hằng năm của công ty.
+    \end{tasks}
+
+    \item Tại sao hành động báo cáo của người dân lại quan trọng trong tình huống này? 
+    \begin{tasks}(1)
+        \task Người dân đóng vai trò giám sát thực thi pháp luật môi trường.
+        \task Vi phạm sẽ không bị xử lý nếu không có áp lực từ dân.
+        \task Chính quyền không thể phát hiện vi phạm nếu thiếu ý kiến cộng đồng.
+        \task Vi phạm môi trường chỉ ảnh hưởng đến cộng đồng dân cư khu vực đó.
+    \end{tasks}
+\end{exam}
+\end{document}
