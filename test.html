@@ -140,7 +140,7 @@
 
         /* STATUS */
         .status-bar {
-            display: none;
+            display: flex;
             align-items: center;
             gap: 8px;
             padding: 9px 14px;
@@ -151,10 +151,6 @@
             color: var(--muted);
             margin-bottom: 20px;
             box-shadow: var(--shadow-sm);
-        }
-
-        .status-bar.show {
-            display: flex;
         }
 
         .status-bar.error {
@@ -315,71 +311,17 @@
         .q-top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             gap: 10px;
             margin-bottom: 13px;
         }
 
         .q-num {
             font-family: 'Google Sans', sans-serif;
-            font-size: 0.92rem;
+            font-size: 0.72rem;
             font-weight: 700;
             color: var(--muted);
             letter-spacing: .05em;
-        }
-
-        .q-badges {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .chapter-badge {
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 3px 9px;
-            border-radius: 999px;
-            background: #f0ede8;
-            color: var(--text-2);
-            border: 1px solid var(--border);
-        }
-
-        .chapter-badge.chb-c1 {
-            background: #f5ece6;
-            border-color: #e5c4ae;
-            color: var(--c1);
-        }
-
-        .chapter-badge.chb-c2 {
-            background: #f4ede2;
-            border-color: #dec7a4;
-            color: var(--c2);
-        }
-
-        .chapter-badge.chb-c3 {
-            background: #e8eef5;
-            border-color: #bfd0e3;
-            color: var(--c3);
-        }
-
-        .chapter-badge.chb-c4 {
-            background: #e5f0ec;
-            border-color: #b9d7ca;
-            color: var(--c4);
-        }
-
-        .chapter-badge.chb-c5 {
-            background: #eeebf4;
-            border-color: #d0c7e1;
-            color: var(--c5);
-        }
-
-        .chapter-badge.chb-c6 {
-            background: #f4e9ec;
-            border-color: #e1c0c9;
-            color: var(--c6);
         }
 
         .level-badge {
@@ -719,27 +661,6 @@
             margin-top: 10px;
         }
 
-        .chapter-practice-btn {
-            width: 100%;
-            margin-top: 12px;
-            padding: 10px 12px;
-            border: 1px solid var(--border);
-            border-radius: 9px;
-            background: var(--bg2);
-            color: var(--primary);
-            font-family: 'Google Sans', sans-serif;
-            font-size: .84rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background .15s, border-color .15s, transform .15s;
-        }
-
-        .chapter-practice-btn:hover {
-            background: #edf2f8;
-            border-color: #bed0e4;
-            transform: translateY(-1px);
-        }
-
         .leg {
             display: flex;
             align-items: center;
@@ -1007,89 +928,6 @@
             justify-content: center;
         }
 
-        .chapter-modal-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(44, 38, 32, .42);
-            backdrop-filter: blur(4px);
-            z-index: 21000;
-            align-items: center;
-            justify-content: center;
-            padding: 18px;
-        }
-
-        .chapter-modal-overlay.active {
-            display: flex;
-        }
-
-        .chapter-modal {
-            width: min(560px, 100%);
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-            padding: 20px;
-        }
-
-        .chapter-modal-head {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 14px;
-            margin-bottom: 16px;
-        }
-
-        .chapter-modal-head h3 {
-            font-family: 'Google Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 4px;
-        }
-
-        .chapter-modal-head p {
-            font-size: .84rem;
-            color: var(--muted);
-        }
-
-        .chapter-modal-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-        }
-
-        .chapter-option {
-            text-align: left;
-            padding: 13px 14px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: var(--bg2);
-            cursor: pointer;
-            transition: border-color .15s, background .15s, transform .15s;
-        }
-
-        .chapter-option:hover {
-            background: #f0ede8;
-            border-color: var(--border-m);
-            transform: translateY(-1px);
-        }
-
-        .chapter-option strong {
-            display: block;
-            font-family: 'Google Sans', sans-serif;
-            font-size: .9rem;
-            color: var(--text);
-            margin-bottom: 3px;
-        }
-
-        .chapter-option span {
-            display: block;
-            font-size: .78rem;
-            color: var(--muted);
-            line-height: 1.45;
-        }
-
         /* RESPONSIVE */
         @media(max-width:900px) {
             .shell {
@@ -1114,10 +952,6 @@
 
             .breakdown-grid,
             .result-actions {
-                grid-template-columns: 1fr;
-            }
-
-            .chapter-modal-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1152,7 +986,7 @@
     <div class="hero">
         <span class="hero-eyebrow">Ngân hàng câu hỏi ôn tập</span>
         <h1>Tâm Lý Học <span>Giáo Dục</span></h1>
-        <p class="hero-sub" id="hero-sub">35 câu theo ma trận 6 chương · 3 mức nhận thức</p>
+        <p class="hero-sub">35 câu theo ma trận 6 chương · 3 mức nhận thức</p>
         <div class="hero-chips">
             <div class="chip"><strong>35</strong> câu hỏi</div>
             <div class="chip"><strong>14</strong> Nhận biết</div>
@@ -1223,7 +1057,6 @@
                         <div class="leg-dot" style="background:#c0394a"></div>Sai
                     </div>
                 </div>
-                <button class="chapter-practice-btn" id="chapter-practice-btn" type="button">Luyện tập từng chương</button>
             </div>
         </aside>
     </div>
@@ -1252,20 +1085,6 @@
                     <div class="leg-dot" style="background:#c0394a"></div>Sai
                 </div>
             </div>
-            <button class="chapter-practice-btn" id="mobile-chapter-practice-btn" type="button">Luyện tập từng chương</button>
-        </div>
-    </div>
-
-    <div class="chapter-modal-overlay" id="chapter-modal-overlay">
-        <div class="chapter-modal">
-            <div class="chapter-modal-head">
-                <div>
-                    <h3>Luyện tập từng chương</h3>
-                    <p>Chọn đề tổng hợp hoặc mở bộ câu hỏi theo đúng trường <code>chapter</code>.</p>
-                </div>
-                <button class="drawer-close" id="chapter-modal-close" type="button">×</button>
-            </div>
-            <div class="chapter-modal-grid" id="chapter-modal-grid"></div>
         </div>
     </div>
 
@@ -1283,18 +1102,17 @@
         ];
         const CIRC = 2 * Math.PI * 25;
         const flatQ = [], mapBtns = [];
-        let questionBank = [];
         let submitted = false;
         const $ = id => document.getElementById(id);
-        function setStatus(msg, err) { $("status-text").textContent = msg; $("status-bar").classList.toggle("error", !!err); $("status-bar").classList.toggle("show", !!err); }
+        function setStatus(msg, err) { $("status-text").textContent = msg; $("status-bar").classList.toggle("error", !!err); }
         function shuffle(a) { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[b[i], b[j]] = [b[j], b[i]]; } return b; }
         function clean(t) { return String(t || "").replace(/\[cite:[^\]]*\]/gi, "").replace(/[\r\n]+/g, "<br>").trim(); }
         function stripPfx(t) { return String(t || "").replace(/^\s*[A-DĐ]\s*[.):\-]\s*/i, "").trim(); }
         function normAns(a) { if (typeof a === "number") return a <= 3 ? String.fromCharCode(65 + a) : String.fromCharCode(64 + a); return String(a || "").trim().toUpperCase(); }
         function levelClass(lv) { if (lv === "Nhận biết") return "lv-nb"; if (lv === "Thông hiểu") return "lv-th"; return "lv-vd"; }
         async function loadJson(url) { const r = await fetch(encodeURI(url), { cache: "no-store" }); if (!r.ok) throw new Error("Không tải được " + url); const txt = await r.text(); try { return JSON.parse(txt); } catch { return JSON.parse(txt.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g, "")); } }
-        function selectByBlueprint(entries) { const pools = new Map(); entries.forEach(e => { const ch = String(e.chapter || "?").trim(), lv = String(e.level || "?").trim(); if (!pools.has(ch)) pools.set(ch, new Map()); const cm = pools.get(ch); if (!cm.has(lv)) cm.set(lv, []); cm.get(lv).push(e); }); const sel = []; EXAM_BLUEPRINT.forEach(rule => { const cp = pools.get(rule.chapter) || new Map(); Object.entries(rule.counts).forEach(([lv, n]) => { const pool = shuffle(cp.get(lv) || []); if (pool.length < n) throw new Error(`Không đủ câu: ${rule.chapter} - ${lv}`); sel.push(...pool.slice(0, n)); }); }); return shuffle(sel); }
-        function getChapterEntries(entries, chapter) { return shuffle(entries.filter(e => String(e.chapter || "?").trim() === chapter)); }
+        function selectByBlueprint(entries) { const pools = new Map(); entries.forEach(e => { const ch = String(e.chapter || "?").trim(), lv = String(e.level || "?").trim(); if (!pools.has(ch)) pools.set(ch, new Map()); const cm = pools.get(ch); if (!cm.has(lv)) cm.set(lv, []); cm.get(lv).push(e); }); const sel = []; EXAM_BLUEPRINT.forEach(rule => { const cp = pools.get(rule.chapter) || new Map(); Object.entries(rule.counts).forEach(([lv, n]) => { const pool = shuffle(cp.get(lv) || []); if (pool.length < n) throw new Error(`Không đủ câu: ${rule.chapter} - ${lv}`); sel.push(...pool.slice(0, n)); }); }); return sel; }
+        function buildSections(entries) { const g = new Map(); entries.forEach(e => { const k = String(e.chapter || "?").trim(); if (!g.has(k)) g.set(k, []); g.get(k).push(e); }); return EXAM_BLUEPRINT.map(r => r.chapter).filter(k => g.has(k)).map(k => ({ key: k, entries: g.get(k) })); }
         function updateRing(answered, total) { const pct = total > 0 ? answered / total : 0; $("ring-fill").style.strokeDashoffset = CIRC * (1 - pct); $("ring-label").textContent = Math.round(pct * 100) + "%"; }
         function updateSummary(score) { const total = flatQ.length, answered = flatQ.filter(q => q.card.querySelector("input:checked")).length; $("s-total").textContent = total; $("s-answered").textContent = answered; $("s-remain").textContent = total - answered; updateRing(answered, total); if (typeof score === "number") { $("score-row").classList.add("show"); $("s-score").textContent = score + "/" + total; } }
         function makeMapBtn(i) { const btn = document.createElement("button"); btn.className = "qmap-btn"; btn.type = "button"; btn.textContent = i + 1; btn.addEventListener("click", () => { document.getElementById("q-" + (i + 1))?.scrollIntoView({ behavior: "smooth", block: "start" }); closeDrawer(); }); return btn; }
@@ -1302,38 +1120,36 @@
         function setMapState(idx, state) { const p = mapBtns[idx]; if (!p) return; p.forEach(b => { b.classList.remove("qmap-answered", "qmap-correct", "qmap-wrong"); if (state) b.classList.add(state); }); }
         function lockQ(item) { if (item.isLocked) return; item.isLocked = true; item.card.querySelectorAll("input").forEach(i => i.disabled = true); item.card.querySelectorAll("label").forEach(l => l.classList.add("locked-option")); }
         function gradeQ(item) { const labels = item.card.querySelectorAll("label"), checked = item.card.querySelector("input:checked"); labels.forEach(l => l.classList.remove("correct-answer", "wrong-answer")); let correct = false; labels.forEach(l => { const inp = l.querySelector("input"), letter = (inp?.value || "").toUpperCase(); if (letter === item.answer) l.classList.add("correct-answer"); if (checked && checked.value.toUpperCase() === letter && letter !== item.answer) l.classList.add("wrong-answer"); }); correct = !!(checked && checked.value.toUpperCase() === item.answer); item.explanation.style.display = "block"; setMapState(item.globalIndex, correct ? "qmap-correct" : "qmap-wrong"); return correct; }
-        function createCard(entry, idx, chKey) { const card = document.createElement("div"); card.className = "question-card"; card.id = "q-" + (idx + 1); card.style.animationDelay = (idx % 12) * 0.03 + "s"; const lv = entry.level || "?"; const chapterBadgeClass = (CHAPTER_COLOR[chKey] || "cg-c1").replace("cg-", "chb-"); card.innerHTML = `<div class="q-top"><span class="q-num">Câu ${idx + 1}</span><div class="q-badges"><span class="chapter-badge ${chapterBadgeClass}">${chKey}</span><span class="level-badge ${levelClass(lv)}">${lv}</span></div></div><div class="q-text">${clean(entry.question || "")}</div>`; const opts = document.createElement("div"); opts.className = "options"; (entry.options || []).forEach((opt, oi) => { const letter = String.fromCharCode(65 + oi), label = document.createElement("label"), inp = document.createElement("input"); inp.type = "radio"; inp.name = "q" + idx; inp.value = letter; inp.addEventListener("change", () => { const item = flatQ[idx]; if (item.isLocked) return; opts.querySelectorAll("label").forEach(l => l.classList.remove("selected-option")); label.classList.add("selected-option"); lockQ(item); gradeQ(item); updateSummary(); }); label.innerHTML = `<span class="opt-letter">${letter}</span><span class="opt-text">${clean(stripPfx(opt))}</span>`; label.insertBefore(inp, label.firstChild); opts.appendChild(label); }); const expl = document.createElement("div"); expl.className = "explanation"; expl.innerHTML = `<em>💡 Giải thích</em>${clean(entry.explain || "Không có giải thích.")}`; card.appendChild(opts); card.appendChild(expl); flatQ.push({ globalIndex: idx, answer: normAns(entry.answer), card, explanation: expl, chapter: chKey, isLocked: false }); return card; }
-        function submitQuiz() { if (submitted) return; submitted = true; let correct = 0; const cstats = {}; flatQ.forEach(item => { const ch = item.chapter; if (!cstats[ch]) cstats[ch] = { correct: 0, total: 0 }; cstats[ch].total++; if (gradeQ(item)) { correct++; cstats[ch].correct++; } }); const total = flatQ.length, pct = total ? (correct / total * 100).toFixed(1) : "0.0"; $("r-score").textContent = correct + "/" + total; $("r-pct").textContent = pct + "%"; const bg = $("breakdown-grid"); bg.innerHTML = ""; EXAM_BLUEPRINT.forEach(rule => { const st = cstats[rule.chapter]; if (!st) return; const p = Math.round(st.correct / st.total * 100); const c = document.createElement("div"); c.className = "break-card"; c.innerHTML = `<div class="break-name">${rule.chapter}: ${CHAPTER_TITLES[rule.chapter]}</div><div class="break-score">${st.correct}/${st.total} câu đúng</div><div class="break-bar"><div class="break-fill" style="width:0" data-w="${p}%"></div></div>`; bg.appendChild(c); }); setTimeout(() => bg.querySelectorAll(".break-fill").forEach(el => el.style.width = el.dataset.w), 80); $("result-panel").classList.add("active"); $("review-btn").classList.remove("hidden"); $("submit-btn").disabled = true; const msb = $("mobile-submit-btn"); if (msb) msb.disabled = true; updateSummary(correct); setStatus("", false); setTimeout(() => $("result-panel").scrollIntoView({ behavior: "smooth", block: "nearest" }), 80); }
+        function createCard(entry, idx, chKey) { const card = document.createElement("div"); card.className = "question-card"; card.id = "q-" + (idx + 1); card.style.animationDelay = (idx % 12) * 0.03 + "s"; const lv = entry.level || "?"; card.innerHTML = `<div class="q-top"><span class="q-num">Câu ${idx + 1}</span><span class="level-badge ${levelClass(lv)}">${lv}</span></div><div class="q-text">${clean(entry.question || "")}</div>`; const opts = document.createElement("div"); opts.className = "options"; (entry.options || []).forEach((opt, oi) => { const letter = String.fromCharCode(65 + oi), label = document.createElement("label"), inp = document.createElement("input"); inp.type = "radio"; inp.name = "q" + idx; inp.value = letter; inp.addEventListener("change", () => { const item = flatQ[idx]; if (item.isLocked) return; opts.querySelectorAll("label").forEach(l => l.classList.remove("selected-option")); label.classList.add("selected-option"); lockQ(item); gradeQ(item); updateSummary(); }); label.innerHTML = `<span class="opt-letter">${letter}</span><span class="opt-text">${clean(stripPfx(opt))}</span>`; label.insertBefore(inp, label.firstChild); opts.appendChild(label); }); const expl = document.createElement("div"); expl.className = "explanation"; expl.innerHTML = `<em>💡 Giải thích</em>${clean(entry.explain || "Không có giải thích.")}`; card.appendChild(opts); card.appendChild(expl); flatQ.push({ globalIndex: idx, answer: normAns(entry.answer), card, explanation: expl, chapter: chKey, isLocked: false }); return card; }
+        function submitQuiz() { if (submitted) return; submitted = true; let correct = 0; const cstats = {}; flatQ.forEach(item => { const ch = item.chapter; if (!cstats[ch]) cstats[ch] = { correct: 0, total: 0 }; cstats[ch].total++; if (gradeQ(item)) { correct++; cstats[ch].correct++; } }); const total = flatQ.length, pct = total ? (correct / total * 100).toFixed(1) : "0.0"; $("r-score").textContent = correct + "/" + total; $("r-pct").textContent = pct + "%"; const bg = $("breakdown-grid"); bg.innerHTML = ""; EXAM_BLUEPRINT.forEach(rule => { const st = cstats[rule.chapter]; if (!st) return; const p = Math.round(st.correct / st.total * 100); const c = document.createElement("div"); c.className = "break-card"; c.innerHTML = `<div class="break-name">${rule.chapter}: ${CHAPTER_TITLES[rule.chapter]}</div><div class="break-score">${st.correct}/${st.total} câu đúng</div><div class="break-bar"><div class="break-fill" style="width:0" data-w="${p}%"></div></div>`; bg.appendChild(c); }); setTimeout(() => bg.querySelectorAll(".break-fill").forEach(el => el.style.width = el.dataset.w), 80); $("result-panel").classList.add("active"); $("review-btn").classList.remove("hidden"); $("submit-btn").disabled = true; const msb = $("mobile-submit-btn"); if (msb) msb.disabled = true; updateSummary(correct); setStatus(`Đã nộp bài · ${correct}/${total} câu đúng (${pct}%)`, false); setTimeout(() => $("result-panel").scrollIntoView({ behavior: "smooth", block: "nearest" }), 80); }
         function openDrawer() { $("drawer-overlay").classList.add("active"); }
         function closeDrawer() { $("drawer-overlay").classList.remove("active"); }
-        function openChapterModal() { $("chapter-modal-overlay").classList.add("active"); }
-        function closeChapterModal() { $("chapter-modal-overlay").classList.remove("active"); }
-        function setHeroSubtext(text) { $("hero-sub").textContent = text; }
-        function resetQuizUi() { flatQ.length = 0; mapBtns.length = 0; submitted = false; $("quiz-area").innerHTML = ""; $("result-panel").classList.remove("active"); $("breakdown-grid").innerHTML = ""; $("review-btn").classList.add("hidden"); $("submit-btn").disabled = false; const msb = $("mobile-submit-btn"); if (msb) msb.disabled = false; $("score-row").classList.remove("show"); $("s-score").textContent = "—"; $("r-score").textContent = "0/0"; $("r-pct").textContent = "0%"; updateSummary(); window.scrollTo({ top: 0, behavior: "smooth" }); }
-        function renderQuiz(entries) { resetQuizUi(); entries.forEach((entry, idx) => $("quiz-area").appendChild(createCard(entry, idx, String(entry.chapter || "?").trim()))); initMap(flatQ.length); updateSummary(); }
-        function renderMixedExam() { setHeroSubtext("35 câu theo ma trận 6 chương · 3 mức nhận thức"); renderQuiz(selectByBlueprint(questionBank)); }
-        function renderChapterPractice(chapter) { setHeroSubtext(`${chapter} · ${CHAPTER_TITLES[chapter]} · luyện tập theo trường chapter`); renderQuiz(getChapterEntries(questionBank, chapter)); }
-        function buildChapterPracticeOptions() { const grid = $("chapter-modal-grid"); grid.innerHTML = ""; const totalBtn = document.createElement("button"); totalBtn.type = "button"; totalBtn.className = "chapter-option"; totalBtn.innerHTML = `<strong>Đề tổng hợp 35 câu</strong><span>Xáo trộn ngẫu nhiên theo ma trận 6 chương và 3 mức nhận thức.</span>`; totalBtn.addEventListener("click", () => { closeChapterModal(); renderMixedExam(); }); grid.appendChild(totalBtn); Object.keys(CHAPTER_TITLES).forEach(chapter => { const count = questionBank.filter(e => String(e.chapter || "?").trim() === chapter).length; const btn = document.createElement("button"); btn.type = "button"; btn.className = "chapter-option"; btn.innerHTML = `<strong>${chapter}</strong><span>${CHAPTER_TITLES[chapter]} · ${count} câu hỏi cùng trường chapter.</span>`; btn.addEventListener("click", () => { closeDrawer(); closeChapterModal(); renderChapterPractice(chapter); }); grid.appendChild(btn); }); }
         async function init() {
             $("submit-btn").addEventListener("click", submitQuiz);
             $("mobile-submit-btn")?.addEventListener("click", () => { closeDrawer(); submitQuiz(); });
             $("map-fab").addEventListener("click", openDrawer);
             $("drawer-close").addEventListener("click", closeDrawer);
             $("drawer-overlay").addEventListener("click", e => { if (e.target === e.currentTarget) closeDrawer(); });
-            $("chapter-practice-btn").addEventListener("click", openChapterModal);
-            $("mobile-chapter-practice-btn").addEventListener("click", openChapterModal);
-            $("chapter-modal-close").addEventListener("click", closeChapterModal);
-            $("chapter-modal-overlay").addEventListener("click", e => { if (e.target === e.currentTarget) closeChapterModal(); });
             $("review-btn").addEventListener("click", () => document.getElementById("q-1")?.scrollIntoView({ behavior: "smooth", block: "start" }));
             $("back-to-top").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
             window.addEventListener("scroll", () => $("back-to-top").classList.toggle("show", window.scrollY > 360));
             try {
                 const entries = await loadJson(QUESTION_SOURCE);
                 if (!Array.isArray(entries) || !entries.length) throw new Error("Dữ liệu rỗng.");
-                questionBank = entries.slice();
-                buildChapterPracticeOptions();
-                renderMixedExam();
-                setStatus("", false);
+                const selected = selectByBlueprint(entries);
+                const sections = buildSections(selected);
+                const area = $("quiz-area"); area.innerHTML = "";
+                let idx = 0;
+                sections.forEach(sec => {
+                    const cg = CHAPTER_COLOR[sec.key] || "cg-c1";
+                    const wrap = document.createElement("div"); wrap.className = "section-group " + cg;
+                    const head = document.createElement("div"); head.className = "chapter-head";
+                    head.innerHTML = `<div class="ch-pip"></div><span class="ch-label">${sec.key}</span><span class="ch-name">${CHAPTER_TITLES[sec.key] || sec.key}</span>`;
+                    wrap.appendChild(head); area.appendChild(wrap);
+                    sec.entries.forEach(e => { area.appendChild(createCard(e, idx, sec.key)); idx++; });
+                });
+                initMap(flatQ.length); updateSummary();
+                setStatus(`Đã tải ${flatQ.length} câu từ ${QUESTION_SOURCE}`, false);
             } catch (err) { setStatus("Lỗi: " + err.message, true); }
         }
         init();
