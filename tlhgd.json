@@ -5043,15 +5043,15 @@
     "chapter": "Chương 1",
     "subject": "Tâm lý học Giáo dục",
     "level": "Nhận biết",
-    "question": "Theo giáo trình, phương pháp xã hội đồ (Sociometry) có tác dụng gì?",
+    "question": "Phương pháp nghiên cứu nào thực hiện việc thu thập thông tin bằng cách sử dụng hệ thống câu hỏi soạn sẵn nhằm thu thập ý kiến, thái độ của một số lượng lớn đối tượng?",
     "options": [
-      "A. Nghiên cứu các mối quan hệ lựa chọn và vị thế cá nhân trong nhóm.",
-      "B. Đo lường khả năng ghi nhớ các hình ảnh đồ họa.",
-      "C. Phân tích các sản phẩm mỹ thuật của học sinh.",
-      "D. Đánh giá trình độ phát triển kinh tế của gia đình học sinh."
+      "A. Phương pháp phỏng vấn.",
+      "B. Phương pháp trắc nghiệm.",
+      "C. Phương pháp điều tra bằng phiếu hỏi.",
+      "D. Phương pháp quan sát."
     ],
-    "answer": "A",
-    "explain": "Phương pháp này giúp giáo viên vẽ ra sơ đồ các mối quan hệ bạn bè trong lớp, từ đó biết được ai là người có uy tín nhất, nhóm nào chơi thân với nhau, hoặc học sinh nào đang bị cả lớp cô lập."
+    "answer": "C",
+    "explain": "Phương pháp điều tra bằng phiếu hỏi sử dụng các câu hỏi soạn sẵn trên giấy hoặc phương tiện điện tử để thu thập dữ liệu về thái độ, ý kiến của khách thể trên diện rộng một cách nhanh chóng và hiệu quả."
   },
   {
     "chapter": "Chương 1",
@@ -6079,15 +6079,15 @@
     "chapter": "Chương 1",
     "subject": "Tâm lý học Giáo dục",
     "level": "Nhận biết",
-    "question": "Phương pháp nghiên cứu nào thường dùng để tìm hiểu các 'vết tích' lịch sử phát triển cá nhân qua các sự kiện quan trọng?",
+    "question": "Phương pháp nghiên cứu nào đi sâu tìm hiểu, phân tích một cách sâu sắc và chi tiết một khách thể (cá nhân hay tập thể) nhất định nhằm xác lập hồ sơ của khách thể đó?",
     "options": [
-      "A. Phương pháp quan sát nhật ký.",
-      "B. Phương pháp tiểu sử.",
-      "C. Phương pháp xã hội đồ.",
-      "D. Phương pháp trắc nghiệm thành quả."
+      "A. Phương pháp quan sát.",
+      "B. Phương pháp phỏng vấn.",
+      "C. Phương pháp nghiên cứu trường hợp.",
+      "D. Phương pháp điều tra bằng phiếu hỏi."
     ],
-    "answer": "B",
-    "explain": "Phương pháp tiểu sử giúp xâu chuỗi các biến cố trong cuộc đời (như chuyển trường, biến cố gia đình) để hiểu tại sao hiện tại học sinh lại có những nét tính cách hay hành vi như vậy."
+    "answer": "C",
+    "explain": "Theo giáo trình (trang 31), phương pháp nghiên cứu trường hợp cho phép thu thập dữ liệu về hiện tại và quá khứ của một đối tượng cụ thể để hiểu rõ sự phát triển của cá nhân hoặc nhóm đó."
   },
   {
     "chapter": "Chương 1",

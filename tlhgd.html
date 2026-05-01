@@ -389,6 +389,16 @@
             border-radius: 999px;
         }
 
+        .review-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 999px;
+            background: #fff3e0;
+            color: #9a5a00;
+            border: 1px solid #f0c98b;
+        }
+
         .lv-nb {
             background: #e6f3ec;
             color: #2e7d52;
@@ -1025,11 +1035,13 @@
 
         .chapter-modal {
             width: min(560px, 100%);
+            max-height: calc(100vh - 36px);
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
             box-shadow: var(--shadow-md);
             padding: 20px;
+            overflow: hidden;
         }
 
         .chapter-modal-head {
@@ -1057,6 +1069,7 @@
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 10px;
+            overflow-y: auto;
         }
 
         .chapter-option {
@@ -1106,6 +1119,27 @@
 
             .mobile-submit {
                 display: block;
+                right: 118px;
+                bottom: calc(14px + env(safe-area-inset-bottom));
+            }
+
+            .mobile-submit .btn-submit {
+                height: 44px;
+                margin-top: 0;
+                padding: 0 12px;
+            }
+
+            #back-to-top,
+            #map-fab {
+                bottom: calc(14px + env(safe-area-inset-bottom));
+            }
+
+            #back-to-top {
+                right: 14px;
+            }
+
+            #map-fab {
+                right: 66px;
             }
 
             .main-col {
@@ -1123,6 +1157,50 @@
         }
 
         @media(max-width:560px) {
+            .chapter-modal-overlay {
+                align-items: flex-end;
+                padding: 12px;
+            }
+
+            .chapter-modal {
+                max-height: calc(100dvh - 24px);
+                padding: 16px;
+                border-radius: 14px;
+            }
+
+            .chapter-modal-head {
+                margin-bottom: 12px;
+            }
+
+            .chapter-modal-head h3 {
+                font-size: .96rem;
+            }
+
+            .chapter-modal-head p {
+                font-size: .78rem;
+                line-height: 1.45;
+            }
+
+            .chapter-modal-grid {
+                max-height: calc(100dvh - 132px);
+                gap: 8px;
+            }
+
+            .chapter-option {
+                padding: 11px 12px;
+                border-radius: 10px;
+            }
+
+            .chapter-option strong {
+                font-size: .86rem;
+                margin-bottom: 2px;
+            }
+
+            .chapter-option span {
+                font-size: .74rem;
+                line-height: 1.38;
+            }
+
             .hero {
                 padding: 36px 20px 30px;
             }
@@ -1182,7 +1260,7 @@
                     <div class="breakdown-grid" id="breakdown-grid"></div>
                     <div class="result-actions">
                         <button id="review-btn" class="btn-plain primary hidden" type="button">↑ Xem lại từ đầu</button>
-                        <button class="btn-plain" type="button" onclick="location.reload()">↺ Làm lại</button>
+                        <button class="btn-plain" id="retry-btn" type="button">↺ Làm lại</button>
                     </div>
                 </div>
             </div>
@@ -1281,9 +1359,15 @@
             { chapter: "Chương 5", counts: { "Nhận biết": 2, "Thông hiểu": 2, "Vận dụng": 1 } },
             { chapter: "Chương 6", counts: { "Nhận biết": 2, "Thông hiểu": 2, "Vận dụng": 1 } }
         ];
+        const PRACTICE_QUESTION_COUNT = 20;
+        const WRONG_POOL_KEY = "tlhgd_wrong_pool_v1";
+        const ACTIVE_SESSION_KEY = "tlhgd_active_session_v1";
         const CIRC = 2 * Math.PI * 25;
         const flatQ = [], mapBtns = [];
         let questionBank = [];
+        let wrongPool = {};
+        let currentSession = null;
+        let lastModeContext = null;
         let submitted = false;
         const $ = id => document.getElementById(id);
         function setStatus(msg, err) { $("status-text").textContent = msg; $("status-bar").classList.toggle("error", !!err); $("status-bar").classList.toggle("show", !!err); }
@@ -1292,9 +1376,76 @@
         function stripPfx(t) { return String(t || "").replace(/^\s*[A-DĐ]\s*[.):\-]\s*/i, "").trim(); }
         function normAns(a) { if (typeof a === "number") return a <= 3 ? String.fromCharCode(65 + a) : String.fromCharCode(64 + a); return String(a || "").trim().toUpperCase(); }
         function levelClass(lv) { if (lv === "Nhận biết") return "lv-nb"; if (lv === "Thông hiểu") return "lv-th"; return "lv-vd"; }
+        function readStore(key, fallback) { try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; } catch { return fallback; } }
+        function writeStore(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { } }
         async function loadJson(url) { const r = await fetch(encodeURI(url), { cache: "no-store" }); if (!r.ok) throw new Error("Không tải được " + url); const txt = await r.text(); try { return JSON.parse(txt); } catch { return JSON.parse(txt.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g, "")); } }
         function selectByBlueprint(entries) { const pools = new Map(); entries.forEach(e => { const ch = String(e.chapter || "?").trim(), lv = String(e.level || "?").trim(); if (!pools.has(ch)) pools.set(ch, new Map()); const cm = pools.get(ch); if (!cm.has(lv)) cm.set(lv, []); cm.get(lv).push(e); }); const sel = []; EXAM_BLUEPRINT.forEach(rule => { const cp = pools.get(rule.chapter) || new Map(); Object.entries(rule.counts).forEach(([lv, n]) => { const pool = shuffle(cp.get(lv) || []); if (pool.length < n) throw new Error(`Không đủ câu: ${rule.chapter} - ${lv}`); sel.push(...pool.slice(0, n)); }); }); return shuffle(sel); }
         function getChapterEntries(entries, chapter) { return shuffle(entries.filter(e => String(e.chapter || "?").trim() === chapter)); }
+        function getQuestionIds(entries) { return entries.map(entry => entry.__qid); }
+        function getAnsweredMap() { const answers = {}; flatQ.forEach(item => { const checked = item.card.querySelector("input:checked"); if (checked) answers[item.qid] = checked.value.toUpperCase(); }); return answers; }
+        function saveWrongPool() { writeStore(WRONG_POOL_KEY, wrongPool); }
+        function syncWrongPool(item, isCorrect) {
+            const chapter = String(item.chapter || "").trim();
+            if (!chapter || !item.qid) return;
+            const pending = new Set(Array.isArray(wrongPool[chapter]) ? wrongPool[chapter] : []);
+            if (isCorrect) pending.delete(item.qid);
+            else pending.add(item.qid);
+            wrongPool[chapter] = Array.from(pending);
+            saveWrongPool();
+        }
+        function saveCurrentSession() {
+            if (!currentSession || submitted || !flatQ.length) return;
+            writeStore(ACTIVE_SESSION_KEY, { ...currentSession, answers: getAnsweredMap() });
+        }
+        function clearCurrentSession() {
+            currentSession = null;
+            try { localStorage.removeItem(ACTIVE_SESSION_KEY); } catch { }
+        }
+        function setCurrentSession(mode, entries, chapter, heroText) {
+            currentSession = { mode, chapter: chapter || null, heroText, entryIds: getQuestionIds(entries) };
+            lastModeContext = { mode, chapter: chapter || null };
+            saveCurrentSession();
+        }
+        function retryCurrentMode() {
+            if (lastModeContext?.mode === "chapter" && lastModeContext.chapter) {
+                renderChapterPractice(lastModeContext.chapter);
+                return;
+            }
+            renderMixedExam();
+        }
+        function applyAnswer(item, answer, persist = true) {
+            const normalized = normAns(answer);
+            const input = item.card.querySelector(`input[value="${normalized}"]`);
+            const label = input?.closest("label");
+            if (!input || !label) return;
+            item.card.querySelectorAll("label").forEach(l => l.classList.remove("selected-option"));
+            label.classList.add("selected-option");
+            input.checked = true;
+            lockQ(item);
+            const isCorrect = gradeQ(item);
+            syncWrongPool(item, isCorrect);
+            if (persist) saveCurrentSession();
+        }
+        function restoreSessionIfAny() {
+            const saved = readStore(ACTIVE_SESSION_KEY, null);
+            if (!saved || !Array.isArray(saved.entryIds) || !saved.entryIds.length) return false;
+            const byId = new Map(questionBank.map(entry => [entry.__qid, entry]));
+            const entries = saved.entryIds.map(id => byId.get(id)).filter(Boolean);
+            if (!entries.length || entries.length !== saved.entryIds.length) return false;
+            if (saved.heroText) setHeroSubtext(saved.heroText);
+            renderQuiz(entries, saved);
+            return true;
+        }
+        function buildChapterPracticeSet(chapter) {
+            const chapterEntries = questionBank.filter(e => String(e.chapter || "?").trim() === chapter);
+            const byId = new Map(chapterEntries.map(entry => [entry.__qid, entry]));
+            const wrongIds = shuffle((wrongPool[chapter] || []).filter(id => byId.has(id)));
+            const picked = wrongIds.map(id => ({ ...byId.get(id), __reviewTag: true }));
+            const pickedIds = new Set(wrongIds);
+            const remaining = shuffle(chapterEntries.filter(entry => !pickedIds.has(entry.__qid)).map(entry => ({ ...entry, __reviewTag: false })));
+            const targetSize = Math.min(chapterEntries.length, Math.max(PRACTICE_QUESTION_COUNT, picked.length));
+            return shuffle(picked.concat(remaining).slice(0, targetSize));
+        }
         function updateRing(answered, total) { const pct = total > 0 ? answered / total : 0; $("ring-fill").style.strokeDashoffset = CIRC * (1 - pct); $("ring-label").textContent = Math.round(pct * 100) + "%"; }
         function updateSummary(score) { const total = flatQ.length, answered = flatQ.filter(q => q.card.querySelector("input:checked")).length; $("s-total").textContent = total; $("s-answered").textContent = answered; $("s-remain").textContent = total - answered; updateRing(answered, total); if (typeof score === "number") { $("score-row").classList.add("show"); $("s-score").textContent = score + "/" + total; } }
         function makeMapBtn(i) { const btn = document.createElement("button"); btn.className = "qmap-btn"; btn.type = "button"; btn.textContent = i + 1; btn.addEventListener("click", () => { document.getElementById("q-" + (i + 1))?.scrollIntoView({ behavior: "smooth", block: "start" }); closeDrawer(); }); return btn; }
@@ -1302,18 +1453,18 @@
         function setMapState(idx, state) { const p = mapBtns[idx]; if (!p) return; p.forEach(b => { b.classList.remove("qmap-answered", "qmap-correct", "qmap-wrong"); if (state) b.classList.add(state); }); }
         function lockQ(item) { if (item.isLocked) return; item.isLocked = true; item.card.querySelectorAll("input").forEach(i => i.disabled = true); item.card.querySelectorAll("label").forEach(l => l.classList.add("locked-option")); }
         function gradeQ(item) { const labels = item.card.querySelectorAll("label"), checked = item.card.querySelector("input:checked"); labels.forEach(l => l.classList.remove("correct-answer", "wrong-answer")); let correct = false; labels.forEach(l => { const inp = l.querySelector("input"), letter = (inp?.value || "").toUpperCase(); if (letter === item.answer) l.classList.add("correct-answer"); if (checked && checked.value.toUpperCase() === letter && letter !== item.answer) l.classList.add("wrong-answer"); }); correct = !!(checked && checked.value.toUpperCase() === item.answer); item.explanation.style.display = "block"; setMapState(item.globalIndex, correct ? "qmap-correct" : "qmap-wrong"); return correct; }
-        function createCard(entry, idx, chKey) { const card = document.createElement("div"); card.className = "question-card"; card.id = "q-" + (idx + 1); card.style.animationDelay = (idx % 12) * 0.03 + "s"; const lv = entry.level || "?"; const chapterBadgeClass = (CHAPTER_COLOR[chKey] || "cg-c1").replace("cg-", "chb-"); card.innerHTML = `<div class="q-top"><span class="q-num">Câu ${idx + 1}</span><div class="q-badges"><span class="chapter-badge ${chapterBadgeClass}">${chKey}</span><span class="level-badge ${levelClass(lv)}">${lv}</span></div></div><div class="q-text">${clean(entry.question || "")}</div>`; const opts = document.createElement("div"); opts.className = "options"; (entry.options || []).forEach((opt, oi) => { const letter = String.fromCharCode(65 + oi), label = document.createElement("label"), inp = document.createElement("input"); inp.type = "radio"; inp.name = "q" + idx; inp.value = letter; inp.addEventListener("change", () => { const item = flatQ[idx]; if (item.isLocked) return; opts.querySelectorAll("label").forEach(l => l.classList.remove("selected-option")); label.classList.add("selected-option"); lockQ(item); gradeQ(item); updateSummary(); }); label.innerHTML = `<span class="opt-letter">${letter}</span><span class="opt-text">${clean(stripPfx(opt))}</span>`; label.insertBefore(inp, label.firstChild); opts.appendChild(label); }); const expl = document.createElement("div"); expl.className = "explanation"; expl.innerHTML = `<em>💡 Giải thích</em>${clean(entry.explain || "Không có giải thích.")}`; card.appendChild(opts); card.appendChild(expl); flatQ.push({ globalIndex: idx, answer: normAns(entry.answer), card, explanation: expl, chapter: chKey, isLocked: false }); return card; }
-        function submitQuiz() { if (submitted) return; submitted = true; let correct = 0; const cstats = {}; flatQ.forEach(item => { const ch = item.chapter; if (!cstats[ch]) cstats[ch] = { correct: 0, total: 0 }; cstats[ch].total++; if (gradeQ(item)) { correct++; cstats[ch].correct++; } }); const total = flatQ.length, pct = total ? (correct / total * 100).toFixed(1) : "0.0"; $("r-score").textContent = correct + "/" + total; $("r-pct").textContent = pct + "%"; const bg = $("breakdown-grid"); bg.innerHTML = ""; EXAM_BLUEPRINT.forEach(rule => { const st = cstats[rule.chapter]; if (!st) return; const p = Math.round(st.correct / st.total * 100); const c = document.createElement("div"); c.className = "break-card"; c.innerHTML = `<div class="break-name">${rule.chapter}: ${CHAPTER_TITLES[rule.chapter]}</div><div class="break-score">${st.correct}/${st.total} câu đúng</div><div class="break-bar"><div class="break-fill" style="width:0" data-w="${p}%"></div></div>`; bg.appendChild(c); }); setTimeout(() => bg.querySelectorAll(".break-fill").forEach(el => el.style.width = el.dataset.w), 80); $("result-panel").classList.add("active"); $("review-btn").classList.remove("hidden"); $("submit-btn").disabled = true; const msb = $("mobile-submit-btn"); if (msb) msb.disabled = true; updateSummary(correct); setStatus("", false); setTimeout(() => $("result-panel").scrollIntoView({ behavior: "smooth", block: "nearest" }), 80); }
+        function createCard(entry, idx, chKey) { const card = document.createElement("div"); card.className = "question-card"; card.id = "q-" + (idx + 1); card.style.animationDelay = (idx % 12) * 0.03 + "s"; const lv = entry.level || "?"; const chapterBadgeClass = (CHAPTER_COLOR[chKey] || "cg-c1").replace("cg-", "chb-"); const reviewBadge = entry.__reviewTag ? `<span class="review-badge">Sai lượt trước</span>` : ""; card.innerHTML = `<div class="q-top"><span class="q-num">Câu ${idx + 1}</span><div class="q-badges">${reviewBadge}<span class="chapter-badge ${chapterBadgeClass}">${chKey}</span><span class="level-badge ${levelClass(lv)}">${lv}</span></div></div><div class="q-text">${clean(entry.question || "")}</div>`; const opts = document.createElement("div"); opts.className = "options"; (entry.options || []).forEach((opt, oi) => { const letter = String.fromCharCode(65 + oi), label = document.createElement("label"), inp = document.createElement("input"); inp.type = "radio"; inp.name = "q" + idx; inp.value = letter; inp.addEventListener("change", () => { const item = flatQ[idx]; if (item.isLocked) return; applyAnswer(item, letter); updateSummary(); }); label.innerHTML = `<span class="opt-letter">${letter}</span><span class="opt-text">${clean(stripPfx(opt))}</span>`; label.insertBefore(inp, label.firstChild); opts.appendChild(label); }); const expl = document.createElement("div"); expl.className = "explanation"; expl.innerHTML = `<em>💡 Giải thích</em>${clean(entry.explain || "Không có giải thích.")}`; card.appendChild(opts); card.appendChild(expl); flatQ.push({ globalIndex: idx, qid: entry.__qid, answer: normAns(entry.answer), card, explanation: expl, chapter: chKey, isLocked: false }); return card; }
+        function submitQuiz() { if (submitted) return; submitted = true; let correct = 0; const cstats = {}; flatQ.forEach(item => { const ch = item.chapter; if (!cstats[ch]) cstats[ch] = { correct: 0, total: 0 }; cstats[ch].total++; const isCorrect = gradeQ(item); syncWrongPool(item, isCorrect); if (isCorrect) { correct++; cstats[ch].correct++; } }); const total = flatQ.length, pct = total ? (correct / total * 100).toFixed(1) : "0.0"; $("r-score").textContent = correct + "/" + total; $("r-pct").textContent = pct + "%"; const bg = $("breakdown-grid"); bg.innerHTML = ""; EXAM_BLUEPRINT.forEach(rule => { const st = cstats[rule.chapter]; if (!st) return; const p = Math.round(st.correct / st.total * 100); const c = document.createElement("div"); c.className = "break-card"; c.innerHTML = `<div class="break-name">${rule.chapter}: ${CHAPTER_TITLES[rule.chapter]}</div><div class="break-score">${st.correct}/${st.total} câu đúng</div><div class="break-bar"><div class="break-fill" style="width:0" data-w="${p}%"></div></div>`; bg.appendChild(c); }); setTimeout(() => bg.querySelectorAll(".break-fill").forEach(el => el.style.width = el.dataset.w), 80); $("result-panel").classList.add("active"); $("review-btn").classList.remove("hidden"); $("submit-btn").disabled = true; const msb = $("mobile-submit-btn"); if (msb) msb.disabled = true; updateSummary(correct); clearCurrentSession(); setStatus("", false); setTimeout(() => $("result-panel").scrollIntoView({ behavior: "smooth", block: "nearest" }), 80); }
         function openDrawer() { $("drawer-overlay").classList.add("active"); }
         function closeDrawer() { $("drawer-overlay").classList.remove("active"); }
         function openChapterModal() { $("chapter-modal-overlay").classList.add("active"); }
         function closeChapterModal() { $("chapter-modal-overlay").classList.remove("active"); }
         function setHeroSubtext(text) { $("hero-sub").textContent = text; }
         function resetQuizUi() { flatQ.length = 0; mapBtns.length = 0; submitted = false; $("quiz-area").innerHTML = ""; $("result-panel").classList.remove("active"); $("breakdown-grid").innerHTML = ""; $("review-btn").classList.add("hidden"); $("submit-btn").disabled = false; const msb = $("mobile-submit-btn"); if (msb) msb.disabled = false; $("score-row").classList.remove("show"); $("s-score").textContent = "—"; $("r-score").textContent = "0/0"; $("r-pct").textContent = "0%"; updateSummary(); window.scrollTo({ top: 0, behavior: "smooth" }); }
-        function renderQuiz(entries) { resetQuizUi(); entries.forEach((entry, idx) => $("quiz-area").appendChild(createCard(entry, idx, String(entry.chapter || "?").trim()))); initMap(flatQ.length); updateSummary(); }
-        function renderMixedExam() { setHeroSubtext("35 câu theo ma trận 6 chương · 3 mức nhận thức"); renderQuiz(selectByBlueprint(questionBank)); }
-        function renderChapterPractice(chapter) { setHeroSubtext(`${chapter} · ${CHAPTER_TITLES[chapter]} · luyện tập theo trường chapter`); renderQuiz(getChapterEntries(questionBank, chapter)); }
-        function buildChapterPracticeOptions() { const grid = $("chapter-modal-grid"); grid.innerHTML = ""; const totalBtn = document.createElement("button"); totalBtn.type = "button"; totalBtn.className = "chapter-option"; totalBtn.innerHTML = `<strong>Đề tổng hợp 35 câu</strong><span>Xáo trộn ngẫu nhiên theo ma trận 6 chương và 3 mức nhận thức.</span>`; totalBtn.addEventListener("click", () => { closeChapterModal(); renderMixedExam(); }); grid.appendChild(totalBtn); Object.keys(CHAPTER_TITLES).forEach(chapter => { const count = questionBank.filter(e => String(e.chapter || "?").trim() === chapter).length; const btn = document.createElement("button"); btn.type = "button"; btn.className = "chapter-option"; btn.innerHTML = `<strong>${chapter}</strong><span>${CHAPTER_TITLES[chapter]} · ${count} câu hỏi cùng trường chapter.</span>`; btn.addEventListener("click", () => { closeDrawer(); closeChapterModal(); renderChapterPractice(chapter); }); grid.appendChild(btn); }); }
+        function renderQuiz(entries, savedState) { resetQuizUi(); entries.forEach((entry, idx) => $("quiz-area").appendChild(createCard(entry, idx, String(entry.chapter || "?").trim()))); initMap(flatQ.length); if (savedState?.answers) flatQ.forEach(item => { if (savedState.answers[item.qid]) applyAnswer(item, savedState.answers[item.qid], false); }); updateSummary(); if (savedState?.mode) { currentSession = { mode: savedState.mode, chapter: savedState.chapter || null, heroText: savedState.heroText || $("hero-sub").textContent, entryIds: entries.map(entry => entry.__qid) }; lastModeContext = { mode: savedState.mode, chapter: savedState.chapter || null }; } saveCurrentSession(); }
+        function renderMixedExam() { const heroText = "35 câu theo ma trận 6 chương · 3 mức nhận thức"; const entries = selectByBlueprint(questionBank); setHeroSubtext(heroText); renderQuiz(entries); setCurrentSession("mixed", entries, null, heroText); }
+        function renderChapterPractice(chapter) { const heroText = `${chapter} · ${CHAPTER_TITLES[chapter]} · 20 câu ngẫu nhiên`; const entries = buildChapterPracticeSet(chapter); setHeroSubtext(heroText); renderQuiz(entries); setCurrentSession("chapter", entries, chapter, heroText); }
+        function buildChapterPracticeOptions() { const grid = $("chapter-modal-grid"); grid.innerHTML = ""; const totalBtn = document.createElement("button"); totalBtn.type = "button"; totalBtn.className = "chapter-option"; totalBtn.innerHTML = `<strong>Đề tổng hợp 35 câu</strong><span>Xáo trộn ngẫu nhiên theo ma trận 6 chương và 3 mức nhận thức.</span>`; totalBtn.addEventListener("click", () => { closeChapterModal(); renderMixedExam(); }); grid.appendChild(totalBtn); Object.keys(CHAPTER_TITLES).forEach(chapter => { const count = questionBank.filter(e => String(e.chapter || "?").trim() === chapter).length; const btn = document.createElement("button"); btn.type = "button"; btn.className = "chapter-option"; btn.innerHTML = `<strong>${chapter}</strong><span>${CHAPTER_TITLES[chapter]} · ${Math.min(PRACTICE_QUESTION_COUNT, count)} câu ngẫu nhiên, ưu tiên các câu từng làm sai.</span>`; btn.addEventListener("click", () => { closeDrawer(); closeChapterModal(); renderChapterPractice(chapter); }); grid.appendChild(btn); }); }
         async function init() {
             $("submit-btn").addEventListener("click", submitQuiz);
             $("mobile-submit-btn")?.addEventListener("click", () => { closeDrawer(); submitQuiz(); });
@@ -1325,14 +1476,17 @@
             $("chapter-modal-close").addEventListener("click", closeChapterModal);
             $("chapter-modal-overlay").addEventListener("click", e => { if (e.target === e.currentTarget) closeChapterModal(); });
             $("review-btn").addEventListener("click", () => document.getElementById("q-1")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+            $("retry-btn").addEventListener("click", retryCurrentMode);
             $("back-to-top").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
             window.addEventListener("scroll", () => $("back-to-top").classList.toggle("show", window.scrollY > 360));
+            window.addEventListener("beforeunload", saveCurrentSession);
             try {
                 const entries = await loadJson(QUESTION_SOURCE);
                 if (!Array.isArray(entries) || !entries.length) throw new Error("Dữ liệu rỗng.");
-                questionBank = entries.slice();
+                wrongPool = readStore(WRONG_POOL_KEY, {});
+                questionBank = entries.map((entry, idx) => ({ ...entry, __qid: "q" + idx }));
                 buildChapterPracticeOptions();
-                renderMixedExam();
+                if (!restoreSessionIfAny()) renderMixedExam();
                 setStatus("", false);
             } catch (err) { setStatus("Lỗi: " + err.message, true); }
         }
