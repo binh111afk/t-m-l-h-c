@@ -1351,6 +1351,7 @@
         const QUESTION_SOURCE = "tlhgd.json";
         const CHAPTER_TITLES = { "Chương 1": "Nhập môn & Lược sử", "Chương 2": "Sự phát triển TL lứa tuổi", "Chương 3": "TLH Hoạt động Dạy & Học", "Chương 4": "Nhân cách & Năng lực GV", "Chương 5": "Hỗ trợ Tâm lý học đường", "Chương 6": "Giáo dục Đạo đức / Giá trị" };
         const CHAPTER_COLOR = { "Chương 1": "cg-c1", "Chương 2": "cg-c2", "Chương 3": "cg-c3", "Chương 4": "cg-c4", "Chương 5": "cg-c5", "Chương 6": "cg-c6" };
+        const STUDOCU_PRACTICE_KEY = "Studocu";
         const EXAM_BLUEPRINT = [
             { chapter: "Chương 1", counts: { "Nhận biết": 2, "Thông hiểu": 2, "Vận dụng": 1 } },
             { chapter: "Chương 2", counts: { "Nhận biết": 3, "Thông hiểu": 2, "Vận dụng": 2 } },
@@ -1407,6 +1408,10 @@
             saveCurrentSession();
         }
         function retryCurrentMode() {
+            if (lastModeContext?.mode === "studocu") {
+                renderStudocuPractice();
+                return;
+            }
             if (lastModeContext?.mode === "chapter" && lastModeContext.chapter) {
                 renderChapterPractice(lastModeContext.chapter);
                 return;
@@ -1446,6 +1451,16 @@
             const targetSize = Math.min(chapterEntries.length, Math.max(PRACTICE_QUESTION_COUNT, picked.length));
             return shuffle(picked.concat(remaining).slice(0, targetSize));
         }
+        function buildStudocuPracticeSet() {
+            const studocuEntries = questionBank.filter(e => String(e.origin || "").trim().toLowerCase() === "studocu");
+            const byId = new Map(studocuEntries.map(entry => [entry.__qid, entry]));
+            const wrongIds = shuffle(Object.values(wrongPool).flat().filter(id => byId.has(id)));
+            const picked = wrongIds.map(id => ({ ...byId.get(id), __reviewTag: true }));
+            const pickedIds = new Set(wrongIds);
+            const remaining = shuffle(studocuEntries.filter(entry => !pickedIds.has(entry.__qid)).map(entry => ({ ...entry, __reviewTag: false })));
+            const targetSize = Math.min(studocuEntries.length, Math.max(PRACTICE_QUESTION_COUNT, picked.length));
+            return shuffle(picked.concat(remaining).slice(0, targetSize));
+        }
         function updateRing(answered, total) { const pct = total > 0 ? answered / total : 0; $("ring-fill").style.strokeDashoffset = CIRC * (1 - pct); $("ring-label").textContent = Math.round(pct * 100) + "%"; }
         function updateSummary(score) { const total = flatQ.length, answered = flatQ.filter(q => q.card.querySelector("input:checked")).length; $("s-total").textContent = total; $("s-answered").textContent = answered; $("s-remain").textContent = total - answered; updateRing(answered, total); if (typeof score === "number") { $("score-row").classList.add("show"); $("s-score").textContent = score + "/" + total; } }
         function makeMapBtn(i) { const btn = document.createElement("button"); btn.className = "qmap-btn"; btn.type = "button"; btn.textContent = i + 1; btn.addEventListener("click", () => { document.getElementById("q-" + (i + 1))?.scrollIntoView({ behavior: "smooth", block: "start" }); closeDrawer(); }); return btn; }
@@ -1464,7 +1479,8 @@
         function renderQuiz(entries, savedState) { resetQuizUi(); entries.forEach((entry, idx) => $("quiz-area").appendChild(createCard(entry, idx, String(entry.chapter || "?").trim()))); initMap(flatQ.length); if (savedState?.answers) flatQ.forEach(item => { if (savedState.answers[item.qid]) applyAnswer(item, savedState.answers[item.qid], false); }); updateSummary(); if (savedState?.mode) { currentSession = { mode: savedState.mode, chapter: savedState.chapter || null, heroText: savedState.heroText || $("hero-sub").textContent, entryIds: entries.map(entry => entry.__qid) }; lastModeContext = { mode: savedState.mode, chapter: savedState.chapter || null }; } saveCurrentSession(); }
         function renderMixedExam() { const heroText = "35 câu theo ma trận 6 chương · 3 mức nhận thức"; const entries = selectByBlueprint(questionBank); setHeroSubtext(heroText); renderQuiz(entries); setCurrentSession("mixed", entries, null, heroText); }
         function renderChapterPractice(chapter) { const heroText = `${chapter} · ${CHAPTER_TITLES[chapter]} · 20 câu ngẫu nhiên`; const entries = buildChapterPracticeSet(chapter); setHeroSubtext(heroText); renderQuiz(entries); setCurrentSession("chapter", entries, chapter, heroText); }
-        function buildChapterPracticeOptions() { const grid = $("chapter-modal-grid"); grid.innerHTML = ""; const totalBtn = document.createElement("button"); totalBtn.type = "button"; totalBtn.className = "chapter-option"; totalBtn.innerHTML = `<strong>Đề tổng hợp 35 câu</strong><span>Xáo trộn ngẫu nhiên theo ma trận 6 chương và 3 mức nhận thức.</span>`; totalBtn.addEventListener("click", () => { closeChapterModal(); renderMixedExam(); }); grid.appendChild(totalBtn); Object.keys(CHAPTER_TITLES).forEach(chapter => { const count = questionBank.filter(e => String(e.chapter || "?").trim() === chapter).length; const btn = document.createElement("button"); btn.type = "button"; btn.className = "chapter-option"; btn.innerHTML = `<strong>${chapter}</strong><span>${CHAPTER_TITLES[chapter]} · ${Math.min(PRACTICE_QUESTION_COUNT, count)} câu ngẫu nhiên, ưu tiên các câu từng làm sai.</span>`; btn.addEventListener("click", () => { closeDrawer(); closeChapterModal(); renderChapterPractice(chapter); }); grid.appendChild(btn); }); }
+        function renderStudocuPractice() { const entries = buildStudocuPracticeSet(); const heroText = `${STUDOCU_PRACTICE_KEY} · ${Math.min(PRACTICE_QUESTION_COUNT, entries.length)} câu ngẫu nhiên từ nguồn Studocu`; setHeroSubtext(heroText); renderQuiz(entries); setCurrentSession("studocu", entries, STUDOCU_PRACTICE_KEY, heroText); }
+        function buildChapterPracticeOptions() { const grid = $("chapter-modal-grid"); grid.innerHTML = ""; const totalBtn = document.createElement("button"); totalBtn.type = "button"; totalBtn.className = "chapter-option"; totalBtn.innerHTML = `<strong>Đề tổng hợp 35 câu</strong><span>Xáo trộn ngẫu nhiên theo ma trận 6 chương và 3 mức nhận thức.</span>`; totalBtn.addEventListener("click", () => { closeChapterModal(); renderMixedExam(); }); grid.appendChild(totalBtn); Object.keys(CHAPTER_TITLES).forEach(chapter => { const count = questionBank.filter(e => String(e.chapter || "?").trim() === chapter).length; const btn = document.createElement("button"); btn.type = "button"; btn.className = "chapter-option"; btn.innerHTML = `<strong>${chapter}</strong><span>${CHAPTER_TITLES[chapter]} · ${Math.min(PRACTICE_QUESTION_COUNT, count)} câu ngẫu nhiên, ưu tiên các câu từng làm sai.</span>`; btn.addEventListener("click", () => { closeDrawer(); closeChapterModal(); renderChapterPractice(chapter); }); grid.appendChild(btn); }); const studocuCount = questionBank.filter(e => String(e.origin || "").trim().toLowerCase() === "studocu").length; const studocuBtn = document.createElement("button"); studocuBtn.type = "button"; studocuBtn.className = "chapter-option"; studocuBtn.innerHTML = `<strong>${STUDOCU_PRACTICE_KEY}</strong><span>${Math.min(PRACTICE_QUESTION_COUNT, studocuCount)} câu ngẫu nhiên, chỉ lấy các câu có origin là studocu.</span>`; studocuBtn.addEventListener("click", () => { closeDrawer(); closeChapterModal(); renderStudocuPractice(); }); grid.appendChild(studocuBtn); }
         async function init() {
             $("submit-btn").addEventListener("click", submitQuiz);
             $("mobile-submit-btn")?.addEventListener("click", () => { closeDrawer(); submitQuiz(); });
