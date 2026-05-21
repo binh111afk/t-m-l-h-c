@@ -8578,5 +8578,2435 @@
     ],
     "answer": "A",
     "explain": "Giao tiếp sư phạm là sự tiếp xúc tâm lý đặc thù giữa giáo viên và học sinh trong hoạt động giáo dục."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Đâu là đối tượng nghiên cứu của Tâm lý học giáo dục?",
+    "options": [
+      "A. Các hiện tượng tâm lý người trong từng giai đoạn lứa tuổi.",
+      "B. Hoạt động nhận thức của cá nhân.",
+      "C. Các quy luật nảy sinh, biến đổi, phát triển của các hiện tượng tâm lý trong quá trình dạy học, giáo dục.",
+      "D. Tất cả đều các phương án trên đều sai."
+    ],
+    "answer": "C",
+    "explain": "Đối tượng nghiên cứu của Tâm lý học giáo dục là các quy luật nảy sinh, biến đổi và phát triển của hiện tượng tâm lý trong quá trình dạy học, giáo dục. Các phương án A và B thuộc phạm vi của những chuyên ngành tâm lý học khác hoặc chỉ phản ánh một phần nhỏ."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Chọn phát biểu KHÔNG ĐÚNG về phương pháp thực nghiệm trong nghiên cứu Tâm lý học giáo dục.",
+    "options": [
+      "A. Biến phụ thuộc là biến số được giả định chịu ảnh hưởng, tác động của biến độc lập.",
+      "B. Biến phụ thuộc là biến số được nhà nghiên cứu thao tác một cách có chủ ý trong quá trình thực nghiệm.",
+      "C. Xác nhận một mối quan hệ mang tính nhân quả.",
+      "D. Nhóm thực nghiệm là nhóm khách thể nhận được những điều kiện hoặc sự kiện đặc biệt (biến độc lập)."
+    ],
+    "answer": "B",
+    "explain": "Trong thực nghiệm, biến độc lập mới là biến được nhà nghiên cứu chủ động thao tác. Biến phụ thuộc là biến được đo lường để xem nó chịu ảnh hưởng như thế nào từ biến độc lập, nên phát biểu B là không đúng."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Phương pháp trắc nghiệm đòi hỏi công cụ nghiên cứu phải đáp ứng tối thiểu bao nhiêu yêu cầu?",
+    "options": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ],
+    "answer": "B",
+    "explain": "Công cụ trắc nghiệm tâm lý cần đáp ứng tối thiểu ba yêu cầu: độ tin cậy, độ giá trị và được chuẩn hóa. Đây là điều kiện để kết quả đo lường có tính khách quan và khoa học."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Điều nào sau đây ĐÚNG về nghiên cứu tương quan?",
+    "options": [
+      "A. Có thể đưa ra dự báo về sự biến thiên của một biến số này dựa trên thông tin có được từ một biến số khác.",
+      "B. Xác nhận một mối quan hệ mang tính nhân quả.",
+      "C. Mối tương quan thuận cho thấy một yếu tố tăng thì yếu tố còn lại giảm.",
+      "D. Mối tương quan nghịch cho thấy hai yếu tố tăng hoặc giảm cùng nhau."
+    ],
+    "answer": "A",
+    "explain": "Nghiên cứu tương quan mô tả mối liên hệ giữa hai hay nhiều biến số và có thể hỗ trợ dự báo. Tuy nhiên, tương quan không đủ để khẳng định quan hệ nhân quả."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Để đảm bảo tính khoa học của kết quả nghiên cứu, người nghiên cứu cần:",
+    "options": [
+      "A. Lựa chọn phương pháp nghiên cứu phù hợp với mục đích nghiên cứu.",
+      "B. Sử dụng phối hợp, đồng bộ các phương pháp nghiên cứu.",
+      "C. Tuân thủ các chuẩn mực đạo đức trong nghiên cứu.",
+      "D. Tất cả đều đúng."
+    ],
+    "answer": "D",
+    "explain": "Một nghiên cứu khoa học cần có phương pháp phù hợp, có thể phối hợp nhiều phương pháp để tăng độ tin cậy và phải tuân thủ đạo đức nghiên cứu, đặc biệt khi làm việc với người học."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Hoạt động chủ đạo của tuổi thiếu niên là gì?",
+    "options": [
+      "A. Hoạt động học tập.",
+      "B. Hoạt động giao tiếp.",
+      "C. Hoạt động học tập – hướng nghiệp.",
+      "D. Hoạt động vui chơi."
+    ],
+    "answer": "B",
+    "explain": "Ở tuổi thiếu niên, giao tiếp, đặc biệt là giao tiếp với bạn bè, giữ vai trò chủ đạo và tác động mạnh đến sự hình thành những nét tâm lý mới của lứa tuổi này."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Điều nào sau đây KHÔNG ĐÚNG về tuổi thiếu niên?",
+    "options": [
+      "A. Tốc độ phát triển cơ thể rất nhanh, mạnh, không đồng đều.",
+      "B. Từ vị trí là “trẻ con” chuyển dần sang vị trí mới “vừa trẻ con, vừa người lớn”.",
+      "C. Tính không chủ định phát triển mạnh trong các hoạt động nhận thức.",
+      "D. Đa số có khả năng thể hiện bản thân đồng nhất với giới tính."
+    ],
+    "answer": "C",
+    "explain": "Ở tuổi thiếu niên, các quá trình nhận thức có chủ định phát triển mạnh hơn trước. Vì vậy nói tính không chủ định phát triển mạnh trong các hoạt động nhận thức là không phù hợp."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Nét cấu tạo tâm lý mới của tuổi thiếu niên là:",
+    "options": [
+      "A. Tự ý thức",
+      "B. Năng lực tự ý thức",
+      "C. Xu hướng nghề nghiệp",
+      "D. Mối tình đầu"
+    ],
+    "answer": "A",
+    "explain": "Tự ý thức là nét cấu tạo tâm lý mới nổi bật của tuổi thiếu niên. Các em bắt đầu quan tâm nhiều hơn đến bản thân, vị trí của mình và cách người khác đánh giá mình."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Hoạt động chủ đạo của tuổi thanh niên học sinh là gì?",
+    "options": [
+      "A. Hoạt động học tập.",
+      "B. Hoạt động giao tiếp.",
+      "C. Hoạt động học tập – hướng nghiệp.",
+      "D. Hoạt động vui chơi."
+    ],
+    "answer": "C",
+    "explain": "Ở tuổi đầu thanh niên, hoạt động học tập gắn với hướng nghiệp trở thành hoạt động chủ đạo, chi phối mạnh việc hình thành xu hướng nghề nghiệp và nhân cách."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Nét cấu tạo tâm lý mới của tuổi đầu thanh niên là:",
+    "options": [
+      "A. Tự ý thức",
+      "B. Năng lực tự ý thức",
+      "C. Tư duy trừu tượng",
+      "D. Cảm giác mình là người lớn"
+    ],
+    "answer": "B",
+    "explain": "Tuổi đầu thanh niên không chỉ có tự ý thức đơn giản mà bắt đầu hình thành năng lực tự ý thức: biết phân tích, đánh giá bản thân ở hiện tại và định hướng cho tương lai."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Quan niệm về trẻ em theo quan điểm duy vật biện chứng là:",
+    "options": [
+      "A. Trẻ em như búp trên cành.",
+      "B. Trẻ em là trẻ em.",
+      "C. Trẻ em là người lớn thu nhỏ lại.",
+      "D. Trẻ em như tờ giấy trằng."
+    ],
+    "answer": "B",
+    "explain": "Quan điểm duy vật biện chứng xem trẻ em là một thực thể đang phát triển theo những quy luật riêng, không phải người lớn thu nhỏ, cũng không phải tờ giấy trắng hoàn toàn bị môi trường ghi lên."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Theo bạn, tự học thuộc kiểu nào?",
+    "options": [
+      "A. Dạy trong đời sống hàng ngày",
+      "B. Hoạt động học",
+      "C. Học trong đời sống hàng ngày",
+      "D. Học ngẫu nhiên"
+    ],
+    "answer": "B",
+    "explain": "Tự học vẫn là một dạng hoạt động học vì người học có mục đích chiếm lĩnh tri thức, kỹ năng và tự tổ chức quá trình học tập của mình. Nó khác với học ngẫu nhiên trong đời sống hằng ngày."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Đâu là hoạt động dạy?",
+    "options": [
+      "A. Mẹ đang truyền cho Lan bí kíp để nấu canh cá không bị tanh.",
+      "B. Cô giáo truyền đạt kiến thức về bài Căn bậc hai cho cả lớp.",
+      "C. Chú hàng xóm chỉ dẫn cho Hoa cách đi đường tắt để đến siêu thị.",
+      "D. Tất cả các phương án trên đều đúng."
+    ],
+    "answer": "B",
+    "explain": "Theo nghĩa sư phạm, hoạt động dạy là hoạt động có mục đích, có nội dung, chương trình và được tổ chức bởi giáo viên nhằm giúp người học lĩnh hội tri thức. Vì vậy tình huống cô giáo dạy bài Căn bậc hai là phù hợp nhất."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Điều nào sau đây KHÔNG ĐÚNG về hoạt động dạy?",
+    "options": [
+      "A. Nội dung chương trình dạy có tính pháp quy, không được phép thay đổi.",
+      "B. Mục đích cuối cùng của hoạt động dạy là hướng đến phát triển người học.",
+      "C. Giáo viên có thể chủ động điều khiển phương pháp, hình thức tổ chức dạy học.",
+      "D. Nhiệm vụ chính của giáo viên ở bậc trung học là sáng tạo tri thức mới."
+    ],
+    "answer": "D",
+    "explain": "Trong hoạt động dạy ở nhà trường phổ thông, nhiệm vụ chính của giáo viên là tổ chức, điều khiển hoạt động học để học sinh lĩnh hội tri thức, chứ không phải sáng tạo tri thức mới như nhiệm vụ của nhà khoa học."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Việc khám phá những kiến thức khoa học là sự say mê của Trung và khi giải được bài tập toán hay hóa… đều làm em rất thích thú. Trung được kích thích bởi động cơ học tập nào?",
+    "options": [
+      "A. Động cơ học tập bên trong",
+      "B. Động cơ học tập bên ngoài",
+      "C. Động cơ quan hệ xã hội",
+      "D. Tất cả đều sai."
+    ],
+    "answer": "A",
+    "explain": "Trung học vì sự hứng thú, say mê khám phá và niềm vui khi giải quyết được vấn đề. Đây là biểu hiện của động cơ học tập bên trong, xuất phát từ chính nội dung và quá trình học tập."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Quang cho rằng mình phải học giỏi để thể hiện khả năng của mình trước thầy/cô giáo và các bạn trong lớp. Vì vậy, trên lớp, em rất tích cực xung phong lên bảng làm bài. Quang rất thích được khen khi đạt được điểm cao. Quang được kích thích bởi động cơ học tập nào?",
+    "options": [
+      "A. Động cơ học tập bên trong.",
+      "B. Động cơ học tập bên ngoài.",
+      "C. Động cơ hoàn thiện tri thức.",
+      "D. Tất cả đều sai."
+    ],
+    "answer": "B",
+    "explain": "Quang học chủ yếu để được thể hiện, được khen và được công nhận trước thầy cô, bạn bè. Động lực này đến từ yếu tố bên ngoài quá trình chiếm lĩnh tri thức nên thuộc động cơ học tập bên ngoài."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Sau ba lần luyện tập, Nam đã hiểu và thực hiện được cách cân bằng phương trình hóa học. Chỉ số phát triển trí tuệ nào đang được đề cập?",
+    "options": [
+      "A. Tốc độ của sự định hướng trí tuệ.",
+      "B. Tính tiết kiệm của tư duy.",
+      "C. Tốc độ khái quát hóa.",
+      "D. Tính phê phán của trí tuệ."
+    ],
+    "answer": "C",
+    "explain": "Nam chỉ cần một số lần luyện tập đã rút ra được cách làm chung cho dạng bài cân bằng phương trình. Điều này thể hiện tốc độ khái quát hóa, tức khả năng nhanh chóng nắm được quy luật chung từ các trường hợp cụ thể."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Hãy đánh giá hành vi trong câu tục ngữ sau: “Làm lành mong chúng biết danh, Ấy là làm tiếng, làm lành chi đâu”.",
+    "options": [
+      "A. Hành vi đạo đức, vì đem đến điều lành.",
+      "B. Hành vi đạo đức, vì tự giác thực hiện.",
+      "C. Không phải hành vi đạo đức, vì hành vi này không có ích thực sự.",
+      "D. Không phải hành vi đạo đức, vì hành vi này xuất phát từ lợi ích cá nhân."
+    ],
+    "answer": "D",
+    "explain": "Câu tục ngữ phê phán việc làm điều tốt chỉ để cầu danh tiếng. Hành vi đạo đức cần có tính không vụ lợi, nên nếu động cơ chính là lợi ích cá nhân thì chưa được xem là hành vi đạo đức đúng nghĩa."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Tiêu chí nào để đánh giá hành vi đạo đức được thể hiện nổi bật nhất trong câu “Thi ân bất cầu báo”?",
+    "options": [
+      "A. Tính có ích.",
+      "B. Tính tự giác.",
+      "C. Tính không vụ lợi.",
+      "D. Tính kỷ luật."
+    ],
+    "answer": "C",
+    "explain": "“Thi ân bất cầu báo” nhấn mạnh việc giúp đỡ người khác mà không đòi hỏi báo đáp. Vì vậy tiêu chí nổi bật nhất là tính không vụ lợi của hành vi đạo đức."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Điều nào sau đây ĐÚNG?",
+    "options": [
+      "A. Tri thức đạo đức đảm bảo cho cá nhân thực hiện hành vi đạo đức.",
+      "B. Thiện chí đạo đức và nghị lực đạo đức không phải lúc nào cũng đi đôi với nhau.",
+      "C. Một hành vi đạo đức được làm như một thói quen sẽ cần sự tham gia của ý chí đạo đức.",
+      "D. Tất cả đều đúng."
+    ],
+    "answer": "B",
+    "explain": "Một người có thiện chí, tức muốn làm điều tốt, nhưng chưa chắc có đủ nghị lực để thực hiện đến cùng. Vì vậy thiện chí đạo đức và nghị lực đạo đức không phải lúc nào cũng đi đôi với nhau."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong chương trình “Cơ hội đổi đời” (phát sóng trên HTV7 vào tháng 4/2021), vận động viên Trần Văn Thảo đã bị thương ở tay vì nỗ lực thực hiện thử thách để giúp một hộ gia đình gặp khó khăn. Khi xem đến cảnh này, Hảo cảm thấy sởn gai ốc, sống mũi cay và mắt rưng rưng. Yếu tố tâm lý nào trong hành vi đạo đức đang được đề cập ở vận động viên Trần Văn Thảo?",
+    "options": [
+      "A. Tri thức đạo đức.",
+      "B. Ý chí đạo đức.",
+      "C. Tình cảm đạo đức.",
+      "D. Niềm tin đạo đức."
+    ],
+    "answer": "B",
+    "explain": "Ở vận động viên Trần Văn Thảo, điểm nổi bật là sự nỗ lực vượt khó, chịu đau để hoàn thành thử thách giúp người khác. Đây là biểu hiện của ý chí đạo đức."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong chương trình truyền hình “Cơ hội đổi đời” (phát sóng trên kênh HTV7 vào tháng 4/2021), vận động viên Trần Văn Thảo đã bị thương ở tay khi nỗ lực vượt qua thử thách để giúp đỡ hộ gia đình gặp khó khăn. Khi xem đến cảnh này, Hảo cảm thấy sởn gai ốc, sống mũi cay và mắt rưng rưng. Yếu tố tâm lý nào trong hành vi đạo đức đang được đề cập ở Hảo?",
+    "options": [
+      "A. Tri thức đạo đức.",
+      "B. Ý chí đạo đức.",
+      "C. Tình cảm đạo đức.",
+      "D. Niềm tin đạo đức."
+    ],
+    "answer": "C",
+    "explain": "Ở Hảo, biểu hiện sởn gai ốc, xúc động và rưng rưng nước mắt là phản ứng cảm xúc trước hành vi tốt đẹp. Đây là yếu tố tình cảm đạo đức."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Điều nào sau đây KHÔNG ĐÚNG về giá trị?",
+    "options": [
+      "A. Giá trị không nằm trong mối quan hệ giữa chủ thể và khách thể.",
+      "B. Các giá trị khi được lựa chọn sẽ trở thành động cơ cho hoạt động của chủ thể.",
+      "C. Định hướng giá trị có thể khác nhau giữa các thành viên trong gia đình.",
+      "D. Việc nhận biết và chấp nhận các giá trị mang tính chủ thể."
+    ],
+    "answer": "A",
+    "explain": "Giá trị được hình thành trong mối quan hệ giữa chủ thể và khách thể, khi sự vật, hiện tượng có ý nghĩa đối với nhu cầu, mục đích của chủ thể. Vì vậy phát biểu A là không đúng."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Hoạt động “Giáo dục kỹ năng sống cho học sinh” thuộc nội dung nào của hoạt động hỗ trợ tâm lý học đường?",
+    "options": [
+      "A. Hoạt động đánh giá tâm lý",
+      "B. Hoạt động điều phối",
+      "C. Hoạt động dự phòng và phát triển tâm lý",
+      "D. Hoạt động tư vấn, tham vấn tâm lý"
+    ],
+    "answer": "C",
+    "explain": "Giáo dục kỹ năng sống giúp học sinh phòng ngừa khó khăn và phát triển năng lực thích ứng, nên thuộc hoạt động dự phòng và phát triển tâm lý."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Hoạt động “Phát hiện và bồi dưỡng năng khiếu ở học sinh hoặc bồi dưỡng các nhân tài, thần đồng” thuộc nội dung nào của hoạt động hỗ trợ tâm lý học đường?",
+    "options": [
+      "A. Hoạt động đánh giá tâm lý",
+      "B. Hoạt động điều phối",
+      "C. Hoạt động dự phòng và phát triển tâm lý",
+      "D. Hoạt động tư vấn, tham vấn tâm lý"
+    ],
+    "answer": "C",
+    "explain": "Phát hiện và bồi dưỡng năng khiếu nhằm tạo điều kiện cho học sinh phát triển tiềm năng, vì vậy thuộc nhóm hoạt động dự phòng và phát triển tâm lý."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Chọn phát biểu CHƯA ĐÚNG về bản chất của hoạt động hỗ trợ tâm lý học đường.",
+    "options": [
+      "A. Hoạt động này chỉ nhằm giải quyết những khó khăn của người học.",
+      "B. Hoạt động này hướng đến việc chăm sóc sức khỏe tâm thần cho tất cả những ai tham gia vào cuộc sống học đường.",
+      "C. Hoạt động này bao gồm nhiều khía cạnh khác nhau.",
+      "D. Nội dung các hoạt động hỗ trợ tâm lý học đường bao gồm: đánh giá tâm lý, dự phòng và phát triển tâm lý, tư vấn – tham vấn và trị liệu tâm lý, hoạt động điều phối."
+    ],
+    "answer": "A",
+    "explain": "Hỗ trợ tâm lý học đường không chỉ giải quyết khó khăn đã xảy ra mà còn phòng ngừa, phát triển tâm lý và chăm sóc sức khỏe tinh thần cho nhiều chủ thể trong môi trường học đường."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Khó khăn tâm lý nào ở học sinh không xếp vào rối loại tâm lý nghiêm trọng?",
+    "options": [
+      "A. Lo âu học đường",
+      "B. Trầm cảm",
+      "C. Rối loạn lo âu",
+      "D. Nghiện game, internet"
+    ],
+    "answer": "A",
+    "explain": "Lo âu học đường có thể là một khó khăn tâm lý thường gặp trong học tập, chưa nhất thiết được xếp vào nhóm rối loạn tâm lý nghiêm trọng như trầm cảm, rối loạn lo âu hay nghiện game/internet."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Chọn phát biểu ĐÚNG.",
+    "options": [
+      "A. Giáo viên có thể là người cần được hỗ trợ tâm lý và là người hỗ trợ tâm lý.",
+      "B. Khi tham gia hoạt động hỗ trợ tâm lý – với tư cách là người hỗ trợ tâm lý, chuyên viên tâm lý học đường cần tuân thủ các nguyên tắc đạo đức, giáo viên thì không cần.",
+      "C. Khi tham gia hoạt động hỗ trợ tâm lý – với tư cách là người hỗ trợ tâm lý, chuyên viên tâm lý học đường cần thuần thục một số kỹ năng cơ bản, giáo viên thì không cần.",
+      "D. Trong trường hợp giáo viên – với tư cách là người hỗ trợ tâm lý, không thể chấp nhận được học sinh thì cũng không nên giới thiệu học sinh đến một người có thể hỗ trợ khác."
+    ],
+    "answer": "A",
+    "explain": "Trong môi trường học đường, giáo viên vừa có thể là người hỗ trợ học sinh, vừa có thể là người cần được hỗ trợ tâm lý. Khi hỗ trợ, giáo viên cũng cần tôn trọng nguyên tắc đạo đức và biết giới thiệu học sinh đến người phù hợp khi cần."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Tâm lý con người được hình thành và phát triển thông qua:",
+    "options": [
+      "A. Hoạt động",
+      "B. Giao tiếp",
+      "C. Hoạt động và giao tiếp",
+      "D. Cả ba đều sai."
+    ],
+    "answer": "C",
+    "explain": "Tâm lý con người không hình thành tách rời đời sống thực tiễn mà được hình thành và phát triển thông qua quá trình cá nhân hoạt động và giao tiếp với người khác trong môi trường xã hội."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vai trò của nhà trường đối với quá trình học hỏi và phát triển cá nhân là:",
+    "options": [
+      "A. Tôn trọng khác biệt cá nhân trong quá trình dạy học.",
+      "B. Quan tâm đến cơ chế hoạt động tinh thần của người học khi tiến hành hoạt động dạy học.",
+      "C. Hiểu đặc điểm tâm lý của học sinh, đặc biệt là những đặc điểm về trí lực.",
+      "D. Cả ba đều đúng."
+    ],
+    "answer": "D",
+    "explain": "Nhà trường cần tổ chức dạy học dựa trên hiểu biết về người học, bao gồm sự khác biệt cá nhân, cơ chế hoạt động tâm lý và đặc điểm trí lực của học sinh."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Đâu là nhiệm vụ của dạy học và giáo dục?",
+    "options": [
+      "A. Giúp học sinh phát triển năng lực trí tuệ.",
+      "B. Giúp học sinh lĩnh hội tri thức xã hội, phát triển tâm lý và hoàn thiện nhân cách.",
+      "C. Giúp học sinh trở thành những công dân toàn cầu.",
+      "D. Giúp học sinh phát triển năng khiếu, bồi dưỡng nhân tài."
+    ],
+    "answer": "B",
+    "explain": "Dạy học và giáo dục không chỉ truyền đạt tri thức mà còn hướng đến phát triển tâm lý, hình thành và hoàn thiện nhân cách của người học."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Nói rằng \"Trẻ em không làm những điều mà người lớn nói nhưng lại làm cái mà người lớn làm\" đề cập đến quan điểm học tập của nhà tâm lý học nào?",
+    "options": [
+      "A. J. Piaget",
+      "B. Vygotski",
+      "C. Bandura",
+      "D. Skinner"
+    ],
+    "answer": "C",
+    "explain": "Câu nói nhấn mạnh học tập qua quan sát và bắt chước hành vi của người khác, phù hợp với học thuyết học tập xã hội của Bandura."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Vì sao hai chị em sinh đôi cùng trứng nhưng lớn lên tính cách lại khác nhau?",
+    "options": [
+      "A. Do khác biệt về gen",
+      "B. Khác biệt về môi trường",
+      "C. Khác biệt về gen và môi trường sống",
+      "D. Khác nhau về tính tích cực hoạt động ở mỗi cá nhân."
+    ],
+    "answer": "D",
+    "explain": "Sinh đôi cùng trứng có nền tảng di truyền rất giống nhau, nhưng mỗi cá nhân có mức độ hoạt động, giao tiếp, lựa chọn và tự rèn luyện khác nhau nên sự phát triển tâm lý vẫn có thể khác nhau."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Khi đề cập đến khái niệm về sự phát triển tâm lý cá nhân, quy luật nào dưới đây được xem là động lực của sự phát triển?",
+    "options": [
+      "A. Quy luật mâu thuẫn và đấu tranh giữa các mặt đối lập.",
+      "B. Quy luật lượng chất",
+      "C. Quy luật phủ định của phủ định.",
+      "D. Cả ba quy luật"
+    ],
+    "answer": "A",
+    "explain": "Động lực của sự phát triển là sự nảy sinh và giải quyết các mâu thuẫn bên trong quá trình phát triển, tức quy luật mâu thuẫn và đấu tranh giữa các mặt đối lập."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Câu \"gần mực thì đen, gần đèn thì sáng\" đề cập đến học thuyết nào trong khái niệm sự phát triển tâm lý cá nhân?",
+    "options": [
+      "A. Thuyết tiền định",
+      "B. Thuyết duy cảm",
+      "C. Thuyết hội tụ hai yếu tố",
+      "D. Chủ nghĩa duy vật biện chứng"
+    ],
+    "answer": "B",
+    "explain": "Câu tục ngữ nhấn mạnh vai trò quyết định của môi trường đối với sự hình thành con người, nên phù hợp với thuyết duy cảm."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Học thuyết Vùng phát triển gần nhất của Vygotski đề cập đến nội dung nào dưới đây?",
+    "options": [
+      "A. Là khoảng cách giữa khả năng trẻ làm được mà không cần có sự hướng dẫn của người lớn với khả năng trẻ có thể làm được dưới sự hướng dẫn của người lớn.",
+      "B. Một hành vi không phải lúc nào cũng được hình thành bằng con đường huấn luyện trực tiếp từ bên ngoài mà có thể hình thành dựa trên quan sát và bắt chước hành vi của người khác.",
+      "C. Cấu trúc nhận thức có chức năng tạo ra sự thích ứng của cá thể với các kích thích của môi trường, dựa trên hai cơ chế đồng hoá và điều ứng.",
+      "D. Ý kiến khác."
+    ],
+    "answer": "A",
+    "explain": "Vùng phát triển gần nhất là khoảng cách giữa trình độ hiện tại của trẻ khi tự giải quyết nhiệm vụ và trình độ trẻ có thể đạt được khi có sự hướng dẫn, hỗ trợ của người lớn hoặc người có năng lực hơn."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Có mấy bước hình thành khái niệm?",
+    "options": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ],
+    "answer": "D",
+    "explain": "Theo đáp án trong tài liệu câu hỏi, quá trình hình thành khái niệm gồm 6 bước."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Cụm từ nào là KHÔNG ĐÚNG về lứa tuổi thiếu niên?",
+    "options": [
+      "A. Tuổi thiếu niên là lứa tuổi hồi xuân.",
+      "B. Tuổi thiếu niên là lứa tuổi nổi loạn",
+      "C. Tuổi thiếu niên là lứa tuổi dậy thì",
+      "D. Tuổi thiếu niên là lứa tuổi mới lớn"
+    ],
+    "answer": "A",
+    "explain": "Tuổi thiếu niên thường gắn với dậy thì, mới lớn, có nhiều biến động và khủng hoảng; \"hồi xuân\" là cách nói không phù hợp với giai đoạn này."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Đâu KHÔNG PHẢI là đặc điểm tâm lý ở lứa tuổi thiếu niên?",
+    "options": [
+      "A. Cái tôi phát triển mạnh",
+      "B. Xu hướng phóng đại sự việc, năng lực bản thân",
+      "C. Thích thể hiện bản thân",
+      "D. Thế giới quan phát triển mạnh"
+    ],
+    "answer": "D",
+    "explain": "Ở tuổi thiếu niên, cái tôi, nhu cầu thể hiện và cảm giác mình là người lớn phát triển mạnh; thế giới quan khoa học phát triển rõ hơn ở tuổi đầu thanh niên."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Tình cảm khác giới ở lứa tuổi thiếu niên gọi là?",
+    "options": [
+      "A. Mối tình đầu",
+      "B. Tình yêu tuổi học trò",
+      "C. Rung cảm đầu đời",
+      "D. Tình yêu sét đánh"
+    ],
+    "answer": "C",
+    "explain": "Ở tuổi thiếu niên, tình cảm khác giới thường mới ở mức rung cảm đầu đời, trong sáng, e dè và chưa phải tình yêu trưởng thành."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Trong các sự vật hiện tượng dưới đây, đâu là vật chất?",
+    "options": [
+      "A. Tri thức, kĩ năng, kĩ xảo",
+      "B. Cái bàn, cây bút, quyển vở",
+      "C. Cả A và B đều đúng.",
+      "D. Cả A và B đều sai."
+    ],
+    "answer": "B",
+    "explain": "Cái bàn, cây bút, quyển vở là những sự vật vật chất cụ thể. Tri thức, kĩ năng, kĩ xảo thuộc đời sống tinh thần hoặc năng lực của cá nhân nên không phải vật chất theo nghĩa thông thường của câu hỏi."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trong quan điểm của chủ nghĩa duy vật biện chứng, quy luật nào đề cập đến xu hướng của sự phát triển?",
+    "options": [
+      "A. Quy luật phủ định của phủ định.",
+      "B. Quy luật lượng chất.",
+      "C. Quy luật mâu thuẫn và đấu tranh giữa các mặt đối lập.",
+      "D. Cả A, B và C."
+    ],
+    "answer": "A",
+    "explain": "Quy luật phủ định của phủ định thể hiện xu hướng phát triển đi lên của sự vật, hiện tượng thông qua quá trình phủ định biện chứng."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "\"Trẻ lên ba nghĩ mình có thể giặt quần áo được nhưng thực tế thì không làm được\" thể hiện quy luật nào dưới đây?",
+    "options": [
+      "A. Quy luật lượng chất",
+      "B. Quy luật phủ định của phủ định",
+      "C. Quy luật mâu thuẫn đấu tranh giữa các mặt đối lập",
+      "D. Cả A, B và C"
+    ],
+    "answer": "C",
+    "explain": "Tình huống thể hiện mâu thuẫn giữa nhu cầu muốn tự làm, muốn khẳng định bản thân với khả năng thực tế còn hạn chế của trẻ. Đây là biểu hiện của quy luật mâu thuẫn và đấu tranh giữa các mặt đối lập."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Động lực của sự phát triển tâm lý chính là gì?",
+    "options": [
+      "A. Giao tiếp để trao đổi nhu cầu, cảm xúc, nguyện vọng",
+      "B. Học tập để lĩnh hội tri thức, kĩ năng, kĩ xảo",
+      "C. Là hoạt động tích cực của cá nhân để giải quyết những mâu thuẫn.",
+      "D. Cả ba đều đúng."
+    ],
+    "answer": "C",
+    "explain": "Động lực trực tiếp của sự phát triển tâm lý là hoạt động tích cực của cá nhân nhằm giải quyết các mâu thuẫn nảy sinh trong quá trình sống và phát triển."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Yếu tố nào dưới đây đóng vai trò quyết định sự phát triển tâm lý?",
+    "options": [
+      "A. Bẩm sinh di truyền",
+      "B. Môi trường sống và hoạt động",
+      "C. Dạy học và giáo dục",
+      "D. Hoạt động tích cực của cá nhân"
+    ],
+    "answer": "D",
+    "explain": "Bẩm sinh di truyền là tiền đề, môi trường là điều kiện, dạy học - giáo dục giữ vai trò chủ đạo, còn hoạt động tích cực của cá nhân giữ vai trò quyết định trực tiếp đối với sự phát triển tâm lý."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Trong cuộc sống con người có rất nhiều những mâu thuẫn nhưng mâu thuẫn lớn nhất là gì?",
+    "options": [
+      "A. Mâu thuẫn giữa các mối quan hệ xã hội",
+      "B. Mâu thuẫn giữa các mối quan hệ gia đình",
+      "C. Mâu thuẫn giữa \"cái tôi muốn\" và \"cái tôi có thể\"",
+      "D. Khác"
+    ],
+    "answer": "C",
+    "explain": "Trong phát triển cá nhân, mâu thuẫn giữa nhu cầu, mong muốn đang tăng lên với khả năng hiện có là một mâu thuẫn quan trọng thúc đẩy cá nhân phát triển."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Để giải quyết mâu thuẫn giữa \"cái tôi muốn\" và \"cái tôi có thể\" thì cần phải làm gì?",
+    "options": [
+      "A. Nâng cao năng lực bản thân",
+      "B. Dập tắt nhu cầu",
+      "C. Điều chỉnh \"cái tôi muốn\" phù hợp với \"cái tôi có thể\"",
+      "D. Cả A và C đều đúng."
+    ],
+    "answer": "D",
+    "explain": "Cá nhân có thể giải quyết mâu thuẫn bằng cách nâng cao năng lực để đáp ứng mong muốn, đồng thời điều chỉnh mong muốn cho phù hợp với khả năng và điều kiện thực tế."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "\"So với tình cảm của lứa tuổi thiếu niên THCS, tình cảm của lứa tuổi đầu thanh niên THPT đã hoàn thiện hơn, ổn định hơn\" là thể hiện quy luật nào dưới đây?",
+    "options": [
+      "A. Quy luật không đồng đều",
+      "B. Quy luật toàn vẹn",
+      "C. Quy luật mềm dẻo và khả năng bù trừ",
+      "D. Không có quy luật nào"
+    ],
+    "answer": "B",
+    "explain": "Quy luật toàn vẹn cho thấy càng phát triển, tâm lý con người càng trở nên thống nhất, ổn định và bền vững hơn."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "\"Trẻ em có thể thay đổi, có khả năng lĩnh hội kiến thức, kĩ năng,... để phát triển bản thân\" là thể hiện quy luật nào dưới đây?",
+    "options": [
+      "A. Quy luật không đồng đều",
+      "B. Quy luật toàn vẹn",
+      "C. Quy luật mềm dẻo và khả năng bù trừ",
+      "D. Không có quy luật nào"
+    ],
+    "answer": "C",
+    "explain": "Khả năng thay đổi, lĩnh hội kiến thức và bù đắp những hạn chế thể hiện tính mềm dẻo và khả năng bù trừ trong sự phát triển tâm lý."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "\"Tình huống xã hội của sự phát triển\" theo Vygostki là?",
+    "options": [
+      "A. Là sự phối hợp giữa điều kiện phát triển bên trong và điều kiện phát triển bên ngoài.",
+      "B. Là những nét tâm lý xuất hiện lần đầu tiên ở giai đoạn lứa tuổi đó.",
+      "C. Là hoạt động quy định những biến đổi chủ yếu nhất tâm lý con người ở trong giai đoạn phát triển của nó.",
+      "D. Là những giai đoạn phát triển tâm lý đầy biến động xen giữa các giai đoạn ổn định."
+    ],
+    "answer": "A",
+    "explain": "Tình huống xã hội của sự phát triển là sự thống nhất giữa điều kiện bên trong của cá nhân và điều kiện bên ngoài của môi trường xã hội trong một giai đoạn lứa tuổi."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Có mấy giai đoạn phát triển tâm lý theo lứa tuổi?",
+    "options": [
+      "A. 4",
+      "B. 5",
+      "C. 7",
+      "D. 9"
+    ],
+    "answer": "D",
+    "explain": "Theo tài liệu, có 9 giai đoạn phát triển tâm lý theo lứa tuổi: thai nhi, sơ sinh, vườn trẻ, mẫu giáo, nhi đồng, thiếu niên, thanh niên, trưởng thành và tuổi già."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Yếu tố nào KHÔNG thuộc đặc điểm nhân cách của lứa tuổi thiếu niên?",
+    "options": [
+      "A. Sự hình thành tự ý thức",
+      "B. Sự hình thành lý tưởng sống",
+      "C. Sự hình thành ý chí",
+      "D. Sự hình thành hứng thú"
+    ],
+    "answer": "B",
+    "explain": "Ở tuổi thiếu niên nổi bật là tự ý thức, ý chí và hứng thú đang phát triển. Lý tưởng sống là đặc điểm rõ hơn ở tuổi đầu thanh niên."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Nét cấu tạo tâm lý mới trung tâm trong nhân cách của tuổi đầu thanh niên đó là?",
+    "options": [
+      "A. Xu hướng nghề nghiệp",
+      "B. Sự hình thành thế giới quan",
+      "C. Sự hình thành lí tưởng sống",
+      "D. Sự hình thành nhu cầu"
+    ],
+    "answer": "A",
+    "explain": "Ở tuổi đầu thanh niên, hoạt động học tập - hướng nghiệp chi phối mạnh sự phát triển nhân cách; xu hướng nghề nghiệp được xem là nét cấu tạo tâm lý mới trung tâm."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "\"Dù gia đình có hoàn cảnh khó khăn nhưng Hoa vẫn không bao giờ tham lam, ăn cắp tài sản của người khác\" đề cập đến yếu tố nào trong cấu trúc tâm lý của hành vi đạo đức?",
+    "options": [
+      "A. Tri thức và niềm tin đạo đức",
+      "B. Tình cảm đạo đức",
+      "C. Ý chí đạo đức",
+      "D. Thói quen đạo đức"
+    ],
+    "answer": "C",
+    "explain": "Hoa phải vượt qua hoàn cảnh khó khăn và sự cám dỗ để giữ hành vi đúng đắn, nên yếu tố nổi bật là ý chí đạo đức."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Ý nào dưới đây cho thấy một phần vai trò của Tâm lý học phát triển đối với Tâm lý học giáo dục:",
+    "options": [
+      "A. Cung cấp lý luận về sự phát triển tâm lý học sinh theo từng giai đoạn lứa tuổi.",
+      "B. Cung cấp lý luận về sự khác biệt giữa học sinh nam và học sinh nữ.",
+      "C. Cung cấp lý luận về bầu không khí tâm lý của lớp học.",
+      "D. Cung cấp lý luận về sự tác động của văn hóa đến mô hình dạy học, giáo dục."
+    ],
+    "answer": "A",
+    "explain": "Tâm lý học phát triển giúp Tâm lý học giáo dục hiểu sự phát triển tâm lý của học sinh theo từng giai đoạn lứa tuổi, từ đó lựa chọn nội dung và cách giáo dục phù hợp."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "A đang muốn tìm hiểu về mức độ hài lòng của học sinh THPT về việc cho phép học sinh được sử dụng điện thoại di động trong nhà trường. A có thể sử dụng phương pháp nghiên cứu:",
+    "options": [
+      "A. Điều tra bằng bảng hỏi",
+      "B. Trắc nghiệm",
+      "C. Thực nghiệm",
+      "D. Nghiên cứu trường hợp"
+    ],
+    "answer": "A",
+    "explain": "Muốn khảo sát mức độ hài lòng của nhiều học sinh trong thời gian ngắn thì điều tra bằng bảng hỏi là phù hợp nhất."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Nhận định nào dưới đây là phù hợp:",
+    "options": [
+      "A. Tâm lý học giáo dục là một ngành độc lập và không có quan hệ gì với các chuyên ngành Tâm lý học khác.",
+      "B. Tâm lý học giáo dục chỉ có quan hệ với một số chuyên ngành như Tâm lý học xuyên văn hóa, Tâm lý học trị liệu, ...",
+      "C. Tâm lý học giáo dục có mối quan hệ với nhiều chuyên ngành Tâm lý học khác nhưng không thể sử dụng kết quả từ các ngành Tâm lý học đó.",
+      "D. Tâm lý học giáo dục có mối quan hệ với nhiều chuyên ngành Tâm lý học khác nhưng đối tượng và nhiệm vụ của mỗi chuyên ngành lại khác nhau."
+    ],
+    "answer": "D",
+    "explain": "Tâm lý học giáo dục có liên hệ với nhiều chuyên ngành tâm lý học khác, nhưng vẫn có đối tượng và nhiệm vụ nghiên cứu riêng."
+  },
+  {
+    "chapter": "Chương 1",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Nội dung nào dưới đây không thuộc đối tượng nghiên cứu của Tâm lý học giáo dục?",
+    "options": [
+      "A. Những khó khăn tâm lý thường gặp của học sinh.",
+      "B. Con đường giáo dục đạo đức cho học sinh.",
+      "C. Mối quan hệ giữa hoạt động dạy và hoạt động học.",
+      "D. Đặc điểm phát triển cá nhân qua các giai đoạn lứa tuổi."
+    ],
+    "answer": "D",
+    "explain": "Đặc điểm phát triển cá nhân qua các giai đoạn lứa tuổi là nội dung nghiêng về Tâm lý học phát triển hơn là đối tượng trực tiếp của Tâm lý học giáo dục."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Người làm công tác giáo dục cần phải tận dụng giai đoạn trẻ còn nhỏ để định hình nhân cách cho trẻ. Đây là kết luận sư phạm rút ra từ quy luật nào trong sự phát triển tâm lý cá nhân?",
+    "options": [
+      "A. Quy luật không đồng đều xét trong tiến trình phát triển cá nhân.",
+      "B. Quy luật không đồng đều xét giữa các cá nhân.",
+      "C. Quy luật toàn vẹn.",
+      "D. Quy luật mềm dẻo và khả năng bù trừ."
+    ],
+    "answer": "A",
+    "explain": "Trong tiến trình phát triển cá nhân có những giai đoạn thuận lợi đặc biệt cho sự phát triển một số phẩm chất, vì vậy giáo dục cần tận dụng đúng thời điểm."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Tình bạn của thiếu niên có đặc điểm:",
+    "options": [
+      "A. Thoải mái, nhẹ nhàng, có thể tách nhóm tùy ý.",
+      "B. Khó có thể chia sẻ những vấn đề riêng tư cùng nhau.",
+      "C. Có thể cho rằng bạn bè là phải \"sống chết có nhau\".",
+      "D. Kết thành nhóm bạn thân dựa trên giới tính."
+    ],
+    "answer": "C",
+    "explain": "Ở tuổi thiếu niên, tình bạn thường có tính gắn bó mạnh, dễ lý tưởng hóa và đề cao sự trung thành nên có thể xuất hiện quan niệm bạn bè phải hết lòng vì nhau."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Ý nào dưới đây phù hợp với đặc điểm hoạt động nhận thức của thiếu niên:",
+    "options": [
+      "A. Tư duy trừu tượng ngày càng phát triển và thay thế cho tư duy hình tượng – cụ thể.",
+      "B. Tưởng tượng có chủ định phát triển mạnh và mang tính hiện thực.",
+      "C. Ghi nhớ máy móc bị thay thế hoàn toàn bởi ghi nhớ có mục đích, có ý nghĩa.",
+      "D. Tất cả các ý trên đều sai."
+    ],
+    "answer": "D",
+    "explain": "Ở thiếu niên, tư duy trừu tượng phát triển nhưng tư duy hình tượng - cụ thể vẫn còn vai trò; tưởng tượng chưa hẳn gắn chặt với hiện thực; ghi nhớ máy móc chưa bị thay thế hoàn toàn."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Học sinh THPT thường xuyên quan tâm đến công việc mình sẽ làm sau này. Các em tìm hiểu thông tin về ngành học, trường học, sở thích, khả năng của bản thân và nhu cầu xã hội để xem bản thân có phù hợp với công việc hay không. Điều này cho thấy đặc điểm nào trong sự phát triển tâm lý của lứa tuổi đầu thanh niên?",
+    "options": [
+      "A. Sự phát triển hứng thú về những giá trị của nghề nghiệp.",
+      "B. Hoạt động học tập - hướng nghiệp là hoạt động chủ đạo, chi phối các hoạt động khác trong giai đoạn này.",
+      "C. Có khả năng nhìn nhận đầy đủ các năng lực và phẩm chất của bản thân.",
+      "D. Nhu cầu được thể hiện khả năng của bản thân."
+    ],
+    "answer": "B",
+    "explain": "Ở tuổi đầu thanh niên, học tập - hướng nghiệp là hoạt động chủ đạo; việc tìm hiểu ngành nghề và lựa chọn tương lai thể hiện rõ đặc điểm này."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Học sinh thường xuyên tranh luận về những hiện tượng trong cuộc sống. Các em rất thích chia sẻ quan điểm cá nhân. Đa phần các em tìm thông tin từ nhiều nguồn khác nhau như từ thầy cô, cha mẹ, mạng xã hội. Điều này cho thấy đặc điểm gì trong sự phát triển nhân cách của lứa tuổi đầu thanh niên?",
+    "options": [
+      "A. Sự phát triển hứng thú.",
+      "B. Sự phát triển năng lực tự ý thức.",
+      "C. Sự hình thành thế giới quan khoa học.",
+      "D. Sự phát triển nhu cầu."
+    ],
+    "answer": "C",
+    "explain": "Việc quan tâm đến đúng - sai, thiện - ác, đẹp - xấu và tích cực tranh luận, tìm căn cứ cho quan điểm cá nhân là biểu hiện của sự hình thành thế giới quan khoa học."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Mục đích của hoạt động dạy:",
+    "options": [
+      "A. Hướng tới sự phát triển của người học.",
+      "B. Hướng tới sự phát triển hệ thống tri thức khoa học của loài người.",
+      "C. Nhằm truyền đạt tất cả kinh nghiệm văn hóa xã hội lịch sử loài người cho thế hệ mai sau.",
+      "D. Hướng tới việc tái tạo tri thức cho người dạy."
+    ],
+    "answer": "A",
+    "explain": "Hoạt động dạy không chỉ truyền đạt tri thức mà mục đích cuối cùng là hướng tới sự phát triển của người học."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Sau khi học nội dung tiết 32 môn Toán lớp 7, Cường biết được những cách để chứng minh hai tam giác bằng nhau. Sau đó, Cường đã áp dụng các kiến thức đã học để hoàn thành bài tập cô giao, những bài mà trước đây Cường đọc nhiều lần vẫn không hiểu. Ví dụ trên cho thấy bản chất nào của hoạt động học?",
+    "options": [
+      "A. Đối tượng của hoạt động học là các tri thức, kĩ năng, kĩ xảo ứng với các tri thức đó.",
+      "B. Hoạt động học hướng vào làm thay đổi chính mình.",
+      "C. Đối tượng của hoạt động học là các phương pháp học.",
+      "D. Hoạt động học được điều khiển một cách có ý thức."
+    ],
+    "answer": "B",
+    "explain": "Sau quá trình học, chính năng lực hiểu và giải bài của Cường thay đổi; điều này thể hiện bản chất hoạt động học là làm biến đổi bản thân người học."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Hãy cho biết những hành động học nào dưới đây đặc biệt quan trọng trong việc hình thành khái niệm?",
+    "options": [
+      "A. Phân tích, mô hình hóa, tự kiểm tra.",
+      "B. Phân tích, cụ thể hóa, tự đánh giá.",
+      "C. Phân tích, mô hình hóa, cụ thể hóa.",
+      "D. Phân tích, tự đánh giá, tự kiểm tra."
+    ],
+    "answer": "C",
+    "explain": "Các hành động phân tích, mô hình hóa và cụ thể hóa giúp người học tách dấu hiệu bản chất, biểu diễn và vận dụng khái niệm."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Cách thức nào dưới đây phù hợp để giáo viên hình thành động cơ học cho học sinh?",
+    "options": [
+      "A. Tổ chức các hoạt động dạy học độc đáo, mới lạ, chưa từng có ai thực hiện.",
+      "B. Giao tiếp với học sinh một cách thoải mái, không có sự phân biệt thầy trò.",
+      "C. Giúp học sinh thấy trước được kết quả của việc học và từng bước thực hiện các nhiệm vụ học tập nhằm đạt được mục đích đó.",
+      "D. Khuyến khích học sinh học tập bằng cách cộng điểm, trao phần thưởng thường xuyên."
+    ],
+    "answer": "C",
+    "explain": "Động cơ học tập bền vững được hình thành khi học sinh hiểu ý nghĩa, kết quả cần đạt và được dẫn dắt qua các nhiệm vụ phù hợp."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Để tổ chức hoạt động dạy học tích cực cho học sinh, giáo viên có thể:",
+    "options": [
+      "A. Xây dựng các chuỗi nhiệm vụ học tập phù hợp hướng đến sự phát triển của học sinh.",
+      "B. Cho phép học sinh tự quản lý lớp của mình nhằm giúp các em thoải mái hơn.",
+      "C. Tổ chức nhiều hoạt động sôi nổi đáp ứng tất cả nhu cầu của học sinh.",
+      "D. Chú trọng diễn giảng khi dạy để học sinh tiếp thu nội dung nhiều hơn."
+    ],
+    "answer": "A",
+    "explain": "Dạy học tích cực cần tổ chức nhiệm vụ học tập vừa sức, có định hướng, giúp học sinh chủ động chiếm lĩnh tri thức và phát triển năng lực."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong khi thi trực tuyến, Bình nhắn tin hỏi An đáp án trắc nghiệm vì đêm trước đó Bình phải đi làm thêm không kịp ôn bài. An cho rằng mình nên giúp bạn và gửi cho Bình đáp án vì điều kiện kinh tế của Bình khó khăn. Đây có phải là hành vi đạo đức hay không?",
+    "options": [
+      "A. Có",
+      "B. Không có, vì vi phạm tiêu chí tính có ích.",
+      "C. Không có, vì vi phạm tiêu chí tính không vụ lợi.",
+      "D. Không có, vì vi phạm tiêu chí tính tự giác."
+    ],
+    "answer": "B",
+    "explain": "Việc gửi đáp án trong khi thi là hành vi gian lận, gây hại cho sự công bằng và sự phát triển đúng đắn của người học, nên vi phạm tiêu chí tính có ích."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Hôm nay là hạn chót đóng tiền quỹ ủng hộ người dân khó khăn của lớp 9C. Tuấn ngần ngại đóng góp ủng hộ vì đã sử dụng gần hết tiền tiết kiệm để mua truyện tranh. Cán bộ lớp đến nhắc nhở và động viên Tuấn ủng hộ. Nhìn các bạn xung quanh đều tích cực đóng góp, Tuấn cũng góp một ít và tự an ủi bản thân rằng mình đã giúp đỡ người khác. Đây có phải là hành vi đạo đức hay không?",
+    "options": [
+      "A. Có",
+      "B. Không có, vì vi phạm tiêu chí tính có ích.",
+      "C. Không có, vì vi phạm tiêu chí tính không vụ lợi.",
+      "D. Không có, vì vi phạm tiêu chí tính tự giác."
+    ],
+    "answer": "D",
+    "explain": "Việc đóng góp của Tuấn chủ yếu do bị nhắc nhở và tác động bởi nhóm xung quanh, chưa xuất phát từ sự tự giác bên trong nên không đủ tiêu chí của hành vi đạo đức."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Trong giáo dục đạo đức, học sinh trải nghiệm thực hiện các hành vi đạo đức sẽ:",
+    "options": [
+      "A. Đem lại cảm xúc tích cực, từ đó hình thành tình cảm đạo đức.",
+      "B. Ứng dụng những tri thức đạo đức đã học.",
+      "C. Hình thành thói quen đạo đức sau nhiều lần thực hiện hành vi đạo đức.",
+      "D. Tất cả những ý kiến trên."
+    ],
+    "answer": "D",
+    "explain": "Trải nghiệm hành vi đạo đức giúp học sinh vận dụng tri thức, nảy sinh cảm xúc tích cực và dần hình thành thói quen đạo đức."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Nhiều sinh viên cho rằng tiền có giá trị rất lớn chẳng hạn dùng để thỏa mãn nhu cầu vật chất và nhu cầu tinh thần, nhưng một số sinh viên thì không. Điều này cho thấy đặc điểm nào của giá trị?",
+    "options": [
+      "A. Giá trị của mỗi sự vật thì khác nhau.",
+      "B. Giá trị tùy thuộc vào sự phát triển nhận thức của chủ thể.",
+      "C. Giá trị nằm trong mối quan hệ giữa chủ thể và đối tượng.",
+      "D. Giá trị mang tính xã hội lịch sử."
+    ],
+    "answer": "C",
+    "explain": "Một sự vật chỉ trở thành giá trị trong mối quan hệ với nhu cầu, nhận thức và đánh giá của chủ thể; vì vậy cùng là tiền nhưng mỗi người có thể đánh giá khác nhau."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Dưới đây trình bày các bước để giáo viên có thể hình thành giá trị cho học sinh. Ý kiến nào không phù hợp:",
+    "options": [
+      "A. Xác định giá trị của các sự vật, sự việc.",
+      "B. Nhận biết những quan điểm về giá trị của mỗi người đều giống nhau.",
+      "C. Nhận biết giá trị phù hợp với bản thân.",
+      "D. Xây dựng kế hoạch hành động theo định hướng giá trị đã chọn."
+    ],
+    "answer": "B",
+    "explain": "Quan điểm về giá trị có thể khác nhau giữa các cá nhân, nên không thể xem giá trị của mọi người đều giống nhau."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao cần phải thực hiện hoạt động hỗ trợ tâm lý học đường?",
+    "options": [
+      "A. Vì để giúp học sinh cân bằng cuộc sống và việc học.",
+      "B. Vì để chữa trị những vấn đề tâm lý nghiêm trọng của học sinh.",
+      "C. Vì để chăm sóc sức khỏe tinh thần cho các thành viên trong nhà trường.",
+      "D. Vì để hoàn thành trách nhiệm của cơ sở giáo dục."
+    ],
+    "answer": "C",
+    "explain": "Hỗ trợ tâm lý học đường hướng đến chăm sóc sức khỏe tinh thần cho các thành viên trong đời sống học đường, không chỉ xử lý các vấn đề nghiêm trọng."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Mặc dù đã đọc đi đọc lại bài học ngày hôm trước, A vẫn không hiểu và không thể chứng minh được hai tam giác đồng dạng. A có thể đang gặp:",
+    "options": [
+      "A. Khó khăn về bản thân.",
+      "B. Khó khăn tâm lý trong học tập.",
+      "C. Khó khăn tâm lý trong các mối quan hệ.",
+      "D. Khó khăn trong việc lựa chọn nghề nghiệp tương lai."
+    ],
+    "answer": "B",
+    "explain": "Tình huống mô tả khó khăn trong việc hiểu bài và thực hiện nhiệm vụ học tập, nên phù hợp với khó khăn tâm lý trong học tập."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Những yếu tố nào dưới đây có thể tác động tiêu cực đến học sinh:",
+    "options": [
+      "A. Phong cách cha mẹ khắt khe, cực đoan.",
+      "B. Những thông tin tiêu cực từ các phương tiện truyền thông đại chúng.",
+      "C. Thiếu vắng sự hỗ trợ tâm lý phù hợp.",
+      "D. Tất cả những yếu tố trên."
+    ],
+    "answer": "D",
+    "explain": "Các yếu tố gia đình, truyền thông và sự thiếu hỗ trợ tâm lý đều có thể tác động tiêu cực đến học sinh."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "An là một trong những học sinh tích cực học tập trong lớp thầy Toàn. Gần đây, thầy Toàn thấy An có những biểu hiện lạ như thường nhìn ra ngoài lớp học và tự tách bản thân khỏi bạn bè. Để hỗ trợ An, thầy Toàn có thể:",
+    "options": [
+      "A. Tích cực quan sát An và lớp trong các buổi học tiếp theo để kịp thời hỗ trợ hoặc nhờ sự hỗ trợ từ chuyên viên tham vấn học đường.",
+      "B. Nhắc tên An trước lớp và yêu cầu An tập trung vào buổi học.",
+      "C. Hỏi những học sinh khác trong lớp về vấn đề riêng của An và tự mình an ủi An.",
+      "D. Không cần quan sát An mà để theo thời gian thì An sẽ bình thường trở lại."
+    ],
+    "answer": "A",
+    "explain": "Giáo viên nên quan sát, tôn trọng học sinh và phối hợp với chuyên viên tham vấn khi cần, thay vì làm học sinh xấu hổ hoặc tự xử lý thiếu chuyên môn."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Ý kiến nào dưới đây không phù hợp: Người hỗ trợ tâm lý học đường cần:",
+    "options": [
+      "A. Lắng nghe câu chuyện của học sinh.",
+      "B. Tôn trọng học sinh.",
+      "C. Chấp nhận sự khác biệt của học sinh.",
+      "D. Báo với cha mẹ và giáo viên chủ nhiệm về tất cả những trao đổi giữa học sinh và người hỗ trợ."
+    ],
+    "answer": "D",
+    "explain": "Người hỗ trợ tâm lý cần tôn trọng nguyên tắc bảo mật thông tin, chỉ chia sẻ khi có lý do chuyên môn hoặc nguy cơ cần thiết, không báo toàn bộ nội dung trao đổi."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Học thuyết nào sau đây giúp lý giải hiện tượng \"hai chị em sinh đôi cùng trứng nhưng lớn lên tính cách lại khác nhau\"?",
+    "options": [
+      "A. Thuyết duy cảm",
+      "B. Thuyết tiền định",
+      "C. Chủ nghĩa duy vật biện chứng",
+      "D. Thuyết hội tụ hai yếu tố"
+    ],
+    "answer": "C",
+    "explain": "Chủ nghĩa duy vật biện chứng cho rằng sự phát triển tâm lý không chỉ do di truyền hay môi trường quyết định một chiều, mà còn phụ thuộc vào hoạt động tích cực của cá nhân trong điều kiện sống cụ thể."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Quy luật nào sau đây đề cập đến nguồn gốc của sự phát triển?",
+    "options": [
+      "A. Quy luật mâu thuẫn và đấu tranh giữa các mặt đối lập",
+      "B. Quy luật phủ định của phủ định",
+      "C. Quy luật lượng chất",
+      "D. Cả ba đều đúng."
+    ],
+    "answer": "A",
+    "explain": "Trong phép biện chứng, mâu thuẫn và đấu tranh giữa các mặt đối lập được xem là nguồn gốc, động lực bên trong của sự phát triển. Đáp án gốc của file ghi C, nhưng nội dung này phù hợp hơn với đáp án A."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Để giải quyết mâu thuẫn giữa \"cái tôi muốn\" và \"cái tôi có thể\" thì ta phải?",
+    "options": [
+      "A. Nâng cao năng lực bản thân",
+      "B. Cân bằng giữa \"cái tôi muốn\" và \"cái tôi có thể\"",
+      "C. Dập tắt nhu cầu",
+      "D. Cả ba đều đúng"
+    ],
+    "answer": "B",
+    "explain": "Cách hợp lý là điều chỉnh mong muốn cho phù hợp với khả năng hiện tại, đồng thời phát triển năng lực để tiến gần mục tiêu. Không nên hiểu là dập tắt nhu cầu. Đáp án gốc ghi D, nhưng phương án B phù hợp hơn."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Câu thành ngữ \"Ở bầu thì dài, ở ống thì tròn\" đề cập đến học thuyết nào sau đây?",
+    "options": [
+      "A. Thuyết tiền định",
+      "B. Thuyết duy cảm",
+      "C. Thuyết hội tụ hai yếu tố",
+      "D. Chủ nghĩa duy vật biện chứng"
+    ],
+    "answer": "B",
+    "explain": "Câu thành ngữ nhấn mạnh vai trò quyết định của môi trường đối với sự hình thành con người, nên gần với thuyết duy cảm."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Biểu hiện nào dưới đây đề cập đến quy luật lượng chất?",
+    "options": [
+      "A. Tuổi thiếu niên, các em thường có biểu hiện chống đối, mâu thuẫn với người lớn.",
+      "B. Tuổi thiếu niên, các em \"vừa là người lớn, vừa chưa phải là người lớn\"",
+      "C. Đến tuổi thiếu niên, các em bắt đầu có hiện tượng dậy thì so với tuổi tiểu học",
+      "D. Cả a, b, c đều đúng"
+    ],
+    "answer": "C",
+    "explain": "Quy luật lượng - chất thể hiện sự tích lũy dần về lượng dẫn đến biến đổi về chất. Sự xuất hiện dậy thì ở tuổi thiếu niên là một bước chuyển biến rõ về chất so với giai đoạn trước."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Quy luật phủ định của phủ định đề cập đến?",
+    "options": [
+      "A. Xu hướng của sự phát triển",
+      "B. Nguồn gốc của sự phát triển",
+      "C. Động lực của sự phát triển",
+      "D. Cả ba đều sai"
+    ],
+    "answer": "A",
+    "explain": "Quy luật phủ định của phủ định nói về khuynh hướng phát triển đi lên, trong đó cái mới ra đời trên cơ sở kế thừa và vượt qua cái cũ."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trẻ tiểu học là giai đoạn phát triển mạnh về?",
+    "options": [
+      "A. Ngôn ngữ",
+      "B. Vận động",
+      "C. Tư duy trừu tượng",
+      "D. Thế giới quan"
+    ],
+    "answer": "B",
+    "explain": "Theo các giai đoạn phát cảm, lứa tuổi 6-11 là giai đoạn thuận lợi cho sự phát triển kỹ xảo vận động."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Phát biểu nào dưới đây KHÔNG là đặc điểm tâm lý của lứa tuổi thiếu niên?",
+    "options": [
+      "A. Các em có xu hướng \"gần mẹ xa bạn\"",
+      "B. Các em có cảm giác \"mình vừa là người lớn, vừa không phải là người lớn\"",
+      "C. Các em có xu hướng chống đối, nổi loạn",
+      "D. Các em có nhu cầu tự khẳng định bản thân và cái tôi cao."
+    ],
+    "answer": "A",
+    "explain": "Tuổi thiếu niên thường nổi bật nhu cầu giao tiếp bạn bè, nên cách nói phù hợp hơn là \"gần bạn xa mẹ\", không phải \"gần mẹ xa bạn\"."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Phát biểu dưới đây đề cập đến quy luật nào về sự phát triển tâm lý cá nhân: Cùng một lứa tuổi nhưng tốc độ và mức độ phát triển tâm lý của các cá nhân không đều nhau.",
+    "options": [
+      "A. Quy luật không đồng đều xét trong tiến trình phát triển tâm lý cá nhân",
+      "B. Quy luật không đồng đều xét giữa cá nhân này với cá nhân khác",
+      "C. Quy luật mềm dẻo và khả năng bù trừ",
+      "D. Quy luật toàn vẹn trong sự phát triển tâm lý cá nhân"
+    ],
+    "answer": "B",
+    "explain": "Nội dung này nói về sự khác nhau giữa các cá nhân cùng lứa tuổi, nên thuộc quy luật không đồng đều xét giữa cá nhân này với cá nhân khác."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Thuyết học tập \"Vùng phát triển gần nhất\" là của nhà tâm lý học nào?",
+    "options": [
+      "A. J. Piaget",
+      "B. Vygostki",
+      "C. Bandura",
+      "D. Skinner"
+    ],
+    "answer": "B",
+    "explain": "Khái niệm vùng phát triển gần nhất gắn với nhà tâm lý học Vygostki."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Phương pháp dạy học Thử và sai thuộc mô hình dạy học nào?",
+    "options": [
+      "A. Mô hình học tập nhận thức xã hội",
+      "B. Mô hình dạy học điều kiện hoá cổ điển",
+      "C. Mô hình dạy học tạo tác",
+      "D. Mô hình dạy học hành động học tập khám phá"
+    ],
+    "answer": "C",
+    "explain": "Học bằng thử và sai gắn với cơ chế tạo tác, trong đó hành vi được hình thành và củng cố thông qua kết quả của hành động."
+  },
+  {
+    "chapter": "Chương 2",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "\"Sự thay đổi tình huống xã hội của sự phát triển\" của nhà tâm lí học Vygostki đề cập đến những vấn đề nào sau đây?",
+    "options": [
+      "A. Là sự phối hợp đặc biệt giữa các điều kiện phát triển bên trong và các điều kiện phát triển bên ngoài",
+      "B. Sự xuất hiện những nét cấu tạo tâm lí mới vào cuối giai đoạn lứa tuổi",
+      "C. Tình huống xã hội của sự phát triển khi đạt đến độ chín muồi sẽ tạo điều kiện thúc đẩy trẻ bước sang một giai đoạn mới.",
+      "D. Cả a, b và c đều đúng"
+    ],
+    "answer": "D",
+    "explain": "Tình huống xã hội của sự phát triển bao gồm sự phối hợp giữa điều kiện bên trong và bên ngoài, dẫn đến cấu tạo tâm lý mới và thúc đẩy chuyển sang giai đoạn phát triển tiếp theo."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trong các bước hình thành khái niệm, bước nào là bước hình thành nhu cầu nhận thức cho học sinh?",
+    "options": [
+      "A. Bước 1",
+      "B. Bước 2",
+      "C. Bước 3",
+      "D. Bước 4"
+    ],
+    "answer": "A",
+    "explain": "Ở bước đầu, giáo viên cần làm nảy sinh nhu cầu nhận thức để học sinh có động cơ tìm hiểu và chiếm lĩnh khái niệm."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Đâu KHÔNG phải là hình thức tồn tại của khái niệm Hoạt động dạy?",
+    "options": [
+      "A. Ngôn ngữ",
+      "B. Tinh thần",
+      "C. Vật chất",
+      "D. Cả ba đều sai"
+    ],
+    "answer": "C",
+    "explain": "Trong ngữ cảnh câu hỏi này, hoạt động dạy là một khái niệm thuộc lĩnh vực tâm lý - giáo dục, thường tồn tại qua ngôn ngữ và tinh thần, không phải một vật thể vật chất cụ thể."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Đâu là khái niệm đúng của Hoạt động dạy?",
+    "options": [
+      "A. Là hoạt động của giáo viên",
+      "B. Tổ chức và điều khiển hoạt động của người học",
+      "C. Là hoạt động nhằm giúp người học lĩnh hội nền văn hoá xã hội, tạo ra sự phát triển tâm lý và hình thành nhân cách.",
+      "D. Cả ba đều đúng"
+    ],
+    "answer": "D",
+    "explain": "Hoạt động dạy là hoạt động của giáo viên, có chức năng tổ chức - điều khiển hoạt động học, nhằm giúp người học lĩnh hội kinh nghiệm xã hội và phát triển nhân cách."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Khái niệm về khái niệm là gì?",
+    "options": [
+      "A. Là những cái để mô tả sự vật, hiện tượng",
+      "B. Không cầm nắm, sờ mó được",
+      "C. Khái niệm là tri thức",
+      "D. Cả ba đều đúng"
+    ],
+    "answer": "D",
+    "explain": "Khái niệm là một dạng tri thức phản ánh bản chất của sự vật, hiện tượng; nó không tồn tại như vật thể cầm nắm được mà được biểu đạt qua ngôn ngữ, tư duy và hoạt động."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Để phân biệt giữa sự vật hiện tượng này với sự vật hiện tượng kia, ta dựa vào?",
+    "options": [
+      "A. Đặc điểm",
+      "B. Bản chất",
+      "C. Hình thức",
+      "D. Chức năng"
+    ],
+    "answer": "B",
+    "explain": "Muốn phân biệt đúng và sâu giữa các sự vật, hiện tượng, cần dựa vào bản chất chứ không chỉ nhìn vào hình thức bên ngoài."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trong các bước hình thành khái niệm, bước nào là bước giúp học sinh phân biệt được giữa sự vật này với sự vật kia?",
+    "options": [
+      "A. Bước 1",
+      "B. Bước 2",
+      "C. Bước 3",
+      "D. Bước 4"
+    ],
+    "answer": "C",
+    "explain": "Bước 3 thường gắn với việc giúp học sinh nhận ra dấu hiệu bản chất và phân biệt khái niệm này với khái niệm khác."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Đối với những khái niệm tồn tại dưới hình thức tinh thần, giáo viên ưu tiên sử dụng cách thức nào dưới đây?",
+    "options": [
+      "A. Ngôn ngữ",
+      "B. Vật chất",
+      "C. Hình ảnh",
+      "D. Vận động"
+    ],
+    "answer": "A",
+    "explain": "Với các khái niệm trừu tượng, tồn tại dưới hình thức tinh thần, giáo viên thường cần dùng ngôn ngữ để giải thích, mô tả và tổ chức cho học sinh lĩnh hội."
+  },
+  {
+    "chapter": "Chương 3",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Để lượng giá hiệu quả hoạt động hình thành khái niệm cho học sinh, giáo viên cần?",
+    "options": [
+      "A. Hình thành nhu cầu nhận thức cho học sinh",
+      "B. Tổ chức cho học sinh hành động với khái niệm",
+      "C. Giúp học sinh nhận biết, phân biệt được đặc điểm và bản chất của sự vật, hiện tượng",
+      "D. Cho học sinh ứng dụng làm bài tập"
+    ],
+    "answer": "D",
+    "explain": "Muốn đánh giá học sinh đã hình thành khái niệm hay chưa, giáo viên cần cho học sinh vận dụng khái niệm vào bài tập hoặc tình huống cụ thể."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trong các yếu tố hình thành nên cấu trúc tâm lý của hành vi đạo đức, yếu tố nào là sức mạnh tinh thần giúp con người vượt qua mọi khó khăn để thực hiện đến cùng hành vi đạo đức?",
+    "options": [
+      "A. Tri thức và niềm tin đạo đức",
+      "B. Ý chí đạo đức",
+      "C. Thói quen đạo đức",
+      "D. Tình cảm đạo đức"
+    ],
+    "answer": "B",
+    "explain": "Ý chí đạo đức là sức mạnh tinh thần giúp cá nhân vượt khó, kiên trì thực hiện hành vi đạo đức đến cùng."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Để đánh giá hành vi của mình có giá trị đạo đức, đòi hỏi con người cần phải có?",
+    "options": [
+      "A. Tri thức và niềm tin đạo đức",
+      "B. Tình cảm đạo đức",
+      "C. Thói quen đạo đức",
+      "D. Ý chí đạo đức"
+    ],
+    "answer": "A",
+    "explain": "Tri thức và niềm tin đạo đức giúp cá nhân hiểu chuẩn mực, tin vào giá trị của chuẩn mực và dùng nó để đánh giá hành vi của mình."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trong các bước hình thành giá trị và định hướng giá trị trong nhà trường, bước nào giúp học sinh định hình con đường hành động chống các giá trị đối lập?",
+    "options": [
+      "A. So sánh và làm nổi bật sự khác biệt",
+      "B. Xác định và làm rõ các giá trị",
+      "C. Khai thác và tìm hiểu cảm nhận của người khác",
+      "D. Xem xét các phương án và ý nghĩa của phương án đó"
+    ],
+    "answer": "B",
+    "explain": "Xác định và làm rõ các giá trị giúp học sinh nhận diện giá trị cần theo đuổi, từ đó có định hướng hành động và tránh các giá trị đối lập."
+  },
+  {
+    "chapter": "Chương 4",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Để hình thành ý chí đạo đức cho học sinh, giáo viên cần hình thành?",
+    "options": [
+      "A. Nghị lực đạo đức",
+      "B. Thiện chí đạo đức",
+      "C. Cả a và b đều sai",
+      "D. Cả a và b đều đúng"
+    ],
+    "answer": "D",
+    "explain": "Ý chí đạo đức bao gồm thiện chí đạo đức và nghị lực đạo đức; giáo dục đạo đức cần giúp học sinh vừa muốn làm điều đúng, vừa có sức mạnh để thực hiện đến cùng."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Khó khăn tâm lí của học sinh trong Chương 5 được chia thành nhóm nào sau đây?",
+    "options": [
+      "A. Khó khăn từ bản thân, học tập, các mối quan hệ và lựa chọn nghề nghiệp tương lai.",
+      "B. Khó khăn tài chính, khó khăn pháp lý, khó khăn sức khỏe thể chất và khó khăn giao thông.",
+      "C. Khó khăn về dinh dưỡng, giấc ngủ, thể lực và chiều cao.",
+      "D. Khó khăn về cơ sở vật chất, chương trình học, học phí và lịch học."
+    ],
+    "answer": "A",
+    "explain": "Chương 5 nêu các khó khăn tâm lí của học sinh gồm: khó khăn từ chính bản thân, khó khăn trong học tập, trong các mối quan hệ và trong lựa chọn nghề nghiệp tương lai."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Khó khăn tâm lí trong học tập có thể biểu hiện qua dấu hiệu nào?",
+    "options": [
+      "A. Khó tập trung nghe giảng, khó tiếp thu bài, khó ghi nhớ hoặc khó vận dụng kiến thức.",
+      "B. Chỉ thích tham gia hoạt động thể thao.",
+      "C. Có nhiều bạn bè trong lớp.",
+      "D. Thường xuyên tham gia hoạt động ngoại khóa."
+    ],
+    "answer": "A",
+    "explain": "Khó khăn tâm lí trong học tập được mô tả qua việc khó tập trung, khó tiếp thu, khó ghi nhớ và khó vận dụng kiến thức đã học."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Nhóm nào sau đây được xếp vào rối loạn tâm lí nghiêm trọng trong nội dung Chương 5?",
+    "options": [
+      "A. Rối loạn lo âu, trầm cảm, nghiện internet/game.",
+      "B. Ngại phát biểu, quên vở, đi học muộn.",
+      "C. Chọn sai câu lạc bộ, thiếu sách tham khảo, chưa biết bơi.",
+      "D. Thích học nhóm, thích đọc truyện, thích nghe nhạc."
+    ],
+    "answer": "A",
+    "explain": "Tài liệu nêu rối loạn lo âu, trầm cảm, nghiện internet/game là nhóm rối loạn tâm lí nghiêm trọng."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Mục đích chính của hoạt động hỗ trợ tâm lí học đường là gì?",
+    "options": [
+      "A. Chăm sóc sức khỏe tâm thần cho các thành viên trong nhà trường.",
+      "B. Chỉ xử lý học sinh vi phạm nội quy.",
+      "C. Thay thế hoàn toàn hoạt động dạy học.",
+      "D. Chỉ chữa trị các ca bệnh tâm thần nặng."
+    ],
+    "answer": "A",
+    "explain": "Hoạt động hỗ trợ tâm lí học đường nhằm chăm sóc sức khỏe tâm thần, giúp các thành viên trong nhà trường cân bằng cảm xúc và hòa hợp các mối quan hệ."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Hoạt động nào thuộc nội dung hỗ trợ tâm lí học đường?",
+    "options": [
+      "A. Đánh giá tâm lí, dự phòng và phát triển tâm lí, tư vấn - tham vấn, trị liệu tâm lí, điều phối.",
+      "B. Chấm điểm, xếp loại học lực, thi đua và kỷ luật.",
+      "C. Tuyển sinh, quản lý tài chính, xây dựng cơ sở vật chất.",
+      "D. Tổ chức văn nghệ, thể thao và hoạt động lao động."
+    ],
+    "answer": "A",
+    "explain": "Nội dung hỗ trợ tâm lí học đường gồm đánh giá tâm lí, dự phòng và phát triển, tư vấn - tham vấn, trị liệu và điều phối."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Hoạt động đánh giá tâm lí trong trường học nhằm mục đích nào?",
+    "options": [
+      "A. Lập hoặc bổ sung dữ liệu cho hồ sơ tâm lí học đường và xác định cách trợ giúp học sinh.",
+      "B. Thay thế hoàn toàn việc học tập của học sinh.",
+      "C. Xếp loại đạo đức học sinh theo cảm tính.",
+      "D. Công khai mọi vấn đề riêng tư của học sinh trước lớp."
+    ],
+    "answer": "A",
+    "explain": "Đánh giá tâm lí giúp định hướng trợ giúp, lập hồ sơ tâm lí học đường và lựa chọn phương tiện, hình thức hỗ trợ phù hợp."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Hoạt động dự phòng và phát triển tâm lí được tiến hành với đối tượng nào?",
+    "options": [
+      "A. Tất cả học sinh trong trường học.",
+      "B. Chỉ học sinh vi phạm nội quy.",
+      "C. Chỉ học sinh cuối cấp.",
+      "D. Chỉ phụ huynh học sinh."
+    ],
+    "answer": "A",
+    "explain": "Hoạt động dự phòng và phát triển tâm lí hướng đến tất cả học sinh nhằm tạo điều kiện tâm lí - xã hội thuận lợi cho sự phát triển."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Trong hỗ trợ tâm lí học đường, người thường được tham vấn là ai?",
+    "options": [
+      "A. Học sinh.",
+      "B. Chỉ hiệu trưởng.",
+      "C. Chỉ phụ huynh.",
+      "D. Chỉ giáo viên chủ nhiệm."
+    ],
+    "answer": "A",
+    "explain": "Tài liệu nêu hoạt động tư vấn, tham vấn có thể dành cho học sinh, giáo viên, phụ huynh, trong đó người thường được tham vấn là học sinh."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Giáo viên trong hỗ trợ tâm lí học đường có thể giữ vai trò nào?",
+    "options": [
+      "A. Vừa có thể là người cần được hỗ trợ tâm lí, vừa có thể là người hỗ trợ tâm lí.",
+      "B. Chỉ là người xử phạt học sinh.",
+      "C. Chỉ là người ghi nhận điểm số.",
+      "D. Không liên quan đến hỗ trợ tâm lí học đường."
+    ],
+    "answer": "A",
+    "explain": "Vai trò của giáo viên gồm người cần được hỗ trợ tâm lí và người hỗ trợ tâm lí."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Kĩ năng giao tiếp bằng lời trong hỗ trợ tâm lí gồm nội dung nào?",
+    "options": [
+      "A. Diễn đạt lại, phản ánh cảm xúc, tóm lược, đặt câu hỏi.",
+      "B. Chỉ nhìn học sinh mà không nói gì.",
+      "C. Chỉ sử dụng ánh mắt và khoảng cách.",
+      "D. Chỉ ghi biên bản sự việc."
+    ],
+    "answer": "A",
+    "explain": "Kĩ năng giao tiếp bằng lời bao gồm diễn đạt lại, phản ánh cảm xúc, tóm lược và đặt câu hỏi."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao hoạt động hỗ trợ tâm lí học đường không chỉ nhằm giải quyết khó khăn đã xảy ra?",
+    "options": [
+      "A. Vì hoạt động này còn có chức năng phòng ngừa hiện tượng tiêu cực và phát triển kĩ năng ứng phó cho học sinh.",
+      "B. Vì hoạt động này chỉ nhằm xử phạt học sinh.",
+      "C. Vì hoạt động này không liên quan đến đời sống học đường.",
+      "D. Vì học sinh không cần được hỗ trợ khi chưa có vấn đề nghiêm trọng."
+    ],
+    "answer": "A",
+    "explain": "Hỗ trợ tâm lí học đường vừa giải quyết khó khăn, vừa ngăn ngừa hiện tượng tiêu cực và huấn luyện kĩ năng xã hội cho học sinh."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao hoạt động đánh giá tâm lí không nên hiểu là 'dán nhãn' học sinh?",
+    "options": [
+      "A. Vì mục đích của đánh giá là hiểu vấn đề và chọn hình thức trợ giúp phù hợp, không phải kết luận áp đặt về học sinh.",
+      "B. Vì đánh giá tâm lí chỉ dùng để phê bình trước lớp.",
+      "C. Vì đánh giá tâm lí không cần dữ liệu.",
+      "D. Vì đánh giá tâm lí chỉ dành cho học sinh giỏi."
+    ],
+    "answer": "A",
+    "explain": "Đánh giá tâm lí nhằm định hướng hỗ trợ, bổ sung hồ sơ và tìm cách giúp học sinh, nên không được dùng để dán nhãn hay kỳ thị."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Điểm khác nhau hợp lý giữa tham vấn tâm lí và trị liệu tâm lí trong trường học là gì?",
+    "options": [
+      "A. Tham vấn thường hỗ trợ các vấn đề học tập, quan hệ; trị liệu giúp học sinh vượt qua các rối nhiễu tâm lí.",
+      "B. Tham vấn chỉ là cho điểm, trị liệu là dạy thêm.",
+      "C. Tham vấn chỉ dành cho giáo viên, trị liệu chỉ dành cho phụ huynh.",
+      "D. Hai hoạt động này hoàn toàn không liên quan đến tâm lí học đường."
+    ],
+    "answer": "A",
+    "explain": "Tham vấn hỗ trợ các vấn đề trong học tập và quan hệ, còn trị liệu tâm lí hướng đến việc giúp học sinh vượt qua rối nhiễu tâm lí."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Khi nào hoạt động điều phối trong hỗ trợ tâm lí học đường trở nên cần thiết?",
+    "options": [
+      "A. Khi vấn đề vượt quá khả năng, kiến thức hoặc phạm vi giải quyết của nhà tâm lí học đường trong trường.",
+      "B. Khi học sinh làm bài tập tốt.",
+      "C. Khi giáo viên muốn giảm tiết dạy.",
+      "D. Khi phụ huynh không muốn hợp tác dù vấn đề đã được giải quyết."
+    ],
+    "answer": "A",
+    "explain": "Điều phối giúp học sinh, phụ huynh hoặc giáo viên nhận hỗ trợ từ các cơ sở ngoài trường khi vấn đề cần nguồn lực chuyên môn bên ngoài."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao nguyên tắc tôn trọng học sinh có ý nghĩa quan trọng trong hỗ trợ tâm lí?",
+    "options": [
+      "A. Vì học sinh có quyền là chính mình, có suy nghĩ, cảm xúc và quyền tự quyết cần được tôn trọng.",
+      "B. Vì giáo viên cần quyết định thay mọi vấn đề của học sinh.",
+      "C. Vì học sinh không được trình bày quan điểm riêng.",
+      "D. Vì hỗ trợ tâm lí cần ưu tiên kiểm soát hơn lắng nghe."
+    ],
+    "answer": "A",
+    "explain": "Tôn trọng học sinh là thừa nhận nhân cách, quyền tự quyết và sự riêng tư của học sinh, trừ trường hợp cần tiết lộ để ngăn nguy hiểm."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Tôn trọng quyền của cha mẹ hoặc người giám hộ trong hỗ trợ tâm lí học đường có ý nghĩa gì?",
+    "options": [
+      "A. Giúp tranh thủ sự tham gia và thông cảm của gia đình trong quá trình hỗ trợ học sinh.",
+      "B. Cho phép phụ huynh biết tất cả bí mật của học sinh trong mọi tình huống.",
+      "C. Làm cho giáo viên không cần lắng nghe học sinh.",
+      "D. Khiến hoạt động hỗ trợ tâm lí chỉ phụ thuộc vào gia đình."
+    ],
+    "answer": "A",
+    "explain": "Sự tham gia và thông cảm của gia đình có ý nghĩa tích cực trong hỗ trợ tâm lí, nhưng vẫn cần tôn trọng quyền riêng tư và lợi ích của học sinh."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Thái độ 'chấp nhận' trong hỗ trợ tâm lí học đường nên được hiểu như thế nào?",
+    "options": [
+      "A. Tôn trọng quyết định, niềm tin và lo lắng của học sinh; nếu không thể chấp nhận thì giới thiệu đến người hỗ trợ phù hợp hơn.",
+      "B. Đồng ý với mọi hành vi của học sinh kể cả hành vi gây hại.",
+      "C. Bỏ qua mọi vấn đề và không cần hỗ trợ nữa.",
+      "D. Ép học sinh làm theo ý người hỗ trợ."
+    ],
+    "answer": "A",
+    "explain": "Chấp nhận không có nghĩa đồng ý với mọi hành vi, mà là tôn trọng con người của học sinh và có trách nhiệm giới thiệu hỗ trợ khác khi cần."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao sự chân thành của người hỗ trợ tâm lí lại cần thiết?",
+    "options": [
+      "A. Vì sự giả dối khiến học sinh khó tin tưởng và khó bộc lộ suy nghĩ, cảm xúc thật.",
+      "B. Vì người hỗ trợ càng nghiêm khắc thì học sinh càng cởi mở.",
+      "C. Vì chỉ cần dùng kỹ thuật, không cần thái độ.",
+      "D. Vì chân thành giúp người hỗ trợ biết điểm số của học sinh."
+    ],
+    "answer": "A",
+    "explain": "Sự chân thành giúp tạo lòng tin để học sinh có thể cởi mở, chia sẻ suy nghĩ, cảm xúc và hy vọng của mình."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Kĩ năng lắng nghe trong hỗ trợ tâm lí đòi hỏi điều gì?",
+    "options": [
+      "A. Tập trung vào câu chuyện, không ngắt lời, chú ý biểu hiện phi ngôn ngữ và phản ánh lại nội dung, cảm xúc.",
+      "B. Ngắt lời thường xuyên để tiết kiệm thời gian.",
+      "C. Chỉ nghe phần học sinh nói đúng với suy nghĩ của giáo viên.",
+      "D. Chỉ ghi lỗi sai của học sinh."
+    ],
+    "answer": "A",
+    "explain": "Lắng nghe hiệu quả cần tập trung, không ngắt lời, chú ý tín hiệu phi ngôn ngữ và phản ánh lại để học sinh cảm thấy được hiểu."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Đồng cảm trong hỗ trợ tâm lí khác với bị cuốn theo cảm xúc của học sinh ở điểm nào?",
+    "options": [
+      "A. Đồng cảm là hiểu và tôn trọng cảm xúc của học sinh nhưng vẫn giữ được sự tỉnh táo để hỗ trợ phù hợp.",
+      "B. Đồng cảm là khóc theo học sinh trong mọi trường hợp.",
+      "C. Đồng cảm là bỏ qua mọi nguyên tắc hỗ trợ.",
+      "D. Đồng cảm là thay học sinh quyết định tất cả."
+    ],
+    "answer": "A",
+    "explain": "Đồng cảm là nhận ra, thấu hiểu quan điểm và cảm xúc của người khác nhưng không bị lôi cuốn hoàn toàn vào cảm xúc đó."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh thường xuyên nói 'em học dở nên không ai thích chơi với em' và tự tách khỏi nhóm. Khó khăn nổi bật nhất của em là gì?",
+    "options": [
+      "A. Khó khăn từ chính bản thân.",
+      "B. Khó khăn trong lựa chọn nghề nghiệp tương lai.",
+      "C. Khó khăn về cơ sở vật chất.",
+      "D. Rối loạn nghiện game."
+    ],
+    "answer": "A",
+    "explain": "Học sinh có biểu hiện mặc cảm, đánh giá thấp bản thân và buồn rầu, phù hợp với khó khăn từ chính bản thân."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh không thể tập trung nghe giảng, học xong nhanh quên và không vận dụng được kiến thức vào bài tập. Em đang gặp khó khăn nào?",
+    "options": [
+      "A. Khó khăn tâm lí trong học tập.",
+      "B. Khó khăn trong quan hệ với cha mẹ.",
+      "C. Khó khăn trong lựa chọn nghề nghiệp.",
+      "D. Khó khăn do thiếu hoạt động ngoại khóa."
+    ],
+    "answer": "A",
+    "explain": "Các biểu hiện khó tập trung, khó ghi nhớ, khó vận dụng kiến thức là dấu hiệu của khó khăn tâm lí trong học tập."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Nhà trường tổ chức chương trình rèn luyện kỹ năng ứng phó với áp lực học tập cho toàn bộ học sinh khối 10. Hoạt động này thuộc nhóm nào?",
+    "options": [
+      "A. Hoạt động dự phòng và phát triển tâm lí.",
+      "B. Hoạt động điều phối.",
+      "C. Hoạt động trị liệu tâm lí cá nhân.",
+      "D. Hoạt động kỷ luật học sinh."
+    ],
+    "answer": "A",
+    "explain": "Chương trình áp dụng cho toàn bộ học sinh nhằm phòng ngừa khó khăn và phát triển kỹ năng ứng phó, nên thuộc dự phòng và phát triển tâm lí."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh có biểu hiện trầm cảm rõ, nhà trường nhận thấy cần sự can thiệp chuyên môn ngoài khả năng của giáo viên. Cách xử lý phù hợp nhất là gì?",
+    "options": [
+      "A. Điều phối để học sinh được hỗ trợ từ chuyên viên hoặc cơ sở chuyên môn phù hợp.",
+      "B. Yêu cầu học sinh tự vượt qua.",
+      "C. Công khai vấn đề trước lớp để cả lớp giúp đỡ.",
+      "D. Chỉ nhắc nhở học sinh tập trung học hơn."
+    ],
+    "answer": "A",
+    "explain": "Khi vấn đề vượt quá năng lực của người hỗ trợ trong trường, cần điều phối đến nguồn lực chuyên môn phù hợp."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Khi học sinh chia sẻ chuyện gia đình nhạy cảm, giáo viên nên làm gì trước tiên?",
+    "options": [
+      "A. Lắng nghe, tôn trọng và bảo mật thông tin trong phạm vi nguyên tắc an toàn.",
+      "B. Kể lại cho cả lớp để tìm người góp ý.",
+      "C. Lập tức trách học sinh vì nói chuyện riêng.",
+      "D. Đưa ra quyết định thay học sinh ngay lập tức."
+    ],
+    "answer": "A",
+    "explain": "Hỗ trợ tâm lí đòi hỏi tôn trọng học sinh, lắng nghe và giữ bí mật, trừ trường hợp cần tiết lộ để ngăn nguy hiểm."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong lúc nghe học sinh trình bày, giáo viên liên tục nhìn điện thoại và ngắt lời để kết luận nhanh. Giáo viên đang yếu kĩ năng nào nhất?",
+    "options": [
+      "A. Kĩ năng lắng nghe.",
+      "B. Kĩ năng chấm điểm.",
+      "C. Kĩ năng tổ chức thi.",
+      "D. Kĩ năng thiết kế giáo án."
+    ],
+    "answer": "A",
+    "explain": "Lắng nghe đòi hỏi tập trung, không ngắt lời và quan tâm đến nội dung cũng như cảm xúc của học sinh."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh im lặng, cúi mặt, giọng run khi nói về điểm kiểm tra. Giáo viên muốn hiểu thêm cảm xúc của em thì cần đặc biệt chú ý kĩ năng nào?",
+    "options": [
+      "A. Kĩ năng quan sát và giao tiếp phi ngôn ngữ.",
+      "B. Kĩ năng ra đề trắc nghiệm.",
+      "C. Kĩ năng quản lý hồ sơ điểm.",
+      "D. Kĩ năng trình chiếu bài giảng."
+    ],
+    "answer": "A",
+    "explain": "Các biểu hiện cúi mặt, giọng run, im lặng là tín hiệu phi ngôn ngữ cần được quan sát để hiểu cảm xúc của học sinh."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một giáo viên thấy mình không thể chấp nhận quan điểm của học sinh trong một ca hỗ trợ tâm lí. Cách ứng xử có đạo đức hơn là gì?",
+    "options": [
+      "A. Giới thiệu học sinh đến người có thể hỗ trợ phù hợp hơn.",
+      "B. Ép học sinh phải thay đổi ngay lập tức.",
+      "C. Từ chối hỗ trợ và không nói thêm gì.",
+      "D. Phê bình học sinh trước lớp."
+    ],
+    "answer": "A",
+    "explain": "Nếu người hỗ trợ không thể chấp nhận hoặc hỗ trợ phù hợp, việc giới thiệu đến người khác là trách nhiệm đạo đức nghề nghiệp."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh nói: 'Em rất sợ vào lớp vì bị bạn bè trêu chọc'. Câu phản hồi nào thể hiện kỹ năng phản ánh cảm xúc tốt nhất?",
+    "options": [
+      "A. 'Có vẻ em đang rất lo lắng và tổn thương khi phải đối diện với việc bị trêu chọc trong lớp.'",
+      "B. 'Em đừng nghĩ nhiều nữa là xong.'",
+      "C. 'Chuyện nhỏ thôi, ai cũng từng bị vậy.'",
+      "D. 'Em phải mạnh mẽ lên, đừng kể nữa.'"
+    ],
+    "answer": "A",
+    "explain": "Phản ánh cảm xúc là gọi tên và xác nhận cảm xúc của học sinh để các em cảm thấy được lắng nghe và thấu hiểu."
+  },
+  {
+    "chapter": "Chương 5",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong buổi tư vấn, học sinh kể chuyện rời rạc, giáo viên muốn giúp em nhìn lại các ý chính đã nói. Kỹ năng phù hợp nhất là gì?",
+    "options": [
+      "A. Tóm lược.",
+      "B. Trừng phạt.",
+      "C. Ra lệnh.",
+      "D. Im lặng hoàn toàn đến hết buổi."
+    ],
+    "answer": "A",
+    "explain": "Tóm lược giúp hệ thống lại những nội dung chính, giúp học sinh và người hỗ trợ cùng hiểu rõ vấn đề đang được trao đổi."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Giao tiếp sư phạm là gì?",
+    "options": [
+      "A. Sự tiếp xúc tâm lí giữa giáo viên và học sinh nhằm truyền đạt, lĩnh hội thông tin, trao đổi cảm xúc, nhu cầu và phát triển nhân cách người học.",
+      "B. Hoạt động ghi điểm và xếp loại học sinh.",
+      "C. Quá trình giáo viên nói một chiều, học sinh chỉ im lặng nghe.",
+      "D. Việc trao đổi hành chính giữa nhà trường và phụ huynh."
+    ],
+    "answer": "A",
+    "explain": "Giao tiếp sư phạm là sự tiếp xúc tâm lí giữa giáo viên và học sinh nhằm truyền đạt - lĩnh hội thông tin, trao đổi cảm xúc, nhu cầu và phát triển nhân cách người học."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Chức năng nào của giao tiếp sư phạm có tác động chủ đạo đến hành vi?",
+    "options": [
+      "A. Chức năng điều khiển, điều chỉnh hành vi.",
+      "B. Chức năng trang trí lớp học.",
+      "C. Chức năng kiểm kê tài sản.",
+      "D. Chức năng tuyển sinh."
+    ],
+    "answer": "A",
+    "explain": "Tài liệu nêu chức năng điều khiển, điều chỉnh hành vi là chức năng có tác động chủ đạo trong giao tiếp."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Văn hóa giao tiếp sư phạm là gì?",
+    "options": [
+      "A. Cung cách tiếp xúc cao đẹp, có tính mô phạm giữa các thành viên trong môi trường giáo dục.",
+      "B. Cách giáo viên dùng điểm số để kiểm soát lớp.",
+      "C. Quy định về đồng phục của học sinh.",
+      "D. Cách bố trí bàn ghế theo một mẫu duy nhất."
+    ],
+    "answer": "A",
+    "explain": "Văn hóa giao tiếp sư phạm là cung cách tiếp xúc cao đẹp, có tính mô phạm trong môi trường giáo dục, hướng đến Chân - Thiện - Mỹ."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Xây dựng văn hóa giao tiếp sư phạm cần tác động trên ba mặt nào?",
+    "options": [
+      "A. Nhận thức, thái độ, hành vi.",
+      "B. Điểm số, học phí, thi đua.",
+      "C. Thể lực, chiều cao, cân nặng.",
+      "D. Lịch học, đồng phục, cơ sở vật chất."
+    ],
+    "answer": "A",
+    "explain": "Tài liệu nêu việc xây dựng văn hóa giao tiếp sư phạm cần tác động trên ba mặt: nhận thức, thái độ và hành vi."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Ba nguyên tắc giao tiếp sư phạm cụ thể được nêu trong tài liệu là gì?",
+    "options": [
+      "A. Tính mẫu mực, tôn trọng nhân cách học sinh, có thiện ý và đồng cảm.",
+      "B. Kiểm soát tuyệt đối, áp đặt và trừng phạt.",
+      "C. Nói nhanh, nói nhiều, nói nghiêm khắc.",
+      "D. Phân biệt học sinh giỏi và yếu để giao tiếp khác nhau."
+    ],
+    "answer": "A",
+    "explain": "Các nguyên tắc cụ thể gồm tính mẫu mực, tôn trọng nhân cách học sinh, có thiện ý và đồng cảm."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Phương tiện ngôn ngữ trong giao tiếp sư phạm gồm:",
+    "options": [
+      "A. Nói và viết.",
+      "B. Chỉ ánh mắt.",
+      "C. Chỉ trang phục.",
+      "D. Chỉ khoảng cách."
+    ],
+    "answer": "A",
+    "explain": "Phương tiện ngôn ngữ trong giao tiếp sư phạm gồm ngôn ngữ nói và ngôn ngữ viết."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Phương tiện phi ngôn ngữ trong giao tiếp sư phạm có thể bao gồm yếu tố nào?",
+    "options": [
+      "A. Nét mặt, ánh mắt, nụ cười, cử chỉ, khoảng cách.",
+      "B. Chỉ nội dung sách giáo khoa.",
+      "C. Chỉ điểm kiểm tra.",
+      "D. Chỉ giáo án bằng văn bản."
+    ],
+    "answer": "A",
+    "explain": "Phương tiện phi ngôn ngữ gồm nét mặt, ánh mắt, nụ cười, dáng vẻ, cử chỉ, tiếp xúc thân thể, khoảng cách, vị trí bàn ghế."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Kĩ năng giao tiếp sư phạm được hiểu là gì?",
+    "options": [
+      "A. Hệ thống thao tác, cử chỉ, điệu bộ, ánh mắt, nụ cười và ngôn ngữ của giáo viên được phối hợp hài hòa để đạt hiệu quả dạy học, giáo dục.",
+      "B. Khả năng giáo viên ra thật nhiều bài tập.",
+      "C. Khả năng giáo viên cho điểm thật nghiêm.",
+      "D. Khả năng giáo viên tránh tiếp xúc với học sinh."
+    ],
+    "answer": "A",
+    "explain": "Kĩ năng giao tiếp sư phạm là sự phối hợp hài hòa các phương tiện ngôn ngữ và phi ngôn ngữ nhằm đạt hiệu quả trong dạy học và giáo dục."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Nhóm kĩ năng tổng thể trong giao tiếp sư phạm gồm những kĩ năng nào?",
+    "options": [
+      "A. Định hướng, định vị, điều khiển.",
+      "B. Chấm điểm, coi thi, nhập điểm.",
+      "C. Trang trí, tổ chức trò chơi, in tài liệu.",
+      "D. Kỷ luật, phê bình, xếp loại."
+    ],
+    "answer": "A",
+    "explain": "Nhóm kĩ năng tổng thể gồm kĩ năng định hướng, kĩ năng định vị và kĩ năng điều khiển."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Nhận biết",
+    "origin": "tự soạn",
+    "question": "Phong cách giao tiếp sư phạm được phân loại thành những kiểu nào?",
+    "options": [
+      "A. Dân chủ, độc đoán, tự do.",
+      "B. Nhanh, chậm, trung bình.",
+      "C. Trang trọng, bình thường, vui vẻ.",
+      "D. Cá nhân, nhóm, tập thể."
+    ],
+    "answer": "A",
+    "explain": "Tài liệu phân loại phong cách giao tiếp sư phạm thành phong cách dân chủ, độc đoán và tự do."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao giao tiếp sư phạm không chỉ là truyền đạt kiến thức?",
+    "options": [
+      "A. Vì giao tiếp sư phạm còn bao gồm trao đổi cảm xúc, nhu cầu và góp phần phát triển nhân cách người học.",
+      "B. Vì giáo viên chỉ cần nói đúng nội dung sách giáo khoa.",
+      "C. Vì học sinh không cần phản hồi trong giờ học.",
+      "D. Vì giao tiếp sư phạm chỉ xảy ra ngoài lớp học."
+    ],
+    "answer": "A",
+    "explain": "Giao tiếp sư phạm vừa truyền đạt, lĩnh hội thông tin, vừa trao đổi cảm xúc, nhu cầu và hướng đến phát triển nhân cách toàn diện."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Chức năng thông tin hai chiều trong giao tiếp sư phạm thể hiện ở điểm nào?",
+    "options": [
+      "A. Giáo viên và học sinh trao đổi thông tin, kiến thức, kinh nghiệm với nhau.",
+      "B. Giáo viên nói, học sinh không được phản hồi.",
+      "C. Học sinh chỉ ghi chép, không cần hiểu.",
+      "D. Nhà trường chỉ gửi thông báo một chiều."
+    ],
+    "answer": "A",
+    "explain": "Chức năng thông tin hai chiều cho phép các bên trao đổi thông tin, kiến thức, kinh nghiệm, giúp giao tiếp có tính tương tác."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao xây dựng văn hóa giao tiếp sư phạm cần kiên trì?",
+    "options": [
+      "A. Vì giáo dục là một quá trình gồm cung cấp kiến thức, hình thành thái độ và rèn luyện kỹ năng, mỗi bước đều cần thời gian chuyển hóa.",
+      "B. Vì chỉ cần ban hành nội quy là học sinh thay đổi ngay.",
+      "C. Vì giao tiếp sư phạm không liên quan đến thói quen.",
+      "D. Vì văn hóa giao tiếp chỉ là hình thức bên ngoài."
+    ],
+    "answer": "A",
+    "explain": "Xây dựng văn hóa giao tiếp sư phạm là quá trình lâu dài, cần tác động đến nhận thức, thái độ và hành vi nên phải kiên trì."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Tại sao văn hóa giao tiếp sư phạm cần tôn trọng sự đa dạng?",
+    "options": [
+      "A. Vì môi trường giáo dục cần chấp nhận sự khác biệt, khuyến khích sáng tạo nhưng vẫn bảo đảm tính thẩm mỹ và chuẩn mực.",
+      "B. Vì mọi học sinh phải giao tiếp giống hệt nhau.",
+      "C. Vì giáo viên nên áp đặt một khuôn mẫu duy nhất.",
+      "D. Vì đa dạng làm mất hoàn toàn nguyên tắc sư phạm."
+    ],
+    "answer": "A",
+    "explain": "Văn hóa giao tiếp sư phạm hướng đến sự hài hòa giữa cái chung và cái riêng, tôn trọng khác biệt nhưng vẫn giữ chuẩn mực."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Tính mẫu mực trong giao tiếp sư phạm thể hiện ở đâu?",
+    "options": [
+      "A. Trang phục, thái độ, cử chỉ, lời nói, hành vi và cách xử lý tình huống của giáo viên.",
+      "B. Chỉ ở việc giáo viên mặc trang phục đắt tiền.",
+      "C. Chỉ ở việc giáo viên nói thật to.",
+      "D. Chỉ ở việc giáo viên nghiêm khắc với học sinh."
+    ],
+    "answer": "A",
+    "explain": "Tính mẫu mực thể hiện từ trang phục, lời nói, hành vi, thái độ đến cách ứng xử, xử lý tình huống trong hoạt động nghề nghiệp."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Tôn trọng nhân cách học sinh trong giao tiếp sư phạm không bao gồm hành vi nào?",
+    "options": [
+      "A. Dùng từ ngữ xúc phạm để học sinh sợ và nghe lời.",
+      "B. Lắng nghe nguyện vọng chính đáng của học sinh.",
+      "C. Không áp đặt học sinh rập khuôn.",
+      "D. Cảm thông với hoàn cảnh riêng của học sinh."
+    ],
+    "answer": "A",
+    "explain": "Tôn trọng nhân cách học sinh đòi hỏi không dùng từ ngữ, hành vi xúc phạm, không áp đặt máy móc và biết lắng nghe."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Thiện ý trong giao tiếp sư phạm được hiểu đúng nhất là gì?",
+    "options": [
+      "A. Suy nghĩ tích cực, thái độ lành mạnh và hành vi hướng đến giá trị nhân văn, dựa trên yêu thương và tin tưởng học sinh.",
+      "B. Chiều theo mọi yêu cầu của học sinh.",
+      "C. Chỉ khen học sinh giỏi.",
+      "D. Bỏ qua mọi lỗi sai của học sinh mà không giáo dục."
+    ],
+    "answer": "A",
+    "explain": "Thiện ý là ý tốt, hướng đến chuẩn mực nhân văn, thể hiện sự yêu thương, tin tưởng, khoan dung và giúp học sinh phát triển."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Đồng cảm trong giao tiếp sư phạm giúp giáo viên điều gì?",
+    "options": [
+      "A. Đặt mình vào vị trí học sinh để hiểu suy nghĩ, cảm xúc, hoàn cảnh và tìm cách tương tác tích cực.",
+      "B. Trách phạt học sinh nhanh hơn.",
+      "C. Bỏ qua việc tìm hiểu nguyên nhân hành vi.",
+      "D. Áp dụng nội quy cứng nhắc trong mọi trường hợp."
+    ],
+    "answer": "A",
+    "explain": "Đồng cảm giúp giáo viên hiểu tâm tư, hoàn cảnh, nguyên nhân hành vi của học sinh và hỗ trợ theo hướng phát triển nhân cách."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Kĩ năng định vị trong giao tiếp sư phạm có ý nghĩa gì?",
+    "options": [
+      "A. Giúp giáo viên đặt mình vào vị trí học sinh, phác thảo chân dung tâm lí và tạo điều kiện cho học sinh chủ động giao tiếp.",
+      "B. Giúp giáo viên chọn vị trí ngồi cố định trong lớp.",
+      "C. Giúp giáo viên tránh tiếp xúc với học sinh.",
+      "D. Giúp giáo viên chỉ tập trung vào nội dung bài giảng."
+    ],
+    "answer": "A",
+    "explain": "Kĩ năng định vị liên quan đến khả năng hiểu mình, hiểu học sinh, đặt mình vào vị trí học sinh và tạo sự đồng cảm trong giao tiếp."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Thông hiểu",
+    "origin": "tự soạn",
+    "question": "Vì sao phong cách dân chủ thường tạo điều kiện phát triển tính độc lập, chủ động, sáng tạo của học sinh?",
+    "options": [
+      "A. Vì giáo viên biết lắng nghe, tôn trọng đặc điểm cá nhân và đáp ứng nguyện vọng chính đáng của học sinh.",
+      "B. Vì giáo viên ra lệnh một chiều và không cần phản hồi.",
+      "C. Vì học sinh được làm mọi điều mình muốn mà không cần nguyên tắc.",
+      "D. Vì giáo viên không cần quan tâm đến mục tiêu giáo dục."
+    ],
+    "answer": "A",
+    "explain": "Phong cách dân chủ tạo cảm giác thoải mái, tự tin, gần gũi, giúp học sinh phát huy tính độc lập, chủ động và sáng tạo."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong giờ học, giáo viên vừa giảng vừa thường xuyên hỏi học sinh hiểu đến đâu và điều chỉnh cách giải thích theo phản hồi. Chức năng giao tiếp nào được thể hiện rõ?",
+    "options": [
+      "A. Chức năng thông tin hai chiều.",
+      "B. Chức năng kiểm kê tài sản.",
+      "C. Chức năng trang trí lớp học.",
+      "D. Chức năng tuyển sinh."
+    ],
+    "answer": "A",
+    "explain": "Giáo viên và học sinh trao đổi thông tin qua hỏi - đáp, phản hồi và điều chỉnh, thể hiện chức năng thông tin hai chiều."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một giáo viên thường xuyên nói lời mỉa mai, gọi học sinh bằng biệt danh gây xấu hổ. Giáo viên vi phạm nguyên tắc nào rõ nhất?",
+    "options": [
+      "A. Tôn trọng nhân cách học sinh.",
+      "B. Sử dụng phần thưởng vật chất.",
+      "C. Tổ chức hoạt động nhóm.",
+      "D. Kiểm tra đánh giá định kỳ."
+    ],
+    "answer": "A",
+    "explain": "Dùng lời nói xúc phạm hoặc làm học sinh xấu hổ là vi phạm nguyên tắc tôn trọng nhân cách học sinh."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh thường xuyên không làm bài tập. Thay vì mắng trước lớp, giáo viên tìm hiểu hoàn cảnh gia đình và phát hiện em phải chăm em nhỏ mỗi tối. Giáo viên đang thể hiện nguyên tắc nào?",
+    "options": [
+      "A. Đồng cảm.",
+      "B. Độc đoán.",
+      "C. Cạnh tranh.",
+      "D. Áp đặt."
+    ],
+    "answer": "A",
+    "explain": "Giáo viên đặt mình vào hoàn cảnh học sinh, tìm hiểu nguyên nhân hành vi và từ đó hỗ trợ phù hợp, thể hiện sự đồng cảm."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Giáo viên muốn góp ý riêng với học sinh về một lỗi nhạy cảm. Vị trí ngồi nào phù hợp hơn?",
+    "options": [
+      "A. Vị trí góc hoặc vị trí hợp tác để tạo cảm giác gần gũi và giảm căng thẳng.",
+      "B. Ngồi đối diện như một chiến tuyến.",
+      "C. Đứng trên bục giảng và gọi học sinh đứng giữa lớp.",
+      "D. Đứng rất xa trên 3,5m trong mọi tình huống."
+    ],
+    "answer": "A",
+    "explain": "Với câu chuyện tế nhị, vị trí góc hoặc hợp tác giúp tạo kết nối, thân thiện và hạn chế áp lực."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Trong lớp, giáo viên chỉ đứng trên bục giảng, không di chuyển và ít tương tác với học sinh. Theo yêu cầu về khoảng cách giao tiếp, cách cải thiện hợp lý là gì?",
+    "options": [
+      "A. Di chuyển hợp lý trong lớp để tạo mối quan hệ thân tình và tăng tương tác.",
+      "B. Luôn đứng yên để giữ uy quyền.",
+      "C. Chỉ giao tiếp với học sinh bàn đầu.",
+      "D. Tránh nhìn học sinh để giảm áp lực."
+    ],
+    "answer": "A",
+    "explain": "Tài liệu khuyến khích giáo viên không chỉ đứng trên bục mà nên di chuyển hợp lý để tạo quan hệ thân tình và tương tác tích cực."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một giáo viên nói rất nhanh, dùng nhiều từ khó khiến học sinh không hiểu. Giáo viên cần cải thiện phương tiện giao tiếp nào trước tiên?",
+    "options": [
+      "A. Phương tiện ngôn ngữ.",
+      "B. Khoảng cách thân mật.",
+      "C. Vị trí bàn ghế.",
+      "D. Tiếp xúc thân thể."
+    ],
+    "answer": "A",
+    "explain": "Ngôn ngữ nói cần to, rõ, dễ nghe, lưu loát, diễn đạt cụ thể, dễ hiểu và phù hợp với học sinh."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Khi đặt câu hỏi cho học sinh, giáo viên hỏi một câu quá dài, gồm nhiều ý và không rõ trọng tâm. Sai lầm chính là gì?",
+    "options": [
+      "A. Diễn đạt câu hỏi dài dòng và không ngắn gọn, rõ ràng.",
+      "B. Sử dụng quá nhiều câu hỏi mở.",
+      "C. Bắt đầu bằng câu hỏi dễ.",
+      "D. Hỏi vấn đề tổng thể trước."
+    ],
+    "answer": "A",
+    "explain": "Một sai lầm khi đặt câu hỏi là diễn đạt dài dòng; yêu cầu đúng là câu hỏi ngắn gọn, rõ ràng và đơn ý."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một học sinh đạt tiến bộ nhỏ sau nhiều lần cố gắng. Cách động viên nào phù hợp nhất?",
+    "options": [
+      "A. Khen cụ thể sự nỗ lực và cho học sinh thấy em đang tiến bộ.",
+      "B. Khen quá mức để em tin rằng mình không cần cố gắng nữa.",
+      "C. So sánh em với bạn giỏi hơn để tạo áp lực.",
+      "D. Im lặng vì tiến bộ nhỏ không đáng chú ý."
+    ],
+    "answer": "A",
+    "explain": "Động viên cần đúng lúc, chú ý đến cái tôi, tránh sáo rỗng và giúp học sinh tự tin vào sự nỗ lực của mình."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một giáo viên luôn quyết định mọi việc trong lớp, ít lắng nghe ý kiến học sinh và thường giao tiếp một chiều. Phong cách giao tiếp nào thể hiện rõ nhất?",
+    "options": [
+      "A. Phong cách độc đoán.",
+      "B. Phong cách dân chủ.",
+      "C. Phong cách tự do.",
+      "D. Phong cách hợp tác."
+    ],
+    "answer": "A",
+    "explain": "Phong cách độc đoán có đặc điểm giao tiếp một chiều, cứng nhắc, ít chú ý đến đặc điểm tâm lí và nguyện vọng của học sinh."
+  },
+  {
+    "chapter": "Chương 6",
+    "subject": "Tâm lý học Giáo dục",
+    "level": "Vận dụng",
+    "origin": "tự soạn",
+    "question": "Một tình huống bất ngờ xảy ra: học sinh tranh cãi gay gắt trong giờ học. Theo quy trình giải quyết tình huống giao tiếp sư phạm, bước đầu tiên giáo viên nên làm là gì?",
+    "options": [
+      "A. Phân loại tình huống.",
+      "B. Lập tức phạt cả lớp.",
+      "C. Bỏ qua vì sẽ tự hết.",
+      "D. Công khai quy trách nhiệm khi chưa tìm hiểu."
+    ],
+    "answer": "A",
+    "explain": "Quy trình giải quyết tình huống giao tiếp sư phạm bắt đầu bằng phân loại tình huống, sau đó phân tích nguyên nhân và tìm phương án giải quyết."
   }
 ]
